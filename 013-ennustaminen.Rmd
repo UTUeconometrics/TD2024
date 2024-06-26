@@ -1,0 +1,77 @@
+# Tilastollisesta ennustamisesta {#luku13}
+
+Kuten olemme jo tähän menneessä nähneet, tilastollinen analyysi ja sen erottamattomana osana tilastollinen päättely on keskeinen vaihe tieteellistä tutkimusta. Vielä ennen tilastollisen selittämisen ja ennustamisen välisiä eroja koskevia pohdintoja muistutetaan jo aiemmin käsitellystä __kuvailevasta tilastotieteestä__. Tämä voidaan nähdä vielä (ainakin) kolmantena yleisenä tilastotieteen tavoitteena mallintamisen/selittämisen ja ennustamisen lisäksi. Yksinkertaisin tilastollisen päättelyn muoto on hyödyntää aineistoa kuvailevia tunnuslukuja, kuten keskiarvoja ja keskihajontalukuja. Niistä voidaan kuitenkin tehdä vain melko rajoittuneita päätelmiä. Varsinkin havainnoivassa tutkimuksessa sen selvittämiseksi, miten selittävät muuttujat ovat yhteydessä selitettävään vastemuuttujaan, käytetään esim. lineaarista tai logistista regressiota (ja niiden monenmonia laajennuksia) tai esim. aikasarja-analyysiä aikasarjoja analysoitaessa. Näiden pohjalta voidaan arvioida muuttujien yhteyksiä ja riippuvuussuhteita.
+
+Käytännössä tilastotieteen ja sen sovellusalueiden tutkimuksessa tulisi osata erottaa (tilastollinen) __selittäminen__ ja __ennustaminen__. Tätä eroa koskevat tarkemmat yksityiskohdat ovat jälleen selvästi tämän kurssin ulkopuolella myöhemmissä tilastotieteen opinnoissa, mutta seuraavassa kuitenkin tähän liittyviä keskeisiä huomioita. 
+
+## Tilastollinen selittäminen vs. ennustaminen {#alaluku131}
+
+- (Tilastollinen) __selittäminen__ tarkoittaa esim. kahden muuttujan välisen yhteyden tutkimista (tämän kurssin yksinkertainen tilanne lineaarisen regressiomallin yhteydessä, jota voidaan laajentaa useisiin muuttujiin). Tutkijaa saattaa kiinnostaa esimerkiksi tupakoinnin vaikutus sepelvaltimotautikuolleisuuteen tai ylipainon vaikutus leikkauksen jälkeisiin infektioihin. 
+  - Tällöin __pyrkimyksenä__ on rakentaa "__selitysmalli__", jossa on perustellut syy-seuraussuhteet selittävästä (selittävistä) muuttujista selitettävään muuttujaan. 
+- (Tilastollinen) __ennustaminen__ tarkoittaa, että tietyillä selittävän tai selittävien (tai "ennustavien") muuttujien yhdistelmillä voidaan ennustaa ennustettavan muuttujan arvoa.
+  - Ts. siis ennustettavana muuttujana toimii tilastollisen mallin näkökulmasta katsoen vastemuuttujan arvo, jota pyritään ennustemallin avulla ennustamaan.
+  - Ennustemalleja tutkittaessa varsinaisilla selityssuhteilla ei välttämättä ole merkitystä. Tärkeintä on mallin ennustekyky, ei niinkään esim. yksittäisen regressiokertoimen arvo ja siihen liittyvät tarkemmat tulkinnat. Tilastollisesti merkitsevä regressiokerroin ei tarkoita, että muuttujalla olisi välttämättä ennustekykyä.
+  - Ennustekyky tutkittava erikseen. Esimerkiksi lineaarisen mallin perinteiset tunnusluvut, kuten selitysaste, eivät vielä kerro mallin todellisesta ennustekyvystä paljoakaan. Tästä huolimatta melko usein ennustemallin rakentaminen perustetaan pitkälle samoihin tilastollisen päättelyn ja estimointiteorian lähtökohtiin mitä olemme jo sivunneet tällä kurssilla.
+  - Hyvin usein tutkimuksissa raportoidaan, että tietty muuttuja "ennustaa" (predicts) toista. Usein kuitenkin taustalla on tällöin usean muuttujan selitysmalli, jonka regressiokertoimien tilastollista merkitsevyyttä on tulkittu. Yleensä tässä yhteydessä on kuitenkin siis kyse selittämisestä, ja kuten todettua, mallin ennustekyky pitää tutkia erikseen.
+
+- Erityisesti aikasarja-analyysissä ennustaminen on perinteisesti ollut yksi kaikkein keskeisimmistä tavoitteista. 
+  - Nyt kuitenkin **koneoppimisen (tilastollisen oppimisen)** kasvatettua hurjasti suosioitaan viime vuosina ennustaminen on levinnyt, ja leviää jatkossakin, voimakkaasti myös hyvin keskeiseksi osaksi muutakin tilastollista analyysiä.
+
+## Tilastolliseen ennustamiseen liittyviä huomioita {#alaluku132}
+
+- Ennustamista on kaikkialla! Sen rooli on paljon keskeisempi osa meidän kaikkien arkea mitä ensiajatukselta saattaa tulla mieleen.
+  - Ennustaminen on elämässämme korvaamatonta.^[Tämän alaluvun pohdinnat, kuten tämä lainaus, perustuvat pitkälle Silverin kirjan Signaali ja kohina (suom. Kimmo Pietiläinen) huomioihin.] 
+  - Kun valitsemme reitin työmatkalle, päätämmekö menemmekö toisille treffeille tai säästämme huonompia aikoja varten, teemme ennusteen tulevaisuuden kehityksestä ja siitä, miten suunnitelmamme vaikuttavat suotuisan tuloksen todennäköisyyteen.
+- Arkiset ongelmat eivät aina vaadi ankaraa ajattelua ja pohdiskelua erilaisten vaihtoehtojen välillä niihin käytettävissä olevan ajan ollessa rajallinen. Tästä huolimatta teet ennusteita tiedostaen ja useimmiten tiedostamatta monta kertaa päivässä!
+
+- __Ennustevirhe__:
+  - Ennusteita verrataan toteutuneeseen kehitykseen. Näiden erotuksena muodostuu ennustevirhe. 
+  - Lähtökohtana on (luonnollisesti) minimoida ennustevirheet. Käytännössä useinmiten mm. vastemuuttujan luonteen perusteella valitaan sopiva ennustevirheitä summarisoiva tunnusluku, kuten keskineliöennustevirhe (jatkuvat vastemuuttujat) tai luokitteluvasteiden tapauksessa väärin (tai oikein) ennustettujen luokitteluiden suhteellinen osuus.
+  - Ajoittain ennustetarkkuutta on helpompi ja toisaalta sitten vaikeampi tarkkailla. Esim. taloustieteessä on paljon helpompi arvioida työttömyyttä koskevaa ennustetta kuin esimerkiksi ennustetta (jopa väitettä) velkaelvytyksen tehokkuudesta. Toisaalta valtio-opissa voidaan arvioida vaalitulosta koskevia ennusteita suoraviivaisesti, mutta saattaa kulua vuosikymmeniä nähdä miten poliittisten instituutioiden ennusteisiin perustuvat ennakoidut muutokset vaikuttavat poliittisten päätösten tuloksiin.
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Silverin kirjan luvun 1 pohdintaa ennustevirheestä _finanssikriisiin_ (_rahoituskriisiin_) vuoden 2008 aikana (finanssikriisin voidaan katsoa koskeneen lopulta vuosia 2007-2009).**  
+
+Pörssikurssien voimakas lasku, Lehman Brothersin kaltaisia aikoinaan arvostettuja yhtiöitä meni vararikkoon, luottomarkkinat olivat käytännössä "jäätyneet", Las Vegasissa asuntojen hinnat laskivat 40 prosenttia (osoittaen osaltaan vallinnutta laajempaakin "__asuntokuplaa__" (perusteettoman korkeita asuntojen hintoja), työttömyys kasvoi räjähdysmäisesti jne. 
+
+\
+
+__Ennustevirheen yhteisiä ja tyypillisiä piirteitä__ (tässä tapauksessa), jotka laajentuvat moniin muihinkin tilanteisiin ja sovelluksiin:
+
+  1. Asunnonomistajat ja sijoittajat ajattelivat, että nousevat hinnat viittasivat siihen, että asuntojen hinnat jatkaisivat nousuaan, kun todellisuudessa historia viittasi siihen, että sen takia niillä oli taipumus laskea (näissä olosuhteissa).
+  2. Luottoluokistuslaitokset (samoin kuin Lehman Brothersin kaltaiset pankit) eivät ymmärtäneet, miten riskialtiita asuntovakuudelliset arvopaperit olivat. Ongelma ei varsinaisesti ollut siinä, että luokituslaitokset eivät nähneet asuntokuplaa. Sen sijaan niiden ennustemallit olivat täynnä huonoja oletuksia ja väärää "itseluottamusta" mahdollisten asuntojen hintojen romahduksen riskeistä.
+  3. Laajasti ei ennakoitu, miten asuntokriisi laukaisee globaalin rahoituskriisin. Se johtui suurelta osin liiallisesta velkaantumisesta markkinoilla, jossa lyötiin erinäisten instrumenttien myötä vetoa yhdysvaltalaisten halukkuuden puolesta sijoittaa uuteen kotiin.
+  4. Rahoituskriisin välittömissä jälkimainingeissa ei osattu ennustaa, miten laajoja taloudellisia ongelmia se aiheuttaa. Rahoituskriisit tyypillisesti tuottavat erittäin syviä ja pitkäkestoisia taloudellisia taantumajaksoja.
+
+Näissä ennustamisen epäonnistumisissa on __yhteinen piirre__. Kussakin tapauksessa aineistoa arvioidessaan ihmiset jättivät keskeisen asiayhteyden palan huomiotta:
+
+  1. Asunnonomistajien luottamus asuntojen hintoihin johtui ehkä siitä, että lähimenneisyydessä Yhdysvalloissa asuntojen hinnat eivät olleet laskeneet merkittävästi. __*Kuitenkaan*__ koskaan aikaisemmin Yhdysvaltojen asuntojen hinnat eivät olleet nousseet niin laajalla alueella kuin romahdusta edeltävällä kaudella.
+  2. Pankkien luottamus luottoluokituslaitosten (kuten Moody'siin ja S\&P'siin) kykyyn luokittaa asuntovakuudellisia arvopapereita ehkä perustui siihen, että laitoksina ne olivat onnistuneet pätevästi luokittamaan muunlaista rahoitusomaisuutta. __*Kuitenkaan*__ luottoluokituslaitokset eivät olleet koskaan aikaisemmin luokittaneet yhtä uusia ja monimutkaisia arvopapereita mitä tuolloin (kuten ns. luotonvaihto-optioita).
+  3. (Taloustietelijöiden) luottamus rahoitusjärjestelmän kykyyn kestää asuntokriisi syntyi ehkä siitä, että aikaisemmin asuntojen hintojen heilahtelulla ei yleensä ollut suuria vaikutuksia rahoitusjärjestelmässä. __*Kuitenkaan*__ rahoitusjärjestelmä ei luultavasti koskaan aikaisemmin ole ollut yhtä vekkaantunut eikä vedonlyöntiä asuntojen hinnoista ollut tehty vastaavassa mittaluokassa.
+  4. Poliittisten päättäjien luottamus siihen, että talous toipuu nopeasti rahoituskriiseistä syntyi ehkä viime vuosikymmenten taantumista saaduista kokemuksista. Useampia niitä oli seurannut nopea ``V-muotoinen'' toipuminen (kuten nyt myös myöhemmin mm. koronapandemian aikaan). __*Kuitenkaan*__ nämä taantumat eivät olleet liittyneet rahoituskriiseihin ja rahoituskriisit ovat (yleensä) erilaisia.
+
+Jokaista edellistä kohtaa yhdistää ennustamiseen hyvin keskeisesti liittyvä termi: Ennustajien pohtimat ilmiöt olivat ns. __otoksen ulkopuolella__ (engl. __out-of-sample__). Kun ennustaminen epäonnistuu merkittävällä tavalla, tämä ongelma jättää yleensä runsaasti sormenjälkiä rikospaikalle. Miten tämä ongelma näyttäytyy siis oheisen esimerkin tapauksessa?
+
+  - Luottoluokituslaitos (kuten Moody's) arvioi, missä määrin asuntolainojen hoitamatta jättämiset liittyivät toisiinsa, rakentamalla (luultavasti ainakin osin) tilastollisen mallin menneisyyden aineiston perusteella. Oletettavasti he käyttivät mallin rakentamiseen noin 1980-luvulle ulottuvaa Yhdysvaltain asuntomarkkina-aineistoa.
+  - Ongelmana oli, että 1980-luvulta 2000-luvun alkuvuosiin saakka asuntojen hinnat olivat aina vakaat tai nousevat Yhdysvalloissa. Tässä tilanteessa oletus, että asunnonomistajien asuntolainat eivät juurikaan liittyneet toisiinsa oli luultavasti perusteltu ja riittävän hyvä tilastollisen mallintamisen pohjaksi.
+  - Kuitenkaan menneessä aineistossa mikään ei olisi kuvannut mitä tapahtuu kun asuntojen hinnat alkavat laskea kauttaaltaan samanaikaisesti. Ts. asuntoromahdus oli __otoksen ulkopuolinen tapahtuma__ ja tässä tilanteessa luottoluokituslaitosten mallit olivat arvottomia (huonoja) lainojen hoitamatta jättämisen riskiä arvioitaessa.
+:::
+
+\
+
+- Rahoituskriisiä koskevan esimerkin tilanteessa otoksen ulkopuolisiä ilmiöitä koskeva ongelma realisoitui siten, että muodostettu tilastollinen malli, kuten vaikkapa lineaarisen regressiomallin sopiva laajennus, __estimoitiin__, tai koneoppimisesta tutussa kielenkäytössä __opetettiin__, aineistolla, joka ei lopulta ollut relevantti juuri myöhemmin tapahtunutta kriisivaihetta ajatellen. 
+  - Onkin tärkeää ymmärtää, että "todellisessa" ennustetilanteessa joudumme käyttämään aiempaa aineistoa mallien ja algoritmien rakentamiseen. Näin ollen näiden ennustekykyä arvioitaessa onkin mentävä otoksen ulkopuolelle, koska "otoksen sisällä" voimme opettaa kyseisiä malleja (ääritilanteessa) niin, että ne ovat periaatteessa äärettömän tarkkoja. Ne eivät kuitenkaan takaa missään mielessä hyvää ennustekykyä tulevia tapahtumia ennustettaessa.
+
+- Vastaavalla tavalla karakterisoidaan nykyään hyvin suosittujen koneoppimismenetelmien keskeinen piirre: ne ja tarkasteltavat sovellukset perustuvat käytännössä (vielä) lähes yksinomaan ennustesovelluksiin. Tällöin mallien ja algoritmien opettaminen ns. __opetusaineistolla__ (edellä olevassa esimerkissä aiemmalla asuntomarkkina-aineistolla) ja ennustekyvyn arviointi __ennusteotoksen__ avulla pitää erottaa toisistaan. 
+  - __Otoksen sisäiseen sovittamiseen__ (engl. __in-sample__ tai __training sample__ estimation, ajoittain prediction) liittyy siis (ennustamisen näkökulmasta) katsoen ns. __ylisovittamisen__ vaara. On mahdollista, että yritämme puristaa lähes puhtaasta kohinasta signaaleja, jotka eivät missään mielessä tule olemaan valideja otoksen ulkopuolisessa ennustamistilanteessa.
+  - Jälleen kerran näistä teemoista keskustellaan tarkemmin myöhemmin tilastotieteen aine- ja syventävien opintojen erikoiskursseilla, kuten [TILM3587 Regressioanalyysi ja tilastollinen oppiminen](https://opas.peppi.utu.fi/fi/opintojakso/TILM3587/6975) ja [TILM3592 Tilastollisen oppimisen jatkokurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3592/13413).
+
+- Huolimatta edellä käydystä, kriittisestäkin, keskustelusta ennustamiseen liittyen, monet ennusteet ovat varsin tarkkoja ja samalla vapaita ylisovittamisen vaaroista!
+
+## Luvun 13 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
+
+- Tilastollinen ennustaminen
+- Selitysmalli vs. ennustemalli
+- Ennuste ja ennustevirhe
+- Opetusaineisto vs. ennusteotos
+- In-sample/training sample vs. out-of-sample (forecasting)

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9.2 Tutkimusprosessi | TILM3701 - Tilastotiede ja data 2024</title>
+  <title>9.2 Otosjakauma: Estimaattori ja estimaatti | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9.2 Tutkimusprosessi | TILM3701 - Tilastotiede ja data 2024" />
+  <meta property="og:title" content="9.2 Otosjakauma: Estimaattori ja estimaatti | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9.2 Tutkimusprosessi | TILM3701 - Tilastotiede ja data 2024" />
+  <meta name="twitter:title" content="9.2 Otosjakauma: Estimaattori ja estimaatti | TILM3701 - Tilastotiede ja data 2024" />
   
   <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
   
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="alaluku91.html"/>
-<link rel="next" href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"/>
+<link rel="next" href="alaluku93.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -78,10 +78,9 @@
 <li><a href="./">TILM3701 - Tilastotiede ja data 2024/a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kurssin rakenne</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kurssin rakenne</a></li>
 <li class="chapter" data-level="" data-path="kurssimateriaali.html"><a href="kurssimateriaali.html"><i class="fa fa-check"></i>Kurssimateriaali</a></li>
-</ul></li>
+<li class="part"><span><b>I Osa 1</b></span></li>
 <li class="chapter" data-level="1" data-path="johdantoa-ja-johdattelua-tilastotieteeseen.html"><a href="johdantoa-ja-johdattelua-tilastotieteeseen.html"><i class="fa fa-check"></i><b>1</b> Johdantoa ja johdattelua tilastotieteeseen</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="tilastotiede-ja-kurssin-idea.html"><a href="tilastotiede-ja-kurssin-idea.html"><i class="fa fa-check"></i><b>1.1</b> Tilastotiede ja kurssin idea</a></li>
@@ -127,77 +126,83 @@
 <li class="chapter" data-level="5.2" data-path="alaluku52.html"><a href="alaluku52.html"><i class="fa fa-check"></i><b>5.2</b> Otannan idea</a></li>
 <li class="chapter" data-level="5.3" data-path="alaluku53.html"><a href="alaluku53.html"><i class="fa fa-check"></i><b>5.3</b> Mittaaminen ja mitta-asteikot</a></li>
 <li class="chapter" data-level="5.4" data-path="alaluku54.html"><a href="alaluku54.html"><i class="fa fa-check"></i><b>5.4</b> Kontrolloidut kokeet ja suorat havainnot</a></li>
-<li class="chapter" data-level="5.5" data-path="alaluku55.html"><a href="alaluku55.html"><i class="fa fa-check"></i><b>5.5</b> Otantamenetelmät</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="alaluku55.html"><a href="alaluku55.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>5.5.1</b> Yksinkertainen satunnaisotanta</a></li>
-<li class="chapter" data-level="5.5.2" data-path="alaluku55.html"><a href="alaluku55.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>5.5.2</b> Systemaattinen otanta</a></li>
-<li class="chapter" data-level="5.5.3" data-path="alaluku55.html"><a href="alaluku55.html#ositettu-otanta"><i class="fa fa-check"></i><b>5.5.3</b> Ositettu otanta</a></li>
-<li class="chapter" data-level="5.5.4" data-path="alaluku55.html"><a href="alaluku55.html#ryväsotanta"><i class="fa fa-check"></i><b>5.5.4</b> Ryväsotanta</a></li>
+<li class="chapter" data-level="5.5" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.5</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="alaluku56.html"><a href="alaluku56.html"><i class="fa fa-check"></i><b>5.6</b> Otantaesimerkkejä</a></li>
-<li class="chapter" data-level="5.7" data-path="alaluku57.html"><a href="alaluku57.html"><i class="fa fa-check"></i><b>5.7</b> Otannan haasteita vielä kootusti</a></li>
-<li class="chapter" data-level="5.8" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.8</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Tilastollinen riippuvuus ja korrelaatio</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="alaluku61.html"><a href="alaluku61.html"><i class="fa fa-check"></i><b>6.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
-<li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
-<li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
-<li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Suhteellisen frekvenssin otosjakauma</a></li>
-<li class="chapter" data-level="6.5" data-path="alaluku65.html"><a href="alaluku65.html"><i class="fa fa-check"></i><b>6.5</b> Muita tunnuslukuja</a></li>
-<li class="chapter" data-level="6.6" data-path="alaluku66.html"><a href="alaluku66.html"><i class="fa fa-check"></i><b>6.6</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="6.7" data-path="alaluku67.html"><a href="alaluku67.html"><i class="fa fa-check"></i><b>6.7</b> Otoskoko</a></li>
-<li class="chapter" data-level="6.8" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.8</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="6.1" data-path="alaluku61.html"><a href="alaluku61.html"><i class="fa fa-check"></i><b>6.1</b> Muuttujien väliset riippuvuudet</a></li>
+<li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
+<li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Tunnusluvut</a></li>
+<li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
+<li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastollinen riippuvuus ja korrelaatio</a>
+<li class="part"><span><b>II Osa 2</b></span></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a></li>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otantamenetelmät</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="alaluku71.html"><a href="alaluku71.html"><i class="fa fa-check"></i><b>7.1</b> Muuttujien väliset riippuvuudet</a></li>
-<li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
-<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Tunnusluvut</a></li>
-<li class="chapter" data-level="7.4" data-path="alaluku74.html"><a href="alaluku74.html"><i class="fa fa-check"></i><b>7.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
-<li class="chapter" data-level="7.5" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.5</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Otantamenetelmät</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="alaluku81.html"><a href="alaluku81.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>8.1.1</b> Yksinkertainen satunnaisotanta</a></li>
+<li class="chapter" data-level="8.1.2" data-path="alaluku81.html"><a href="alaluku81.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>8.1.2</b> Systemaattinen otanta</a></li>
+<li class="chapter" data-level="8.1.3" data-path="alaluku81.html"><a href="alaluku81.html#ositettu-otanta"><i class="fa fa-check"></i><b>8.1.3</b> Ositettu otanta</a></li>
+<li class="chapter" data-level="8.1.4" data-path="alaluku81.html"><a href="alaluku81.html#ryväsotanta"><i class="fa fa-check"></i><b>8.1.4</b> Ryväsotanta</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Regressioanalyysi</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Johdatus regressioanalyysin ideaan</a></li>
-<li class="chapter" data-level="8.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>8.2</b> Yhden selittäjän lineaarinen regressiomalli</a></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Muita regressiomalleja</a></li>
-<li class="chapter" data-level="8.4" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.4</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="8.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>8.2</b> Otantaesimerkkejä</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otannan haasteita vielä kootusti</a></li>
+<li class="chapter" data-level="8.4" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia.html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia.html"><i class="fa fa-check"></i><b>8.4</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Tilastotieteen rooli uuden tiedon tuottamisessa</a>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Tilastollisen tutkimuksen yhteisiä elementtejä</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Tutkimusprosessi</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku93.html"><a href="alaluku93.html"><i class="fa fa-check"></i><b>9.3</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
+<li class="chapter" data-level="9.4" data-path="alaluku94.html"><a href="alaluku94.html"><i class="fa fa-check"></i><b>9.4</b> Suhteellisen frekvenssin otosjakauma</a></li>
+<li class="chapter" data-level="9.5" data-path="alaluku95.html"><a href="alaluku95.html"><i class="fa fa-check"></i><b>9.5</b> Muita tunnuslukuja</a></li>
+<li class="chapter" data-level="9.6" data-path="alaluku96.html"><a href="alaluku96.html"><i class="fa fa-check"></i><b>9.6</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.7" data-path="alaluku97.html"><a href="alaluku97.html"><i class="fa fa-check"></i><b>9.7</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.8" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.8</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Aineisto- ja tutkimustyypit ja koeasetelmat</a>
+<li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="alaluku101.html"><a href="alaluku101.html"><i class="fa fa-check"></i><b>10.1</b> Tutkimustyypit</a></li>
-<li class="chapter" data-level="10.2" data-path="alaluku102.html"><a href="alaluku102.html"><i class="fa fa-check"></i><b>10.2</b> Tutkimusstrategiat</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="alaluku102.html"><a href="alaluku102.html#poikittaistutkimus-eli-poikkileikkaustutkimus"><i class="fa fa-check"></i><b>10.2.1</b> <strong>Poikittaistutkimus</strong> eli <strong>poikkileikkaustutkimus</strong></a></li>
-<li class="chapter" data-level="10.2.2" data-path="alaluku102.html"><a href="alaluku102.html#pitkittäistutkimus"><i class="fa fa-check"></i><b>10.2.2</b> <strong>Pitkittäistutkimus</strong></a></li>
-<li class="chapter" data-level="10.2.3" data-path="alaluku102.html"><a href="alaluku102.html#kohorttitutkimus"><i class="fa fa-check"></i><b>10.2.3</b> <strong>Kohorttitutkimus</strong></a></li>
-<li class="chapter" data-level="10.2.4" data-path="alaluku102.html"><a href="alaluku102.html#tapaus-verrokkitutkimus"><i class="fa fa-check"></i><b>10.2.4</b> <strong>Tapaus-verrokkitutkimus</strong></a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="alaluku103.html"><a href="alaluku103.html"><i class="fa fa-check"></i><b>10.3</b> Erilaisia aineistoja ja aineistolähteitä</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="alaluku103.html"><a href="alaluku103.html#rekisteriaineistot"><i class="fa fa-check"></i><b>10.3.1</b> Rekisteriaineistot</a></li>
-<li class="chapter" data-level="10.3.2" data-path="alaluku103.html"><a href="alaluku103.html#aikasarjat-ja-paneeliaineistot"><i class="fa fa-check"></i><b>10.3.2</b> Aikasarjat ja paneeliaineistot</a></li>
-<li class="chapter" data-level="10.3.3" data-path="alaluku103.html"><a href="alaluku103.html#survey--eli-haastattelu--tai-kyselytutkimus"><i class="fa fa-check"></i><b>10.3.3</b> Survey- eli haastattelu- tai kyselytutkimus</a></li>
-</ul></li>
+<li class="chapter" data-level="10.1" data-path="alaluku10.html"><a href="alaluku10.html"><i class="fa fa-check"></i><b>10.1</b> Johdatus regressioanalyysin ideaan</a></li>
+<li class="chapter" data-level="10.2" data-path="alaluku102.html"><a href="alaluku102.html"><i class="fa fa-check"></i><b>10.2</b> Yhden selittäjän lineaarinen regressiomalli</a></li>
+<li class="chapter" data-level="10.3" data-path="alaluku103.html"><a href="alaluku103.html"><i class="fa fa-check"></i><b>10.3</b> Muita regressiomalleja</a></li>
 <li class="chapter" data-level="10.4" data-path="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>10.4</b> Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="luku11.html"><a href="luku11.html"><i class="fa fa-check"></i><b>11</b> Tilastollisesta ennustamisesta</a>
+<li class="chapter" data-level="11" data-path="luku11.html"><a href="luku11.html"><i class="fa fa-check"></i><b>11</b> Tilastotieteen rooli uuden tiedon tuottamisessa</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="alaluku111.html"><a href="alaluku111.html"><i class="fa fa-check"></i><b>11.1</b> Tilastollinen selittäminen vs. ennustaminen</a></li>
-<li class="chapter" data-level="11.2" data-path="alaluku112.html"><a href="alaluku112.html"><i class="fa fa-check"></i><b>11.2</b> Tilastolliseen ennustamiseen liittyviä huomioita</a></li>
+<li class="chapter" data-level="11.1" data-path="alaluku111.html"><a href="alaluku111.html"><i class="fa fa-check"></i><b>11.1</b> Tilastollisen tutkimuksen yhteisiä elementtejä</a></li>
+<li class="chapter" data-level="11.2" data-path="alaluku112.html"><a href="alaluku112.html"><i class="fa fa-check"></i><b>11.2</b> Tutkimusprosessi</a></li>
 <li class="chapter" data-level="11.3" data-path="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>11.3</b> Luvun 11 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="luku12.html"><a href="luku12.html"><i class="fa fa-check"></i><b>12</b> Tilastotieteen kehityksen nykytrendejä</a>
+<li class="chapter" data-level="12" data-path="luku12.html"><a href="luku12.html"><i class="fa fa-check"></i><b>12</b> Aineisto- ja tutkimustyypit ja koeasetelmat</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="modernin-tilastotieteen-suuntaviivoja.html"><a href="modernin-tilastotieteen-suuntaviivoja.html"><i class="fa fa-check"></i><b>12.1</b> Modernin tilastotieteen suuntaviivoja</a></li>
-<li class="chapter" data-level="12.2" data-path="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>12.2</b> Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="12.1" data-path="alaluku121.html"><a href="alaluku121.html"><i class="fa fa-check"></i><b>12.1</b> Tutkimustyypit</a></li>
+<li class="chapter" data-level="12.2" data-path="alaluku122.html"><a href="alaluku122.html"><i class="fa fa-check"></i><b>12.2</b> Tutkimusstrategiat</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="alaluku122.html"><a href="alaluku122.html#poikittaistutkimus-eli-poikkileikkaustutkimus"><i class="fa fa-check"></i><b>12.2.1</b> <strong>Poikittaistutkimus</strong> eli <strong>poikkileikkaustutkimus</strong></a></li>
+<li class="chapter" data-level="12.2.2" data-path="alaluku122.html"><a href="alaluku122.html#pitkittäistutkimus"><i class="fa fa-check"></i><b>12.2.2</b> <strong>Pitkittäistutkimus</strong></a></li>
+<li class="chapter" data-level="12.2.3" data-path="alaluku122.html"><a href="alaluku122.html#kohorttitutkimus"><i class="fa fa-check"></i><b>12.2.3</b> <strong>Kohorttitutkimus</strong></a></li>
+<li class="chapter" data-level="12.2.4" data-path="alaluku122.html"><a href="alaluku122.html#tapaus-verrokkitutkimus"><i class="fa fa-check"></i><b>12.2.4</b> <strong>Tapaus-verrokkitutkimus</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="alaluku123.html"><a href="alaluku123.html"><i class="fa fa-check"></i><b>12.3</b> Erilaisia aineistoja ja aineistolähteitä</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="alaluku123.html"><a href="alaluku123.html#rekisteriaineistot"><i class="fa fa-check"></i><b>12.3.1</b> Rekisteriaineistot</a></li>
+<li class="chapter" data-level="12.3.2" data-path="alaluku123.html"><a href="alaluku123.html#aikasarjat-ja-paneeliaineistot"><i class="fa fa-check"></i><b>12.3.2</b> Aikasarjat ja paneeliaineistot</a></li>
+<li class="chapter" data-level="12.3.3" data-path="alaluku123.html"><a href="alaluku123.html#survey--eli-haastattelu--tai-kyselytutkimus"><i class="fa fa-check"></i><b>12.3.3</b> Survey- eli haastattelu- tai kyselytutkimus</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>12.4</b> Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="luku13.html"><a href="luku13.html"><i class="fa fa-check"></i><b>13</b> Tilastollisesta ennustamisesta</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="alaluku131.html"><a href="alaluku131.html"><i class="fa fa-check"></i><b>13.1</b> Tilastollinen selittäminen vs. ennustaminen</a></li>
+<li class="chapter" data-level="13.2" data-path="alaluku132.html"><a href="alaluku132.html"><i class="fa fa-check"></i><b>13.2</b> Tilastolliseen ennustamiseen liittyviä huomioita</a></li>
+<li class="chapter" data-level="13.3" data-path="luvun-13-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-13-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>13.3</b> Luvun 13 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="luku14.html"><a href="luku14.html"><i class="fa fa-check"></i><b>14</b> Tilastotieteen kehityksen nykytrendejä</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="modernin-tilastotieteen-suuntaviivoja.html"><a href="modernin-tilastotieteen-suuntaviivoja.html"><i class="fa fa-check"></i><b>14.1</b> Modernin tilastotieteen suuntaviivoja</a></li>
+<li class="chapter" data-level="14.2" data-path="luvun-14-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-14-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>14.2</b> Luvun 14 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -220,165 +225,87 @@
 
             <section class="normal" id="section-">
 <div id="alaluku92" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Tutkimusprosessi<a href="alaluku92.html#alaluku92" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">9.2</span> Otosjakauma: Estimaattori ja estimaatti<a href="alaluku92.html#alaluku92" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Soveltavassa tilastotieteessä tutkimusongelman asettelulla on erityisen tärkeä rooli.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></li>
-<li>Tutkimusta ei yleensä ole mahdollista jakaa täysin selvästi erillisiin ja ajallisesti tosiaan seuraaviin vaiheisiin.
+<li><p>Erityisesti klassisessa tilastotieteessä tilastollinen päättely pohjautuu aineiston tilastollisen mallin kuvaamalle tilastolliselle stabiliteetille, joka ilmenee ajatuksena aineiston keruun toistamisesta.</p>
 <ul>
-<li>Tutkimusprosessin vaiheet toistuvat vuorotellen ja limittäin, sillä tutkimuksen aikana tehdyt havainnot muokkaavat tutkimuksen kulkua.</li>
-<li>Tutkimuksen tekeminen vaikuttaa lopulta saataviin johtopäätelmiin. Aineiston ja itse ilmiön tuntemus kasvaa tutkimuksen kuluessa.</li>
-<li>Päätelmien tieteellisyyden (periaatteellinen) tarkistusmahdollisuus, ja nykyään yhä useammin jo toistettavuus, on tärkeää.</li>
+<li>Oletetaan, että tarkasteltavan aineiston on tuottanut satunnaisotanta tai satunnaiskoe, joka noudattaa tilastollista mallia <span class="math inline">\(f(y_1, \ldots, y_n; \theta)\)</span> (aiemmin merkinnöin).</li>
+<li>Toistetaan aineiston keruu samoissa olosuhteissa yhä uudelleen ja uudelleen.</li>
+<li>Saatava aineisto (numeeriset arvot) <span class="math inline">\(y_1, \ldots, y_n\)</span> vaihtelevat näin ollen valitun tilastollisen mallin jakauman kuvaamalla tavalla.</li>
 </ul></li>
-<li>Usein saattaa kuitenkin olla järkevää jäsentää tutkimuksessa kohdattavia tehtäviä ja vaiheita sekä niiden välisiä suhteita osana tutkimusprosessia.
+<li><p>Satunnaisotoksesta voidaan laskea erilaisia <strong>tunnuslukuja/otossuureita</strong>, joita merkitään <span class="math inline">\(T\)</span>:llä, ts. ne ovat aineiston funktioita
+<span class="math display">\[
+T = g(Y_1, \ldots, Y_n).
+\]</span></p></li>
+<li><p><strong>Tunnusluvut ovat satunnaismuuttujien funktioina myös satunnaismuuttujia.</strong></p>
 <ul>
-<li>Tutkimuksen lähtökohtana on jokin ongelma, johon tutkimuksen avulla etsitään vastausta.</li>
-<li>Tieto ei voi ylittää historiallisia rajojaan, joten tieteelliset teoriat ovat vain loogisia apuvälineitä, joita voidaan käyttää ilmiön tutkimuksen välineenä tai keinona sillä ehdolla, että sekä ilmiö että teoria asemoidaan ja tulkitaan suhteessa vallitseviin olosuhteisiin ja tieteelliseen keskusteluun.</li>
+<li>Tunnusluvulla on nk. todellinen arvo, <span class="math inline">\(g(\theta)\)</span>, joka vastaa tunnusluvun arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.</li>
+<li>Esimerkkinä tunnusluvusta on keskiarvo <span class="math inline">\(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\)</span>.</li>
+<li><strong>Tunnusluvun havaittu arvo</strong> (realisaatio) pisteessä (<span class="math inline">\(y_1,\ldots, y_n\)</span>) eli havaitussa aineistossa on</li>
 </ul></li>
-<li>Määritelmät:
+</ul>
+<p><span class="math display">\[
+t = g(y_1, \ldots, y_n).
+\]</span></p>
 <ul>
-<li>Ilmiöitä ei voida tutkia sellaisenaan, vaan vain niiden ilmentymien kautta käsitteiden avulla</li>
-<li>Tutkimus edellyttää arkikieltä täsmällisempää kommunikaatiota, joten ongelmaan liittyvien käsitteiden huolellinen määritteleminen ja erittely on tarpeellista.</li>
-<li>Määritelmät eivät korvaa empiiristä tietoa, mutta ne vaikuttavat tiedon järjestymiseen ja sen perusteella tehtävien päätelmien tekemiseen.</li>
+<li><p>Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia).</p></li>
+<li><p>Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.</p></li>
+<li><p>Jos tunnuslukua <span class="math inline">\(T\)</span> käytetään tilastollisen mallin parametrin (parametrien) <span class="math inline">\(\theta\)</span> estimointiin, niin tätä sanotaan tällöin parametrin <strong>estimaattoriksi</strong>.</p>
+<ul>
+<li>Estimaattorin otoskohtaisia arvoja, kuten yllä <span class="math inline">\(t\)</span>, kutsutaan <strong>estimaateiksi</strong>.</li>
+<li>Toivottavaa olisi, että estimaatit <span class="math inline">\(t = g(y_1, \ldots, y_n)\)</span> osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa <span class="math inline">\(g(\theta)\)</span>. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin <span class="math inline">\(T=g(Y_1, \ldots, Y_n)\)</span> jakauman tulisi keskittyä mahdollisimman tiiviisti <span class="math inline">\(g(\theta)\)</span>:n ympärille.</li>
 </ul></li>
-<li>Havaittava tieto
+<li><p>Koska tunnusluku/estimaattori <span class="math inline">\(T\)</span> on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun <span class="math inline">\(T\)</span> <strong>otosjakaumaksi</strong>.</p>
 <ul>
-<li>Yleensä ajatellaan, että todellisuudesta saadaan tietoa tavalla taikka toisella havaintoja tekemällä.</li>
-<li>Havaittava tieto ei mitenkään pysty kattamaan kaikkea tutkimuskohteeseen liittyvää ja toisaalta ymmärtämiseen tarvittava havaintomaailman hahmotus tuottaa ideologisesti ja historiallisesti sitoutuneita yksinkertaistavia sekä luonteeltaan usein hyvin teoreettisia abstraktioita.</li>
-</ul></li>
-<li>Operationalisointi: Siirrytään teoriasta empiriaan
-<ul>
-<li>Havainnoiminen ja mittaaminen joudutaan suhteuttaamaan valittuun käsitejärjestelmään.</li>
-<li>Joudutaan tekemään kompromisseja mittauksen eksaktisuus- ja systemaattisuusvaatimusten ja arkielen monimerkityksellisyyden välillä.</li>
-<li>On operationalisoitava tutkimusasetelma sellaiseksi, että tutkittavasta ilmiöstä pystytään tuottamaan ongelmaratkaisun kannalta tarkoituksenmukaista tietoa.</li>
-<li>Aineiston käsittely on tavallaan operationalisoinnin II vaihe. Tiedon (aineiston) muuttaminen hyödylliseksi.</li>
-<li>Näkökulman kiinnittäminen:
-<ul>
-<li>Operationalisoinnin avulla siirrytään teorian tasolta empirian tasolle ja samalla tulee määritellyksi näkökulma, josta ongelmaa tarkastellaan.</li>
-<li>Käsitteet ja niiden yhteyksistä esitettävät näkemykset voivat vaihtua tutkimuksen kuluessa, kunnes lopulta saavutetaan käsitteiden kyllääntymispiste</li>
-</ul></li>
-<li>Numeerinen mittaus
-<ul>
-<li>Numeerisen mittauksen onnistumiseksi käsitteen muotoilu on kiinnitettävä mittariksi.</li>
-<li>Numeeristen mittaustenkin tulkinta edellyttää, että niitä on tulkittava siinä kontekstissa, josta ne ovat peräisin.</li>
-<li>On esim. mahdollista, että esitetty kysymys ei välttämättä vastaa tutkimuskohteen ominaisuuksia.</li>
-</ul></li>
-</ul></li>
-<li>Aineisto eli data
-<ul>
-<li>Aineisto edustaa tutkimuksessa empiiristä maailmaa ja se valitaan ongelmanasettelun perusteella</li>
-<li>Tarvitaan systemaattinen aineisto, jonka avulla on mahdollista vastata tutkimuskysymyksiin.</li>
-<li>Aineiston tuottamiseen liittyy useita valintoja, jotka implisiittisesti määräävät myös mahdolliset analyysimenetelmät.</li>
-<li>Aineiston esikäsittely:
-<ul>
-<li>Aineisto ei ole keräämiseen jälkeen yleensä koskaan suoraan käytettävissä vaan vaatii erinäistä käsittelyä</li>
-<li>Esikäsittely on operationalisoinnin II vaihe, jossa aikaisemmin tehtyjen valintojen aineistossa esiintyvät ilmentyvät sovitetaan vastaamaan ongelmankäsittelyä.</li>
-</ul></li>
-</ul></li>
-<li>Analyysi ja tulkinta
-<ul>
-<li>Analyysivaiheessa sopivasti käsitelty aineisto ja ongelma pyritään sovittamaan yhteen siten, että ongelmaan saataisiin perusteltu ratkaisu (selitys ja lopulta tulkinta).</li>
-<li>Keskeistä on, että tehtävät oletukset sisältävät ongelmanratkaisun kannalta keskeiset tekijät sellaisella tavalla, ettei oletuksiin liittyvä informaation häviäminen kyseenalaista saatavia tuloksia.</li>
-<li>Analyysien tulokset on tulkittava eli käännettävä ne takaisin empiirian kieleltä teorian kielelle. Tavoitteena on siis substanssitietouteen perustuen tuottaa uutta tietoa siten, että se lisää myös substanssitietoutta</li>
-<li>Tulkinnan voi ajatella olevan operationalisoinnin käänteistapahtuma: Tutkimuksen läpiviennin sekä tulkinnan kannalta onnistunut operationalisointi ovat loppujen lopuksi yksi ja sama asia.</li>
-</ul></li>
-<li>Raportointi
-<ul>
-<li>Parhaimmillaan tutkimusraportti on vakuuttava, ja periaatteessa (ja toivottavasti) toiston mahdollistava, kuvaus tutkimusprosessin kaikista vaiheista, jolloin tutkija voi itse päättää haluaako uskoa saatuihin tuloksiin vai ei.</li>
-<li>Keskeistä on tuoda esille, mitä uutta kyseessä oleva tutkimus on paljastunut ilmiöstä ja suhteuttaa se olemassa olevaan tietoon.</li>
-<li>Tulosten perustelu: Tutkimuksen pätevyyttä ja yleistettävyyttä ja analyysin arvioitavuutta ja uskottavuutta tulisi pohtia raportissa. Tutkimuksen kuluessa tehdyt valinnat tulisi perustella tiedostaen mukaan myös omat arvopainoitteiset valinnat (ja ehkä oletuksetkin).</li>
+<li>Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun <span class="math inline">\(T\)</span> arvojen satunnaisvaihtelulle otoksesta toiseen.</li>
+<li>Otosjakaumat riippuvat tuntemattomista <strong>parametreista</strong>, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.</li>
+<li>Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit <strong>estimoidaan</strong>, kuten yllä jo todettiin, havaintoaineistoa käyttäen.</li>
 </ul></li>
 </ul>
 <p><br />
 </p>
-<p><strong>Esimerkki tilastollisesta kyselytutkimuksesta</strong> (lisää esimerkkejä myöhemmin luvussa <a href="luku10.html#luku10">10</a>).</p>
+<p><strong>Estimaattorin ominaisuudet</strong></p>
 <ul>
-<li>Päätöksentekijät ja tiedotusvälineet kartoittavat säännöllisin välein suomalaisten mielipiteet erilaisista yhteiskuntaa koskevista kysymyksistä.
-<ul>
-<li>Esimerkkejä:
-<ul>
-<li>Miten suomalaiset suhtautuvat NATO-jäsenyyteen?</li>
-<li>Miten suomalaiset suhtautuvat ydinvoiman lisärakentamiseen (osana vihreää siirtymää)?</li>
-<li>Mitkä ovat poliittisten puolueiden kannatusosuudet?</li>
-</ul></li>
-</ul></li>
-<li>Mielipiteet selvitetään kyselytutkimuksilla, joiden kohteeksi poimitaan tyypillisesti esim. noin 1000-2000 suomalaista.
-<ul>
-<li>Kyselytutkimuksen tavoitteena on tehdä kyselyn tulosten perusteella johtopäätöksiä mielipiteiden jakautumisesta kaikkien suomalaisten joukossa.</li>
-<li>Miten 1000-2000 suomalaiseen kohdistetun kyselyn tulokset voidaan yleistää koskemaan kaikkia suomalaisia?</li>
-<li>Kyselyn tulokset voidaan yleistää, jos kyselyn kohteiksi poimittujen suomalaisten joukko muodostaa edustavan pienoiskuvan Suomen kansasta (huom. aiemmin käsitellyn onnistuneen otannan idea ja vaatimukset).
-<ul>
-<li>Pienoiskuva on edustava, jos mielipiteet jakautuvat kyselyn kohteiksi poimittujen joukossa samalla tavalla kuin kaikkien suomalaisten muodostamassa perusjoukossa.</li>
-<li>Kyselyn kohteiden poiminta arpomalla on ainoa menetelmä, joka mahdollistaa edustavan pienoiskuvan saamisen.</li>
-<li>Kyselyn kohteiden poimintaa kaikkien suomalaisten muodostamasta perusjoukosta arpomalla voidaan nähdä satunnaisotantana ja tutkimuksen kohteeksi poimittua perusjoukon osa on tässä tapauksessa (satunnais)otos.</li>
-</ul></li>
-<li>Arvonnan käyttö kyselyn kohteiden poiminnassa merkitsee sitä, että kyselyn tulokset ovat satunnaisia seuraavassa mielessä: Jos arvontaa toistettaisiin, kysely tuottaisi (suurella todennäköisyydellä) joka kerran (ainakin jonkin verran) erilaiset tulokset, koska eri arvonnoissa kyselyyn poimittaisiin (suurella todennäköisyydellä) eri henkilöt.</li>
-<li>Kysymyksiä:
-<ul>
-<li>Miten yhdestä otoksesta saadut ja satunnaiset kyselytulokset voidaan yleistää koskemaan koko sitä perusjoukkoa, josta otos poimitaan?</li>
-<li>Miten luotettava tällainen yleistys on?</li>
-</ul></li>
-<li>Vastauksia:
-<ul>
-<li>Jos kyselyn kohteiden poiminnassa on käytetty satunnaisotantaa, kyselyn tuloksiin sisältyvälle epävarmuudelle ja satunnaisuudelle voidaan muodostaa tilastollinen malli, joka mahdollistaa sekä kyselyn tulosten yleistämisen että yleistyksen luotettavuuden arvioimisen.</li>
-<li>Yleistyksen luotettavuutta ei pystytä arvioimaan, ellei otoksen poiminnassa ole käytetty satunnaisotantaa.</li>
-<li>Kyselytutkimusten suunnittelussa, toteutuksessa ja tulosten analysoinnissa sovelletaan mm. seuraavia tilastollisia menetelmiä: otanta, estimointi ja testaus.</li>
-</ul></li>
-</ul></li>
+<li>Merkitään seuraavassa parametrin <span class="math inline">\(\theta\)</span> estimaattoria <span class="math inline">\(\widehat{\theta}\)</span>:lla ja siltä voidaan toivoa seuraavia ominaisuuksia:</li>
 </ul>
-<div style="page-break-after: always;"></div>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: laadunvalvonta (Mellin, 2006)</strong></p>
-<p>Tehdas valmistaa korkealuokkaisia sulkimia kameroihin. Tehdas pyrkii siihen, että yli 90 % sulkimista kestää vähintään 100 000 kameran laukaisua.</p>
+<div class="defblock mikko">
+<p><strong>Harhattomuus</strong></p>
+<p>Estimaattorin odotettavissa oleva arvo yhtyy tuntemattoman parametrin <span class="math inline">\(\theta\)</span> todelliseen arvoon eli <span class="math inline">\(\text{E}(\widehat{\theta}) = \theta\)</span>.</p>
 <ul>
-<li>Sulkimien laadunvalvonta on toteutettu seuraavalla tavalla:
-<ul>
-<li><ol style="list-style-type: lower-roman">
-<li>Tuotantolinjalta poimitaan arpomalla joukko sulkimia rasituskokeeseen.<br />
-</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: lower-roman">
-<li>Rasituskokeessa määrätään vähintään 100 000 laukaisua kestävien sulkimien suhteellinen osuus.<br />
-</li>
-</ol></li>
-</ul></li>
-<li>Kokeen tavoitteena on tehdä kokeen tulosten perusteella yleisiä johtopäätöksiä sulkimien kestävyydestä. Miten vain osaan sulkimista kohdistetun rasituskokeen tulokset voidaan yleistää koskemaan kaikkia sulkimia?
-<ul>
-<li>Kokeen tulokset voidaan yleistää, jos rasituskokeen kohteiksi poimittujen sulkimien joukko muodostaa edustavan pienoiskuvan kaikista valmistetuista sulkimista.<br />
-</li>
-<li>Pienoiskuva on edustava, jos sulkimien kesto jakautuu rasituskokeeseen poimittujen sulkimien joukossa samalla tavalla kuin kaikkien valmistettujen sulkimien muodostamassa perusjoukossa.<br />
-</li>
-<li>Rasituskokeen kohteiden poiminta arpomalla on ainoa menetelmä, joka mahdollistaa edustavan pienoiskuvan saamisen.
-<ul>
-<li>Rasituskokeen kohteiden poiminta kaikkien valmistettujen sulkimien muodostamasta perusjoukosta arpomalla merkitsee satunnaisotannan soveltamista ja tutkimuksen kohteeksi poimittu perusjoukon osa toimii muodostettavana (satunnais)otokseksena.<br />
-</li>
-</ul></li>
-<li>Arvonnan käyttö rasituskokeen kohteiden poiminnassa merkitsee sitä, että koetulokset ovat satunnaisia seuraavassa mielessä: Jos arvontaa toistettaisiin, kokeesta saataisiin (suurella todennäköisyydellä) joka kerran (ainakin jonkin verran) erilaiset tulokset, koska eri arvonnoissa kokeeseen poimittaisiin (suurella todennäköisyydellä) eri sulkimet.<br />
-</li>
-<li>Kysymyksiä:
-<ul>
-<li>Miten yhdestä kokeesta saadut ja satunnaiset koetulokset voidaan yleistää koskemaan kaikkia sulkimia?<br />
-</li>
-<li>Miten luotettava tällainen yleistys on?<br />
-</li>
-</ul></li>
-<li>Vastauksia:
-<ul>
-<li>Jos rasituskokeen kohteiden poiminnassa on käytetty satunnaisotantaa, kokeen tuloksiin sisältyvälle epävarmuudelle ja satunnaisuudelle voidaan muodostaa tilastollinen malli, joka mahdollistaa sekä koetulosten yleistämisen että yleistyksen luotettavuuden arvioimisen.<br />
-</li>
-<li>Yleistyksen luotettavuutta ei pystytä arvioimaan, ellei kokeen kohteiden poiminnassa ole käytetty satunnaisotantaa.<br />
-</li>
-<li>Kokeen suunnittelussa, toteutuksessa ja tulosten analysoinnissa sovelletaan mm. seuraavia tilastollisia menetelmiä: koesuunnittelu, otanta, estimointi ja testaus.<br />
-</li>
-</ul></li>
-</ul></li>
+<li>Harhaton estimaattori tuottaa keskimäärin oikean kokoisia arvoja (estimaatteja) estimoitavalle parametrille.</li>
+<li>Estimaattorin tuottama arvo parametrille saattaa tietylle otokselle poiketa paljonkin parametrin todellisesta arvosta, mutta odotusarvon frekvenssitulkinnan mukaan estimaattorin tuottamat otoskohtaiset arvot parametrille jakautuvat otantaa toistettaessa (symmetrisesti) parametrin todellisen arvon ympärille.</li>
 </ul>
 </div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unbiased"></span>
+<img src="images/unbiased.jpg" alt="Havainnollistuksia estimaattoreiden ominaisuuksista." width="100%" />
+<p class="caption">
+Kuvio 9.1: Havainnollistuksia estimaattoreiden ominaisuuksista.
+</p>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="24">
-<li id="fn24"><p>Yksi soveltavan tilastotieteen osa-alue onkin <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3579/5081">TILM3579 Kokeiden suunnittelu ja analyysi!</a><a href="alaluku92.html#fnref24" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div class="defblock mikko">
+<p><strong>Tyhjentävyys</strong></p>
+<p>Tyhjentävä estimaattori käyttää kaiken otokseen sisältyvän parametria <span class="math inline">\(\theta\)</span> koskevan informaation.</p>
+</div>
+<div class="defblock mikko">
+<p><strong>Tehokkuus</strong></p>
+<p>Kahdesta saman parametrin <span class="math inline">\(\theta\)</span> estimaattorista tehokkaampi on se, jonka varianssi on pienempi. Ts. <span class="math inline">\(\widehat{\theta}^{(1)}\)</span> on tehokkaampi kuin <span class="math inline">\(\widehat{\theta}^{(2)}\)</span>, jos <span class="math inline">\(\mathrm{Var}(\widehat{\theta}^{(1)}) \le \mathrm{Var}(\widehat{\theta}^{(2)})\)</span>.</p>
+</div>
+<div class="defblock mikko">
+<p><strong>Tarkentuvuus</strong></p>
+<p>Tarkentuvan estimaattorin <span class="math inline">\(\widehat{\theta}\)</span> arvot lähestyvät parametrin <span class="math inline">\(\theta\)</span> oikeaa arvoa otoskoon kasvaessa.</p>
+</div>
+<ul>
+<li>Voidaan osoittaa (yksityiskohdat sivuutetaan tällä kurssilla), että esimerkiksi yksinkertaisen satunnaisotoksen tapauksessa tavanomaisilla binomi- ja normaalijakauman parametrien estimaattoreilla on kaikki edellä mainitut hyvät ominaisuudet.
+<ul>
+<li>Näin ei ole yleisesti monimutkaisemmissa otantatilanteissa ja tilastollisisssa malleissa.</li>
+<li>Estimaattoreiden kehittäminen erilaisten tilastollisten mallien tapauksessa kuuluu teoreettisen tilastotieteen alaan.</li>
+</ul></li>
+<li>Seuraavaksi perehdytään tarkemmin kahteen kenties useimmiten tarkasteltavaan tunnuslukuun ja niiden otosjakaumiin:
+<ul>
+<li>Aritmeettisen keskiarvon otosjakaumaan <a href="alaluku93.html#alaluku93">9.3</a></li>
+<li>Suhteellisen osuuden (frekvenssin) otosjakaumaan <a href="alaluku94.html#alaluku94">9.4</a></li>
+</ul></li>
+</ul>
 </div>
             </section>
 
@@ -386,7 +313,7 @@
         </div>
       </div>
 <a href="alaluku91.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="alaluku93.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -434,7 +361,7 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

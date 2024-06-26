@@ -1,10 +1,23 @@
 delete_merged_file: true
-rmd_files: ["index.Rmd", "01-intro.Rmd", "02-tieto_tilastot.Rmd", "03-tilastotiede.Rmd", "04-random.Rmd", "05-otanta.Rmd", "06-tilppa.Rmd", "07-korrelaatio.Rmd", "08-regressio.Rmd", "09-til_rooli.Rmd", "010-tutkimusasetelmat.Rmd",
-            "011-ennustaminen.Rmd", "012-til_kehitys.Rmd"] 
+rmd_files: ["index.Rmd", 
+            "01-intro.Rmd", 
+            "02-tieto_tilastot.Rmd", 
+            "03-tilastotiede.Rmd", 
+            "04-random.Rmd", 
+            "05-otanta.Rmd", 
+            "06-korrelaatio.Rmd", 
+            "07-mallit.Rmd",
+            "08-otantamenetelmat.Rmd", 
+            "09-tilppa.Rmd",
+            "010-regressio.Rmd",
+            "011-til_rooli.Rmd", 
+            "012-tutkimusasetelmat.Rmd",
+            "013-ennustaminen.Rmd", 
+            "014-til_kehitys.Rmd"]
 output_dir: "docs/447d787770dc64bbc42d58d183e46dac11be488e"
 language:
   ui:
     chapter_name: "Luku "
   label:
     fig: "Kuvio " 
-book_filename: "TD2023"
+book_filename: "TD2024"

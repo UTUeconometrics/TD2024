@@ -48,7 +48,7 @@ header-includes: |
 
 Suuret kiitokset Visa Kuntzelle ja Emil Lehdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
 
-## Kurssimateriaali {-}
+# Kurssimateriaali {-}
 
 Kurssin materiaali on koostettu em. lähteistä ja pyrkii paikoin pelkistettyyn esitysmuotoon mutta kuitenkin niin että materiaalin opiskelemalla kurssin osaamistavoitteet täyttyvät kokonaisuudessaan. Osaamistavoitteet on listattu Turun yliopiston opinto-oppaassa matematiikan ja tilastotieteen laitoksen opintotarjonnasta [kurssikuvauksen alta](https://opas.peppi.utu.fi/fi/opintojakso/TILM3701/90798) ja ne löytyvät alta vielä laajemmin. 
 

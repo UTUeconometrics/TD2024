@@ -283,7 +283,7 @@ knitr::kable(
 # you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
 ```
 
-## Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
+##  Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
 - Tieteellinen teoria
 - Hypoteesi

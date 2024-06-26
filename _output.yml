@@ -1,9 +1,11 @@
 bookdown::gitbook:
+  toc_depth: 6
   css: style.css
   split_by: section
   highlight: espresso
   config:
     toc:
+      collapse: section
       before: |
         <li><a href="./">TILM3701 - Tilastotiede ja data 2024/a></li>
       after: |
