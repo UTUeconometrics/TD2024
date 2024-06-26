@@ -1,1 +1,90 @@
 \usepackage{booktabs}
+\usepackage{amsthm}
+\usepackage{placeins}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage{adjustbox}
+\usepackage{awesomebox}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+\usepackage[most]{tcolorbox}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage[finnish]{babel}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{overpic}
+\usepackage{lmodern}
+\usepackage{epsfig}
+\usepackage{placeins}
+\usepackage{xstring}     % Used for \IfEqCase
+
+
+\definecolor{myboxcolor}{named}{blue} % Default box color
+
+\definecolor{my-purple}{RGB}{204,180,225}
+\newtcolorbox{defblock}[1]{%
+    breakable,
+    enhanced,
+    coltext=black,
+    colback=my-purple,      % Box color is used here
+    colframe=myboxcolor!25!my-purple,     % Box color is used here
+    detach title,
+    after upper={\par\hfill\tcbtitle}        % Box title is used here 
+}
+
+\definecolor{my-orange}{RGB}{255,205,138}
+\newtcolorbox{eblock}[1]{%
+    breakable,
+    enhanced,
+    coltext=black,
+    colback=my-orange,      % Box color is used here
+    colframe=myboxcolor!25!my-orange,     % Box color is used here
+    detach title,
+    after upper={\par\hfill\tcbtitle}        % Box title is used here 
+}
+
+
+\newcommand{\Rspace}{\mathcal{R}}
+
+\newcommand{\N}{\mathsf{N}}
+\newcommand{\Cov}{\mathsf{Cov}}
+
+\newcommand{\Prob}{\mathsf{P}}
+
+\newcommand{\X}{\textbf{X}} 
+\newcommand{\Y}{\textbf{Y}} 
+\newcommand{\x}{\textbf{x}}                                   
+\newcommand{\y}{\textbf{y}}  
+\newcommand{\boldc}{\textbf{c}} 
+\newcommand{\boldd}{\textbf{d}}  
+\newcommand{\bolda}{\textbf{a}}  
+\newcommand{\THETA}{\mx{\theta}}
+\newcommand{\PHI}{\mx{\phi}}                                   
+\newcommand{\VAREPSILON}{\mx{\varepsilon}}                                   
+\newcommand{\hatVAREPSILON}{\mx{\hat{\VAREPSILON}}}
+\newcommand{\boldP}{\textbf{P}}
+\newcommand{\boldM}{\textbf{M}}
+\newcommand{\z}{\mx{z}}
+\newcommand{\A}{\textbf{A}}
+\newcommand{\C}{\textbf{C}}
+\newcommand{\hatMU}{\mx{\hat{\mu}}}
+\newcommand{\SIGMA}{\mx{\Sigma}}
+\newcommand{\ZERO}{\mx{0}}
+\newcommand{\ONE}{\mx{1}}
+\newcommand{\diag}{\textbf{I}}
+
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\rd}[1]{\textcolor{red}{#1}}
+\newcommand{\gr}[1]{\textcolor{darkgreenx}{#1}}
+
+
+%\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
+%\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}

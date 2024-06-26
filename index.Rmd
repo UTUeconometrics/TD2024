@@ -1,60 +1,86 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "TILM3701 - Tilastotiede ja data 2024"
+author:
+  - Koonneet
+  - Henri Nyberg^[Turun yliopisto, matematiikan ja tilastotieteen laitos, henri.nyberg@utu.fi]
+  - Roope Rihtamo^[Turun yliopisto, matematiikan ja tilastotieteen laitos, roope.rihtamo@utu.fi]
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
-description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+biblio-style: apalike
 link-citations: yes
+colorlinks: yes
+urlcolor: blue
+linkcolor: blue
 github-repo: rstudio/bookdown-demo
+description: "Tilastotieteen ensimmäinen kurssi."
+header-includes: |
+    \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+    \newcommand{\indep}{\perp \!\!\! \perp}
 ---
 
-# About
+# Kurssin rakenne {-}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+- Tällä kurssilla tarkoituksena on melko yleisellä tasolla johdatella tilastotieteen ja aineistojen (datan) maailmaan pohtimalla myös näiden laajempia merkityksiä tieteellisen tutkimuksen hyvin keskeisinä osina. 
 
-## Usage 
+- Kurssilla vältetään, mahdollisuuksien mukaan, kovin teknistä matemaattista esitystapaa, mutta tarvittavissa määrin tullaan myös käyttämään tilastotieteen perusopinnoissa tarvittavia matemaattisia merkintöjä ja määritelmiä. Esim. todennäköisyyslaskennan ja tilastollisen päättelyn perusteita ei käydä vielä riittävällä matemaattisella tarkkuudella lävitse, vaan nämä tarkastelut jäävät tätä kurssia seuraavien kurssien ([TILM3553 Todennäköisyyslaskennan peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024) tai [TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille](https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024) sekä [TILM3555 Tilastollisen päättelyn peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2022-2024)) asiaksi. Nämä kurssit, yhdessä alkuvaiheen pakollisten matematiikan kurssin lisäksi, muodostavat siis tämän kurssin johdannon kanssa lähtökohdan tilastotieteen opinnoille.
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+- Luennot eivät suoraan perustu yhteen kirjaan tai lähteeseen. Käytettyjä lähdemateriaaleja luetellaan alapuolella oheislukemiston myötä. 
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+- Oheislukemistoa (sopivilta osin):
+  - Mellin, I. (2004). Johdatus tilastotieteeseen: Tilastotieteen johdantokurssi (1.kirja). Yliopistopaino, Helsingin yliopisto.
+  - Mellin, I. (2000). Johdatus tilastotieteeseen: Tilastotieteen jatkokurssi (2.kirja). Yliopistopaino, Helsingin yliopisto.
+  - Mellin, I. (2006). Tilastolliset menetelmät. Luentomoniste, Aalto yliopisto (TKK).
+  - Holopainen, M. ja P. Pulkkinen (2008). Tilastolliset menetelmät. Sanoma Pro Oy.
+  - Pahkinen, E. ja R. Lehtonen (1989). Otanta-asetelmat ja tilastollinen analyysi. Gaudeamus, Helsinki.
+  - Pahkinen, E. ja R. Lehtonen (2004). Practical Methods for Design and Analysis of Complex Surveys. 2. painos, Wiley.
+  - Sund, R. (2003). Tilastotiede käytännön tutkimuksessa -kurssi. Helsingin yliopisto.
+  - Silver, N. (2014). Signaali ja kohina: Miksi monet ennusteet epäonnistuvat mutta jotkin eivät? Terra Cognita. (Suomentanut Kimmo Pietiläinen)
+    - Englanninkielinen teos: Silver, N. (2015). The Signal and the Noise: Why So Many Predictions Fail--but Some Don't. Penguin Books; Illustrated edition
+  - Pesonen, M. (2017). Kurssimateriaali kurssille Aineistonhankinta ja tutkimusasetelmat, Turun yliopisto.
+  - Vartia, Y. (1989). Tilastotieteen perusteet. Yliopistopaino, Helsinki. II painos.
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+- Muita taustamateriaaleja
+    - [Tilastokeskuksen tilastokoulu (linkki)](https://tilastokoulu.stat.fi/verkkokoulu_v2.xql?course_id=tkoulu_tilaj&lesson_id=1&subject_id=0&page_type=sisalto)
+    - Tilastotieteen sanasto suomi-englanti-suomi, ks. Juha Alho, Elja Arjas, Esa Läärä ja Pekka Pere (2021). [Tilastotieteen sanasto. Suomen Tilastoseuran julkaisuja 8.](https://tilastoseura.fi/)
 
-## Render book
+Suuret kiitokset Visa Kuntzelle ja Emil Lehdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
 
-You can render the HTML version of this example book without changing anything:
+## Kurssimateriaali {-}
 
-1. Find the **Build** pane in the RStudio IDE, and
+Kurssin materiaali on koostettu em. lähteistä ja pyrkii paikoin pelkistettyyn esitysmuotoon mutta kuitenkin niin että materiaalin opiskelemalla kurssin osaamistavoitteet täyttyvät kokonaisuudessaan. Osaamistavoitteet on listattu Turun yliopiston opinto-oppaassa matematiikan ja tilastotieteen laitoksen opintotarjonnasta [kurssikuvauksen alta](https://opas.peppi.utu.fi/fi/opintojakso/TILM3701/90798) ja ne löytyvät alta vielä laajemmin. 
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+- Opintojakson suoritettuaan opiskelija:
+  - On saanut kokonaiskuvan tilastotieteestä ja sen perusteista
+  - Osaa hahmottaa tilastotieteen roolin omana tieteenalana ja eri sovellusalueiden yhteydessä
+  - Tunnistaa erilaiset tutkimusasetelmat ja aineistotyypit
+  - On sisäistänyt tilastotieteen keskeisiä käsitteitä ja osaa niiden avulla tarkastella kriittisesti tieteellisiä tutkimuksia
+  - Pystyy erottamaan edustavan otoksen ja näytteen
 
-Or build the book from the R console:
+Kurssin sisältöä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.
 
-```{r, eval=FALSE}
-bookdown::render_book()
-```
+\newpage
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+- Kurssin sisältöä:
+  - Tilastotiede tieteenalana ja sen suhde lähitieteisiin, kuten datatieteeseen (data science)
+  - Tilastotieteen rooli uuden tieteellisen tiedon tuottamisessa
+  - Tilastolliset aineistot (data), niiden kerääminen ja mittaaminen
+  - Tilastollisen päättelyn perusteita
+  - Otannan perusteet
+  - Tilastotieteen sovellusten ja sovellusalueiden esittelyä
 
-## Preview book
+Materiaalin seassa on eritelty väärikoodatuin tietolaatikoin erinäisiä tärkeitä tilastotieteellisiä konsepteja ja termejä sekä esimerkkejä tilastotieteen sovelluksista. Näistä ensin mainitut löytyvät Deltan violeteista laatikoista ja jälkimmäiset Statistikan oransseista.^[Toim. Huom. värit eivät täysin alkuperäisten värien kanssa yhteneväisiä.] Alla esimerkkilaatikot.
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
+::: {.defblock data-latex="{}"}
+**Konsepti tai termi**
 
-```{r eval=FALSE}
-bookdown::serve_book()
-```
+Konseptin tai termin löyhä määritelmä.
+:::
 
+::: {.eblock data-latex="{}"}
+**Esimerkki**
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+Aihetta koskeva esimerkki.
+:::

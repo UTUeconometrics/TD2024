@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5.5 Otantamenetelmät | TILM3701 - Tilastotiede ja data 2023</title>
+  <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5.5 Otantamenetelmät | TILM3701 - Tilastotiede ja data 2023" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5.5 Otantamenetelmät | TILM3701 - Tilastotiede ja data 2023" />
+  
+  <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
+  
+
+<meta name="author" content="Koonneet" />
+<meta name="author" content="Henri Nyberg" />
+<meta name="author" content="Roope Rihtamo" />
+
+
+<meta name="date" content="2024-06-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="alaluku54.html"/>
+<link rel="next" href="alaluku56.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">TILM3701 - Tilastotiede ja data 2023</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kurssin rakenne</a>
+<ul>
+<li class="chapter" data-level="" data-path="kurssimateriaali.html"><a href="kurssimateriaali.html"><i class="fa fa-check"></i>Kurssimateriaali</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="johdantoa-ja-johdattelua-tilastotieteeseen.html"><a href="johdantoa-ja-johdattelua-tilastotieteeseen.html"><i class="fa fa-check"></i><b>1</b> Johdantoa ja johdattelua tilastotieteeseen</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="tilastotiede-ja-kurssin-idea.html"><a href="tilastotiede-ja-kurssin-idea.html"><i class="fa fa-check"></i><b>1.1</b> Tilastotiede ja kurssin idea</a></li>
+<li class="chapter" data-level="1.2" data-path="tilastotieteen-asema-tutkimusyhteisön-ulkopuolella.html"><a href="tilastotieteen-asema-tutkimusyhteisön-ulkopuolella.html"><i class="fa fa-check"></i><b>1.2</b> Tilastotieteen asema tutkimusyhteisön ulkopuolella</a></li>
+<li class="chapter" data-level="1.3" data-path="kurssin-luonne-tilastotieteen-opintojen-esittelijänä.html"><a href="kurssin-luonne-tilastotieteen-opintojen-esittelijänä.html"><i class="fa fa-check"></i><b>1.3</b> Kurssin luonne tilastotieteen opintojen esittelijänä</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="luku2.html"><a href="luku2.html"><i class="fa fa-check"></i><b>2</b> Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="alaluku21.html"><a href="alaluku21.html"><i class="fa fa-check"></i><b>2.1</b> Mitä on tiede?</a></li>
+<li class="chapter" data-level="2.2" data-path="alaluku22.html"><a href="alaluku22.html"><i class="fa fa-check"></i><b>2.2</b> Tieteellinen menetelmä</a></li>
+<li class="chapter" data-level="2.3" data-path="alaluku23.html"><a href="alaluku23.html"><i class="fa fa-check"></i><b>2.3</b> Tilastojen yleisestä roolista yhteiskunnassa</a></li>
+<li class="chapter" data-level="2.4" data-path="alaluku24.html"><a href="alaluku24.html"><i class="fa fa-check"></i><b>2.4</b> Mitä on tutkimus?</a></li>
+<li class="chapter" data-level="2.5" data-path="alaluku25.html"><a href="alaluku25.html"><i class="fa fa-check"></i><b>2.5</b> Tutkimuksen vaiheet ja tulosten julkaiseminen</a></li>
+<li class="chapter" data-level="2.6" data-path="luvun-2-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-2-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>2.6</b> Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="luku3.html"><a href="luku3.html"><i class="fa fa-check"></i><b>3</b> Tilastotiede tieteenalana</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="alaluku31.html"><a href="alaluku31.html"><i class="fa fa-check"></i><b>3.1</b> Lisää tilastotieteen perustermejä</a></li>
+<li class="chapter" data-level="3.2" data-path="alaluku32.html"><a href="alaluku32.html"><i class="fa fa-check"></i><b>3.2</b> Mitä tilastotiede on ja mitä se ei ole?</a></li>
+<li class="chapter" data-level="3.3" data-path="alaluku33.html"><a href="alaluku33.html"><i class="fa fa-check"></i><b>3.3</b> Tilastotieteen suhde lähitieteisiin</a></li>
+<li class="chapter" data-level="3.4" data-path="alaluku34.html"><a href="alaluku34.html"><i class="fa fa-check"></i><b>3.4</b> Tilastotieteen osa-alueet</a></li>
+<li class="chapter" data-level="3.5" data-path="alaluku35.html"><a href="alaluku35.html"><i class="fa fa-check"></i><b>3.5</b> Tilastotieteen kritiikkiä</a></li>
+<li class="chapter" data-level="3.6" data-path="alaluku36.html"><a href="alaluku36.html"><i class="fa fa-check"></i><b>3.6</b> Tilastotieteen sovellusaloja ja “rajatieteitä”</a></li>
+<li class="chapter" data-level="3.7" data-path="luvun-3-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-3-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>3.7</b> Luvun 3 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="luku4.html"><a href="luku4.html"><i class="fa fa-check"></i><b>4</b> Sattuma ja satunnaisuus tilastotieteessä</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
+<li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
+<li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
+<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
+<li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="luku5.html"><a href="luku5.html"><i class="fa fa-check"></i><b>5</b> Tilastolliset aineistot, niiden kerääminen ja mittaaminen</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="alaluku51.html"><a href="alaluku51.html"><i class="fa fa-check"></i><b>5.1</b> Kertausta: Data eli aineisto</a></li>
+<li class="chapter" data-level="5.2" data-path="alaluku52.html"><a href="alaluku52.html"><i class="fa fa-check"></i><b>5.2</b> Otannan idea</a></li>
+<li class="chapter" data-level="5.3" data-path="alaluku53.html"><a href="alaluku53.html"><i class="fa fa-check"></i><b>5.3</b> Mittaaminen ja mitta-asteikot</a></li>
+<li class="chapter" data-level="5.4" data-path="alaluku54.html"><a href="alaluku54.html"><i class="fa fa-check"></i><b>5.4</b> Kontrolloidut kokeet ja suorat havainnot</a></li>
+<li class="chapter" data-level="5.5" data-path="alaluku55.html"><a href="alaluku55.html"><i class="fa fa-check"></i><b>5.5</b> Otantamenetelmät</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="alaluku55.html"><a href="alaluku55.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>5.5.1</b> Yksinkertainen satunnaisotanta</a></li>
+<li class="chapter" data-level="5.5.2" data-path="alaluku55.html"><a href="alaluku55.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>5.5.2</b> Systemaattinen otanta</a></li>
+<li class="chapter" data-level="5.5.3" data-path="alaluku55.html"><a href="alaluku55.html#ositettu-otanta"><i class="fa fa-check"></i><b>5.5.3</b> Ositettu otanta</a></li>
+<li class="chapter" data-level="5.5.4" data-path="alaluku55.html"><a href="alaluku55.html#ryväsotanta"><i class="fa fa-check"></i><b>5.5.4</b> Ryväsotanta</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="alaluku56.html"><a href="alaluku56.html"><i class="fa fa-check"></i><b>5.6</b> Otantaesimerkkejä</a></li>
+<li class="chapter" data-level="5.7" data-path="alaluku57.html"><a href="alaluku57.html"><i class="fa fa-check"></i><b>5.7</b> Otannan haasteita vielä kootusti</a></li>
+<li class="chapter" data-level="5.8" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.8</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="alaluku61.html"><a href="alaluku61.html"><i class="fa fa-check"></i><b>6.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
+<li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
+<li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Suhteellisen frekvenssin otosjakauma</a></li>
+<li class="chapter" data-level="6.5" data-path="alaluku65.html"><a href="alaluku65.html"><i class="fa fa-check"></i><b>6.5</b> Muita tunnuslukuja</a></li>
+<li class="chapter" data-level="6.6" data-path="alaluku66.html"><a href="alaluku66.html"><i class="fa fa-check"></i><b>6.6</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="6.7" data-path="alaluku67.html"><a href="alaluku67.html"><i class="fa fa-check"></i><b>6.7</b> Otoskoko</a></li>
+<li class="chapter" data-level="6.8" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.8</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastollinen riippuvuus ja korrelaatio</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="alaluku71.html"><a href="alaluku71.html"><i class="fa fa-check"></i><b>7.1</b> Muuttujien väliset riippuvuudet</a></li>
+<li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
+<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Tunnusluvut</a></li>
+<li class="chapter" data-level="7.4" data-path="alaluku74.html"><a href="alaluku74.html"><i class="fa fa-check"></i><b>7.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
+<li class="chapter" data-level="7.5" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.5</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Regressioanalyysi</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Johdatus regressioanalyysin ideaan</a></li>
+<li class="chapter" data-level="8.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>8.2</b> Yhden selittäjän lineaarinen regressiomalli</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Muita regressiomalleja</a></li>
+<li class="chapter" data-level="8.4" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.4</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Tilastotieteen rooli uuden tiedon tuottamisessa</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Tilastollisen tutkimuksen yhteisiä elementtejä</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Tutkimusprosessi</a></li>
+<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Aineisto- ja tutkimustyypit ja koeasetelmat</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="alaluku101.html"><a href="alaluku101.html"><i class="fa fa-check"></i><b>10.1</b> Tutkimustyypit</a></li>
+<li class="chapter" data-level="10.2" data-path="alaluku102.html"><a href="alaluku102.html"><i class="fa fa-check"></i><b>10.2</b> Tutkimusstrategiat</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="alaluku102.html"><a href="alaluku102.html#poikittaistutkimus-eli-poikkileikkaustutkimus"><i class="fa fa-check"></i><b>10.2.1</b> <strong>Poikittaistutkimus</strong> eli <strong>poikkileikkaustutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.2" data-path="alaluku102.html"><a href="alaluku102.html#pitkittäistutkimus"><i class="fa fa-check"></i><b>10.2.2</b> <strong>Pitkittäistutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.3" data-path="alaluku102.html"><a href="alaluku102.html#kohorttitutkimus"><i class="fa fa-check"></i><b>10.2.3</b> <strong>Kohorttitutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.4" data-path="alaluku102.html"><a href="alaluku102.html#tapaus-verrokkitutkimus"><i class="fa fa-check"></i><b>10.2.4</b> <strong>Tapaus-verrokkitutkimus</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="alaluku103.html"><a href="alaluku103.html"><i class="fa fa-check"></i><b>10.3</b> Erilaisia aineistoja ja aineistolähteitä</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="alaluku103.html"><a href="alaluku103.html#rekisteriaineistot"><i class="fa fa-check"></i><b>10.3.1</b> Rekisteriaineistot</a></li>
+<li class="chapter" data-level="10.3.2" data-path="alaluku103.html"><a href="alaluku103.html#aikasarjat-ja-paneeliaineistot"><i class="fa fa-check"></i><b>10.3.2</b> Aikasarjat ja paneeliaineistot</a></li>
+<li class="chapter" data-level="10.3.3" data-path="alaluku103.html"><a href="alaluku103.html#survey--eli-haastattelu--tai-kyselytutkimus"><i class="fa fa-check"></i><b>10.3.3</b> Survey- eli haastattelu- tai kyselytutkimus</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>10.4</b> Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="luku11.html"><a href="luku11.html"><i class="fa fa-check"></i><b>11</b> Tilastollisesta ennustamisesta</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="alaluku111.html"><a href="alaluku111.html"><i class="fa fa-check"></i><b>11.1</b> Tilastollinen selittäminen vs. ennustaminen</a></li>
+<li class="chapter" data-level="11.2" data-path="alaluku112.html"><a href="alaluku112.html"><i class="fa fa-check"></i><b>11.2</b> Tilastolliseen ennustamiseen liittyviä huomioita</a></li>
+<li class="chapter" data-level="11.3" data-path="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>11.3</b> Luvun 11 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="luku12.html"><a href="luku12.html"><i class="fa fa-check"></i><b>12</b> Tilastotieteen kehityksen nykytrendejä</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="modernin-tilastotieteen-suuntaviivoja.html"><a href="modernin-tilastotieteen-suuntaviivoja.html"><i class="fa fa-check"></i><b>12.1</b> Modernin tilastotieteen suuntaviivoja</a></li>
+<li class="chapter" data-level="12.2" data-path="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>12.2</b> Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">TILM3701 - Tilastotiede ja data 2023</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="alaluku55" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Otantamenetelmät<a href="alaluku55.html#alaluku55" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Tässä jaksossa tarkastellaan erilaisia <strong>otantamenetelmiä</strong>. Näiden menetelmien tarkoitus on suorittaa otosaineiston (tutkimusaineiston) kerääminen niin, että se huomioi aiemmin esitellyt hyvän otannan kriteerit, ts. että sen tuottama otos on edustava ja luotettava. Näin ollen otos kuvaa koko perusjoukkoa.
+<ul>
+<li>Otantamenetelmän, joskus myös <strong>otanta-asetelman</strong>, valinta on tietenkin vahvasti sovellusalakohtainen: käytettävät aineistot ja täten otantamenetelmät määräytyvät pitkälti tehtävän tutkimuksen luonteen perusteella. Ts. käytännön tilanteet poikkeavat toisistaan lopulta varsin paljon ja eri tilanteisiin tarvitaan omat menetelmänsä.</li>
+<li>Otanta-asetelmalla tarkoitetaan erityisesti otoksen poimintaan käytettyä <strong>satunnaistuksen menetelmää</strong>.</li>
+</ul></li>
+<li>Otannan tavoitteena on tietenkin <strong>edustava otos</strong>. Otoksen edustavuuteen vaikuttaa käytännön otannassa se, miten todennäköistä kullakin perusjoukon alkiolla (populaation tilastoyksiköllä) on tulla poimituksi otokseen. Tätä kutsutaan <strong>sisältymistodennäköisyydeksi</strong>.</li>
+</ul>
+<div class="defblock mikko">
+<p><strong>Sisältymistodennäköisyys</strong></p>
+<p>Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla perusjoukon alkio tulee poimituksi otokseen.</p>
+</div>
+<ul>
+<li>Käytännössä otoksen poiminta suoritetaan niin, että <span class="math inline">\(n\)</span>:n alkion otos (<span class="math inline">\(n\)</span> on otoskoko) poimitaan jollakin satunnaisotannan menetelmällä <span class="math inline">\(N\)</span>:n alkion perusjoukosta (<span class="math inline">\(N\)</span> on siis perusjoukon koko).</li>
+<li>Perusjoukon yksittäinen alkio (tilastoyksikkö) <span class="math inline">\(k\)</span> tulee poimituksi <span class="math inline">\(n\)</span>:n alkion otokseen (tutkimusaineistoon) tunnetulla <strong>sisältymistodennäköisyydellä</strong> <span class="math inline">\(\pi_k\)</span>,
+<span class="math display">\[
+0 &lt; \pi_k \le 1, \quad k = 1, \ldots, N,
+\]</span>
+jossa siis <span class="math inline">\(N\)</span> on perusjoukon alkioiden lukumäärä. Toisin sanoen, kaikilla perusjoukon alkioilla on oma nollaa suurempi todennäköisyytensä (voi olla 1), <span class="math inline">\(\pi_k\)</span>, tulla poimituksi otokseen.
+<ul>
+<li>Sisältymistodennäköisyys voi olla sama kaikille perusjoukon alkioille tai vaihdella perusjoukon eri osajoukkojen (alkioryhmien) välillä. Tämä tulee huomioida otantamenetelmän valinnassa, jotta saadun otoksen edustavuus ei vaarannu.</li>
+<li>Sisältymistodennäköisyyttä voidaan käyttää monimutkaisemmassa otantateoriassa <strong>asetelma</strong>- ja <strong>analyysipainojen</strong> muodostamisessa sekä uudelleenpainotuksessa (vastauskadon korjaus).</li>
+</ul></li>
+<li>Tässä luvussa käsitellään erilaisia perinteisiä otantamenetelmiä sekä sitä, minkälaisten perusjoukkojen tilanteissa mikäkin otantamenetelmä on sopivin.
+<ul>
+<li><strong>Yksinkertainen satunnaisotanta</strong> (YSO): perinteisin otantamenetelmä, jossa jokaisella tietyn kokoisella otoksella sama mahdollisuus tulla valituksi.</li>
+<li><strong>Systemaattinen otanta</strong> (SYS): eli tasavälisessä, otannassa poimintakehikkoon (perusjoukkoon) kuuluvat alkiot järjestetään jonoon ja siitä poimitaan otokseen joka k. alkio.</li>
+<li><strong>Ositettu otanta</strong>: perusjoukko (populaatio) jaetaan ominaisuuksiltaan yhtenäisiin eli homogeenisiin <strong>ositteisiin</strong>, joista jokaisesta poimitaan erillinen otos.</li>
+<li><strong>Ryväsotanta</strong> tai joskus myös <strong>moniasteinen otanta</strong>: Hyödynnetään perusjoukossa esiintyvää kerroksellisuutta, eli hierarkkisuutta otannassa.</li>
+</ul></li>
+</ul>
+<div id="yksinkertainen-satunnaisotanta" class="section level3 hasAnchor" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Yksinkertainen satunnaisotanta<a href="alaluku55.html#yksinkertainen-satunnaisotanta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Yksinkertaisessa satunnaisotannassa</strong> (YSO) jokaisella tilastoyksiköllä (perusjoukon alkiolla) on nollasta poikkeava todennäköisyys tulla valituksi otokseen.
+<ul>
+<li>Otannan satunnaisuus tulee siis siitä, että jokainen tilastoyksikkö poimitaan otokseen <em>satunnaisesti</em>! (Ks. luku <a href="luku4.html#luku4">4</a>)</li>
+<li>YSOaa pidetään otannan perusmuotona, jossa jokaisella perusjoukon alkiolla on lähtökohtaisesti yhtä suuri todennäköisyys tulla valituksi otokseen.
+<ul>
+<li>YSO on periaatteiltaan intuitiivinen ja helppo ymmärtää. Lisäksi se on tietyissä tilanteissa usein helppo toteuttaa.</li>
+</ul></li>
+<li>Tällöin on selvää että myös jokaisella perusjoukon samankokoisella osajoukolla on sama todennäköisyys tulla valituksi.</li>
+<li>Toisin sanoen, todennäköisyys tulla poimituksi ei riipu tilastoyksikön ominaisuuksista tai siitä minkälaisia ominaisuuksia jo poimituilla otosyksiköillä on.</li>
+<li>Satunnaisotanta siis selvästi korjaa valikoitumisharhaa (ks. aiempi luku <a href="alaluku54.html#alaluku54">5.4</a>) satunnaistamalla otokseen valikoitumisen täysin! YSO voidaankin aina tulkita arvonnaksi. Käytännön työssä arvonta onkin oiva satunnaistamisen keino.</li>
+</ul></li>
+<li><strong>YSO:n toteuttaminen</strong>
+<ul>
+<li>Käytännössä yksinkertainen satunnaisotanta etenee vaiheittain:
+<ul>
+<li>Tutkimuksen alussa tutkijalla tulisi olla käytettävänään (ts. tulisi koostaa) lista kaikista perusjoukon havaintoyksiköistä <strong>(alkioista)</strong>. Tämä muodostaa tutkimuksen <strong>otantakehikon</strong>.</li>
+<li>Tämän jälkeen jokaiseen perusjoukon alkioon voidaan liittää numeeriset tunnukset.</li>
+<li>Sitten valitaan haluttu otoksen koko. Otoskoon määrittäminen on keskeinen osa koesuunnittelua, ks. luku <a href="alaluku66.html#alaluku66">6.6</a></li>
+<li>Otantakehikosta arvotaan perusjoukon alkiot otokseen yksi kerrallaan.</li>
+<li>Käytännössä arvonta voidaan toteuttaa satunnaislukuja generoimalla (tuottamalla) niin että jokaisen otantakehikon alkion sisältymistodennäköisyys on yhtä suuri.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></li>
+</ul></li>
+</ul></li>
+<li>YSO:n <strong>poimintastrategiat</strong>: Käytännössä yksinkertainen satunnaisotanta voidaan suorittaa kahdella eri tavalla: <strong>palauttaen</strong> tai <strong>palauttamatta</strong>.
+<ul>
+<li>Tarkastellaan, aiemman mukaisesti, <strong>äärellistä populaatiota</strong> (perusjoukkoa), jossa on <span class="math inline">\(N\)</span> alkiota ja tarkoituksena on poimia <span class="math inline">\(n\)</span>:n alkion kokoinen otos (huom. <span class="math inline">\(n&lt;N\)</span>). Olkoon <span class="math inline">\(i\)</span> yksittäisen alkion indeksiluku (ts. jokainen alkio on numeroitu esimerkiksi tavalla <span class="math inline">\(i = 1,\ldots,N\)</span>).</li>
+</ul></li>
+</ul>
+<p><strong>YSO:n poiminta palauttaen</strong></p>
+<ul>
+<li>Kun poiminta suoritetaan <strong>palauttaen</strong>, niin poimittu alkio palautetaan aina ennen uuden alkion arpomista takaisin perusjoukkoon, jolloin alkio voi tulla poimituksi otokseen useita kertoja.
+<ul>
+<li>Kyseessä on siis otanta <strong>takaisinpanolla</strong> (with replacement).</li>
+<li>Tällöin alkioiden arvonnat ovat riippumattomia: alkion todennäköisyys tulla poimituksi otokseen ei riipu siitä kuinka monta alkiota otokseen on jo poimittu.</li>
+<li>Alkion <span class="math inline">\(i\)</span> sisältymistodennäköisyys on tällöin selvästi</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\pi_i = \frac{1}{N}, \quad \forall \, i
+\]</span></p>
+<ul>
+<li><p>Otantaan palauttaen liittyviä todennäköisyyksiä hallitaan <strong>binomijakauman</strong> avulla (ks. luku <a href="luku4.html#luku4">4</a>), joka johtaa yksinkertaiseen <strong>tilastolliseen malliin</strong> YSO:a käytettäessä.</p></li>
+<li><p>Poiminta palauttaen, tai otanta takaisinpanolla, on toisaalta varsin epärealistinen otantamenetelmä useassa tutkimuksessa. Esimerkiksi lienee mahdotonta testata samaa lääkettä useaan otteeseen samaan aikaan yhdellä koehenkilöllä.</p></li>
+</ul>
+<p><strong>YSO:n poiminta palauttamatta</strong></p>
+<ul>
+<li>Kun poiminta suoritetaan <strong>palauttamatta</strong>, poimittua alkiota ei palauteta perusjoukkoon poiminnan jälkeen eikä se täten voi tulla poimituksi otokseen kuin kerran.
+<ul>
+<li>Kyseessä on siis otanta <strong>ilman takaisinpanoa</strong> (without replacement).</li>
+<li>Tällöin alkioiden arvonnat eivät enää ole riipumattomia: alkion todennäköisyys tulla poimituksi otokseen riippuu siitä kuinka monta alkiota otokseen on jo poimittu.</li>
+<li>Alkion <span class="math inline">\(i\)</span> sisältymistodennäköisyys on tällöin vastaavasti</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\pi_i = \frac{1}{N - A_i},
+\]</span></p>
+<ul>
+<li>Tässä <span class="math inline">\(A_i\)</span> on jo poimittujen alkioiden lukumäärä ennen kyseistä <strong>otositeraatiota</strong>: ensimmäisen poiminnan kohdalla <span class="math inline">\(A_i = 0\)</span>, toisen kohdalla <span class="math inline">\(A_i = 1\)</span> ja niin edespäin.
+<ul>
+<li>Ilman takaisinpanoa populaatiosta voidaan poimia <span class="math inline">\({N \choose n}\)</span> erilaista otosta.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></li>
+<li>Otantaan palauttamatta liittyviä todennäköisyyksiä hallitaan <strong>hypergeometrisen jakauman</strong> avulla, joka johtaa (melko) yksinkertaiseen <strong>tilastolliseen malliin</strong> YSO:a käytettäessä.</li>
+</ul></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: Yksinkertaisen satunnaisotannan poimintastrategiat</strong></p>
+<ul>
+<li>Esimerkki: Poimitaan palloja kulhosta satunnaisesti.
+<ul>
+<li>Jos yksittäinen pallo (alkio) voi tulla poimituksi useammin kuin kerran, eli pallo palautetaan kulhoon sen poiminnan jälkeen, on kyseessä yksinkertainen satunnaisotanta takaisinpanolla.</li>
+<li>Vastaavasti jos pallo voi tulla valituksi vain kerran, eli pallo poistetaan kulhosta sen poiminnan jälkeen, on kyseessä otanta ilman takaisinpanoa.</li>
+</ul></li>
+</ul>
+</div>
+<p><strong>Otoskoon vaikutus YSO:n</strong></p>
+<ul>
+<li>Yksinkertaisen satunnaisotannan erot takaisinpanolla ja ilman takaisinpanoa riippuvat otantakehikon (tai yleisemmin perusjoukon) koosta. Mikäli poimittava otos muodostaa suuren osan perusjoukosta (ts. <span class="math inline">\(\frac{n}{N}\)</span> on “suuri”, eli lähellä yhtä) menetelmät poikkeavat olennaisesti.</li>
+<li>Toisaalta, jos perusjoukko on ääretön niin menetelmillä ei ole käytännössä eroa (ts. kun <span class="math inline">\(N \longrightarrow \infty\)</span> niin <span class="math inline">\(\frac{n}{N} \longrightarrow 0\)</span> eli todennäköisyys että sama alkio poimittaisiin otokseen useammin kuin kerran lähestyy nollaa otoskoon lähestyessä ääretöntä).
+<ul>
+<li>Monesti onkin (teoreettiselta) kannalta järkevää olettaa että otos poimitaan äärettömästä perusjoukosta vaikka perusjoukko tosiasiallisesti olisikin äärellinen (mutta riittävän “iso”).</li>
+<li>Tällöin voidaan olettaa käytettävän otantaa takaisinpanolla, sillä siinä käytettävät tilastolliset mallit ovat yksinkertaisempia kuin otannassa ilman takaisinpanoa ja tämä helpottaa tilastollisessa päättelyssä käytettäviä kaavoja.</li>
+</ul></li>
+</ul>
+<p><strong>YSO: Potentiaaliset ongelmat</strong></p>
+<ul>
+<li>Monissa tapauksissa ei kuitenkaan ole helppoa saada listaa kaikista perusjoukon havaintoyksiköistä (jolloin menetelmän käyttö on mahdotonta).</li>
+<li>Kyselytutkimuksissa perusjoukko on usein suuri ja laajalle alueelle hajaantunut. Henkilökohtaisten, kasvotusten toteutettavien, haastattelujen tekeminen vaatisi suuria resursseja (haastattelijat joutuisivat esim. matkustamaan ympäri Suomea satunnaisotokseen valikoituneiden henkilöiden asuinpaikkojen mukaan).</li>
+<li>Tällaisissa tutkimustilanteissa käytetäänkin usein muunlaisia otantamenetelmiä.</li>
+</ul>
+</div>
+<div id="systemaattinen-otanta" class="section level3 hasAnchor" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Systemaattinen otanta<a href="alaluku55.html#systemaattinen-otanta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Systemaattisessa, eli tasavälisessä, otannassa poimintakehikkoon (perusjoukkoon) kuuluvat alkiot järjestetään jonoon ja siitä poimitaan otokseen joka <span class="math inline">\(k\)</span>. alkio.
+<ul>
+<li>Esimerkiksi, jos oletetaan että perusjoukkoon kuuluu 1000 tilastoyksikköä ja valittu otoskoko on 100, niin otos voidaan poimia perusjoukon alkioiden järjestetystä listasta poimimalla siitä joka kymmenes yksikkö.</li>
+<li>Systemaattinen otanta ei oikeastaan kuulu satunnaisotannaksi laskettaviin menetelmiin, koska siinä ei sovelleta arvontaa.</li>
+<li>Yksinkertainen satunnaisotanta voidaan kuitenkin nähdä systemaattisen otannan erikoistapauksena (eli systemaattinen otanta voidaan toteuttaa satunnaisotantana), missä perusjoukon alkiot järjestetään jonoon <strong>satunnaistamalla</strong>.
+<ul>
+<li>Ts. jonon järjestys on satunnainen, eli joka <span class="math inline">\(k\)</span>. jonon alkio on “satunnaisotos” otantakehikosta.</li>
+</ul></li>
+<li>Systemaattinen otanta tuottaa tällöin samat johtopäätelmät kuin yksinkertainen satunnaisotanta, jos perusjoukon alkioiden järjestys on tutkittavan ilmiön kannalta satunnainen! Toisin sanoen, harhaa ei synny mikäli perusjoukon alkioiden järjestys ei riipu sellaisesta ominaisuudesta, jota tutkitaan.</li>
+<li>Systemaattisen otannan suhteen potentiaaliseksi ongelmaksi muotoutuu havaintoyksikkölistan mahdollinen säännöllinen jaksollisuus, jota se ei havaitse ja jolloin satunnaisotanta toimisi (kenties) paremmin.
+<ul>
+<li>Ongelmia syntyy esimerkiksi silloin, jos tiedot perusjoukosta koostuvat heteropariskunnista ja poimintaintervalli on parillinen luku. Tällöin seurauksena voi olla, että otokseen saattaisi valikoitua ainoastaan joko miehiä tai naisia.</li>
+</ul></li>
+</ul></li>
+<li>Myös systemaattisessa otannassa tarvitaan siis lista tai rekisteri kaikista perusjoukon havaintoyksiköistä ja sitä sovelletaankin tavallisesti YSO:n sijasta silloin, kun perusjoukon alkioista on käytettävissä tietorekisteri, luettelo tai havaintoja kerätään ajassa tai tilassa.
+<ul>
+<li>Esimerkiksi mielipidekyselyn kohteet poimitaan (voitiin poimia) puhelinluettelosta (tai vastaavasta rekisteristä) valitsemalla haastateltavaksi jokaiselta aukeamalta ensimmäisenä esiintyvä henkilö tai jotain tuotetta valmistavan tehtaan laaduvalvonnassa valitsemalla laatuarviointiin joka sadas tuote, joka hihnalta valmistuu. Muita esimerkkejä ovat esim. liikenne-, jäsenrekisteri- tai kassajonossa seisovien otantayksiköiden poiminta otokseen.</li>
+</ul></li>
+</ul>
+</div>
+<div id="ositettu-otanta" class="section level3 hasAnchor" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Ositettu otanta<a href="alaluku55.html#ositettu-otanta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Ositettu otanta on sopiva menetelmä tilanteisiin, joissa perusjoukko koostuu jonkin ominaisuuden suhteen homogeenisista ryhmistä, ts. alkioryhmistä (osista). Ositettu otanta pyrkii varmistamaan, että tutkittava otos on edustava kaikkien (tutkimuksen kannalta) olennaisten ryhmien osalta.
+<ul>
+<li>Esimerkiksi jos tavoitteena on tutkia jonkin maan erilaisten ja usein hyvin eri kokoisten kieliryhmien taloudellista asemaa. Kaikista ryhmistä tulisi saada edustava otos.</li>
+<li>Tällöin maan koko populaatioon kohdistettu yksinkertainen satunnaisotanta ei olisi järkevää, sillä otoskoon pitäisi olla (todennäköisesti) hyvin suuri, että jokaisesta kieliryhmästä saataisiin poimittua edustava otos.</li>
+<li>Ositetun otannan avulla otos voitaisiin kerätä niin, että jokaisesta ryhmästä (ositteesta) poimitaan osaotos yksinkertaisella satunnaisotannalla tai systemaattisella otannalla ja nämä osaotokset yhdistetään yhdeksi otokseksi.</li>
+</ul></li>
+<li>Ositettu otanta voi (oikein toteutettuna ja sopivassa asetelmassa) tuottaa paljon tarkempaa tietoa kuin yksinkertainen satunnaisotanta samaa otoskokoa käytettäessä! Voidaan esimerkiksi käyttää tietoa siitä, että otosyksiköt ovat joka ositteessa keskenään samankaltaisia.</li>
+<li>Ositetun otannan käyttöön suurissa kyselytutkimuksissa liittyy samoja ongelma kuin yksinkertaiseen ja systemaattiseen satunnaisotantaan.
+<ul>
+<li>Otokseen valikoituneet vastaajat voivat olla mm. levittäytyneinä suurelle maantieteelliselle alueelle. Näin ollen otannan suorittaminen vaatii suuria kustannuksia.</li>
+<li>Onko (järkevä) osittaminen ylipäätään mahdollista toteuttaa tarkasteltavassa sovelluskohteessa?</li>
+</ul></li>
+</ul>
+</div>
+<div id="ryväsotanta" class="section level3 hasAnchor" number="5.5.4">
+<h3><span class="header-section-number">5.5.4</span> Ryväsotanta<a href="alaluku55.html#ryväsotanta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Ryväsotanta soveltuu tilanteisiin, joissa perusjoukko on “ryvästeistä” eli se voidaan jakaa luonnollisiin ryhmiin eli rypäisiin (eng. <em>clusters</em>).</p></li>
+<li><p>Rypäät indikoivat aineiston luontaista hierarkkista, eli monitasoista- tai asteista rakennetta.</p>
+<ul>
+<li>Esimerkkejä tällaisista ryhmistä ovat erilaiset yritykset tai koululuokat. Esimerkiksi yritykset muodostavat luonnollisesti eri rypäitä, joiden alkiot ovat työntekijöitä ja koululuokat muodostavat koulun sisällä omia luonnollisia rypäitään ja opiskelijat ovat alkioita näissä rypäissä.</li>
+</ul></li>
+<li><p>Huomionarvoista onkin, että toisin kuin ositetussa otannassa, ryväsotannassa rypäiden oletetaan olevan toistensa kanssa riittävän samankaltaisia, että jokaista rypästä ei tarvitse erikseen tutkia.</p>
+<ul>
+<li>Tämä onkin yksi ryväsotannan tärkeimpiä motivointeja, sillä sitä usein perustellaan kustannustehokkuudella: sen sijaan että poimitaan satunnaisia koululaisia mahdollisesti suuresta määrästä kouluja, voidaan poimia satunnaisia rypäitä (kouluja), joista tutkimusyksiköt eli koululaiset poimitaan.</li>
+<li>Lisäksi koulun sisällä koululuokat muodostavat alirypäitä, joista voidaan edelleen poimia satunnaisotos, jotta päästään tutkimaan perusjoukon alkioita eli koululaisia esim. haastattelututkimuksen muodossa.</li>
+<li>Tavoitteena on vähentää tietojen keruun aiheuttamia kustannuksia samalla varmistaen, että otos on kuitenkin mahdollisimman edustava!</li>
+</ul></li>
+<li><p>Ryväsotannan voi suorittaa <strong>yksi</strong>- tai <strong>kaksivaiheisena</strong> (<strong>yksiasteinen/kaksiasteinen ryväsotanta</strong>).</p>
+<ul>
+<li><strong>Kaksivaiheisessa ryväsotannassa</strong>
+<ul>
+<li><strong>Ensimmäisessä vaiheessa</strong> poimitaan joukko rypäitä kaikkien rypäiden joukosta, eli vain osa rypäistä on mukana lopullisessa otoksessa.<br />
+</li>
+<li><strong>Toisessa vaiheessa</strong> poimitaan ensimmäisessä vaiheessa poimituista rypäistä alkiotason otokset.</li>
+</ul></li>
+<li><strong>Yksivaiheisessa ryväsotannassa</strong> toisessa vaiheessa valitaan kaikki ensimmäisen vaiheen otosrypäiden alkiot, jolloin toisen vaiheen otanta typistyy ensimmäisen vaiheen rypäiden alkioiden kokonaistutkimukseksi.</li>
+<li>Poiminnan eri vaiheissa voidaan soveltaa yksinkertaista satunnaisotantaa tai systemaattista otantaa.</li>
+</ul></li>
+<li><p>Ryväsotantaa käytetään usein suuria haastattelututkimuksia tehtäessä. Erityisesti, ryväsotantaa voidaan hyödyntää myös silloin, kun tutkijalla ei ole käytettävissään kattavaa listaa kaikista havaintoyksiköistä, mutta näiden muodostamat rypäät on määritettävissä.</p></li>
+<li><p>Ryväsotannan heikkoutena pidetään sitä, ettei aina ole helppoa muodostaa rypäitä, jotka ovat toistensa kaltaisia. Tulosten tarkkuus myös riippuu moninpaikoin siitä, kuinka hyvin rypäisiin jako onnistuu.</p></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<div class="eblock kimmo">
+<p><strong>Esimerkkejä ryväsotannasta</strong></p>
+<ul>
+<li>Esimerkki 1:
+<ul>
+<li>Poimitaan oppilaitoksen opiskelijoista otos arpomalla ensin otos luokkahuoneista (=rypäistä).</li>
+<li>Arvotuissa luokkahuoneissa käydään sitten suorittamassa kysely.
+<ul>
+<li>Esim. Oppilaitoksen opiskelijoista voidaan poimia otos arpomalla ensin otos luokkahuoneista, jolloin luokkahuoneet ovat nk. rypäitä.</li>
+<li>Mahdollisia ongelmia? Miten huomoida päivä- ja iltaopiskelijat? Tämän voisi toteuttaa arpomalla otos luokkahuoneista päiväsaikaan ja toinen otos ilta-aikaan. Tässä yhdistetään ryväsotantaan ositettu otanta, jolla taataan päivä- ja iltaopiskelijoiden edustus.</li>
+</ul></li>
+</ul></li>
+<li>Esimerkki 2: Tutkittaessa tänä vuonna peruskoulun aloittavia voidaan ensin poimia otos kouluista, jolloin koulut ovat rypäitä. Tämän jälkeen arvotaan kustakin otokseen tulleesta koulusta tietty määrä tutkimuksen kohderyhmään kuuluvia oppilaita.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="20">
+<li id="fn20"><p>Satunnaislukujen generointia käsitellään ja opetellaan mm. kursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3517/5068?period=2022-2024">TILM3517 R-kielen alkeet</a> ja <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3705/92210">TILM3705 Johdatus laskennalliseen tilastotieteeseen.</a><a href="alaluku55.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<li id="fn21"><p>Kun otosyksiköiden järjestyksellä ei ole merkitystä. <span class="math inline">\({N \choose n}\)</span> on ns. binomikerroin, joka saadaan kaavasta <span class="math inline">\({N \choose n} = \frac{N!}{n!(N-n)!},\)</span> jossa <span class="math inline">\(N! = N \cdot (N-1) \cdot (N-2) \cdots 1\)</span> on <span class="math inline">\(N\)</span>:n kertoma.<a href="alaluku55.html#fnref21" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="alaluku54.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="alaluku56.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["TD2023.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

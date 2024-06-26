@@ -1,11 +1,66 @@
-# Hello bookdown 
+# Johdantoa ja johdattelua tilastotieteeseen
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+_Ihmisellä on luontainen pyrkimys ymmärtää, mitä hänen ympärillään tapahtuu. Ymmärrys perustuu ihmisen tekemiin havaintoihin, joita luokittelemalla tai seuraamalla hän pyrkii löytämään säännönmukaisuuksia. Näiden säännönmukaisuuksien löytäminen vaatii loogisten johtopäätösten tekoa. Pelkän uteliaisuuden tyydyttämiseen ja älyllisen mielihyvän lisäksi ihminen pyrkii ennakoimaan tulevaa ja siten varautumaan tuleviin tapahtumiin... Edellä kuvattuja taitoja voi oppia._
 
-## A section
+Holopainen ja Pulkkinen (2008)
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+## Tilastotiede ja kurssin idea 
 
-### An unnumbered section {-}
+- Tämän tilastotieteen ensimmäisen kurssin ideana on (ainakin)
+  - Esitellä ja johdatella __tilastolliseen ja tieteelliseen ajatteluun__ ja sen hyödyntämiseen eri tyyppisissä tutkimusongelmissa.
+  - Esitellä tilastotieteen roolia __empiirisen tutkimusaineiston keräämisessä ja analyysissä__ sekä tarkastella tieteentekemisen ja tilastotieteen suhdetta.
+  - Pohtia __tilastotieteen olemusta tieteenalana__ ja tarkastella tilastotieteen ja datatieteiden (data sciencen) samankaltaisuuksia ja eroja.
+  - Pohtia __sattuman ja satunnaisuuden roolia__ jokapäiväisessä elämässä ja erityisesti osana tieteellistä tutkimusprosessia. 
+  - Oppia tilastotieteen peruskäsitteitä ja (tilastollisen) tutkimuksenteon alkeita ja siihen liittyviä mahdollisia ongelmia esimerkiksi tilastollisten aineistojen keräämisessä.
+  - Oppia tilastollisten aineistojen __kuvaamisen ja käsittelyn__ alkeita sekä tilasto(tieteellisen)llisen __mallintamisen__ ja __koeasetelmien__ peruskäsitteitä.
+  
+  
+\vspace{0.75cm}
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+- Kurssilla käsitellään myös __tilastollisen päättelyn__ peruskäsitteitä ja perusteita kuten
+  - Mitä on __todennäköisyys__ ja miten se tulkitaan tilastotieteessä sekä laajemmin tieteessä. Erityisesti tilastotieteen osalta keskiössä on tämän kurssin osalta __satunnaismuuttujat__ sekä niihin liitettävät käsitteet
+    - __Odotusarvo__, __varianssi__ ja kahden (tai useamman) satunnaismuuttujan __korrelaatio__.
+    - Satunnaismuuttujien __todennäköisyysjakaumien__ perusteita ja niiden yhteyksiä mm. normaalijakaumaan ja muutamiin muihin keskeisiin jakaumiin.
+    - Tilastollinen malli työkaluna satunnaismuuttujien formaalissa mallintamisessa ja päättelyssä. Tilastolliseen malliin liittyy (usein) __parametreja__ joihin tilastollinen päättely kohdistuu.
+    - Tilastollisten mallien __estimoinnin__ perusidea, eli miten tilastollisen mallin parametreille muodostetaan arvot käytettävissä olevan aineiston pohjalta. Esimerkiksi: mitä tarkoittaa tilastollisen mallin parametrin __estimaattori__ ja sen __harhattomuus__?
+    - Alustavia tarkasteluja tilastollisen mallin uskottavuuden käsitteelle ja __luottamusväleille__ tilastollisen mallin estimoiduille parametreille.
+
+\vspace{0.75cm}
+
+- Toinen kurssin keskeisistä teemoista on tarkastella tieteellistä tutkimusprosessia teoriassa ja käytännössä. Tämä sisältää mm. seuraavia aiheita (joita siis käsitellään tällä kurssilla päällisin puolin varsin yleisestä näkökulmasta katsoen ja tarkemmat yksityiskohdat jätetään tätä kurssia seuraavien tilastotieteen kurssien aihepiireiksi):
+  - __Tutkimusongelman__ asettaminen: mitä halutaan tutkia?
+  - Tutkimusongelman täsmentäminen ja __tutkimusstrategian__ laatiminen: millä keinoin asetettuun tutkimusongelmaan voidaan vastata?
+  - __Tutkimusaineiston__ (tai vain lyhyemmin __aineiston__ eli __datan__) kerääminen
+    - __Aineiston ennakkoehdot__: mitkä ehdot tulee täyttyä, jotta asetettuun tutkimusongelmaan voidaan vastata?
+    - __Otanta__ (ja mittaaminen): miten tutkimusaineisto kerätään niin, että se täyttää aineiston ennakkoehdot? Erilaisissa tutkimuksissa käytetään erilaisia aineistoja kuten:
+      - Survey- eli haastatteluaineistot: aineisto kerätään haastattelemalla tutkimuskohteita
+      - Rekisteriaineistot: aineisto on kerätty valmiiksi rekisteriin ja sitä käytetään tutkimukseen 
+      - Aikasarja-aineistot tai pitkittäisaineistot: useita mahdollisesti korreloituneita havaintoja samoista tutkimuskohteista
+      - Ynnä muita, ks. luku \@ref(luku10)
+- __Aineiston kuvaaminen__: minkälaista aineistoa on kerätty ja vastaako se ennakkoehtoja? 
+- __Aineiston analyysin__ lähtökohtia   
+  - Mitä tilastollista mallia/malleja käytetään?
+  - Mitä tarkoitetaan mallien tuntemattomien parametrien arvojen estimoinnilla?
+  - Tilastollinen päättely (estimointitulosten pohjalta)
+
+- __Johtopäätelmien__ tekeminen tilastollisen päättelyn pohjalta: saatiinko tutkimusongelmaan vastaus ja kuinka luotettava saatu vastaus on?
+
+## Tilastotieteen asema tutkimusyhteisön ulkopuolella
+
+- Tilastotiede on oppiaineena usein varsin tuntematon toisen asteen opinnoista valmistuneelle, sillä sitä ei juurikaan opeteta lukioissa tai ammattikouluissa huolimatta sen keskeisestä ja kasvavasta roolista tieteenteossa.
+- Tiedeyhteisön ulkopuolellakin __tilastotiedettä ja tilastotieteilijöitä arvostetaan laajalti__. 
+- __Tilastotiede onkin nostanut profiiliaan viimeisten vuosikymmenien aikana__ tietoteknisen kehityksen tuotua laajat tietoaineistot ja kehittyneet laskennalliset menetelmät lähes jokaisen kansalaisen saataville. 
+- Tämä "_datavallankumous_" näkyy tilastotieteilijöiden kysynnässä työmarkkinoilla: erilaisten aineistojen määrän lisääntyessä kasvaa myös kysyntä työntekijöistä, jotka osaavat ammatitaitoisesti käsitellä, tulkita ja mallintaa tilastollisia aineistoja.
+- Ei siis liene ihmekään, että erilaisten "data"-alkuisten työpaikkojen, kuten __datatieteilijä__ (eng. __data scientist__) tai __data-analyytikko__ (__data analyst__) määrä on kasvanut voimakkaasti jo pidempään. Kaikkia tieto- ja datainensiivisten ammattien tekijöitä yhdistää yksi tekijä: __heidän tulee hallita ja osata tilastotiedettä!__ 
+  - Karkeistettuna mitä paremmin ja enemmän (laajemmin), sen parempi palkka ja monipuolisemmat työtehtävät!
+
+## Kurssin luonne tilastotieteen opintojen esittelijänä
+
+Kurssin mittaan esitellään tilastotieteen perusteiden lisäksi __miten Turun yliopistossa tilastotieteen opinnoissa syvennytään__ tällä kurssilla esiteltäviin menetelmiin, aineistotyyppeihin ja mallinnuskokonaisuuksiin. Tilastotieteen opintotarjontaan voi perehtyä [TY:n opinto-oppaan avulla](https://opas.peppi.utu.fi/fi/ohjelma/89589)!
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

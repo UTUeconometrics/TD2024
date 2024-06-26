@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Luku 6 Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma | TILM3701 - Tilastotiede ja data 2023</title>
+  <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Luku 6 Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma | TILM3701 - Tilastotiede ja data 2023" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Luku 6 Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma | TILM3701 - Tilastotiede ja data 2023" />
+  
+  <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
+  
+
+<meta name="author" content="Koonneet" />
+<meta name="author" content="Henri Nyberg" />
+<meta name="author" content="Roope Rihtamo" />
+
+
+<meta name="date" content="2024-06-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"/>
+<link rel="next" href="alaluku61.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">TILM3701 - Tilastotiede ja data 2023</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kurssin rakenne</a>
+<ul>
+<li class="chapter" data-level="" data-path="kurssimateriaali.html"><a href="kurssimateriaali.html"><i class="fa fa-check"></i>Kurssimateriaali</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="johdantoa-ja-johdattelua-tilastotieteeseen.html"><a href="johdantoa-ja-johdattelua-tilastotieteeseen.html"><i class="fa fa-check"></i><b>1</b> Johdantoa ja johdattelua tilastotieteeseen</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="tilastotiede-ja-kurssin-idea.html"><a href="tilastotiede-ja-kurssin-idea.html"><i class="fa fa-check"></i><b>1.1</b> Tilastotiede ja kurssin idea</a></li>
+<li class="chapter" data-level="1.2" data-path="tilastotieteen-asema-tutkimusyhteisön-ulkopuolella.html"><a href="tilastotieteen-asema-tutkimusyhteisön-ulkopuolella.html"><i class="fa fa-check"></i><b>1.2</b> Tilastotieteen asema tutkimusyhteisön ulkopuolella</a></li>
+<li class="chapter" data-level="1.3" data-path="kurssin-luonne-tilastotieteen-opintojen-esittelijänä.html"><a href="kurssin-luonne-tilastotieteen-opintojen-esittelijänä.html"><i class="fa fa-check"></i><b>1.3</b> Kurssin luonne tilastotieteen opintojen esittelijänä</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="luku2.html"><a href="luku2.html"><i class="fa fa-check"></i><b>2</b> Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="alaluku21.html"><a href="alaluku21.html"><i class="fa fa-check"></i><b>2.1</b> Mitä on tiede?</a></li>
+<li class="chapter" data-level="2.2" data-path="alaluku22.html"><a href="alaluku22.html"><i class="fa fa-check"></i><b>2.2</b> Tieteellinen menetelmä</a></li>
+<li class="chapter" data-level="2.3" data-path="alaluku23.html"><a href="alaluku23.html"><i class="fa fa-check"></i><b>2.3</b> Tilastojen yleisestä roolista yhteiskunnassa</a></li>
+<li class="chapter" data-level="2.4" data-path="alaluku24.html"><a href="alaluku24.html"><i class="fa fa-check"></i><b>2.4</b> Mitä on tutkimus?</a></li>
+<li class="chapter" data-level="2.5" data-path="alaluku25.html"><a href="alaluku25.html"><i class="fa fa-check"></i><b>2.5</b> Tutkimuksen vaiheet ja tulosten julkaiseminen</a></li>
+<li class="chapter" data-level="2.6" data-path="luvun-2-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-2-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>2.6</b> Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="luku3.html"><a href="luku3.html"><i class="fa fa-check"></i><b>3</b> Tilastotiede tieteenalana</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="alaluku31.html"><a href="alaluku31.html"><i class="fa fa-check"></i><b>3.1</b> Lisää tilastotieteen perustermejä</a></li>
+<li class="chapter" data-level="3.2" data-path="alaluku32.html"><a href="alaluku32.html"><i class="fa fa-check"></i><b>3.2</b> Mitä tilastotiede on ja mitä se ei ole?</a></li>
+<li class="chapter" data-level="3.3" data-path="alaluku33.html"><a href="alaluku33.html"><i class="fa fa-check"></i><b>3.3</b> Tilastotieteen suhde lähitieteisiin</a></li>
+<li class="chapter" data-level="3.4" data-path="alaluku34.html"><a href="alaluku34.html"><i class="fa fa-check"></i><b>3.4</b> Tilastotieteen osa-alueet</a></li>
+<li class="chapter" data-level="3.5" data-path="alaluku35.html"><a href="alaluku35.html"><i class="fa fa-check"></i><b>3.5</b> Tilastotieteen kritiikkiä</a></li>
+<li class="chapter" data-level="3.6" data-path="alaluku36.html"><a href="alaluku36.html"><i class="fa fa-check"></i><b>3.6</b> Tilastotieteen sovellusaloja ja “rajatieteitä”</a></li>
+<li class="chapter" data-level="3.7" data-path="luvun-3-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-3-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>3.7</b> Luvun 3 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="luku4.html"><a href="luku4.html"><i class="fa fa-check"></i><b>4</b> Sattuma ja satunnaisuus tilastotieteessä</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
+<li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
+<li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
+<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
+<li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="luku5.html"><a href="luku5.html"><i class="fa fa-check"></i><b>5</b> Tilastolliset aineistot, niiden kerääminen ja mittaaminen</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="alaluku51.html"><a href="alaluku51.html"><i class="fa fa-check"></i><b>5.1</b> Kertausta: Data eli aineisto</a></li>
+<li class="chapter" data-level="5.2" data-path="alaluku52.html"><a href="alaluku52.html"><i class="fa fa-check"></i><b>5.2</b> Otannan idea</a></li>
+<li class="chapter" data-level="5.3" data-path="alaluku53.html"><a href="alaluku53.html"><i class="fa fa-check"></i><b>5.3</b> Mittaaminen ja mitta-asteikot</a></li>
+<li class="chapter" data-level="5.4" data-path="alaluku54.html"><a href="alaluku54.html"><i class="fa fa-check"></i><b>5.4</b> Kontrolloidut kokeet ja suorat havainnot</a></li>
+<li class="chapter" data-level="5.5" data-path="alaluku55.html"><a href="alaluku55.html"><i class="fa fa-check"></i><b>5.5</b> Otantamenetelmät</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="alaluku55.html"><a href="alaluku55.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>5.5.1</b> Yksinkertainen satunnaisotanta</a></li>
+<li class="chapter" data-level="5.5.2" data-path="alaluku55.html"><a href="alaluku55.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>5.5.2</b> Systemaattinen otanta</a></li>
+<li class="chapter" data-level="5.5.3" data-path="alaluku55.html"><a href="alaluku55.html#ositettu-otanta"><i class="fa fa-check"></i><b>5.5.3</b> Ositettu otanta</a></li>
+<li class="chapter" data-level="5.5.4" data-path="alaluku55.html"><a href="alaluku55.html#ryväsotanta"><i class="fa fa-check"></i><b>5.5.4</b> Ryväsotanta</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="alaluku56.html"><a href="alaluku56.html"><i class="fa fa-check"></i><b>5.6</b> Otantaesimerkkejä</a></li>
+<li class="chapter" data-level="5.7" data-path="alaluku57.html"><a href="alaluku57.html"><i class="fa fa-check"></i><b>5.7</b> Otannan haasteita vielä kootusti</a></li>
+<li class="chapter" data-level="5.8" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.8</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="alaluku61.html"><a href="alaluku61.html"><i class="fa fa-check"></i><b>6.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
+<li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
+<li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Suhteellisen frekvenssin otosjakauma</a></li>
+<li class="chapter" data-level="6.5" data-path="alaluku65.html"><a href="alaluku65.html"><i class="fa fa-check"></i><b>6.5</b> Muita tunnuslukuja</a></li>
+<li class="chapter" data-level="6.6" data-path="alaluku66.html"><a href="alaluku66.html"><i class="fa fa-check"></i><b>6.6</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="6.7" data-path="alaluku67.html"><a href="alaluku67.html"><i class="fa fa-check"></i><b>6.7</b> Otoskoko</a></li>
+<li class="chapter" data-level="6.8" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.8</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastollinen riippuvuus ja korrelaatio</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="alaluku71.html"><a href="alaluku71.html"><i class="fa fa-check"></i><b>7.1</b> Muuttujien väliset riippuvuudet</a></li>
+<li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
+<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Tunnusluvut</a></li>
+<li class="chapter" data-level="7.4" data-path="alaluku74.html"><a href="alaluku74.html"><i class="fa fa-check"></i><b>7.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
+<li class="chapter" data-level="7.5" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.5</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Regressioanalyysi</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Johdatus regressioanalyysin ideaan</a></li>
+<li class="chapter" data-level="8.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>8.2</b> Yhden selittäjän lineaarinen regressiomalli</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Muita regressiomalleja</a></li>
+<li class="chapter" data-level="8.4" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.4</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Tilastotieteen rooli uuden tiedon tuottamisessa</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Tilastollisen tutkimuksen yhteisiä elementtejä</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Tutkimusprosessi</a></li>
+<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Aineisto- ja tutkimustyypit ja koeasetelmat</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="alaluku101.html"><a href="alaluku101.html"><i class="fa fa-check"></i><b>10.1</b> Tutkimustyypit</a></li>
+<li class="chapter" data-level="10.2" data-path="alaluku102.html"><a href="alaluku102.html"><i class="fa fa-check"></i><b>10.2</b> Tutkimusstrategiat</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="alaluku102.html"><a href="alaluku102.html#poikittaistutkimus-eli-poikkileikkaustutkimus"><i class="fa fa-check"></i><b>10.2.1</b> <strong>Poikittaistutkimus</strong> eli <strong>poikkileikkaustutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.2" data-path="alaluku102.html"><a href="alaluku102.html#pitkittäistutkimus"><i class="fa fa-check"></i><b>10.2.2</b> <strong>Pitkittäistutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.3" data-path="alaluku102.html"><a href="alaluku102.html#kohorttitutkimus"><i class="fa fa-check"></i><b>10.2.3</b> <strong>Kohorttitutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.4" data-path="alaluku102.html"><a href="alaluku102.html#tapaus-verrokkitutkimus"><i class="fa fa-check"></i><b>10.2.4</b> <strong>Tapaus-verrokkitutkimus</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="alaluku103.html"><a href="alaluku103.html"><i class="fa fa-check"></i><b>10.3</b> Erilaisia aineistoja ja aineistolähteitä</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="alaluku103.html"><a href="alaluku103.html#rekisteriaineistot"><i class="fa fa-check"></i><b>10.3.1</b> Rekisteriaineistot</a></li>
+<li class="chapter" data-level="10.3.2" data-path="alaluku103.html"><a href="alaluku103.html#aikasarjat-ja-paneeliaineistot"><i class="fa fa-check"></i><b>10.3.2</b> Aikasarjat ja paneeliaineistot</a></li>
+<li class="chapter" data-level="10.3.3" data-path="alaluku103.html"><a href="alaluku103.html#survey--eli-haastattelu--tai-kyselytutkimus"><i class="fa fa-check"></i><b>10.3.3</b> Survey- eli haastattelu- tai kyselytutkimus</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>10.4</b> Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="luku11.html"><a href="luku11.html"><i class="fa fa-check"></i><b>11</b> Tilastollisesta ennustamisesta</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="alaluku111.html"><a href="alaluku111.html"><i class="fa fa-check"></i><b>11.1</b> Tilastollinen selittäminen vs. ennustaminen</a></li>
+<li class="chapter" data-level="11.2" data-path="alaluku112.html"><a href="alaluku112.html"><i class="fa fa-check"></i><b>11.2</b> Tilastolliseen ennustamiseen liittyviä huomioita</a></li>
+<li class="chapter" data-level="11.3" data-path="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>11.3</b> Luvun 11 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="luku12.html"><a href="luku12.html"><i class="fa fa-check"></i><b>12</b> Tilastotieteen kehityksen nykytrendejä</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="modernin-tilastotieteen-suuntaviivoja.html"><a href="modernin-tilastotieteen-suuntaviivoja.html"><i class="fa fa-check"></i><b>12.1</b> Modernin tilastotieteen suuntaviivoja</a></li>
+<li class="chapter" data-level="12.2" data-path="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>12.2</b> Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">TILM3701 - Tilastotiede ja data 2023</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="luku6" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Luku 6</span> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma<a href="luku6.html#luku6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Tarkastellaan seuraavaksi otoksia ja otosjakaumia “tilastollisemmin” mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia tn-laskennan kurssin jälkeiselle tilastollisen päättelyn peruskurssille (<a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731">TILM3555</a>).</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="alaluku61.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["TD2023.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

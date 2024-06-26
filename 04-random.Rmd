@@ -1,0 +1,424 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+always_allow_html: true
+---
+# Sattuma ja satunnaisuus tilastotieteessä {#luku4}
+
+```{r random, echo=FALSE, fig.cap="Hauska kuva satunnaisuudesta.", fig.align='center', out.width = "100%"}
+knitr::include_graphics("images/im_so_random.jpg")
+```
+
+Tässä luvussa pohdimme sattuman ja satunnaisuuden roolia tilastotieteessä ja tieteessä ylipäätään. Satunnaisuudella tarkoitetaan yleensä säännönmukaisuuden puuttumista ja ennustamattomuutta ja kenties juuri siksi sitä voidaan pitää yhtenä maailman vaikuttavimmista ilmiöistä. Jokainen haluaisi tietää mitä tuleman pitää ja siksi sattuma tekee elämästä mielenkiintoista: se vaikuttaa ja muokkaa niin meitä itseämme kuin ympäröivää maailmaa mitä merkityksellisimmin tavoin - joskus jopa vasten tahtoamme ja usein vailla täyttä ymmärtystämme!
+
+Ihmisen oma kokemus on kuitenkin altis kaikenlaisille virhepäätelmille, joita kutsutaan myös kognitiivisiksi vinoumiksi. Haluamme löytää systematiikkaa ja tarkoitusta kaaoksesta sekä merkityksiä ja syy-seuraussuhteita sellaisista tapahtumista, jotka kuuluvat normaalivaihtelun piiriin. Tällaisissa tilanteissa usein tilastollinen tarkastelu paljastaakin ilmiön todellisen, alkuperäisestä kuvitelmasta poikkeavan luonteen. Erottaakseen systemaattinen vaihtelu satunnaisesta ja ymmärtääkseen oikeasti merkityksellisiä syy-seuraussuhteita, satunnaisuutta on välttämätöntä ymmärtää. Tämä välttämättömyys pätee erityisesti tiedeyhteisön jäseniin, jotka pyrkivät tutkimaan ympäröivän maailman satunnaisia ilmiöitä. Tilastotiede perustuu satunnaisilmiöiden ja satunnaisen aineiston tutkimiseen, joten sen ymmärtäminen on keskeisessä roolissa niin tilastotieteen kuin muidenkin tieteiden sekä lopulta maailman ymmärtämisessä.
+
+## Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä {#alaluku41}
+
+- Edellisestä luvusta muistamme, että  tilastotieteellisen tutkimuksen kohteena on aina jokin tilastoyksikköjen tutkimusmuuttujista koostuva havaintoaineisto, jonka pohjalta tehdään päätelmiä perusjoukosta/populaatiosta. 
+- Nämä tilastolliset muuttujat tulkitaan satunnaisiksi, ja täten tilastollisen tutkimuksen tavoite on tutkia satunnaisilmiötä, joka on generoinut nämä havaitut eli toteutuneet arvot.
+    - Yksi tilastotieteen olennainen tehtävä onkin kehittää  __tilastollisia malleja__, joiden avulla satunnaisilmiöitä voidaan kuvata, selittää ja ennustaa.
+    - Tilastollisen mallin satunnaisten piirteiden kuvaus perustuu  __todennäköisyyslaskentaan__.
+
+
+::: {.defblock .mikko data-latex="{}"}
+**Satunnaisilmiö**
+
+Reaalimaailman ilmiö on satunnaisilmiö, jos seuraavat ehdot pätevät:
+
+- Ilmiöllä on useita erilaisia tulosvaihtoehtoja.
+- Sattuma määrää mikä tulosvaihtoehdoista toteutuu, eli yksittäistä tulosta ei voida tietää etukäteen.
+- Vaikka tulos vaihtelee ilmiön toistuessa satunnaisesti, käyttäytyy tulosvaihtoehtojen suhteellisten osuuksien jakauma tilastollisesti stabiilisti ilmiön toistokertojen lukumäärän kasvaessa.
+:::
+
+- __Tilastollisella stabiiliudella__ tarkoitetaan sitä, että on mahdollista arvioida kuinka __todennäköisiä__ erilaiset tapahtumat, eli satunnaisilmiön tulosvaihtoehdot ovat. 
+  - Toisin sanoen satunnaisilmiön tulosvaihtoehtoihin on liityttävä säännönmukaisuutta, jonka on tultava esille ilmiön toistuessa.
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkkejä satunnaisilmiöistä**  
+
+- Helpoin esimerkki on uhkapelit, kuten kortti- ja noppapelit, arpajaiset, lotto tai ruletti: näitä käytetäänkin usein todennäköisyyslaskennan peruskursseilla satunnaisilmiöiden esittelyyn.
+- Lukion biologian tunneilta muistetaan, että perinnöllisyyskin on osaltaan sattumaa: se määrää kummalta vanhemmalta perittävä geenikopio on peräisin.
+  - Vastaavasti populaatiotasolla eri ominaisuuksien jakautuminen yksilöiden ja populaatioiden välillä on satunnaista.
+  - Populaatiotaso voi tässä tarkoittaa esimerkiksi erilaisten eliöiden eri alueilla eläviä populaatioita, joiden välisiä eroja pyritään tutkimaan ja selittämään.
+  - Vastaavasti ihmisten, ihmisryhmien ja ihmisten muodostamien organisaatioiden sisäisessä ja välisessä käyttäytymisessä on useita satunnaisia elementtejä.
+- Jopa deterministiseen toimintaperiaatteeseen tähtäävissä tehdastuotannossa käy satunnaisia virheitä tuotteiden valmistusprosesseissa, jotka ilmenevät esimerkiksi viallisina tuotteina. 
+- Vastaavasti luonnontieteellisiin mittauksiin liittyy mittausvirheitä, jotka kuuluvat satunnaisvaihtelun piiriin. Esimerkiksi varhaisissa valonnopeusmittauksissa mittausvirheet saattoivat olla suuriakin!
+- Myös kvanttimekaniikan ja hiukkasfysiikan tutkimat ilmiöt ovat perusluonteeltaan satunnaisia.
+:::
+
+__Satunnaismuuttujat__
+
+- Tilastollista vaihtelua ilmentävät tilastolliset muuttujat tulkitaan __satunnaismuuttujiksi__ ja havainnot (havaintoarvot) voidaan näin ollen tulkita näiden satunnaismuuttujien realisoituneiksi arvoiksi. Tällöin tilastollisen tutkimuksen kohteena on nämä havainnot generoinut _satunnaisilmiö_. 
+  - Satunnaismuuttuja siis kuvaa tarkasteltavan mitattavan ominaisuuden (satunnais)vaihtelua tutkimuksen kohteiden, eli tilastoyksiköiden joukossa.
+  - Mitattavan ominaisuuden mahdolliset arvot määräävät satunnaismuuttujan luonteen. Yleisesti satunnaismuuttujat jaetaan kahteen luokkaan:  __jatkuviin__ ja __diskreetteihin__. 
+  - Satunnaismuuttujan __todennäköisyysjakauma__, määrää erilaisten tulosvaihtoehtojen todennäköisyyden ja mahdollistaa täten tilastollisen analyysin ja päättelyn. 
+    - Satunnaisuus eroaa mielivaltaisesta prosessista siinä, että satunnaista ilmiötä voidaan kuvata jollakin __tilastollisella lailla__ kun taas mielivaltaista prosessia ei.
+
+::: {.defblock .mikko data-latex="{}"}
+**Satunnaismuuttuja** 
+
+Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään esim. $Y$, ja kutsutaan ajoittain myös stokastiseksi muuttujaksi) on todennäköisyyslaskennan peruskäsite, jolla tarkoitetaan satunnaisilmiön määräämää lukua.  
+
+- Satunnaismuuttujan $Y$ realisoituvaa arvoa $y$ kutsutaan realisaatioksi tai toteumaksi.  
+
+- Tilastollinen aineisto muodostuu useiden satunnaismuuttujien (tilastoyksiköiden tutkimusmuuttujien) realisoituneista arvoista.  
+
+- Realisoituneiden arvojen vaihtelua tilastoyksiköiden välillä kutsutaan satunnaisvaihteluksi.  
+:::
+
+::: {.defblock .mikko data-latex="{}"}
+**Jatkuvat ja diskreetit satunnaismuuttujat** 
+
+- Satunnaismuuttuja $Y$ on jatkuva, jos se voi saada ylinumeroituvan määrän arvoja tai ts. minkä tahansa arvon joltain väliltä, kuten tyypillisesti minkä tahansa arvon joltain reaalilukuväliltä.
+- Satunnaismuuttuja $Y$ on diskreetti, jos se voi saada vain joitain mahdollisia arvoja (vain yksittäisiä, äärellisen tai numeroituvasti äärettömän määrän, arvoja). Yksinkertaisimmillaan diskreetti satunnaismuuttuja $Y$ on kaksiarvoinen (binäärinen), jolloin sen mahdollisia arvoja tyypillisesti merkitään $y=0$ tai $y=1$.
+:::
+
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: satunnaismuuttuja**
+
+- Ihmisen pituutta voidaan pitää (ennen mittaukseen tulemista) satunnaismuuttujana $Y$ ja lopullista pituutta täten pituuden realisaationa $y$. 
+  - Yleensä pituutta kohdellaan jatkuvana muuttujana senttimetreissä.
+  - Mikäli kuitenkin määritetään toteumaksi jonkin pituuden raja-arvon, esimerkiksi 170\ cm, ylittävä pituus, on kyseessä kaksiarvoinen (binäärinen) muuttuja (pituus on joko yli tai alle 170\ cm).
+:::
+
+- Muuttujat voidaan luokitella myös __kvalitatiivisiin__ ja __kvantitatiivisiin__ muuttujiin (ks. \@ref{alaluku53}.
+  - Kvalitatiivisiin muuttujiin liittyy luokittelu- tai järjestysasteikko
+  - Kvantitatiivisiin muuttujiin välimatka- ja suhdeasteikko.
+
+- Tilastolliset menetelmät perustuvat todennäköisyyslaskennan^[Todennäköisyyslaskentaa käsitellään välillisesti tulevissa luvuissa mutta varsinaisesti tarkemmin 2. periodin kurssilla [TILM3553 Todennäköisyyslaskennan peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024) ja (erityisesti sivuaineopiskelijoille) [TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille](https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024).] tuloksiin ja tarjoavat keinon hallita satunnaisuuden aiheuttamaa epävarmuutta sekä tavan erottaa systemaattinen ja satunnainen vaihtelu, eli signaali ja kohina, toisistaan. 
+- Tilastollisen aineiston __tilastollisella mallilla__ tarkoitetaan täten niiden satunnaismuuttujien todennäköisyysjakaumaa, jonka ajatellaan generoineen havainnot.
+  - Yksinkertaisimmillaan esimerkiksi yksinkertaiseen satunnaisotantaan takaisinpanolla perustuva satunnaismalli (palaamme tähän otantaa käsittelevässä luvussa \@ref(luku5)).
+  - Satunnaisuus perustuu siihen, että satunnaismuuttujien toteutuvat arvot (ja niistä lasketut tunnusluvut kuten keskiarvo) vaihtelevat satunnaisesti otoksesta toiseen. 
+- Todennäköisyyslaskennan ja tilastotieteen tehtävä on tuottaa __tilastollisia malleja__ satunnaisilmiöissä havaittavalle tilastolliselle stabiliteetille.
+
+## Satunnaisuus ja todennäköisyydet {#alaluku42}
+
+- Tilastotieteessä __tutkimusaineiston keräämistä__ voidaan pitää hyvänä esimerkkinä satunnaisilmiöstä.
+  - Voimme ajatella, että tilastollisen tutkimuksen kohteet on aina valittu arpomalla.
+  - Arvonta on mainio esimerkki satunnaisilmiöstä, sillä siihen liittyy aina ennustamattomuutta: vaikka yksittäisen arvonnan tulosta ei voi tietää etukäteen, noudattaa se kuitenkin todennäköisyyden lakeja.
+  - Koska arvonnan tulos vaihtelee satunnaisesti arvontakerrasta toiseen, myös tutkimuksen kohteita kuvaavat tiedot vaihtelevat satunnaisesti arvontakerrasta toiseen.
+  - Tutkimuksen kohteita kuvaavien tietojen käyttäytymisessä havaitaan kuitenkin arvontaa toistettaessa juuri sitä säännönmukaisuutta, jota kutsutaan tilastolliseksi stabiliteetiksi. __Tämä säännönmukaisuus on tilastollisen tutkimuksen kohde.__
+- Esimerkkejä tilastollisten aineistojen keräämisen menetelmistä, jotka perustuvat arvontaan:
+  - __Satunnaistetut kokeet__: Kokeellisessa tutkimuksessa tavoitteena on vertailla erilaisten käsittelyiden vaikutuksia kokeen kohteisiin. Erilaisten virhelähteiden kontrolloimiseksi käsittelyt on syytä arpoa kohteille.
+  - __Satunnaisotanta__: Otannalla^[\ Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa \@ref(luku5).] tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla. (Ks. Luku \@ref(luku5))
+- Kerätyn (tai havaitun) aineiston pohjalta tehdään päätelmiä sen generoineesta satunnaisilmiöstä esimerkiksi testaamalla erilaisia siihen liittyviä hypoteeseja. 
+  - Tilastotiede voidaan jakaa kahteen merkittävään paradigmaan sen mukaan, miten **tilastolliseen päättelyyn**, ml. hypoteeseihin ja niiden testaamiseen, suhtaudutaan. Näitä ovat __klassinen eli frekventistinen tilastotiede__ sekä __Bayesilainen tilastotiede__. Tarkastellaan seuraavaksi minkälaisia eroja ja yhtäläisyyksiä näiden koulukuntien välillä on.
+
+\
+
+__Frekventistinen tilastotiede__  
+
+- Klassisessa eli frekventistisessä tilastotieteessä ajatellaan että hypoteesien testaaminen tulee perustua yksinomaan havaittuun aineistoon ja siihen liitettävään tilastolliseen malliin. 
+- Nimi "frekventistinen" juontuu siitä, että tilastollisen mallin perustana oleva todennäköisyysjakauma määrittää satunnaismuuttujan mahdollisten arvojen todennäköisyydeksi niiden suhteellisen osuuden äärettömästä määrästä realisaatioita, ts. niiden suhteellisen frekvenssin. 
+- Klassisessa tilastotieteessä havaittuun aineistoon _sovitetaan_ tilastollinen malli, joka vastaa saatua aineistoa parhaiten.
+  - Tämä tilastollinen malli voidaan (useimmiten) perustaa nk. __uskottavuusfunktioon__, joka on _aineiston_ sekä yhden tai useamman _parametrin_ funktio ja joka saavuttaa suurimman arvonsa nk. "suurimman uskottavuuden pisteessä". 
+  - Uskottavuusfunktio kertoo kuinka todennäköisenä havaittua aineistoa voidaan pitää, mikäli sen oletetaan olevan peräisin vastaavasta mallista jollain parametriarvolla. 
+    - Täten ne parametriarvot, joilla uskottavuusfunktion arvo maksimoituu, _kuvaavat aineiston generoimaa prosessia parhaiten_, annettuna malli- eli jakaumaoletus. 
+  - Uskottavuusfunktioista, tilastollisten mallien estimoinnnista ja parametreista lisää seuraavassa alaluvussa sekä luvussa \@ref(luku6).
+
+- Perusjoukkoa koskevia hypoteeseja testataan tilastollisen mallin avulla: havaittu aineisto määrittää uskottavuusfunktion perusteella sellaiset hypoteesit, jotka jäävät joko voimaan tai tulevat hylätyiksi.
+
+- Klassisessa tilastotieteessä hypoteesien testaus perustuu siis vain aineistoon eli tilastollinen päättely on induktiivista: aineiston avulla otosta koskeva päätelmä voidaan yleistää koskemaan perusjoukkoa. 
+  - Toki kaikki päättely on alisteista tehdyille oletuksille koskien käytettävää tilastollista mallia.
+
+\
+
+__Bayesilainen tilastotiede__
+
+- Bayesilainen tilastotiede on tilastotieteen toinen suuri paradigma ja on saanut nimensä englantilaiselta harrastelijamatemaatikko ja presbyteeripappi [Thomas Bayesilta](https://fi.wikipedia.org/wiki/Bayesil%C3%A4inen_tilastotiede), jota pidetään Bayesilaisen tilastotieteen isänä.
+- Bayesilainen tilastotiede ulottaa todennäköisyyskäsityksen, eli tn-jakauman, myös aineistoa koskevien hypoteesien puolelle: kuinka todennäköisenä jotain hypoteesia voidaan pitää jo ennen tutkimusaineiston keräämistä?
+  - Myös Bayesilaisessa tilastotieteessä hyödynnetään uskottavuusfunktiota, mutta hypoteesien testaus ei perustu niinkään frekventistiseen ajatukseen todennäköisyyksistä suhteellisina osuuksina äärettömässä sarjassa.
+  - Bayesilaiset perustavat sen sijaan hypoteesien testaamisen tutkimuskysymystä koskevien ennakkokäsitysten päivittämiselle sen jälkeen, kun aineisto on havaittu. 
+  - Nämä ennakkokäsitykset voidaan kuvata todennäköisyysjakaumana, priorijakaumana, jota päivitetään ns. posteriorijakaumaksi kun aineisto havaitaan. Näin päättely perustuu priorijakauman ja aineiston uskottavuusfunktion väliselle kompromissille!
+- Ajatusta ennakkokäsityksistä todennäköisyyksinä käytetään niin Bayesilaisen tilastotieteen kritiikkinä kuin puolustuksena.
+  - Lopulta olemme kaikki Bayesilaisia: jokaisella on sisäisiä ennakkokäsityksiään, myös tutkijoilla! Nämä ennakkokäsitykset voivat perustua esimerkiksi aiempaan tutkittuun tietoon, mutta myös uskomuksiin.
+  - Prioritiedon hyödyntäminen tilastollisessa tutkimuksessa on usein perusteltua.
+  - Bayesilaista tilastotiedettä tarkastellaan tarkemmin esimerkiksi kursseilla [TILM3577 Bayes-päättely](https://opas.peppi.utu.fi/fi/opintojakso/TILM3577/6969) sekä [TILM3601 Bayes-laskenta](https://opas.peppi.utu.fi/fi/opintojakso/TILM3601/21033).
+
+## Tilastolliset mallit, jakaumat ja parametrit {#alaluku43}
+
+- Tilastolliset mallit perustuvat satunnaismuuttujan mahdollisten tulosvaihtoehtojen todennäköisyyksiä kuvaavalle __todennäköisyysjakaumalle__, joka määrää millä todennäköisyydellä satunnaismuuttuja saa erilaisia arvoja.
+  - Kuten aiemmin todettiin, satunnaismuuttujat jaetaan kahteen luokkaan: diskreetteihin ja jatkuviin.
+- Toisaalta ajoittain tietyn suureen/ilmiön mallinnuksessa voidaan perustellusti käyttää molempiin luokkiin kuuluvien satunnaismuuttuja- ja tilastollisen mallityypin vaihtoehtoja. 
+  - Esimerkki: Esimerkiksi COVID19-tartuntatapausten lukumäärä Suomessa on periaatteessa diskreetti satunnaismuuttuja, joka saa yksittäisen (kokonaisluku)arvon joka kuukausi, mutta käytännössä lukumäärät ovat tässä tapauksessa sen verran suuria, että niitä mallinnetaan tyypillisesti jatkuva-arvoisena muuttujana. 
+  - Vastaavasti esimerkiksi potilaan jonotusaika päivystyksessä voi periaatteessa saada minkä tahansa arvon tietyltä reaalilukuväliltä ($[0,\infty)$, ts. mikä vain positiivinen arvo) ja tällöin käytettäisiin jatkuviin sm:jiin perustuvia tilastollisia menetelmiä.
+- Satunnaismuuttujan mahdolliset arvot määrääväät myös mahdollisen todennäköisyysjakauman ja täten myös käytettävän tilastollisen mallin.  
+  - __Diskreetin satunnaismuuttujan__ jakauma voidaan usein esittää taulukkomuodossa. Eri arvojen todennäköisyydet muodostavat kyseisen satunnaismuuttujan todennäköisyysjakauman, __pistetodennäköisyysfunktion__, jota voidaan havainnollistaa esimerkiksi pylväsdiagrammilla. 
+  - Jatkuvan satunnaismuuttujan $Y$ arvot muodostavat jonkin reaaliakselin välin, joka sisältää äärettömän määrän lukuja. Tämän vuoksi jatkuvan satunnaismuuttujan jakauman esittäminen taulukon kautta ei ole luontevaa, vaan jakauma esitetään yleensä satunnaismuuttujan __tiheysfunktion__ avulla.
+    - Pistetodennäköisyys- ja tiheysfunktiot siis määräävät satunnaismuuttujan mahdollisille arvoille todennäköisyydet väliltä $[0,1]$ ja näin voidaan arvioida havaitun aineiston uskottavuutta ja testata siihen liitettäviä hypoteeseja suhteessa estimoituun suurimman uskottavuuden estimaattiin.
+
+- Tilastolliset mallit approksimoivat "todellista" aineiston generoinutta ilmiötä. Tilastolliset mallit riippuvat __parametreista__ ja keskeinen oletus erityisesti klassisessa tilastotieteessä on, että aineiston generoinutta satunnaisilmiötä kuvaa jokin vakioinen mutta tuntematon parametriarvo (tai niiden joukko).
+  - Kuviossa \@ref(fig:poisson) on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin $\lambda$ arvoilla. Poisson-jakaumaa esitellään tarkemmin alaluvussa \@ref(alaluku45).
+
+
+```{r poisson, echo=FALSE, fig.cap="Esimerkki: Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktio eri parametrin $\\lambda$ arvoilla.", fig.align='center', out.width = "100%"}
+knitr::include_graphics("images/poisson.jpg")
+```
+
+\
+
+__Parametrien estimointi ja niiden testaus__
+
+- Satunnaisilmiötä kuvaava tilastollinen malli perustuu siis johonkin parametriseen todennäköisyysjakaumaan, joka yhdessä havaintojen kanssa määrittää uskottavuusfunktion.
+  - Aineistoa kuvaavan tilastollisen mallin uskottavuus pyritään maksimoimaan, mikä tarkoittaa valitun todennäköisyysjakauman sovittamista havaintoaineistoon mahdollisimman hyvin.
+  - Tässä nk. "suurimman uskottavuuden estimoinnissa"  aineiston generoiman (oletetun) todennäköisyysjakauman parametriarvot __estimoidaan__ (eli arvioidaan) käytettävän otoksen/aineiston avulla.
+  - Perusjoukkoa parhaiten kuvaavan (eli "aineiston generoineen") parametrin arvo pyritään siis estimoimaan aineiston perusteella.
+
+- Parametrien estimoinnin lisäksi usein __testataan__ parametreja koskevia oletuksia (eli hypoteeseja). 
+- Estimointi ja testaus ovat tilastolliseen tutkimukseen liittyvän __tilastollisen päättelyn__ keskeisiä välineitä, joiden avulla tutkittavasta ilmiöstä pyritään tekemään johtopäätöksiä siitä kerätyn havaintoaineiston perusteella.
+  - Estimoitujen parametrien testaus voi vastata esimerkiksi seuraavanlaisiin kysymyksiin: 
+    - Onko suomalaisten miesten keskipituus 180\ cm?
+    - Vaikuttaako yliopistokoulutus tulevaisuuden ansioihin?
+    - Auttaako tietty lääkeaine jonkin sairauden hoidossa?
+    - Voiko osakemarkkinoiden tuottoja ennustaa?
+
+- Parametrien testaus on osa tilastollista päättelyä, johon palataan tarkemmin luvussa \@ref(luku6)
+
+## Odotusarvo ja varianssi {#alaluku44}
+
+- Satunnaismuuttujan todennäköisyysjakauman tietoa voidaan tiivistää tunnuslukuihin, joista keskeisimpiä ovat __odotusarvo__, __varianssi__ ja __keskihajonta__.
+
+::: {.defblock .mikko data-latex="{}"}
+**Odotusarvo** 
+
+Satunnaismuuttujan $Y$ odotusarvo $\text{E}(Y)$ kuvaa satunnaismuuttujan odotettavissa olevaa arvoa.
+
+- Muodostamalla satunnaiskokeen tulosten __painotettu keskiarvo__, jossa kunkin tuloksen painona on vastaavan tapauksen todennäköisyys, niin saatua arvoa sanotaan odotusarvoksi $\text{E}(Y)$. 
+- Odotusarvo kuvaa jakauman painopistettä.
+- Merkinnän $\text{E}(Y)$ käyttö juontaa juurensa englannin kielen sanoihin "odotus"\, expectation, ja "odotusarvo"\, expected value.
+:::
+
+\newpage
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Odotusarvo** 
+
+Perinteikäs esimerkki odotusarvosta on tavallisen kuusitahoisen nopan silmäluvun odotusarvo. Nopanheitto on diskreetti satunnaisilmiö ja tavallisen painottamattoman nopan tapauksessa jokaisen silmäluvun todennäköisyys on yhtä suuri. Merkitään nopan silmälukua (sm) $Y$ ja sen realisaatiota $y$. Nopan silmäluvun realisaatioiden mahdolliset arvot ovat $Y = \{1,2,3,4,5,6\}$ ja niiden todennäköisyydet ovat $P(Y=y) = \frac{1}{6}$.
+
+Nopanheiton silmäluvun odotusarvo määritetään siis painotettuna keskiarvona $$E(Y) = \sum_{i=1}^6 y \cdot P(Y=y)  = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2} = 3.5$$
+:::
+
+\
+
+- Odotusarvon lisäksi kiinnostuksen kohteena on usein jakauman keskittyneisyys (hajaantuneisuus). Ts. kun halutaan puolestaan kuvata satunnaismuuttujan arvojen vaihtelua, tutkitaan todennäköisyysjakauman __varianssia__ ja __keskihajontaa__.
+
+::: {.defblock .mikko data-latex="{}"}
+**Varianssi** 
+
+Satunnaismuuttujan $Y$ hajontaa voidaan mitata varianssilla
+$$
+\mathrm{Var}(Y) = \text{E}\Big[\Big(Y-\text{E}(Y)\Big)^2\Big],
+$$
+tai sen neliöjuuren eli __keskihajonnan__ avulla
+$$
+\text{D}(Y) = \sqrt{\mathrm{Var}(Y)}.
+$$
+
+- Mitä lähempänä nollaa keskihajonta ja varianssi ovat, sitä todennäköisempää on, että satunnaismuuttujan arvo on lähellä odotusarvoa.
+- Merkintöjen $\mathrm{Var}(Y)$ ja $\text{D}(Y)$ taustalla on englannin kielen sanat variance (varianssi) ja deviation, joka tarkoittaa "poikkeamaa"/"hajontaa". 
+:::
+
+- Odotusarvon ja varianssin (keskihajonnan) tavanomaiset **estimaattorit** ovat otoskeskiarvo ja otosvarianssi (otoshajonta), joihin palataan vielä myöhemmin.
+
+## Joitain jakaumia {#alaluku45}
+
+Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemme ensin keskeisintä jatkuvien satunnaismuuttujien jakaumaa, normaalijakaumaa, ennen muutamien diskreettien satunnaismuuttujien jakaumia.
+
+
+### Normaalijakauma
+
+- Jos satunnaismuuttuja $Y$ noudattaa __normaalijakaumaa__ odotusarvolla $\text{E}(Y)= \mu$ ja varianssilla $\mathrm{Var}(Y) = \sigma^2$, niin tällöin merkitään $Y \thicksim \text{N}(\mu, \sigma^2)$. 
+
+- $Y$:n tiheysfunktio on muotoa (ks. kuva alla)
+$$
+f(y; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{1}{2} \Big(\frac{y- \mu}{\sigma} \Big)^2}, 
+$$
+
+jossa $e$ viittaa Neperin lukuun $e \approx 2,71828$.
+
+- Ylläoleva tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) $\mu$ ja $\sigma^2$ annetaan erilaisia arvoja. Nämä kaksi parametria määräävät normaalijakauman tarkemman muodon. 
+  - Alla olevassa kuvassa \@ref(fig:normaalijakauma) on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoille.
+
+```{r normaalijakauma, warning = FALSE, message = FALSE, echo = FALSE, message = FALSE, fig.cap="Normaalijakaumien muotoja eri parametriarvoilla.", fig.align='center', out.width = "100%"}
+library(ggplot2)
+theme_set(theme_bw())
+#generate a normal distribution plot
+ggplot(data.frame(x = c(-6, 6)), aes(x = x)) +
+stat_function(fun = dnorm, args = c(0,0.5), aes(col = "N(0,0.5)")) + 
+  stat_function(fun = dnorm, args = c(0,2), aes(col = "N(0,2)")) +
+  stat_function(fun = dnorm, args = c(0,1), aes(col = "N(0,1)")) + 
+  ggtitle("Erilaisia normaalijakaumia") +  
+  labs(x = "", y = "") + 
+  labs(colour = "Väri") 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Miesten pituus** 
+
+- Tutkitaan miesten pituutta hyvin määritellyssä joukossa, kuten varusmiespalvelusta tiettynä vuonna suorittavien joukossa.
+  - Pituus on ominaisuus, jonka voidaan nähdä määräytyvän monista perintö- ja ympäristötekijöistä. Pituutta voidaan siis pitää satunnaismuuttujana.
+  - Oletetaan, että pituus noudattaa normaalijakaumaa. Näin ollen sm. $Y$ on valitun miehen pituus ja $Y \thicksim \text{N}(\mu, \sigma^2)$. 
+- Tuntemattomien parametrien $\mu$ ja $\sigma^2$ tulkinta:
+  - Odotusarvo $\mu = \text{E}(Y)$ on satunnaisesti valitun miehen pituuden odotettavissa oleva arvo.
+  - Varianssi $\sigma^2 = \mathrm{Var}(Y) = \text{E} \Big[\Big(Y- \mu \Big)^2 \Big]$ kuvaa valitun miehen pituuden odotusarvostaan määrätyn poikkeaman (keskihajonnan) neliön odotettavissa olevaa arvoa (kuvaten ts. pituuksien jakauman keskittyneisyyttä/hajaantuneisuutta pituuksien odotusarvon ympärillä). 
+:::
+
+\
+
+### Bernoulli-, binomi- ja Poisson-jakauma
+
+- __Bernoulli-jakauma__ on todennäköisyysjakauma, jossa satunnaismuuttujalla $Y$ on kaksi mahdollista tulosvaihtoehtoa $Y=1$ tai $Y=0$.
+  - Yleensä $Y=0$ tarkoittaa, että jokin tapahtuma ei tapahdu ja $Y=1$ että tapahtuu.
+  - Todennäköisyys tapahtumalle $Y=1$ on $\text{P}(Y=1)=p$ ja vastaavasti vastatodennäköisyys $\text{P}(Y=0)=1-p$.
+  - Bernoulli-jakaumaa merkitään $Y \thicksim B(p)$, jossa siis $0 < p < 1$.
+  - Bernoulli-jakauman pistetodennäköisyysfunktio on muotoa
+$$
+f(y; p) = \text{P}(Y=y) = p^y (1-p)^{(1-y)},
+$$
+jossa $y$ on sm:n $Y$ realisaatio (havaittu arvo) ja parametri $p$ on tuntematon (voidaan estimoida otoksen avulla, kuten myöhemmin tullaan näkemään).
+
+- Bernoulli-jakauman odotusarvo $\text{E}(Y)=p$ ja varianssi $\mathrm{Var}(Y)=p (1-p)$.
+
+\
+
+- __Binomijakauma__
+  - Olkoon $Y_1, \ldots, Y_n$ riippumattomia satunnaismuuttujia ja $Y_i \thicksim B(p), \, i=1,\ldots,n$.
+  - Jos $X = Y_1 + Y_2 + \ldots + Y_n$, niin  $X \thicksim \mathrm{Bin}(n,p)$. Ts. sm. $X$ noudattaa __binomijakaumaa__ parametrein $n$ ja $p$.
+  - Pistetodennäköisyysfunktio:
+
+$$
+\text{P}(X=k) = \binom nk p^k (1-p)^{(n-k)}.
+$$
+
+  - Jakauman odotusarvo $\text{E}(X)=np$ ja varianssi $\mathrm{Var}(X) = n p (1-p)$.
+  - Binomijakaumalla kyetään vastaamaan mm. kysymykseen millä todennäköisyydellä $n$:n kokoisessa otoksessa tapahtuu $k$ onnistumista. 
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876--1885**^[Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). _Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data._ Chapman & Hall/CRC.] 
+
+Vuosien 1876--1885 aikana Saksin osavaltiossa rekisteröitiin yli neljä miljoonaa syntynyttä lasta. Tällöin vanhempien tuli ilmoittaa lapsen sukupuoli (mies tai nainen) heidän syntymätodistuksessaan. Myöhemmässä tutkimuksessa tutkittiin tarkemmin 6115 perhettä, joissa asui 12 lasta ja tarkemmin miesten (poikien) lukumäärää näissä perheissä.
+
+Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 lapseen perheissä. Tarkasteltava jakauma esitetään vielä erikseen oheisessa kuviossa \@ref(fig:miestenlkm). 
+
+Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys $\text{P}(\mathrm{mies}) = p$ on $p=0.5$.
+:::
+
+\FloatBarrier
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+miehet = c(0,1,2,3,4,5,6,7,8,9,10,11,12)
+perheet = c(3,24,104,286,670,1033,1343,1112,829,478,181,45,7)
+saks = rbind.data.frame(miehet, perheet)
+rownames(saks) = c("Miesten lkm", "Perheiden lkm")
+colnames(saks) = c(0:12)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+kable(saks, booktabs = TRUE) %>% 
+  kable_styling(font_size = 12, latex_options = "scale_down")
+```
+
+\FloatBarrier
+
+```{r miestenlkm, echo=FALSE, fig.cap="Miesten lukumäärä Saksin osavaltiossa 12:n lapsen perheissä.", fig.align='center', out.width = "750%"}
+knitr::include_graphics("images/Miesten_lkm.jpg")
+```
+
+\FloatBarrier
+
+__Poisson-jakauma__
+
+- Jos satunnaismuuttuja $Y$ on Poisson-jakautunut, merkitään $Y \thicksim P(\lambda)$, jossa parametri $\lambda > 0$ on Poisson-jakauman parametri, jota kutsutaan myös ajoittain intensiteettiparametriksi.
+- Poisson-jakaumaa voidaan käyttää tilanteissa, joissa sm. $Y$ on jokin lukumäärä ja sen pistetodennäköisyysfunktio on muotoa
+$$
+\text{P}(Y=k) = \frac{e^{-\lambda} \lambda^k}{k!}.
+$$
+
+- Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: $\text{E}(Y) = \mathrm{Var}(Y) = \lambda$.
+
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Poisson-jakauma**
+
+Tarkastellaan Englannin Valioliigakauden 1995--1996 otteluissa tehtyjä maalimääriä. Valioliiga (The F.A. Premier League) on korkein Englannin jalkapalloliigan sarjataso, jossa ensi kerran juuri kaudella 1995-1996 20 joukkuetta (aiemmin Valioliigan perustamisen kauden 1992--1993 alussa 22 joukkuetta) pelasivat keskenään kerran toisiaan vastaan koti- ja vieraskentällä. Otteluita oli siis yhteensä 380.
+
+Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin^[Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? _Chance_ 10(1), 15-19.], jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme "keskimääräisen" kotijoukkueen ja vierasjoukkueen "edustavaa" ottelua.
+
+Seuraava taulukko raportoi tehtyjen maalimäärien jakaumat pelatuissa 380 ottelussa. Neljän tai yli neljän maalin tapaukset kirjataan 4+:nä maalina. Ts. esim. kys. kauden lopputulokset _Blackburn Rovers_ - _Nottingham Forest_ 7-0 ja _Bolton Wanderers_ - _Manchester United_ 0-6 tulevat aineistoon tuloksina 4+ vs. 0 ja 0 vs. 4+.
+:::
+```{r, echo = FALSE}
+rivi1 = c(27,29,10,8,2,76)
+rivi2 = c(59,53,14,12,4,142)
+rivi3 = c(28,32,14,12,4,90)
+rivi4 = c(19,14,7,4,1,45)
+rivi5 = c(7,8,10,2,0,27)
+rivi6 = c(140,136,55,38,11,380)
+
+taulukko = rbind.data.frame(rivi1,rivi2,rivi3,rivi4,rivi5,rivi6)
+rownames(taulukko) = c("0", "1", "2", "3", "4+", "Yht.")
+colnames(taulukko) = c("0", "1", "2", "3", "4+", "Yht.")
+
+kable(taulukko, booktabs = TRUE) %>%
+  add_header_above(c("Kotij. maalien lkm." = 1, "Vierasj. maalien lkm." = 5, "Yht." = 1)) 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki (jatkuu): Poisson-jakauma**
+
+Olettamalla, että koti- ja vierasjoukkueen todennäköisyys tehdä maali ottelun aikana on vakio, niin tällöin koti- ja vierasjoukkueen ottelun aikana tekemien maalien lukumäärää (ilman edellä käytettyä maalimäärien "katkaisua" neljään) voidaan melko hyvin approksimoida oletuksella, että nämä lukumäärät ovat Poisson-jakautuneita. Ts. $Y^H_i \thicksim P(\lambda_H)$ on sm., joka kuvaa $i$:n ottelun kotijoukkueen tekemien maalien lukumäärää ja intensiteettiparametrin $\lambda_H$ arvon määrittäminen kuuluu tilastollisen päättelyn ja erityisesti estimointiteorian piiriin. Vastaavasti vierasjoukkueen maalimäärät: $Y^A_i \thicksim P(\lambda_A)$. 
+
+Osoittautuu, että parametreille $\lambda_H$ ja $\lambda_A$ saatavat estimaatit ovat $\lambda_H = 1.49$ ja $\lambda_A = 1.06$ ja ne vastaavat tässä yksinkertaistetussa tilanteessa koti- ja vierasjoukkueen keskimääräisiä maalimääriä:
+:::
+
+\FloatBarrier
+
+```{r, echo = FALSE}
+ka = c("1.486","1.063","2.550")
+va = c("1.316","1.172","2.618")
+taulukko = rbind.data.frame(ka, va)
+rownames(taulukko) = c("Keskiarvo", "Varianssi")
+colnames(taulukko) = c("Kotijoukkue (home)", "Vierasjoukkue (away)", "Yht.")
+
+kable(taulukko, booktabs = TRUE) 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
+
+On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
+:::
+
+
+
+## Sattuman rooli tieteenteossa: Vale-emävale-tilasto? {#alaluku46}
+
+Erityisesti nykypäivänä ei-tieteellinen tieto ja tarkoituksellinen disinformaatio, joita perustellaan heppoisin havainnoin, leviävät internetissä kulovalkean tavoin. On tiedeyhteisön ja tutkijoiden moraalinen vastuu taistella näitä uskomuksia vastaan __popularisoimalla tiedettä__. Tämä saattaa kuitenkin ajoittain jopa pahentaa ongelmaa, sillä popularisoinnissa päteviltäkin tutkijoilta voi unohtua _satunnaisuuden voima_.^[\ Tämä jakso perustuu osin psykometriikan yliopisto-opettajan Jari Lipsasen [blogiin](https://blogs.helsinki.fi/med-viikonjuttu/2021/02/22/vale-emavale-tilasto) vuodelta 2021.]
+
+- Kuten todettua, tilastollisessa tutkimuksessa mielenkiinnon kohteena on satunnaisilmiöiden tutkiminen ja erityisesti systemaattisen ja satunnaisen vaihtelun (signaalin ja kohinan) erottaminen sekä muuttujien välisten riippuvuuksien tutkiminen.
+  - Kiinnostuksen kohteena on siis hyvin harvoin vain jokin yksittäinen tunnusluku, kuten keskiarvo, varianssi tai korrelaatio (palaamme näihin myöhemmin luvussa \@ref(luku6)).
+  - Tieteen popularisointi on yksi tutkijoiden ja yliopistojen tiedeyhteisön tärkeimmistä yhteiskunnallisista tehtävistä, mutta valitettavan usein se typistyy yksittäisen viimeisimmän tutkimustuloksen esittelyksi.
+
+- Yliopistoyhteisössä kuitenkin luonnollisesti luotamme kumuloituneeseen tutkittuun tietoon ja tiedämme, että __yksittäinen tutkimus on vasta hyvä alku__.
+  - Ihmistieteitä, kuten ilmeisesti erityisesti psykologiaa sekä osin myös muiden ohella lääke- ja taloustiedettä, on viimeisen vuosikymmenen ajan puhuttanut paljon niin sanottu __replikaatiokriisi__, sillä useaa arvostettuakaan tutkimusta ei ole saatu __toistettua eli replikoitua__.
+  - On ymmärrettävää, että replikaatiokriisi, varsinkin jos se on (alakohtaisesti) laajalle levinnyttä, murentaa kansalaisten luottamusta tieteellisiin tuloksiin. 
+  - Toistettavuus on yksi tutkimuksen peruskriteereistä, joka erottaa tieteellisen tiedon muista tietolähteistä, joten sen puuttuminen herättää ymmärrettävästi huolta tieteellisen prosessin toimivuudesta. 
+  - Replikaatiokriisin voi kuitenkin myös tulkita toisin: ilman kriittisyyttä omia (ja muiden) tuloksia kohtaan, ei mitään kriisiä olisikaan, joten silkka sen olemassaolo on osoitus tieteellisen prosessin toimivuudesta.
+
+- Kun tuntee ja tunnistaa sattuman voiman ja ymmärtää kaikki mahdolliset satunnaisuuden lähteet, jotka altistavat tutkimusprosessin virheille, tulee samalla ymmärtäneeksi että eri tavoin koeteltu, useassa tutkimuksessa kumuloitunut tieto tulisi olla kaiken tieteen popularisoinnin keskiössä yksittäisten, mahdollisesti uusien ja yllättävien tutkimustulosten sijaan.
+  - Tähän mennessä olemme jo oppineet, että tälle on myös vahvat tilastolliset perustelut: satunnaisen tiedon maailmassa mikään ei ole täysin varmaa, ei edes kaikkein edistyneimpien tilastomenetelmien avulla!
+  
+## Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
+
+-	Satunnaisilmiö
+-	Satunnaismuuttuja
+-	Jatkuvat ja diskreetit satunnaismuuttujat ja niihin liittyvät pistetodennäköisyysfunktio ja tiheysfunktio
+-	Todennäköisyysjakauma
+-	Tilastollinen malli (todennäköisyysmalli)
+-	Kvalitatiiviset ja kvantitatiiviset muuttujat
+-	Frekventistinen ja Bayesiläinen tilastotiede
+-	Odotusarvo ja varianssi
+-	Yleisempiä jakaumia: Normaalijakauma, Bernoulli-jakauma, binomijakauma ja Poisson-jakauma
+-	Tieteen popularisointi ja sen suhde (yksittäiseen) tutkimukseen

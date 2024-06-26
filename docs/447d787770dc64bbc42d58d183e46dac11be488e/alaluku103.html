@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10.3 Erilaisia aineistoja ja aineistolähteitä | TILM3701 - Tilastotiede ja data 2024</title>
+  <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10.3 Erilaisia aineistoja ja aineistolähteitä | TILM3701 - Tilastotiede ja data 2024" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10.3 Erilaisia aineistoja ja aineistolähteitä | TILM3701 - Tilastotiede ja data 2024" />
+  
+  <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
+  
+
+<meta name="author" content="Koonneet" />
+<meta name="author" content="Henri Nyberg" />
+<meta name="author" content="Roope Rihtamo" />
+
+
+<meta name="date" content="2024-06-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="alaluku102.html"/>
+<link rel="next" href="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">TILM3701 - Tilastotiede ja data 2024/a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kurssin rakenne</a>
+<ul>
+<li class="chapter" data-level="" data-path="kurssimateriaali.html"><a href="kurssimateriaali.html"><i class="fa fa-check"></i>Kurssimateriaali</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="johdantoa-ja-johdattelua-tilastotieteeseen.html"><a href="johdantoa-ja-johdattelua-tilastotieteeseen.html"><i class="fa fa-check"></i><b>1</b> Johdantoa ja johdattelua tilastotieteeseen</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="tilastotiede-ja-kurssin-idea.html"><a href="tilastotiede-ja-kurssin-idea.html"><i class="fa fa-check"></i><b>1.1</b> Tilastotiede ja kurssin idea</a></li>
+<li class="chapter" data-level="1.2" data-path="tilastotieteen-asema-tutkimusyhteisön-ulkopuolella.html"><a href="tilastotieteen-asema-tutkimusyhteisön-ulkopuolella.html"><i class="fa fa-check"></i><b>1.2</b> Tilastotieteen asema tutkimusyhteisön ulkopuolella</a></li>
+<li class="chapter" data-level="1.3" data-path="kurssin-luonne-tilastotieteen-opintojen-esittelijänä.html"><a href="kurssin-luonne-tilastotieteen-opintojen-esittelijänä.html"><i class="fa fa-check"></i><b>1.3</b> Kurssin luonne tilastotieteen opintojen esittelijänä</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="luku2.html"><a href="luku2.html"><i class="fa fa-check"></i><b>2</b> Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="alaluku21.html"><a href="alaluku21.html"><i class="fa fa-check"></i><b>2.1</b> Mitä on tiede?</a></li>
+<li class="chapter" data-level="2.2" data-path="alaluku22.html"><a href="alaluku22.html"><i class="fa fa-check"></i><b>2.2</b> Tieteellinen menetelmä</a></li>
+<li class="chapter" data-level="2.3" data-path="alaluku23.html"><a href="alaluku23.html"><i class="fa fa-check"></i><b>2.3</b> Tilastojen yleisestä roolista yhteiskunnassa</a></li>
+<li class="chapter" data-level="2.4" data-path="alaluku24.html"><a href="alaluku24.html"><i class="fa fa-check"></i><b>2.4</b> Mitä on tutkimus?</a></li>
+<li class="chapter" data-level="2.5" data-path="alaluku25.html"><a href="alaluku25.html"><i class="fa fa-check"></i><b>2.5</b> Tutkimuksen vaiheet ja tulosten julkaiseminen</a></li>
+<li class="chapter" data-level="2.6" data-path="luvun-2-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-2-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>2.6</b> Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="luku3.html"><a href="luku3.html"><i class="fa fa-check"></i><b>3</b> Tilastotiede tieteenalana</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="alaluku31.html"><a href="alaluku31.html"><i class="fa fa-check"></i><b>3.1</b> Lisää tilastotieteen perustermejä</a></li>
+<li class="chapter" data-level="3.2" data-path="alaluku32.html"><a href="alaluku32.html"><i class="fa fa-check"></i><b>3.2</b> Mitä tilastotiede on ja mitä se ei ole?</a></li>
+<li class="chapter" data-level="3.3" data-path="alaluku33.html"><a href="alaluku33.html"><i class="fa fa-check"></i><b>3.3</b> Tilastotieteen suhde lähitieteisiin</a></li>
+<li class="chapter" data-level="3.4" data-path="alaluku34.html"><a href="alaluku34.html"><i class="fa fa-check"></i><b>3.4</b> Tilastotieteen osa-alueet</a></li>
+<li class="chapter" data-level="3.5" data-path="alaluku35.html"><a href="alaluku35.html"><i class="fa fa-check"></i><b>3.5</b> Tilastotieteen kritiikkiä</a></li>
+<li class="chapter" data-level="3.6" data-path="alaluku36.html"><a href="alaluku36.html"><i class="fa fa-check"></i><b>3.6</b> Tilastotieteen sovellusaloja ja “rajatieteitä”</a></li>
+<li class="chapter" data-level="3.7" data-path="luvun-3-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-3-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>3.7</b> Luvun 3 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="luku4.html"><a href="luku4.html"><i class="fa fa-check"></i><b>4</b> Sattuma ja satunnaisuus tilastotieteessä</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
+<li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
+<li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
+<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
+<li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="luku5.html"><a href="luku5.html"><i class="fa fa-check"></i><b>5</b> Tilastolliset aineistot, niiden kerääminen ja mittaaminen</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="alaluku51.html"><a href="alaluku51.html"><i class="fa fa-check"></i><b>5.1</b> Kertausta: Data eli aineisto</a></li>
+<li class="chapter" data-level="5.2" data-path="alaluku52.html"><a href="alaluku52.html"><i class="fa fa-check"></i><b>5.2</b> Otannan idea</a></li>
+<li class="chapter" data-level="5.3" data-path="alaluku53.html"><a href="alaluku53.html"><i class="fa fa-check"></i><b>5.3</b> Mittaaminen ja mitta-asteikot</a></li>
+<li class="chapter" data-level="5.4" data-path="alaluku54.html"><a href="alaluku54.html"><i class="fa fa-check"></i><b>5.4</b> Kontrolloidut kokeet ja suorat havainnot</a></li>
+<li class="chapter" data-level="5.5" data-path="alaluku55.html"><a href="alaluku55.html"><i class="fa fa-check"></i><b>5.5</b> Otantamenetelmät</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="alaluku55.html"><a href="alaluku55.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>5.5.1</b> Yksinkertainen satunnaisotanta</a></li>
+<li class="chapter" data-level="5.5.2" data-path="alaluku55.html"><a href="alaluku55.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>5.5.2</b> Systemaattinen otanta</a></li>
+<li class="chapter" data-level="5.5.3" data-path="alaluku55.html"><a href="alaluku55.html#ositettu-otanta"><i class="fa fa-check"></i><b>5.5.3</b> Ositettu otanta</a></li>
+<li class="chapter" data-level="5.5.4" data-path="alaluku55.html"><a href="alaluku55.html#ryväsotanta"><i class="fa fa-check"></i><b>5.5.4</b> Ryväsotanta</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="alaluku56.html"><a href="alaluku56.html"><i class="fa fa-check"></i><b>5.6</b> Otantaesimerkkejä</a></li>
+<li class="chapter" data-level="5.7" data-path="alaluku57.html"><a href="alaluku57.html"><i class="fa fa-check"></i><b>5.7</b> Otannan haasteita vielä kootusti</a></li>
+<li class="chapter" data-level="5.8" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.8</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="alaluku61.html"><a href="alaluku61.html"><i class="fa fa-check"></i><b>6.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
+<li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
+<li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Suhteellisen frekvenssin otosjakauma</a></li>
+<li class="chapter" data-level="6.5" data-path="alaluku65.html"><a href="alaluku65.html"><i class="fa fa-check"></i><b>6.5</b> Muita tunnuslukuja</a></li>
+<li class="chapter" data-level="6.6" data-path="alaluku66.html"><a href="alaluku66.html"><i class="fa fa-check"></i><b>6.6</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="6.7" data-path="alaluku67.html"><a href="alaluku67.html"><i class="fa fa-check"></i><b>6.7</b> Otoskoko</a></li>
+<li class="chapter" data-level="6.8" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.8</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastollinen riippuvuus ja korrelaatio</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="alaluku71.html"><a href="alaluku71.html"><i class="fa fa-check"></i><b>7.1</b> Muuttujien väliset riippuvuudet</a></li>
+<li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
+<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Tunnusluvut</a></li>
+<li class="chapter" data-level="7.4" data-path="alaluku74.html"><a href="alaluku74.html"><i class="fa fa-check"></i><b>7.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
+<li class="chapter" data-level="7.5" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.5</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Regressioanalyysi</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Johdatus regressioanalyysin ideaan</a></li>
+<li class="chapter" data-level="8.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>8.2</b> Yhden selittäjän lineaarinen regressiomalli</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Muita regressiomalleja</a></li>
+<li class="chapter" data-level="8.4" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.4</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Tilastotieteen rooli uuden tiedon tuottamisessa</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Tilastollisen tutkimuksen yhteisiä elementtejä</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Tutkimusprosessi</a></li>
+<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Aineisto- ja tutkimustyypit ja koeasetelmat</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="alaluku101.html"><a href="alaluku101.html"><i class="fa fa-check"></i><b>10.1</b> Tutkimustyypit</a></li>
+<li class="chapter" data-level="10.2" data-path="alaluku102.html"><a href="alaluku102.html"><i class="fa fa-check"></i><b>10.2</b> Tutkimusstrategiat</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="alaluku102.html"><a href="alaluku102.html#poikittaistutkimus-eli-poikkileikkaustutkimus"><i class="fa fa-check"></i><b>10.2.1</b> <strong>Poikittaistutkimus</strong> eli <strong>poikkileikkaustutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.2" data-path="alaluku102.html"><a href="alaluku102.html#pitkittäistutkimus"><i class="fa fa-check"></i><b>10.2.2</b> <strong>Pitkittäistutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.3" data-path="alaluku102.html"><a href="alaluku102.html#kohorttitutkimus"><i class="fa fa-check"></i><b>10.2.3</b> <strong>Kohorttitutkimus</strong></a></li>
+<li class="chapter" data-level="10.2.4" data-path="alaluku102.html"><a href="alaluku102.html#tapaus-verrokkitutkimus"><i class="fa fa-check"></i><b>10.2.4</b> <strong>Tapaus-verrokkitutkimus</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="alaluku103.html"><a href="alaluku103.html"><i class="fa fa-check"></i><b>10.3</b> Erilaisia aineistoja ja aineistolähteitä</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="alaluku103.html"><a href="alaluku103.html#rekisteriaineistot"><i class="fa fa-check"></i><b>10.3.1</b> Rekisteriaineistot</a></li>
+<li class="chapter" data-level="10.3.2" data-path="alaluku103.html"><a href="alaluku103.html#aikasarjat-ja-paneeliaineistot"><i class="fa fa-check"></i><b>10.3.2</b> Aikasarjat ja paneeliaineistot</a></li>
+<li class="chapter" data-level="10.3.3" data-path="alaluku103.html"><a href="alaluku103.html#survey--eli-haastattelu--tai-kyselytutkimus"><i class="fa fa-check"></i><b>10.3.3</b> Survey- eli haastattelu- tai kyselytutkimus</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>10.4</b> Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="luku11.html"><a href="luku11.html"><i class="fa fa-check"></i><b>11</b> Tilastollisesta ennustamisesta</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="alaluku111.html"><a href="alaluku111.html"><i class="fa fa-check"></i><b>11.1</b> Tilastollinen selittäminen vs. ennustaminen</a></li>
+<li class="chapter" data-level="11.2" data-path="alaluku112.html"><a href="alaluku112.html"><i class="fa fa-check"></i><b>11.2</b> Tilastolliseen ennustamiseen liittyviä huomioita</a></li>
+<li class="chapter" data-level="11.3" data-path="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-11-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>11.3</b> Luvun 11 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="luku12.html"><a href="luku12.html"><i class="fa fa-check"></i><b>12</b> Tilastotieteen kehityksen nykytrendejä</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="modernin-tilastotieteen-suuntaviivoja.html"><a href="modernin-tilastotieteen-suuntaviivoja.html"><i class="fa fa-check"></i><b>12.1</b> Modernin tilastotieteen suuntaviivoja</a></li>
+<li class="chapter" data-level="12.2" data-path="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-12-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>12.2</b> Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">TILM3701 - Tilastotiede ja data 2024</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="alaluku103" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Erilaisia aineistoja ja aineistolähteitä<a href="alaluku103.html#alaluku103" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Käydään seuraavaksi läpi erilaisia aineistotyyppejä, joita käytännön tutkimuksissa Suomessa (ja maailmalla) usein käytetään. Emme käsittele tässä erikseen itse otannalla koottavia aineistoja tai otannan järjestämistä, ks. luku <a href="luku5.html#luku5">5</a>.</p>
+<div id="rekisteriaineistot" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Rekisteriaineistot<a href="alaluku103.html#rekisteriaineistot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Rekisteriperusteinen tutkimus hyödyntää aineistoinaan valmiiksi kerättyjä <strong>tietokantoihin</strong> tallennettuja aineistoja, joita kutsutaan rekisteriaineistoiksi.</p>
+<ul>
+<li>Yleensä <strong>hallinnollisia tarpeita</strong> varten kerättyjä tietoja.</li>
+</ul></li>
+<li><p>Rekisteriaineistojen eduiksi voidaan lukea mm. seuraavat seikat</p>
+<ul>
+<li>Aineiston muodostaminen/kerääminen on verrattain helppoa ja Suomessa on paljon korkealaatuisia rekisteriaineistoja. Tätä edesauttaa tietotekniikan nopea kehittyminen, joka on mahdollistanut erittäin suurten aineistojen rutiininomaisen keräämisen.</li>
+<li>Ei tarvetta erikseen tuottaa tutkimusaineistoa: vältetään mahdollisesti kallis aineiston keräysvaihe.</li>
+<li>Suomalainen henkilötunnusjärjestelmä mahdollistaa tietojen tehokkaan käytön ja laadukkaan tutkimuksen.</li>
+</ul></li>
+<li><p>Rekisteriaineistojen ongelmina ja haittoina voidaan pitää mm. seuraavia</p>
+<ul>
+<li>Mikäli tutkimuksessa lähtökohtaisesti käytetään rekisteriaineistoja, määräävät ne välillisesti myös mahdolliset tutkimuskohteet: rekisteriaineistot kerätään eri tarkoitusta varten eivätkä ne täten välttämättä sisällä kaikkea haluttua informaatiota.
+<ul>
+<li>Tutkimuksen ongelmalähtöisyys saattaa unohtua helpommin, kun tutkimusongelman aihiota asetellaan sopimaan rekisteriaineistojen tarjoamiin mahdollisuuksiin.</li>
+<li>Rekisteriaineistoilla on myös omat rajansa: tutkimuskysymysten kannalta väärin mitattua muuttujaa ei useinkaan voida millään tavalla muuntaa täydellisesti haluttuun muotoon.</li>
+</ul></li>
+<li>Rekisteriaineisto pitää usein esikäsitellä sopivaan muotoon laadullista tutkimusta muistuttavalla tavalla.</li>
+<li>Rekisteriaineistojen analyysista ja niihin soveltuvista tilastollisista menetelmistä on vähänlaisesti metodologisia oppikirjoja ja/tai esimerkkitutkimuksia.</li>
+<li>“Ulkopuolisille” tutkijoille aineistojen käyttö saattaa olla hankalaa mm. korkeiden pääsykustannusten (rekisterien ylläpitäjien, viranomaisten ja tutkimuslaitosten ulkopuolella), tietosuojakysymysten tai teknisten hankaluuksien takia.
+<ul>
+<li>Rekisteriaineiston käyttö vaatii tutkimussuunnitelman ja tutkimussuunnitelman perusteella myönnetyn käyttöluvan rekisterin ylläpitäjältä.</li>
+</ul></li>
+<li>Tietotekniikan kehittymisen vuoksi kasvaneet rekisteriaineistot tekevät käyttökelpoisen tiedon esiin seulomisesta haastavaa. Tämä näyttäytyy esimerkiksi eri rekistereiden tietojen linkkaamista yhteen, jolla saattaa olla tutkimuksen kannalta ratkaiseva merkitys ja joka edelleen korostaa substanssitietoutta.
+<ul>
+<li>Eri rekisterejä ei aina saadakaan linkattua tehokkaasti yhteen esimerkiksi jos ne ovat mitanneet mielenkiinnon kohteina olevia muuttujia eri tilastoyksikön tasolla (vrt. kunnan vs kaupunginosan työllisyys)</li>
+</ul></li>
+</ul></li>
+<li><p>Erilaisia rekisterejä Suomessa:</p>
+<ul>
+<li>Verorekisterit (Verohallinnon rekisterit)</li>
+<li>Kuolemansyyrekisterit</li>
+<li>Eläkerekisterit</li>
+<li>Väestölaskennat (väestörekisteri)</li>
+<li>Syöpärekisteri</li>
+<li>Lääkeostorekisteri</li>
+<li>Sosiaali- ja terveydenhuollon rekisterit</li>
+<li>Kelan etuusrekisterit</li>
+<li>Osoiterekisterit</li>
+<li>Etukorttirekisterit</li>
+<li>Opintosuoritusrekisteri</li>
+</ul></li>
+<li><p>Näiden lisäksi tulevat myös aikaisempien tutkimusten aineistot.</p></li>
+<li><p>Rekisteriaineiston käyttämisen <strong>tilastollisia haasteita</strong> tutkimuksessa</p>
+<ul>
+<li>Rekisteriaineistot ovat usein kokonaisaineistoja, joten otantavirheeseen perustuvan tilastollisen päättelyn oletukset eivät välttämättä päde.
+<ul>
+<li>Isoissa aineistoissa käytännössä merkityksettömistäkin eroista tulee helposti tilastollisesti merkitseviä!</li>
+</ul></li>
+</ul></li>
+<li><p>Rekisteriaineistoja saadaan “valmiina” ja niiden kokonaistutkimukseen soveltuvasta luonteesta huolimatta niitä on arvioitava samojen periaatteiden mukaisesti kuin itse kerättäviäkin aineistoja.</p>
+<ul>
+<li>Tutkimusongelman pitäisi aina olla keskeinen lähtökohta myös rekisteriaineiston käytössä.</li>
+<li>Itse kerätessä aineisto on mahdollista räätälöiden tuottaa vastaamaan juuri tutkimuskysymykseen kun taas rekisteriaineisto on “toisen käden” aineistoa ja ohjaa täten tutkimusta niin käsitteiden määrittelystä kuin tutkimuskysymysten asettelusta lähtien.</li>
+</ul></li>
+<li><p><strong>Tietosuojalaki</strong>: Lain mukaan henkilötietoja voidaan kerätä ja tallettaa vain, jos rekisterinpitäjän ja rekisteröitävän henkilön välillä on asiallinen yhteys. Olennaista lain soveltamisessa on, voidaanko käytössä olevan aineiston tiedot tosiasiassa tavalla tai toisella liitää tiettyyn tunnistettavissa olevaan henkilöön.</p>
+<ul>
+<li>Lain merkitys on paljolti siinä, että se ohjaa suunnitelmallisuuteen ja huolellisuuteen henkilötietojen käsittelyssä.</li>
+<li>Sääntelyjen yleisenä tavoitteena on ettei tarpeettomasti kerätä ja talleteta henkilötietoja ettei rekisteröityjen yksityisyyttä ja oikeuksia perusteettomasti loukata ja että rekisteri, siihen liittyvät tiedot ja niiden käsittely suojataan kaikissa vaiheissa.</li>
+</ul></li>
+<li><p>Rekisteriaineistot tietosuojalain takaaman yksityisyydensuojan näkökulmasta</p>
+<ul>
+<li>Suomessa rekisteriaineistot pyritään luovuttamaan käyttöön vain tunnisteettomina yksityisyydensuojan säilyttämiseksi.</li>
+<li>Tieteellinen tutkimustarkoitus luokitellaan kuitenkin poikkeustapaukseksi tietosuojalaissa ja ensisijaisena tavoitteena on aina se että tietoja, joista henkilö voidaan tunnistaa, käytetään ainoastaan silloin kun tutkimusta ei voida muutoin toteuttaa.</li>
+<li>Tiedot tulee ensisijaisesti kerätä tutkimusyksiköiden suostumuksella ja siten, että henkilö saa halutessaan riittävästi informaatiota tietojen käyttötarkoituksesta ja -tavasta.</li>
+<li>Rekisteritietojen hyödyntäjien etujen mukaista on, että tietosuojaa koskevat säännökset ovat niin selkeitä ja kattavia, että yleisössä ei synny epäilyksiä tietojen väärinkäytön mahdollisuuksista.</li>
+<li>Rekisteritietojen käyttöön on aina haettava lupaa. Erityisesti eri rekistereitä yhdistettäessä on hankittava myös tietosuojavaltuutetun lausunto suunnitteilla olevan tutkimuksen laillisuudesta ja käyttöehdoista.</li>
+</ul></li>
+<li><p>Rekisteriaineiston ymmärtämisessä ja käyttämisessä kannattaa huomioida ainakin seuraavat seikat:</p>
+<ul>
+<li>Mitkä tekijät ovat johtaneet alkuperäisen aineiston ja sen koonneen/tuottaneen informaatiojärjestelmän syntymiseen?
+<ul>
+<li>Nimellisesti oikealta kuulostava muuttuja ei aina vastaa tutkijan käsitystä siitä muuttujasta, mitä kyseisen rekisteriaineiston ylläpitäjä/tuottaja on ajatellut.</li>
+</ul></li>
+<li>Miten järjestelmän sisältämät tiedot on mitattu ja miten tämä ilmoitetaan eli miten tietojärjestelmän sisältämien tietojen informaatioarvo on dokumentoitu?
+<ul>
+<li>Rekisterin tuottajan ja sen käyttäjien näkemykset mitatuista muuttujista ja niistä johdetut tulkinnat eivät välttämättä aina kohtaa.</li>
+</ul></li>
+<li>Minkälaisia tietorakenteita aineistossa käytetään ja miten se vaikuttaa eri muuttujien tallentamiseen tietojärjestelmään?
+<ul>
+<li>Tutkimuskysymyksen kannalta on voi olla merkitystä esimerkiksi sillä, onko rekisterinpitäjä kerännyt henkilöiden ikätietoa vuoden vai kymmenen vuoden tarkkuudella.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: diabeteksen ja sen lisäsairauksien esiintyvyyden ja ilmaantuvuuden rekisteriperusteinen mittaaminen</strong></p>
+<ul>
+<li><p>Vaihe 1: Diabeteskohtortin identifiointi (Tilastokeskus: kuolinsyyt, THL: diagnoosit, Kela: erityiskorvaukset, reseptit).</p></li>
+<li><p>Vaihe 2: Seurantatiedot (syöpärekisteri, sairaspäivärahat, eläkerekisteri…).</p></li>
+<li><p>Ongelma: kuinka monta henkilöä diabeteskohortista on kuollut seuranta-aikana?</p>
+<ul>
+<li>Kuolema on vakaa käsite, johon ei liity mittausvirhettä tai subjektiivisuutta.</li>
+<li>Katsotaan aineistosta “yhden rivin säännöllä” kuinka monelle löytyy tieto kuolemasta.</li>
+</ul></li>
+<li><p>Kysymys: Kuinka moni diabeteskohorttiin kuuluvista sairastaa tyypin 1 diabetesta?</p>
+<ul>
+<li>Tyypin 1 diabetes johtuu insuliinia tuottavien beetasolujen tuhoutumisesta autoimmuuniprosessin seurauksena.</li>
+<li>Tyypin 1 diabeetikko tarvitsee jatkuvasti insuliinia, mutta ei hyödy haiman omaa insuliinineritystä tehostavista lääkkeistä.</li>
+<li>Rakennetaan algoritmi, jolla identifioidaan tyypin 1 diabeetikot lääkeostojen luokkien ja säännöllisyyden perusteella.</li>
+</ul></li>
+</ul>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:diab"></span>
+<img src="images/diab.jpg" alt="Vaihe 1: Diabeteskohortin identifiointi" width="100%" />
+<p class="caption">
+Kuvio 10.8: Vaihe 1: Diabeteskohortin identifiointi
+</p>
+</div>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: rekisteritutkimus pitkäaikaisen laitoshoivan käytöstä</strong></p>
+<ul>
+<li>Miten sosiaaliset tekijät, kuten sosioekonominen asema ja perherakenne, vaikuttavat laitoshoivan käyttöön?</li>
+<li>Kolme erityistä tutkimusintressiä
+<ul>
+<li>Laitoshoivaan siirtymisen riskit</li>
+<li>Laitoksissa vietetty aika</li>
+<li>Laitoshoivan käyttö elämän loppupäässä</li>
+</ul></li>
+<li>Aiemmat tutkimukset samasta aiheesta
+<ul>
+<li>Perustuvat potilasaineistoihin</li>
+<li>Eivät sisällä laitostumis- ja poistumistietoja samassa aineistossa</li>
+<li>Kärsivät vastauskadosta</li>
+<li>Kärsivät seurantakadosta ja seurannan puutteellisuudesta</li>
+<li>Perustuvat pieniin aineistoihin</li>
+<li>Eivät mahdollista perhevaikutusten tutkimista</li>
+</ul></li>
+</ul>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rekist"></span>
+<img src="images/rekist.jpg" alt="Vaihe 1: Diabeteskohortin identifiointi" width="100%" />
+<p class="caption">
+Kuvio 10.9: Vaihe 1: Diabeteskohortin identifiointi
+</p>
+</div>
+</div>
+<div id="aikasarjat-ja-paneeliaineistot" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Aikasarjat ja paneeliaineistot<a href="alaluku103.html#aikasarjat-ja-paneeliaineistot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Aikasarjat</strong>
+<ul>
+<li>Aikasarjaksi kutsutaan havaintojen jonoa, jossa aika
+määrää jostain tilastollisesta muuttujasta tehtyjen havaintojen järjestyksen.</li>
+<li>Havainnot ovat tavallisesti peräkkäisiä, ja mittaukset on tehty tasaisin aikavälein, mutta väliaikojen tasaisuus ei kuitenkaan ole välttämätöntä ja monissa tutkimusasetelmissa kohdeaikasarjasta voidaan poimia havaintoja jatkuvasti tai mielivaltaisen pienin aikavälein.</li>
+<li>Yksittäinen aikasarja on pitkittäisaineiston erikoistapaus, jossa tarkastellaan vain yhtä aikasarjaa. Pitkittäisaineistoon nähden toistot eivät välttämättä ole suunniteltuja, vaan niitä havaitaan jatkuvasti ajassa.
+<ul>
+<li>Vuotuinen bruttokansantuote Suomessa</li>
+<li>Suomalaisten lukumäärä kunkin vuoden lopussa</li>
+<li>Vuorokautinen sademäärä Helsingin Kaisaniemessä</li>
+</ul></li>
+</ul></li>
+<li>Jotkut aikasarjat ovat suunnitelmallisesti muodostettu tiettyjen laskennallisten menetelmien avulla muista aikasarjoista. Tällaisia tilastollisia suureita kutsutaan <strong>indekseiksi</strong> ja ne sisältävät tiivistettyä tietoa yhteiskunnasta, kuten esimerkiksi inflaation mittarina käytetty kuluttajahintaindeksi.</li>
+</ul>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: kuluttajahintaindeksit</strong></p>
+<ul>
+<li>Hintaindeksi on normalisoitu keskiarvo tarkasteltavan tuote- tai palvelukorin hinnoista, joka lasketaan säännöllisin väliajoin tavoitteena helpottaa hintojen muutosten seurantaa eri ajankohtien tai alueiden välillä. Laajimmat indeksit mittaavat hintojen kehitystä koko talouden tasolla ja niitä hyödynnetään monin tavoin talouspolitiikassa.
+<ul>
+<li>Tilastokeskuksen haastattelijat keräävät indeksiä varten kaiken kaikkiaan noin 50 000 hintatietoa lähes 500 hyödykkeestä noin 2 700 (näin joitain vuosia sitten) liikkeestä aina kuukauden puolivälissä, lisäksi noin 1 000 hintatietoa kerätään keskitetysti.</li>
+<li>Tilastokeskuksen laskema kuluttajahintojen vuosimuutos oli marraskuussa 2014 oli n. 1,0 prosenttia</li>
+<li>Marraskuussa kuluttajahintoja nostivat viime vuodesta eniten vuokrankorotukset, tupakkatuotteiden ja alkoholijuomien vähittäishintojen ja ravintola- ja kahvilapalvelujen sekä kerrostalojen kunnossapitopalvelujen kallistuminen</li>
+<li>Kuluttajahintojen nousua vuoden takaisesta hillitsi marraskuussa eniten elintarvikkeiden, polttonesteiden ja viihde-elektroniikan halpeneminen</li>
+</ul></li>
+</ul>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:kuluttaja"></span>
+<img src="images/kuluttaja.jpg" alt="Esimerkki: kuluttajahintaindeksi" width="100%" />
+<p class="caption">
+Kuvio 10.10: Esimerkki: kuluttajahintaindeksi
+</p>
+</div>
+<ul>
+<li><strong>Aikasarjojen tilastollinen analyysi</strong> perustuu siihen, että sarja tulkitaan jonkin <strong>stokastisen prosessin</strong> eli satunnaisprosessin realisaatioksi
+<ul>
+<li>Jos aikasarjan generoinut prosessi saadaan selville, voidaan tietoja prosessista käyttää aikasarjan käyttäytymisen kuvaamiseen ja selittämiseen sekä aikasarjan tulevan käyttäytymisen ennustamiseen.</li>
+<li>Aikasarja-aineistot ilmentävät ilmiöstä riippuen ns. <strong>autokorrelaatiota</strong>, eli ajallisesti toisiaan lähellä olevat havainnot ovat korreloituneempia kuin ajallisesti kaukana toisistaan olevat.
+<ul>
+<li>Aikasarja-analyysi on yksi tilastotieteen osa-alue, jolla on rikas ja pitkälle kehittynyt teoriapohja.</li>
+<li>Aikasarja-analyysia opetetaan tarkemmin kursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3541/5076">TILM3541 Aikasarja-analyysi</a>, <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3589/8393">TILM3589 Epälineaarinen aikasarja-analyysi</a> ja <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3586/6973">TILM3586 Moniulotteinen aikasarja-analyysi</a>.</li>
+</ul></li>
+</ul></li>
+<li>Aikasarjoja analysoimalla voidaan selvittää esimerkiksi
+<ul>
+<li>Onko aikasarjassa <strong>trendejä</strong> eli aikasarjan tason systemaattisia muutoksia?</li>
+<li>Onko aikasarjassa <strong>syklistä vaihtelua</strong> kuten <strong>suhdanne</strong>- ja/tai <strong>kausivaihtelua</strong>?</li>
+<li>Ks. esimerkiksi kuva <a href="alaluku103.html#fig:time">10.11</a>.</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:time"></span>
+<img src="images/time.jpg" alt="Esimerkki: Kansainvälisten lentomatkustajien lkm vuosina 1949-1960" width="100%" />
+<p class="caption">
+Kuvio 10.11: Esimerkki: Kansainvälisten lentomatkustajien lkm vuosina 1949-1960
+</p>
+</div>
+<p><br />
+</p>
+<ul>
+<li><p><strong>Paneeli- eli pitkittäisaineisto</strong></p>
+<ul>
+<li>Paneeliaineistolla tarkoitetaan aineistoa, jossa tilastoyksiköistä on useita havaintoja ja aika määrää havaintojen järjestyksen (kuten aikasarjoissa) ja lisäksi jokaisena ajanhetkenä mitataan useampi kuin yksi tilastollinen muuttuja (kuten poikkileikkausaineistossa).
+<ul>
+<li>Paneeliaineisto on terminä käytetympi yhteiskuntatieteissä kun taas pitkittäisaineisto esimerkiksi lääketieteessä.</li>
+<li>Havaintoyksiköt voivat olla esimerkiksi yrityksiä, ihmisiä, kuntia tai kouluja. Ns. “täydellisessä” paneeliaineistossa kaikista havaintoyksiköistä on havaittu kaikki muuttujat kaikkina ajanhetkinä. “Kiertävä” paneeli on vastaavasti sellainen, jossa osa havaintoyksiköistä vaihtuu ajan kuluessa.
+<ul>
+<li>Tyypillisesti havaintoja kerätään tasaisin väliajoin, kuten kuukausittain tai vuosittain, ja yksittäisen ajanhetken havainto on poikkileikkausaineisto ja kustakin havaintoyksiköstä on oma usean muuttujan aikasarjansa.</li>
+</ul></li>
+</ul></li>
+<li>Paneeliaineisto mahdollistaa vastaamisen kysymykseen miksi? Yleisesti ottaen paneeliaineistoja käytetäänkin erityisesti ns. kausaalipäättelyyn tähtäävissä malleissa.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></li>
+</ul></li>
+</ul>
+</div>
+<div id="survey--eli-haastattelu--tai-kyselytutkimus" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Survey- eli haastattelu- tai kyselytutkimus<a href="alaluku103.html#survey--eli-haastattelu--tai-kyselytutkimus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Survey-tutkimus on ei-kokeellinen tutkimus, jonka lähtökohtana on tiettyjen ilmiöiden, ominaisuuksien tai tapahtumien yleisyyden tai jakautumisen selvittäminen, joka toteutetaan kysely- tai haastattelumenetelmällä.
+<ul>
+<li>Havaintoyksiköt pyritään valitsemaan satunnaisotannalla, sillä myös survey-tutkimuksessa pyritään yleistämään tulokset otoksesta koko perusjoukkoon.</li>
+<li>Kyselytutkimukset muodostava kokonaan oman tutkimustapansa, joka mahdollistaa hyvin erilaisen informaation keräämisen kuin tavallisesti kvantitatiivissa aineistoissa.</li>
+</ul></li>
+<li>Survey-tutkimus koostuu seuraavista vaiheista:
+<ul>
+<li>Kohdepopulaation määrittely ja otannan suunnittelu</li>
+<li>Kyselylomakkeen rakentaminen ja testaaminen</li>
+<li>Kyselymetodin määrittely (puhelinhaastattelu, elektroninen kysely…)</li>
+<li>Mahdollisten haastattelijoiden koulutus</li>
+<li>Aineiston keräys</li>
+<li>Aineiston yhteneväisyyden tarkistaminen (muuttujat tallennettu oikein jne.)</li>
+<li>Tulosten adjustointi mahdollisten identifioitujen virhelähteiden mukaan</li>
+</ul></li>
+<li>Survey-tutkimusta käytetään erityisesti asenteiden, mielipiteiden ja käyttäytymisen tutkimiseen.
+<ul>
+<li>Esimerkkejä ovat mm. poliittiset mielipidekyselyt, markkinointitutkimukset, alkoholinkulutustottumukset ja terveyspalveluiden tyytyväisyyskyselyt, joihin voi kaikkiin uskoa liittyvän vastausharhaa eri syistä.</li>
+<li>Esimerkiksi vastausharhaa arkaluontoisiin kysymyksiin voidaan vähentää avoimilla kysymyksillä tai alustamalla kysymystä johdannolla, jossa suvaitaan / ymmärretään kaikenlaiset vastaukset.</li>
+<li>“Randomized response”: vastaukseen lisätään jonkin todennäköisyysmallin mukaisesti harhaa todellisen vastauksen salaamiseksi.</li>
+</ul></li>
+<li>Kerätty aineisto on siten altisteinen tehdylle kyselylle ja täten sen käyttökelpoisuus perustuu hyvin pitkälti etukäteissuunnitteluun, kunnolliseen toteutukseen ja kyselylomakkeen oikeaoppiseen rakentamiseen.
+<ul>
+<li>Lisäksi aineiston käyttökelpoisuus riippuu myös vastaajaotoksen poiminnasta (edustavuudesta) ja siitä, kuinka totuudenmukaista informaatiota vastaajat ovat kyselyssä antaneet. Tässäkin hyvä etukäteissuunnitelu on keskeistä.</li>
+<li>Tilastollisten menetelmien avulla pyritään arvioivaan otoksen, kyselyn suunnittelun ja kerätyn vastaajaotoksen sisältämää (tai aiheuttamaa) harhaa.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="26">
+<li id="fn26"><p>Kausaalimalleja opetetaan kurssilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3529/5080">TILM3529 Kausaalipäättely havainnoivissa tutkimuksissa</a><a href="alaluku103.html#fnref26" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="alaluku102.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="luvun-10-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["TD2024.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
