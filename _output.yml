@@ -7,7 +7,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">TILM3701 - Tilastotiede ja data 2024/a></li>
+        <li><a href="./">TILM3701 - Tilastotiede ja data 2024</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: [["TD2024.pdf", "PDF"]]
