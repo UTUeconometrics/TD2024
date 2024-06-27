@@ -1,4 +1,4 @@
-# (PART) Osa 1 {-}
+# (PART) Osa I {-}
 
 # Johdantoa ja johdattelua tilastotieteeseen
 

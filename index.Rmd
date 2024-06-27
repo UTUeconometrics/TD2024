@@ -21,11 +21,23 @@ header-includes: |
     \newcommand{\indep}{\perp \!\!\! \perp}
 ---
 
-# Kurssin rakenne {-}
+# Kurssin (osat I ja II rakenne) {-}
+- Tilastotiede ja data -kurssi koostuu kahdesta erillisestä osasta, jotka tarjoavat opiskelijalle työkaluja tieteen ja tutkimuksen ymmärtämiseen tilastotieteen näkökulmasta käsin.
+- __Osa I__: Ensimmäinen osa toimii johdantokurssina tieteen ja tutkimuksen tekoon esittelemällä keskeisiä käsitteitä, käytäntöjä ja termejä, joita kvantitatiivisessa/määrällisessä tutkimuksessa tilastotieteen ja sen menetelmien osalta tarvitaan (ks. osaamistavoitteet alla).
+  - Tarkoituksena on yleisellä tasolla johdatella tilastotieteen ja aineistojen (datan) maailmaan sekä pohtia myös näiden laajempaa merkitystä tieteellisen tutkimuksen hyvin keskeisinä osina.
+  - Osa I koostuu X luennosta ja ... 
+  - Kurssin ensimmäisen osan lopuksi järjestetään tentti, joka arvioidaan hyväksytty/hylätty asteikolla.
+  
+- __Osa II__: Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
+  - Tarkoituksena on luoda pohja tosielämän satunnaisilmiöiden tutkimukselle tilastotieteen ja tilastollisten menetelmien keinoin.
+  - Osa II koostuu 7 luennosta, tutoriaalitilaisuuksista sekä harjoitustehtävistä.
+  - Harjoitustehtävien tavoite on totuttaa opiskelija erityisesti matematiikan ja tilastotieteen opinnoissa yleiseen viikottaisten harjoitustehtävien tekemisen käytäntöön.
+  - Kurssin toisen osan lopuksi järjestetään tentti, joka arvioidaan 0-5 arviointiasteikolla.
 
-- Tällä kurssilla tarkoituksena on melko yleisellä tasolla johdatella tilastotieteen ja aineistojen (datan) maailmaan pohtimalla myös näiden laajempia merkityksiä tieteellisen tutkimuksen hyvin keskeisinä osina. 
+- Kurssilla vältetään kovin teknistä matemaattista esitystapaa, mutta erityisesti osassa II, tarvittavissa määrin, tullaan kuitenkin käyttämään tilastotieteen perusopinnoissa käytettäviä matemaattisia merkintöjä ja määritelmiä. 
+  - Esim. todennäköisyyslaskennan ja tilastollisen päättelyn perusteita ei käydä vielä riittävällä matemaattisella tarkkuudella lävitse, vaan nämä tarkastelut jäävät tätä kurssia seuraavien kurssien ([TILM3553 Todennäköisyyslaskennan    peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024) tai [TILM3568 Todennäköisyyslaskenta   sivuaineopiskelijoille](https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2 022-2024) sekä [TILM3555 Tilastollisen päättelyn  peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2022-2024))  asiaksi. Nämä kurssit, yhdessä alkuvaiheen pakollisten matematiikan kurssin lisäksi, muodostavat siis tämän kurssin kanssa lähtökohdan tilastotieteen opinnoille (Turun yliopistossa).
 
-- Kurssilla vältetään, mahdollisuuksien mukaan, kovin teknistä matemaattista esitystapaa, mutta tarvittavissa määrin tullaan myös käyttämään tilastotieteen perusopinnoissa tarvittavia matemaattisia merkintöjä ja määritelmiä. Esim. todennäköisyyslaskennan ja tilastollisen päättelyn perusteita ei käydä vielä riittävällä matemaattisella tarkkuudella lävitse, vaan nämä tarkastelut jäävät tätä kurssia seuraavien kurssien ([TILM3553 Todennäköisyyslaskennan peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024) tai [TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille](https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024) sekä [TILM3555 Tilastollisen päättelyn peruskurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2022-2024)) asiaksi. Nämä kurssit, yhdessä alkuvaiheen pakollisten matematiikan kurssin lisäksi, muodostavat siis tämän kurssin johdannon kanssa lähtökohdan tilastotieteen opinnoille.
+# Kurssimateriaali {-}
 
 - Luennot eivät suoraan perustu yhteen kirjaan tai lähteeseen. Käytettyjä lähdemateriaaleja luetellaan alapuolella oheislukemiston myötä. 
 
@@ -46,29 +58,45 @@ header-includes: |
     - [Tilastokeskuksen tilastokoulu (linkki)](https://tilastokoulu.stat.fi/verkkokoulu_v2.xql?course_id=tkoulu_tilaj&lesson_id=1&subject_id=0&page_type=sisalto)
     - Tilastotieteen sanasto suomi-englanti-suomi, ks. Juha Alho, Elja Arjas, Esa Läärä ja Pekka Pere (2021). [Tilastotieteen sanasto. Suomen Tilastoseuran julkaisuja 8.](https://tilastoseura.fi/)
 
-Suuret kiitokset Visa Kuntzelle ja Emil Lehdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
+- Suuret kiitokset Visa Kuntzelle ja Emil Lehdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
 
-# Kurssimateriaali {-}
+# Osaamistavoitteet {-}
 
-Kurssin materiaali on koostettu em. lähteistä ja pyrkii paikoin pelkistettyyn esitysmuotoon mutta kuitenkin niin että materiaalin opiskelemalla kurssin osaamistavoitteet täyttyvät kokonaisuudessaan. Osaamistavoitteet on listattu Turun yliopiston opinto-oppaassa matematiikan ja tilastotieteen laitoksen opintotarjonnasta [kurssikuvauksen alta](https://opas.peppi.utu.fi/fi/opintojakso/TILM3701/90798) ja ne löytyvät alta vielä laajemmin. 
+- Kurssin materiaali on koostettu em. lähteistä ja pyrkii paikoin pelkistettyyn esitysmuotoon mutta kuitenkin niin että materiaalin opiskelemalla kurssien osaamistavoitteet täyttyvät kokonaisuudessaan. 
+- Osaamistavoitteet on listattu Turun yliopiston opinto-oppaassa matematiikan ja tilastotieteen laitoksen opintotarjonnasta kurssikuvauksien alta ([Osa 1](https://opas.peppi.utu.fi/fi/opintojakso/TILM3712/102471?period=2024-2027) ja [Osa 2](https://opas.peppi.utu.fi/fi/opintojakso/TILM3713/102472?period=2024-2027)) ja ne löytyvät alta vielä laajemmin. 
 
-- Opintojakson suoritettuaan opiskelija:
-  - On saanut kokonaiskuvan tilastotieteestä ja sen perusteista
-  - Osaa hahmottaa tilastotieteen roolin omana tieteenalana ja eri sovellusalueiden yhteydessä
-  - Tunnistaa erilaiset tutkimusasetelmat ja aineistotyypit
-  - On sisäistänyt tilastotieteen keskeisiä käsitteitä ja osaa niiden avulla tarkastella kriittisesti tieteellisiä tutkimuksia
-  - Pystyy erottamaan edustavan otoksen ja näytteen
+- __Osa I__: Opintojakson suoritettuaan opiskelija
+  - on saanut kokonaiskuvan tilastotieteestä ja sen perusteista  
+  - on sisäistänyt tilastotieteen keskeisiä käsitteitä ja osaa niiden avulla tarkastella     kriittisesti tieteellisiä tutkimuksia  
+  - pystyy erottamaan edustavan otoksen ja näytteen  
+  - tuntee tilastotieteen keskeiset perustunnusluvut   
 
-Kurssin sisältöä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.
+  
 
-\newpage
+- __Osa II__: Opintojakson suoritettuaan opiskelija on täydentänyt osassa I opittuja tilastotieteen perustietoja mm. seuraavilta osin:
+  - osaa hahmottaa tilastotieteen roolin omana tieteenalana ja eri sovellusalueiden           yhteydessä
+  - tunnistaa erilaiset tutkimusasetelmat ja aineistotyypit
+  - ymmärtää otannan ja otantateorian perusteet
+  - hahmottaa tilastollisen riippuvuuden, korrelaation ja yksinkertaisen lineaarisen          regressiomallin idean
+  - ymmärtää tilastollisen ennustaminen perusajatukset
 
-- Kurssin sisältöä:
+# Kurssin sisältö {-}
+Kurssin osien II ja II sisältöjä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.
+
+- __Osa I__
+  - Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa
   - Tilastotiede tieteenalana ja sen suhde lähitieteisiin, kuten datatieteeseen (data science)
-  - Tilastotieteen rooli uuden tieteellisen tiedon tuottamisessa
+  - Sattuma ja satunnaisuus tilastotieteessä
   - Tilastolliset aineistot (data), niiden kerääminen ja mittaaminen
+  - Tilastollinen riippuvuus ja korrelaatio
+
+- __Osa 2__
+  - Tilastolliset mallit ja jakaumat
+  - Otantamenetelmien perusteet
   - Tilastollisen päättelyn perusteita
-  - Otannan perusteet
+  - Regressioanalyysin perusteet
+  - Tilastotieteen rooli uuden tieteellisen tiedon tuottamisessa
+  - Aineisto- ja tutkimustyypit ja koeasetelmat tilastotieteessä
   - Tilastotieteen sovellusten ja sovellusalueiden esittelyä
 
 Materiaalin seassa on eritelty väärikoodatuin tietolaatikoin erinäisiä tärkeitä tilastotieteellisiä konsepteja ja termejä sekä esimerkkejä tilastotieteen sovelluksista. Näistä ensin mainitut löytyvät Deltan violeteista laatikoista ja jälkimmäiset Statistikan oransseista.^[Toim. Huom. värit eivät täysin alkuperäisten värien kanssa yhteneväisiä.] Alla esimerkkilaatikot.

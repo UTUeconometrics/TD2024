@@ -213,7 +213,7 @@ __YSO: Potentiaaliset ongelmat__
 
 - __Vastausharha__: Kysymykset voivat olla huonosti muotoiltuja tai vastaajat voivat antaa vääriä tietoja.
 
-## Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
+## Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
 **Otantamenetelmät**
 -	Yksinkertainen satunnaisotanta (YSO)  

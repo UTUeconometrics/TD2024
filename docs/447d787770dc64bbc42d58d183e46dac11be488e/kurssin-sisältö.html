@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>10.1 Johdatus regressioanalyysin ideaan | TILM3701 - Tilastotiede ja data 2024</title>
+  <title>Kurssin sisältö | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="10.1 Johdatus regressioanalyysin ideaan | TILM3701 - Tilastotiede ja data 2024" />
+  <meta property="og:title" content="Kurssin sisältö | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="10.1 Johdatus regressioanalyysin ideaan | TILM3701 - Tilastotiede ja data 2024" />
+  <meta name="twitter:title" content="Kurssin sisältö | TILM3701 - Tilastotiede ja data 2024" />
   
   <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="luku10.html"/>
-<link rel="next" href="alaluku102.html"/>
+<link rel="prev" href="osaamistavoitteet.html"/>
+<link rel="next" href="johdantoa-ja-johdattelua-tilastotieteeseen.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -226,62 +226,56 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="alaluku10" class="section level2 hasAnchor" number="10.1">
-<h2><span class="header-section-number">10.1</span> Johdatus regressioanalyysin ideaan<a href="alaluku10.html#alaluku10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="kurssin-sisältö" class="section level1 unnumbered hasAnchor">
+<h1>Kurssin sisältö<a href="kurssin-sisältö.html#kurssin-sisältö" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Kurssin osien II ja II sisältöjä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.</p>
 <ul>
-<li>Regressioanalyysi pyrkii siis havaintoaineiston perusteella <strong>mallintamaan tilastoyksikköjen tilastollisten muuttujien välistä riippuvuutta</strong>.
+<li><strong>Osa I</strong>
 <ul>
-<li>Regressiomallissa tilastollisia muuttujia on kahdenlaisia: <strong>selitettävä muuttuja</strong>, jonka tilastollista vaihtelua pyritään selittämään <strong>selittävän muuttujan</strong>, tai <strong>selittävien muuttujien</strong>, vaihtelulla.</li>
-<li>Toisin sanoen, pyritään erottamaan se selitettävän muuttujan arvojen vaihtelu, joka voidaan selittää selittävän muuttujan arvojen vaihtelulla siitä vaihtelusta, joka on täysin satunnaista.
-<ul>
-<li>Esimerkiksi voitaisiin tutkia selittääkö vaaleissa puolueiden/ehdokkaiden vaalimainontabudjetti heidän äänimääriään, ja jos selittää, niin kuinka paljon?</li>
-<li>Jos <strong>tilastollisesti merkitsevä osa</strong> selitettävän muuttujan havaittujen arvojen vaihtelusta voidaan selittää selittävien muuttujien arvojen vaihtelun avulla, sanomme, että selitettävä muuttuja <strong>riippuu tilastollisesti</strong> selittäjinä käytetyistä muuttujista.</li>
+<li>Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa</li>
+<li>Tilastotiede tieteenalana ja sen suhde lähitieteisiin, kuten datatieteeseen (data science)</li>
+<li>Sattuma ja satunnaisuus tilastotieteessä</li>
+<li>Tilastolliset aineistot (data), niiden kerääminen ja mittaaminen</li>
+<li>Tilastollinen riippuvuus ja korrelaatio</li>
 </ul></li>
-</ul></li>
-<li>Yleisemmin regressioanalyysi pyrkii vastaamaan seuraaviin kysymyksiin koskien tilastollisten muuttujien välistä riippuvuutta:
+<li><strong>Osa 2</strong>
 <ul>
-<li>Muuttujien välisten <strong>riippuvuuksien kuvaaminen</strong>. Millainen on riippuvuuden muoto? Kuinka voimakasta riippuvuus on?</li>
-<li>Muuttujien välisten <strong>riippuvuuksien selittäminen</strong>. Tilastollisen riippuvuuden luonteen selittäminen.</li>
-<li>Selitettävän muuttujan käyttäytymisen <strong>ennustaminen</strong>.</li>
-</ul></li>
-<li><strong>Lineaarinen regressioanalyysi</strong> siis (teknisesti) rajoittuu muuttujien <em>lineaaristen</em> riippuvuuksien kuvaamiseen. Kuitenkin, laajemmin asiaa pohdittaessa, lineaaristen regressiomallien suuri käyttökelpoisuus muuttujien välisten riippuvuuksien tilastollisessa analyysissa perustuu (ainakin) seuraaviin seikkoihin:
-<ul>
-<li>Lineaarisella regressiomallilla voidaan usein vähintään kohtuullisella (riittävällä) tarkkuudella approksimoida epälineaarisiakin muuttujien välisiä riippuvuuksia!</li>
-<li>Muuttujien välinen epälineaarinen riippuvuus voidaan usein myös linearisoida käyttäen sopivia muunnoksia alkuperäisiin muuttujiin.</li>
-<li>Epälineaariset regressiomallit muodostavat oman tilastollisten (regressio)mallien luokkansa (joita ei käsitellä tällä kurssilla, mutta kylläkin myöhemmissä tilastotieteen opinnoissa).</li>
-</ul></li>
-<li>Regressiomalleja käytetään apuvälineinä monilla tilastotieteen osa-alueilla. Esimerkkejä regressiomallien käyttökohteista tilastotieteessä:
-<ul>
-<li>Varianssianalyysi</li>
-<li>Koesuunnittelu</li>
-<li>Monimuuttujamenetelmät</li>
-<li>Biometria/biostatistiikka</li>
-<li>Aikasarja-analyysi ja ennustaminen</li>
-<li>Ekonometria</li>
-</ul></li>
-<li>Regressioanalyysissa sovellettavat tilastolliset mallit voidaan luokitella usealla eri periaatteella.
-<ul>
-<li>Luokittelu regressiomallin funktionaalisen muodon mukaan:
-<ul>
-<li>Lineaariset regressiomallit</li>
-<li>Epälineaariset regressiomallit</li>
-</ul></li>
-<li>Luokittelu regressiomallin yhtälöiden lukumäärän mukaan:
-<ul>
-<li>Yhden yhtälön regressiomallit</li>
-<li>Moniyhtälömallit</li>
-</ul></li>
+<li>Tilastolliset mallit ja jakaumat</li>
+<li>Otantamenetelmien perusteet</li>
+<li>Tilastollisen päättelyn perusteita</li>
+<li>Regressioanalyysin perusteet</li>
+<li>Tilastotieteen rooli uuden tieteellisen tiedon tuottamisessa</li>
+<li>Aineisto- ja tutkimustyypit ja koeasetelmat tilastotieteessä</li>
+<li>Tilastotieteen sovellusten ja sovellusalueiden esittelyä</li>
 </ul></li>
 </ul>
-<p>Tällä kurssilla käsitellään vain <strong>lineaarisia yhden yhtälön regressiomalleja</strong>. Kuitenkin luvussa <a href="alaluku103.html#alaluku103">10.3</a> esitellään lyhyesti minkälaisia laajennuksia tälle regressioanalyysin perustilanteelle tyypillisesti käsitellään.</p>
+<p>Materiaalin seassa on eritelty väärikoodatuin tietolaatikoin erinäisiä tärkeitä tilastotieteellisiä konsepteja ja termejä sekä esimerkkejä tilastotieteen sovelluksista. Näistä ensin mainitut löytyvät Deltan violeteista laatikoista ja jälkimmäiset Statistikan oransseista.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Alla esimerkkilaatikot.</p>
+<div class="defblock">
+<p><strong>Konsepti tai termi</strong></p>
+<p>Konseptin tai termin löyhä määritelmä.</p>
+</div>
+<div class="eblock">
+<p><strong>Esimerkki</strong></p>
+<p>Aihetta koskeva esimerkki.</p>
+</div>
+
+</div>
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>Toim. Huom. värit eivät täysin alkuperäisten värien kanssa yhteneväisiä.<a href="kurssin-sisältö.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="luku10.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="alaluku102.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="osaamistavoitteet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="johdantoa-ja-johdattelua-tilastotieteeseen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
