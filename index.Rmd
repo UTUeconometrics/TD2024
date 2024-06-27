@@ -71,9 +71,9 @@ header-includes: |
   - pystyy erottamaan edustavan otoksen ja näytteen  
   - tuntee tilastotieteen keskeiset perustunnusluvut   
 
-  
+\
 
-- __Osa II__: Opintojakson suoritettuaan opiskelija on täydentänyt osassa I opittuja tilastotieteen perustietoja mm. seuraavilta osin:
+- __Osa II__: Opintojakson suoritettuaan opiskelija on täydentänyt osassa I opittuja tilastotieteen perustietoja mm. seuraavilta osin
   - osaa hahmottaa tilastotieteen roolin omana tieteenalana ja eri sovellusalueiden           yhteydessä
   - tunnistaa erilaiset tutkimusasetelmat ja aineistotyypit
   - ymmärtää otannan ja otantateorian perusteet
