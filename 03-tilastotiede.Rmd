@@ -36,7 +36,7 @@ Konkreettinen tai hypoteettinen tutkimuskohteiden joukko, joka koostuu kaikista 
 - Populaation muodostavilta tilastoyksiköiltä tarkastellaan niiden ominaisuuksia, eli **tilastollisia muuttujia**. 
   - Edellisissä esimerkeissä nämä olisivat esim. äänestäjien tulot ja kuntien äänestysprosentti. 
   - Mielenkiinnon kohteena olevia tilastollisia muuttujia kutsutaan **tutkimusmuuttujiksi** (tulot ja kuntien äänestysprosentti) ja niiden lisäksi voidaan kerätä lisätietoa eli **taustamuuttujia** (näitä voisivat olla esimerkiksi asuinpaikka ja kunnan väkiluku).
-  - Tilastoyksiköiden tilastollisilla muuttujilla on tietty mahdollisten arvojen joukko, ja näillä arvoilla on jokin **jakauma** populaatiossa. 
+  - Tilastoyksiköiden tilastollisilla muuttujilla on tietty mahdollisten arvojen joukko, ja näillä arvoilla on jokin **jakauma** populaatiossa (ks. luku \@ref(#luku4)). 
     - Esimerkiksi tulot voivat määritelmästä riippuen saada minkä tahansa positiivisen arvon mutta äänestysprosentti on luonnollisesti rajattu nollan ja sadan prosentin väliin.
 
 ::: {.defblock .mikko data-latex="{}"}
@@ -66,8 +66,10 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
 **Tiivistettynä**: 
 
 - Populaatio koostuu tutkimuksen kohteena olevista tilastoyksiköistä.
-- Havaitaan tilastoyksiköistä tutkimuksen kannalta mielenkiintoisia tilastollisten muuttujien numeerisia arvoja.
+- Tilastoyksiköistä havaitaan/mitataan tutkimuksen kannalta mielenkiintoisia tilastollisten muuttujien numeerisia arvoja.
 - Nämä havainnot muodostavat havaintoaineiston, eli datan, jota voidaan käyttää tutkimuksessa ja tutkia **populaation ominaisuuksia**.
+
+\newpage
 
 ## Mitä tilastotiede on ja mitä se ei ole? {#alaluku32}
 
@@ -223,7 +225,7 @@ on nimensä mukaisesti teoreettisen tilastotieteen kehittämien menetelmien sove
 - Yleisesti ottaen eri tieteenaloilla kohdattavat menetelmäsuuntaukset voidaan jakaa kahteen luokkaan tutkimusaineistojen tyypin perusteella:
   - **Kvantitatiivinen** eli __määrällinen tutkimus__ on tutkimusta, jossa tutkimusongelma on muotoiltu tarkasti etukäteen ja tutkimuskysymyksiin vastataan käyttäen tilastollisia menetelmiä pyrkien **selittämään ja ennustamaan** tutkimuksen kohteena olevaa ilmiötä.
     - Täsmällisten ja laskennallisten tilastollisten menetelmien käyttäminen numeeriseen aineistoon on kvantitatiiviselle tutkimukselle ominaisin piirre.
-    - Perustuu yleensä satunnaisotokseen (kts. luvut \@ref(luku4), \@ref(luku5) ja \@ref(luku6)) ja tutkimusaineisto on tiivistetty numeeriseksi havaintomatriisiksi, jolle oleellinen vaatimus on sen totuudellisuus.
+    - Perustuu yleensä satunnaisotokseen (kts. luvut \@ref(luku4) ja \@ref(luku5)) ja tutkimusaineisto on tiivistetty numeeriseksi havaintomatriisiksi, jolle oleellinen vaatimus on sen totuudellisuus.
     - __Kritiikki__: määrällinen tutkimus on (paikoin) sokea tutkittavien ilmiöiden sellaiselle luonteelle, jota ei pystytä kvantifioimaan, eli muuntamaan numeeriseen muotoon. Näihin voidaan katsoa lukeutuvan mm. tunteet, merkitykset ja kokemukset, ellei tutkija keksi niiden numeeriselle mittaamiselle uskottavaa keinoa.  
   - **Kvalitatiivinen** eli __laadullinen tutkimus__ on tutkimusta, jossa tutkimuksen kohteena olevaa ilmiötä ja sen merkitystä sekä tarkoitusta pyritään **ymmärtämään** kokonaisvaltaisella tavalla.
     - Laadullisessa tutkimuksessa annetaan usein tilaa tutkimuksen kohteena olevien ilmiöiden ja/tai ihmisten näkökulmille, vaikuttimille, kokemuksille ja tuntemuksille. Tutkimusyksikköjen otanta on täten usein harkinnanvaraista.
@@ -268,7 +270,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
   - Ilman riittävää ymmärrystä tilastollisten menetelmien toimintaperiaatteista niiden soveltaja on vaarassa tehdä virhepäätelmiä! (ks. alaluku \@ref(alaluku35) tilastotieteen kritiikistä)
 
 - Mallit perustuvat todennäköisyyslaskentaan, ja niitä kutsutaan __tilastollisiksi malleiksi, stokastisiksi malleiksi tai todennäköisyysmalleiksi__.
-  - Tilastolliset mallit perustuvat laajalti niin kutsuttuun uskottavuusfunktioon. Se on malli, joka riippuu havaintoaineiston lisäksi yhdestä tai useammasta parametrista. (ks. tarkemmin luku \@ref(luku6))
+  - Tilastolliset mallit perustuvat laajalti niin kutsuttuun uskottavuusfunktioon. Se on malli, joka riippuu havaintoaineiston lisäksi yhdestä tai useammasta parametrista. (ks. tarkemmin luku \@ref(luku9))
   - Uskottavuusfunktion arvo kertoo kuinka todennäköisenä voidaan havaittua aineistoa pitää, mikäli sen oletetaan olevan peräisin vastaavasta mallista jollain parametriarvoilla.
   - Uskottavuuspäättelyn perusajatuksena on, että se tai ne parametriarvot, joilla uskottavuusfunktion arvo maksimoituu kuvaa aineiston generoinutta prosessia parhaiten.
   - Aineistoa koskevia hypoteeseja voidaan testata käyttäen uskottavuusfunktion maksimia vastaavaa tilastollista mallia!
@@ -287,7 +289,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
 - Eräs klassinen yksinkertainen todennäköisyyslaskennassa ja tilastotieteessä käytettävä esimerkki käsittelee kolikonheittoa. 
 - Kuvitellaan että olemme heittäneet kolikkoa 40 kertaa ja saatu kruuna 40/40 tapauksessa.
   - Kolikonheittoa seuranneet havainnot muodostavat nyt havaintoaineiston, jonka pohjalta voidaan perustellusti kysyä, että onko uskottavaa että kolikonheitto noudataa binomijakaumaa $\text{Bin}(40, 0.5)$?
-  - Toisin sanoen, kuinka uskottavana voidaan pitää sitä että kyseinen kolikkon on tavallinen, painottamaton kolikko?
+  - Toisin sanoen, kuinka uskottavana voidaan pitää sitä että kyseinen kolikko on tavallinen, painottamaton kolikko?
   
 :::
 
@@ -326,8 +328,8 @@ __"Yleismaailmallinen" kritiikki__
   - Esimerkiksi keskiarvo on ajoittain ongelmallinen tunnusluku, sillä lienee varsin selvää, että keskimääräistä ihmistä ei ole olemassa vaikka tilastotieteessä näitä tunnuslukuja usein lasketaankin. 
   
 ::: {.eblock .kimmo data-latex="{}"}
-**Esimerkki ("mahdoton" keskiarvo)**: 
-- Puhekielessä kuulee paikoin tilastotiedettä kritisoitavan nk. "Keskiarvo-Kimmon" avulla, eli kuvitteellisella ihmisellä, joka on 1,8 lapsen vanhempi ja 1,5 auton omistaja. 
+**Esimerkki ("mahdoton" keskiarvo)**:  
+- Puhekielessä kuulee paikoin tilastotiedettä kritisoitavan nk. "Keskiarvo-Kimmon" avulla, eli kuvitteellisella ihmisellä, joka on 1,8 lapsen vanhempi ja 1,5 auton omistaja.  
 - Lisäksi joskus kuulee tilastotieteilijöitä kritisoitavan lausumalla "_Jos toinen jalka on jääkylmässä vedessä ja toinen kiehuvassa vedessä, niin tilastotieteilijän mielestä ihmisellä on tällöin keskimäärin hyvä olla_"
 
 :::
@@ -335,7 +337,6 @@ __"Yleismaailmallinen" kritiikki__
 
 - **Korrelaatio** on **tunnusluku**, joka kuvaa kahden muuttujan välistä riippuvuutta (palaamme tähän tarkemmin luvussa \@ref(luku6)). Se ei kuitenkaan kuvaa millään tavoin **kausaalisuutta**, eli sitä kumpi aiheuttaa kumman, jos kumpikaan.^[Tyler Vigen on kerännyt [verkkosivuilleen (ks. linkki)](https://www.tylervigen.com/spurious-correlations) mitä moninaisimpia esimerkkejä kahdenvälisistä nk. _näennäisistä_ korrelaatioista.] 
     - Esimerkiksi "jäätelön syönti ja hukkumiskuolemat" -tapauksessa havainnollisesti todetaan jäätelönkulutuksen ja  hukkumiskuolemien lukumäärän korreloivan keskenään, mutta taustalla vaikuttava tekijä onkin lämmin kesä, joka vaikuttaa molempiin.
-    - Ylen jutussa [_"Jäätelö lisää hukkumiskuolemia – vai miten se menikään? Vältä nämä tilastojen tulkinnan kompastuskivet"_](https://yle.fi/aihe/artikkeli/2021/03/27/jaatelo-lisaa-hukkumiskuolemia-vai-miten-se-menikaan-valta-nama-tilastojen) on kuvattu useita esimerkkejä, jolla tilastoja voidaan esittää tai tulkita väärin - joskus jopa tahallisesti!
 - Vaikkei näiden esimerkkien oikeellisuutta ole syytä kiistää, niin tilastollisen tiedon arvioinnissa on kuitenkin syytä päästä syvemmälle. 
 
 \
@@ -394,7 +395,7 @@ __Tilastotieteen väärinkäyttö__
 
 - Tilastotiedettä on myös mahdollista käyttää väärin monin eri tavoin, joka edelleen altistaa koko tieteenalan (perusteettomalle) kritiikille! 
   - Tilastoja ja tilastotiedettä käytetään paljon väärin, mutta tämä on usein tahatonta (esim. puutteellisesta koulutuksesta johtuvaa).
-    - Joskus kuitenkin näkee tarkoituksellista tilastojen vääristelyä tai tahallista tilastollisten menetelmien väärinkäyttöä!
+    - Joskus kuitenkin näkee tarkoituksellista tilastojen vääristelyä tai tahallista tilastollisten menetelmien väärinkäyttöä! Ylen jutussa [_"Jäätelö lisää hukkumiskuolemia – vai miten se menikään? Vältä nämä tilastojen tulkinnan kompastuskivet"_](https://yle.fi/aihe/artikkeli/2021/03/27/jaatelo-lisaa-hukkumiskuolemia-vai-miten-se-menikaan-valta-nama-tilastojen) on kuvattu useita esimerkkejä, jolla tilastoja voidaan esittää tai tulkita väärin!
     - __Kansalaisten tiedelukutaidon__ ja tilastollisten menetelmien tuntemuksen merkitys on kasvanut viime vuosikymmeninä ja kasvanee jatkossa yhä, kun esimerkiksi erilaiset "vaihtoehtotieteet" ovat nousseet suositummiksi. 
     - Tilastotieteen ymmärrys auttaa itse kutakin tunnistamaan virheellisiä tai puutteellisin tiedoin tehtyjä päätelmiä ja täten helpottaa tietoyhteiskunnassa toimimista ja kriittistä ajattelua!
 
@@ -453,17 +454,17 @@ __Tilastotieteen väärinkäyttö__
 ## Luvun 3 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
 Tilastotieteen perustermejä:  
-- Populaatio  
-- Tilastoyksikkö ja tilastollinen muuttuja  
-- Havainto  
-- Havaintoaineisto eli data  
+  - Populaatio  
+  - Tilastoyksikkö ja tilastollinen muuttuja  
+  - Havainto  
+  - Havaintoaineisto eli data  
 
 Mitä tilastotiede on ja mitä se ei ole?  
-- Tilastotieteen suhde lähitieteisiin, kuten matematiikkaan, tietojenkäsittelytieteeseen ja datatieteeseen.  
+  - Tilastotieteen suhde lähitieteisiin, kuten matematiikkaan, tietojenkäsittelytieteeseen ja datatieteeseen.  
 
 Tilastotieteen osa-alueet  
-- Soveltava tilastotiede (ml. kvantitatiivinen ja kvalitatiivinen tutkimus)  
-- Teoreettinen tilastotiede (tilastollisen mallin ajatus ja merkitys)  
+  - Soveltava tilastotiede (ml. kvantitatiivinen ja kvalitatiivinen tutkimus)  
+  - Teoreettinen tilastotiede (tilastollisen mallin ajatus ja merkitys)  
 
 Tilastotieteen sovellusalat ja "rajatieteet" (ks. tarkemmin luentomoniste ja sieltä löytyvät linkit!)  
 

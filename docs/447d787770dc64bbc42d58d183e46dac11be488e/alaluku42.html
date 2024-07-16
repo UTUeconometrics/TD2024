@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4.2 Satunnaisuus ja todennäköisyydet | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4.2 Satunnaisuus ja todennäköisyydet | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -113,11 +113,10 @@
 <li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
 <li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
 <li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
-<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Tilastolliset tunnusluvut</a></li>
 <li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
-<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
 <li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
@@ -139,7 +138,10 @@
 <li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="part"><span><b>II Osa II</b></span></li>
-<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="luku7.html"><a href="luku7.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>7.0.1</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otantamenetelmät</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Otantamenetelmät</a>
@@ -259,12 +261,12 @@
 <ul>
 <li>Täten ne parametriarvot, joilla uskottavuusfunktion arvo maksimoituu, <em>kuvaavat aineiston generoimaa prosessia parhaiten</em>, annettuna malli- eli jakaumaoletus.</li>
 </ul></li>
-<li>Uskottavuusfunktioihin, tilastollisten mallien parametrien estimointiin tutustuaan tarkemmin kurssin seuraavan osan luvussa <a href="luku7.html#luku7">7</a>.</li>
+<li>Uskottavuusfunktioihin ja tilastollisten mallien parametrien estimointiin tutustuaan tarkemmin kurssin seuraavan osan luvussa <a href="luku7.html#luku7">7</a>.</li>
 </ul></li>
 <li><p>Tutkimuskysymyksen mukaisia hypoteeseja testataan tilastollisen mallin avulla: havaittu aineisto määrittää uskottavuusfunktion perusteella sellaiset hypoteesit, jotka jäävät joko voimaan tai tulevat hylätyiksi.</p></li>
 <li><p>Klassisessa tilastotieteessä hypoteesien testaus perustuu siis vain aineistoon eli tilastollinen päättely on induktiivista: aineiston avulla otosta koskeva päätelmä voidaan yleistää koskemaan perusjoukkoa.</p>
 <ul>
-<li>Toki kaikki päättely on alisteista tehdyille oletuksille koskien käytettävää tilastollista mallia.</li>
+<li>Kaikki päättely on toki alisteista tehdyille oletuksille koskien käytettävää tilastollista mallia.</li>
 </ul></li>
 </ul>
 <p><br />
@@ -281,7 +283,7 @@
 <li>Ajatusta ennakkokäsityksistä todennäköisyyksinä käytetään niin Bayesilaisen tilastotieteen kritiikkinä kuin puolustuksena.
 <ul>
 <li>Lopulta olemme kaikki Bayesilaisia: jokaisella on sisäisiä ennakkokäsityksiään, myös tutkijoilla! Nämä ennakkokäsitykset voivat perustua esimerkiksi aiempaan tutkittuun tietoon, mutta myös uskomuksiin.</li>
-<li>Prioritiedon hyödyntäminen tilastollisessa tutkimuksessa on usein perusteltua.</li>
+<li>Prioritiedon hyödyntäminen tilastollisessa tutkimuksessa on usein perusteltua, mutta prioritiedon käyttämistä voidaan pitää myös subjektiivisena ja täten ongelmallisena tulosten luotettavuuden kannalta.</li>
 <li>Bayesilaista tilastotiedettä tarkastellaan tarkemmin esimerkiksi kursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3577/6969">TILM3577 Bayes-päättely</a> sekä <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3601/21033">TILM3601 Bayes-laskenta</a>.</li>
 </ul></li>
 </ul>

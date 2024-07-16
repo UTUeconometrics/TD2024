@@ -1,3 +1,128 @@
 # (PART) Osa II {-}
 
 # Tilastolliset mallit ja jakaumat {#luku7}
+
+### Bernoulli-, binomi- ja Poisson-jakauma
+
+- __Bernoulli-jakauma__ on todennäköisyysjakauma, jossa satunnaismuuttujalla $Y$ on kaksi mahdollista tulosvaihtoehtoa $Y=1$ tai $Y=0$.
+  - Yleensä $Y=0$ tarkoittaa, että jokin tapahtuma ei tapahdu ja $Y=1$ että tapahtuu.
+  - Todennäköisyys tapahtumalle $Y=1$ on $\text{P}(Y=1)=p$ ja vastaavasti vastatodennäköisyys $\text{P}(Y=0)=1-p$.
+  - Bernoulli-jakaumaa merkitään $Y \thicksim B(p)$, jossa siis $0 < p < 1$.
+  - Bernoulli-jakauman pistetodennäköisyysfunktio on muotoa
+$$
+f(y; p) = \text{P}(Y=y) = p^y (1-p)^{(1-y)},
+$$
+jossa $y$ on sm:n $Y$ realisaatio (havaittu arvo) ja parametri $p$ on tuntematon (voidaan estimoida otoksen avulla, kuten myöhemmin tullaan näkemään).
+
+- Bernoulli-jakauman odotusarvo $\text{E}(Y)=p$ ja varianssi $\mathrm{Var}(Y)=p (1-p)$.
+
+\
+
+- __Binomijakauma__
+  - Olkoon $Y_1, \ldots, Y_n$ riippumattomia satunnaismuuttujia ja $Y_i \thicksim B(p), \, i=1,\ldots,n$.
+  - Jos $X = Y_1 + Y_2 + \ldots + Y_n$, niin  $X \thicksim \mathrm{Bin}(n,p)$. Ts. sm. $X$ noudattaa __binomijakaumaa__ parametrein $n$ ja $p$.
+  - Pistetodennäköisyysfunktio:
+
+$$
+\text{P}(X=k) = \binom nk p^k (1-p)^{(n-k)}.
+$$
+
+  - Jakauman odotusarvo $\text{E}(X)=np$ ja varianssi $\mathrm{Var}(X) = n p (1-p)$.
+  - Binomijakaumalla kyetään vastaamaan mm. kysymykseen millä todennäköisyydellä $n$:n kokoisessa otoksessa tapahtuu $k$ onnistumista. 
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876--1885**^[Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). _Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data._ Chapman & Hall/CRC.] 
+
+Vuosien 1876--1885 aikana Saksin osavaltiossa rekisteröitiin yli neljä miljoonaa syntynyttä lasta. Tällöin vanhempien tuli ilmoittaa lapsen sukupuoli (mies tai nainen) heidän syntymätodistuksessaan. Myöhemmässä tutkimuksessa tutkittiin tarkemmin 6115 perhettä, joissa asui 12 lasta ja tarkemmin miesten (poikien) lukumäärää näissä perheissä.
+
+Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 lapseen perheissä. Tarkasteltava jakauma esitetään vielä erikseen oheisessa kuviossa \@ref(fig:miestenlkm). 
+
+Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys $\text{P}(\mathrm{mies}) = p$ on $p=0.5$.
+:::
+
+\FloatBarrier
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(ggplot2)
+theme_set(theme_bw())
+miehet = c(0,1,2,3,4,5,6,7,8,9,10,11,12)
+perheet = c(3,24,104,286,670,1033,1343,1112,829,478,181,45,7)
+saks = rbind.data.frame(miehet, perheet)
+rownames(saks) = c("Miesten lkm", "Perheiden lkm")
+colnames(saks) = c(0:12)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+kable(saks, booktabs = TRUE) %>% 
+  kable_styling(font_size = 12, latex_options = "scale_down")
+```
+
+\FloatBarrier
+
+```{r miestenlkm, echo=FALSE, fig.cap="Miesten lukumäärä Saksin osavaltiossa 12:n lapsen perheissä.", fig.align='center', out.width = "750%"}
+knitr::include_graphics("images/Miesten_lkm.jpg")
+```
+
+\FloatBarrier
+
+__Poisson-jakauma__
+
+- Jos satunnaismuuttuja $Y$ on Poisson-jakautunut, merkitään $Y \thicksim P(\lambda)$, jossa parametri $\lambda > 0$ on Poisson-jakauman parametri, jota kutsutaan myös ajoittain intensiteettiparametriksi.
+- Poisson-jakaumaa voidaan käyttää tilanteissa, joissa sm. $Y$ on jokin lukumäärä ja sen pistetodennäköisyysfunktio on muotoa
+$$
+\text{P}(Y=k) = \frac{e^{-\lambda} \lambda^k}{k!}.
+$$
+
+- Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: $\text{E}(Y) = \mathrm{Var}(Y) = \lambda$.
+
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Poisson-jakauma**
+
+Tarkastellaan Englannin Valioliigakauden 1995--1996 otteluissa tehtyjä maalimääriä. Valioliiga (The F.A. Premier League) on korkein Englannin jalkapalloliigan sarjataso, jossa ensi kerran juuri kaudella 1995-1996 20 joukkuetta (aiemmin Valioliigan perustamisen kauden 1992--1993 alussa 22 joukkuetta) pelasivat keskenään kerran toisiaan vastaan koti- ja vieraskentällä. Otteluita oli siis yhteensä 380.
+
+Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin^[Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? _Chance_ 10(1), 15-19.], jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme "keskimääräisen" kotijoukkueen ja vierasjoukkueen "edustavaa" ottelua.
+
+Seuraava taulukko raportoi tehtyjen maalimäärien jakaumat pelatuissa 380 ottelussa. Neljän tai yli neljän maalin tapaukset kirjataan 4+:nä maalina. Ts. esim. kys. kauden lopputulokset _Blackburn Rovers_ - _Nottingham Forest_ 7-0 ja _Bolton Wanderers_ - _Manchester United_ 0-6 tulevat aineistoon tuloksina 4+ vs. 0 ja 0 vs. 4+.
+:::
+```{r, echo = FALSE}
+rivi1 = c(27,29,10,8,2,76)
+rivi2 = c(59,53,14,12,4,142)
+rivi3 = c(28,32,14,12,4,90)
+rivi4 = c(19,14,7,4,1,45)
+rivi5 = c(7,8,10,2,0,27)
+rivi6 = c(140,136,55,38,11,380)
+
+taulukko = rbind.data.frame(rivi1,rivi2,rivi3,rivi4,rivi5,rivi6)
+rownames(taulukko) = c("0", "1", "2", "3", "4+", "Yht.")
+colnames(taulukko) = c("0", "1", "2", "3", "4+", "Yht.")
+
+kable(taulukko, booktabs = TRUE) %>%
+  add_header_above(c("Kotij. maalien lkm." = 1, "Vierasj. maalien lkm." = 5, "Yht." = 1)) 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki (jatkuu): Poisson-jakauma**
+
+Olettamalla, että koti- ja vierasjoukkueen todennäköisyys tehdä maali ottelun aikana on vakio, niin tällöin koti- ja vierasjoukkueen ottelun aikana tekemien maalien lukumäärää (ilman edellä käytettyä maalimäärien "katkaisua" neljään) voidaan melko hyvin approksimoida oletuksella, että nämä lukumäärät ovat Poisson-jakautuneita. Ts. $Y^H_i \thicksim P(\lambda_H)$ on sm., joka kuvaa $i$:n ottelun kotijoukkueen tekemien maalien lukumäärää ja intensiteettiparametrin $\lambda_H$ arvon määrittäminen kuuluu tilastollisen päättelyn ja erityisesti estimointiteorian piiriin. Vastaavasti vierasjoukkueen maalimäärät: $Y^A_i \thicksim P(\lambda_A)$. 
+
+Osoittautuu, että parametreille $\lambda_H$ ja $\lambda_A$ saatavat estimaatit ovat $\lambda_H = 1.49$ ja $\lambda_A = 1.06$ ja ne vastaavat tässä yksinkertaistetussa tilanteessa koti- ja vierasjoukkueen keskimääräisiä maalimääriä:
+:::
+
+\FloatBarrier
+
+```{r, echo = FALSE}
+ka = c("1.486","1.063","2.550")
+va = c("1.316","1.172","2.618")
+taulukko = rbind.data.frame(ka, va)
+rownames(taulukko) = c("Keskiarvo", "Varianssi")
+colnames(taulukko) = c("Kotijoukkue (home)", "Vierasjoukkue (away)", "Yht.")
+
+kable(taulukko, booktabs = TRUE) 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
+
+On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
+:::

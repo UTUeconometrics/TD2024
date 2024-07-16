@@ -1,4 +1,10 @@
 # Otantamenetelmät {#luku8}
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+```
+
 
 ## Otantamenetelmät {#alaluku81}
 

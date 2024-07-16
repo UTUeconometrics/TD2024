@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3.4 Tilastotieteen osa-alueet | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3.4 Tilastotieteen osa-alueet | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -113,11 +113,10 @@
 <li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
 <li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
 <li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
-<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Tilastolliset tunnusluvut</a></li>
 <li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
-<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
 <li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
@@ -139,7 +138,10 @@
 <li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="part"><span><b>II Osa II</b></span></li>
-<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="luku7.html"><a href="luku7.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>7.0.1</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otantamenetelmät</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Otantamenetelmät</a>
@@ -247,7 +249,7 @@
 <li><strong>Kvantitatiivinen</strong> eli <strong>määrällinen tutkimus</strong> on tutkimusta, jossa tutkimusongelma on muotoiltu tarkasti etukäteen ja tutkimuskysymyksiin vastataan käyttäen tilastollisia menetelmiä pyrkien <strong>selittämään ja ennustamaan</strong> tutkimuksen kohteena olevaa ilmiötä.
 <ul>
 <li>Täsmällisten ja laskennallisten tilastollisten menetelmien käyttäminen numeeriseen aineistoon on kvantitatiiviselle tutkimukselle ominaisin piirre.</li>
-<li>Perustuu yleensä satunnaisotokseen (kts. luvut <a href="luku4.html#luku4">4</a>, <a href="luku5.html#luku5">5</a> ja <a href="luku6.html#luku6">6</a>) ja tutkimusaineisto on tiivistetty numeeriseksi havaintomatriisiksi, jolle oleellinen vaatimus on sen totuudellisuus.</li>
+<li>Perustuu yleensä satunnaisotokseen (kts. luvut <a href="luku4.html#luku4">4</a> ja <a href="luku5.html#luku5">5</a>) ja tutkimusaineisto on tiivistetty numeeriseksi havaintomatriisiksi, jolle oleellinen vaatimus on sen totuudellisuus.</li>
 <li><strong>Kritiikki</strong>: määrällinen tutkimus on (paikoin) sokea tutkittavien ilmiöiden sellaiselle luonteelle, jota ei pystytä kvantifioimaan, eli muuntamaan numeeriseen muotoon. Näihin voidaan katsoa lukeutuvan mm. tunteet, merkitykset ja kokemukset, ellei tutkija keksi niiden numeeriselle mittaamiselle uskottavaa keinoa.<br />
 </li>
 </ul></li>
@@ -303,7 +305,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
 </ul></li>
 <li>Mallit perustuvat todennäköisyyslaskentaan, ja niitä kutsutaan <strong>tilastollisiksi malleiksi, stokastisiksi malleiksi tai todennäköisyysmalleiksi</strong>.
 <ul>
-<li>Tilastolliset mallit perustuvat laajalti niin kutsuttuun uskottavuusfunktioon. Se on malli, joka riippuu havaintoaineiston lisäksi yhdestä tai useammasta parametrista. (ks. tarkemmin luku <a href="luku6.html#luku6">6</a>)</li>
+<li>Tilastolliset mallit perustuvat laajalti niin kutsuttuun uskottavuusfunktioon. Se on malli, joka riippuu havaintoaineiston lisäksi yhdestä tai useammasta parametrista. (ks. tarkemmin luku <a href="luku9.html#luku9">9</a>)</li>
 <li>Uskottavuusfunktion arvo kertoo kuinka todennäköisenä voidaan havaittua aineistoa pitää, mikäli sen oletetaan olevan peräisin vastaavasta mallista jollain parametriarvoilla.</li>
 <li>Uskottavuuspäättelyn perusajatuksena on, että se tai ne parametriarvot, joilla uskottavuusfunktion arvo maksimoituu kuvaa aineiston generoinutta prosessia parhaiten.</li>
 <li>Aineistoa koskevia hypoteeseja voidaan testata käyttäen uskottavuusfunktion maksimia vastaavaa tilastollista mallia!</li>
@@ -327,7 +329,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
 <li>Kuvitellaan että olemme heittäneet kolikkoa 40 kertaa ja saatu kruuna 40/40 tapauksessa.
 <ul>
 <li>Kolikonheittoa seuranneet havainnot muodostavat nyt havaintoaineiston, jonka pohjalta voidaan perustellusti kysyä, että onko uskottavaa että kolikonheitto noudataa binomijakaumaa <span class="math inline">\(\text{Bin}(40, 0.5)\)</span>?</li>
-<li>Toisin sanoen, kuinka uskottavana voidaan pitää sitä että kyseinen kolikkon on tavallinen, painottamaton kolikko?</li>
+<li>Toisin sanoen, kuinka uskottavana voidaan pitää sitä että kyseinen kolikko on tavallinen, painottamaton kolikko?</li>
 </ul></li>
 </ul>
 </div>

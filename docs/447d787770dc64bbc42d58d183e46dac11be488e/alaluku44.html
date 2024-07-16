@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.4 Odotusarvo ja varianssi | TILM3701 - Tilastotiede ja data 2024</title>
+  <title>4.4 Tilastolliset tunnusluvut | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.4 Odotusarvo ja varianssi | TILM3701 - Tilastotiede ja data 2024" />
+  <meta property="og:title" content="4.4 Tilastolliset tunnusluvut | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.4 Odotusarvo ja varianssi | TILM3701 - Tilastotiede ja data 2024" />
+  <meta name="twitter:title" content="4.4 Tilastolliset tunnusluvut | TILM3701 - Tilastotiede ja data 2024" />
   
   <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
   
@@ -113,11 +113,10 @@
 <li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
 <li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
 <li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
-<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Tilastolliset tunnusluvut</a></li>
 <li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
-<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
 <li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
@@ -139,7 +138,10 @@
 <li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="part"><span><b>II Osa II</b></span></li>
-<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="luku7.html"><a href="luku7.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>7.0.1</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otantamenetelmät</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Otantamenetelmät</a>
@@ -227,7 +229,7 @@
 
             <section class="normal" id="section-">
 <div id="alaluku44" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Odotusarvo ja varianssi<a href="alaluku44.html#alaluku44" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">4.4</span> Tilastolliset tunnusluvut<a href="alaluku44.html#alaluku44" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Satunnaismuuttujan todennäköisyysjakauman tietoa voidaan tiivistää tunnuslukuihin, joista keskeisimpiä ovat <strong>odotusarvo</strong>, <strong>varianssi</strong> ja <strong>keskihajonta</strong>.</li>
 </ul>
@@ -240,7 +242,6 @@
 <li>Merkinnän <span class="math inline">\(\text{E}(Y)\)</span> käyttö juontaa juurensa englannin kielen sanoihin “odotus”, expectation, ja “odotusarvo”, expected value.</li>
 </ul>
 </div>
-<div style="page-break-after: always;"></div>
 <div class="eblock kimmo">
 <p><strong>Esimerkki: Odotusarvo</strong></p>
 <p>Perinteikäs esimerkki odotusarvosta on tavallisen kuusitahoisen nopan silmäluvun odotusarvo. Nopanheitto on diskreetti satunnaisilmiö ja tavallisen painottamattoman nopan tapauksessa jokaisen silmäluvun todennäköisyys on yhtä suuri. Merkitään nopan silmälukua (sm) <span class="math inline">\(Y\)</span> ja sen realisaatiota <span class="math inline">\(y\)</span>. Nopan silmäluvun realisaatioiden mahdolliset arvot ovat <span class="math inline">\(Y = \{1,2,3,4,5,6\}\)</span> ja niiden todennäköisyydet ovat <span class="math inline">\(P(Y=y) = \frac{1}{6}\)</span>.</p>

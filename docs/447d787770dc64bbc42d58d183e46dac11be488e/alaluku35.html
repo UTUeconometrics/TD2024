@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3.5 Tilastotieteeseen kohdistunutta kritiikkiä | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3.5 Tilastotieteeseen kohdistunutta kritiikkiä | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -113,11 +113,10 @@
 <li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
 <li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisuus ja todennäköisyydet</a></li>
 <li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset mallit, jakaumat ja parametrit</a></li>
-<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Odotusarvo ja varianssi</a></li>
+<li class="chapter" data-level="4.4" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.4</b> Tilastolliset tunnusluvut</a></li>
 <li class="chapter" data-level="4.5" data-path="alaluku45.html"><a href="alaluku45.html"><i class="fa fa-check"></i><b>4.5</b> Joitain jakaumia</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="alaluku45.html"><a href="alaluku45.html#normaalijakauma"><i class="fa fa-check"></i><b>4.5.1</b> Normaalijakauma</a></li>
-<li class="chapter" data-level="4.5.2" data-path="alaluku45.html"><a href="alaluku45.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>4.5.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.6</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
 <li class="chapter" data-level="4.7" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.7</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
@@ -139,7 +138,10 @@
 <li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="part"><span><b>II Osa II</b></span></li>
-<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a></li>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Tilastolliset mallit ja jakaumat</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="luku7.html"><a href="luku7.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>7.0.1</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otantamenetelmät</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Otantamenetelmät</a>
@@ -249,15 +251,14 @@
 </ul></li>
 </ul>
 <div class="eblock kimmo">
-<p><strong>Esimerkki (“mahdoton” keskiarvo)</strong>:
-- Puhekielessä kuulee paikoin tilastotiedettä kritisoitavan nk. “Keskiarvo-Kimmon” avulla, eli kuvitteellisella ihmisellä, joka on 1,8 lapsen vanhempi ja 1,5 auton omistaja.
+<p><strong>Esimerkki (“mahdoton” keskiarvo)</strong>:<br />
+- Puhekielessä kuulee paikoin tilastotiedettä kritisoitavan nk. “Keskiarvo-Kimmon” avulla, eli kuvitteellisella ihmisellä, joka on 1,8 lapsen vanhempi ja 1,5 auton omistaja.<br />
 - Lisäksi joskus kuulee tilastotieteilijöitä kritisoitavan lausumalla “<em>Jos toinen jalka on jääkylmässä vedessä ja toinen kiehuvassa vedessä, niin tilastotieteilijän mielestä ihmisellä on tällöin keskimäärin hyvä olla</em>”</p>
 </div>
 <ul>
 <li><strong>Korrelaatio</strong> on <strong>tunnusluku</strong>, joka kuvaa kahden muuttujan välistä riippuvuutta (palaamme tähän tarkemmin luvussa <a href="luku6.html#luku6">6</a>). Se ei kuitenkaan kuvaa millään tavoin <strong>kausaalisuutta</strong>, eli sitä kumpi aiheuttaa kumman, jos kumpikaan.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>
 <ul>
 <li>Esimerkiksi “jäätelön syönti ja hukkumiskuolemat” -tapauksessa havainnollisesti todetaan jäätelönkulutuksen ja hukkumiskuolemien lukumäärän korreloivan keskenään, mutta taustalla vaikuttava tekijä onkin lämmin kesä, joka vaikuttaa molempiin.</li>
-<li>Ylen jutussa <a href="https://yle.fi/aihe/artikkeli/2021/03/27/jaatelo-lisaa-hukkumiskuolemia-vai-miten-se-menikaan-valta-nama-tilastojen"><em>“Jäätelö lisää hukkumiskuolemia – vai miten se menikään? Vältä nämä tilastojen tulkinnan kompastuskivet”</em></a> on kuvattu useita esimerkkejä, jolla tilastoja voidaan esittää tai tulkita väärin - joskus jopa tahallisesti!</li>
 </ul></li>
 <li>Vaikkei näiden esimerkkien oikeellisuutta ole syytä kiistää, niin tilastollisen tiedon arvioinnissa on kuitenkin syytä päästä syvemmälle.</li>
 </ul>
@@ -340,7 +341,7 @@
 <ul>
 <li>Tilastoja ja tilastotiedettä käytetään paljon väärin, mutta tämä on usein tahatonta (esim. puutteellisesta koulutuksesta johtuvaa).
 <ul>
-<li>Joskus kuitenkin näkee tarkoituksellista tilastojen vääristelyä tai tahallista tilastollisten menetelmien väärinkäyttöä!</li>
+<li>Joskus kuitenkin näkee tarkoituksellista tilastojen vääristelyä tai tahallista tilastollisten menetelmien väärinkäyttöä! Ylen jutussa <a href="https://yle.fi/aihe/artikkeli/2021/03/27/jaatelo-lisaa-hukkumiskuolemia-vai-miten-se-menikaan-valta-nama-tilastojen"><em>“Jäätelö lisää hukkumiskuolemia – vai miten se menikään? Vältä nämä tilastojen tulkinnan kompastuskivet”</em></a> on kuvattu useita esimerkkejä, jolla tilastoja voidaan esittää tai tulkita väärin!</li>
 <li><strong>Kansalaisten tiedelukutaidon</strong> ja tilastollisten menetelmien tuntemuksen merkitys on kasvanut viime vuosikymmeninä ja kasvanee jatkossa yhä, kun esimerkiksi erilaiset “vaihtoehtotieteet” ovat nousseet suositummiksi.</li>
 <li>Tilastotieteen ymmärrys auttaa itse kutakin tunnistamaan virheellisiä tai puutteellisin tiedoin tehtyjä päätelmiä ja täten helpottaa tietoyhteiskunnassa toimimista ja kriittistä ajattelua!</li>
 </ul></li>

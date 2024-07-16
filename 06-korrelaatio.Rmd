@@ -282,6 +282,9 @@ Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston
 \FloatBarrier
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
 A = c("A", 825,62,108, 82)
 B = c("B", 560,63,25, 68)
 C = c("C", 325, 37,593,34)
