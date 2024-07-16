@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.21)  27 JUN 2024 12:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.21)  16 JUL 2024 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1336,15 +1336,18 @@ Overfull \hbox (12.82336pt too wide) has occurred while \output is active
 
 [19] [20]
 Luku 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 578--580
+Underfull \hbox (badness 10000) in paragraph at lines 586--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--611
+Underfull \hbox (badness 10000) in paragraph at lines 617--619
 
  []
 
@@ -1354,34 +1357,31 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 640--642
+Underfull \hbox (badness 10000) in paragraph at lines 648--650
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
+Underfull \hbox (badness 10000) in paragraph at lines 698--699
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 724--726
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 724--726
-
- []
-
-
-Underfull \vbox (badness 2253) has occurred while \output is active []
 
 
 Overfull \hbox (49.88225pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 24 \TU/lmr/m/sl/10 LUKU 2.  TIETEELLINEN TIETO, TILASTOT JA ARKITIETO YHTEISKUNNASSA
  []
 
-[24] [25]
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 732--734
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 732--734
+
+ []
+
+[25]
 File: images/Arkitieto-tieteellinentieto.jpg Graphic file (type bmp)
 <images/Arkitieto-tieteellinentieto.jpg>
 
@@ -1390,12 +1390,7 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
  []
 
 [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 891--893
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 891--893
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
 
  []
 
@@ -1405,21 +1400,21 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 927--930
+Underfull \hbox (badness 10000) in paragraph at lines 934--937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--947
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 956--958
+Underfull \hbox (badness 10000) in paragraph at lines 952--954
 
  []
 
 [29]
+Underfull \hbox (badness 10000) in paragraph at lines 963--965
+
+ []
+
+
 Overfull \hbox (49.88225pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 30 \TU/lmr/m/sl/10 LUKU 2.  TIETEELLINEN TIETO, TILASTOT JA ARKITIETO YHTEISKUNNASSA
  []
@@ -1427,13 +1422,13 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
 [30]
 File: images/Are-women-really-more-talkative.jpg Graphic file (type bmp)
 <images/Are-women-really-more-talkative.jpg>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1055
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1062
 
  []
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1076
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1083
 
  []
 
@@ -1443,34 +1438,32 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1155--1157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1157--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1164
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1164--1166
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (49.88225pt too wide) has occurred while \output is active
@@ -1478,8 +1471,8 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
  []
 
 [34]
-Overfull \hbox (30.19225pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 2.6.  LUVUN 2 YHTEENVETO, KESKEISIÄ TERMEJÄ JA KOKONAISUUKSIA. \TU/lmr/m/n/10 35
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+
  []
 
 [35]
@@ -1487,57 +1480,57 @@ Overfull \hbox (49.88225pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 LUKU 2.  TIETEELLINEN TIETO, TILASTOT JA ARKITIETO YHTEISKUNNASSA
  []
 
-[36
-
-]
+[36]
 Luku 3.
-[37] [38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1427
+[37
+
+] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 1433--1434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1430--1431
+Underfull \hbox (badness 10000) in paragraph at lines 1437--1438
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1458
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1465--1467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1474--1475
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1482
 
  []
 
 [41]
-Underfull \hbox (badness 2261) in paragraph at lines 1500--1501
+Underfull \hbox (badness 2261) in paragraph at lines 1507--1508
 \TU/lmr/m/n/10 tietojenkäsittelyn rooli tilastollisissa analyyseissä on jatkuvasti
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1518--1520
+Underfull \hbox (badness 10000) in paragraph at lines 1525--1527
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1518--1520
+Underfull \hbox (badness 10000) in paragraph at lines 1525--1527
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1569--1571
+Underfull \hbox (badness 10000) in paragraph at lines 1576--1578
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1569--1571
+Underfull \hbox (badness 10000) in paragraph at lines 1576--1578
 
  []
 
@@ -1545,59 +1538,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 1569--1571
 File: images/data_science.jpg Graphic file (type bmp)
 <images/data_science.jpg>
 [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1658--1660
+Underfull \hbox (badness 10000) in paragraph at lines 1665--1667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1658--1660
+Underfull \hbox (badness 10000) in paragraph at lines 1665--1667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1681--1683
+Underfull \hbox (badness 10000) in paragraph at lines 1688--1690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1681--1683
+Underfull \hbox (badness 10000) in paragraph at lines 1688--1690
 
  []
 
 [46]
-Underfull \hbox (badness 2189) in paragraph at lines 1717--1718
+Underfull \hbox (badness 2189) in paragraph at lines 1724--1725
 []\TU/lmr/m/n/10 Tästä huolimatta datatieteilijöiden käyttämät mallinnusme-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1717--1718
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 
  []
 
 File: images/datarevolution.jpg Graphic file (type bmp)
 <images/datarevolution.jpg>
 [47] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1796--1797
+Underfull \hbox (badness 10000) in paragraph at lines 1803--1804
 
  []
 
 [49]
-Underfull \hbox (badness 1675) in paragraph at lines 1806--1808
+Underfull \hbox (badness 1675) in paragraph at lines 1813--1815
 \TU/lmr/m/n/10 kimuksen edetessä ja sille tyypillistä on hypoteesittomuus,
  []
 
 
-Underfull \hbox (badness 3323) in paragraph at lines 1806--1808
+Underfull \hbox (badness 3323) in paragraph at lines 1813--1815
 \TU/lmr/m/n/10 eli tutkimus on tarkoitus aloittaa mahdollisimman vähin
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1819--1821
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1828
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1819--1821
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1828
 
  []
 
@@ -1605,12 +1598,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1819--1821
 File: images/soveltava.jpg Graphic file (type bmp)
 <images/soveltava.jpg>
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 1904--1906
+Underfull \hbox (badness 10000) in paragraph at lines 1911--1913
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1904--1906
+Underfull \hbox (badness 10000) in paragraph at lines 1911--1913
 
  []
 
@@ -1618,179 +1611,180 @@ Underfull \hbox (badness 10000) in paragraph at lines 1904--1906
 File: images/perustuu.jpg Graphic file (type bmp)
 <images/perustuu.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1952--1954
+Underfull \hbox (badness 10000) in paragraph at lines 1959--1961
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1952--1954
+Underfull \hbox (badness 10000) in paragraph at lines 1959--1961
 
  []
 
 
-Overfull \hbox (0.20998pt too wide) in paragraph at lines 1963--1964
+Overfull \hbox (0.20998pt too wide) in paragraph at lines 1970--1971
 \TU/lmr/m/n/10 villa) kursseilla [][]TILM3553 Todennäköisyyslaskennan peruskurssi pää-
  []
 
+[53]
 File: images/teoreettinen.jpg Graphic file (type bmp)
 <images/teoreettinen.jpg>
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 1995--1997
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1995--1997
-
- []
-
 [54]
-Underfull \hbox (badness 10000) in paragraph at lines 2030--2032
+Underfull \hbox (badness 10000) in paragraph at lines 2008--2010
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2030--2032
+Underfull \hbox (badness 10000) in paragraph at lines 2008--2010
 
  []
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 2079--2081
+Underfull \hbox (badness 10000) in paragraph at lines 2048--2050
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2079--2081
-
- []
-
-
-Underfull \hbox (badness 3514) in paragraph at lines 2099--2100
-[]\TU/lmr/m/n/10 Tämä kysymys on kuitenkin pitkälti tieteenfilosofinen ja
- []
-
-
-Underfull \hbox (badness 2486) in paragraph at lines 2099--2100
-\TU/lmr/m/n/10 palautuu lopulta sovellusalaan sekä tutkimusongelmaan ja
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2099--2100
+Underfull \hbox (badness 10000) in paragraph at lines 2048--2050
 
  []
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 2126--2128
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2099
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2126--2128
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2099
+
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 2117--2118
+[]\TU/lmr/m/n/10 Tämä kysymys on kuitenkin pitkälti tieteenfilosofinen ja
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 2117--2118
+\TU/lmr/m/n/10 palautuu lopulta sovellusalaan sekä tutkimusongelmaan ja
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2118
 
  []
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 2221--2222
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2146
 
  []
 
-[58] [59]
-Underfull \hbox (badness 1436) in paragraph at lines 2269--2270
+
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2146
+
+ []
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2240
+
+ []
+
+[59] [60]
+Underfull \hbox (badness 1436) in paragraph at lines 2287--2288
 []\TU/lmr/m/n/10 Sovellusaloja, joilla tilastotieteen soveltaminen on muodostunut
  []
 
-[60]
+
 Overfull \hbox (30.19225pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 3.7.  LUVUN 3 YHTEENVETO, KESKEISIÄ TERMEJÄ JA KOKONAISUUKSIA. \TU/lmr/m/n/10 61
  []
 
-[61] [62
-
-]
+[61] [62]
 Luku 4.
 File: images/im_so_random.jpg Graphic file (type bmp)
 <images/im_so_random.jpg>
-[63] [64]
+[63
+
+] [64]
 Overfull \hbox (26.56335pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 4.1.  SATUNNAISILMIÖT JA SATUNNAISMUUTTUJAT TILASTOTIETEESSÄ \TU/lmr/m/n/10 65
  []
 
 [65]
-Underfull \hbox (badness 10000) in paragraph at lines 2474--2475
+Underfull \hbox (badness 10000) in paragraph at lines 2494--2495
 
  []
 
 [66] [67]
-Underfull \hbox (badness 10000) in paragraph at lines 2580--2581
+Underfull \hbox (badness 10000) in paragraph at lines 2600--2601
 
  []
 
 [68]
-Underfull \hbox (badness 10000) in paragraph at lines 2619--2620
+Underfull \hbox (badness 10000) in paragraph at lines 2639--2640
 
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 2628--2629
+Underfull \hbox (badness 6944) in paragraph at lines 2648--2649
 []\TU/lmr/m/n/10 Bayesilainen tilastotiede ulottaa todennäköisyyskäsityksen, eli tn-
  []
 
 [69]
-Underfull \hbox (badness 1917) in paragraph at lines 2674--2675
+Underfull \hbox (badness 1917) in paragraph at lines 2694--2695
 []\TU/lmr/m/n/10 Vastaavasti esimerkiksi potilaan jonotusaika päivystyksessä voi
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 2682--2684
+Underfull \hbox (badness 1057) in paragraph at lines 2702--2704
 []\TU/lmr/bx/n/10 Diskreetin satunnaismuuttujan \TU/lmr/m/n/10 jakauma voidaan usein esit-
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 2682--2684
+Underfull \hbox (badness 2698) in paragraph at lines 2702--2704
 \TU/lmr/m/n/10 kyseisen satunnaismuuttujan todennäköisyysjakauman, \TU/lmr/bx/n/10 pisteto-
  []
 
 [70]
-Underfull \hbox (badness 1783) in paragraph at lines 2698--2699
+Underfull \hbox (badness 1783) in paragraph at lines 2718--2719
 []\TU/lmr/m/n/10 Kuviossa [][]4.2[][] on kuvattu Poisson-jakauman sovelluskohteita ja
  []
 
 File: images/poisson.jpg Graphic file (type bmp)
 <images/poisson.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2711--2712
+Underfull \hbox (badness 10000) in paragraph at lines 2731--2732
 
  []
 
 [71]
-Underfull \hbox (badness 1783) in paragraph at lines 2761--2762
+Underfull \hbox (badness 1783) in paragraph at lines 2781--2782
 \TU/lmr/m/n/10 tunnuslukuihin, joista keskeisimpiä ovat \TU/lmr/bx/n/10 odotusarvo\TU/lmr/m/n/10 , \TU/lmr/bx/n/10 varianssi \TU/lmr/m/n/10 ja
  []
 
 [72]
-Underfull \hbox (badness 10000) in paragraph at lines 2793--2794
+Underfull \hbox (badness 10000) in paragraph at lines 2813--2814
 
  []
 
 [73]
-Underfull \hbox (badness 2285) in paragraph at lines 2840--2842
+Underfull \hbox (badness 2285) in paragraph at lines 2860--2862
 []\TU/lmr/m/n/10 Jos satunnaismuuttuja $[]$ noudattaa \TU/lmr/bx/n/10 normaalijakaumaa \TU/lmr/m/n/10 odotusar-
  []
 
 File: TD2024_files/figure-latex/normaalijakauma-1.pdf Graphic file (type pdf)
 <use TD2024_files/figure-latex/normaalijakauma-1.pdf>
 [74]
-Underfull \hbox (badness 10000) in paragraph at lines 2901--2902
+Underfull \hbox (badness 10000) in paragraph at lines 2921--2922
 
  []
 
 [75]
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2950--2951
 
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 2940--2942
+Underfull \hbox (badness 1735) in paragraph at lines 2960--2962
 []\TU/lmr/m/n/10 Olkoon $[][][] [] [] [][]$ riippumattomia satunnaismuuttujia ja $[][] \U/msb/m/n/10 s
  []
 
@@ -1798,7 +1792,7 @@ Underfull \hbox (badness 1735) in paragraph at lines 2940--2942
 File: images/Miesten_lkm.jpg Graphic file (type bmp)
 <images/Miesten_lkm.jpg>
 
-Underfull \hbox (badness 2050) in paragraph at lines 3012--3013
+Underfull \hbox (badness 2050) in paragraph at lines 3032--3033
 []\TU/lmr/m/n/10 Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat:
  []
 
@@ -1826,7 +1820,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/populaatiostahavaintoon.jpg Graphic file (type bmp)
 <images/populaatiostahavaintoon.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 3202--3204
+Underfull \hbox (badness 10000) in paragraph at lines 3222--3224
 
  []
 
@@ -1836,65 +1830,65 @@ Overfull \hbox (57.11224pt too wide) has occurred while \output is active
  []
 
 [84]
-Underfull \hbox (badness 10000) in paragraph at lines 3204--3206
+Underfull \hbox (badness 10000) in paragraph at lines 3224--3226
 
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 3206--3208
+Underfull \hbox (badness 1097) in paragraph at lines 3226--3228
 \TU/lmr/m/n/10 Kun aineistoa luokitellaan, aineiston luettavuus paranee mutta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3206--3208
+Underfull \hbox (badness 10000) in paragraph at lines 3226--3228
 
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 3208--3209
+Underfull \hbox (badness 3260) in paragraph at lines 3228--3229
 []\TU/lmr/m/n/10 Emme vielä tällä kurssilla käsittele tilastografiikan esittämis-
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 3208--3209
+Underfull \hbox (badness 1014) in paragraph at lines 3228--3229
 \TU/lmr/m/n/10 tä tarkemmin. Muun muassa tilastollisen päättelyn peruskurssi
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 3208--3209
+Underfull \hbox (badness 5077) in paragraph at lines 3228--3229
 \TU/lmr/m/n/10 (TILM3555) vastaa näihin kysymyksiin tarkemmin. Graafiset
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 3208--3209
+Underfull \hbox (badness 5756) in paragraph at lines 3228--3229
 \TU/lmr/m/n/10 havainnollistamista. Kuvat helpottavat aineiston tulkitsemista
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3212--3213
+Underfull \hbox (badness 10000) in paragraph at lines 3232--3233
 
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 3229--3231
+Underfull \hbox (badness 2012) in paragraph at lines 3249--3251
 []\TU/lmr/m/n/10 Esimerkiksi, jos tutkimuksella halutaan tietoa suomalaisen
  []
 
 
-Underfull \hbox (badness 4673) in paragraph at lines 3229--3231
+Underfull \hbox (badness 4673) in paragraph at lines 3249--3251
 \TU/lmr/m/n/10 aikuisväestön mielipiteistä, havaintoyksikköinä ovat aikuis-
  []
 
 [85]
-Underfull \hbox (badness 10000) in paragraph at lines 3244--3245
+Underfull \hbox (badness 10000) in paragraph at lines 3264--3265
 
  []
 
 
-LaTeX Warning: Reference `alaluku55' on page 86 undefined on input line 3274.
+LaTeX Warning: Reference `alaluku55' on page 86 undefined on input line 3294.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3284--3285
+Underfull \hbox (badness 10000) in paragraph at lines 3304--3305
 
  []
 
@@ -1904,7 +1898,7 @@ Overfull \hbox (57.11224pt too wide) has occurred while \output is active
  []
 
 [86]
-Underfull \hbox (badness 10000) in paragraph at lines 3302--3303
+Underfull \hbox (badness 10000) in paragraph at lines 3322--3323
 
  []
 
@@ -1933,7 +1927,7 @@ Overfull \hbox (57.11224pt too wide) has occurred while \output is active
 File: images/luottamus.jpg Graphic file (type bmp)
 <images/luottamus.jpg>
 [93]
-Underfull \hbox (badness 10000) in paragraph at lines 3686--3687
+Underfull \hbox (badness 10000) in paragraph at lines 3706--3707
 
  []
 
@@ -1943,27 +1937,27 @@ Overfull \hbox (57.11224pt too wide) has occurred while \output is active
  []
 
 [94]
-Underfull \hbox (badness 10000) in paragraph at lines 3705--3706
+Underfull \hbox (badness 10000) in paragraph at lines 3725--3726
 []\TU/lmr/bx/n/10 Laatueroasteikko/luokitteluasteikko \TU/lmr/m/n/10 (nominaaliasteikko):
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 3734--3736
+Underfull \hbox (badness 1394) in paragraph at lines 3754--3756
 \TU/lmr/m/n/10 kien tai havaintoarvojen ero. Esimerkiksi: Lämpötilan mit-
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 3734--3736
+Underfull \hbox (badness 6775) in paragraph at lines 3754--3756
 \TU/lmr/m/n/10 taaminen esim. celcius-asteina. Pystymme numeroarvoina
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 3734--3736
+Underfull \hbox (badness 2302) in paragraph at lines 3754--3756
 \TU/lmr/m/n/10 ilmoittamaan onko tänään lämpimämpi, yhtä lämmin vai
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 3738--3740
+Underfull \hbox (badness 3568) in paragraph at lines 3758--3760
 \TU/lmr/m/n/10 valittavissa. Samoin voidaan valita käytettävä mittayksik-
  []
 
@@ -1992,47 +1986,47 @@ Luku 6.
 [101
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3973--3975
+Underfull \hbox (badness 10000) in paragraph at lines 3993--3995
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3975--3977
+Underfull \hbox (badness 10000) in paragraph at lines 3995--3997
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3977--3979
+Underfull \hbox (badness 10000) in paragraph at lines 3997--3999
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3979--3981
+Underfull \hbox (badness 10000) in paragraph at lines 3999--4001
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3981--3983
+Underfull \hbox (badness 10000) in paragraph at lines 4001--4003
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3988--3989
+Underfull \hbox (badness 10000) in paragraph at lines 4008--4009
 
  []
 
 [102]
-Underfull \hbox (badness 1237) in paragraph at lines 4037--4037
+Underfull \hbox (badness 1237) in paragraph at lines 4057--4057
 []\TU/lmr/bx/n/14.4 Kahden muuttujan havaintoaineiston ku-
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 4041--4043
+Underfull \hbox (badness 3189) in paragraph at lines 4061--4063
 []\TU/lmr/m/n/10 Kuten yhden muuttujan havaintoaineistojen tapauksessa, lähtökoh-
  []
 
 [103]
-Underfull \hbox (badness 10000) in paragraph at lines 4064--4065
+Underfull \hbox (badness 10000) in paragraph at lines 4084--4085
 
  []
 
@@ -2043,32 +2037,32 @@ File: images/Isien-poikien-pituudet-Mellin.jpg Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [105]
-Underfull \hbox (badness 10000) in paragraph at lines 4155--4156
+Underfull \hbox (badness 10000) in paragraph at lines 4175--4176
 
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 4169--4171
+Underfull \hbox (badness 1259) in paragraph at lines 4189--4191
 []\TU/lmr/m/n/10 Jälleen vastaavalla tavalla voidaan määritellä x-havaintoarvojen
  []
 
 [106]
-Underfull \hbox (badness 1259) in paragraph at lines 4183--4185
+Underfull \hbox (badness 1259) in paragraph at lines 4203--4205
 []\TU/lmr/m/n/10 Jälleen vastaavalla tavalla voidaan määritellä x-havaintoarvojen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4189--4190
+Underfull \hbox (badness 10000) in paragraph at lines 4209--4210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4228--4229
+Underfull \hbox (badness 10000) in paragraph at lines 4248--4249
 
  []
 
 [107]
-Underfull \hbox (badness 3260) in paragraph at lines 4273--4275
+Underfull \hbox (badness 3260) in paragraph at lines 4293--4295
 \TU/lmr/m/n/10 jossa $[][]$ on $[]$- ja $[]$-havaintoarvojen otoskovarianssi, $[][]$ on $[]$-
  []
 
@@ -2097,34 +2091,34 @@ Luku 7.
 Luku 8.
 [119] [120]
 
-LaTeX Warning: Reference `alaluku66' on page 121 undefined on input line 4611.
+LaTeX Warning: Reference `alaluku66' on page 121 undefined on input line 4631.
 
 [121]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4687.
+(amsmath)                 on input line 4707.
 
 [122] [123]
 Underfull \vbox (badness 1917) has occurred while \output is active []
 
 [124] [125]
-Overfull \hbox (55.04pt too wide) in paragraph at lines 4846--4847
+Overfull \hbox (55.04pt too wide) in paragraph at lines 4866--4867
 []\TU/lmr/m/n/10 Ryväsotannan voi suorittaa \TU/lmr/bx/n/10 yksi\TU/lmr/m/n/10 - tai \TU/lmr/bx/n/10 kaksivaiheisena \TU/lmr/m/n/10 (\TU/lmr/bx/n/10 yksiasteinen/kaksiasteinen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4856--4858
+Underfull \hbox (badness 10000) in paragraph at lines 4876--4878
 
  []
 
 [126] [127]
-Underfull \hbox (badness 10000) in paragraph at lines 4950--4952
+Underfull \hbox (badness 10000) in paragraph at lines 4970--4972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4950--4952
+Underfull \hbox (badness 10000) in paragraph at lines 4970--4972
 
  []
 
@@ -2136,22 +2130,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Luku 9.
 
-Underfull \hbox (badness 2253) in paragraph at lines 5032--5033
+Underfull \hbox (badness 2253) in paragraph at lines 5052--5053
 []\TU/lmr/m/n/10 Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 5032--5033
+Underfull \hbox (badness 3679) in paragraph at lines 5052--5053
 \TU/lmr/m/n/10 todennäköisyys- eli tiheysfunktion (tai pistetodennäköisyysfunktion)
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 5037--5039
+Underfull \hbox (badness 2875) in paragraph at lines 5057--5059
 []\TU/lmr/m/n/10 Merkitään satunnaismuuttujaa isolla kirjaimella, $[]$, ja satun-
  []
 
 [131]
-Underfull \hbox (badness 10000) in paragraph at lines 5054--5055
+Underfull \hbox (badness 10000) in paragraph at lines 5074--5075
 
  []
 
@@ -2161,7 +2155,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [132]
-Underfull \hbox (badness 1418) in paragraph at lines 5086--5087
+Underfull \hbox (badness 1418) in paragraph at lines 5106--5107
 \TU/lmr/m/n/10 ennustamisen ja viime vuosikymmeninä yleistyneen tilastollisen
  []
 
@@ -2176,7 +2170,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [134]
-Underfull \hbox (badness 10000) in paragraph at lines 5212--5213
+Underfull \hbox (badness 10000) in paragraph at lines 5232--5233
 
  []
 
@@ -2192,7 +2186,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [136]
-Underfull \hbox (badness 7081) in paragraph at lines 5278--5279
+Underfull \hbox (badness 7081) in paragraph at lines 5298--5299
 []\TU/lmr/m/n/10 Estimaattoreiden kehittäminen erilaisten tilastollisten mallien
  []
 
@@ -2202,7 +2196,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [138]
-Underfull \hbox (badness 10000) in paragraph at lines 5417--5418
+Underfull \hbox (badness 10000) in paragraph at lines 5437--5438
 
  []
 
@@ -2212,7 +2206,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [140] [141]
-Underfull \hbox (badness 10000) in paragraph at lines 5545--5546
+Underfull \hbox (badness 10000) in paragraph at lines 5565--5566
 []\TU/lmr/m/n/10 Suhteellisen frekvenssin otosjakauman perusteella kyllä-
  []
 
@@ -2230,12 +2224,12 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
 File: images/gaussian-distribution.jpg Graphic file (type bmp)
 <images/gaussian-distribution.jpg>
 
-Overfull \hbox (56.51125pt too wide) in paragraph at lines 5767--5768
+Overfull \hbox (56.51125pt too wide) in paragraph at lines 5787--5788
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5774--5775
+Underfull \hbox (badness 10000) in paragraph at lines 5794--5795
 
  []
 
@@ -2248,7 +2242,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
 File: images/NjaT-jakauma.jpg Graphic file (type bmp)
 <images/NjaT-jakauma.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5809--5810
+Underfull \hbox (badness 10000) in paragraph at lines 5829--5830
 
  []
 
@@ -2258,12 +2252,12 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [148]
-Underfull \hbox (badness 1436) in paragraph at lines 5826--5830
+Underfull \hbox (badness 1436) in paragraph at lines 5846--5850
 []\TU/lmr/m/n/10 Bernoulli-jakauman (vrt. binomijakauma) ominaisuuksien perusteella
  []
 
 [149]
-Underfull \hbox (badness 10000) in paragraph at lines 5905--5906
+Underfull \hbox (badness 10000) in paragraph at lines 5925--5926
 
  []
 
@@ -2273,7 +2267,7 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [150]
-Underfull \hbox (badness 10000) in paragraph at lines 5987--5988
+Underfull \hbox (badness 10000) in paragraph at lines 6007--6008
 
  []
 
@@ -2283,22 +2277,22 @@ Overfull \hbox (88.38228pt too wide) has occurred while \output is active
  []
 
 [152]
-Underfull \hbox (badness 10000) in paragraph at lines 6081--6082
-
- []
-
-[153]
 Underfull \hbox (badness 10000) in paragraph at lines 6101--6102
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 6125--6127
+[153]
+Underfull \hbox (badness 10000) in paragraph at lines 6121--6122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6125--6127
+Underfull \hbox (badness 10000) in paragraph at lines 6145--6147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6145--6147
 
  []
 
@@ -2322,49 +2316,49 @@ Luku 10.
 [157
 
 ]
-Underfull \hbox (badness 6575) in paragraph at lines 6275--6276
+Underfull \hbox (badness 6575) in paragraph at lines 6295--6296
 []\TU/lmr/m/n/10 Epälineaariset regressiomallit muodostavat oman tilastollisten
  []
 
 [158] [159]
-Underfull \hbox (badness 4391) in paragraph at lines 6431--6433
+Underfull \hbox (badness 4391) in paragraph at lines 6451--6453
 []\TU/lmr/m/n/10 Virhetermeillä on vakiovarianssi eli ne ovat homoskedastisia:
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 6444--6445
+Underfull \hbox (badness 1320) in paragraph at lines 6464--6465
 \TU/lmr/m/n/10 tässä vaiheessa), että selittävän muuttujan arvojen satunnaisuus ei
  []
 
 [160]
-Underfull \hbox (badness 10000) in paragraph at lines 6455--6456
+Underfull \hbox (badness 10000) in paragraph at lines 6475--6476
 
  []
 
 [161]
-Underfull \hbox (badness 10000) in paragraph at lines 6526--6527
+Underfull \hbox (badness 10000) in paragraph at lines 6546--6547
 
  []
 
 [162]
-Underfull \hbox (badness 10000) in paragraph at lines 6586--6587
+Underfull \hbox (badness 10000) in paragraph at lines 6606--6607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6628--6629
+Underfull \hbox (badness 10000) in paragraph at lines 6648--6649
 
  []
 
 [163]
-Underfull \hbox (badness 10000) in paragraph at lines 6648--6649
+Underfull \hbox (badness 10000) in paragraph at lines 6668--6669
 
  []
 
 File: images/Sovite-isien-poikien-pituudet-Mellin.jpg Graphic file (type bmp)
 <images/Sovite-isien-poikien-pituudet-Mellin.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 6672--6673
+Underfull \hbox (badness 10000) in paragraph at lines 6692--6693
 
  []
 
@@ -2386,7 +2380,7 @@ Overfull \hbox (15.86224pt too wide) has occurred while \output is active
  []
 
 [170]
-Underfull \hbox (badness 10000) in paragraph at lines 6829--6830
+Underfull \hbox (badness 10000) in paragraph at lines 6849--6850
 
  []
 
@@ -2396,7 +2390,7 @@ Overfull \hbox (15.86224pt too wide) has occurred while \output is active
  []
 
 [172] [173]
-Underfull \hbox (badness 10000) in paragraph at lines 7014--7015
+Underfull \hbox (badness 10000) in paragraph at lines 7034--7035
 
  []
 
@@ -2406,82 +2400,82 @@ Overfull \hbox (15.86224pt too wide) has occurred while \output is active
  []
 
 [174] [175]
-Underfull \hbox (badness 10000) in paragraph at lines 7105--7106
+Underfull \hbox (badness 10000) in paragraph at lines 7125--7126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7113--7114
+Underfull \hbox (badness 10000) in paragraph at lines 7133--7134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7122--7124
+Underfull \hbox (badness 10000) in paragraph at lines 7142--7144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7124--7126
+Underfull \hbox (badness 10000) in paragraph at lines 7144--7146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7131--7132
+Underfull \hbox (badness 10000) in paragraph at lines 7151--7152
 
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 7134--7136
+Underfull \hbox (badness 2608) in paragraph at lines 7154--7156
 \TU/lmr/m/n/10 mielessä: Jos arvontaa toistettaisiin, kokeesta saataisiin
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7134--7136
+Underfull \hbox (badness 10000) in paragraph at lines 7154--7156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7141--7143
+Underfull \hbox (badness 10000) in paragraph at lines 7161--7163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7143--7144
+Underfull \hbox (badness 10000) in paragraph at lines 7163--7164
 
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 7151--7153
+Underfull \hbox (badness 6559) in paragraph at lines 7171--7173
 \TU/lmr/m/n/10 satunnaisotantaa, kokeen tuloksiin sisältyvälle epä-
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 7151--7153
+Underfull \hbox (badness 2932) in paragraph at lines 7171--7173
 \TU/lmr/m/n/10 varmuudelle ja satunnaisuudelle voidaan muodostaa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7151--7153
+Underfull \hbox (badness 10000) in paragraph at lines 7171--7173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7153--7155
+Underfull \hbox (badness 10000) in paragraph at lines 7173--7175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7155--7156
+Underfull \hbox (badness 10000) in paragraph at lines 7175--7176
 []\TU/lmr/m/n/10 Kokeen suunnittelussa, toteutuksessa ja tulosten
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 7155--7156
+Underfull \hbox (badness 1831) in paragraph at lines 7175--7176
 \TU/lmr/m/n/10 analysoinnissa sovelletaan mm. seuraavia tilastollisia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7155--7156
+Underfull \hbox (badness 10000) in paragraph at lines 7175--7176
 
  []
 
@@ -2510,17 +2504,17 @@ Luku 12.
 File: images/tutkimusasetelma.jpg Graphic file (type bmp)
 <images/tutkimusasetelma.jpg>
 [179] [180]
-Underfull \hbox (badness 10000) in paragraph at lines 7242--7243
+Underfull \hbox (badness 10000) in paragraph at lines 7262--7263
 
  []
 
 
-Underfull \hbox (badness 2617) in paragraph at lines 7265--7267
+Underfull \hbox (badness 2617) in paragraph at lines 7285--7287
 []\TU/lmr/bx/n/10 Korrelaatiotutkimuksissa \TU/lmr/m/n/10 pyritään löytämään ilmiöiden väli-
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 7265--7267
+Underfull \hbox (badness 3281) in paragraph at lines 7285--7287
 \TU/lmr/m/n/10 siä yhteyksiä tutkimalla kohdejoukkoa kokonaisuutena, jolloin
  []
 
@@ -2528,27 +2522,27 @@ Underfull \hbox (badness 3281) in paragraph at lines 7265--7267
 File: images/co2.jpg Graphic file (type bmp)
 <images/co2.jpg>
 [182] [183]
-Underfull \hbox (badness 2237) in paragraph at lines 7403--7405
+Underfull \hbox (badness 2237) in paragraph at lines 7423--7425
 []\TU/lmr/m/n/10 Tällöin mahdolliset erot parantuneiden suhteellisissa
  []
 
 [184]
-Underfull \hbox (badness 10000) in paragraph at lines 7438--7439
+Underfull \hbox (badness 10000) in paragraph at lines 7458--7459
 
  []
 
 [185]
-Underfull \hbox (badness 1436) in paragraph at lines 7492--7493
+Underfull \hbox (badness 1436) in paragraph at lines 7512--7513
 []\TU/lmr/bx/n/10 Esimerkki: raskauden keskeytyksen ja rintasyövän välinen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7508--7509
+Underfull \hbox (badness 10000) in paragraph at lines 7528--7529
 
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 7530--7531
+Underfull \hbox (badness 1009) in paragraph at lines 7550--7551
 \TU/lmr/bx/n/10 strategiaan \TU/lmr/m/n/10 sen mukaan, miten niissä ryhmitellään tilastoyksiköitä:
  []
 
@@ -2556,7 +2550,7 @@ Underfull \hbox (badness 1009) in paragraph at lines 7530--7531
 File: images/cross.jpg Graphic file (type bmp)
 <images/cross.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7595--7596
+Underfull \hbox (badness 10000) in paragraph at lines 7615--7616
 
  []
 
@@ -2564,7 +2558,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7595--7596
 File: images/long.jpg Graphic file (type bmp)
 <images/long.jpg>
 [189]
-Underfull \hbox (badness 10000) in paragraph at lines 7675--7676
+Underfull \hbox (badness 10000) in paragraph at lines 7695--7696
 
  []
 
@@ -2572,7 +2566,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7675--7676
 File: images/hiroshima.jpg Graphic file (type bmp)
 <images/hiroshima.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7734--7735
+Underfull \hbox (badness 10000) in paragraph at lines 7754--7755
 
  []
 
@@ -2580,14 +2574,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 7734--7735
 File: images/tali.jpg Graphic file (type bmp)
 <images/tali.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 7799--7800
+Underfull \hbox (badness 10000) in paragraph at lines 7819--7820
 
  []
 
 File: images/block.jpg Graphic file (type bmp)
 <images/block.jpg>
 [194] [195] [196] [197]
-Underfull \hbox (badness 1292) in paragraph at lines 7985--7987
+Underfull \hbox (badness 1292) in paragraph at lines 8005--8007
 []\TU/lmr/m/n/10 Tieteellinen tutkimustarkoitus luokitellaan kuitenkin poikkeusta-
  []
 
@@ -2601,7 +2595,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/rekist.jpg Graphic file (type bmp)
 <images/rekist.jpg>
 [200] [201]
-Underfull \hbox (badness 1184) in paragraph at lines 8180--8181
+Underfull \hbox (badness 1184) in paragraph at lines 8200--8201
 \TU/lmr/m/n/10 kuussa eniten elintarvikkeiden, polttonesteiden ja viihde-
  []
 
@@ -2612,36 +2606,36 @@ File: images/kuluttaja.jpg Graphic file (type bmp)
 File: images/time.jpg Graphic file (type bmp)
 <images/time.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 8240--8241
+Underfull \hbox (badness 10000) in paragraph at lines 8260--8261
 
  []
 
 [204]
-Underfull \hbox (badness 2635) in paragraph at lines 8263--8264
+Underfull \hbox (badness 2635) in paragraph at lines 8283--8284
 \TU/lmr/m/n/10 kuukausittain tai vuosittain, ja yksittäisen ajanhetken
  []
 
 [205] [206]
 Luku 13.
 
-Underfull \hbox (badness 2119) in paragraph at lines 8372--8373
+Underfull \hbox (badness 2119) in paragraph at lines 8392--8393
 \TU/lmr/m/n/10 timotautikuolleisuuteen tai ylipainon vaikutus leikkauksen jälkeisiin
  []
 
 [207
 
 ] [208]
-Underfull \hbox (badness 2582) in paragraph at lines 8427--8429
+Underfull \hbox (badness 2582) in paragraph at lines 8447--8449
 \TU/lmr/m/n/10 tännössä useinmiten mm. vastemuuttujan luonteen perusteella
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8439--8440
+Underfull \hbox (badness 10000) in paragraph at lines 8459--8460
 
  []
 
 [209] [210]
-Underfull \hbox (badness 10000) in paragraph at lines 8485--8486
+Underfull \hbox (badness 10000) in paragraph at lines 8505--8506
 
  []
 
@@ -2650,7 +2644,7 @@ Luku 14.
 [213
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 8583--8584
+Underfull \hbox (badness 10000) in paragraph at lines 8603--8604
 
  []
 
@@ -2664,15 +2658,15 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `TD2024.out' has not changed.
-(rerunfilecheck)             Checksum: 435C38A5FB11C844D160EE6E2BFF5F45;19697.
+(rerunfilecheck)             Checksum: 1D3C7C4DBB0041BDAC7A499000F063AB;19785.
  ) 
 Here is how much of TeX's memory you used:
- 42577 strings out of 476780
- 864788 string characters out of 5801064
- 1945842 words of memory out of 5000000
- 63807 multiletter control sequences out of 15000+600000
+ 42583 strings out of 476780
+ 864889 string characters out of 5801064
+ 1944842 words of memory out of 5000000
+ 63813 multiletter control sequences out of 15000+600000
  590869 words of font info for 128 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,12n,121p,1061b,1024s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,12n,121p,1061b,1014s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on TD2024.pdf (214 pages).

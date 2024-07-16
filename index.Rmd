@@ -81,7 +81,7 @@ header-includes: |
   - ymmärtää tilastollisen ennustaminen perusajatukset
 
 # Kurssin sisältö {-}
-Kurssin osien II ja II sisältöjä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.
+Kurssin osien I ja II sisältöjä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.
 
 - __Osa I__
   - Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa

@@ -38,7 +38,7 @@ Holopainen ja Pulkkinen (2008)
       - Survey- eli haastatteluaineistot: aineisto kerätään haastattelemalla tutkimuskohteita
       - Rekisteriaineistot: aineisto on kerätty valmiiksi rekisteriin ja sitä käytetään tutkimukseen 
       - Aikasarja-aineistot tai pitkittäisaineistot: useita mahdollisesti korreloituneita havaintoja samoista tutkimuskohteista
-      - Ynnä muita, ks. luku \@ref(luku10)
+      - Ynnä muita, ks. luku \@ref(luku12)
 - __Aineiston kuvaaminen__: minkälaista aineistoa on kerätty ja vastaako se ennakkoehtoja? 
 - __Aineiston analyysin__ lähtökohtia   
   - Mitä tilastollista mallia/malleja käytetään?

@@ -12,7 +12,9 @@ knitr::include_graphics("images/im_so_random.jpg")
 
 Tässä luvussa pohdimme sattuman ja satunnaisuuden roolia tilastotieteessä ja tieteessä ylipäätään. Satunnaisuudella tarkoitetaan yleensä säännönmukaisuuden puuttumista ja ennustamattomuutta ja kenties juuri siksi sitä voidaan pitää yhtenä maailman vaikuttavimmista ilmiöistä. Jokainen haluaisi tietää mitä tuleman pitää ja siksi sattuma tekee elämästä mielenkiintoista: se vaikuttaa ja muokkaa niin meitä itseämme kuin ympäröivää maailmaa mitä merkityksellisimmin tavoin - joskus jopa vasten tahtoamme ja usein vailla täyttä ymmärtystämme!
 
-Ihmisen oma kokemus on kuitenkin altis kaikenlaisille virhepäätelmille, joita kutsutaan myös kognitiivisiksi vinoumiksi. Haluamme löytää systematiikkaa ja tarkoitusta kaaoksesta sekä merkityksiä ja syy-seuraussuhteita sellaisista tapahtumista, jotka kuuluvat normaalivaihtelun piiriin. Tällaisissa tilanteissa usein tilastollinen tarkastelu paljastaakin ilmiön todellisen, alkuperäisestä kuvitelmasta poikkeavan luonteen. Erottaakseen systemaattinen vaihtelu satunnaisesta ja ymmärtääkseen oikeasti merkityksellisiä syy-seuraussuhteita, satunnaisuutta on välttämätöntä ymmärtää. Tämä välttämättömyys pätee erityisesti tiedeyhteisön jäseniin, jotka pyrkivät tutkimaan ympäröivän maailman satunnaisia ilmiöitä. Tilastotiede perustuu satunnaisilmiöiden ja satunnaisen aineiston tutkimiseen, joten sen ymmärtäminen on keskeisessä roolissa niin tilastotieteen kuin muidenkin tieteiden sekä lopulta maailman ymmärtämisessä.
+Ihmisen oma kokemus on kuitenkin altis kaikenlaisille virhepäätelmille, joita kutsutaan myös __kognitiivisiksi vinoumiksi__. Haluamme löytää systematiikkaa ja tarkoitusta kaaoksesta sekä merkityksiä ja syy-seuraussuhteita sellaisista tapahtumista, jotka kuuluvat normaalivaihtelun piiriin. Tällaisissa tilanteissa usein tilastollinen tarkastelu paljastaakin ilmiön todellisen, alkuperäisestä kuvitelmasta poikkeavan luonteen. Erottaakseen systemaattinen vaihtelu satunnaisesta ja ymmärtääkseen oikeasti merkityksellisiä syy-seuraussuhteita, satunnaisuutta on välttämätöntä ymmärtää. Tämä välttämättömyys pätee erityisesti tiedeyhteisön jäseniin, jotka pyrkivät tutkimaan ympäröivän maailman satunnaisia ilmiöitä. 
+
+Tilastotiede perustuu satunnaisilmiöiden ja niiden generoimien aineistojen tutkimiseen, joten sen ymmärtäminen on keskeisessä roolissa niin tilastotieteen kuin muidenkin tieteiden ja lopulta maailman ymmärtämisessä.
 
 ## Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä {#alaluku41}
 
@@ -84,7 +86,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   - Mikäli kuitenkin määritetään toteumaksi jonkin pituuden raja-arvon, esimerkiksi 170\ cm, ylittävä pituus, on kyseessä kaksiarvoinen (binäärinen) muuttuja (pituus on joko yli tai alle 170\ cm).
 :::
 
-- Muuttujat voidaan luokitella myös __kvalitatiivisiin__ ja __kvantitatiivisiin__ muuttujiin (ks. \@ref{alaluku53}.
+- Muuttujat voidaan luokitella myös __kvalitatiivisiin__ ja __kvantitatiivisiin__ muuttujiin (ks. \@ref(alaluku53).
   - Kvalitatiivisiin muuttujiin liittyy luokittelu- tai järjestysasteikko
   - Kvantitatiivisiin muuttujiin välimatka- ja suhdeasteikko.
 
@@ -117,9 +119,9 @@ __Frekventistinen tilastotiede__
   - Tämä tilastollinen malli voidaan (useimmiten) perustaa nk. __uskottavuusfunktioon__, joka on _aineiston_ sekä yhden tai useamman _parametrin_ funktio ja joka saavuttaa suurimman arvonsa nk. "suurimman uskottavuuden pisteessä". 
   - Uskottavuusfunktio kertoo kuinka todennäköisenä havaittua aineistoa voidaan pitää, mikäli sen oletetaan olevan peräisin vastaavasta mallista jollain parametriarvolla. 
     - Täten ne parametriarvot, joilla uskottavuusfunktion arvo maksimoituu, _kuvaavat aineiston generoimaa prosessia parhaiten_, annettuna malli- eli jakaumaoletus. 
-  - Uskottavuusfunktioista, tilastollisten mallien estimoinnnista ja parametreista lisää seuraavassa alaluvussa sekä luvussa \@ref(luku6).
+  - Uskottavuusfunktioihin, tilastollisten mallien parametrien estimointiin tutustuaan tarkemmin kurssin seuraavan osan luvussa \@ref(luku7).
 
-- Perusjoukkoa koskevia hypoteeseja testataan tilastollisen mallin avulla: havaittu aineisto määrittää uskottavuusfunktion perusteella sellaiset hypoteesit, jotka jäävät joko voimaan tai tulevat hylätyiksi.
+- Tutkimuskysymyksen mukaisia hypoteeseja testataan tilastollisen mallin avulla: havaittu aineisto määrittää uskottavuusfunktion perusteella sellaiset hypoteesit, jotka jäävät joko voimaan tai tulevat hylätyiksi.
 
 - Klassisessa tilastotieteessä hypoteesien testaus perustuu siis vain aineistoon eli tilastollinen päättely on induktiivista: aineiston avulla otosta koskeva päätelmä voidaan yleistää koskemaan perusjoukkoa. 
   - Toki kaikki päättely on alisteista tehdyille oletuksille koskien käytettävää tilastollista mallia.
