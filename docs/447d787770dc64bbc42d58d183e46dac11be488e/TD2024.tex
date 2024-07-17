@@ -189,7 +189,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-07-16}
+\date{2024-07-17}
 
 \begin{document}
 \maketitle
@@ -2376,17 +2376,19 @@ Tilastotiede perustuu satunnaisilmiöiden ja niiden generoimien aineistojen tutk
 \hypertarget{alaluku41}{%
 \section{Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä}\label{alaluku41}}
 
+\textbf{Satunnaisilmiöt}
+
 \begin{itemize}
 \tightlist
 \item
   Edellisestä luvusta muistamme, että tilastotieteellisen tutkimuksen kohteena on aina jokin tilastoyksikköjen tutkimusmuuttujista koostuva havaintoaineisto, jonka pohjalta tehdään päätelmiä perusjoukosta/populaatiosta.
 \item
-  Nämä tilastolliset muuttujat tulkitaan satunnaisiksi, ja täten tilastollisen tutkimuksen tavoite on tutkia satunnaisilmiötä, joka on generoinut nämä havaitut eli toteutuneet arvot.
+  Tilastolliset muuttujat tulkitaan satunnaisiksi, ja tilastollisen tutkimuksen tavoite onkin siis tutkia sitä populaatiotason satunnaisilmiötä, joka havaitut eli toteutuneet arvot on generoinut.
 
   \begin{itemize}
   \tightlist
   \item
-    Yksi tilastotieteen olennainen tehtävä onkin kehittää \textbf{tilastollisia malleja}, joiden avulla satunnaisilmiöitä voidaan kuvata, selittää ja ennustaa.
+    Yksi tilastotieteen olennainen tehtävä onkin kehittää \textbf{tilastollisia malleja}, joiden avulla tutkimuksen kohteena olevaa satunnaisilmiöitä voidaan kuvata, selittää ja ennustaa.
   \item
     Tilastollisen mallin satunnaisten piirteiden kuvaus perustuu \textbf{todennäköisyyslaskentaan}.
   \end{itemize}
@@ -2443,7 +2445,7 @@ Reaalimaailman ilmiö on satunnaisilmiö, jos seuraavat ehdot pätevät:
     Vastaavasti ihmisten, ihmisryhmien ja ihmisten muodostamien organisaatioiden sisäisessä ja välisessä käyttäytymisessä on useita satunnaisia elementtejä.
   \end{itemize}
 \item
-  Jopa deterministiseen toimintaperiaatteeseen tähtäävissä tehdastuotannossa käy satunnaisia virheitä tuotteiden valmistusprosesseissa, jotka ilmenevät esimerkiksi viallisina tuotteina.
+  Jopa deterministiseen toimintaperiaatteeseen tähtäävässä tehdastuotannossa käy satunnaisia virheitä tuotteiden valmistusprosesseissa, jotka ilmenevät esimerkiksi viallisina tuotteina.
 \item
   Vastaavasti luonnontieteellisiin mittauksiin liittyy mittausvirheitä, jotka kuuluvat satunnaisvaihtelun piiriin. Esimerkiksi varhaisissa valonnopeusmittauksissa mittausvirheet saattoivat olla suuriakin!
 \item
@@ -2471,8 +2473,14 @@ Reaalimaailman ilmiö on satunnaisilmiö, jos seuraavat ehdot pätevät:
     \begin{itemize}
     \tightlist
     \item
-      Satunnaisuus eroaa mielivaltaisesta prosessista siinä, että satunnaista ilmiötä voidaan kuvata jollakin \textbf{tilastollisella lailla} kun taas mielivaltaista prosessia ei.
+      Satunnaisuus eroaa mielivaltaisesta prosessista siinä, että satunnaista ilmiötä voidaan kuvata jollakin \textbf{tilastollisella lailla/mallilla} kun taas mielivaltaista prosessia ei.
     \end{itemize}
+  \item
+    Satunnaismuuttujat voidaan luokitella myös \textbf{kvalitatiivisiin} ja \textbf{kvantitatiivisiin} muuttujiin (ks. \ref{alaluku53}).
+  \item
+    Kvalitatiivisiin muuttujiin liittyy luokittelu- tai järjestysasteikko.
+  \item
+    Kvantitatiivisiin muuttujiin välimatka- ja suhdeasteikko.
   \end{itemize}
 \end{itemize}
 
@@ -2488,7 +2496,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
 \item
   Tilastollinen aineisto muodostuu useiden satunnaismuuttujien (tilastoyksiköiden tutkimusmuuttujien) realisoituneista arvoista.
 \item
-  Realisoituneiden arvojen vaihtelua tilastoyksiköiden välillä kutsutaan satunnaisvaihteluksi.\\
+  Realisoituneiden arvojen vaihtelua tilastoyksiköiden välillä kutsutaan satunnaisvaihteluksi ja sitä kuvataan satunnaismuuttujan todennäköisyysjakaumalla.
 \end{itemize}
 
 \end{defblock}
@@ -2502,26 +2510,40 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
 \item
   Satunnaismuuttuja \(Y\) on jatkuva, jos se voi saada ylinumeroituvan määrän arvoja tai ts. minkä tahansa arvon joltain väliltä, kuten tyypillisesti minkä tahansa arvon joltain reaalilukuväliltä.
 \item
-  Satunnaismuuttuja \(Y\) on diskreetti, jos se voi saada vain joitain mahdollisia arvoja (vain yksittäisiä, äärellisen tai numeroituvasti äärettömän määrän, arvoja). Yksinkertaisimmillaan diskreetti satunnaismuuttuja \(Y\) on kaksiarvoinen (binäärinen), jolloin sen mahdollisia arvoja tyypillisesti merkitään \(y=0\) tai \(y=1\).
+  Satunnaismuuttuja \(Y\) on diskreetti, jos se voi saada vain joitain mahdollisia arvoja (vain yksittäisiä, äärellisen tai numeroituvasti äärettömän määrän, arvoja).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Yksinkertaisimmillaan diskreetti satunnaismuuttuja \(Y\) on kaksiarvoinen (binäärinen), jolloin sen mahdollisia arvoja tyypillisesti merkitään \(y=0\) tai \(y=1\).
+  \end{itemize}
 \end{itemize}
 
 \end{defblock}
 
 \begin{eblock}{}
 
-\textbf{Esimerkki: satunnaismuuttuja}
+\textbf{Esimerkki: sademäärä satunnaismuuttujana}
 
 \begin{itemize}
 \tightlist
 \item
-  Ihmisen pituutta voidaan pitää (ennen mittaukseen tulemista) satunnaismuuttujana \(Y\) ja lopullista pituutta täten pituuden realisaationa \(y\).
+  Huomista sadantaa eli sademäärää tietyllä alueella voidaan pitää (ennen huomista sadepäivää) satunnaismuuttujana \(Y\) ja mitattua sademäärää (sadepäivän jälkeen) täten sademäärän yhtenä realisaationa \(y\).
 
   \begin{itemize}
   \tightlist
   \item
-    Yleensä pituutta kohdellaan jatkuvana muuttujana senttimetreissä.
+    Yleensä sademäärää kohdellaan jatkuvana muuttujana millilitroissa, joka jaetaan sadetta mitanneen astian suuaukon pinta-alalla.
   \item
-    Mikäli kuitenkin määritetään toteumaksi jonkin pituuden raja-arvon, esimerkiksi 170~cm, ylittävä pituus, on kyseessä kaksiarvoinen (binäärinen) muuttuja (pituus on joko yli tai alle 170~cm).
+    Mikäli kuitenkin määritetään toteumaksi jonkin sademäärän raja-arvon, esimerkiksi yksi milli, ylittävä sademäärä, on kyseessä diskreetti kaksiarvoinen (binäärinen) muuttuja (sademäärä on joko yli tai alle yksi milli (litra neliömetrille)).
+  \end{itemize}
+\item
+  Tutkija voisi olla esimerkiksi kiinnostunut sadannan eroista kuntien tai alueiden välillä tietyssä maasssa sekä tähän kenties vaikuttavista syistä.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tätä tutkiakseen hän tarvitsisi tilastollisen aineiston tutkimus- ja taustamuuttujineen eri alueilta, joka voitaisiin kerätä esimerkiksi satunnaisotannalla asettamalla sadannan mittaavia astioita satunnaisesti kyseisille alueille.
   \end{itemize}
 \end{itemize}
 
@@ -2530,38 +2552,42 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
 \begin{itemize}
 \tightlist
 \item
-  Muuttujat voidaan luokitella myös \textbf{kvalitatiivisiin} ja \textbf{kvantitatiivisiin} muuttujiin (ks. \ref{alaluku53}.
+  Toisaalta ajoittain tietyn suureen/ilmiön mallinnuksessa voidaan perustellusti käyttää molempiin luokkiin kuuluvien satunnaismuuttuja- ja tilastollisen mallityypin vaihtoehtoja.
 
   \begin{itemize}
   \tightlist
   \item
-    Kvalitatiivisiin muuttujiin liittyy luokittelu- tai järjestysasteikko
+    Esimerkki: Esimerkiksi Suomen COVID19-tartuntatapauksia tutkittaessa, tartunnan saaneiden lukumäärä oli periaatteessa diskreetti satunnaismuuttuja, joka sai yksittäisen (kokonaisluku)arvon joka kuukausi, mutta käytännössä lukumäärät ovat tässä tapauksessa sen verran suuria, että niitä mallinnetaan tyypillisesti jatkuva-arvoisena muuttujana.
   \item
-    Kvantitatiivisiin muuttujiin välimatka- ja suhdeasteikko.
+    Vastaavasti esimerkiksi potilaan jonotusaika päivystyksessä voi periaatteessa saada minkä tahansa arvon tietyltä reaalilukuväliltä (\([0,\infty)\), ts. mikä vain positiivinen arvo) ja tällöin käytettäisiin jatkuviin sm:jiin perustuvia tilastollisia menetelmiä.
   \end{itemize}
-\item
-  Tilastolliset menetelmät perustuvat todennäköisyyslaskennan\footnote{Todennäköisyyslaskentaa käsitellään välillisesti tulevissa luvuissa mutta varsinaisesti tarkemmin 2. periodin kurssilla \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024}{TILM3553 Todennäköisyyslaskennan peruskurssi} ja (erityisesti sivuaineopiskelijoille) \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024}{TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille}.} tuloksiin ja tarjoavat keinon hallita satunnaisuuden aiheuttamaa epävarmuutta sekä tavan erottaa systemaattinen ja satunnainen vaihtelu, eli signaali ja kohina, toisistaan.
-\item
-  Tilastollisen aineiston \textbf{tilastollisella mallilla} tarkoitetaan täten niiden satunnaismuuttujien todennäköisyysjakaumaa, jonka ajatellaan generoineen havainnot.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Yksinkertaisimmillaan esimerkiksi yksinkertaiseen satunnaisotantaan takaisinpanolla perustuva satunnaismalli (palaamme tähän otantaa käsittelevässä luvussa \ref{luku5}).
-  \item
-    Satunnaisuus perustuu siihen, että satunnaismuuttujien toteutuvat arvot (ja niistä lasketut tunnusluvut kuten keskiarvo) vaihtelevat satunnaisesti otoksesta toiseen.
-  \end{itemize}
-\item
-  Todennäköisyyslaskennan ja tilastotieteen tehtävä on tuottaa \textbf{tilastollisia malleja} satunnaisilmiöissä havaittavalle tilastolliselle stabiliteetille.
 \end{itemize}
 
-\hypertarget{alaluku42}{%
-\section{Satunnaisuus ja todennäköisyydet}\label{alaluku42}}
+\hypertarget{alaluku43}{%
+\section{Satunnaisilmiöiden tilastollinen mallintaminen}\label{alaluku43}}
 
 \begin{itemize}
 \tightlist
 \item
-  Tilastotieteessä \textbf{tutkimusaineiston keräämistä} voidaan pitää hyvänä esimerkkinä satunnaisilmiöstä.
+  Seuraavaksi käydään vaiheittain läpi sitä, miten reealimaailman satunnaisilmiöitä voidaan tilastollisin menetelmin mallintaa.
+\item
+  Tilastollisen tutkimuksen lähtökohta on aina aineisto. Aineiston tulee kuvata tutkittavaa satunnaisilmiötä sillä tavalla, että esitettyihin tutkimuskysymyksiin ja/tai hypoteeseihin voidaan vastata.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Aineiston sisältämät satunnaismuuttujat määräävät käytettävän tilastollisen mallin, jota lopulta käytetään hypoteesien testaamiseen.
+  \item
+    Kaikkiin näihin vaiheisiin syvennytään tulevissa jaksoissa vielä tarkemmin, mutta tämän osion tarkoituksena on havainnollistaa sitä, miten tilastotieteessä mallinnetaan satunnaisilmiöitä.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Tilastollisen aineiston kerääminen}
+
+\begin{itemize}
+\tightlist
+\item
+  Tilastotieteessä \textbf{tilastollisen tutkimusaineiston keräämistä} voidaan pitää hyvänä esimerkkinä satunnaisilmiöstä.
 
   \begin{itemize}
   \tightlist
@@ -2570,28 +2596,500 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   \item
     Arvonta on mainio esimerkki satunnaisilmiöstä, sillä siihen liittyy aina ennustamattomuutta: vaikka yksittäisen arvonnan tulosta ei voi tietää etukäteen, noudattaa se kuitenkin todennäköisyyden lakeja.
   \item
-    Koska arvonnan tulos vaihtelee satunnaisesti arvontakerrasta toiseen, myös tutkimuksen kohteita kuvaavat tiedot vaihtelevat satunnaisesti arvontakerrasta toiseen.
+    Koska arvonnan tulos, eli mitkä perusjoukon tilastoyksiköt tulevat valituksi, vaihtelee satunnaisesti arvontakerrasta toiseen, myös tutkimuksen kohteita kuvaavat tiedot vaihtelevat satunnaisesti arvontakerrasta toiseen.
   \item
     Tutkimuksen kohteita kuvaavien tietojen käyttäytymisessä havaitaan kuitenkin arvontaa toistettaessa juuri sitä säännönmukaisuutta, jota kutsutaan tilastolliseksi stabiliteetiksi. \textbf{Tämä säännönmukaisuus on tilastollisen tutkimuksen kohde.}
+  \item
+    Tilastollisen aineiston keräämistä, eli otantateoriaa, ja sen tavoitteita käsitellään Osan 1 luvussa \ref{luku5} ja otantamenetelmiä vielä syvemmin Osan 2 luvussa \ref{luku7}.
   \end{itemize}
+\end{itemize}
+
+\begin{eblock}{}
+
+\textbf{Esimerkki: Tilastollisten aineistojen kerääminen arpomalla}
+
+\begin{itemize}
+\tightlist
 \item
-  Esimerkkejä tilastollisten aineistojen keräämisen menetelmistä, jotka perustuvat arvontaan:
+  \textbf{Satunnaisotanta}: Otannalla\footnote{~Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa \ref{luku7}.} tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla. (Ks. Luku \ref{luku5} ja \ref{luku7}).\\
+\item
+  \textbf{Satunnaistetut kokeet}: Kokeellisessa tutkimuksessa tavoitteena on vertailla erilaisten käsittelyiden vaikutuksia kokeen kohteisiin. Erilaisten virhelähteiden kontrolloimiseksi käsittelyt on syytä arpoa kohteille.
+\end{itemize}
+
+\end{eblock}
+
+\begin{itemize}
+\tightlist
+\item
+  Satunnaisotannalla kerätyissä aineistoissa satunnaisuus perustuu siihen, että satunnaismuuttujien toteutuvat arvot (ja niistä lasketut tunnusluvut kuten keskiarvo) vaihtelevat satunnaisesti otoksesta toiseen, kun otokseen valikoituu satunnaisesti eri tilastoyksiköitä, joilta mitatut/kerätyt tutkimusmuuttujien arvot vaihtelevat.
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Satunnaistetut kokeet}: Kokeellisessa tutkimuksessa tavoitteena on vertailla erilaisten käsittelyiden vaikutuksia kokeen kohteisiin. Erilaisten virhelähteiden kontrolloimiseksi käsittelyt on syytä arpoa kohteille.
+    Tämä vaihtelu on kuitenkin stabiilia, eli eri otokset ilmentävät samaa satunnaisilmiötä.
   \item
-    \textbf{Satunnaisotanta}: Otannalla\footnote{~Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa \ref{luku5}.} tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla. (Ks. Luku \ref{luku5})
+    Toisin sanoen, otantaa toistettaessa eri aineistojen sisältämä satunnaisvaihtelu on aineiston generoineen todennäköisyysjakauman mukaista myös otosten välillä.
+  \item
+    Tilastotieteen tehtävä on tuottaa \textbf{tilastollisia malleja} tälle satunnaisilmiöissä havaittavalle tilastolliselle stabiliteetille.
   \end{itemize}
 \item
-  Kerätyn (tai havaitun) aineiston pohjalta tehdään päätelmiä sen generoineesta satunnaisilmiöstä esimerkiksi testaamalla erilaisia siihen liittyviä hypoteeseja.
+  Kerätyn (tai havaitun) aineiston pohjalta pyritään tekemään tutkimuskysymystä vastaavia päätelmiä tutkimuksen kohteena olevasta ja aineiston generoineesta satunnaisilmiöstä.
 
   \begin{itemize}
   \tightlist
   \item
-    Tilastotiede voidaan jakaa kahteen merkittävään paradigmaan sen mukaan, miten \textbf{tilastolliseen päättelyyn}, ml. hypoteeseihin ja niiden testaamiseen, suhtaudutaan. Näitä ovat \textbf{klassinen eli frekventistinen tilastotiede} sekä \textbf{Bayesilainen tilastotiede}. Tarkastellaan seuraavaksi minkälaisia eroja ja yhtäläisyyksiä näiden koulukuntien välillä on.
+    Tutkimuskysymyksen tulee tilastollisessa tutkimuksessa olla sellainen, että sitä vastaavat testattavat hypoteesit koskevat aineiston generoinutta satunnaisilmiötä, jota mitatut tutkimusmuuttujat ilmentävät.
+  \item
+    Kun näin on, tutkimuskysymykseen voidaan vastata käytössä olevan aineiston avulla käyttäen tilastollisia menetelmiä.
   \end{itemize}
+\end{itemize}
+
+\textbf{Tilastollisen muuttujan todennäköisyysjakauma}
+
+\begin{itemize}
+\tightlist
+\item
+  Tilastolliset menetelmät perustuvat todennäköisyyslaskennan\footnote{Todennäköisyyslaskentaa käsitellään lyhyesti tulevissa luvuissa mutta varsinaisesti tarkemmin 2. periodin kurssilla \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024}{TILM3553 Todennäköisyyslaskennan peruskurssi} ja (erityisesti sivuaineopiskelijoille) \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024}{TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille}.} tuloksiin ja tarjoavat keinon hallita satunnaisuuden aiheuttamaa epävarmuutta.
+\item
+  \textbf{Tilastolliset mallit} perustuvat satunnaismuuttujan mahdollisten tulosvaihtoehtojen todennäköisyyksiä kuvaavalle \textbf{todennäköisyysjakaumalle}, joka määrää millä todennäköisyydellä satunnaismuuttuja saa erilaisia arvoja.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Diskreetin satunnaismuuttujan} todennäköisyysjakauma voidaan usein esittää taulukkomuodossa. Eri arvojen todennäköisyydet muodostavat kyseisen satunnaismuuttujan todennäköisyysjakauman, \textbf{pistetodennäköisyysfunktion}, jota voidaan havainnollistaa esimerkiksi pylväsdiagrammilla (ks. alla oleva esimerkki ja kuvaaja \ref{fig:kannatusmittaus}).
+  \item
+    \textbf{Jatkuvan satunnaismuuttujan} arvot muodostavat jonkin reaaliakselin välin, joka sisältää äärettömän määrän lukuja. Tämän vuoksi jatkuvan satunnaismuuttujan todennäköisyysjakauman esittäminen taulukon kautta ei ole luontevaa, vaan jakauma esitetään yleensä satunnaismuuttujan \textbf{tiheysfunktion} avulla.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Pistetodennäköisyys- ja tiheysfunktiot siis määräävät satunnaismuuttujan mahdollisille arvoille todennäköisyydet väliltä \([0,1]\).
+    \end{itemize}
+  \end{itemize}
+\item
+  Havaitulle aineistolle perustettava tilastollinen malli perustuu satunnaismuuttujan todennäköisyysjakaumalle, joka riippuu yhdestä tai useammasta parametrista ja kuvaa kyseisen muuttujan säännönmukaista satunnaisvaihtelua.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tilastollinen malli riippuu siis tehdystä todennäköisyysjakaumaoletuksesta sekä havaitusta aineistosta eli mielenkiinnon kohteena olevan satunnaismuuttujan realisaatioista.
+  \item
+    Tavoitteena on pyrkiä arvioimaan sitä populaatiotason todennäköisyysjakaumaa, joka on tutkimusaineiston generonut.
+  \end{itemize}
+\end{itemize}
+
+\begin{eblock}{}
+
+\textbf{Esimerkki: Diskreetin aineiston jakauma: poliittisten puolueiden kannatusmittaus}
+
+\begin{itemize}
+\tightlist
+\item
+  Poliittisten puolueiden kannatustutkimuksia mittaavia galluppeja tehdään erityisesti vaalien alla usean tilastollisia kyselytutkimuksia tekevän tahon toimesta.\\
+\item
+  Puoluevalintaa (tai valitsematta jättämistä) voidaan pitää äänestysikäisten keskuudessa satunnaismuuttujana, jolla on äärellinen määrä tulosvaihtoehtoja: puolueiden määrän lisäksi vastaaja voi ilmoittaa ettei tiedä ketä aikoo äänestää tai että ei aio äänestää ollenkaan.
+\item
+  Täten puolueiden kannatus on diskreetti muuttuja ja kannatustutkimuksessa kohdepopulaatio on äänestysikäiset (täysi-ikäiset) Suomen kansalaiset.
+\item
+  Tässä tapauksessa paras arvio todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta (nk. suurimman uskottavuuden estimaatti, ks. luku \ref{luku8}) on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista.
+\item
+  Oheisessa taulukossa on esitelty tuloksia Taloustutkimuksen Ylelle suorittamasta puolueiden eduskuntavaalikannatusta mittaavasta tutkimuksesta, jossa haastateltiin 2481 ihmistä puhelinhaastatteluina ja internetpaneelina aikavälillä 7.6.-2.7.2024.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Haastatelluista 1910 kertoi puoluekantansa ja tutkimuksen virhemarginaalin kerrottiin olevan suurimmillaan 1,9 prosenttiyksikköä suuntaansa (ks. Osan II luku \ref{luku9}).
+  \item
+    Nämä todennäköisyydet on esitetty alla olevassa taulukossa sekä kuvaajassa \ref{fig:kannatusmittaus}.
+  \end{itemize}
+\end{itemize}
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.1774}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0968}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0645}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0968}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0645}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0968}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\centering
+Puolue
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+SDP
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+VAS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+KOK
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+KESK
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+RKP
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+KD
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+VIHR
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+PS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+LIIK
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+MUU
+\end{minipage} \\
+\midrule()
+\endhead
+Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
+\bottomrule()
+\end{longtable}
+
+\end{eblock}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/kannatusmittaus-1} 
+
+}
+
+\caption{Taloustutkimuksen Ylelle teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista.}\label{fig:kannatusmittaus}
+\end{figure}
+
+\textbf{Parametrien estimointi ja niiden testaus}
+
+\begin{itemize}
+\tightlist
+\item
+  Satunnaisilmiötä kuvaava tilastollinen malli perustuu siis johonkin parametriseen todennäköisyysjakaumaan ja pyrkii approksimoimaan ``todellista'' aineiston generoinutta ilmiötä.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Todennäköisyysjakaumat riippuvat \textbf{parametreista} ja keskeinen oletus erityisesti klassisessa tilastotieteessä on, että aineiston generoinutta satunnaisilmiötä kuvaa jokin vakioinen mutta \textbf{tuntematon parametriarvo} (tai niiden joukko).
+  \item
+    Keskeinen tehtävä tilastotieteessä onkin pyrkiä \textbf{estimoimaan}, eli jollain keinolla arvioimaan, mitkä nämä tuntemattomat parametriarvot ovat, sillä ne kuvaavat aineiston generoinutta satunnaisilmiötä, joka lopulta on mielenkiinnon kohteena.
+  \end{itemize}
+\item
+  Tilastollinen aineisto koostuu usean tilastoyksikön havaitusta tai mitatusta tutkimusmuuttujan (sm.) realisaatiosta ja tavoitteena on aineiston avulla arvioida sitä todennäköisyysjakaumaa, joka kyseiset realisoituneet arvot on generoinut.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Lähtökohtana voidaan siis pitää sitä, että tutkimusmuuttujan realisaatiot ovat peräisin samasta todennäköisyysjakaumasta.
+  \item
+    Tälle oletukselle voidaan perustaa havaintoaineiston yhteisjakauma, joka on se todennäköisyysjakauma joka aineiston on generoinut, mutta jonka parametriarvot ovat tuntemattomia.
+  \end{itemize}
+\item
+  Tilastollisen mallin pohjana oleva todennäköisyysjakauma määrittää yhdessä havaintojen kanssa nk. \textbf{uskottavuusfunktion}, jota käytetään tuntemattomien parametriarvojen estimoimiseen.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Aineistoa kuvaavan tilastollisen mallin uskottavuus pyritään maksimoimaan, mikä tarkoittaa valitun todennäköisyysjakauman sovittamista havaintoaineistoon mahdollisimman hyvin.
+  \item
+    Tässä nk. ``suurimman uskottavuuden estimoinnissa'' aineiston generoiman (oletetun) todennäköisyysjakauman parametriarvot \textbf{estimoidaan} (eli arvioidaan) käytettävän otoksen/aineiston avulla.
+  \item
+    Perusjoukkoa parhaiten kuvaavan (eli ``aineiston generoineen'') parametrin arvo pyritään siis estimoimaan aineiston perusteella ja saatuja parametriarvoja kutsutaan \textbf{estimaateiksi}.
+  \item
+    Suurimman uskottavuuden estimointiin syvennytään tarkemmin Osan II luvussa \ref{luku8}.
+  \end{itemize}
+\item
+  Parametrien estimoinnin lisäksi usein \textbf{testataan} parametreja koskevia oletuksia (eli hypoteeseja).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Toisin sanoen, testaamalla arvioidaan tilastollisen mallin parametreihin liitettäviä hypoteeseja suhteessa aineistosta saatuihin estimaatteihin.
+  \item
+    Näin voidaan testata, onko jokin ennustettu hypoteesi uskottava nyt havaitun aineiston valossa.
+  \end{itemize}
+\end{itemize}
+
+\begin{eblock}{}
+
+\textbf{Esimerkki: Testaus uskottavuuspohjaisessa tilastollisessa päättelyssä}
+
+\begin{itemize}
+\tightlist
+\item
+  Palataan aiemmin esitettyyn kuviteltuun esimerkkiin tutkijasta, joka haluaa tutkia sademääriä.
+\item
+  Sanotaan, että tutkija on kiinnostunut tutkimaan väitettä, jonka mukaan Turussa sataa yli keskimäärin 800 milliä vuodessa.
+\item
+  Oletetaan lisäksi, että tutkijalla on käytettävänä satunnaisotantaan perustuva arvio Turun sademääristä vuosilta 1980-2023 ja että vuosittaiset sademäärät ovat riippumattomia ja samoin jakautuneet.
+\item
+  Nyt tutkija voi perustaa väitteen tilastotieteellisen tutkimuksen muodostamalla tilastollisen mallin käytettävissä olevasta aineistosta.
+\end{itemize}
+
+\end{eblock}
+
+\begin{itemize}
+\tightlist
+\item
+  Estimointi ja testaus ovat tilastolliseen tutkimukseen liittyvän \textbf{tilastollisen päättelyn} keskeisiä välineitä, joiden avulla tutkittavasta ilmiöstä pyritään tekemään johtopäätöksiä siitä kerätyn havaintoaineiston perusteella.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Estimoitujen parametrien testaus voi vastata esimerkiksi seuraavanlaisiin kysymyksiin:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Onko suomalaisten miesten keskipituus 180~cm?
+    \item
+      Vaikuttaako yliopistokoulutus tulevaisuuden ansioihin?
+    \item
+      Auttaako tietty lääkeaine jonkin sairauden hoidossa?
+    \item
+      Voiko osakemarkkinoiden tuottoja ennustaa?
+    \end{itemize}
+  \end{itemize}
+\item
+  Parametrien testaus on osa tilastollista päättelyä, johon palataan tarkemmin luvussa \ref{luku8}
+\end{itemize}
+
+\hypertarget{alaluku44}{%
+\section{Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma}\label{alaluku44}}
+
+\textbf{Tilastolliset tunnusluvut}
+
+\begin{itemize}
+\tightlist
+\item
+  Perehdytään seuraavaksi esimerkin avulla tilastollisiin tunnuslukuihin ja estimaattoreihin käyttäen hieman tilastotieteessä tarvittavaa matemaattista notaatiota.\\
+\item
+  Satunnaismuuttujan todennäköisyysjakauman tietoa voidaan tiivistää tunnuslukuihin, joista keskeisimpiä ovat \textbf{odotusarvo}, \textbf{varianssi} ja \textbf{keskihajonta}.
+\end{itemize}
+
+\begin{defblock}{}
+
+\textbf{Odotusarvo}
+
+Satunnaismuuttujan \(Y\) odotusarvo \(\text{E}(Y)\) kuvaa satunnaismuuttujan odotettavissa olevaa arvoa.
+
+\begin{itemize}
+\tightlist
+\item
+  Muodostamalla satunnaiskokeen tulosten \textbf{painotettu keskiarvo}, jossa kunkin tuloksen painona on vastaavan tapauksen todennäköisyys, niin saatua arvoa sanotaan odotusarvoksi \(\text{E}(Y)\).
+\item
+  Odotusarvo kuvaa jakauman painopistettä.
+\item
+  Merkinnän \(\text{E}(Y)\) käyttö juontaa juurensa englannin kielen sanoihin ``odotus'', expectation, ja ``odotusarvo'', expected value.
+\end{itemize}
+
+\end{defblock}
+
+\begin{eblock}{}
+\textbf{Esimerkki: Nopanheiton odotusarvo}
+
+Perinteikäs esimerkki odotusarvosta on tavallisen kuusitahoisen nopan silmäluvun odotusarvo. Nopanheitto on diskreetti satunnaisilmiö ja tavallisen painottamattoman nopan tapauksessa jokaisen silmäluvun todennäköisyys on yhtä suuri. Merkitään nopan silmälukua (sm) \(Y\) ja sen realisaatiota \(y\). Nopan silmäluvun realisaatioiden mahdolliset arvot ovat \(Y = \{1,2,3,4,5,6\}\) ja niiden todennäköisyydet ovat \(P(Y=y) = \frac{1}{6}\).
+
+Nopanheiton silmäluvun odotusarvo määritetään siis painotettuna keskiarvona \[E(Y) = \sum_{i=1}^6 y \cdot P(Y=y)  = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2} = 3.5\]
+
+\end{eblock}
+
+\begin{itemize}
+\tightlist
+\item
+  Odotusarvon lisäksi kiinnostuksen kohteena on usein jakauman keskittyneisyys (hajaantuneisuus). Ts. kun halutaan puolestaan kuvata satunnaismuuttujan arvojen vaihtelua, tutkitaan todennäköisyysjakauman \textbf{varianssia} ja \textbf{keskihajontaa}.
+\end{itemize}
+
+\begin{defblock}{}
+
+\textbf{Varianssi}
+
+Satunnaismuuttujan \(Y\) hajontaa voidaan mitata varianssilla
+\[
+\mathrm{Var}(Y) = \text{E}\Big[\Big(Y-\text{E}(Y)\Big)^2\Big],
+\]
+tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
+\[
+\text{D}(Y) = \sqrt{\mathrm{Var}(Y)}.
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Mitä lähempänä nollaa keskihajonta ja varianssi ovat, sitä todennäköisempää on, että satunnaismuuttujan arvo on lähellä odotusarvoa.
+\item
+  Merkintöjen \(\mathrm{Var}(Y)\) ja \(\text{D}(Y)\) taustalla on englannin kielen sanat variance (varianssi) ja deviation, joka tarkoittaa ``poikkeamaa''/``hajontaa''.
+\end{itemize}
+
+\end{defblock}
+
+\begin{itemize}
+\tightlist
+\item
+  Odotusarvon ja varianssin (keskihajonnan) tavanomaiset \textbf{estimaattorit} ovat otoskeskiarvo ja otosvarianssi (otoshajonta), joihin tutustuaan alla normaalijakauman erityistapauksessa.
+\end{itemize}
+
+\textbf{Normaalijakauman parametrit}
+
+\begin{itemize}
+\tightlist
+\item
+  Käydään seuraavaksi läpi tilastollisen mallin parametrien merkitystä normaalijakauman tapauksessa.
+\item
+  Normaalijakauma on yksi keskeisimpiä ja tärkeimpia todennäköisyysjakaumia tilastotieteessä ja sen avulla voidaan helposti kuvata jakauman parametrien vaikutusta sen muotoon.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) \(\mu\) ja \(\sigma^2\) annetaan erilaisia arvoja.
+  \item
+    Alla olevassa kuvassa \ref{fig:normaalijakauma} on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoilla.
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/normaalijakauma-1} 
+
+}
+
+\caption{Normaalijakaumien muotoja eri parametriarvoilla.}\label{fig:normaalijakauma}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Tiheysfunktio kuvaa satunnaismuuttujan eri tulosvaihtoehtojen (vaaka-akselin numeeriset arvot) todennäköisyyksiä.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Täten esimerkiksi satunnaismuuttujan, joka on normaalisti jakautunut odotusarvonaan \(3\) ja varianssinaan \(2\), merkitään \(Y \thicksim N(3,2)\), realisaatiot ovat keskittyneet odotusarvon ympärille niin, että suuret poikkeamat odotusarvosta kumpaankaan suuntaan ovat vähemmän todennäköisiä kuin pienemmät poikkeamat.
+  \item
+    Toisin sanoen, kuten yllä, normaalijakauman parametreista odotusarvo kuvaa sitä mikä on satunnaisilmiön generoimien realisaatioiden odotettavissa oleva arvo. Täten odotusarvo kuvaa normaalijakauman tapauksessa tiheysfunktion ``sijaintia'', normaalijakauman symmetrian ansiosta. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö.
+  \item
+    Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta. Kuvassa \ref{fig:normaalijakauma} huomataan, että suuremmat varianssin arvot ``leventävät'' normaalijakauman tiheysfunktiota, jolloin suuremmat poikkeamat ovat suhteellisesti todennäköisempiä.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Varianssin yksikkö on satunnaismuuttujan yksikkö korotettuna toiseen potenssiin, joten sen tulkinta on hankalaa. Tällöin on usein helpompaa hahmottaa satunnaismuuttujan hajontaa varianssin neliöjuurella, eli keskihajonnalla, jonka yksikkö on sama kuin satunnaismuuttujan yksikkö.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\textbf{Otoskeskiarvo ja otosvarianssi normaalijakauman parametrien estimaattoreina}
+
+\begin{itemize}
+\tightlist
+\item
+  Kuten yllä mainittiin, tilastollisessa tutkimuksessa on tavoitteena estimoida aineiston generoineen todennäköisyysjakauman tuntemattomat parametrit käyttäen havaintoaineistoa.
+\item
+  Normaalijakauman tapauksessa tämä on suoraviivaista, joten esitellään nyt lyhyesti normaalijakauman parametrien estimaattorit: otoskeskiarvo ja otosvarianssi.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tätä varten esitellään hieman tarvittavaa matemaattista notaatiota.
+  \end{itemize}
+\item
+  Merkitään satunnaismuuttujaa isolla kirjaimella, \(Y\), ja satunnaismuuttujan realisaatiota pienellä kirjaimella \(y\). Otoskokoa, eli otokseen osallistuvien tilastoyksiköiden määrää merkitään \(n\):llä ja tilastoyksiköitä indeksöidään alaindeksillä \(i=1,\ldots,n\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Otoksen poimimisen jälkeen satunnaismuuttujat \(Y_1, \ldots, Y_n\) saavat havaituiksi arvoikseen havaintoarvot \(y_1, \ldots, y_n\) (ts. \(Y_1=y_1, \ldots, Y_n = y_n\)).
+  \item
+    Näin havaintoaineisto on siis \textbf{satunnaisotos}, joka voidaan määritellä tarkemmin seuraavasti.
+  \end{itemize}
+\end{itemize}
+
+\begin{defblock}{}
+\textbf{Satunnaisotos normaalijakaumasta}
+
+Olkoot \(Y_1, \ldots, Y_n\) riippumattomia ja normaalisti jakautuneita satunnaismuuttujia, joille pätee \(Y_i \thicksim N(\mu,\sigma^2)\), jossa \(\mu\) ja \(\sigma^2\) ovat normaalijakauman muodon määräävät parametrit.
+
+Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin päätellä, \textbf{estimoida}, niiden arvot lopulta käytettävissä olevasta aineistosta.
+
+\end{defblock}
+
+\textbf{Otoskeskiarvo}
+
+\begin{itemize}
+\tightlist
+\item
+  Normaalisti jakautuneiden havaintojen (satunnaismuuttujien) \(Y_1, \ldots, Y_n\) \textbf{otoskeskiarvo} on
+\end{itemize}
+
+\[
+\bar{Y} = \frac{1}{n}(Y_1 + \cdots + Y_n) = \frac{1}{n} \sum_{i=1}^{n} Y_i
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Yksittäisen otoksen otoskeskiarvo on tällöin sm:jien realisaatioiden aritmeettinen keskiarvo
+\end{itemize}
+
+\[
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i.
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+\item
+  Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan \(\mu\), on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts.
+\end{itemize}
+
+\[\text{E}(\bar{Y}) = \mu\]
+
+\begin{itemize}
+\tightlist
+\item
+  Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa.
+\end{itemize}
+
+\textbf{Otosvarianssi}
+
+\begin{itemize}
+\item
+  Aineiston sisältämää vaihtelua kuvataan \textbf{otosvarianssilla}
+  \[
+  S^2= \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2.
+  \]
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Vastaavasti sm:jien vaihtelua perusjoukon tasolla kuvataan \textbf{populaatiovarianssilla}
+  \end{itemize}
+\end{itemize}
+
+\[
+\sigma^2= \frac{1}{N} \sum_{j=1}^{N} (Y_j - \mu)^2,
+\]
+jota otosvarianssi harhattomasti estimoi.
+
+\begin{itemize}
+\tightlist
+\item
+  Otoskeskiarvo \(\bar{Y}\) ja otosvarianssi \(S^2\) ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen, mutta jotka toimivat saatavilla olevasta aineistosta laskettuna kohdepopulaation jakauman parametrien estimaattoreina.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Estimaattoreihin, niiden ominaisuuksiin ja tarkempaan teoriaan perehdytään tarkemmin Osan II luvussa \ref{luku8}.
+  \end{itemize}
+\end{itemize}
+
+\hfill\break
+
+\hypertarget{tilastotieteen-koulukunnat}{%
+\section{Tilastotieteen koulukunnat}\label{tilastotieteen-koulukunnat}}
+
+\begin{itemize}
+\tightlist
+\item
+  Tilastotiede voidaan jakaa kahteen merkittävään paradigmaan sen mukaan, miten \textbf{tilastolliseen päättelyyn}, ml. hypoteeseihin ja niiden testaamiseen, suhtaudutaan. Näitä ovat \textbf{klassinen eli frekventistinen tilastotiede} sekä \textbf{Bayesilainen tilastotiede}. Tarkastellaan seuraavaksi minkälaisia eroja ja yhtäläisyyksiä näiden koulukuntien välillä on.
 \end{itemize}
 
 \hfill\break
@@ -2666,254 +3164,6 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
     Bayesilaista tilastotiedettä tarkastellaan tarkemmin esimerkiksi kursseilla \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3577/6969}{TILM3577 Bayes-päättely} sekä \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3601/21033}{TILM3601 Bayes-laskenta}.
   \end{itemize}
 \end{itemize}
-
-\hypertarget{alaluku43}{%
-\section{Tilastolliset mallit, jakaumat ja parametrit}\label{alaluku43}}
-
-\begin{itemize}
-\tightlist
-\item
-  Tilastolliset mallit perustuvat satunnaismuuttujan mahdollisten tulosvaihtoehtojen todennäköisyyksiä kuvaavalle \textbf{todennäköisyysjakaumalle}, joka määrää millä todennäköisyydellä satunnaismuuttuja saa erilaisia arvoja.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Kuten aiemmin todettiin, satunnaismuuttujat jaetaan kahteen luokkaan: diskreetteihin ja jatkuviin.
-  \end{itemize}
-\item
-  Toisaalta ajoittain tietyn suureen/ilmiön mallinnuksessa voidaan perustellusti käyttää molempiin luokkiin kuuluvien satunnaismuuttuja- ja tilastollisen mallityypin vaihtoehtoja.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Esimerkki: Esimerkiksi COVID19-tartuntatapausten lukumäärä Suomessa on periaatteessa diskreetti satunnaismuuttuja, joka saa yksittäisen (kokonaisluku)arvon joka kuukausi, mutta käytännössä lukumäärät ovat tässä tapauksessa sen verran suuria, että niitä mallinnetaan tyypillisesti jatkuva-arvoisena muuttujana.
-  \item
-    Vastaavasti esimerkiksi potilaan jonotusaika päivystyksessä voi periaatteessa saada minkä tahansa arvon tietyltä reaalilukuväliltä (\([0,\infty)\), ts. mikä vain positiivinen arvo) ja tällöin käytettäisiin jatkuviin sm:jiin perustuvia tilastollisia menetelmiä.
-  \end{itemize}
-\item
-  Satunnaismuuttujan mahdolliset arvot määrääväät myös mahdollisen todennäköisyysjakauman ja täten myös käytettävän tilastollisen mallin.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Diskreetin satunnaismuuttujan} jakauma voidaan usein esittää taulukkomuodossa. Eri arvojen todennäköisyydet muodostavat kyseisen satunnaismuuttujan todennäköisyysjakauman, \textbf{pistetodennäköisyysfunktion}, jota voidaan havainnollistaa esimerkiksi pylväsdiagrammilla.
-  \item
-    Jatkuvan satunnaismuuttujan \(Y\) arvot muodostavat jonkin reaaliakselin välin, joka sisältää äärettömän määrän lukuja. Tämän vuoksi jatkuvan satunnaismuuttujan jakauman esittäminen taulukon kautta ei ole luontevaa, vaan jakauma esitetään yleensä satunnaismuuttujan \textbf{tiheysfunktion} avulla.
-
-    \begin{itemize}
-    \tightlist
-    \item
-      Pistetodennäköisyys- ja tiheysfunktiot siis määräävät satunnaismuuttujan mahdollisille arvoille todennäköisyydet väliltä \([0,1]\) ja näin voidaan arvioida havaitun aineiston uskottavuutta ja testata siihen liitettäviä hypoteeseja suhteessa estimoituun suurimman uskottavuuden estimaattiin.
-    \end{itemize}
-  \end{itemize}
-\item
-  Tilastolliset mallit approksimoivat ``todellista'' aineiston generoinutta ilmiötä. Tilastolliset mallit riippuvat \textbf{parametreista} ja keskeinen oletus erityisesti klassisessa tilastotieteessä on, että aineiston generoinutta satunnaisilmiötä kuvaa jokin vakioinen mutta tuntematon parametriarvo (tai niiden joukko).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Kuviossa \ref{fig:poisson} on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin \(\lambda\) arvoilla. Poisson-jakaumaa esitellään tarkemmin alaluvussa \ref{alaluku45}.
-  \end{itemize}
-\end{itemize}
-
-\begin{figure}
-
-{\centering \includegraphics[width=1\linewidth]{images/poisson} 
-
-}
-
-\caption{Esimerkki: Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktio eri parametrin $\lambda$ arvoilla.}\label{fig:poisson}
-\end{figure}
-
-\hfill\break
-
-\textbf{Parametrien estimointi ja niiden testaus}
-
-\begin{itemize}
-\tightlist
-\item
-  Satunnaisilmiötä kuvaava tilastollinen malli perustuu siis johonkin parametriseen todennäköisyysjakaumaan, joka yhdessä havaintojen kanssa määrittää uskottavuusfunktion.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Aineistoa kuvaavan tilastollisen mallin uskottavuus pyritään maksimoimaan, mikä tarkoittaa valitun todennäköisyysjakauman sovittamista havaintoaineistoon mahdollisimman hyvin.
-  \item
-    Tässä nk. ``suurimman uskottavuuden estimoinnissa'' aineiston generoiman (oletetun) todennäköisyysjakauman parametriarvot \textbf{estimoidaan} (eli arvioidaan) käytettävän otoksen/aineiston avulla.
-  \item
-    Perusjoukkoa parhaiten kuvaavan (eli ``aineiston generoineen'') parametrin arvo pyritään siis estimoimaan aineiston perusteella.
-  \end{itemize}
-\item
-  Parametrien estimoinnin lisäksi usein \textbf{testataan} parametreja koskevia oletuksia (eli hypoteeseja).
-\item
-  Estimointi ja testaus ovat tilastolliseen tutkimukseen liittyvän \textbf{tilastollisen päättelyn} keskeisiä välineitä, joiden avulla tutkittavasta ilmiöstä pyritään tekemään johtopäätöksiä siitä kerätyn havaintoaineiston perusteella.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Estimoitujen parametrien testaus voi vastata esimerkiksi seuraavanlaisiin kysymyksiin:
-
-    \begin{itemize}
-    \tightlist
-    \item
-      Onko suomalaisten miesten keskipituus 180~cm?
-    \item
-      Vaikuttaako yliopistokoulutus tulevaisuuden ansioihin?
-    \item
-      Auttaako tietty lääkeaine jonkin sairauden hoidossa?
-    \item
-      Voiko osakemarkkinoiden tuottoja ennustaa?
-    \end{itemize}
-  \end{itemize}
-\item
-  Parametrien testaus on osa tilastollista päättelyä, johon palataan tarkemmin luvussa \ref{luku9}
-\end{itemize}
-
-\hypertarget{alaluku44}{%
-\section{Tilastolliset tunnusluvut}\label{alaluku44}}
-
-\begin{itemize}
-\tightlist
-\item
-  Satunnaismuuttujan todennäköisyysjakauman tietoa voidaan tiivistää tunnuslukuihin, joista keskeisimpiä ovat \textbf{odotusarvo}, \textbf{varianssi} ja \textbf{keskihajonta}.
-\end{itemize}
-
-\begin{defblock}{}
-
-\textbf{Odotusarvo}
-
-Satunnaismuuttujan \(Y\) odotusarvo \(\text{E}(Y)\) kuvaa satunnaismuuttujan odotettavissa olevaa arvoa.
-
-\begin{itemize}
-\tightlist
-\item
-  Muodostamalla satunnaiskokeen tulosten \textbf{painotettu keskiarvo}, jossa kunkin tuloksen painona on vastaavan tapauksen todennäköisyys, niin saatua arvoa sanotaan odotusarvoksi \(\text{E}(Y)\).
-\item
-  Odotusarvo kuvaa jakauman painopistettä.
-\item
-  Merkinnän \(\text{E}(Y)\) käyttö juontaa juurensa englannin kielen sanoihin ``odotus'', expectation, ja ``odotusarvo'', expected value.
-\end{itemize}
-
-\end{defblock}
-
-\begin{eblock}{}
-\textbf{Esimerkki: Odotusarvo}
-
-Perinteikäs esimerkki odotusarvosta on tavallisen kuusitahoisen nopan silmäluvun odotusarvo. Nopanheitto on diskreetti satunnaisilmiö ja tavallisen painottamattoman nopan tapauksessa jokaisen silmäluvun todennäköisyys on yhtä suuri. Merkitään nopan silmälukua (sm) \(Y\) ja sen realisaatiota \(y\). Nopan silmäluvun realisaatioiden mahdolliset arvot ovat \(Y = \{1,2,3,4,5,6\}\) ja niiden todennäköisyydet ovat \(P(Y=y) = \frac{1}{6}\).
-
-Nopanheiton silmäluvun odotusarvo määritetään siis painotettuna keskiarvona \[E(Y) = \sum_{i=1}^6 y \cdot P(Y=y)  = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2} = 3.5\]
-
-\end{eblock}
-
-\hfill\break
-
-\begin{itemize}
-\tightlist
-\item
-  Odotusarvon lisäksi kiinnostuksen kohteena on usein jakauman keskittyneisyys (hajaantuneisuus). Ts. kun halutaan puolestaan kuvata satunnaismuuttujan arvojen vaihtelua, tutkitaan todennäköisyysjakauman \textbf{varianssia} ja \textbf{keskihajontaa}.
-\end{itemize}
-
-\begin{defblock}{}
-
-\textbf{Varianssi}
-
-Satunnaismuuttujan \(Y\) hajontaa voidaan mitata varianssilla
-\[
-\mathrm{Var}(Y) = \text{E}\Big[\Big(Y-\text{E}(Y)\Big)^2\Big],
-\]
-tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
-\[
-\text{D}(Y) = \sqrt{\mathrm{Var}(Y)}.
-\]
-
-\begin{itemize}
-\tightlist
-\item
-  Mitä lähempänä nollaa keskihajonta ja varianssi ovat, sitä todennäköisempää on, että satunnaismuuttujan arvo on lähellä odotusarvoa.
-\item
-  Merkintöjen \(\mathrm{Var}(Y)\) ja \(\text{D}(Y)\) taustalla on englannin kielen sanat variance (varianssi) ja deviation, joka tarkoittaa ``poikkeamaa''/``hajontaa''.
-\end{itemize}
-
-\end{defblock}
-
-\begin{itemize}
-\tightlist
-\item
-  Odotusarvon ja varianssin (keskihajonnan) tavanomaiset \textbf{estimaattorit} ovat otoskeskiarvo ja otosvarianssi (otoshajonta), joihin palataan vielä myöhemmin.
-\end{itemize}
-
-\hypertarget{alaluku45}{%
-\section{Joitain jakaumia}\label{alaluku45}}
-
-Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemme ensin keskeisintä jatkuvien satunnaismuuttujien jakaumaa, normaalijakaumaa, ennen muutamien diskreettien satunnaismuuttujien jakaumia.
-
-\hypertarget{normaalijakauma}{%
-\subsection{Normaalijakauma}\label{normaalijakauma}}
-
-\begin{itemize}
-\item
-  Jos satunnaismuuttuja \(Y\) noudattaa \textbf{normaalijakaumaa} odotusarvolla \(\text{E}(Y)= \mu\) ja varianssilla \(\mathrm{Var}(Y) = \sigma^2\), niin tällöin merkitään \(Y \thicksim \text{N}(\mu, \sigma^2)\).
-\item
-  \(Y\):n tiheysfunktio on muotoa (ks. kuva alla)
-  \[
-  f(y; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{1}{2} \Big(\frac{y- \mu}{\sigma} \Big)^2}, 
-  \]
-\end{itemize}
-
-jossa \(e\) viittaa Neperin lukuun \(e \approx 2,71828\).
-
-\begin{itemize}
-\tightlist
-\item
-  Ylläoleva tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) \(\mu\) ja \(\sigma^2\) annetaan erilaisia arvoja. Nämä kaksi parametria määräävät normaalijakauman tarkemman muodon.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Alla olevassa kuvassa \ref{fig:normaalijakauma} on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoille.
-  \end{itemize}
-\end{itemize}
-
-\begin{figure}
-
-{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/normaalijakauma-1} 
-
-}
-
-\caption{Normaalijakaumien muotoja eri parametriarvoilla.}\label{fig:normaalijakauma}
-\end{figure}
-
-\begin{eblock}{}
-
-\textbf{Esimerkki: Miesten pituus}
-
-\begin{itemize}
-\tightlist
-\item
-  Tutkitaan miesten pituutta hyvin määritellyssä joukossa, kuten varusmiespalvelusta tiettynä vuonna suorittavien joukossa.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Pituus on ominaisuus, jonka voidaan nähdä määräytyvän monista perintö- ja ympäristötekijöistä. Pituutta voidaan siis pitää satunnaismuuttujana.
-  \item
-    Oletetaan, että pituus noudattaa normaalijakaumaa. Näin ollen sm. \(Y\) on valitun miehen pituus ja \(Y \thicksim \text{N}(\mu, \sigma^2)\).
-  \end{itemize}
-\item
-  Tuntemattomien parametrien \(\mu\) ja \(\sigma^2\) tulkinta:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Odotusarvo \(\mu = \text{E}(Y)\) on satunnaisesti valitun miehen pituuden odotettavissa oleva arvo.
-  \item
-    Varianssi \(\sigma^2 = \mathrm{Var}(Y) = \text{E} \Big[\Big(Y- \mu \Big)^2 \Big]\) kuvaa valitun miehen pituuden odotusarvostaan määrätyn poikkeaman (keskihajonnan) neliön odotettavissa olevaa arvoa (kuvaten ts. pituuksien jakauman keskittyneisyyttä/hajaantuneisuutta pituuksien odotusarvon ympärillä).
-  \end{itemize}
-\end{itemize}
-
-\end{eblock}
-
-\hfill\break
 
 \hypertarget{alaluku46}{%
 \section{Sattuman rooli tieteenteossa: Vale-emävale-tilasto?}\label{alaluku46}}
@@ -4348,175 +4598,6 @@ F & 373 & 6 & 341 & 7\\
 \hypertarget{part-osa-ii}{%
 \part{Osa II}\label{part-osa-ii}}
 
-\hypertarget{luku7}{%
-\chapter{Tilastolliset mallit ja jakaumat}\label{luku7}}
-
-\hypertarget{bernoulli--binomi--ja-poisson-jakauma}{%
-\subsection{Bernoulli-, binomi- ja Poisson-jakauma}\label{bernoulli--binomi--ja-poisson-jakauma}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Bernoulli-jakauma} on todennäköisyysjakauma, jossa satunnaismuuttujalla \(Y\) on kaksi mahdollista tulosvaihtoehtoa \(Y=1\) tai \(Y=0\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Yleensä \(Y=0\) tarkoittaa, että jokin tapahtuma ei tapahdu ja \(Y=1\) että tapahtuu.
-  \item
-    Todennäköisyys tapahtumalle \(Y=1\) on \(\text{P}(Y=1)=p\) ja vastaavasti vastatodennäköisyys \(\text{P}(Y=0)=1-p\).
-  \item
-    Bernoulli-jakaumaa merkitään \(Y \thicksim B(p)\), jossa siis \(0 < p < 1\).
-  \item
-    Bernoulli-jakauman pistetodennäköisyysfunktio on muotoa
-    \[
-    f(y; p) = \text{P}(Y=y) = p^y (1-p)^{(1-y)},
-    \]
-    jossa \(y\) on sm:n \(Y\) realisaatio (havaittu arvo) ja parametri \(p\) on tuntematon (voidaan estimoida otoksen avulla, kuten myöhemmin tullaan näkemään).
-  \end{itemize}
-\item
-  Bernoulli-jakauman odotusarvo \(\text{E}(Y)=p\) ja varianssi \(\mathrm{Var}(Y)=p (1-p)\).
-\end{itemize}
-
-\hfill\break
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Binomijakauma}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Olkoon \(Y_1, \ldots, Y_n\) riippumattomia satunnaismuuttujia ja \(Y_i \thicksim B(p), \, i=1,\ldots,n\).
-  \item
-    Jos \(X = Y_1 + Y_2 + \ldots + Y_n\), niin \(X \thicksim \mathrm{Bin}(n,p)\). Ts. sm. \(X\) noudattaa \textbf{binomijakaumaa} parametrein \(n\) ja \(p\).
-  \item
-    Pistetodennäköisyysfunktio:
-  \end{itemize}
-\end{itemize}
-
-\[
-\text{P}(X=k) = \binom nk p^k (1-p)^{(n-k)}.
-\]
-
-\begin{itemize}
-\tightlist
-\item
-  Jakauman odotusarvo \(\text{E}(X)=np\) ja varianssi \(\mathrm{Var}(X) = n p (1-p)\).
-\item
-  Binomijakaumalla kyetään vastaamaan mm. kysymykseen millä todennäköisyydellä \(n\):n kokoisessa otoksessa tapahtuu \(k\) onnistumista.
-\end{itemize}
-
-\begin{eblock}{}
-\textbf{Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876--1885}\footnote{Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). \emph{Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data.} Chapman \& Hall/CRC.}
-
-Vuosien 1876--1885 aikana Saksin osavaltiossa rekisteröitiin yli neljä miljoonaa syntynyttä lasta. Tällöin vanhempien tuli ilmoittaa lapsen sukupuoli (mies tai nainen) heidän syntymätodistuksessaan. Myöhemmässä tutkimuksessa tutkittiin tarkemmin 6115 perhettä, joissa asui 12 lasta ja tarkemmin miesten (poikien) lukumäärää näissä perheissä.
-
-Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 lapseen perheissä. Tarkasteltava jakauma esitetään vielä erikseen oheisessa kuviossa \ref{fig:miestenlkm}.
-
-Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys \(\text{P}(\mathrm{mies}) = p\) on \(p=0.5\).
-
-\end{eblock}
-
-\FloatBarrier
-
-\begin{table}
-\centering\begingroup\fontsize{12}{14}\selectfont
-
-\resizebox{\linewidth}{!}{
-\begin{tabular}{lrrrrrrrrrrrrr}
-\toprule
-  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
-\midrule
-Miesten lkm & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
-Perheiden lkm & 3 & 24 & 104 & 286 & 670 & 1033 & 1343 & 1112 & 829 & 478 & 181 & 45 & 7\\
-\bottomrule
-\end{tabular}}
-\endgroup{}
-\end{table}
-
-\FloatBarrier
-
-\begin{figure}
-
-{\centering \includegraphics[width=7.5\linewidth]{images/Miesten_lkm} 
-
-}
-
-\caption{Miesten lukumäärä Saksin osavaltiossa 12:n lapsen perheissä.}\label{fig:miestenlkm}
-\end{figure}
-
-\FloatBarrier
-
-\textbf{Poisson-jakauma}
-
-\begin{itemize}
-\item
-  Jos satunnaismuuttuja \(Y\) on Poisson-jakautunut, merkitään \(Y \thicksim P(\lambda)\), jossa parametri \(\lambda > 0\) on Poisson-jakauman parametri, jota kutsutaan myös ajoittain intensiteettiparametriksi.
-\item
-  Poisson-jakaumaa voidaan käyttää tilanteissa, joissa sm. \(Y\) on jokin lukumäärä ja sen pistetodennäköisyysfunktio on muotoa
-  \[
-  \text{P}(Y=k) = \frac{e^{-\lambda} \lambda^k}{k!}.
-  \]
-\item
-  Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: \(\text{E}(Y) = \mathrm{Var}(Y) = \lambda\).
-\end{itemize}
-
-\begin{eblock}{}
-\textbf{Esimerkki: Poisson-jakauma}
-
-Tarkastellaan Englannin Valioliigakauden 1995--1996 otteluissa tehtyjä maalimääriä. Valioliiga (The F.A. Premier League) on korkein Englannin jalkapalloliigan sarjataso, jossa ensi kerran juuri kaudella 1995-1996 20 joukkuetta (aiemmin Valioliigan perustamisen kauden 1992--1993 alussa 22 joukkuetta) pelasivat keskenään kerran toisiaan vastaan koti- ja vieraskentällä. Otteluita oli siis yhteensä 380.
-
-Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin\footnote{Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? \emph{Chance} 10(1), 15-19.}, jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme ``keskimääräisen'' kotijoukkueen ja vierasjoukkueen ``edustavaa'' ottelua.
-
-Seuraava taulukko raportoi tehtyjen maalimäärien jakaumat pelatuissa 380 ottelussa. Neljän tai yli neljän maalin tapaukset kirjataan 4+:nä maalina. Ts. esim. kys. kauden lopputulokset \emph{Blackburn Rovers} - \emph{Nottingham Forest} 7-0 ja \emph{Bolton Wanderers} - \emph{Manchester United} 0-6 tulevat aineistoon tuloksina 4+ vs.~0 ja 0 vs.~4+.
-
-\end{eblock}
-
-\begin{tabular}{lrrrrrr}
-\toprule
-\multicolumn{1}{c}{Kotij. maalien lkm.} & \multicolumn{5}{c}{Vierasj. maalien lkm.} & \multicolumn{1}{c}{Yht.} \\
-\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-6} \cmidrule(l{3pt}r{3pt}){7-7}
-  & 0 & 1 & 2 & 3 & 4+ & Yht.\\
-\midrule
-0 & 27 & 29 & 10 & 8 & 2 & 76\\
-1 & 59 & 53 & 14 & 12 & 4 & 142\\
-2 & 28 & 32 & 14 & 12 & 4 & 90\\
-3 & 19 & 14 & 7 & 4 & 1 & 45\\
-4+ & 7 & 8 & 10 & 2 & 0 & 27\\
-\addlinespace
-Yht. & 140 & 136 & 55 & 38 & 11 & 380\\
-\bottomrule
-\end{tabular}
-
-\begin{eblock}{}
-\textbf{Esimerkki (jatkuu): Poisson-jakauma}
-
-Olettamalla, että koti- ja vierasjoukkueen todennäköisyys tehdä maali ottelun aikana on vakio, niin tällöin koti- ja vierasjoukkueen ottelun aikana tekemien maalien lukumäärää (ilman edellä käytettyä maalimäärien ``katkaisua'' neljään) voidaan melko hyvin approksimoida oletuksella, että nämä lukumäärät ovat Poisson-jakautuneita. Ts. \(Y^H_i \thicksim P(\lambda_H)\) on sm., joka kuvaa \(i\):n ottelun kotijoukkueen tekemien maalien lukumäärää ja intensiteettiparametrin \(\lambda_H\) arvon määrittäminen kuuluu tilastollisen päättelyn ja erityisesti estimointiteorian piiriin. Vastaavasti vierasjoukkueen maalimäärät: \(Y^A_i \thicksim P(\lambda_A)\).
-
-Osoittautuu, että parametreille \(\lambda_H\) ja \(\lambda_A\) saatavat estimaatit ovat \(\lambda_H = 1.49\) ja \(\lambda_A = 1.06\) ja ne vastaavat tässä yksinkertaistetussa tilanteessa koti- ja vierasjoukkueen keskimääräisiä maalimääriä:
-
-\end{eblock}
-
-\FloatBarrier
-
-\begin{tabular}{llll}
-\toprule
-  & Kotijoukkue (home) & Vierasjoukkue (away) & Yht.\\
-\midrule
-Keskiarvo & 1.486 & 1.063 & 2.550\\
-Varianssi & 1.316 & 1.172 & 2.618\\
-\bottomrule
-\end{tabular}
-
-\begin{eblock}{}
-Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
-
-On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
-
-\end{eblock}
-
 \hypertarget{luku8}{%
 \chapter{Otantamenetelmät}\label{luku8}}
 
@@ -5155,6 +5236,202 @@ Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee \(Y_1, \ldot
 
 \end{eblock}
 
+\hypertarget{luku7}{%
+\section{Tilastolliset mallit ja jakaumat}\label{luku7}}
+
+Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemme ensin keskeisintä jatkuvien satunnaismuuttujien jakaumaa, normaalijakaumaa, ennen muutamien diskreettien satunnaismuuttujien jakaumia.
+
+\hypertarget{normaalijakauma}{%
+\subsection{Normaalijakauma}\label{normaalijakauma}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(Y\):n tiheysfunktio on muotoa (ks. kuva alla)
+  \[
+  f(y; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{1}{2} \Big(\frac{y- \mu}{\sigma} \Big)^2}, 
+  \]
+\end{itemize}
+
+jossa \(e\) viittaa Neperin lukuun \(e \approx 2,71828\).
+
+\hypertarget{bernoulli--binomi--ja-poisson-jakauma}{%
+\subsection{Bernoulli-, binomi- ja Poisson-jakauma}\label{bernoulli--binomi--ja-poisson-jakauma}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Bernoulli-jakauma} on todennäköisyysjakauma, jossa satunnaismuuttujalla \(Y\) on kaksi mahdollista tulosvaihtoehtoa \(Y=1\) tai \(Y=0\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Yleensä \(Y=0\) tarkoittaa, että jokin tapahtuma ei tapahdu ja \(Y=1\) että tapahtuu.
+  \item
+    Todennäköisyys tapahtumalle \(Y=1\) on \(\text{P}(Y=1)=p\) ja vastaavasti vastatodennäköisyys \(\text{P}(Y=0)=1-p\).
+  \item
+    Bernoulli-jakaumaa merkitään \(Y \thicksim B(p)\), jossa siis \(0 < p < 1\).
+  \item
+    Bernoulli-jakauman pistetodennäköisyysfunktio on muotoa
+    \[
+    f(y; p) = \text{P}(Y=y) = p^y (1-p)^{(1-y)},
+    \]
+    jossa \(y\) on sm:n \(Y\) realisaatio (havaittu arvo) ja parametri \(p\) on tuntematon (voidaan estimoida otoksen avulla, kuten myöhemmin tullaan näkemään).
+  \end{itemize}
+\item
+  Bernoulli-jakauman odotusarvo \(\text{E}(Y)=p\) ja varianssi \(\mathrm{Var}(Y)=p (1-p)\).
+\end{itemize}
+
+\hfill\break
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Binomijakauma}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Olkoon \(Y_1, \ldots, Y_n\) riippumattomia satunnaismuuttujia ja \(Y_i \thicksim B(p), \, i=1,\ldots,n\).
+  \item
+    Jos \(X = Y_1 + Y_2 + \ldots + Y_n\), niin \(X \thicksim \mathrm{Bin}(n,p)\). Ts. sm. \(X\) noudattaa \textbf{binomijakaumaa} parametrein \(n\) ja \(p\).
+  \item
+    Pistetodennäköisyysfunktio:
+  \end{itemize}
+\end{itemize}
+
+\[
+\text{P}(X=k) = \binom nk p^k (1-p)^{(n-k)}.
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Jakauman odotusarvo \(\text{E}(X)=np\) ja varianssi \(\mathrm{Var}(X) = n p (1-p)\).
+\item
+  Binomijakaumalla kyetään vastaamaan mm. kysymykseen millä todennäköisyydellä \(n\):n kokoisessa otoksessa tapahtuu \(k\) onnistumista.
+\end{itemize}
+
+\begin{eblock}{}
+\textbf{Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876--1885}\footnote{Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). \emph{Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data.} Chapman \& Hall/CRC.}
+
+Vuosien 1876--1885 aikana Saksin osavaltiossa rekisteröitiin yli neljä miljoonaa syntynyttä lasta. Tällöin vanhempien tuli ilmoittaa lapsen sukupuoli (mies tai nainen) heidän syntymätodistuksessaan. Myöhemmässä tutkimuksessa tutkittiin tarkemmin 6115 perhettä, joissa asui 12 lasta ja tarkemmin miesten (poikien) lukumäärää näissä perheissä.
+
+Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 lapseen perheissä. Tarkasteltava jakauma esitetään vielä erikseen oheisessa kuviossa \ref{fig:miestenlkm}.
+
+Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys \(\text{P}(\mathrm{mies}) = p\) on \(p=0.5\).
+
+\end{eblock}
+
+\FloatBarrier
+
+\begin{table}
+\centering\begingroup\fontsize{12}{14}\selectfont
+
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
+\midrule
+Miesten lkm & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
+Perheiden lkm & 3 & 24 & 104 & 286 & 670 & 1033 & 1343 & 1112 & 829 & 478 & 181 & 45 & 7\\
+\bottomrule
+\end{tabular}}
+\endgroup{}
+\end{table}
+
+\FloatBarrier
+
+\begin{figure}
+
+{\centering \includegraphics[width=7.5\linewidth]{images/Miesten_lkm} 
+
+}
+
+\caption{Miesten lukumäärä Saksin osavaltiossa 12:n lapsen perheissä.}\label{fig:miestenlkm}
+\end{figure}
+
+\FloatBarrier
+
+\textbf{Poisson-jakauma}
+
+\begin{itemize}
+\item
+  Jos satunnaismuuttuja \(Y\) on Poisson-jakautunut, merkitään \(Y \thicksim P(\lambda)\), jossa parametri \(\lambda > 0\) on Poisson-jakauman parametri, jota kutsutaan myös ajoittain intensiteettiparametriksi.
+\item
+  Poisson-jakaumaa voidaan käyttää tilanteissa, joissa sm. \(Y\) on jokin lukumäärä ja sen pistetodennäköisyysfunktio on muotoa
+  \[
+  \text{P}(Y=k) = \frac{e^{-\lambda} \lambda^k}{k!}.
+  \]
+\item
+  Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: \(\text{E}(Y) = \mathrm{Var}(Y) = \lambda\).
+\item
+  Kuviossa \ref{fig:poisson} on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin \(\lambda\) arvoilla. Poisson-jakaumaa esitellään tarkemmin alaluvussa \ref{alaluku45}.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/poisson} 
+
+}
+
+\caption{Esimerkki: Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktio eri parametrin $\lambda$ arvoilla.}\label{fig:poisson}
+\end{figure}
+
+\begin{eblock}{}
+\textbf{Esimerkki: Poisson-jakauma}
+
+Tarkastellaan Englannin Valioliigakauden 1995--1996 otteluissa tehtyjä maalimääriä. Valioliiga (The F.A. Premier League) on korkein Englannin jalkapalloliigan sarjataso, jossa ensi kerran juuri kaudella 1995-1996 20 joukkuetta (aiemmin Valioliigan perustamisen kauden 1992--1993 alussa 22 joukkuetta) pelasivat keskenään kerran toisiaan vastaan koti- ja vieraskentällä. Otteluita oli siis yhteensä 380.
+
+Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin\footnote{Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? \emph{Chance} 10(1), 15-19.}, jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme ``keskimääräisen'' kotijoukkueen ja vierasjoukkueen ``edustavaa'' ottelua.
+
+Seuraava taulukko raportoi tehtyjen maalimäärien jakaumat pelatuissa 380 ottelussa. Neljän tai yli neljän maalin tapaukset kirjataan 4+:nä maalina. Ts. esim. kys. kauden lopputulokset \emph{Blackburn Rovers} - \emph{Nottingham Forest} 7-0 ja \emph{Bolton Wanderers} - \emph{Manchester United} 0-6 tulevat aineistoon tuloksina 4+ vs.~0 ja 0 vs.~4+.
+
+\end{eblock}
+
+\begin{tabular}{lrrrrrr}
+\toprule
+\multicolumn{1}{c}{Kotij. maalien lkm.} & \multicolumn{5}{c}{Vierasj. maalien lkm.} & \multicolumn{1}{c}{Yht.} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-6} \cmidrule(l{3pt}r{3pt}){7-7}
+  & 0 & 1 & 2 & 3 & 4+ & Yht.\\
+\midrule
+0 & 27 & 29 & 10 & 8 & 2 & 76\\
+1 & 59 & 53 & 14 & 12 & 4 & 142\\
+2 & 28 & 32 & 14 & 12 & 4 & 90\\
+3 & 19 & 14 & 7 & 4 & 1 & 45\\
+4+ & 7 & 8 & 10 & 2 & 0 & 27\\
+\addlinespace
+Yht. & 140 & 136 & 55 & 38 & 11 & 380\\
+\bottomrule
+\end{tabular}
+
+\begin{eblock}{}
+\textbf{Esimerkki (jatkuu): Poisson-jakauma}
+
+Olettamalla, että koti- ja vierasjoukkueen todennäköisyys tehdä maali ottelun aikana on vakio, niin tällöin koti- ja vierasjoukkueen ottelun aikana tekemien maalien lukumäärää (ilman edellä käytettyä maalimäärien ``katkaisua'' neljään) voidaan melko hyvin approksimoida oletuksella, että nämä lukumäärät ovat Poisson-jakautuneita. Ts. \(Y^H_i \thicksim P(\lambda_H)\) on sm., joka kuvaa \(i\):n ottelun kotijoukkueen tekemien maalien lukumäärää ja intensiteettiparametrin \(\lambda_H\) arvon määrittäminen kuuluu tilastollisen päättelyn ja erityisesti estimointiteorian piiriin. Vastaavasti vierasjoukkueen maalimäärät: \(Y^A_i \thicksim P(\lambda_A)\).
+
+Osoittautuu, että parametreille \(\lambda_H\) ja \(\lambda_A\) saatavat estimaatit ovat \(\lambda_H = 1.49\) ja \(\lambda_A = 1.06\) ja ne vastaavat tässä yksinkertaistetussa tilanteessa koti- ja vierasjoukkueen keskimääräisiä maalimääriä:
+
+\end{eblock}
+
+\FloatBarrier
+
+\begin{tabular}{llll}
+\toprule
+  & Kotijoukkue (home) & Vierasjoukkue (away) & Yht.\\
+\midrule
+Keskiarvo & 1.486 & 1.063 & 2.550\\
+Varianssi & 1.316 & 1.172 & 2.618\\
+\bottomrule
+\end{tabular}
+
+\begin{eblock}{}
+Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
+
+On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
+
+\end{eblock}
+
 \hypertarget{alaluku92}{%
 \section{Otosjakauma: Estimaattori ja estimaatti}\label{alaluku92}}
 
@@ -5337,7 +5614,7 @@ Tarkentuvan estimaattorin \(\widehat{\theta}\) arvot lähestyvät parametrin \(\
 \begin{itemize}
 \tightlist
 \item
-  Otoskeskiarvo on satunnaismuutuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+  Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
 \item
   Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan \(\mu\), on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts.
 \end{itemize}
@@ -5571,39 +5848,47 @@ jota otosvarianssi harhattomasti estimoi.
 
 \end{eblock}
 
-\hypertarget{alaluku95}{%
-\section{Muita tunnuslukuja}\label{alaluku95}}
-
-Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkintojen tueksi tarvitaan tunnuslukuja. Mm. otoskeskiarvoa tunnuslukuna tarkasteltiin jo edellä. Tunnuslukuja on paljon, ja jokainen niistä valottaa muuttujan jakaumaa eri näkökulmista.
-
-Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.
+\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
+\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
 \begin{itemize}
+\tightlist
 \item
-  \textbf{Moodi}: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
+  Satunnaisotos
 \item
-  \textbf{Mediaani}: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Luokitteluasteikolla mitattaville muuttujille ei ole olemassa luontevia sijaintilukuja keskilukujen yhteydessä pl. moodi.
-  \end{itemize}
+  Yhteisjakauma
 \item
-  Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää \textbf{fraktiileja}: pp\%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp\%.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Eniten käytettyjä fraktiileja ovat \textbf{kvartiilit}. \textbf{Alakvartiili} \(Q_1\) on 25 \%:n fraktiili, ja \textbf{yläkvartiili} \(Q_3\) on 75 \% fraktiili.
-  \item
-    Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs fraktiili \(D_9\) on 90 \% fraktiili.
-  \end{itemize}
+  (Satunnaisotoksen) tilastollinen malli
 \item
-  Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
+  Yhteisjakauma
 \item
-  Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat \textbf{vinous} ja \textbf{huipukkuus}. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
+  Riippumattomat satunnaismuuttujat
+\item
+  Otosjakauma
+\item
+  Tunnusluku/otossuure
+\item
+  Otosjakauma
+\item
+  Estimaattori ja estimaatti
+\item
+  (Hyvän) estimaattorin ominaisuuksia: Harhattomuus, tyhjentävyys, tehokkuus ja tarkentuvuus
+\item
+  Otoskeskiarvo ja otosvarianssi estimaattoreina
+\item
+  Standardipoikkeama
+\item
+  Normaalistijakautunut satunnaisotos
+\item
+  Standardoitu satunnaismuuttuja
+\item
+  Standardoidun aritmeettisen keskiarvon otosjakauma
+\item
+  Suhteellisen frekvenssin otosjakauma
 \end{itemize}
+
+\hypertarget{satunnaisuudesta-johtuvan-epuxe4varmuuden-arvioiminen}{%
+\chapter{Satunnaisuudesta johtuvan epävarmuuden arvioiminen}\label{satunnaisuudesta-johtuvan-epuxe4varmuuden-arvioiminen}}
 
 \hypertarget{alaluku96}{%
 \section{Luottamusvälit}\label{alaluku96}}
@@ -6183,43 +6468,45 @@ n = \Big(\frac{z_{\alpha/2} \,\, \sqrt{p(1-p)}}{d} \Big)^2.
 
 \end{eblock}
 
-\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\hypertarget{alaluku95}{%
+\section{Muita tunnuslukuja}\label{alaluku95}}
+
+Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkintojen tueksi tarvitaan tunnuslukuja. Mm. otoskeskiarvoa tunnuslukuna tarkasteltiin jo edellä. Tunnuslukuja on paljon, ja jokainen niistä valottaa muuttujan jakaumaa eri näkökulmista.
+
+Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.
+
+\begin{itemize}
+\item
+  \textbf{Moodi}: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
+\item
+  \textbf{Mediaani}: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Luokitteluasteikolla mitattaville muuttujille ei ole olemassa luontevia sijaintilukuja keskilukujen yhteydessä pl. moodi.
+  \end{itemize}
+\item
+  Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää \textbf{fraktiileja}: pp\%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp\%.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Eniten käytettyjä fraktiileja ovat \textbf{kvartiilit}. \textbf{Alakvartiili} \(Q_1\) on 25 \%:n fraktiili, ja \textbf{yläkvartiili} \(Q_3\) on 75 \% fraktiili.
+  \item
+    Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs fraktiili \(D_9\) on 90 \% fraktiili.
+  \end{itemize}
+\item
+  Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
+\item
+  Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat \textbf{vinous} ja \textbf{huipukkuus}. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
+\end{itemize}
+
+\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.-1}{%
+\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.-1}}
 
 \begin{itemize}
 \tightlist
-\item
-  Satunnaisotos
-\item
-  Yhteisjakauma
-\item
-  (Satunnaisotoksen) tilastollinen malli
-\item
-  Yhteisjakauma
-\item
-  Riippumattomat satunnaismuuttujat
-\item
-  Otosjakauma
-\item
-  Tunnusluku/otossuure
-\item
-  Otosjakauma
-\item
-  Estimaattori ja estimaatti
-\item
-  (Hyvän) estimaattorin ominaisuuksia: Harhattomuus, tyhjentävyys, tehokkuus ja tarkentuvuus
-\item
-  Otoskeskiarvo ja otosvarianssi estimaattoreina
-\item
-  Standardipoikkeama
-\item
-  Normaalistijakautunut satunnaisotos
-\item
-  Standardoitu satunnaismuuttuja
-\item
-  Standardoidun aritmeettisen keskiarvon otosjakauma
-\item
-  Suhteellisen frekvenssin otosjakauma
 \item
   Luottamusväli
 \item

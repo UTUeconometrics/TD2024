@@ -1,0 +1,491 @@
+# Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma {#luku9}
+
+Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia tn-laskennan kurssin jälkeiselle tilastollisen päättelyn peruskurssille ([TILM3555](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731)).
+
+## Satunnaisotos, yhteisjakauma ja tilastollinen malli {#alaluku91}
+
+- Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on satunnaisilmiöt, joita kuvataan satunnaismuuttujia käyttäen. Satunnaismuuttujilla on todennäköisyysjakaumat, joita tilastotieteessä kuvataan todennäköisyys- eli tiheysfunktion (tai pistetodennäköisyysfunktion) avulla.  
+  - Merkitään satunnaismuuttujaa isolla kirjaimella, $Y$, ja satunnaismuuttujan realisaatiota pienellä kirjaimella $y$. Otoskokoa, eli otokseen osallistuvien tilastoyksiköiden määrää merkitään $n$:llä ja tilastoyksiköitä indeksöidään alaindeksillä $i=1,\ldots,n$. 
+  - Otoksen poimimisen jälkeen satunnaismuuttujat $Y_1, \ldots, Y_n$ saavat havaituiksi arvoikseen havaintoarvot $y_1, \ldots, y_n$ (ts. $Y_1=y_1, \ldots, Y_n = y_n$).
+  - Näin havaintoaineisto on siis __satunnaisotos__, joka voidaan määritellä tarkemmin seuraavasti.
+
+::: {.defblock .mikko data-latex="{}"}
+**Satunnaisotos**  
+
+Olkoot $Y_1, \ldots, Y_n$ riippumattomia ja samoinjakautuneita satunnaismuuttujia, joiden tiheysfunktiota (tf., tai pistetodennäköisyysfunktiota (ptnf)) merkitään $f(y, \theta)$:llä, jossa $y$:n on yksittäisen sm:jan $Y$ reaalisaatio ja $\theta$ on jokin jakauman muodon määräävä parametri (tai parametrit).  
+
+Parametrin $\theta$ arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, __estimoida__, sen arvo lopulta käytettävissä olevasta aineistosta.
+:::
+
+\
+
+__Satunnaisotoksen tilastollinen malli__
+
+- Havaintoarvot $y_1, \dots, y_n$ ovat kiinteitä lukuja, mutta ne vaihtelevat satunnaisesti otoksesta toiseen. Satunnaisotannassa __satunnaisuus liittyy siis havaintoarvojen vaihteluun satunnaisesti otoksesta toiseen__. 
+  - Satunnaisuus ei siis liity otannan tuloksena saatuihin havaintoarvoihin, vaan otoksen poimintaan.
+
+- Satunnaismuuttujien $Y_1, \ldots, Y_n$ __yhteisjakauma__ muodostaa (tiettyjen lisäoletusten jälkeen) __tilastollisen mallin__ havaintoarvojen satunnaiselle vaihtelulle eri otoksissa.
+  - Koska tällä kurssilla satunnaismuuttujat $Y_1, \ldots, Y_n$ oletetaan __riippumattomiksi toisiinsa nähden__, niiden yhteisjakauma on tulomuotoa $f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)$.
+
+- Tässä $f(y_1, \ldots, y_n; \theta)$ on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli. 
+  - Useimmiten kuitenkin ajatellaan, että on käytettävä niin yksinkertaisia menetelmiä kuin mahdollista, mutta ei yhtään yksinkertaisempia. Tämä on ns. **parsimoonisuusperiaate** eli **vähäparametrisuus-** tai **säästeliäisyysperiaate**.
+  - Vähäparametrisuusperiaatteen voidaan nähdä perustuvan ns. [Occamin partaveitsen -periaatteeseen](https://fi.wikipedia.org/wiki/Occamin_partaveitsi), jonka mukaan *"ilmiöitä selittävien tekijöiden määrän tulee olla mahdollisimman vähäinen"*, ts. tilastotieteessä menetelmien (mallien) tulee olla mahdollisimman yksinkertaisia, mutta silti riittäviä.
+  - Tämä periaate ja sen suhde ns. **varianssin ja harhan väliseen kompromissiin** on erityisen tärkeä erityisesti tilastollisen ennustamisen ja viime vuosikymmeninä yleistyneen tilastollisen (kone)oppimisen sovellutuksissa (ks. tarkemmin alaluku \@ref(alaluku33)).
+
+- Oletetaan, että $Y_1, \ldots, Y_n$ ovat aiempien oletusten pätiessä riippumattomia sm:jia ja että ne muodostavat  satunnaisotoksen jakaumasta, jonka odotusarvo on $\mu$ ja varianssi on $\sigma^2$.
+  - Ts. oletamme
+
+$$
+\text{E}(Y_i) = \mu,  \quad \text{ja} \quad 
+\mathrm{Var}(Y_i) = \sigma^2, \quad i=1,\ldots,n.
+$$
+
+  - Tässä tapauksessa mielenkiinnon kohteena olevat parametrit ovat siis $\mu$ ja $\sigma^2$ eli $\theta = (\mu \quad \sigma^2)$.
+  - Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on että miten estimointi suoritetaan luotettavasti.
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: satunnaisotos normaalijakaumasta**  
+
+Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee $Y_1, \ldots, Y_n \indep, \,\, Y_i \thicksim \text{N}(\mu, \sigma^2),\,\, i=1,\ldots,n$.  
+
+- Merkintä $\indep$ tarkoittaa, että sm:t $Y_1,\ldots,Y_n$ ovat riippumattomia ja samoin jakautuneita (toisinaan myös lyhyesti _iid_ tai _i.i.d_, joka tulee englannin kielen ilmaisusta "independent and identically distributed"). Merkintä soveltuu käytettäväksi muidenkin jakaumien tapauksessa.
+- Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon ($n=10$) satunnaisotos standardoidusta normaalijakaumasta (ts. $Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10$) komennolla rnorm(10).
+:::
+
+\newpage
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: miesten pituus**  
+
+- Kerätään havaintoja miesten pituuksista yksinkertaisella satunnaisotannalla (takaisinpalauttaen) $n$ kappaletta. 
+
+- Tällöin havaintoarvoja $Y_1, \ldots, Y_n$ voidaan pitää riippumattomina satunnaismuuttujina, joista jokainen noudattaa tehdyn jakaumaoletuksen mukaan normaalijakaumaa $\text{N}(\mu, \sigma^2)$.
+
+- Estimoinnin tehtävänä on muodostaa parhaat mahdolliset arviot parametreille $\mu$ ja $\sigma^2$, ja mahdollisesti testata esimerkiksi odotusarvolle $\mu$ asetettua hypoteesia.
+:::
+
+## Tilastolliset mallit ja jakaumat {#luku7}
+
+Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemme ensin keskeisintä jatkuvien satunnaismuuttujien jakaumaa, normaalijakaumaa, ennen muutamien diskreettien satunnaismuuttujien jakaumia.
+
+
+### Normaalijakauma
+
+- $Y$:n tiheysfunktio on muotoa (ks. kuva alla)
+$$
+f(y; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{1}{2} \Big(\frac{y- \mu}{\sigma} \Big)^2}, 
+$$
+
+jossa $e$ viittaa Neperin lukuun $e \approx 2,71828$.
+
+
+### Bernoulli-, binomi- ja Poisson-jakauma
+
+- __Bernoulli-jakauma__ on todennäköisyysjakauma, jossa satunnaismuuttujalla $Y$ on kaksi mahdollista tulosvaihtoehtoa $Y=1$ tai $Y=0$.
+  - Yleensä $Y=0$ tarkoittaa, että jokin tapahtuma ei tapahdu ja $Y=1$ että tapahtuu.
+  - Todennäköisyys tapahtumalle $Y=1$ on $\text{P}(Y=1)=p$ ja vastaavasti vastatodennäköisyys $\text{P}(Y=0)=1-p$.
+  - Bernoulli-jakaumaa merkitään $Y \thicksim B(p)$, jossa siis $0 < p < 1$.
+  - Bernoulli-jakauman pistetodennäköisyysfunktio on muotoa
+$$
+f(y; p) = \text{P}(Y=y) = p^y (1-p)^{(1-y)},
+$$
+jossa $y$ on sm:n $Y$ realisaatio (havaittu arvo) ja parametri $p$ on tuntematon (voidaan estimoida otoksen avulla, kuten myöhemmin tullaan näkemään).
+
+- Bernoulli-jakauman odotusarvo $\text{E}(Y)=p$ ja varianssi $\mathrm{Var}(Y)=p (1-p)$.
+
+\
+
+- __Binomijakauma__
+  - Olkoon $Y_1, \ldots, Y_n$ riippumattomia satunnaismuuttujia ja $Y_i \thicksim B(p), \, i=1,\ldots,n$.
+  - Jos $X = Y_1 + Y_2 + \ldots + Y_n$, niin  $X \thicksim \mathrm{Bin}(n,p)$. Ts. sm. $X$ noudattaa __binomijakaumaa__ parametrein $n$ ja $p$.
+  - Pistetodennäköisyysfunktio:
+
+$$
+\text{P}(X=k) = \binom nk p^k (1-p)^{(n-k)}.
+$$
+
+  - Jakauman odotusarvo $\text{E}(X)=np$ ja varianssi $\mathrm{Var}(X) = n p (1-p)$.
+  - Binomijakaumalla kyetään vastaamaan mm. kysymykseen millä todennäköisyydellä $n$:n kokoisessa otoksessa tapahtuu $k$ onnistumista. 
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876--1885**^[Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). _Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data._ Chapman & Hall/CRC.] 
+
+Vuosien 1876--1885 aikana Saksin osavaltiossa rekisteröitiin yli neljä miljoonaa syntynyttä lasta. Tällöin vanhempien tuli ilmoittaa lapsen sukupuoli (mies tai nainen) heidän syntymätodistuksessaan. Myöhemmässä tutkimuksessa tutkittiin tarkemmin 6115 perhettä, joissa asui 12 lasta ja tarkemmin miesten (poikien) lukumäärää näissä perheissä.
+
+Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 lapseen perheissä. Tarkasteltava jakauma esitetään vielä erikseen oheisessa kuviossa \@ref(fig:miestenlkm). 
+
+Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys $\text{P}(\mathrm{mies}) = p$ on $p=0.5$.
+:::
+
+\FloatBarrier
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(ggplot2)
+theme_set(theme_bw())
+miehet = c(0,1,2,3,4,5,6,7,8,9,10,11,12)
+perheet = c(3,24,104,286,670,1033,1343,1112,829,478,181,45,7)
+saks = rbind.data.frame(miehet, perheet)
+rownames(saks) = c("Miesten lkm", "Perheiden lkm")
+colnames(saks) = c(0:12)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+kable(saks, booktabs = TRUE) %>% 
+  kable_styling(font_size = 12, latex_options = "scale_down")
+```
+
+\FloatBarrier
+
+```{r miestenlkm, echo=FALSE, fig.cap="Miesten lukumäärä Saksin osavaltiossa 12:n lapsen perheissä.", fig.align='center', out.width = "750%"}
+knitr::include_graphics("images/Miesten_lkm.jpg")
+```
+
+\FloatBarrier
+
+__Poisson-jakauma__
+
+- Jos satunnaismuuttuja $Y$ on Poisson-jakautunut, merkitään $Y \thicksim P(\lambda)$, jossa parametri $\lambda > 0$ on Poisson-jakauman parametri, jota kutsutaan myös ajoittain intensiteettiparametriksi.
+- Poisson-jakaumaa voidaan käyttää tilanteissa, joissa sm. $Y$ on jokin lukumäärä ja sen pistetodennäköisyysfunktio on muotoa
+$$
+\text{P}(Y=k) = \frac{e^{-\lambda} \lambda^k}{k!}.
+$$
+
+- Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: $\text{E}(Y) = \mathrm{Var}(Y) = \lambda$.
+
+- Kuviossa \@ref(fig:poisson) on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin $\lambda$ arvoilla. Poisson-jakaumaa esitellään tarkemmin alaluvussa \@ref(alaluku45).
+
+
+```{r poisson, echo=FALSE, fig.cap="Esimerkki: Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktio eri parametrin $\\lambda$ arvoilla.", fig.align='center', out.width = "100%"}
+knitr::include_graphics("images/poisson.jpg")
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Poisson-jakauma**
+
+Tarkastellaan Englannin Valioliigakauden 1995--1996 otteluissa tehtyjä maalimääriä. Valioliiga (The F.A. Premier League) on korkein Englannin jalkapalloliigan sarjataso, jossa ensi kerran juuri kaudella 1995-1996 20 joukkuetta (aiemmin Valioliigan perustamisen kauden 1992--1993 alussa 22 joukkuetta) pelasivat keskenään kerran toisiaan vastaan koti- ja vieraskentällä. Otteluita oli siis yhteensä 380.
+
+Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin^[Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? _Chance_ 10(1), 15-19.], jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme "keskimääräisen" kotijoukkueen ja vierasjoukkueen "edustavaa" ottelua.
+
+Seuraava taulukko raportoi tehtyjen maalimäärien jakaumat pelatuissa 380 ottelussa. Neljän tai yli neljän maalin tapaukset kirjataan 4+:nä maalina. Ts. esim. kys. kauden lopputulokset _Blackburn Rovers_ - _Nottingham Forest_ 7-0 ja _Bolton Wanderers_ - _Manchester United_ 0-6 tulevat aineistoon tuloksina 4+ vs. 0 ja 0 vs. 4+.
+:::
+```{r, echo = FALSE}
+rivi1 = c(27,29,10,8,2,76)
+rivi2 = c(59,53,14,12,4,142)
+rivi3 = c(28,32,14,12,4,90)
+rivi4 = c(19,14,7,4,1,45)
+rivi5 = c(7,8,10,2,0,27)
+rivi6 = c(140,136,55,38,11,380)
+
+taulukko = rbind.data.frame(rivi1,rivi2,rivi3,rivi4,rivi5,rivi6)
+rownames(taulukko) = c("0", "1", "2", "3", "4+", "Yht.")
+colnames(taulukko) = c("0", "1", "2", "3", "4+", "Yht.")
+
+kable(taulukko, booktabs = TRUE) %>%
+  add_header_above(c("Kotij. maalien lkm." = 1, "Vierasj. maalien lkm." = 5, "Yht." = 1)) 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki (jatkuu): Poisson-jakauma**
+
+Olettamalla, että koti- ja vierasjoukkueen todennäköisyys tehdä maali ottelun aikana on vakio, niin tällöin koti- ja vierasjoukkueen ottelun aikana tekemien maalien lukumäärää (ilman edellä käytettyä maalimäärien "katkaisua" neljään) voidaan melko hyvin approksimoida oletuksella, että nämä lukumäärät ovat Poisson-jakautuneita. Ts. $Y^H_i \thicksim P(\lambda_H)$ on sm., joka kuvaa $i$:n ottelun kotijoukkueen tekemien maalien lukumäärää ja intensiteettiparametrin $\lambda_H$ arvon määrittäminen kuuluu tilastollisen päättelyn ja erityisesti estimointiteorian piiriin. Vastaavasti vierasjoukkueen maalimäärät: $Y^A_i \thicksim P(\lambda_A)$. 
+
+Osoittautuu, että parametreille $\lambda_H$ ja $\lambda_A$ saatavat estimaatit ovat $\lambda_H = 1.49$ ja $\lambda_A = 1.06$ ja ne vastaavat tässä yksinkertaistetussa tilanteessa koti- ja vierasjoukkueen keskimääräisiä maalimääriä:
+:::
+
+\FloatBarrier
+
+```{r, echo = FALSE}
+ka = c("1.486","1.063","2.550")
+va = c("1.316","1.172","2.618")
+taulukko = rbind.data.frame(ka, va)
+rownames(taulukko) = c("Keskiarvo", "Varianssi")
+colnames(taulukko) = c("Kotijoukkue (home)", "Vierasjoukkue (away)", "Yht.")
+
+kable(taulukko, booktabs = TRUE) 
+```
+
+::: {.eblock .kimmo data-latex="{}"}
+Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
+
+On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
+:::
+
+## Otosjakauma: Estimaattori ja estimaatti {#alaluku92}
+
+- Erityisesti klassisessa tilastotieteessä tilastollinen päättely pohjautuu aineiston tilastollisen mallin kuvaamalle tilastolliselle stabiliteetille, joka ilmenee ajatuksena aineiston keruun toistamisesta.
+    - Oletetaan, että tarkasteltavan aineiston on tuottanut satunnaisotanta tai satunnaiskoe, joka noudattaa tilastollista mallia $f(y_1, \ldots, y_n; \theta)$ (aiemmin merkinnöin).
+    - Toistetaan aineiston keruu samoissa olosuhteissa yhä uudelleen ja uudelleen.
+    - Saatava aineisto (numeeriset arvot) $y_1, \ldots, y_n$ vaihtelevat näin ollen valitun tilastollisen mallin jakauman kuvaamalla tavalla.
+
+- Satunnaisotoksesta voidaan laskea erilaisia __tunnuslukuja/otossuureita__, joita merkitään $T$:llä, ts. ne ovat aineiston funktioita 
+$$
+T = g(Y_1, \ldots, Y_n).
+$$
+
+- __Tunnusluvut ovat satunnaismuuttujien funktioina myös satunnaismuuttujia.__
+  - Tunnusluvulla on nk. todellinen arvo, $g(\theta)$, joka vastaa tunnusluvun arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.
+  - Esimerkkinä tunnusluvusta on keskiarvo $\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i$.
+  - **Tunnusluvun havaittu arvo** (realisaatio) pisteessä ($y_1,\ldots, y_n$) eli havaitussa aineistossa on
+
+$$
+t = g(y_1, \ldots, y_n).
+$$
+
+  - Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia). 
+  - Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.
+
+- Jos tunnuslukua $T$ käytetään tilastollisen mallin parametrin (parametrien) $\theta$ estimointiin, niin tätä sanotaan tällöin parametrin __estimaattoriksi__.
+  - Estimaattorin otoskohtaisia arvoja, kuten yllä $t$, kutsutaan __estimaateiksi__.
+  - Toivottavaa olisi, että estimaatit $t = g(y_1, \ldots, y_n)$ osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa $g(\theta)$. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin $T=g(Y_1, \ldots, Y_n)$ jakauman tulisi keskittyä mahdollisimman tiiviisti $g(\theta)$:n ympärille.
+
+- Koska tunnusluku/estimaattori $T$ on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun $T$ __otosjakaumaksi__. 
+
+  - Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun $T$ arvojen satunnaisvaihtelulle otoksesta toiseen.
+  - Otosjakaumat riippuvat tuntemattomista __parametreista__, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
+  - Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit __estimoidaan__, kuten yllä jo todettiin, havaintoaineistoa käyttäen.
+
+\
+
+__Estimaattorin ominaisuudet__
+
+- Merkitään seuraavassa parametrin $\theta$ estimaattoria $\widehat{\theta}$:lla ja siltä voidaan toivoa seuraavia ominaisuuksia:
+
+::: {.defblock .mikko data-latex="{}"}
+**Harhattomuus**  
+
+Estimaattorin odotettavissa oleva arvo yhtyy tuntemattoman parametrin $\theta$ todelliseen arvoon eli $\text{E}(\widehat{\theta}) = \theta$.
+
+- Harhaton estimaattori tuottaa keskimäärin oikean kokoisia arvoja (estimaatteja) estimoitavalle parametrille.
+- Estimaattorin tuottama arvo parametrille saattaa tietylle otokselle poiketa paljonkin parametrin todellisesta arvosta, mutta odotusarvon frekvenssitulkinnan mukaan estimaattorin tuottamat otoskohtaiset arvot parametrille jakautuvat otantaa toistettaessa (symmetrisesti) parametrin todellisen arvon ympärille.
+:::
+
+```{r unbiased, echo=FALSE, fig.cap="Havainnollistuksia estimaattoreiden ominaisuuksista.", fig.align='center', out.width = "100%"}
+knitr::include_graphics("images/unbiased.jpg")
+```
+
+::: {.defblock .mikko data-latex="{}"}
+**Tyhjentävyys**  
+
+Tyhjentävä estimaattori käyttää kaiken otokseen sisältyvän parametria $\theta$ koskevan informaation.
+:::
+
+::: {.defblock .mikko data-latex="{}"}
+**Tehokkuus**  
+
+Kahdesta saman parametrin $\theta$ estimaattorista tehokkaampi on se, jonka varianssi on pienempi. Ts. $\widehat{\theta}^{(1)}$ on tehokkaampi kuin $\widehat{\theta}^{(2)}$, jos  $\mathrm{Var}(\widehat{\theta}^{(1)}) \le \mathrm{Var}(\widehat{\theta}^{(2)})$.
+:::
+
+::: {.defblock .mikko data-latex="{}"}
+**Tarkentuvuus**  
+
+Tarkentuvan estimaattorin $\widehat{\theta}$ arvot lähestyvät parametrin $\theta$ oikeaa arvoa otoskoon kasvaessa.
+:::
+
+- Voidaan osoittaa (yksityiskohdat sivuutetaan tällä kurssilla), että esimerkiksi yksinkertaisen satunnaisotoksen tapauksessa tavanomaisilla binomi- ja normaalijakauman parametrien estimaattoreilla on kaikki edellä mainitut hyvät ominaisuudet.
+  - Näin ei ole yleisesti monimutkaisemmissa otantatilanteissa ja tilastollisisssa malleissa.
+  - Estimaattoreiden kehittäminen erilaisten tilastollisten mallien tapauksessa kuuluu teoreettisen tilastotieteen alaan.
+
+- Seuraavaksi perehdytään tarkemmin kahteen kenties useimmiten tarkasteltavaan tunnuslukuun ja niiden otosjakaumiin: 
+  - Aritmeettisen keskiarvon otosjakaumaan \@ref(alaluku93)
+  - Suhteellisen osuuden (frekvenssin) otosjakaumaan \@ref(alaluku94)
+
+
+## Otoskeskiarvo ja otosvarianssi (estimaattoreina) {#alaluku93}
+
+__Otoskeskiarvo__
+
+- Oletetaan, kuten aiemmin, että $Y_1,\ldots,Y_n$ ovat riippumattomia sm:jia ja että ne muodostavat satunnaisotoksen jakaumasta, jonka odotusarvo on $\mu$, ts. $\text{E}(Y_i) = \mu$ ja varianssi on $\sigma^2$, ts. $\text{Var}(Y_i) = \sigma^2$. 
+  - Havaintojen (satunnaismuuttujien) $Y_1, \ldots, Y_n$ __otoskeskiarvo__ on  
+
+$$
+\bar{Y} = \frac{1}{n}(Y_1 + \cdots + Y_n) = \frac{1}{n} \sum_{i=1}^{n} Y_i
+$$
+
+  - Yksittäisen otoksen otoskeskiarvo on tällöin sm:jien realisaatioiden aritmeettinen keskiarvo
+
+$$
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i.
+$$
+
+  - Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+  - Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan $\mu$, on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts. 
+
+$$\text{E}(\bar{Y}) = \mu$$
+
+  - Täten otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa.
+
+__Aritmeettisen keskiarvon ominaisuuksia__
+
+- Aiempien oletusten pätiessä aritmeettisella keskiarvolla $\bar{Y}$ on seuraava odotusarvo ja varianssi:
+$$
+\text{E}(\bar{Y}) = \mu,  \quad
+\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}.
+$$
+
+- Aritmeettisen keskiarvon $\bar{Y}$ __standardipoikkeama__
+
+$$
+\text{D}(\bar{Y}) = \sqrt{\mathrm{Var}(\bar{Y})} = \frac{\sigma}{\sqrt{n}}.
+$$
+
+- Standardipoikkeamaa kutsutaan myös __keskiarvon keskivirheeksi__ ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon $\mu$ ympärillä.
+
+- Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon $\mu$ ympärille, kun otoskoko $n$ kasvaa. 
+  - Ts. otoskoon $n$ kasvaessa $\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}$ pienenee.
+
+__Otosvarianssi__
+
+- Aineiston sisältämää vaihtelua kuvataan __otosvarianssilla__
+$$
+S^2= \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2.
+$$
+
+  - Vastaavasti sm:jien vaihtelua perusjoukon tasolla kuvataan __populaatiovarianssilla__
+
+$$
+\sigma^2= \frac{1}{N} \sum_{j=1}^{N} (Y_j - \mu)^2,
+$$
+jota otosvarianssi harhattomasti estimoi.
+
+- Huomioi, että __otosvarianssi__ on eri asia kuin __otoskeskiarvon varianssi__.
+
+- Otoskeskiarvo $\bar{Y}$ ja otosvarianssi $S^2$ ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
+
+__Normaalijakautunut otos__
+
+- Muodostakoot havainnot $Y_1, \ldots, Y_n$ satunnaisotoksen normaalijakaumasta $\text{N}(\mu, \sigma^2)$.
+- Tällöin voidaan osoittaa, että havaintojen $Y_1, \ldots, Y_n$ keskiarvo $\bar{Y}$ noudattaa normaalijakaumaa odotusarvolla $\mu$ ja varianssilla $\sigma^2/n$. Merkitään
+$$
+\bar{Y} \thicksim \text{N} \Big(\mu, \frac{\sigma^2}{n} \Big).
+$$
+
+- Itse asiassa ns. __asymptoottiseen teoriaan__ vedoten (suurten otosten tapauksessa) voidaan osoittaa, että edellämainittu tulos pätee myös ilman normaalisuusoletusta. 
+  - Nämä tarkastelut vaativat jälleen selvästi enemmän käytyjä tilastotieteen (ja matematiikan) opintoja.
+
+\
+
+__Standardoidun aritmeettisen keskiarvon otosjakauma__
+
+- Tarkastellaan __standardoitua__ satunnaismuuttujaa
+$$
+Z = \frac{\bar{Y} - \text{E}(\bar{Y})}{\text{D}(\bar{Y})} = \frac{\bar{Y} - \mu}{\sigma / \sqrt{n}} = \sqrt{n} \Big(\frac{\bar{Y} - \mu}{\sigma}\Big).
+$$
+  - Tällöin $Z$:n odotusarvo $\text{E}(Z) = 0$ ja varianssi $\mathrm{Var}(Z) = 1$.
+
+- Jos $Y_i \thicksim \text{N}(\mu, \sigma^2), i=1,\ldots,n$, niin tällöin $Z$ noudattaa standardoitua normaalijakaumaa: 
+$$
+Z \thicksim \text{N}(0,1).
+$$
+  - Jälleen voidaan osoittaa, että tämä tulos pätee asymptoottisesti (suurissa otoksissa) myös ilman yllä tehtyä normaalisuusoletusta.
+
+## Suhteellisen frekvenssin otosjakauma {#alaluku94}
+
+__Frekvenssi ja suhteellinen frekvenssi__
+
+- Oletetaan, että tapahtuman $A$ todennäköisyys on
+$$
+\text{P}(A) = p,
+$$
+jolloin tapahtuman $A$ komplementtitapahtuman (vastatapahtuman) $A^c$ todennäköisyys on
+$$
+\text{P}(A^c) = 1- p = q.
+$$
+
+- Poimitaan satunnaisotos, jonka koko on $n$. Tällöin $A$-tyyppisten alkioiden frekvenssi eli lukumäärä kyseisessä otoksessa on $f$. 
+
+- Suhteellinen frekvenssi eli osuus on tällöin
+$$
+\widehat{p} = \frac{f}{n}.
+$$
+- Sekä frekvenssi (lukumäärä) $f$ ja (täten myös) suhteellinen frekvenssi $\widehat{p}$ ovat satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
+
+__Frekvenssin otosjakauma__
+
+- Frekvenssillä $f$ on odotusarvo
+$$
+\text{E}(f) = np,
+$$
+ja varianssi
+$$
+\mathrm{Var}(f) = npq = np(1-p).
+$$
+- Frekvenssi $f$ noudattaa binomijakaumaa parametrein $n$ ja $p$:
+$$
+f \thicksim \mathrm{Bin}(n,p).
+$$
+
+__Suhteellinen frekvenssi: Odotusarvo ja varianssi__
+
+- Suhteellisen frekvenssin $\widehat{p}$ odotusarvo
+$$
+\text{E}(\widehat{p}) = \text{E} \Big(\frac{f}{n} \Big) = p,
+$$
+ja varianssi
+$$
+\mathrm{Var}(\widehat{p}) = \frac{pq}{n} = \frac{p(1-p)}{n}.
+$$
+
+- Suhteellisen frekvenssin $\widehat{p}$ standardipoikkeamaa
+$$
+\text{D}(\widehat{p}) = \sqrt{\mathrm{Var} (\widehat{p})} =  \sqrt{\frac{pq}{n}}
+$$
+voidaan kutsua __suhteellisen frekvenssin keskivirheeksi__ ja se kuvaa suhteellisen frekvenssin otosvaihtelua odotusarvon $p$ ympärillä.
+
+__Suhteellisen frekvenssin otosjakauma__
+
+- Koska $\text{E}(\widehat{p}) = p$ ja $\mathrm{Var}(\widehat{p}) = \frac{pq}{n}$, 
+niin suhteellisen frekvenssin otosjakauma keskittyy yhä voimakkaammin tapahtuman A
+todennäköisyyden $\text{P}(A) = p$ ympärille, kun otoskoko $n$ kasvaa.
+
+- Jälleen suurten otosten tapauksessa voidaan osoittaa, että suhteellinen frekvenssi noudattaa em. oletusten pätiessä normaalijakaumaa:
+$$
+\widehat{p} \thicksim \text{N} \Big(p, \frac{pq}{n} \Big).
+$$
+
+- Aritmeettisen keskiarvon tapaan standardoitu sm. 
+$$
+Z = \frac{\widehat{p} - p}{\sqrt{\frac{pq}{n}}} \thicksim \text{N}(0,1)
+$$
+noudattaa suurissa otoksissa approksimatiivisesti standardoitua normaalijakaumaa.
+
+\newpage
+
+::: {.eblock .kimmo data-latex="{}"}
+**EU-kansanäänestys**  
+
+
+- Suomen EU-kansanäänestyksessä vuonna 1994 jäsenyyttä kannattaneiden suhteellinen osuus oli 0,54 (54 \%).
+
+- Mikä olisi ollut tällöin tn., että ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
+
+- Suhteellisen frekvenssin otosjakauman perusteella kyllä-kannatusosuuden jakauma olisi
+$$
+%\widehat{p} \stackrel{as}{\thicksim} \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
+\widehat{p} \thicksim \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
+$$
+jossa $\frac{0.54 \times (1-0.54)}{200} = 0.0352^2$.
+
+- Näin ollen haluttu todennäköisyys (ts. saada sellainen satunnaismuuttujan $Z \thicksim \text{N}(0,1)$ arvo että suhteellinen osuus on pienempi kuin 0.5)
+$$
+P \Big(Z < \frac{0.5-0.54}{0.0352} \Big) = P (Z < -1.14) \approx 0.127.
+$$
+:::
+
+## Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
+
+- Satunnaisotos
+- Yhteisjakauma
+- (Satunnaisotoksen) tilastollinen malli
+- Yhteisjakauma
+- Riippumattomat satunnaismuuttujat
+- Otosjakauma
+- Tunnusluku/otossuure
+- Otosjakauma
+- Estimaattori ja estimaatti
+- (Hyvän) estimaattorin ominaisuuksia: Harhattomuus, tyhjentävyys, tehokkuus ja tarkentuvuus
+- Otoskeskiarvo ja otosvarianssi estimaattoreina
+- Standardipoikkeama
+- Normaalistijakautunut satunnaisotos
+- Standardoitu satunnaismuuttuja
+- Standardoidun aritmeettisen keskiarvon otosjakauma
+- Suhteellisen frekvenssin otosjakauma
