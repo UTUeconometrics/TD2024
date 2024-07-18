@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8.1 Satunnaisotos, yhteisjakauma ja tilastollinen malli | TILM3701 - Tilastotiede ja data 2024</title>
+  <title>9.1 Luottamusvälit | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8.1 Satunnaisotos, yhteisjakauma ja tilastollinen malli | TILM3701 - Tilastotiede ja data 2024" />
+  <meta property="og:title" content="9.1 Luottamusvälit | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8.1 Satunnaisotos, yhteisjakauma ja tilastollinen malli | TILM3701 - Tilastotiede ja data 2024" />
+  <meta name="twitter:title" content="9.1 Luottamusvälit | TILM3701 - Tilastotiede ja data 2024" />
   
   <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
   
@@ -25,15 +25,15 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-07-17" />
+<meta name="date" content="2024-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="luku9.html"/>
-<link rel="next" href="luku7.html"/>
+<link rel="prev" href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"/>
+<link rel="next" href="alaluku92.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -111,8 +111,8 @@
 <li class="chapter" data-level="4" data-path="luku4.html"><a href="luku4.html"><i class="fa fa-check"></i><b>4</b> Sattuma ja satunnaisuus tilastotieteessä</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
-<li class="chapter" data-level="4.2" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisilmiöiden tilastollinen mallintaminen</a></li>
-<li class="chapter" data-level="4.3" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma</a></li>
+<li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisilmiöiden tilastollinen mallintaminen</a></li>
+<li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma</a></li>
 <li class="chapter" data-level="4.4" data-path="tilastotieteen-koulukunnat.html"><a href="tilastotieteen-koulukunnat.html"><i class="fa fa-check"></i><b>4.4</b> Tilastotieteen koulukunnat</a></li>
 <li class="chapter" data-level="4.5" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.5</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
 <li class="chapter" data-level="4.6" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.6</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
@@ -131,41 +131,41 @@
 <li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
 <li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Tunnusluvut</a></li>
 <li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
-<li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="6.5" data-path="alaluku65.html"><a href="alaluku65.html"><i class="fa fa-check"></i><b>6.5</b> Muita tunnuslukuja</a></li>
+<li class="chapter" data-level="6.6" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.6</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="part"><span><b>II Osa II</b></span></li>
-<li class="chapter" data-level="7" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>7</b> Otantamenetelmät</a>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Otantamenetelmät</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>7.1</b> Otantamenetelmät</a>
+<li class="chapter" data-level="7.1" data-path="alaluku71.html"><a href="alaluku71.html"><i class="fa fa-check"></i><b>7.1</b> Otantamenetelmät</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="alaluku81.html"><a href="alaluku81.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>7.1.1</b> Yksinkertainen satunnaisotanta</a></li>
-<li class="chapter" data-level="7.1.2" data-path="alaluku81.html"><a href="alaluku81.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>7.1.2</b> Systemaattinen otanta</a></li>
-<li class="chapter" data-level="7.1.3" data-path="alaluku81.html"><a href="alaluku81.html#ositettu-otanta"><i class="fa fa-check"></i><b>7.1.3</b> Ositettu otanta</a></li>
-<li class="chapter" data-level="7.1.4" data-path="alaluku81.html"><a href="alaluku81.html#ryväsotanta"><i class="fa fa-check"></i><b>7.1.4</b> Ryväsotanta</a></li>
+<li class="chapter" data-level="7.1.1" data-path="alaluku71.html"><a href="alaluku71.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>7.1.1</b> Yksinkertainen satunnaisotanta</a></li>
+<li class="chapter" data-level="7.1.2" data-path="alaluku71.html"><a href="alaluku71.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>7.1.2</b> Systemaattinen otanta</a></li>
+<li class="chapter" data-level="7.1.3" data-path="alaluku71.html"><a href="alaluku71.html#ositettu-otanta"><i class="fa fa-check"></i><b>7.1.3</b> Ositettu otanta</a></li>
+<li class="chapter" data-level="7.1.4" data-path="alaluku71.html"><a href="alaluku71.html#ryväsotanta"><i class="fa fa-check"></i><b>7.1.4</b> Ryväsotanta</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>7.2</b> Otantaesimerkkejä</a></li>
-<li class="chapter" data-level="7.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
-<li class="chapter" data-level="7.4" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Otantaesimerkkejä</a></li>
+<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
+<li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
-<li class="chapter" data-level="8.2" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
+<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
+<li class="chapter" data-level="8.2" data-path="luku82.html"><a href="luku82.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="luku7.html"><a href="luku7.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
-<li class="chapter" data-level="8.2.2" data-path="luku7.html"><a href="luku7.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+<li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
+<li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
-<li class="chapter" data-level="8.4" data-path="alaluku93.html"><a href="alaluku93.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
-<li class="chapter" data-level="8.5" data-path="alaluku94.html"><a href="alaluku94.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
-<li class="chapter" data-level="8.6" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
+<li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
+<li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-epävarmuuden-arvioiminen.html"><a href="satunnaisuudesta-johtuvan-epävarmuuden-arvioiminen.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan epävarmuuden arvioiminen</a>
+<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><a href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä {luku9}</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku96.html"><a href="alaluku96.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku97.html"><a href="alaluku97.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="alaluku95.html"><a href="alaluku95.html"><i class="fa fa-check"></i><b>9.3</b> Muita tunnuslukuja</a></li>
-<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia.-1.html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia.-1.html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -229,77 +229,196 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="alaluku91" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Satunnaisotos, yhteisjakauma ja tilastollinen malli<a href="alaluku91.html#alaluku91" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="alaluku91" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Luottamusvälit<a href="alaluku91.html#alaluku91" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on satunnaisilmiöt, joita kuvataan satunnaismuuttujia käyttäen. Satunnaismuuttujilla on todennäköisyysjakaumat, joita tilastotieteessä kuvataan todennäköisyys- eli tiheysfunktion (tai pistetodennäköisyysfunktion) avulla.
+<li>Satunnaisesti saadusta aineistosta laskettujen tunnuslukujen luotettavuus on tilastollisen mallin parametrien estimoinnissa keskeinen tilastollinen kysymys.
 <ul>
-<li>Merkitään satunnaismuuttujaa isolla kirjaimella, <span class="math inline">\(Y\)</span>, ja satunnaismuuttujan realisaatiota pienellä kirjaimella <span class="math inline">\(y\)</span>. Otoskokoa, eli otokseen osallistuvien tilastoyksiköiden määrää merkitään <span class="math inline">\(n\)</span>:llä ja tilastoyksiköitä indeksöidään alaindeksillä <span class="math inline">\(i=1,\ldots,n\)</span>.</li>
-<li>Otoksen poimimisen jälkeen satunnaismuuttujat <span class="math inline">\(Y_1, \ldots, Y_n\)</span> saavat havaituiksi arvoikseen havaintoarvot <span class="math inline">\(y_1, \ldots, y_n\)</span> (ts. <span class="math inline">\(Y_1=y_1, \ldots, Y_n = y_n\)</span>).</li>
-<li>Näin havaintoaineisto on siis <strong>satunnaisotos</strong>, joka voidaan määritellä tarkemmin seuraavasti.</li>
+<li>Otoksen poimintaan liittyvän satunnaisvaihtelun vuoksi emme voi varmuudella tietää onko saatu otokseen perustuva parametriestimaatti “lähellä” vai “kaukana” sen todellisesta arvosta.</li>
+<li>Täten tarvitaan jokin tapa, jolla saadun parametriestimaatin luotettavuutta voidaan arvioida.</li>
 </ul></li>
 </ul>
 <div class="defblock mikko">
-<p><strong>Satunnaisotos</strong></p>
-<p>Olkoot <span class="math inline">\(Y_1, \ldots, Y_n\)</span> riippumattomia ja samoinjakautuneita satunnaismuuttujia, joiden tiheysfunktiota (tf., tai pistetodennäköisyysfunktiota (ptnf)) merkitään <span class="math inline">\(f(y, \theta)\)</span>:llä, jossa <span class="math inline">\(y\)</span>:n on yksittäisen sm:jan <span class="math inline">\(Y\)</span> reaalisaatio ja <span class="math inline">\(\theta\)</span> on jokin jakauman muodon määräävä parametri (tai parametrit).</p>
-<p>Parametrin <span class="math inline">\(\theta\)</span> arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, <strong>estimoida</strong>, sen arvo lopulta käytettävissä olevasta aineistosta.</p>
+<p><strong>Luottamusväli</strong></p>
+<p>Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsemalla todennäköisyydellä (luottamustasolla) peittää tarkasteltavan tilastollisen mallin <span class="math inline">\(f(y;\theta)\)</span> parametrin <span class="math inline">\(\theta\)</span> tuntemattoman todellisen arvon. Se perustetaan otostunnusluvun, estimaattorin, otosjakaumaan.</p>
 </div>
-<p><br />
-</p>
-<p><strong>Satunnaisotoksen tilastollinen malli</strong></p>
 <ul>
-<li>Havaintoarvot <span class="math inline">\(y_1, \dots, y_n\)</span> ovat kiinteitä lukuja, mutta ne vaihtelevat satunnaisesti otoksesta toiseen. Satunnaisotannassa <strong>satunnaisuus liittyy siis havaintoarvojen vaihteluun satunnaisesti otoksesta toiseen</strong>.
+<li><p>Otoskoko on luottamusvälejä koskevissa tarkasteluissa keskeinen ja luottamusväleihin palataankin otoskoon käsittelyn yhteydessä.</p></li>
+<li><p>Valittua luottamustasoa merkitään usein <span class="math inline">\(1-\alpha\)</span>:lla, jossa <strong>merkitsevyystaso</strong> (<strong>riskitaso</strong>) <span class="math inline">\(\alpha\)</span> on esimerkiksi <span class="math inline">\(\alpha=0.05\)</span>.</p></li>
+<li><p>Tulkinta: Jos <strong>otantaa</strong> jakaumasta <span class="math inline">\(f(y;\theta)\)</span> toistetaan, niin keskimäärin <span class="math inline">\(100 \times (1-\alpha)\%\)</span> otoksista konstruloiduista luottamusväleistä peittää parametrin <span class="math inline">\(\theta\)</span> todellisen arvon.</p></li>
+<li><p>Oletetaan, että olemme tehneet johtopäätöksen, että konstruloitu luottamusväli peittää parametrin <span class="math inline">\(\theta\)</span> tuntemattoman todellisen arvon.</p>
 <ul>
-<li>Satunnaisuus ei siis liity otannan tuloksena saatuihin havaintoarvoihin, vaan otoksen poimintaan.</li>
+<li>Tällöin otantaa toistettaessa luottamusvälin konstruktiosta seuraa, että tehty johtopäätös on oikea keskimäärin <span class="math inline">\(100 \times (1-\alpha)\%\)</span> tapauksista.</li>
+<li>Vastaavasti taas <span class="math inline">\(100 \times \alpha \%\)</span> ei peitä parametrin todellista arvoa.</li>
 </ul></li>
-<li>Satunnaismuuttujien <span class="math inline">\(Y_1, \ldots, Y_n\)</span> <strong>yhteisjakauma</strong> muodostaa (tiettyjen lisäoletusten jälkeen) <strong>tilastollisen mallin</strong> havaintoarvojen satunnaiselle vaihtelulle eri otoksissa.
+<li><p>Luottamusväli on kenties tunnetumpi kansankieliseltä nimitykseltään <strong>virhemarginaali</strong>, joka on itse asiassa luottamusvälin puolikas: todellinen parametriarvo kuuluu saadun estimaatin ja virhemarginaalien sisään jäävälle osuudelle.</p>
 <ul>
-<li>Koska tällä kurssilla satunnaismuuttujat <span class="math inline">\(Y_1, \ldots, Y_n\)</span> oletetaan <strong>riippumattomiksi toisiinsa nähden</strong>, niiden yhteisjakauma on tulomuotoa <span class="math inline">\(f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)\)</span>.</li>
+<li>Normaalisti mm. otoskoon kasvu pienentää virhemarginaalia.</li>
+<li>Kuten jatkossa tullaan havaitsemaan, virhemarginaalin suuruuteen vaikuttavat otosasetelma, otoskoko, luottamustaso ja tutkittavan tilastollisen tunnusluvun jakauma.</li>
 </ul></li>
-<li>Tässä <span class="math inline">\(f(y_1, \ldots, y_n; \theta)\)</span> on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli.
+<li><p>Luottamusväleissä ei varsinaisesti ole kyse “virheestä” vaan saadun/muodostetun tiedon tarkkuudesta.</p>
 <ul>
-<li>Useimmiten kuitenkin ajatellaan, että on käytettävä niin yksinkertaisia menetelmiä kuin mahdollista, mutta ei yhtään yksinkertaisempia. Tämä on ns. <strong>parsimoonisuusperiaate</strong> eli <strong>vähäparametrisuus-</strong> tai <strong>säästeliäisyysperiaate</strong>.</li>
-<li>Vähäparametrisuusperiaatteen voidaan nähdä perustuvan ns. <a href="https://fi.wikipedia.org/wiki/Occamin_partaveitsi">Occamin partaveitsen -periaatteeseen</a>, jonka mukaan <em>“ilmiöitä selittävien tekijöiden määrän tulee olla mahdollisimman vähäinen”</em>, ts. tilastotieteessä menetelmien (mallien) tulee olla mahdollisimman yksinkertaisia, mutta silti riittäviä.</li>
-<li>Tämä periaate ja sen suhde ns. <strong>varianssin ja harhan väliseen kompromissiin</strong> on erityisen tärkeä erityisesti tilastollisen ennustamisen ja viime vuosikymmeninä yleistyneen tilastollisen (kone)oppimisen sovellutuksissa (ks. tarkemmin alaluku <a href="alaluku33.html#alaluku33">3.3</a>).</li>
+<li>Luottamusvälit, eli virhemarginaalit, siis (yleisesti) riippuvat valittavasta luottamustasosta <span class="math inline">\(1-\alpha\)</span> ja näin ollen samasta aineistosta on saatavissa useita virhemarginaaleja.
+<ul>
+<li>Täten on tarkalleen ottaen virheellistä sanoa, että “tutkimuksen virhemarginaali on 3,5 puoleen tai toiseen”.</li>
+<li>Oikeammin olisi sanoa esimerkiksi “tutkimuksessa saadun kannatuksen virhemarginaali on 3,5 puoleen tai toiseen 95 % luottamustasolla.”</li>
+<li>Virhemarginaali kasvaa, kun aineistoa lohkotaan: jos tuhannen hengen otoksesta esitetään tietoja, jotka kuvaavat erikseen miesten ja naisten ominaisuuksia, sukupuolittain lasketut ovat estimaatit epävarmempia kuin koko otoksesta esitetyt.</li>
 </ul></li>
-<li>Oletetaan, että <span class="math inline">\(Y_1, \ldots, Y_n\)</span> ovat aiempien oletusten pätiessä riippumattomia sm:jia ja että ne muodostavat satunnaisotoksen jakaumasta, jonka odotusarvo on <span class="math inline">\(\mu\)</span> ja varianssi on <span class="math inline">\(\sigma^2\)</span>.
+<li>Vastaavasti on virheellistä sanoa että tutkimuksella olisi virhemarginaali, sillä virhemarginaali liittyy aina vain tutkimuksen antamiin numeerisiin arvoihin.</li>
+<li>Aitoja virhelähteitä ovat mm. otantatutkimukseen liittyvien kysymysten muotoilu, käsitteiden monitulkintaisuus, vastaajien valikoituminen ja vastauskato.</li>
+</ul></li>
+</ul>
+<p><strong>Normaalijakauman odotusarvon luottamusväli</strong></p>
 <ul>
-<li>Ts. oletamme</li>
+<li><p>Käsittelemme seuraavassa (normaalijakauman) odotusarvon <span class="math inline">\(\mu\)</span> luottamusvälejä ja jatkossa oletetaan (ellei toisin mainita), että taustalla oleva populaatio, <span class="math inline">\(N\)</span>, on “iso” (ääretön).</p>
+<ul>
+<li>Näin ollen ns. äärellisyyskorjausta ei käytetä (yksinkertaisuuden vuoksi).</li>
+</ul></li>
+<li><p>Tarkastellaan satunnaisotosta normaalijakaumasta
+<span class="math inline">\(Y_1, \ldots, Y_n \perp \!\!\! \perp, \,\, Y_i \thicksim \text{N}(\mu, \sigma^2),\, i=1,\ldots,n\)</span>.</p></li>
+<li><p>Tarkastellaan normaalijakauman odotusarvon <span class="math inline">\(\mu\)</span> luottamusvälin määräämistä otannan avulla olettaen että jakauman varianssi <span class="math inline">\(\sigma^2\)</span> on tunnettu.</p>
+<ul>
+<li>Muistetaan että normaalijakauman odotusarvoparametrin <span class="math inline">\(\text{E}(Y_i) = \mu\)</span> <strong>harhaton estimaattori</strong> on aritmeettinen keskiarvo</li>
 </ul></li>
 </ul>
 <p><span class="math display">\[
-\text{E}(Y_i) = \mu,  \quad \text{ja} \quad
-\mathrm{Var}(Y_i) = \sigma^2, \quad i=1,\ldots,n.
+\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i.
 \]</span></p>
 <ul>
-<li>Tässä tapauksessa mielenkiinnon kohteena olevat parametrit ovat siis <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> eli <span class="math inline">\(\theta = (\mu \quad \sigma^2)\)</span>.</li>
-<li>Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on että miten estimointi suoritetaan luotettavasti.</li>
-</ul>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: satunnaisotos normaalijakaumasta</strong></p>
-<p>Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee <span class="math inline">\(Y_1, \ldots, Y_n \perp \!\!\! \perp, \,\, Y_i \thicksim \text{N}(\mu, \sigma^2),\,\, i=1,\ldots,n\)</span>.</p>
+<li><p>Valitaan <strong>luottamustasoksi</strong> <span class="math inline">\(1-\alpha\)</span>, eli <span class="math inline">\(\alpha\)</span> määrää todennäköisyyden, jolla luottamusväli peittää odotusarvon <span class="math inline">\(\mu\)</span> todellisen arvon: yleinen valinta ihmistieteissä on <span class="math inline">\(\alpha = 0.05\)</span> tai <span class="math inline">\(\alpha = 0.1\)</span> vastaten 95% ja 90% prosentin luottamustasoa. Luonnontieteissä <span class="math inline">\(\alpha\)</span> on usein paljon pienempi.</p></li>
+<li><p>Määrätään <strong>luottamuskertoimet</strong> <span class="math inline">\(-z_{\alpha/2}\)</span> ja <span class="math inline">\(z_{\alpha/2}\)</span> (luottamusväli on kaksisuuntainen), joille pätee
+<span class="math display">\[
+\text{P}(-z_{\alpha/2} \le Z \le z_{\alpha/2}) = 1-\alpha,
+\]</span>
+jossa standardoitu satunnaismuuttuja
+<span class="math display">\[
+Z = \frac{\bar{Y} - \mu}{\sigma / \sqrt{n}} = \sqrt{n} \Big( \frac{\bar{Y} - \mu}{\sigma} \Big),  
+\]</span>
+(ks. aiemmat alaluvut tässä luvussa <a href="#luku9"><strong>??</strong></a>) noudattaa <span class="math inline">\(\text{N}(0,1)\)</span>-jakaumaa.</p>
 <ul>
-<li>Merkintä <span class="math inline">\(\perp \!\!\! \perp\)</span> tarkoittaa, että sm:t <span class="math inline">\(Y_1,\ldots,Y_n\)</span> ovat riippumattomia ja samoin jakautuneita (toisinaan myös lyhyesti <em>iid</em> tai <em>i.i.d</em>, joka tulee englannin kielen ilmaisusta “independent and identically distributed”). Merkintä soveltuu käytettäväksi muidenkin jakaumien tapauksessa.</li>
-<li>Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon (<span class="math inline">\(n=10\)</span>) satunnaisotos standardoidusta normaalijakaumasta (ts. <span class="math inline">\(Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10\)</span>) komennolla rnorm(10).</li>
-</ul>
-</div>
-<div style="page-break-after: always;"></div>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: miesten pituus</strong></p>
+<li><span class="math inline">\(\text{P}(\cdot)\)</span>:llä merkitään todennäköisyyttä, joka tässä tapauksessa liittyy normaalijakaumaan, ja <span class="math inline">\(z_{\alpha/2}\)</span> on jakaumafunktion arvo pisteessä <span class="math inline">\(\alpha/2\)</span>.</li>
+</ul></li>
+<li><p>Tällöin etsitään odotusarvoparametrille <span class="math inline">\(\mu\)</span> sellainen arvo, jolla oheinen epäyhtälö pätee ja päädytään luottamusväliin.</p></li>
+<li><p>Nyt epäyhtälöketju voidaan kirjoittaa muodossa
+<span class="math display">\[
+-z_{\alpha/2} \le  \frac{\bar{Y} - \mu}{\sigma / \sqrt{n}}  \le z_{\alpha/2}.
+\]</span></p></li>
+<li><p>Joka voidaan kirjoittaa uudelleen muodossa
+<span class="math display">\[
+\bar{Y} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \le   \mu  \le
+\bar{Y} + z_{\alpha/2} \frac{\sigma}{\sqrt{n}},
+\]</span>
+kertomalla nimittäjällä puolittain ja vähentämällä sm:jien keskiarvo molemmin puolin.</p></li>
+<li><p>Normaalijakauman odotusarvon <span class="math inline">\((1-\alpha) \times 100\)</span>% luottamusväli on siis
+<span class="math display">\[
+\Big(\bar{Y} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}},
+\bar{Y} + z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \Big).
+\]</span></p></li>
+<li><p>Luottamusväli on symmetrinen keskipisteensä <span class="math inline">\(\bar{Y}\)</span> suhteen. Siksi luottamusväli esitetään usein
+<span class="math display">\[
+\bar{Y} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}}.
+\]</span></p></li>
+<li><p>Luottamusvälin pituus
+<span class="math display">\[
+2 \cdot z_{\alpha/2} \frac{\sigma}{\sqrt{n}}.
+\]</span></p></li>
+<li><p><strong>Virhemarginaali</strong> on luottamusvälin pituuden puolikas eli
+<span class="math display">\[
+z_{\alpha/2} \frac{\sigma}{\sqrt{n}}.
+\]</span></p></li>
+<li><p>Edellä tiettyyn otokseen liittyvä luottamusväli perustetaan realisoituneeseen otoskeskiarvoon <span class="math inline">\(\bar{y}=\frac{1}{n} \sum_{i=1}^{n} y_i\)</span>.</p></li>
+<li><p>Olisi toivottavaa pystyä konstruoimaan parametrille <span class="math inline">\(\mu\)</span> mahdollisimman lyhyt luottamusväli, johon liittyvä luottamustaso olisi samanaikaisesti mahdollisimman korkea. Molempien vaatimusten samanaikainen täyttäminen ei ole kuitenkaan mahdollista, jos otoskoko <span class="math inline">\(n\)</span> pidetään kiinteänä:</p>
 <ul>
-<li><p>Kerätään havaintoja miesten pituuksista yksinkertaisella satunnaisotannalla (takaisinpalauttaen) <span class="math inline">\(n\)</span> kappaletta.</p></li>
-<li><p>Tällöin havaintoarvoja <span class="math inline">\(Y_1, \ldots, Y_n\)</span> voidaan pitää riippumattomina satunnaismuuttujina, joista jokainen noudattaa tehdyn jakaumaoletuksen mukaan normaalijakaumaa <span class="math inline">\(\text{N}(\mu, \sigma^2)\)</span>.</p></li>
-<li><p>Estimoinnin tehtävänä on muodostaa parhaat mahdolliset arviot parametreille <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span>, ja mahdollisesti testata esimerkiksi odotusarvolle <span class="math inline">\(\mu\)</span> asetettua hypoteesia.</p></li>
+<li>Luottamustason kasvattaminen pidentää luottamusväliä, jolloin tieto parametrin <span class="math inline">\(\mu\)</span> todellisesta arvosta tulee epätarkemmaksi.</li>
+<li>Luottamusvälin lyhentäminen pienentää luottamustasoa, jolloin tieto parametrin <span class="math inline">\(\mu\)</span> todellisesta arvosta tulee epävarmemmaksi.</li>
+</ul></li>
 </ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:foo"></span>
+<img src="images/gaussian-distribution.jpg" alt="Standardoitu normaalijakauma: Virhemarginaaleja" width="150%" />
+<p class="caption">
+Kuvio 9.1: Standardoitu normaalijakauma: Virhemarginaaleja
+</p>
 </div>
+<p><br />
+</p>
+<p><strong>Normaalijakauman odotusarvon luottamusväli (<span class="math inline">\(\sigma^2\)</span> tuntematon)</strong></p>
+<ul>
+<li><p>Tarkastellaan edelleen satunnaisotosta normaalijakaumasta, mutta oletetaan nyt että varianssi <span class="math inline">\(\sigma^2\)</span> tuntematon.</p></li>
+<li><p>Normaalijakauman odotusarvon <span class="math inline">\((1-\alpha) \times 100\)</span>% luottamusväli:
+<span class="math display">\[
+\Big(\bar{Y} - t_{\alpha/2} \frac{S}{\sqrt{n}},
+\bar{Y} + t_{\alpha/2} \frac{S}{\sqrt{n}} \Big),
+\]</span>
+jossa <strong>luottamuskertoimet</strong> <span class="math inline">\(-t_{\alpha/2}\)</span> ja <span class="math inline">\(t_{\alpha/2}\)</span>
+saadaan nyt <span class="math inline">\(t\)</span><strong>-jakaumasta</strong> <span class="math inline">\(t_{n-1}\)</span>, jossa <span class="math inline">\(S^2\)</span> on varianssin <span class="math inline">\(\sigma^2\)</span> harhaton estimaattori ja vapausasteiden lukumäärä on <span class="math inline">\(n-1\)</span>.</p>
+<ul>
+<li><p>(Studentin) <span class="math inline">\(t\)</span>-jakauma muistuttaa silmämääräisesti normaalijakaumaa, mutta se on paksuhäntäisempi. Vapausasteluvun kasvaesssa <span class="math inline">\(t\)</span>-jakauma lähestyy normaalijakaumaa.</p></li>
+<li><p>Suurissa otoksissa (<span class="math inline">\(n\)</span> iso) luottamuskertoimet voidaan poimia (approksimatiivisesti) myös normaalijakaumasta eli korvata edellä kertoimet <span class="math inline">\(t_{\alpha/2}\)</span> aiemmin käytetyillä kertoimilla <span class="math inline">\(z_{\alpha/2}\)</span>.</p></li>
+<li><p>Normaalijakauman odotusarvon luottamusväli (<span class="math inline">\(\sigma^2\)</span> tuntematon), <span class="math inline">\(t\)</span>-jakauma eri vapausastein <span class="math inline">\(df\)</span></p></li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="images/NjaT-jakauma.jpg" alt="t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita" width="75%" />
+<p class="caption">
+Kuvio 9.2: t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita
+</p>
+</div>
+<p><br />
+</p>
+<p><strong>Luottamusväli: Suhteellisen osuuden odotusarvo</strong></p>
+<ul>
+<li><p>Käsittelemme seuraavassa suhteellisen osuuden <span class="math inline">\(p\)</span> luottamusvälejä.</p></li>
+<li><p>Tarkastellaan satunnaisotosta Bernoulli-jakaumasta
+<span class="math inline">\(Y_1, \ldots, Y_n \perp \!\!\! \perp, \,\, Y_i \thicksim B(p),\, i=1,\ldots,n\)</span>,
+jossa merkitään <span class="math inline">\(Y_i=1\)</span> jos tapahtuma A tapahtuu ja <span class="math inline">\(Y_i=0\)</span> jos tapahtuma A ei tapahdu.</p></li>
+<li><p>Bernoulli-jakauman odotusarvoparametrin <span class="math inline">\(p=\text{E}(Y_i)\)</span> harhaton estimaattori on tapahtuman A suhteellinen otosfrekvenssi
+<span class="math display">\[
+\widehat{p} = \frac{1}{n} \sum_{i=1}^{n} Y_i.
+\]</span></p></li>
+<li><p>Bernoulli-jakauman (vrt. binomijakauma) ominaisuuksien
+perusteella <span class="math inline">\(\text{E}(Y_i)=p\)</span> ja <span class="math inline">\(\mathrm{Var}(Y_i)=pq\)</span>, jossa
+<span class="math inline">\(q=1-p\)</span>.</p></li>
+<li><p>Näin ollen voimme normaalijakauman odotusarvoparametrin
+luottamusvälin konstruloinnin tapaan määritellä satunnaismuuttujan <span class="math inline">\(Z\)</span>:
+<span class="math display">\[
+Z = \frac{\widehat{p} - p}{\sqrt{\frac{p (1-p)}{n}}} =
+\sqrt{n} \Big(\frac{\widehat{p} - p}{\sqrt{p (1-p)}} \Big),  
+\]</span>
+joka noudattaa (suurissa otoksissa) <span class="math inline">\(\text{N}(0,1)\)</span>-jakaumaa.</p></li>
+<li><p>Suhteellisen frekvenssin hajonnan estimaattori on siis
+<span class="math display">\[
+\sqrt{\frac{\widehat{p} (1-\widehat{p})}{n}},
+\]</span>
+jossa tuntematon <span class="math inline">\(p\)</span> on korvattu sen estimaattorilla (otosvastineella) <span class="math inline">\(\widehat{p}\)</span>.</p></li>
+<li><p>Luottamuskertoimet määrätään aiempaan tapaan:
+<span class="math display">\[
+\text{P}(-z_{\alpha/2} \le Z \le z_{\alpha/2}) = 1-\alpha,
+\]</span></p></li>
+<li><p>Näin ollen odotusarvoparametrin (suhteellisen osuuden) <span class="math inline">\(p\)</span> <span class="math inline">\((1-\alpha)\)</span>% luottamusväliksi
+saadaan
+<span class="math display">\[
+\Big(
+\widehat{p} - z_{\alpha/2} \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}},
+\widehat{p} + z_{\alpha/2} \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}
+\Big)
+\]</span></p></li>
+<li><p>Luottamusväli voidaan kirjoittaa
+<span class="math display">\[
+\widehat{p} \pm z_{\alpha/2} \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}
+\]</span>
+ja luottamusvälin pituus on
+<span class="math display">\[
+2 \times z_{\alpha/2} \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
+\]</span></p></li>
+</ul>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="luku9.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="luku7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="alaluku92.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

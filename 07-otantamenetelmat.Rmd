@@ -1,6 +1,6 @@
 # (PART) Osa II {-}
 
-# Otantamenetelmät {#luku8}
+# Otantamenetelmät {#luku7}
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(dplyr)
 library(knitr)
@@ -8,7 +8,7 @@ library(kableExtra)
 ```
 
 
-## Otantamenetelmät {#alaluku81}
+## Otantamenetelmät {#alaluku71}
 
 - Tässä jaksossa tarkastellaan erilaisia __otantamenetelmiä__. Näiden menetelmien tarkoitus on suorittaa otosaineiston (tutkimusaineiston) kerääminen niin, että se huomioi aiemmin esitellyt hyvän otannan kriteerit, ts. että sen tuottama otos on edustava ja luotettava. Näin ollen otos kuvaa koko perusjoukkoa.
   - Otantamenetelmän, joskus myös __otanta-asetelman__, valinta on tietenkin vahvasti sovellusalakohtainen: käytettävät aineistot ja täten otantamenetelmät määräytyvät pitkälti tehtävän tutkimuksen luonteen perusteella. Ts. käytännön tilanteet poikkeavat toisistaan lopulta varsin paljon ja eri tilanteisiin tarvitaan omat menetelmänsä.
@@ -174,7 +174,7 @@ __YSO: Potentiaaliset ongelmat__
 - Esimerkki 2: Tutkittaessa tänä vuonna peruskoulun aloittavia voidaan ensin poimia otos kouluista, jolloin koulut ovat rypäitä. Tämän jälkeen arvotaan kustakin otokseen tulleesta koulusta tietty määrä tutkimuksen kohderyhmään kuuluvia oppilaita.
 :::
 
-## Otantaesimerkkejä {#alaluku82}
+## Otantaesimerkkejä {#alaluku72}
 
 ::: {.eblock .kimmo data-latex="{}"}
 **Esimerkki: Työllisyys ja työttömyys, Tilastokeskuksen työvoimatutkimus**  
@@ -195,7 +195,6 @@ __YSO: Potentiaaliset ongelmat__
 :::
 
 \
-\
 
 ::: {.eblock .kimmo data-latex="{}"}
 **Esimerkki: Terveys 2000**  
@@ -207,7 +206,7 @@ __YSO: Potentiaaliset ongelmat__
   - Suurimmat 15 terveyskeskuspiiriä poimittiin otokseen ja lopuista 65:stä piiristä poimittiin loppuotos kussakin ositteessa systemaattisella (PPS) otannalla (sisältymistodennäköisyys suhteessa alkion kokoon).
 :::
 
-## Otannan haasteita vielä kootusti {#alaluku83}
+## Otannan haasteita vielä kootusti {#alaluku73}
 
 - __Poimintaharha__: Otos ei edusta populaatiota. Vaarana varsinkin silloin, kun otokseen tulleet populaation alkiot ovat valikoituneet tai ovat itse valinneet itsensä otokseen. Vastaavasti toisinaan otoksen peitto ei ole hyvä eli tällöin otanta ei kata koko perusjoukkoa tai se kattaa perusjoukon ja vähän muutakin.
   - Jos television ajankohtaisohjelma pyytää katsojia twiittaamaan mielipiteensä ajankohtaisesta asiasta, kyseessä on itse valikoituva näyte (osallistujat valitsevat itse itsensä).
@@ -221,7 +220,7 @@ __YSO: Potentiaaliset ongelmat__
 
 - __Vastausharha__: Kysymykset voivat olla huonosti muotoiltuja tai vastaajat voivat antaa vääriä tietoja.
 
-## Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
+## Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
 **Otantamenetelmät**
 -	Yksinkertainen satunnaisotanta (YSO)  

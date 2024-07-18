@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.2 Satunnaisilmiöiden tilastollinen mallintaminen | TILM3701 - Tilastotiede ja data 2024</title>
+  <title>4.3 Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.2 Satunnaisilmiöiden tilastollinen mallintaminen | TILM3701 - Tilastotiede ja data 2024" />
+  <meta property="og:title" content="4.3 Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Tilastotieteen ensimmäinen kurssi." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.2 Satunnaisilmiöiden tilastollinen mallintaminen | TILM3701 - Tilastotiede ja data 2024" />
+  <meta name="twitter:title" content="4.3 Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma | TILM3701 - Tilastotiede ja data 2024" />
   
   <meta name="twitter:description" content="Tilastotieteen ensimmäinen kurssi." />
   
@@ -25,15 +25,15 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-07-17" />
+<meta name="date" content="2024-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="alaluku41.html"/>
-<link rel="next" href="alaluku44.html"/>
+<link rel="prev" href="alaluku42.html"/>
+<link rel="next" href="tilastotieteen-koulukunnat.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -111,8 +111,8 @@
 <li class="chapter" data-level="4" data-path="luku4.html"><a href="luku4.html"><i class="fa fa-check"></i><b>4</b> Sattuma ja satunnaisuus tilastotieteessä</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="alaluku41.html"><a href="alaluku41.html"><i class="fa fa-check"></i><b>4.1</b> Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä</a></li>
-<li class="chapter" data-level="4.2" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisilmiöiden tilastollinen mallintaminen</a></li>
-<li class="chapter" data-level="4.3" data-path="alaluku44.html"><a href="alaluku44.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma</a></li>
+<li class="chapter" data-level="4.2" data-path="alaluku42.html"><a href="alaluku42.html"><i class="fa fa-check"></i><b>4.2</b> Satunnaisilmiöiden tilastollinen mallintaminen</a></li>
+<li class="chapter" data-level="4.3" data-path="alaluku43.html"><a href="alaluku43.html"><i class="fa fa-check"></i><b>4.3</b> Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma</a></li>
 <li class="chapter" data-level="4.4" data-path="tilastotieteen-koulukunnat.html"><a href="tilastotieteen-koulukunnat.html"><i class="fa fa-check"></i><b>4.4</b> Tilastotieteen koulukunnat</a></li>
 <li class="chapter" data-level="4.5" data-path="alaluku46.html"><a href="alaluku46.html"><i class="fa fa-check"></i><b>4.5</b> Sattuman rooli tieteenteossa: Vale-emävale-tilasto?</a></li>
 <li class="chapter" data-level="4.6" data-path="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-4-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>4.6</b> Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
@@ -131,41 +131,41 @@
 <li class="chapter" data-level="6.2" data-path="alaluku62.html"><a href="alaluku62.html"><i class="fa fa-check"></i><b>6.2</b> Kahden muuttujan havaintoaineiston kuvaaminen</a></li>
 <li class="chapter" data-level="6.3" data-path="alaluku63.html"><a href="alaluku63.html"><i class="fa fa-check"></i><b>6.3</b> Tunnusluvut</a></li>
 <li class="chapter" data-level="6.4" data-path="alaluku64.html"><a href="alaluku64.html"><i class="fa fa-check"></i><b>6.4</b> Satunnaismuuttujien kovarianssi ja korrelaatio</a></li>
-<li class="chapter" data-level="6.5" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.5</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="6.5" data-path="alaluku65.html"><a href="alaluku65.html"><i class="fa fa-check"></i><b>6.5</b> Muita tunnuslukuja</a></li>
+<li class="chapter" data-level="6.6" data-path="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-6-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>6.6</b> Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="part"><span><b>II Osa II</b></span></li>
-<li class="chapter" data-level="7" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>7</b> Otantamenetelmät</a>
+<li class="chapter" data-level="7" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>7</b> Otantamenetelmät</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>7.1</b> Otantamenetelmät</a>
+<li class="chapter" data-level="7.1" data-path="alaluku71.html"><a href="alaluku71.html"><i class="fa fa-check"></i><b>7.1</b> Otantamenetelmät</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="alaluku81.html"><a href="alaluku81.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>7.1.1</b> Yksinkertainen satunnaisotanta</a></li>
-<li class="chapter" data-level="7.1.2" data-path="alaluku81.html"><a href="alaluku81.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>7.1.2</b> Systemaattinen otanta</a></li>
-<li class="chapter" data-level="7.1.3" data-path="alaluku81.html"><a href="alaluku81.html#ositettu-otanta"><i class="fa fa-check"></i><b>7.1.3</b> Ositettu otanta</a></li>
-<li class="chapter" data-level="7.1.4" data-path="alaluku81.html"><a href="alaluku81.html#ryväsotanta"><i class="fa fa-check"></i><b>7.1.4</b> Ryväsotanta</a></li>
+<li class="chapter" data-level="7.1.1" data-path="alaluku71.html"><a href="alaluku71.html#yksinkertainen-satunnaisotanta"><i class="fa fa-check"></i><b>7.1.1</b> Yksinkertainen satunnaisotanta</a></li>
+<li class="chapter" data-level="7.1.2" data-path="alaluku71.html"><a href="alaluku71.html#systemaattinen-otanta"><i class="fa fa-check"></i><b>7.1.2</b> Systemaattinen otanta</a></li>
+<li class="chapter" data-level="7.1.3" data-path="alaluku71.html"><a href="alaluku71.html#ositettu-otanta"><i class="fa fa-check"></i><b>7.1.3</b> Ositettu otanta</a></li>
+<li class="chapter" data-level="7.1.4" data-path="alaluku71.html"><a href="alaluku71.html#ryväsotanta"><i class="fa fa-check"></i><b>7.1.4</b> Ryväsotanta</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="alaluku82.html"><a href="alaluku82.html"><i class="fa fa-check"></i><b>7.2</b> Otantaesimerkkejä</a></li>
-<li class="chapter" data-level="7.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
-<li class="chapter" data-level="7.4" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Otantaesimerkkejä</a></li>
+<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
+<li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
-<li class="chapter" data-level="8.2" data-path="luku7.html"><a href="luku7.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
+<li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
+<li class="chapter" data-level="8.2" data-path="luku82.html"><a href="luku82.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="luku7.html"><a href="luku7.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
-<li class="chapter" data-level="8.2.2" data-path="luku7.html"><a href="luku7.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
+<li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
+<li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
-<li class="chapter" data-level="8.4" data-path="alaluku93.html"><a href="alaluku93.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
-<li class="chapter" data-level="8.5" data-path="alaluku94.html"><a href="alaluku94.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
-<li class="chapter" data-level="8.6" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
+<li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
+<li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-epävarmuuden-arvioiminen.html"><a href="satunnaisuudesta-johtuvan-epävarmuuden-arvioiminen.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan epävarmuuden arvioiminen</a>
+<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><a href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä {luku9}</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku96.html"><a href="alaluku96.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku97.html"><a href="alaluku97.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="alaluku95.html"><a href="alaluku95.html"><i class="fa fa-check"></i><b>9.3</b> Muita tunnuslukuja</a></li>
-<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia.-1.html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia.-1.html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -229,193 +229,143 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="alaluku43" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Satunnaisilmiöiden tilastollinen mallintaminen<a href="alaluku43.html#alaluku43" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="alaluku43" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma<a href="alaluku43.html#alaluku43" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Tilastolliset tunnusluvut</strong></p>
 <ul>
-<li>Seuraavaksi käydään vaiheittain läpi sitä, miten reealimaailman satunnaisilmiöitä voidaan tilastollisin menetelmin mallintaa.</li>
-<li>Tilastollisen tutkimuksen lähtökohta on aina aineisto. Aineiston tulee kuvata tutkittavaa satunnaisilmiötä sillä tavalla, että esitettyihin tutkimuskysymyksiin ja/tai hypoteeseihin voidaan vastata.
-<ul>
-<li>Aineiston sisältämät satunnaismuuttujat määräävät käytettävän tilastollisen mallin, jota lopulta käytetään hypoteesien testaamiseen.</li>
-<li>Kaikkiin näihin vaiheisiin syvennytään tulevissa jaksoissa vielä tarkemmin, mutta tämän osion tarkoituksena on havainnollistaa sitä, miten tilastotieteessä mallinnetaan satunnaisilmiöitä.</li>
-</ul></li>
-</ul>
-<p><strong>Tilastollisen aineiston kerääminen</strong></p>
-<ul>
-<li>Tilastotieteessä <strong>tilastollisen tutkimusaineiston keräämistä</strong> voidaan pitää hyvänä esimerkkinä satunnaisilmiöstä.
-<ul>
-<li>Voimme ajatella, että tilastollisen tutkimuksen kohteet on aina valittu arpomalla.</li>
-<li>Arvonta on mainio esimerkki satunnaisilmiöstä, sillä siihen liittyy aina ennustamattomuutta: vaikka yksittäisen arvonnan tulosta ei voi tietää etukäteen, noudattaa se kuitenkin todennäköisyyden lakeja.</li>
-<li>Koska arvonnan tulos, eli mitkä perusjoukon tilastoyksiköt tulevat valituksi, vaihtelee satunnaisesti arvontakerrasta toiseen, myös tutkimuksen kohteita kuvaavat tiedot vaihtelevat satunnaisesti arvontakerrasta toiseen.</li>
-<li>Tutkimuksen kohteita kuvaavien tietojen käyttäytymisessä havaitaan kuitenkin arvontaa toistettaessa juuri sitä säännönmukaisuutta, jota kutsutaan tilastolliseksi stabiliteetiksi. <strong>Tämä säännönmukaisuus on tilastollisen tutkimuksen kohde.</strong></li>
-<li>Tilastollisen aineiston keräämistä, eli otantateoriaa, ja sen tavoitteita käsitellään Osan 1 luvussa <a href="luku5.html#luku5">5</a> ja otantamenetelmiä vielä syvemmin Osan 2 luvussa <a href="luku7.html#luku7">8.2</a>.</li>
-</ul></li>
-</ul>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: Tilastollisten aineistojen kerääminen arpomalla</strong></p>
-<ul>
-<li><strong>Satunnaisotanta</strong>: Otannalla<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla. (Ks. Luku <a href="luku5.html#luku5">5</a> ja <a href="luku7.html#luku7">8.2</a>).<br />
+<li>Perehdytään seuraavaksi esimerkin avulla tilastollisiin tunnuslukuihin ja estimaattoreihin käyttäen hieman tilastotieteessä tarvittavaa matemaattista notaatiota.<br />
 </li>
-<li><strong>Satunnaistetut kokeet</strong>: Kokeellisessa tutkimuksessa tavoitteena on vertailla erilaisten käsittelyiden vaikutuksia kokeen kohteisiin. Erilaisten virhelähteiden kontrolloimiseksi käsittelyt on syytä arpoa kohteille.</li>
+<li>Satunnaismuuttujan todennäköisyysjakauman tietoa voidaan tiivistää tunnuslukuihin, joista keskeisimpiä ovat <strong>odotusarvo</strong>, <strong>varianssi</strong> ja <strong>keskihajonta</strong>.</li>
+</ul>
+<div class="defblock mikko">
+<p><strong>Odotusarvo</strong></p>
+<p>Satunnaismuuttujan <span class="math inline">\(Y\)</span> odotusarvo <span class="math inline">\(\text{E}(Y)\)</span> kuvaa satunnaismuuttujan odotettavissa olevaa arvoa.</p>
+<ul>
+<li>Muodostamalla satunnaiskokeen tulosten <strong>painotettu keskiarvo</strong>, jossa kunkin tuloksen painona on vastaavan tapauksen todennäköisyys, niin saatua arvoa sanotaan odotusarvoksi <span class="math inline">\(\text{E}(Y)\)</span>.</li>
+<li>Odotusarvo kuvaa jakauman painopistettä.</li>
+<li>Merkinnän <span class="math inline">\(\text{E}(Y)\)</span> käyttö juontaa juurensa englannin kielen sanoihin expectation (“odotus”) ja expected value (“odotusarvo”).</li>
+</ul>
+</div>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: Nopanheiton odotusarvo</strong></p>
+<p>Perinteikäs esimerkki odotusarvosta on tavallisen kuusitahoisen nopan silmäluvun odotusarvo. Nopanheitto on diskreetti satunnaisilmiö ja tavallisen painottamattoman nopan tapauksessa jokaisen silmäluvun todennäköisyys on yhtä suuri. Merkitään nopan silmälukua (sm) <span class="math inline">\(Y\)</span> ja sen realisaatiota <span class="math inline">\(y\)</span>. Nopan silmäluvun realisaatioiden mahdolliset arvot ovat <span class="math inline">\(Y = \{1,2,3,4,5,6\}\)</span> ja niiden todennäköisyydet ovat <span class="math inline">\(P(Y=y) = \frac{1}{6}\)</span>.</p>
+<p>Nopanheiton silmäluvun odotusarvo määritetään siis painotettuna keskiarvona <span class="math display">\[E(Y) = \sum_{i=1}^6 y \cdot P(Y=y)  = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2} = 3.5\]</span></p>
+</div>
+<ul>
+<li>Odotusarvon lisäksi kiinnostuksen kohteena on usein jakauman keskittyneisyys (hajaantuneisuus). Ts. kun halutaan puolestaan kuvata satunnaismuuttujan arvojen vaihtelua, tutkitaan todennäköisyysjakauman <strong>varianssia</strong> ja <strong>keskihajontaa</strong>.</li>
+</ul>
+<div class="defblock mikko">
+<p><strong>Varianssi</strong></p>
+<p>Satunnaismuuttujan <span class="math inline">\(Y\)</span> hajontaa voidaan mitata varianssilla
+<span class="math display">\[
+\mathrm{Var}(Y) = \text{E}\Big[\Big(Y-\text{E}(Y)\Big)^2\Big],
+\]</span>
+tai sen neliöjuuren eli <strong>keskihajonnan</strong> avulla
+<span class="math display">\[
+\text{D}(Y) = \sqrt{\mathrm{Var}(Y)}.
+\]</span></p>
+<ul>
+<li>Mitä lähempänä nollaa keskihajonta ja varianssi ovat, sitä todennäköisempää on, että satunnaismuuttujan arvo on lähellä odotusarvoa.</li>
+<li>Merkintöjen <span class="math inline">\(\mathrm{Var}(Y)\)</span> ja <span class="math inline">\(\text{D}(Y)\)</span> taustalla on englannin kielen sanat variance (varianssi) ja deviation, joka tarkoittaa “poikkeamaa”/“hajontaa”.</li>
 </ul>
 </div>
 <ul>
-<li>Satunnaisotannalla kerätyissä aineistoissa satunnaisuus perustuu siihen, että satunnaismuuttujien toteutuvat arvot (ja niistä lasketut tunnusluvut kuten keskiarvo) vaihtelevat satunnaisesti otoksesta toiseen, kun otokseen valikoituu satunnaisesti eri tilastoyksiköitä, joilta mitatut/kerätyt tutkimusmuuttujien arvot vaihtelevat.
+<li>Odotusarvon ja varianssin (keskihajonnan) tavanomaiset <strong>estimaattorit</strong> ovat otoskeskiarvo ja otosvarianssi (otoshajonta), joihin tutustuaan alla normaalijakauman erityistapauksessa.</li>
+</ul>
+<p><strong>Normaalijakauman parametrit</strong></p>
 <ul>
-<li>Tämä vaihtelu on kuitenkin stabiilia, eli eri otokset ilmentävät samaa satunnaisilmiötä.</li>
-<li>Toisin sanoen, otantaa toistettaessa eri aineistojen sisältämä satunnaisvaihtelu on aineiston generoineen todennäköisyysjakauman mukaista myös otosten välillä.</li>
-<li>Tilastotieteen tehtävä on tuottaa <strong>tilastollisia malleja</strong> tälle satunnaisilmiöissä havaittavalle tilastolliselle stabiliteetille.</li>
-</ul></li>
-<li>Kerätyn (tai havaitun) aineiston pohjalta pyritään tekemään tutkimuskysymystä vastaavia päätelmiä tutkimuksen kohteena olevasta ja aineiston generoineesta satunnaisilmiöstä.
+<li>Käydään seuraavaksi läpi tilastollisen mallin parametrien merkitystä normaalijakauman tapauksessa.</li>
+<li>Normaalijakauma on yksi keskeisimpiä ja tärkeimpia todennäköisyysjakaumia tilastotieteessä ja sen avulla voidaan helposti kuvata jakauman parametrien vaikutusta sen muotoon.
 <ul>
-<li>Tutkimuskysymyksen tulee tilastollisessa tutkimuksessa olla sellainen, että sitä vastaavat testattavat hypoteesit koskevat aineiston generoinutta satunnaisilmiötä, jota mitatut tutkimusmuuttujat ilmentävät.</li>
-<li>Kun näin on, tutkimuskysymykseen voidaan vastata käytössä olevan aineiston avulla käyttäen tilastollisia menetelmiä.</li>
+<li>Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> annetaan erilaisia arvoja.</li>
+<li>Alla olevassa kuvassa <a href="alaluku43.html#fig:normaalijakauma">4.3</a> on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoilla.</li>
 </ul></li>
 </ul>
-<p><strong>Tilastollisen muuttujan todennäköisyysjakauma</strong></p>
-<ul>
-<li>Tilastolliset menetelmät perustuvat todennäköisyyslaskennan<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> tuloksiin ja tarjoavat keinon hallita satunnaisuuden aiheuttamaa epävarmuutta.</li>
-<li><strong>Tilastolliset mallit</strong> perustuvat satunnaismuuttujan mahdollisten tulosvaihtoehtojen todennäköisyyksiä kuvaavalle <strong>todennäköisyysjakaumalle</strong>, joka määrää millä todennäköisyydellä satunnaismuuttuja saa erilaisia arvoja.
-<ul>
-<li><strong>Diskreetin satunnaismuuttujan</strong> todennäköisyysjakauma voidaan usein esittää taulukkomuodossa. Eri arvojen todennäköisyydet muodostavat kyseisen satunnaismuuttujan todennäköisyysjakauman, <strong>pistetodennäköisyysfunktion</strong>, jota voidaan havainnollistaa esimerkiksi pylväsdiagrammilla (ks. alla oleva esimerkki ja kuvaaja <a href="alaluku43.html#fig:kannatusmittaus">4.2</a>).</li>
-<li><strong>Jatkuvan satunnaismuuttujan</strong> arvot muodostavat jonkin reaaliakselin välin, joka sisältää äärettömän määrän lukuja. Tämän vuoksi jatkuvan satunnaismuuttujan todennäköisyysjakauman esittäminen taulukon kautta ei ole luontevaa, vaan jakauma esitetään yleensä satunnaismuuttujan <strong>tiheysfunktion</strong> avulla.
-<ul>
-<li>Pistetodennäköisyys- ja tiheysfunktiot siis määräävät satunnaismuuttujan mahdollisille arvoille todennäköisyydet väliltä <span class="math inline">\([0,1]\)</span>.</li>
-</ul></li>
-</ul></li>
-<li>Havaitulle aineistolle perustettava tilastollinen malli perustuu satunnaismuuttujan todennäköisyysjakaumalle, joka riippuu yhdestä tai useammasta parametrista ja kuvaa kyseisen muuttujan säännönmukaista satunnaisvaihtelua.
-<ul>
-<li>Tilastollinen malli riippuu siis tehdystä todennäköisyysjakaumaoletuksesta sekä havaitusta aineistosta eli mielenkiinnon kohteena olevan satunnaismuuttujan realisaatioista.</li>
-<li>Tavoitteena on pyrkiä arvioimaan sitä populaatiotason todennäköisyysjakaumaa, joka on tutkimusaineiston generonut.</li>
-</ul></li>
-</ul>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: Diskreetin aineiston jakauma: poliittisten puolueiden kannatusmittaus</strong></p>
-<ul>
-<li>Poliittisten puolueiden kannatustutkimuksia mittaavia galluppeja tehdään erityisesti vaalien alla usean tilastollisia kyselytutkimuksia tekevän tahon toimesta.<br />
-</li>
-<li>Puoluevalintaa (tai valitsematta jättämistä) voidaan pitää äänestysikäisten keskuudessa satunnaismuuttujana, jolla on äärellinen määrä tulosvaihtoehtoja: puolueiden määrän lisäksi vastaaja voi ilmoittaa ettei tiedä ketä aikoo äänestää tai että ei aio äänestää ollenkaan.</li>
-<li>Täten puolueiden kannatus on diskreetti muuttuja ja kannatustutkimuksessa kohdepopulaatio on äänestysikäiset (täysi-ikäiset) Suomen kansalaiset.</li>
-<li>Tässä tapauksessa paras arvio todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta (nk. suurimman uskottavuuden estimaatti, ks. luku <a href="luku8.html#luku8">7</a>) on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista.</li>
-<li>Oheisessa taulukossa on esitelty tuloksia Taloustutkimuksen Ylelle suorittamasta puolueiden eduskuntavaalikannatusta mittaavasta tutkimuksesta, jossa haastateltiin 2481 ihmistä puhelinhaastatteluina ja internetpaneelina aikavälillä 7.6.-2.7.2024.
-<ul>
-<li>Haastatelluista 1910 kertoi puoluekantansa ja tutkimuksen virhemarginaalin kerrottiin olevan suurimmillaan 1,9 prosenttiyksikköä suuntaansa (ks. Osan II luku <a href="luku9.html#luku9">8</a>).</li>
-<li>Nämä todennäköisyydet on esitetty alla olevassa taulukossa sekä kuvaajassa <a href="alaluku43.html#fig:kannatusmittaus">4.2</a>.</li>
-</ul></li>
-</ul>
-<table style="width:100%;">
-<colgroup>
-<col width="17%" />
-<col width="8%" />
-<col width="8%" />
-<col width="8%" />
-<col width="9%" />
-<col width="8%" />
-<col width="6%" />
-<col width="9%" />
-<col width="6%" />
-<col width="9%" />
-<col width="8%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Puolue</th>
-<th align="center">SDP</th>
-<th align="center">VAS</th>
-<th align="center">KOK</th>
-<th align="center">KESK</th>
-<th align="center">RKP</th>
-<th align="center">KD</th>
-<th align="center">VIHR</th>
-<th align="center">PS</th>
-<th align="center">LIIK</th>
-<th align="center">MUU</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Kannatus-%</td>
-<td align="center">20,1</td>
-<td align="center">11,6</td>
-<td align="center">21,2</td>
-<td align="center">12,2</td>
-<td align="center">3,9</td>
-<td align="center">3,7</td>
-<td align="center">8,3</td>
-<td align="center">15,3</td>
-<td align="center">1,9</td>
-<td align="center">1,8</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:kannatusmittaus"></span>
-<img src="TD2024_files/figure-html/kannatusmittaus-1.png" alt="Taloustutkimuksen Ylelle teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista." width="100%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:normaalijakauma"></span>
+<img src="TD2024_files/figure-html/normaalijakauma-1.png" alt="Normaalijakaumien muotoja eri parametriarvoilla." width="100%" />
 <p class="caption">
-Kuvio 4.2: Taloustutkimuksen Ylelle teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista.
+Kuvio 4.3: Normaalijakaumien muotoja eri parametriarvoilla.
 </p>
 </div>
-<p><strong>Parametrien estimointi ja niiden testaus</strong></p>
 <ul>
-<li>Satunnaisilmiötä kuvaava tilastollinen malli perustuu siis johonkin parametriseen todennäköisyysjakaumaan ja pyrkii approksimoimaan “todellista” aineiston generoinutta ilmiötä.
+<li>Tiheysfunktio kuvaa satunnaismuuttujan eri tulosvaihtoehtojen (vaaka-akselin numeeriset arvot) todennäköisyyksiä.
 <ul>
-<li>Todennäköisyysjakaumat riippuvat <strong>parametreista</strong> ja keskeinen oletus erityisesti klassisessa tilastotieteessä on, että aineiston generoinutta satunnaisilmiötä kuvaa jokin vakioinen mutta <strong>tuntematon parametriarvo</strong> (tai niiden joukko).</li>
-<li>Keskeinen tehtävä tilastotieteessä onkin pyrkiä <strong>estimoimaan</strong>, eli jollain keinolla arvioimaan, mitkä nämä tuntemattomat parametriarvot ovat, sillä ne kuvaavat aineiston generoinutta satunnaisilmiötä, joka lopulta on mielenkiinnon kohteena.</li>
+<li>Täten esimerkiksi satunnaismuuttujan, joka on normaalisti jakautunut odotusarvonaan <span class="math inline">\(\mu = 3\)</span> ja varianssinaan <span class="math inline">\(\sigma^2 = 2\)</span>, merkitään <span class="math inline">\(Y \thicksim N(3,2)\)</span>, realisaatiot ovat keskittyneet odotusarvon ympärille niin, että suuret poikkeamat odotusarvosta kumpaankaan suuntaan ovat vähemmän todennäköisiä kuin pienemmät poikkeamat.</li>
+<li>Toisin sanoen, kuten yllä, normaalijakauman parametreista odotusarvo kuvaa sitä mikä on satunnaisilmiön generoimien realisaatioiden odotettavissa oleva arvo.
+<ul>
+<li>Täten odotusarvo kuvaa normaalijakauman tapauksessa sen “sijaintia”. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö.</li>
 </ul></li>
-<li>Tilastollinen aineisto koostuu usean tilastoyksikön havaitusta tai mitatusta tutkimusmuuttujan (sm.) realisaatiosta ja tavoitteena on aineiston avulla arvioida sitä todennäköisyysjakaumaa, joka kyseiset realisoituneet arvot on generoinut.
+<li>Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta.
 <ul>
-<li>Lähtökohtana voidaan siis pitää sitä, että tutkimusmuuttujan realisaatiot ovat peräisin samasta todennäköisyysjakaumasta.</li>
-<li>Tälle oletukselle voidaan perustaa havaintoaineiston yhteisjakauma, joka on se todennäköisyysjakauma joka aineiston on generoinut, mutta jonka parametriarvot ovat tuntemattomia.</li>
+<li>Kuvassa <a href="alaluku43.html#fig:normaalijakauma">4.3</a> huomataan, että suuremmat varianssin arvot “leventävät” normaalijakauman tiheysfunktiota, jolloin suuremmat poikkeamat ovat suhteellisesti todennäköisempiä.</li>
+<li>Varianssin yksikkö on satunnaismuuttujan yksikkö korotettuna toiseen potenssiin, joten sen tulkinta on hankalaa. Tällöin on usein helpompaa hahmottaa satunnaismuuttujan hajontaa varianssin neliöjuurella, eli keskihajonnalla, jonka yksikkö on sama kuin satunnaismuuttujan yksikkö.</li>
 </ul></li>
-<li>Tilastollisen mallin pohjana oleva todennäköisyysjakauma määrittää yhdessä havaintojen kanssa nk. <strong>uskottavuusfunktion</strong>, jota käytetään tuntemattomien parametriarvojen estimoimiseen.
-<ul>
-<li>Aineistoa kuvaavan tilastollisen mallin uskottavuus pyritään maksimoimaan, mikä tarkoittaa valitun todennäköisyysjakauman sovittamista havaintoaineistoon mahdollisimman hyvin.</li>
-<li>Tässä nk. “suurimman uskottavuuden estimoinnissa” aineiston generoiman (oletetun) todennäköisyysjakauman parametriarvot <strong>estimoidaan</strong> (eli arvioidaan) käytettävän otoksen/aineiston avulla.</li>
-<li>Perusjoukkoa parhaiten kuvaavan (eli “aineiston generoineen”) parametrin arvo pyritään siis estimoimaan aineiston perusteella ja saatuja parametriarvoja kutsutaan <strong>estimaateiksi</strong>.</li>
-<li>Suurimman uskottavuuden estimointiin syvennytään tarkemmin Osan II luvussa <a href="luku8.html#luku8">7</a>.</li>
-</ul></li>
-<li>Parametrien estimoinnin lisäksi usein <strong>testataan</strong> parametreja koskevia oletuksia (eli hypoteeseja).
-<ul>
-<li>Toisin sanoen, testaamalla arvioidaan tilastollisen mallin parametreihin liitettäviä hypoteeseja suhteessa aineistosta saatuihin estimaatteihin.</li>
-<li>Näin voidaan testata, onko jokin ennustettu hypoteesi uskottava nyt havaitun aineiston valossa.</li>
 </ul></li>
 </ul>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: Testaus uskottavuuspohjaisessa tilastollisessa päättelyssä</strong></p>
+<p><strong>Otoskeskiarvo ja otosvarianssi normaalijakauman parametrien estimaattoreina</strong></p>
 <ul>
-<li>Palataan aiemmin esitettyyn kuviteltuun esimerkkiin tutkijasta, joka haluaa tutkia sademääriä.</li>
-<li>Sanotaan, että tutkija on kiinnostunut tutkimaan väitettä, jonka mukaan Turussa sataa yli keskimäärin 800 milliä vuodessa.</li>
-<li>Oletetaan lisäksi, että tutkijalla on käytettävänä satunnaisotantaan perustuva arvio Turun sademääristä vuosilta 1980-2023 ja että vuosittaiset sademäärät ovat riippumattomia ja samoin jakautuneet.</li>
-<li>Nyt tutkija voi perustaa väitteen tilastotieteellisen tutkimuksen muodostamalla tilastollisen mallin käytettävissä olevasta aineistosta.</li>
+<li>Kuten yllä mainittiin, tilastollisessa tutkimuksessa on tavoitteena estimoida aineiston generoineen todennäköisyysjakauman tuntemattomat parametrit käyttäen havaintoaineistoa.</li>
+<li>Normaalijakauman tapauksessa tämä on suoraviivaista, joten esitellään nyt lyhyesti normaalijakauman parametrien estimaattorit: <strong>otoskeskiarvo</strong> ja <strong>otosvarianssi</strong>.</li>
+<li>Merkitään satunnaismuuttujaa isolla kirjaimella, <span class="math inline">\(Y\)</span>, ja satunnaismuuttujan realisaatiota pienellä kirjaimella <span class="math inline">\(y\)</span>. Otoskokoa, eli otokseen osallistuvien tilastoyksiköiden määrää merkitään <span class="math inline">\(n\)</span>:llä ja tilastoyksiköitä indeksöidään alaindeksillä <span class="math inline">\(i=1,\ldots,n\)</span>.
+<ul>
+<li>Otoksen poimimisen jälkeen satunnaismuuttujat <span class="math inline">\(Y_1, \ldots, Y_n\)</span> saavat havaituiksi arvoikseen havaintoarvot <span class="math inline">\(y_1, \ldots, y_n\)</span> (ts. <span class="math inline">\(Y_1=y_1, \ldots, Y_n = y_n\)</span>).</li>
+<li>Näin havaintoaineisto on siis <strong>satunnaisotos</strong>, joka voidaan määritellä tarkemmin seuraavasti.</li>
+</ul></li>
 </ul>
+<div class="defblock mikko">
+<p><strong>Satunnaisotos normaalijakaumasta</strong></p>
+<p>Olkoot <span class="math inline">\(Y_1, \ldots, Y_n\)</span> riippumattomia ja normaalisti jakautuneita satunnaismuuttujia, joille pätee <span class="math inline">\(Y_i \thicksim N(\mu,\sigma^2)\)</span>, jossa <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> ovat normaalijakauman muodon määräävät parametrit.</p>
+<p>Parametrien <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> arvoja ei tunneta ja tavoitteena onkin päätellä, <strong>estimoida</strong>, niiden arvot käytettävissä olevasta aineistosta.</p>
 </div>
+<p><strong>Otoskeskiarvo</strong></p>
 <ul>
-<li>Estimointi ja testaus ovat tilastolliseen tutkimukseen liittyvän <strong>tilastollisen päättelyn</strong> keskeisiä välineitä, joiden avulla tutkittavasta ilmiöstä pyritään tekemään johtopäätöksiä siitä kerätyn havaintoaineiston perusteella.
-<ul>
-<li>Estimoitujen parametrien testaus voi vastata esimerkiksi seuraavanlaisiin kysymyksiin:
-<ul>
-<li>Onko suomalaisten miesten keskipituus 180 cm?</li>
-<li>Vaikuttaako yliopistokoulutus tulevaisuuden ansioihin?</li>
-<li>Auttaako tietty lääkeaine jonkin sairauden hoidossa?</li>
-<li>Voiko osakemarkkinoiden tuottoja ennustaa?</li>
-</ul></li>
-</ul></li>
-<li>Parametrien testaus on osa tilastollista päättelyä, johon palataan tarkemmin luvussa <a href="luku8.html#luku8">7</a></li>
+<li>Havaintojen (satunnaismuuttujien) <span class="math inline">\(Y_1, \ldots, Y_n\)</span> <strong>otoskeskiarvo</strong> on</li>
 </ul>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="15">
-<li id="fn15"><p> Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa <a href="luku7.html#luku7">8.2</a>.<a href="alaluku43.html#fnref15" class="footnote-back">↩︎</a></p></li>
-<li id="fn16"><p>Todennäköisyyslaskentaa käsitellään lyhyesti tulevissa luvuissa mutta varsinaisesti tarkemmin 2. periodin kurssilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024">TILM3553 Todennäköisyyslaskennan peruskurssi</a> ja (erityisesti sivuaineopiskelijoille) <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024">TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille</a>.<a href="alaluku43.html#fnref16" class="footnote-back">↩︎</a></p></li>
-</ol>
+<p><span class="math display">\[
+\bar{Y} = \frac{1}{n}(Y_1 + \cdots + Y_n) = \frac{1}{n} \sum_{i=1}^{n} Y_i
+\]</span></p>
+<ul>
+<li>Yksittäisen otoksen otoskeskiarvo on tällöin sm:jien realisaatioiden aritmeettinen keskiarvo</li>
+</ul>
+<p><span class="math display">\[
+\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i.
+\]</span></p>
+<ul>
+<li>Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.</li>
+<li>Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan <span class="math inline">\(\mu\)</span>, on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts.</li>
+</ul>
+<p><span class="math display">\[\text{E}(\bar{Y}) = \mu\]</span></p>
+<ul>
+<li><strong>Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa</strong>. Toisin sanoen, otoskeskiarvo on estimaattori, joka (harhattomasti, ks. Osan II Luku <a href="luku8.html#luku8">8</a>) estimoi aineiston generoineen todennäköisyysjakauman odotusarvoa!</li>
+</ul>
+<p><strong>Otosvarianssi</strong></p>
+<ul>
+<li><p>Aineiston sisältämää vaihtelua kuvataan <strong>otosvarianssilla</strong>
+<span class="math display">\[
+S^2= \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2.
+\]</span></p>
+<ul>
+<li>Vastaavasti sm:jien vaihtelua perusjoukon tasolla kuvataan <strong>populaatiovarianssilla</strong></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\sigma^2= \frac{1}{N} \sum_{j=1}^{N} (Y_j - \mu)^2,
+\]</span>
+jota otosvarianssi (harhattomasti, ks. Osan II Luku <a href="luku8.html#luku8">8</a>) estimoi.</p>
+<ul>
+<li>Otoskeskiarvo <span class="math inline">\(\bar{Y}\)</span> ja otosvarianssi <span class="math inline">\(S^2\)</span> ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen, mutta jotka toimivat saatavilla olevasta aineistosta laskettuna kohdepopulaation jakauman parametrien estimaattoreina.
+<ul>
+<li>Estimaattoreihin, niiden ominaisuuksiin ja tarkempaan teoriaan perehdytään tarkemmin Osan II luvussa <a href="luku8.html#luku8">8</a>.</li>
+</ul></li>
+</ul>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="alaluku41.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="alaluku44.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="alaluku42.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tilastotieteen-koulukunnat.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -189,7 +189,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-07-17}
+\date{2024-07-18}
 
 \begin{document}
 \maketitle
@@ -2367,7 +2367,7 @@ Tilastotieteen kritiikki
 \caption{Hauska kuva satunnaisuudesta.}\label{fig:random}
 \end{figure}
 
-Tässä luvussa pohdimme sattuman ja satunnaisuuden roolia tilastotieteessä ja tieteessä ylipäätään. Satunnaisuudella tarkoitetaan yleensä säännönmukaisuuden puuttumista ja ennustamattomuutta ja kenties juuri siksi sitä voidaan pitää yhtenä maailman vaikuttavimmista ilmiöistä. Jokainen haluaisi tietää mitä tuleman pitää ja siksi sattuma tekee elämästä mielenkiintoista: se vaikuttaa ja muokkaa niin meitä itseämme kuin meitä ympäröivää maailmaa mitä merkityksellisimmin tavoin - joskus jopa vasten tahtoamme ja usein vailla täyttä ymmärtystämme!
+Tässä luvussa pohdimme sattuman ja satunnaisuuden roolia tilastotieteessä ja tieteessä ylipäätään. Satunnaisuudella tarkoitetaan yleensä säännönmukaisuuden puuttumista ja ennustamattomuutta ja kenties juuri siksi sitä voidaan pitää yhtenä maailman vaikuttavimmista ilmiöistä. Jokainen haluaisi tietää mitä tuleman pitää ja siksi sattuma tekee elämästä mielenkiintoista. Se muokkaa niin meitä itseämme kuin meitä ympäröivää maailmaa mitä merkityksellisimmin tavoin - joskus jopa vasten tahtoamme ja usein vailla täyttä ymmärtystämme!
 
 Ihmisen oma kokemus on kuitenkin altis kaikenlaisille virhepäätelmille, joita kutsutaan myös \textbf{kognitiivisiksi vinoumiksi}. Haluamme löytää systematiikkaa ja tarkoitusta kaaoksesta sekä merkityksiä ja syy-seuraussuhteita sellaisista tapahtumista, jotka kuuluvat normaalivaihtelun piiriin. Tällaisissa tilanteissa usein tilastollinen tarkastelu paljastaakin ilmiön todellisen, alkuperäisestä kuvitelmasta poikkeavan luonteen. Erottaakseen systemaattinen vaihtelu satunnaisesta ja ymmärtääkseen oikeasti merkityksellisiä syy-seuraussuhteita, satunnaisuutta on välttämätöntä ymmärtää. Tämä välttämättömyys pätee erityisesti tiedeyhteisön jäseniin, jotka pyrkivät tutkimaan ympäröivän maailman satunnaisia ilmiöitä.
 
@@ -2381,7 +2381,7 @@ Tilastotiede perustuu satunnaisilmiöiden ja niiden generoimien aineistojen tutk
 \begin{itemize}
 \tightlist
 \item
-  Edellisestä luvusta muistamme, että tilastotieteellisen tutkimuksen kohteena on aina jokin tilastoyksikköjen tutkimusmuuttujista koostuva havaintoaineisto, jonka pohjalta tehdään päätelmiä perusjoukosta/populaatiosta.
+  Edellisestä luvusta muistamme, että tilastotieteellisen tutkimuksen kohteena on aina jokin tilastoyksikköjen tutkimusmuuttujista koostuva havaintoaineisto, jonka pohjalta pyritään tekemään päätelmiä perusjoukosta/populaatiosta.
 \item
   Tilastolliset muuttujat tulkitaan satunnaisiksi, ja tilastollisen tutkimuksen tavoite onkin siis tutkia sitä populaatiotason satunnaisilmiötä, joka havaitut eli toteutuneet arvot on generoinut.
 
@@ -2468,7 +2468,7 @@ Reaalimaailman ilmiö on satunnaisilmiö, jos seuraavat ehdot pätevät:
   \item
     Mitattavan ominaisuuden mahdolliset arvot määräävät satunnaismuuttujan luonteen. Yleisesti satunnaismuuttujat jaetaan kahteen luokkaan: \textbf{jatkuviin} ja \textbf{diskreetteihin}.
   \item
-    Satunnaismuuttujan \textbf{todennäköisyysjakauma}, määrää erilaisten tulosvaihtoehtojen todennäköisyyden ja mahdollistaa täten tilastollisen analyysin ja päättelyn.
+    Satunnaismuuttujan \textbf{todennäköisyysjakauma} määrää erilaisten tulosvaihtoehtojen todennäköisyyden ja mahdollistaa täten tilastollisen analyysin ja päättelyn.
 
     \begin{itemize}
     \tightlist
@@ -2477,10 +2477,14 @@ Reaalimaailman ilmiö on satunnaisilmiö, jos seuraavat ehdot pätevät:
     \end{itemize}
   \item
     Satunnaismuuttujat voidaan luokitella myös \textbf{kvalitatiivisiin} ja \textbf{kvantitatiivisiin} muuttujiin (ks. \ref{alaluku53}).
-  \item
-    Kvalitatiivisiin muuttujiin liittyy luokittelu- tai järjestysasteikko.
-  \item
-    Kvantitatiivisiin muuttujiin välimatka- ja suhdeasteikko.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Kvalitatiivisiin muuttujiin liittyy luokittelu- tai järjestysasteikko.
+    \item
+      Kvantitatiivisiin muuttujiin välimatka- ja suhdeasteikko.
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 
@@ -2535,7 +2539,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   \item
     Yleensä sademäärää kohdellaan jatkuvana muuttujana millilitroissa, joka jaetaan sadetta mitanneen astian suuaukon pinta-alalla.
   \item
-    Mikäli kuitenkin määritetään toteumaksi jonkin sademäärän raja-arvon, esimerkiksi yksi milli, ylittävä sademäärä, on kyseessä diskreetti kaksiarvoinen (binäärinen) muuttuja (sademäärä on joko yli tai alle yksi milli (litra neliömetrille)).
+    Mikäli kuitenkin määritetään toteumaksi jonkin sademäärän raja-arvon, esimerkiksi yksi milli, ylittävä sademäärä, on kyseessä diskreetti kaksiarvoinen (binäärinen) muuttuja (sademäärä on joko yli tai alle yksi milli).
   \end{itemize}
 \item
   Tutkija voisi olla esimerkiksi kiinnostunut sadannan eroista kuntien tai alueiden välillä tietyssä maasssa sekä tähän kenties vaikuttavista syistä.
@@ -2563,20 +2567,22 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku43}{%
-\section{Satunnaisilmiöiden tilastollinen mallintaminen}\label{alaluku43}}
+\hypertarget{alaluku42}{%
+\section{Satunnaisilmiöiden tilastollinen mallintaminen}\label{alaluku42}}
 
 \begin{itemize}
 \tightlist
 \item
   Seuraavaksi käydään vaiheittain läpi sitä, miten reealimaailman satunnaisilmiöitä voidaan tilastollisin menetelmin mallintaa.
 \item
-  Tilastollisen tutkimuksen lähtökohta on aina aineisto. Aineiston tulee kuvata tutkittavaa satunnaisilmiötä sillä tavalla, että esitettyihin tutkimuskysymyksiin ja/tai hypoteeseihin voidaan vastata.
+  Tilastollisen tutkimuksen lähtökohta on aina aineisto. Aineiston tulee kuvata tutkittavaa satunnaisilmiötä sillä tavalla, että esitettyihin tutkimuskysymyksiin voidaan vastata ja/tai hypoteeseja testata.
 
   \begin{itemize}
   \tightlist
   \item
-    Aineiston sisältämät satunnaismuuttujat määräävät käytettävän tilastollisen mallin, jota lopulta käytetään hypoteesien testaamiseen.
+    Aineiston sisältämät satunnaismuuttujat määräävät käytettävän tilastollisen mallin, joka kuvaa tutkittavan ilmiön satunnaista luonnetta.
+  \item
+    Lopulta tätä tilastollista mallia voidaan käyttää hypoteesien testaamiseen.
   \item
     Kaikkiin näihin vaiheisiin syvennytään tulevissa jaksoissa vielä tarkemmin, mutta tämän osion tarkoituksena on havainnollistaa sitä, miten tilastotieteessä mallinnetaan satunnaisilmiöitä.
   \end{itemize}
@@ -2611,9 +2617,21 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Satunnaisotanta}: Otannalla\footnote{~Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa \ref{luku7}.} tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla. (Ks. Luku \ref{luku5} ja \ref{luku7}).\\
+  \textbf{Satunnaisotanta}: Otannalla\footnote{~Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa \ref{luku7}.} tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Esimerkiksi tutkittaessa peruskouluopetusta, kaikkien koulujen tutkiminen olisi liian työlästä ja kallista. Tällöin sovelletaan erilaisia otantamenetelmiä, jotka varmistavat että tutkimukseen valikoituu satunnaisesti edustava otos Suomen kouluista. Aineisto voitaisiin kerätä esimerkiksi kaksivaiheiselle ryväsotannalla kaikista Suomen peruskouluista (Ks. Osan II Luku \ref{luku7}).
+  \end{itemize}
 \item
   \textbf{Satunnaistetut kokeet}: Kokeellisessa tutkimuksessa tavoitteena on vertailla erilaisten käsittelyiden vaikutuksia kokeen kohteisiin. Erilaisten virhelähteiden kontrolloimiseksi käsittelyt on syytä arpoa kohteille.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Esimerkiksi lääketutkimuksessa on tärkeää, että testattavan lääkeaineen vaikutusta tutkittaessa testattavaksi henkilöiksi ei valikoidu esimerkiksi juuri tietyn ikäisiä ihmisiä. Lääkeaine saattaa vaikuttaa eri tavoin eri ikäisiin koehenkilöihin, joten satunnaisotanta eri ikäisistä on tarpeen tutkimusta tehdessä.
+  \end{itemize}
 \end{itemize}
 
 \end{eblock}
@@ -2667,7 +2685,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
     \end{itemize}
   \end{itemize}
 \item
-  Havaitulle aineistolle perustettava tilastollinen malli perustuu satunnaismuuttujan todennäköisyysjakaumalle, joka riippuu yhdestä tai useammasta parametrista ja kuvaa kyseisen muuttujan säännönmukaista satunnaisvaihtelua.
+  Havaitulle aineistolle perustettava tilastollinen malli perustuu satunnaismuuttujan todennäköisyysjakaumalle, joka riippuu yhdestä tai useammasta \textbf{parametrista} ja kuvaa kyseisen muuttujan säännönmukaista satunnaisvaihtelua.
 
   \begin{itemize}
   \tightlist
@@ -2675,6 +2693,12 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
     Tilastollinen malli riippuu siis tehdystä todennäköisyysjakaumaoletuksesta sekä havaitusta aineistosta eli mielenkiinnon kohteena olevan satunnaismuuttujan realisaatioista.
   \item
     Tavoitteena on pyrkiä arvioimaan sitä populaatiotason todennäköisyysjakaumaa, joka on tutkimusaineiston generonut.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Tarkemmin sanottuna tavoitteena on pyrkiä arvioimaan tämän populaatiotason todennäköisyysjakauman parametreja, jotka määräävät todennäköisyysjakauman muodon ja täten mahdollisten tulosvaihtoehtojen todennäköisyydet!
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 
@@ -2691,9 +2715,9 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
 \item
   Täten puolueiden kannatus on diskreetti muuttuja ja kannatustutkimuksessa kohdepopulaatio on äänestysikäiset (täysi-ikäiset) Suomen kansalaiset.
 \item
-  Tässä tapauksessa paras arvio todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta (nk. suurimman uskottavuuden estimaatti, ks. luku \ref{luku8}) on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista.
+  Tässä tapauksessa paras arvio (nk. suurimman uskottavuuden estimaatti, ks. luku \ref{luku8}) todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista, kunhan otos on edustava (ks. \ref{luku5}).
 \item
-  Oheisessa taulukossa on esitelty tuloksia Taloustutkimuksen Ylelle suorittamasta puolueiden eduskuntavaalikannatusta mittaavasta tutkimuksesta, jossa haastateltiin 2481 ihmistä puhelinhaastatteluina ja internetpaneelina aikavälillä 7.6.-2.7.2024.
+  Oheisessa taulukossa on esitelty tuloksia \href{https://yle.fi/a/74-20096107}{Taloustutkimuksen Ylelle suorittamasta puolueiden eduskuntavaalikannatusta mittaavasta tutkimuksesta}, jossa haastateltiin 2481 ihmistä puhelinhaastatteluina ja internetpaneelina aikavälillä 7.6.-2.7.2024.
 
   \begin{itemize}
   \tightlist
@@ -2754,7 +2778,7 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
 
 }
 
-\caption{Taloustutkimuksen Ylelle teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista.}\label{fig:kannatusmittaus}
+\caption{[Taloustutkimuksen Ylelle](https://yle.fi/a/74-20096107) teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista (aakkosjärjestyksessä).}\label{fig:kannatusmittaus}
 \end{figure}
 
 \textbf{Parametrien estimointi ja niiden testaus}
@@ -2779,7 +2803,7 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
   \item
     Lähtökohtana voidaan siis pitää sitä, että tutkimusmuuttujan realisaatiot ovat peräisin samasta todennäköisyysjakaumasta.
   \item
-    Tälle oletukselle voidaan perustaa havaintoaineiston yhteisjakauma, joka on se todennäköisyysjakauma joka aineiston on generoinut, mutta jonka parametriarvot ovat tuntemattomia.
+    Tälle oletukselle voidaan perustaa \textbf{havaintoaineiston yhteisjakauma} (ks. Luku \ref{luku8}), joka on se todennäköisyysjakauma joka aineiston on generoinut, mutta jonka parametriarvot ovat tuntemattomia.
   \end{itemize}
 \item
   Tilastollisen mallin pohjana oleva todennäköisyysjakauma määrittää yhdessä havaintojen kanssa nk. \textbf{uskottavuusfunktion}, jota käytetään tuntemattomien parametriarvojen estimoimiseen.
@@ -2803,7 +2827,7 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
   \item
     Toisin sanoen, testaamalla arvioidaan tilastollisen mallin parametreihin liitettäviä hypoteeseja suhteessa aineistosta saatuihin estimaatteihin.
   \item
-    Näin voidaan testata, onko jokin ennustettu hypoteesi uskottava nyt havaitun aineiston valossa.
+    Näin voidaan testata, onko jokin asetettu hypoteesi uskottava nyt havaitun aineiston ja siihen perustuvien estimointitulosten valossa.
   \end{itemize}
 \end{itemize}
 
@@ -2816,11 +2840,19 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
 \item
   Palataan aiemmin esitettyyn kuviteltuun esimerkkiin tutkijasta, joka haluaa tutkia sademääriä.
 \item
-  Sanotaan, että tutkija on kiinnostunut tutkimaan väitettä, jonka mukaan Turussa sataa yli keskimäärin 800 milliä vuodessa.
+  Sanotaan, että tutkija on kiinnostunut tutkimaan väitettä, jonka mukaan Turussa sataa keskimäärin yli 800 milliä vuodessa.
 \item
   Oletetaan lisäksi, että tutkijalla on käytettävänä satunnaisotantaan perustuva arvio Turun sademääristä vuosilta 1980-2023 ja että vuosittaiset sademäärät ovat riippumattomia ja samoin jakautuneet.
 \item
-  Nyt tutkija voi perustaa väitteen tilastotieteellisen tutkimuksen muodostamalla tilastollisen mallin käytettävissä olevasta aineistosta.
+  Nyt tutkija voi suorittaa väitteen tilastotieteellisen tutkimuksen muodostamalla tilastollisen mallin käytettävissä olevasta aineistosta, jonka tavoite on kuvata Turun keskimääräistä vuosittaista sademäärää.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asetettua hypoteesia voidaan siis testata suhteessa estimointituloksiin, jotka kuvaavat vuosittaisen sademäärän odotettavissa olevaa arvoa.
+  \item
+    Vastaavasti tutkija voi muodostaa tilastollisen ennustemallin, joka huomioi sademäärissä mahdollisesti esiintyvän pitkän aikavälin muutoksen ja tehdä mallin pohjalta ennusteen tulevan vuoden sademäärästä. Tilastollista ennustamista käsitellään Osan II luvussa \ref{luku13}.
+  \end{itemize}
 \end{itemize}
 
 \end{eblock}
@@ -2828,7 +2860,7 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
 \begin{itemize}
 \tightlist
 \item
-  Estimointi ja testaus ovat tilastolliseen tutkimukseen liittyvän \textbf{tilastollisen päättelyn} keskeisiä välineitä, joiden avulla tutkittavasta ilmiöstä pyritään tekemään johtopäätöksiä siitä kerätyn havaintoaineiston perusteella.
+  Estimointi ja hypoteesien testaus ovat tilastolliseen tutkimukseen liittyvän \textbf{tilastollisen päättelyn} keskeisiä välineitä, joiden avulla tutkittavasta ilmiöstä pyritään tekemään johtopäätöksiä siitä kerätyn havaintoaineiston perusteella.
 
   \begin{itemize}
   \tightlist
@@ -2851,8 +2883,8 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
   Parametrien testaus on osa tilastollista päättelyä, johon palataan tarkemmin luvussa \ref{luku8}
 \end{itemize}
 
-\hypertarget{alaluku44}{%
-\section{Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma}\label{alaluku44}}
+\hypertarget{alaluku43}{%
+\section{Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma}\label{alaluku43}}
 
 \textbf{Tilastolliset tunnusluvut}
 
@@ -2877,7 +2909,7 @@ Satunnaismuuttujan \(Y\) odotusarvo \(\text{E}(Y)\) kuvaa satunnaismuuttujan odo
 \item
   Odotusarvo kuvaa jakauman painopistettä.
 \item
-  Merkinnän \(\text{E}(Y)\) käyttö juontaa juurensa englannin kielen sanoihin ``odotus'', expectation, ja ``odotusarvo'', expected value.
+  Merkinnän \(\text{E}(Y)\) käyttö juontaa juurensa englannin kielen sanoihin expectation (``odotus'') ja expected value (``odotusarvo'').
 \end{itemize}
 
 \end{defblock}
@@ -2961,14 +2993,22 @@ tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
   \begin{itemize}
   \tightlist
   \item
-    Täten esimerkiksi satunnaismuuttujan, joka on normaalisti jakautunut odotusarvonaan \(3\) ja varianssinaan \(2\), merkitään \(Y \thicksim N(3,2)\), realisaatiot ovat keskittyneet odotusarvon ympärille niin, että suuret poikkeamat odotusarvosta kumpaankaan suuntaan ovat vähemmän todennäköisiä kuin pienemmät poikkeamat.
+    Täten esimerkiksi satunnaismuuttujan, joka on normaalisti jakautunut odotusarvonaan \(\mu = 3\) ja varianssinaan \(\sigma^2 = 2\), merkitään \(Y \thicksim N(3,2)\), realisaatiot ovat keskittyneet odotusarvon ympärille niin, että suuret poikkeamat odotusarvosta kumpaankaan suuntaan ovat vähemmän todennäköisiä kuin pienemmät poikkeamat.
   \item
-    Toisin sanoen, kuten yllä, normaalijakauman parametreista odotusarvo kuvaa sitä mikä on satunnaisilmiön generoimien realisaatioiden odotettavissa oleva arvo. Täten odotusarvo kuvaa normaalijakauman tapauksessa tiheysfunktion ``sijaintia'', normaalijakauman symmetrian ansiosta. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö.
-  \item
-    Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta. Kuvassa \ref{fig:normaalijakauma} huomataan, että suuremmat varianssin arvot ``leventävät'' normaalijakauman tiheysfunktiota, jolloin suuremmat poikkeamat ovat suhteellisesti todennäköisempiä.
+    Toisin sanoen, kuten yllä, normaalijakauman parametreista odotusarvo kuvaa sitä mikä on satunnaisilmiön generoimien realisaatioiden odotettavissa oleva arvo.
 
     \begin{itemize}
     \tightlist
+    \item
+      Täten odotusarvo kuvaa normaalijakauman tapauksessa sen ``sijaintia''. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö.
+    \end{itemize}
+  \item
+    Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Kuvassa \ref{fig:normaalijakauma} huomataan, että suuremmat varianssin arvot ``leventävät'' normaalijakauman tiheysfunktiota, jolloin suuremmat poikkeamat ovat suhteellisesti todennäköisempiä.
     \item
       Varianssin yksikkö on satunnaismuuttujan yksikkö korotettuna toiseen potenssiin, joten sen tulkinta on hankalaa. Tällöin on usein helpompaa hahmottaa satunnaismuuttujan hajontaa varianssin neliöjuurella, eli keskihajonnalla, jonka yksikkö on sama kuin satunnaismuuttujan yksikkö.
     \end{itemize}
@@ -2982,13 +3022,7 @@ tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
 \item
   Kuten yllä mainittiin, tilastollisessa tutkimuksessa on tavoitteena estimoida aineiston generoineen todennäköisyysjakauman tuntemattomat parametrit käyttäen havaintoaineistoa.
 \item
-  Normaalijakauman tapauksessa tämä on suoraviivaista, joten esitellään nyt lyhyesti normaalijakauman parametrien estimaattorit: otoskeskiarvo ja otosvarianssi.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Tätä varten esitellään hieman tarvittavaa matemaattista notaatiota.
-  \end{itemize}
+  Normaalijakauman tapauksessa tämä on suoraviivaista, joten esitellään nyt lyhyesti normaalijakauman parametrien estimaattorit: \textbf{otoskeskiarvo} ja \textbf{otosvarianssi}.
 \item
   Merkitään satunnaismuuttujaa isolla kirjaimella, \(Y\), ja satunnaismuuttujan realisaatiota pienellä kirjaimella \(y\). Otoskokoa, eli otokseen osallistuvien tilastoyksiköiden määrää merkitään \(n\):llä ja tilastoyksiköitä indeksöidään alaindeksillä \(i=1,\ldots,n\).
 
@@ -3006,7 +3040,7 @@ tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
 
 Olkoot \(Y_1, \ldots, Y_n\) riippumattomia ja normaalisti jakautuneita satunnaismuuttujia, joille pätee \(Y_i \thicksim N(\mu,\sigma^2)\), jossa \(\mu\) ja \(\sigma^2\) ovat normaalijakauman muodon määräävät parametrit.
 
-Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin päätellä, \textbf{estimoida}, niiden arvot lopulta käytettävissä olevasta aineistosta.
+Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin päätellä, \textbf{estimoida}, niiden arvot käytettävissä olevasta aineistosta.
 
 \end{defblock}
 
@@ -3015,7 +3049,7 @@ Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin pää
 \begin{itemize}
 \tightlist
 \item
-  Normaalisti jakautuneiden havaintojen (satunnaismuuttujien) \(Y_1, \ldots, Y_n\) \textbf{otoskeskiarvo} on
+  Havaintojen (satunnaismuuttujien) \(Y_1, \ldots, Y_n\) \textbf{otoskeskiarvo} on
 \end{itemize}
 
 \[
@@ -3045,7 +3079,7 @@ Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin pää
 \begin{itemize}
 \tightlist
 \item
-  Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa.
+  \textbf{Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa}. Toisin sanoen, otoskeskiarvo on estimaattori, joka (harhattomasti, ks. Osan II Luku \ref{luku8}) estimoi aineiston generoineen todennäköisyysjakauman odotusarvoa!
 \end{itemize}
 
 \textbf{Otosvarianssi}
@@ -3067,7 +3101,7 @@ Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin pää
 \[
 \sigma^2= \frac{1}{N} \sum_{j=1}^{N} (Y_j - \mu)^2,
 \]
-jota otosvarianssi harhattomasti estimoi.
+jota otosvarianssi (harhattomasti, ks. Osan II Luku \ref{luku8}) estimoi.
 
 \begin{itemize}
 \tightlist
@@ -3081,8 +3115,6 @@ jota otosvarianssi harhattomasti estimoi.
   \end{itemize}
 \end{itemize}
 
-\hfill\break
-
 \hypertarget{tilastotieteen-koulukunnat}{%
 \section{Tilastotieteen koulukunnat}\label{tilastotieteen-koulukunnat}}
 
@@ -3092,13 +3124,17 @@ jota otosvarianssi harhattomasti estimoi.
   Tilastotiede voidaan jakaa kahteen merkittävään paradigmaan sen mukaan, miten \textbf{tilastolliseen päättelyyn}, ml. hypoteeseihin ja niiden testaamiseen, suhtaudutaan. Näitä ovat \textbf{klassinen eli frekventistinen tilastotiede} sekä \textbf{Bayesilainen tilastotiede}. Tarkastellaan seuraavaksi minkälaisia eroja ja yhtäläisyyksiä näiden koulukuntien välillä on.
 \end{itemize}
 
-\hfill\break
-
 \textbf{Frekventistinen tilastotiede}
 
 \begin{itemize}
 \item
   Klassisessa eli frekventistisessä tilastotieteessä ajatellaan että hypoteesien testaaminen tulee perustua yksinomaan havaittuun aineistoon ja siihen liitettävään tilastolliseen malliin.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Luvuissa \ref{alaluku42} ja \ref{alaluku43} esitellyt lähestymistavat ja menetelmät lukeutuvat klassisen tilastotieteen koulukuntaan.
+  \end{itemize}
 \item
   Nimi ``frekventistinen'' juontuu siitä, että tilastollisen mallin perustana oleva todennäköisyysjakauma määrittää satunnaismuuttujan mahdollisten arvojen todennäköisyydeksi niiden suhteellisen osuuden äärettömästä määrästä realisaatioita, ts. niiden suhteellisen frekvenssin.
 \item
@@ -3222,13 +3258,9 @@ Erityisesti nykypäivänä ei-tieteellinen tieto ja tarkoituksellinen disinforma
 \item
   Tilastollinen malli (todennäköisyysmalli)
 \item
-  Kvalitatiiviset ja kvantitatiiviset muuttujat
-\item
-  Frekventistinen ja Bayesiläinen tilastotiede
-\item
   Odotusarvo ja varianssi
 \item
-  Yleisempiä jakaumia: Normaalijakauma, Bernoulli-jakauma, binomijakauma ja Poisson-jakauma
+  Frekventistinen ja Bayesiläinen tilastotiede
 \item
   Tieteen popularisointi ja sen suhde (yksittäiseen) tutkimukseen
 \end{itemize}
@@ -3248,7 +3280,7 @@ Voidaksemme tehdä uskottavaa päättelyä ``havainnoista parametreihin'', tulee
 \item
   \textbf{Tilastollinen tutkimus} aloitetaan tutkimusaineiston keruun suunnittelulla.
 \item
-  Kertauksen vuoksi: tilastollinen tutkimusaineisto (havaintoaineisto) koostuu tilastoyksiköiden populaatiosta havaituista tilastomuuttujien arvoista.
+  Kertauksen vuoksi: tilastollinen tutkimusaineisto (havaintoaineisto) koostuu perusjoukon eli populaation tilastoyksiköiden havaituista tilastomuuttujien arvoista.
 \end{itemize}
 
 \begin{figure}
@@ -3287,10 +3319,9 @@ tilastoyksikkö \(n\) & \(x_{n,1}\) & \(x_{1,2}\) & \(\dots\) & \(x_{n,m}\) \\
 \bottomrule()
 \end{longtable}
 
-Tässä siis rivillä \(i\) on \(i\). \textbf{tilastoyksikön} havainto ja sarakkeessa \(j\) on \(j\). tilastollisesta muuttujasta havaitut arvot \(x_{i,j}\). Ts. yhdellä rivillä on yhden tilastoyksikön tiedot kaikista tilastomuuttujista ja yksi sarake on kaikkien tilastoyksiköiden tiedot yhdestä tilastomuuttujasta.
-
 \begin{itemize}
-\tightlist
+\item
+  Tässä siis rivillä \(i\) on \(i\). \textbf{tilastoyksikön} havainto ja sarakkeessa \(j\) on \(j\). tilastollisesta muuttujasta havaittu arvo \(x_{i,j}\). Ts. yhdellä rivillä on yhden tilastoyksikön tiedot kaikista tilastomuuttujista ja yksi sarake on kaikkien tilastoyksiköiden tiedot yhdestä tilastomuuttujasta.
 \item
   Usein (varsinkin parhaillaan kiihtyvällä vauhdilla) kerättävät havaintoaineistot ovat niin suuria, ettei edellisenkaltaisesta havaintotaulukosta voida usein suoraan tarkastelemalla nähdä aineiston pääpiirteitä.
 
@@ -3299,11 +3330,31 @@ Tässä siis rivillä \(i\) on \(i\). \textbf{tilastoyksikön} havainto ja sarak
   \item
     Tällöin voi olla tarpeen luokitella aineistoa taulukon muodostamiseksi.\\
   \item
-    Luokittelussa on kysymys aineiston tiivistämisestä kohtuullisen kokoiseksi ja havainnollisempaan muotoon. Luokittelussa tilastomuuttujan arvot sijoitetaan eri luokkiin siten, että yhden tilastomuuttujan arvo voi kuulua vain yhteen luokkaan. Luokka ilmoitetaan yleensä luokkavälinä, kuten reaalilukuvälinä. Esimerkiksi henkilön ikä on tapana luokitella ikäjakauman kuvaamisessa 10-vuotisluokkiin (15-24, 25-34, \ldots), vaikka periaatteessa ikä voitaisiin ilmoittaa minuutinkin tarkkuudella.\\
+    Luokittelussa on kysymys aineiston tiivistämisestä kohtuullisen kokoiseksi ja havainnollisempaan muotoon.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Luokittelussa tilastomuuttujan arvot sijoitetaan eri luokkiin siten, että yhden tilastomuuttujan arvo voi kuulua vain yhteen luokkaan.
+    \item
+      Luokka ilmoitetaan yleensä luokkavälinä, kuten reaalilukuvälinä. Esimerkiksi henkilön ikä on tapana luokitella ikäjakauman kuvaamisessa 10-vuotisluokkiin (15-24, 25-34, \ldots), vaikka periaatteessa ikä voitaisiin ilmoittaa minuutinkin tarkkuudella.\\
+    \item
+      Luokkien lukumäärään vaikuttavat muun muassa tilastomuuttujan arvojen vaihteluväli ja havaintoaineiston laajuus.
+    \item
+      Luokittelussa pyritään siihen, että luokkien lukumäärä saadaan tarvittaessa luokkia yhdistämällä kohtuulliseksi ja että luokat valitaan tasavälisesti eli siten, että kahden peräkkäisen luokan alarajojen erotus on vakio.
+    \item
+      Kun aineistoa luokitellaan, aineiston luettavuus paranee mutta toisaalta osa tiedoista menetetään eivätkä yksittäiset havaintoarvot ole enää tiedossa.\\
+    \end{itemize}
   \item
-    Luokkien lukumäärään vaikuttavat muun muassa tilastomuuttujan arvojen vaihteluväli ja havaintoaineiston laajuus. Luokittelussa pyritään siihen, että luokkien lukumäärä saadaan tarvittaessa luokkia yhdistämällä kohtuulliseksi ja että luokat valitaan tasavälisesti eli siten, että kahden peräkkäisen luokan alarajojen erotus on vakio. Kun aineistoa luokitellaan, aineiston luettavuus paranee mutta toisaalta osa tiedoista menetetään eivätkä yksittäiset havaintoarvot ole enää tiedossa.\\
-  \item
-    Emme vielä tällä kurssilla käsittele tilastografiikan esittämistä tarkemmin. Muun muassa tilastollisen päättelyn peruskurssi (TILM3555) vastaa näihin kysymyksiin tarkemmin. Graafiset menetelmät ovat joka tapauksessa erittäin tärkeä osa aineiston havainnollistamista. Kuvat helpottavat aineiston tulkitsemista ja toimivat usein perusteltuna lähtökohtana monimutkaisempien tilastollisten mallien (ja algoritmien) sovittamiselle.
+    Emme vielä tällä kurssilla käsittele tilastografiikan esittämistä, mutta sitä käsitellään mm. \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027}{Tilastollisen päättelyn peruskurssi (TILM3555)} tarkemmin.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Graafiset menetelmät ovat joka tapauksessa erittäin tärkeä osa aineiston havainnollistamista.
+    \item
+      Kuvat helpottavat aineiston tulkitsemista ja toimivat usein perusteltuna lähtökohtana monimutkaisempien tilastollisten mallien (ja algoritmien) sovittamiselle.
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 
@@ -3369,7 +3420,7 @@ Kokonaistutkimus on tutkimus, jossa tutkitaan kaikki tutkimuksen kohteena olevan
 
 \textbf{Otantatutkimus}
 
-Otantatutkimuksessa tutkimus kohdistetaan johonkin (populaation/perusjoukon) osajoukkoon, joka poimitaan sopivaa \textbf{otantamenetelmää} käyttäen (ks. alaluku \ref{alaluku55}) ja populaatiota/perusjoukkoa koskevat johtopäätelmät tehdään tähän otokseen perustuen.
+Otantatutkimuksessa tutkimus kohdistetaan johonkin (populaation/perusjoukon) osajoukkoon, joka poimitaan sopivaa \textbf{otantamenetelmää} käyttäen (ks. Osan II Luku \ref{luku7}) ja populaatiota/perusjoukkoa koskevat johtopäätelmät tehdään tähän otokseen perustuen.
 
 \begin{itemize}
 \tightlist
@@ -3397,12 +3448,10 @@ Otantatutkimuksessa tutkimus kohdistetaan johonkin (populaation/perusjoukon) osa
 
 \end{defblock}
 
-\hfill\break
-
 \begin{itemize}
 \tightlist
 \item
-  Otantatutkimuksessa keskitytään siis perusjoukkoa edustavan pienemmän, mieluusti satunnaisesti valitun otoksen tutkimiseen.
+  Otantatutkimuksessa keskitytään siis perusjoukkoa edustavan mutta pienemmän, mieluusti satunnaisesti valitun otoksen tutkimiseen.
 
   \begin{itemize}
   \tightlist
@@ -3428,7 +3477,7 @@ Otantatutkimuksessa tutkimus kohdistetaan johonkin (populaation/perusjoukon) osa
     Kokonaistutkimuksessa vastauskato ja tarkasteltavan populaation valintavirhe ovat mahdollisia siinä missä otantatutkimuksessakin.
   \end{itemize}
 \item
-  Otantateoria on yksi tilastotieteen keskeisimpiä oppeja ja tarjoaa teoreettisen kehikon empiiristen tutkimusten tulosten yleistämiseen. Tarkastellaan siis tarkemmin otannan ideaa ja toteuttamista seuraavassa alaluvussa.
+  Otantateoria on yksi tilastotieteen keskeisimpiä oppeja ja tarjoaa teoreettisen kehikon empiiristen tutkimusten tulosten yleistämiseen. Tarkastellaan siis tarkemmin otannan ideaa seuraavassa alaluvussa. Otannan toteuttamista, otantamenetelmiä, tarkastellaan Osan II luvussa \ref{luku7}.
 \end{itemize}
 
 \hypertarget{alaluku52}{%
@@ -3447,7 +3496,7 @@ Otantatutkimuksessa tutkimus kohdistetaan johonkin (populaation/perusjoukon) osa
   \item
     Perusjoukon (populaation) asettaminen
   \item
-    Kehikko
+    Otantakehikko
   \item
     Kerättävän informaation sisältö (mitä tietoa todella tarvitaan, mitä voidaan jättää pois, suunnitellaan kysymykset ja mahdollinen kyselylomake)
   \item
@@ -3515,7 +3564,11 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
     \begin{itemize}
     \tightlist
     \item
-      \textbf{Otoskoko} vaikuttaa siihen miten hyvin otoksesta tehdyt johtopäätökset voidaan yleistää koskemaan koko perusjoukkoa, ts. kuinka luotettavia ne ovat. Tämä johtuu siitä, että yksittäisten otosyksiköiden ominaisuudet saattavat vaihdella suuresti ja kasvattamalla otoskokoa perusjoukon systemaattiset piirteet tulevat otoskoon kasvaessa yhä paremmin esille. Kun otoskoko vastaa populaation kokoa, on kyseessä tietenkin kokonaistutkimus, joka kertoo kaiken perusjoukosta. Otoskoon valintaan ja määräämiseen palataan myöhemmin luvussa \ref{luku6}.
+      \textbf{Otoskoko} vaikuttaa siihen miten hyvin otoksesta tehdyt johtopäätökset voidaan yleistää koskemaan koko perusjoukkoa, ts. kuinka luotettavia ne ovat.
+    \item
+      Tämä johtuu siitä, että yksittäisten otosyksiköiden ominaisuudet saattavat vaihdella suuresti ja kasvattamalla otoskokoa perusjoukon systemaattiset piirteet tulevat otoskoon kasvaessa yhä paremmin esille.
+    \item
+      Kun otoskoko vastaa populaation kokoa, on kyseessä tietenkin kokonaistutkimus, joka kertoo kaiken perusjoukosta. Otoskoon valintaan ja määräämiseen palataan myöhemmin luvussa \ref{luku9}.
     \end{itemize}
   \item
     Käytettiinkö apuna tilastotieteellisesti vankkaa suunnittelua otoskoon määrittämiseksi ja/tai miten pyrittiin varmistamaan tärkeisiin analyysiryhmiin kuuluvien riittävä määrä aineistossa?
@@ -3530,7 +3583,9 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
   \item
     \textbf{Kehikkoperusjoukko} on rekisterin, luettelon tms. peittämä osa kohdeperusjoukkoa. Kyseessä on siis se osa kohdeperusjoukkoa, josta otanta ylipäänsä pystytään suorittamaan eli \textbf{otantakehikko}.
   \item
-    \textbf{Otantakehikon alipeitto} esiintyy, kun otantakehikosta puuttuu osa kohdeperusjoukon alkioista (esim. tutkimus suoritetaan puhelinhaastattelulla, mutta osa aiottuun otokseen kuuluvista haastateltavista ei omista puhelinta). Vastaavasti \textbf{otantakehikon ylipeittoa} esiintyy, kun otantakehikkoon kuuluu kohdeperusjoukkoon kuulumattomia alkioita.
+    \textbf{Otantakehikon alipeitto} esiintyy, kun otantakehikosta puuttuu osa kohdeperusjoukon alkioista (esim. tutkimus suoritetaan puhelinhaastattelulla, mutta osa aiottuun otokseen kuuluvista haastateltavista ei omista puhelinta).
+  \item
+    Vastaavasti \textbf{otantakehikon ylipeittoa} esiintyy, kun otantakehikkoon kuuluu kohdeperusjoukkoon kuulumattomia alkioita.
 
     \begin{itemize}
     \tightlist
@@ -3548,7 +3603,7 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
 
 }
 
-\caption{Otannan idea.}\label{fig:otanta}
+\caption{Otannan eri virhelajit.}\label{fig:otanta}
 \end{figure}
 
 \begin{itemize}
@@ -3570,6 +3625,8 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
   \tightlist
   \item
     Esimerkiksi perinteiset katukyselyt eivät ole hyvä otantatapa, sillä kadulla liikkujat eivät välttämättä kovin hyvin edusta tutkittavaa perusjoukkoa, ellei perusjoukkona ole kyseisellä kadulla kyseiseen aikaan liikkuvat ihmiset.
+  \item
+    Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyselytuloksia harvemmin tulkitaan.
   \end{itemize}
 \end{itemize}
 
@@ -3582,7 +3639,7 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
 \begin{itemize}
 \tightlist
 \item
-  Tilastoyksikkö on kotitalous, joten kaikkien kotitalouksien tutkiminen (kokonaistutkimus, ks. alla) olisi vaikeaa ja aikaavievää.
+  Tilastoyksikkö on kotitalous, joten kaikkien kotitalouksien tutkiminen (kokonaistutkimus, ks. alla) olisi vaikeaa, kallista ja aikaavievää.
 \item
   Tutkittavaksi valitaan vain muutama tuhat kotitaloutta (ts. otantatutkimus) ja selvitetään näiden tulot.
 
@@ -3648,7 +3705,7 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
 \end{itemize}
 
 \begin{defblock}{}
-\textbf{Harhattomuus}
+\textbf{Mittarin harhattomuus}
 
 Mittari on harhaton, jos se ei systemaattisesti ali- tai yliarvioi mitattavan ominaisuuden määrää.
 
@@ -3658,11 +3715,11 @@ Mittari on harhaton, jos se ei systemaattisesti ali- tai yliarvioi mitattavan om
 \item
   Harhaton mittari siis antaa keskimäärin oikeita mittauksia mitattavasta ominaisuudesta.
 \item
-  Harhattomuutta pidetään myös hyvänä ominaisuutena tilastollisten mallien parametrien estimaattoreille. Tähän palataan myöhemmin luvussa \ref{luku6}.
+  Harhattomuutta pidetään myös hyvänä ominaisuutena tilastollisten mallien parametrien estimaattoreille. Tähän palataan myöhemmin luvussa \ref{luku8}.
 \end{itemize}
 
 \begin{defblock}{}
-\textbf{Toistettavuus}
+\textbf{Mittarin toistettavuus}
 
 Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia samanlaisista otoksista eli se on johdonmukainen ja mittausvirheet ovat pieniä.
 
@@ -3701,7 +3758,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
   \item
     Luottamusväliä käytetään määrittämään estimaatin luotettavuutta.
   \item
-    Väliestimointia tarkastellaan tarkemmin luvussa \ref{luku6}.
+    Väliestimointia tarkastellaan tarkemmin luvussa \ref{luku9}.
   \end{itemize}
 \end{itemize}
 
@@ -3717,7 +3774,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
 \begin{itemize}
 \tightlist
 \item
-  Luotettavuudella voidaan tarkoittaa myös tutkimuksen \textbf{objektiivisuutta / puolueettomuutta}
+  Luotettavuudella voidaan tarkoittaa myös tutkimuksen \textbf{objektiivisuutta / puolueettomuutta}.
 
   \begin{itemize}
   \tightlist
@@ -3738,7 +3795,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
 \tightlist
 \item
   Annettiin C-vitamiinia 100:lle terminaalivaiheen syöpäpotilaalle ja
-  seurattiin kuolleisuutta (Cameron and Pauling, 1976).
+  seurattiin kuolleisuutta (\href{https://pubmed.ncbi.nlm.nih.gov/1068480/}{Cameron and Pauling, 1976}).
 
   \begin{itemize}
   \tightlist
@@ -3747,10 +3804,10 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
   \item
     Seuranta-aika: aika hetkestä, jolloin todettiin tavanomaisten hoitojen olevan tehottomia, kuolinhetkeen saakka.
   \item
-    Tulos: C-vitamiinia saaneet käsittelyryhmän potilaat elivät 4 kertaa kauemmin (p \(< 0.0001\)).
+    Tulos: C-vitamiinia saaneet käsittelyryhmän potilaat elivät 4 kertaa kauemmin (\(p < 0.0001\)) (Edellinen \(p\) viittaa p-arvoon, ks. Osan II Luku \ref{luku9}).
   \end{itemize}
 \item
-  Ristiriitaista evidenssiä saatiin tutkimuksessa, jossa vastaava tutkimusongelma, mutta toteutettu satunnaistettuna kokeena (Moertel et al.~1985).
+  Ristiriitaista evidenssiä saatiin tutkimuksessa, jossa vastaava tutkimusongelma, mutta toteutettu satunnaistettuna kokeena (\href{https://pubmed.ncbi.nlm.nih.gov/3880867/}{Moertel et al.~1985}).
 
   \begin{itemize}
   \tightlist
@@ -3792,7 +3849,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
   \begin{itemize}
   \tightlist
   \item
-    On syytä huomauttaa, että vaikka mitattava ilmiö ei olisikaan numeerinen, se voidaan aina ``koodata'' eli muuntaa numeeriseksi. Esimerkiksi perinteinen kaksiarvoinen mies-nainen -muuttujan tapauksessa voidaan käyttää tunnuksia 0 ja 1.
+    On syytä huomauttaa, että vaikka mitattava ilmiö ei olisikaan numeerinen, se voidaan aina ``koodata'' eli muuntaa numeeriseksi. Esimerkiksi perinteisen kaksiarvoisen mies-nainen -muuttujan tapauksessa voidaan käyttää tunnuksia 0 ja 1.
   \end{itemize}
 \item
   Ilmiön luonteesta riippuen voidaan näille tulosvaihtoehdoille käyttää erilaisia \textbf{mitta-asteikkoja}.
@@ -3814,7 +3871,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
       Esimerkkejä: Sukupuoli, veriryhmä tai kotikunta.
     \end{itemize}
   \item
-    \textbf{Järjestysasteikko} (ordinaaliasteikko): Tällöin muuttujan arvot voidaan luokittelun lisäksi asettaa empiirisesti mielekkääseen järjestykseen. Tällöin siis mittauksen kohteella on ``enemmän mitattavaa ominaisuutta'' kuin jollakin toisella kohteella
+    \textbf{Järjestysasteikko} (ordinaaliasteikko): Tällöin muuttujan arvot voidaan luokittelun lisäksi asettaa empiirisesti mielekkääseen järjestykseen. Tällöin siis mittauksen kohteella on ``enemmän mitattavaa ominaisuutta'' kuin jollakin toisella kohteella.
 
     \begin{itemize}
     \tightlist
@@ -3829,13 +3886,15 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
     \begin{itemize}
     \tightlist
     \item
-      Välimatka-asteikolla pystytään mittaamaan yksittäisten luokkien tai havaintoarvojen ero. Esimerkiksi: Lämpötilan mittaaminen esim. celcius-asteina. Pystymme numeroarvoina ilmoittamaan onko tänään lämpimämpi, yhtä lämmin vai kylmempi sää kuin eilen ja kuinka monta astetta muutos on.
+      Välimatka-asteikolla pystytään mittaamaan yksittäisten luokkien tai havaintoarvojen ero. Esimerkiksi: Lämpötilan mittaaminen celcius-asteina. Pystymme numeroarvoina ilmoittamaan onko tänään lämpimämpi, yhtä lämmin vai kylmempi sää kuin eilen ja kuinka monta astetta muutos on.
     \item
       Kuinka paljon kahden mittauksen kohteen ominaisuudet eroavat toisistaan.
     \item
-      Intervalliasteikon tasoisen muuttujan arvoista voidaan sanoa, kuinka paljon toinen arvo on toista suurempi (pienempi). Mittarin nollapiste on kuitenkin ``keinotekoinen'' ja siten vapaasti valittavissa. Samoin voidaan valita käytettävä mittayksikkö vapaasti. Oleellista on vain se, että havaintojen välisellä välimatkalla on aina empiirisesti mielekäs tulkinta.
+      Intervalliasteikon tasoisen muuttujan arvoista voidaan sanoa, kuinka paljon toinen arvo on toista suurempi (pienempi).
     \item
-      Yhteen- ja vähennyslasku ovat sallittuja.
+      Mittarin nollapiste on kuitenkin ``keinotekoinen'' ja siten vapaasti valittavissa. Samoin voidaan valita käytettävä mittayksikkö vapaasti sekä yhteen- ja vähennyslasku ovat sallittuja.
+    \item
+      Oleellista on vain se, että havaintojen välisellä välimatkalla on aina empiirisesti mielekäs tulkinta.
     \end{itemize}
   \item
     \textbf{Suhdeasteikko}: Jos intervalliasteikon ominaisuuksien lisäksi on määriteltynä yksikäsitteinen mittalukujen absoluuttinen nollapiste.
@@ -3855,7 +3914,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
 \item
   Vastavasti \textbf{välimatka- ja suhdeasteikkoa kutsutaan kvantitatiivisiksi asteikoiksi}, koska tällöin mittaluvut kuvaavat jonkin ominaisuuden määrää.
 \item
-  Tilastollisen analyysin kannalta mitta-asteikkojen merkitys on siinä, että tilastollisten (matemaattisten) operaatioiden sallittavuus määräytyy muuttujan mitta-asteikon mukaan. Mitä ``korkeampi'' mitta-asteikko, sitä enemmän on käytettävissä olevia analyysimenetelmiä. Esimerkiksi keskiarvon laskeminen on eräs tilastollinen operaatio, ja se ei ole sallittu kvalitatiivislle muuttujille.
+  Tilastollisen analyysin kannalta mitta-asteikkojen merkitys on siinä, että tilastollisten (matemaattisten) operaatioiden sallittavuus määräytyy muuttujan mitta-asteikon mukaan. Mitä ``korkeampi'' mitta-asteikko, sitä enemmän on käytettävissä olevia analyysimenetelmiä. Esimerkiksi keskiarvon laskeminen on eräs tilastollinen operaatio, ja se ei ole sallittu kvalitatiivisille muuttujille.
 \end{itemize}
 
 \hfill\break
@@ -3864,7 +3923,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
 \begin{itemize}
 \tightlist
 \item
-  Käsitellään tarkemmin vielä myöhemmin (Luvussa \ref{luku10}), joiden yhteydessä mitattavat muuttujat voivat olla kvalitatiivisia tai kvantitatiivisia.
+  Aineistotyyppejä käsitellään tarkemmin vielä myöhemmin (Osan II Luvussa \ref{luku10}), mutta alla on lueteltuna yleisimpiä aineistotyyppejä, jotka usein määräävät sen, millaisia tilastollisia malleja tutkimuksessa käytetään.
 
   \begin{itemize}
   \tightlist
@@ -3884,14 +3943,14 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
 
 \begin{itemize}
 \item
-  Tilastollinen tutkimusaineisto voidaan kerätä:
+  Tarkastellaan seuraavaksi kahta tyyppiesimerkkiä tilastollisen tutkimusaineiston keräämisen asetelmista:
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Kontrolloiduilla kokeilla}, joissa tutkimuksen kohteet altistetaan suunnitelmallisesti erilaisiin koeolosuhteisiin selvittääkseen miten kohteet reagoivat muutoksiin.
+    \textbf{Kontrolloiduit kokeet} ovat sellaisia kokeellisia tutkimusasetelmia, joissa tutkimuksen kohteet altistetaan suunnitelmallisesti erilaisiin koeolosuhteisiin, jotta voidaan selvittää miten kohteet reagoivat muutoksiin.
   \item
-    \textbf{Suoria havaintoja} tehtäessä koeolosuhteita ei pyritä aktiivisesti muuttamaan vaan ainoastaan seurataan miten erilaiset olosuhteet ja niissä tapahtuvat muutokset vaikuttavat kohteisiin.
+    \textbf{Suoria havaintoja} kerätessä koeolosuhteita ei pyritä aktiivisesti muuttamaan vaan ainoastaan seurataan miten erilaiset olosuhteet ja niissä tapahtuvat muutokset vaikuttavat kohteisiin.
   \end{itemize}
 \item
   Näistä tutkimusasetelmista kontrolloidut kokeet ovat tietenkin ihanteellisempia tutkimuksen tekemiselle, sillä tutkijan on mahdollista tarkastella tutkittavaa asiaa koeolosuhteissa ``eristyksissä''.
@@ -3903,7 +3962,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
   \item
     Tällöin tutkimuskohdetta ei suunnitelmallisesti altisteta koeolosuhteille (``käsittelyille'') vaan muuttuvien olosuhteiden vaikutuksia tilastoyksikköihin seurataan passiivisesti.
   \item
-    Toisin sanoen tutkimuksen kohteena olevat tilastoyksiksöt eivät välttämättä edes tiedä osallistuvansa tutkimukseen.
+    Toisin sanoen tutkimuksen kohteena olevat tilastoyksiköt eivät välttämättä edes tiedä osallistuvansa tutkimukseen.
   \end{itemize}
 \item
   Lisäksi usein tehdään hoito/käsittelyvastetta koskevia vertailuja erilaisissa olosuhteissa, joka osaltaan vaikuttaa tulosten uskottavuuteen, sillä tutkittaviin tilastoyksiköihin voi vaikuttaa olosuhteiden muutosten lisäksi muut ulkopuoliset tekijät.
@@ -3916,7 +3975,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
     Mikäli ulkopuolisia tekijöitä ei havaita ja/tai pystytä mittaamaan, tai muuten jostain syystä olla lisätty ja käytetty käytettävässä tilastollisessa mallissa, voi kyseeseen tulla ns. \textbf{puuttuvien selittäjien harha}, joka tarkoittaa sitä että havaittuihin tuloksiin vaikuttaa jokin havaitsematon tekijä, jonka vaikutusta ei kyetä kvantifioimaan puutteellisten havaintoarvojen vuoksi.
   \end{itemize}
 \item
-  Suoria havaintoja tehtäessä ei voida (usein) selvittää vasteen ja olosuhteiden \textbf{kausaalista} yhteyttä. Suorilla havainnoilla voidaan lähinnä saada selville onko vasteella ja olosuhteilla jokin yhteys (korrelaatio) (ks. luku \ref{luku7}).
+  Suoria havaintoja tehtäessä ei voida (usein) selvittää vasteen ja olosuhteiden \textbf{kausaalista} yhteyttä. Suorilla havainnoilla voidaan lähinnä saada selville onko vasteella ja olosuhteilla jokin yhteys (korrelaatio) (ks. luku \ref{luku6}).
 \item
   Suorien havaintojen keräämiseen liittyy olennaisesti joitain riskejä ja toisaalta rajoituksia. Riskit liittyvät käytännössä otoksen harhaisuuteen (erit. valikoitumisharha).
 
@@ -3947,7 +4006,13 @@ Valikoitumista tapahtuu, jos otokseen poiminta ei ole riippumatonta tilastoyksik
 \begin{itemize}
 \tightlist
 \item
-  Harhan syntymistä pyritään välttämään valitsemalla havaintojen kohteet perusjoukosta satunnaisesti (ellei tavoitteena ole tutkia kaikkia perusjoukon alkioita). Tämä merkitsee satunnaisotannan soveltamista havaintojen kohteiden valintaan, eli otokseen poimittavien tilastoyksiköiden valintaan sovelletaan \textbf{satunnaistamista}, jolloin sattuma määrää mitkä perusjoukon alkioista tulevat poimituksi otokseen (tutkimuksen kohteiksi)!
+  Harhan syntymistä pyritään välttämään valitsemalla havaintojen kohteet perusjoukosta satunnaisesti (ellei tavoitteena ole tutkia kaikkia perusjoukon alkioita).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tämä merkitsee satunnaisotannan soveltamista havaintojen kohteiden valintaan, eli otokseen poimittavien tilastoyksiköiden valintaan sovelletaan \textbf{satunnaistamista}, jolloin sattuma määrää mitkä perusjoukon alkioista tulevat poimituksi otokseen (tutkimuksen kohteiksi)!
+  \end{itemize}
 \end{itemize}
 
 \begin{defblock}{}
@@ -3972,7 +4037,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   \begin{itemize}
   \tightlist
   \item
-    Tilastollisen päättelyn avulla voidaan muodostaa esimerkiksi jakaumien ja tilastollisten mallien tuntemattomille parametreille arviot (piste-estimaatit) ja arvioida niiden epävarmuutta (keskivirheet ja luottamusvälit) sekä testata tarkasteltavaan ilmiöön liittyviä hypoteeseja (ks. luku \ref{luku6}).
+    Tilastollisen päättelyn avulla voidaan muodostaa esimerkiksi jakaumien ja tilastollisten mallien tuntemattomille parametreille arviot (piste-estimaatit) ja arvioida niiden epävarmuutta (keskivirheet ja luottamusvälit) sekä testata tarkasteltavaan ilmiöön liittyviä hypoteeseja (ks. Osan II Luvut \ref{luku8} ja \ref{luku9}).
   \end{itemize}
 \item
   Johtopäätelmien pätevyys riippuu mm. siitä, kuinka hyvin otanta on suoritettu. Tämän vuoksi on tärkeää ymmärtää otannan perusperiaatteet ja erilaisten otantamenetelmien luonne.
@@ -3995,7 +4060,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
 \hypertarget{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
 \section{Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
-\textbf{Termejä}
+\textbf{Termejä}\\
 - Otanta\\
 - Perusjoukko/populaatio\\
 - Otos/otosaineisto/data\\
@@ -4007,8 +4072,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
 - Otoskoko\\
 - Otantakehikko\\
 - Mittaaminen\\
-- Harhattomuus\\
-- Toistettavuus\\
+- Mittarin harhattomuus ja toistettavuus\\
 - Kontrolloidut kokeet vs.~suorat havainnot\\
 - Selittävät ja sekoittavat tekijät\\
 - Puuttuvien selittäjien harha\\
@@ -4016,7 +4080,8 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
 - Satunnaistaminen\\
 - Käsittely- ja kontrolliryhmät
 
-\textbf{Mitta-asteikot}
+\textbf{Mitta-asteikot}\\
+- Kvalitatiiviset ja kvantitatiiviset muuttujat
 - Laatueroasteikko/luokitteluasteikko (nominaaliasteikko)\\
 - Järjestysasteikko (ordinaaliasteikko)\\
 - Välimatka-asteikko (intervalliasteikko)\\
@@ -4046,7 +4111,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
     Miten korrelaatiota ja sen voimakkuutta voidaan estimoida?
   \end{itemize}
 \item
-  Käsittelemme myös jatkossa regressioanalyysia yhden selittäjän lineaarisen regressiomallin tapauksessa. Pitemmälle meneviä regressioanalyysin kysymyksiä käsitellään koko tilastotieteen opinto-ohjelman lävitse, kuten perusteellisesti \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071?period=2022-2024}{Lineaariset ja yleistetyt lineaariset mallit -kurssin} myötä.
+  Käsittelemme myös Osan II luvussa \ref{luku10} regressioanalyysia yhden selittäjän lineaarisen regressiomallin tapauksessa. Pitemmälle meneviä regressioanalyysin kysymyksiä käsitellään koko tilastotieteen opinto-ohjelman lävitse, kuten perusteellisesti \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071?period=2024-2027}{Lineaariset ja yleistetyt lineaariset mallit -kurssin} myötä.
 \end{itemize}
 
 \hypertarget{alaluku61}{%
@@ -4088,7 +4153,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Eksakti} vs.~\textbf{tilastollinen riippuvuus}
+  \textbf{Eksakti} vs.~\textbf{tilastollinen riippuvuus}.
 
   \begin{itemize}
   \tightlist
@@ -4114,7 +4179,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
     \end{itemize}
   \end{itemize}
 \item
-  Tilastollinen riippuvuus ja \textbf{korrelaatio}
+  Tilastollinen riippuvuus ja \textbf{korrelaatio}.
 
   \begin{itemize}
   \tightlist
@@ -4153,10 +4218,14 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   Kahden järjestys-, välimatka- tai suhdeasteikoillisen muuttujan havaittujen arvojen pareja havainnollistetaan tavallisesti graafisella esityksellä, jota kutsutaan hajontakuvioksi tai pistediagrammiksi (``pistekaavio'' engl. scatter plot). Ks. esimerkiksi kuva \ref{fig:isatjapojat1}.
 \item
   Usean muuttujan havaintoaineistojen karakteristisia ominaisuuksia voidaan kuvata muuttujakohtaisilla otostunnusluvuilla.
-\item
-  Muuttujakohtaiset otostunnusluvut eivät kuitenkaan voi antaa informaatiota muuttujien välisistä riippuvuuksista.
-\item
-  Muuttujien pareittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Muuttujakohtaiset otostunnusluvut eivät kuitenkaan voi antaa informaatiota muuttujien välisistä riippuvuuksista.
+  \item
+    Muuttujien pareittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.
+  \end{itemize}
 \end{itemize}
 
 \hfill\break
@@ -4179,8 +4248,6 @@ Olkoot \(X\) ja \(Y\) järjestys-, välimatka- tai suhdeasteikollisia muuttujia,
 
 \end{defblock}
 
-\newpage
-
 \begin{eblock}{}
 
 \textbf{Esimerkki: Isän ja pojan pituus}
@@ -4198,7 +4265,7 @@ Olkoot \(X\) ja \(Y\) järjestys-, välimatka- tai suhdeasteikollisia muuttujia,
 \item
   Mutta: Lyhyillä isillä näyttää olevan keskimäärin lyhyempiä poikia kuin pitkillä isillä ja pitkillä isillä näyttää olevan keskimäärin pitempiä poikia kuin lyhyillä isillä.
 \item
-  Tällaisten tilastollisten riippuvuuksien analysoimista lineaaristen regressiomallien avulla tarkastellaan myöhemmin luvussa \ref{luku10} Yksinkertainen lineaarinen regressiomalli.
+  Tällaisten tilastollisten riippuvuuksien analysoimista lineaaristen regressiomallien avulla tarkastellaan myöhemmin luvussa \ref{luku10}.
 \end{itemize}
 
 \end{eblock}
@@ -4224,7 +4291,7 @@ Olkoot \(X\) ja \(Y\) järjestys-, välimatka- tai suhdeasteikollisia muuttujia,
   \item
     Havaintoarvojen keskimääräistä sijaintia kuvataan aritmeettisilla keskiarvoilla.
   \item
-    Havaintoarvojen hajaantuneisuutta tai keskittyneisyyttä kuvataan keskihajonnoilla tai (otos-) variansseilla.
+    Havaintoarvojen hajaantuneisuutta tai keskittyneisyyttä kuvataan keskihajonnoilla tai (otos-)variansseilla.
   \item
     Havaintoarvojen (lineaarista) riippuvuutta kuvataan otoskovarianssilla ja otoskorrelaatiokertoimella.
   \end{itemize}
@@ -4264,7 +4331,7 @@ Olkoot \(X\) ja \(Y\) järjestys-, välimatka- tai suhdeasteikollisia muuttujia,
   \begin{itemize}
   \tightlist
   \item
-    Jälleen vastaavalla tavalla voidaan määritellä x-havaintoarvojen (otos-) varianssi \(S^2_x\).
+    Jälleen vastaavalla tavalla voidaan määritellä x-havaintoarvojen (otos-) varianssi \(s^2_x\).
   \item
     Havaintoarvojen varianssi mittaa havaintoarvojen hajaantuneisuutta tai keskittyneisyyttä havaintoarvojen aritmeettisen keskiarvon suhteen.
   \end{itemize}
@@ -4576,6 +4643,40 @@ F & 373 & 6 & 341 & 7\\
   \end{itemize}
 \end{itemize}
 
+\hypertarget{alaluku65}{%
+\section{Muita tunnuslukuja}\label{alaluku65}}
+
+Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkintojen tueksi tarvitaan tunnuslukuja. Mm. otoskeskiarvoa tunnuslukuna tarkasteltiin jo edellä. Tunnuslukuja on paljon, ja jokainen niistä valottaa muuttujan jakaumaa eri näkökulmista.
+
+Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.
+
+\begin{itemize}
+\item
+  \textbf{Moodi}: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
+\item
+  \textbf{Mediaani}: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Luokitteluasteikolla mitattaville muuttujille ei ole olemassa luontevia sijaintilukuja keskilukujen yhteydessä pl. moodi.
+  \end{itemize}
+\item
+  Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää \textbf{fraktiileja}: pp\%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp\%.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Eniten käytettyjä fraktiileja ovat \textbf{kvartiilit}. \textbf{Alakvartiili} \(Q_1\) on 25 \%:n fraktiili, ja \textbf{yläkvartiili} \(Q_3\) on 75 \% fraktiili.
+  \item
+    Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs fraktiili \(D_9\) on 90 \% fraktiili.
+  \end{itemize}
+\item
+  Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
+\item
+  Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat \textbf{vinous} ja \textbf{huipukkuus}. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
+\end{itemize}
+
 \hypertarget{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
 \section{Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
@@ -4593,16 +4694,18 @@ F & 373 & 6 & 341 & 7\\
   Pistediagrammi
 \item
   Kausalisuus vs.~korrelaatio
+\item
+  Muut tunnusluvut (moodi, mediaani, fraktiilit, kvartiilit, vinous ja huipukkuus)
 \end{itemize}
 
 \hypertarget{part-osa-ii}{%
 \part{Osa II}\label{part-osa-ii}}
 
-\hypertarget{luku8}{%
-\chapter{Otantamenetelmät}\label{luku8}}
+\hypertarget{luku7}{%
+\chapter{Otantamenetelmät}\label{luku7}}
 
-\hypertarget{alaluku81}{%
-\section{Otantamenetelmät}\label{alaluku81}}
+\hypertarget{alaluku71}{%
+\section{Otantamenetelmät}\label{alaluku71}}
 
 \begin{itemize}
 \tightlist
@@ -4995,8 +5098,8 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 
 \end{eblock}
 
-\hypertarget{alaluku82}{%
-\section{Otantaesimerkkejä}\label{alaluku82}}
+\hypertarget{alaluku72}{%
+\section{Otantaesimerkkejä}\label{alaluku72}}
 
 \begin{eblock}{}
 
@@ -5043,7 +5146,6 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 \end{eblock}
 
 \hfill\break
-\hfill\break
 
 \begin{eblock}{}
 
@@ -5069,8 +5171,8 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 
 \end{eblock}
 
-\hypertarget{alaluku83}{%
-\section{Otannan haasteita vielä kootusti}\label{alaluku83}}
+\hypertarget{alaluku73}{%
+\section{Otannan haasteita vielä kootusti}\label{alaluku73}}
 
 \begin{itemize}
 \item
@@ -5097,8 +5199,8 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
   \textbf{Vastausharha}: Kysymykset voivat olla huonosti muotoiltuja tai vastaajat voivat antaa vääriä tietoja.
 \end{itemize}
 
-\hypertarget{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\hypertarget{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
+\section{Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
 \textbf{Otantamenetelmät}
 - Yksinkertainen satunnaisotanta (YSO)\\
@@ -5113,13 +5215,13 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 - Vastausharha\\
 - Näyte
 
-\hypertarget{luku9}{%
-\chapter{Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma}\label{luku9}}
+\hypertarget{luku8}{%
+\chapter{Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma}\label{luku8}}
 
 Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia tn-laskennan kurssin jälkeiselle tilastollisen päättelyn peruskurssille (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731}{TILM3555}).
 
-\hypertarget{alaluku91}{%
-\section{Satunnaisotos, yhteisjakauma ja tilastollinen malli}\label{alaluku91}}
+\hypertarget{alaluku81}{%
+\section{Satunnaisotos, yhteisjakauma ja tilastollinen malli}\label{alaluku81}}
 
 \begin{itemize}
 \tightlist
@@ -5221,23 +5323,8 @@ Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee \(Y_1, \ldot
 
 \newpage
 
-\begin{eblock}{}
-
-\textbf{Esimerkki: miesten pituus}
-
-\begin{itemize}
-\item
-  Kerätään havaintoja miesten pituuksista yksinkertaisella satunnaisotannalla (takaisinpalauttaen) \(n\) kappaletta.
-\item
-  Tällöin havaintoarvoja \(Y_1, \ldots, Y_n\) voidaan pitää riippumattomina satunnaismuuttujina, joista jokainen noudattaa tehdyn jakaumaoletuksen mukaan normaalijakaumaa \(\text{N}(\mu, \sigma^2)\).
-\item
-  Estimoinnin tehtävänä on muodostaa parhaat mahdolliset arviot parametreille \(\mu\) ja \(\sigma^2\), ja mahdollisesti testata esimerkiksi odotusarvolle \(\mu\) asetettua hypoteesia.
-\end{itemize}
-
-\end{eblock}
-
-\hypertarget{luku7}{%
-\section{Tilastolliset mallit ja jakaumat}\label{luku7}}
+\hypertarget{luku82}{%
+\section{Tilastolliset mallit ja jakaumat}\label{luku82}}
 
 Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemme ensin keskeisintä jatkuvien satunnaismuuttujien jakaumaa, normaalijakaumaa, ennen muutamien diskreettien satunnaismuuttujien jakaumia.
 
@@ -5245,7 +5332,8 @@ Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemm
 \subsection{Normaalijakauma}\label{normaalijakauma}}
 
 \begin{itemize}
-\tightlist
+\item
+  Jos satunnaismuuttuja \(Y\) noudattaa \textbf{normaalijakaumaa} odotusarvolla \(\text{E}(Y)= \mu\) ja varianssilla \(\mathrm{Var}(Y) = \sigma^2\), niin tällöin merkitään \(Y \thicksim \text{N}(\mu, \sigma^2)\).
 \item
   \(Y\):n tiheysfunktio on muotoa (ks. kuva alla)
   \[
@@ -5254,6 +5342,57 @@ Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemm
 \end{itemize}
 
 jossa \(e\) viittaa Neperin lukuun \(e \approx 2,71828\).
+
+\begin{itemize}
+\tightlist
+\item
+  Ylläoleva tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) \(\mu\) ja \(\sigma^2\) annetaan erilaisia arvoja. Nämä kaksi parametria määräävät normaalijakauman tarkemman muodon.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Alla olevassa kuvassa \ref{fig:normaalijakauma2} on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoille.
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/normaalijakauma2-1} 
+
+}
+
+\caption{Normaalijakaumien muotoja eri parametriarvoilla.}\label{fig:normaalijakauma2}
+\end{figure}
+
+\begin{eblock}{}
+
+\textbf{Esimerkki: Miesten pituus}
+
+\begin{itemize}
+\tightlist
+\item
+  Tutkitaan miesten pituutta hyvin määritellyssä joukossa, kuten varusmiespalvelusta tiettynä vuonna suorittavien joukossa.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Pituus on ominaisuus, jonka voidaan nähdä määräytyvän monista perintö- ja ympäristötekijöistä. Pituutta voidaan siis pitää satunnaismuuttujana.
+  \item
+    Oletetaan, että pituus noudattaa normaalijakaumaa. Näin ollen sm. \(Y\) on valitun miehen pituus ja \(Y \thicksim \text{N}(\mu, \sigma^2)\).
+  \end{itemize}
+\item
+  Tuntemattomien parametrien \(\mu\) ja \(\sigma^2\) tulkinta:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Odotusarvo \(\mu = \text{E}(Y)\) on satunnaisesti valitun miehen pituuden odotettavissa oleva arvo.
+  \item
+    Varianssi \(\sigma^2 = \mathrm{Var}(Y) = \text{E} \Big[\Big(Y- \mu \Big)^2 \Big]\) kuvaa valitun miehen pituuden odotusarvostaan määrätyn poikkeaman (keskihajonnan) neliön odotettavissa olevaa arvoa (kuvaten ts. pituuksien jakauman keskittyneisyyttä/hajaantuneisuutta pituuksien odotusarvon ympärillä).
+  \end{itemize}
+\end{itemize}
+
+\end{eblock}
 
 \hypertarget{bernoulli--binomi--ja-poisson-jakauma}{%
 \subsection{Bernoulli-, binomi- ja Poisson-jakauma}\label{bernoulli--binomi--ja-poisson-jakauma}}
@@ -5432,8 +5571,8 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
 
 \end{eblock}
 
-\hypertarget{alaluku92}{%
-\section{Otosjakauma: Estimaattori ja estimaatti}\label{alaluku92}}
+\hypertarget{alaluku83}{%
+\section{Otosjakauma: Estimaattori ja estimaatti}\label{alaluku83}}
 
 \begin{itemize}
 \item
@@ -5574,14 +5713,14 @@ Tarkentuvan estimaattorin \(\widehat{\theta}\) arvot lähestyvät parametrin \(\
   \begin{itemize}
   \tightlist
   \item
-    Aritmeettisen keskiarvon otosjakaumaan \ref{alaluku93}
+    Aritmeettisen keskiarvon otosjakaumaan \ref{alaluku84}
   \item
-    Suhteellisen osuuden (frekvenssin) otosjakaumaan \ref{alaluku94}
+    Suhteellisen osuuden (frekvenssin) otosjakaumaan \ref{alaluku85}
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku93}{%
-\section{Otoskeskiarvo ja otosvarianssi (estimaattoreina)}\label{alaluku93}}
+\hypertarget{alaluku84}{%
+\section{Otoskeskiarvo ja otosvarianssi (estimaattoreina)}\label{alaluku84}}
 
 \textbf{Otoskeskiarvo}
 
@@ -5735,8 +5874,8 @@ jota otosvarianssi harhattomasti estimoi.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku94}{%
-\section{Suhteellisen frekvenssin otosjakauma}\label{alaluku94}}
+\hypertarget{alaluku85}{%
+\section{Suhteellisen frekvenssin otosjakauma}\label{alaluku85}}
 
 \textbf{Frekvenssi ja suhteellinen frekvenssi}
 
@@ -5848,11 +5987,13 @@ jota otosvarianssi harhattomasti estimoi.
 
 \end{eblock}
 
-\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\hypertarget{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
+\section{Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
 \begin{itemize}
 \tightlist
+\item
+  Yleisempiä jakaumia: Normaalijakauma, Bernoulli-jakauma, binomijakauma ja Poisson-jakauma
 \item
   Satunnaisotos
 \item
@@ -5887,11 +6028,11 @@ jota otosvarianssi harhattomasti estimoi.
   Suhteellisen frekvenssin otosjakauma
 \end{itemize}
 
-\hypertarget{satunnaisuudesta-johtuvan-epuxe4varmuuden-arvioiminen}{%
-\chapter{Satunnaisuudesta johtuvan epävarmuuden arvioiminen}\label{satunnaisuudesta-johtuvan-epuxe4varmuuden-arvioiminen}}
+\hypertarget{satunnaisuudesta-johtuvan-tulosten-epuxe4varmuuden-arvioiminen-tilastotieteessuxe4-luku9}{%
+\chapter{Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä \{luku9\}}\label{satunnaisuudesta-johtuvan-tulosten-epuxe4varmuuden-arvioiminen-tilastotieteessuxe4-luku9}}
 
-\hypertarget{alaluku96}{%
-\section{Luottamusvälit}\label{alaluku96}}
+\hypertarget{alaluku91}{%
+\section{Luottamusvälit}\label{alaluku91}}
 
 \begin{itemize}
 \tightlist
@@ -6164,8 +6305,8 @@ Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsema
   \]
 \end{itemize}
 
-\hypertarget{alaluku97}{%
-\section{Otoskoko}\label{alaluku97}}
+\hypertarget{alaluku92}{%
+\section{Otoskoko}\label{alaluku92}}
 
 \begin{itemize}
 \tightlist
@@ -6468,42 +6609,8 @@ n = \Big(\frac{z_{\alpha/2} \,\, \sqrt{p(1-p)}}{d} \Big)^2.
 
 \end{eblock}
 
-\hypertarget{alaluku95}{%
-\section{Muita tunnuslukuja}\label{alaluku95}}
-
-Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkintojen tueksi tarvitaan tunnuslukuja. Mm. otoskeskiarvoa tunnuslukuna tarkasteltiin jo edellä. Tunnuslukuja on paljon, ja jokainen niistä valottaa muuttujan jakaumaa eri näkökulmista.
-
-Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.
-
-\begin{itemize}
-\item
-  \textbf{Moodi}: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
-\item
-  \textbf{Mediaani}: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Luokitteluasteikolla mitattaville muuttujille ei ole olemassa luontevia sijaintilukuja keskilukujen yhteydessä pl. moodi.
-  \end{itemize}
-\item
-  Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää \textbf{fraktiileja}: pp\%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp\%.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Eniten käytettyjä fraktiileja ovat \textbf{kvartiilit}. \textbf{Alakvartiili} \(Q_1\) on 25 \%:n fraktiili, ja \textbf{yläkvartiili} \(Q_3\) on 75 \% fraktiili.
-  \item
-    Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs fraktiili \(D_9\) on 90 \% fraktiili.
-  \end{itemize}
-\item
-  Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
-\item
-  Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat \textbf{vinous} ja \textbf{huipukkuus}. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
-\end{itemize}
-
-\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.-1}{%
-\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.-1}}
+\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
+\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
 \begin{itemize}
 \tightlist
