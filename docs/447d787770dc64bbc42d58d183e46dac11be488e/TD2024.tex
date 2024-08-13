@@ -6,16 +6,19 @@
 \documentclass[
 ]{book}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -176,7 +179,7 @@
 \bibliographystyle{apalike}
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={TILM3701 - Tilastotiede ja data 2024},
   pdfauthor={Koonneet; Henri Nyberg; Roope Rihtamo},
@@ -189,7 +192,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-07-18}
+\date{2024-08-09}
 
 \begin{document}
 \maketitle
@@ -2740,7 +2743,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0645}}
   >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0968}}
   >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}@{}}
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Puolue
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2764,10 +2767,11 @@ LIIK
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 MUU
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
-\bottomrule()
 \end{longtable}
 
 \end{eblock}
@@ -3299,7 +3303,7 @@ Voidaksemme tehdä uskottavaa päättelyä ``havainnoista parametreihin'', tulee
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2326}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0698}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2326}}@{}}
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 tilastomuuttuja 1
@@ -3310,13 +3314,14 @@ tilastomuuttuja 2
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 tilastomuuttuja \(m\)
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 tilastoyksikkö 1 & \(x_{1,1}\) & \(x_{1,2}\) & \(\dots\) & \(x_{1,m}\) \\
 tilastoyksikkö 2 & \(x_{2,2}\) & \(x_{2,2}\) & \(\dots\) & \(x_{2,m}\) \\
 \(\vdots\) & \(\vdots\) & \(\vdots\) & & \(\vdots\) \\
 tilastoyksikkö \(n\) & \(x_{n,1}\) & \(x_{1,2}\) & \(\dots\) & \(x_{n,m}\) \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -4224,7 +4229,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   \item
     Muuttujakohtaiset otostunnusluvut eivät kuitenkaan voi antaa informaatiota muuttujien välisistä riippuvuuksista.
   \item
-    Muuttujien pareittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.
+    Muuttujien parittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.
   \end{itemize}
 \end{itemize}
 
@@ -4388,7 +4393,7 @@ satunnaismuuttujien \(X\) ja \(Y\) odotusarvot ja
 \sigma^2_Y &= \mathrm{Var}(Y) = \text{D}^2(Y) = \text{E}[(Y - \mu_Y)^2]
 \end{align*}
 
-satunnaismuuttujien \(X\) ja \(Y\) varianssit.
+satunnaismuuttujien \(X\) ja \(Y\) varianssit. \(D^2(\cdot)\) on satunnaismuuttujan (populaatiotason) keskihajonta.
 
 \hfill\break
 
@@ -4464,7 +4469,7 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
   \item
     \(-1 \le r_{xy} \le 1\)
   \item
-    \(r_{xy} = \pm 1\), jos ja vain jos \(y_i = \alpha \beta x_i\), jossa \(\alpha\) ja \(\beta\) ovat reaalisia vakiota ja \(\alpha,\beta \neq 0\)
+    \(r_{xy} = \pm 1\), jos ja vain jos \(y_i = \alpha + \beta x_i\), jossa \(\alpha\) ja \(\beta\) ovat reaalisia vakiota ja \(\alpha,\beta \neq 0\)
   \item
     Korrelaatiokertoimella \(r_{xy}\) ja kovarianssilla \(s_{xy}\) on aina sama etumerkki
   \end{enumerate}
@@ -4654,7 +4659,7 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
 \item
   \textbf{Moodi}: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
 \item
-  \textbf{Mediaani}: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
+  \textbf{Mediaani}: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista tai joskus niiden keskiarvo). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
 
   \begin{itemize}
   \tightlist
@@ -4669,7 +4674,7 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
   \item
     Eniten käytettyjä fraktiileja ovat \textbf{kvartiilit}. \textbf{Alakvartiili} \(Q_1\) on 25 \%:n fraktiili, ja \textbf{yläkvartiili} \(Q_3\) on 75 \% fraktiili.
   \item
-    Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs fraktiili \(D_9\) on 90 \% fraktiili.
+    Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs desiili \(D_9\) on 90 \% fraktiili.
   \end{itemize}
 \item
   Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
@@ -5216,9 +5221,9 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 - Näyte
 
 \hypertarget{luku8}{%
-\chapter{Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma}\label{luku8}}
+\chapter{Satunnaisotokset: tilastollisen päättelyn näkökulma}\label{luku8}}
 
-Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia tn-laskennan kurssin jälkeiselle tilastollisen päättelyn peruskurssille (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731}{TILM3555}).
+Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027}{TILM3553}) jälkeiselle tilastollisen päättelyn peruskurssille (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027}{TILM3555}).
 
 \hypertarget{alaluku81}{%
 \section{Satunnaisotos, yhteisjakauma ja tilastollinen malli}\label{alaluku81}}
@@ -5244,7 +5249,7 @@ Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä ede
 
 Olkoot \(Y_1, \ldots, Y_n\) riippumattomia ja samoinjakautuneita satunnaismuuttujia, joiden tiheysfunktiota (tf., tai pistetodennäköisyysfunktiota (ptnf)) merkitään \(f(y, \theta)\):llä, jossa \(y\):n on yksittäisen sm:jan \(Y\) reaalisaatio ja \(\theta\) on jokin jakauman muodon määräävä parametri (tai parametrit).
 
-Parametrin \(\theta\) arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, \textbf{estimoida}, sen arvo lopulta käytettävissä olevasta aineistosta.
+Parametrin \(\theta\) arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, \textbf{estimoida}, sen arvo käytettävissä olevasta aineistosta.
 
 \end{defblock}
 
@@ -5261,6 +5266,8 @@ Parametrin \(\theta\) arvoa ei yleensä tunneta ja tavoitteena onkin päätellä
   \tightlist
   \item
     Satunnaisuus ei siis liity otannan tuloksena saatuihin havaintoarvoihin, vaan otoksen poimintaan.
+  \item
+    Toisin sanoen, yksittäisen tilastoyksikön havaintoarvo (esim. pituus) on kiinteä luku. Satunnaisotannassa satunnaisuus kumpuaa siis siitä, että tilastoyksikkö tulee valituksi otokseen sattumanvaraisesti.
   \end{itemize}
 \item
   Satunnaismuuttujien \(Y_1, \ldots, Y_n\) \textbf{yhteisjakauma} muodostaa (tiettyjen lisäoletusten jälkeen) \textbf{tilastollisen mallin} havaintoarvojen satunnaiselle vaihtelulle eri otoksissa.
@@ -5268,7 +5275,11 @@ Parametrin \(\theta\) arvoa ei yleensä tunneta ja tavoitteena onkin päätellä
   \begin{itemize}
   \tightlist
   \item
+    Yhteisjakaumaa merkitään \(f(y_1,\dots,y_n;\theta)\), jossa havaitut arvot \(y_i\) ovat kiinteitä ja parametri \(\theta\) on tuntematon.
+  \item
     Koska tällä kurssilla satunnaismuuttujat \(Y_1, \ldots, Y_n\) oletetaan \textbf{riippumattomiksi toisiinsa nähden}, niiden yhteisjakauma on tulomuotoa \(f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)\).
+  \item
+    Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston \(y_1\,dots,y_n\) avulla estimoimaan parametrin \(\theta\) arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.
   \end{itemize}
 \item
   Tässä \(f(y_1, \ldots, y_n; \theta)\) on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli.
@@ -5301,8 +5312,20 @@ Parametrin \(\theta\) arvoa ei yleensä tunneta ja tavoitteena onkin päätellä
 \tightlist
 \item
   Tässä tapauksessa mielenkiinnon kohteena olevat parametrit ovat siis \(\mu\) ja \(\sigma^2\) eli \(\theta = (\mu \quad \sigma^2)\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Toisin sanoen, tutkimuskysymyksestä johdetut hypoteesit voisivat koskea esimerkiksi näitä parametreja, tai tarkemmin niiden oikeita arvoja, jotka ovat siis tuntemattomia.
+  \end{itemize}
 \item
-  Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on että miten estimointi suoritetaan luotettavasti.
+  Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on, \textbf{että miten estimointi suoritetaan luotettavasti}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Useimmiten tämä estimointi perustetaan nk. \textbf{uskottavuusfunktion} käyttöön, josta lisää alempana.
+  \end{itemize}
 \end{itemize}
 
 \begin{eblock}{}
@@ -5316,7 +5339,7 @@ Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee \(Y_1, \ldot
 \item
   Merkintä \(\perp \!\!\! \perp\) tarkoittaa, että sm:t \(Y_1,\ldots,Y_n\) ovat riippumattomia ja samoin jakautuneita (toisinaan myös lyhyesti \emph{iid} tai \emph{i.i.d}, joka tulee englannin kielen ilmaisusta ``independent and identically distributed''). Merkintä soveltuu käytettäväksi muidenkin jakaumien tapauksessa.
 \item
-  Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon (\(n=10\)) satunnaisotos standardoidusta normaalijakaumasta (ts. \(Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10\)) komennolla rnorm(10).
+  Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon (\(n=10\)) satunnaisotos standardinormaalijakaumasta (ts. \(Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10\)) komennolla rnorm(10).
 \end{itemize}
 
 \end{eblock}
@@ -5505,7 +5528,7 @@ Perheiden lkm & 3 & 24 & 104 & 286 & 670 & 1033 & 1343 & 1112 & 829 & 478 & 181 
 \item
   Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: \(\text{E}(Y) = \mathrm{Var}(Y) = \lambda\).
 \item
-  Kuviossa \ref{fig:poisson} on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin \(\lambda\) arvoilla. Poisson-jakaumaa esitellään tarkemmin alaluvussa \ref{alaluku45}.
+  Kuviossa \ref{fig:poisson} on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin \(\lambda\) arvoilla.
 \end{itemize}
 
 \begin{figure}
@@ -5588,19 +5611,15 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
     Saatava aineisto (numeeriset arvot) \(y_1, \ldots, y_n\) vaihtelevat näin ollen valitun tilastollisen mallin jakauman kuvaamalla tavalla.
   \end{itemize}
 \item
-  Satunnaisotoksesta voidaan laskea erilaisia \textbf{tunnuslukuja/otossuureita}, joita merkitään \(T\):llä, ts. ne ovat aineiston funktioita
+  Satunnaisotoksesta voidaan laskea erilaisia \textbf{tunnuslukuja/otossuureita}, joita merkitään \(T(Y)\):llä, ts. ne ovat aineiston funktioita
   \[
-  T = g(Y_1, \ldots, Y_n).
+  T(Y) = g(Y_1, \ldots, Y_n).
   \]
 \item
   \textbf{Tunnusluvut ovat satunnaismuuttujien funktioina myös satunnaismuuttujia.}
 
   \begin{itemize}
   \tightlist
-  \item
-    Tunnusluvulla on nk. todellinen arvo, \(g(\theta)\), joka vastaa tunnusluvun arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.
-  \item
-    Esimerkkinä tunnusluvusta on keskiarvo \(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\).
   \item
     \textbf{Tunnusluvun havaittu arvo} (realisaatio) pisteessä (\(y_1,\ldots, y_n\)) eli havaitussa aineistossa on
   \end{itemize}
@@ -5609,21 +5628,55 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
 \[
 t = g(y_1, \ldots, y_n).
 \]
+- Esimerkkinä tunnusluvusta on keskiarvo \(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\).
+- Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia).
+- Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.
 
 \begin{itemize}
+\tightlist
 \item
-  Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia).
-\item
-  Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.
-\item
-  Jos tunnuslukua \(T\) käytetään tilastollisen mallin parametrin (parametrien) \(\theta\) estimointiin, niin tätä sanotaan tällöin parametrin \textbf{estimaattoriksi}.
+  Jos tunnuslukua \(T(Y)\) käytetään tilastollisen mallin parametrin (parametrien) \(\theta\) estimointiin, niin tätä sanotaan tällöin parametrin \textbf{estimaattoriksi}, jota merkitään \(\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)\).
 
   \begin{itemize}
   \tightlist
   \item
-    Estimaattorin otoskohtaisia arvoja, kuten yllä \(t\), kutsutaan \textbf{estimaateiksi}.
+    Estimaattorin otoskohtaisia arvoja kutsutaan \textbf{estimaateiksi} ja merkitään \(\widehat{\theta}(y)\).
   \item
-    Toivottavaa olisi, että estimaatit \(t = g(y_1, \ldots, y_n)\) osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa \(g(\theta)\). Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin \(T=g(Y_1, \ldots, Y_n)\) jakauman tulisi keskittyä mahdollisimman tiiviisti \(g(\theta)\):n ympärille.
+    Estimaattorilla on nk. todellinen arvo, \(g(\theta)\), joka vastaa parametrin arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.
+  \item
+    Toivottavaa olisi, että estimaatit \(\widehat{\theta}(y) = g(y_1, \ldots, y_n)\) osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa \(g(\theta)\). Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin \(\widehat{\theta}(Y)=g(Y_1, \ldots, Y_n)\) jakauman tulisi keskittyä mahdollisimman tiiviisti \(g(\theta)\):n ympärille.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Uskottavuusfunktio}
+
+\begin{itemize}
+\tightlist
+\item
+  Erityisesti klassisessa tilastotieteessä tilastollisen mallin parametrien estimointi perustetaan usein nk. suurimman uskottavuuden menetelmälle.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Koska mielenkiinnon kohteena on tilastollisen mallin, eli tehdyn jakaumaoletuksen alaisen yhteisjakauman, parametrit, perustuu suurimman uskottavuuden estimointi näiden estimaattoreihin.\\
+  \item
+    Tavoitteena on löytää sellaiset parametriarvot, jotka ovat havaitun aineiston kannalta uskottavimmat tilastollisen mallin parametrit.
+  \end{itemize}
+\item
+  Käytännössä suurimman uskottavuuden estimointi perustuu juuri valitun tilastollisen mallin määrittelevälle tiheysfunktiolle tai pistetodennäköisyysfunktiolle kun aineisto on havaittu.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tarkemmin, nk. \textbf{uskottavuusfunktiota} merkitään \(L(\theta) = L(\theta;y_1,\dots,y_n) = f(y_1,\dots,y_n;\theta)\), jossa kirjain L tulee englannin kielen sanasta \emph{likelihood function}.
+  \item
+    Uskottavuusfunktiossa aineisto on havaittu eli se tulkitaan kiinteäksi ja parametri \(\theta\) on tuntematon muuttuja, jonka arvoa pyritään estimoimaan.
+  \item
+    Koska tehty jakaumaoletus määrää yhteisjakauman muodon, voidaan suurimman uskottavuuden estimointi perustaa siitä johdettuihin todennäköisyyksiin.
+  \item
+    Lopulta valitaan sellaiset parametriarvot, jotka ovat aineiston valossa kaikkein \emph{uskottavimmat} ja kutsutaan niitä \textbf{suurimman uskottavuuden estimaateiksi}.
+  \item
+    Suurimman uskottavuuden estimointiin ja siihen pohjaavaan päättelyyn syvennytään tarkemmin Tilastollisen päättelyn aineopintotasoisilla kursseilla (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069?period=2024-2027}{TILM3561} ja \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3707/100872?period=2024-2027}{TILM3707}).
   \end{itemize}
 \item
   Koska tunnusluku/estimaattori \(T\) on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun \(T\) \textbf{otosjakaumaksi}.
@@ -5639,6 +5692,11 @@ t = g(y_1, \ldots, y_n).
   \end{itemize}
 \end{itemize}
 
+\begin{eblock}{}
+Esimerkki: Normaalisti jakautuneen aineiston odotusarvo
+
+\end{eblock}
+
 \hfill\break
 
 \textbf{Estimaattorin ominaisuudet}
@@ -5646,7 +5704,7 @@ t = g(y_1, \ldots, y_n).
 \begin{itemize}
 \tightlist
 \item
-  Merkitään seuraavassa parametrin \(\theta\) estimaattoria \(\widehat{\theta}\):lla ja siltä voidaan toivoa seuraavia ominaisuuksia:
+  Merkitään seuraavassa parametrin \(\theta\) estimaattoria \(\widehat{\theta}\):lla. Siltä voidaan toivoa seuraavia ominaisuuksia:
 \end{itemize}
 
 \begin{defblock}{}
@@ -6028,8 +6086,10 @@ jota otosvarianssi harhattomasti estimoi.
   Suhteellisen frekvenssin otosjakauma
 \end{itemize}
 
-\hypertarget{satunnaisuudesta-johtuvan-tulosten-epuxe4varmuuden-arvioiminen-tilastotieteessuxe4-luku9}{%
-\chapter{Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä \{luku9\}}\label{satunnaisuudesta-johtuvan-tulosten-epuxe4varmuuden-arvioiminen-tilastotieteessuxe4-luku9}}
+\hypertarget{luku9}{%
+\chapter{Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä}\label{luku9}}
+
+Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusuluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa siis sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
 \hypertarget{alaluku91}{%
 \section{Luottamusvälit}\label{alaluku91}}
@@ -6042,7 +6102,7 @@ jota otosvarianssi harhattomasti estimoi.
   \begin{itemize}
   \tightlist
   \item
-    Otoksen poimintaan liittyvän satunnaisvaihtelun vuoksi emme voi varmuudella tietää onko saatu otokseen perustuva parametriestimaatti ``lähellä'' vai ``kaukana'' sen todellisesta arvosta.
+    Otoksen poimintaan liittyvän satunnaisvaihtelun vuoksi emme voi varmuudella tietää onko saatu otokseen perustuva parametriestimaatti ``lähellä'' vai ``kaukana'' sen todellista arvoa.
   \item
     Täten tarvitaan jokin tapa, jolla saadun parametriestimaatin luotettavuutta voidaan arvioida.
   \end{itemize}

@@ -1,6 +1,6 @@
-# Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma {#luku8}
+# Satunnaisotokset: tilastollisen päättelyn näkökulma {#luku8}
 
-Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia tn-laskennan kurssin jälkeiselle tilastollisen päättelyn peruskurssille ([TILM3555](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731)).
+Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin ([TILM3553](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027)) jälkeiselle tilastollisen päättelyn peruskurssille ([TILM3555](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027)).
 
 ## Satunnaisotos, yhteisjakauma ja tilastollinen malli {#alaluku81}
 
@@ -14,7 +14,7 @@ Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edell
 
 Olkoot $Y_1, \ldots, Y_n$ riippumattomia ja samoinjakautuneita satunnaismuuttujia, joiden tiheysfunktiota (tf., tai pistetodennäköisyysfunktiota (ptnf)) merkitään $f(y, \theta)$:llä, jossa $y$:n on yksittäisen sm:jan $Y$ reaalisaatio ja $\theta$ on jokin jakauman muodon määräävä parametri (tai parametrit).  
 
-Parametrin $\theta$ arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, __estimoida__, sen arvo lopulta käytettävissä olevasta aineistosta.
+Parametrin $\theta$ arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, __estimoida__, sen arvo käytettävissä olevasta aineistosta.
 :::
 
 \
@@ -23,9 +23,12 @@ __Satunnaisotoksen tilastollinen malli__
 
 - Havaintoarvot $y_1, \dots, y_n$ ovat kiinteitä lukuja, mutta ne vaihtelevat satunnaisesti otoksesta toiseen. Satunnaisotannassa __satunnaisuus liittyy siis havaintoarvojen vaihteluun satunnaisesti otoksesta toiseen__. 
   - Satunnaisuus ei siis liity otannan tuloksena saatuihin havaintoarvoihin, vaan otoksen poimintaan.
+  - Toisin sanoen, yksittäisen tilastoyksikön havaintoarvo (esim. pituus) on kiinteä luku. Satunnaisotannassa satunnaisuus kumpuaa siis siitä, että tilastoyksikkö tulee valituksi otokseen sattumanvaraisesti. 
 
 - Satunnaismuuttujien $Y_1, \ldots, Y_n$ __yhteisjakauma__ muodostaa (tiettyjen lisäoletusten jälkeen) __tilastollisen mallin__ havaintoarvojen satunnaiselle vaihtelulle eri otoksissa.
+  - Yhteisjakaumaa merkitään $f(y_1,\dots,y_n;\theta)$, jossa havaitut arvot $y_i$ ovat kiinteitä ja parametri $\theta$ on tuntematon.
   - Koska tällä kurssilla satunnaismuuttujat $Y_1, \ldots, Y_n$ oletetaan __riippumattomiksi toisiinsa nähden__, niiden yhteisjakauma on tulomuotoa $f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)$.
+  - Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston $y_1\,dots,y_n$ avulla estimoimaan parametrin $\theta$ arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.  
 
 - Tässä $f(y_1, \ldots, y_n; \theta)$ on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli. 
   - Useimmiten kuitenkin ajatellaan, että on käytettävä niin yksinkertaisia menetelmiä kuin mahdollista, mutta ei yhtään yksinkertaisempia. Tämä on ns. **parsimoonisuusperiaate** eli **vähäparametrisuus-** tai **säästeliäisyysperiaate**.
@@ -41,7 +44,9 @@ $$
 $$
 
   - Tässä tapauksessa mielenkiinnon kohteena olevat parametrit ovat siis $\mu$ ja $\sigma^2$ eli $\theta = (\mu \quad \sigma^2)$.
-  - Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on että miten estimointi suoritetaan luotettavasti.
+    - Toisin sanoen, tutkimuskysymyksestä johdetut hypoteesit voisivat koskea esimerkiksi näitä parametreja, tai tarkemmin niiden oikeita arvoja, jotka ovat siis tuntemattomia.
+  - Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on, __että miten estimointi suoritetaan luotettavasti__.
+    - Useimmiten tämä estimointi perustetaan nk. __uskottavuusfunktion__ käyttöön, josta lisää alempana.
 
 ::: {.eblock .kimmo data-latex="{}"}
 **Esimerkki: satunnaisotos normaalijakaumasta**  
@@ -49,7 +54,7 @@ $$
 Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee $Y_1, \ldots, Y_n \indep, \,\, Y_i \thicksim \text{N}(\mu, \sigma^2),\,\, i=1,\ldots,n$.  
 
 - Merkintä $\indep$ tarkoittaa, että sm:t $Y_1,\ldots,Y_n$ ovat riippumattomia ja samoin jakautuneita (toisinaan myös lyhyesti _iid_ tai _i.i.d_, joka tulee englannin kielen ilmaisusta "independent and identically distributed"). Merkintä soveltuu käytettäväksi muidenkin jakaumien tapauksessa.
-- Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon ($n=10$) satunnaisotos standardoidusta normaalijakaumasta (ts. $Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10$) komennolla rnorm(10).
+- Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon ($n=10$) satunnaisotos standardinormaalijakaumasta (ts. $Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10$) komennolla rnorm(10).
 :::
 
 \newpage
@@ -172,7 +177,7 @@ $$
 
 - Odotusarvo ja varianssi ovat Poisson-jakauman tapauksessa samat: $\text{E}(Y) = \mathrm{Var}(Y) = \lambda$.
 
-- Kuviossa \@ref(fig:poisson) on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin $\lambda$ arvoilla. Poisson-jakaumaa esitellään tarkemmin alaluvussa \@ref(alaluku45).
+- Kuviossa \@ref(fig:poisson) on kuvattu Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktion muotoa eri parametrin $\lambda$ arvoilla. 
 
 
 ```{r poisson, echo=FALSE, fig.cap="Esimerkki: Poisson-jakauman sovelluskohteita ja sen pistetodennäköisyysfunktio eri parametrin $\\lambda$ arvoilla.", fig.align='center', out.width = "100%"}
@@ -237,38 +242,55 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
     - Toistetaan aineiston keruu samoissa olosuhteissa yhä uudelleen ja uudelleen.
     - Saatava aineisto (numeeriset arvot) $y_1, \ldots, y_n$ vaihtelevat näin ollen valitun tilastollisen mallin jakauman kuvaamalla tavalla.
 
-- Satunnaisotoksesta voidaan laskea erilaisia __tunnuslukuja/otossuureita__, joita merkitään $T$:llä, ts. ne ovat aineiston funktioita 
+- Satunnaisotoksesta voidaan laskea erilaisia __tunnuslukuja/otossuureita__, joita merkitään $T(Y)$:llä, ts. ne ovat aineiston funktioita 
 $$
-T = g(Y_1, \ldots, Y_n).
+T(Y) = g(Y_1, \ldots, Y_n).
 $$
 
 - __Tunnusluvut ovat satunnaismuuttujien funktioina myös satunnaismuuttujia.__
-  - Tunnusluvulla on nk. todellinen arvo, $g(\theta)$, joka vastaa tunnusluvun arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.
-  - Esimerkkinä tunnusluvusta on keskiarvo $\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i$.
-  - **Tunnusluvun havaittu arvo** (realisaatio) pisteessä ($y_1,\ldots, y_n$) eli havaitussa aineistossa on
+  - **Tunnusluvun havaittu arvo** (realisaatio) pisteessä ($y_1,\ldots, y_n$) eli havaitussa aineistossa on  
 
 $$
 t = g(y_1, \ldots, y_n).
 $$
-
+  - Esimerkkinä tunnusluvusta on keskiarvo $\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i$.
   - Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia). 
   - Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.
 
-- Jos tunnuslukua $T$ käytetään tilastollisen mallin parametrin (parametrien) $\theta$ estimointiin, niin tätä sanotaan tällöin parametrin __estimaattoriksi__.
-  - Estimaattorin otoskohtaisia arvoja, kuten yllä $t$, kutsutaan __estimaateiksi__.
-  - Toivottavaa olisi, että estimaatit $t = g(y_1, \ldots, y_n)$ osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa $g(\theta)$. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin $T=g(Y_1, \ldots, Y_n)$ jakauman tulisi keskittyä mahdollisimman tiiviisti $g(\theta)$:n ympärille.
+- Jos tunnuslukua $T(Y)$ käytetään tilastollisen mallin parametrin (parametrien) $\theta$ estimointiin, niin tätä sanotaan tällöin parametrin __estimaattoriksi__, jota merkitään $\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)$.
+  - Estimaattorin otoskohtaisia arvoja kutsutaan __estimaateiksi__ ja merkitään $\widehat{\theta}(y)$.
+  - Estimaattorilla on nk. todellinen arvo, $g(\theta)$, joka vastaa parametrin arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.
+  - Toivottavaa olisi, että estimaatit $\widehat{\theta}(y) = g(y_1, \ldots, y_n)$ osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa $g(\theta)$. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin $\widehat{\theta}(Y)=g(Y_1, \ldots, Y_n)$ jakauman tulisi keskittyä mahdollisimman tiiviisti $g(\theta)$:n ympärille.
 
-- Koska tunnusluku/estimaattori $T$ on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun $T$ __otosjakaumaksi__. 
+__Uskottavuusfunktio__
 
+- Erityisesti klassisessa tilastotieteessä tilastollisen mallin parametrien estimointi perustetaan usein nk. suurimman uskottavuuden menetelmälle.  
+  - Koska mielenkiinnon kohteena on tilastollisen mallin, eli tehdyn jakaumaoletuksen alaisen yhteisjakauman, parametrit, perustuu suurimman uskottavuuden estimointi näiden estimaattoreihin.  
+  - Tavoitteena on löytää sellaiset parametriarvot, jotka ovat havaitun aineiston kannalta uskottavimmat tilastollisen mallin parametrit.  
+
+- Käytännössä suurimman uskottavuuden estimointi perustuu juuri valitun tilastollisen mallin määrittelevälle tiheysfunktiolle tai pistetodennäköisyysfunktiolle kun aineisto on havaittu.
+  - Tarkemmin, nk. __uskottavuusfunktiota__ merkitään $L(\theta) = L(\theta;y_1,\dots,y_n) = f(y_1,\dots,y_n;\theta)$, jossa kirjain L tulee englannin kielen sanasta _likelihood function_. 
+  - Uskottavuusfunktiossa aineisto on havaittu eli se tulkitaan kiinteäksi ja parametri $\theta$ on tuntematon muuttuja, jonka arvoa pyritään estimoimaan.
+  - Koska tehty jakaumaoletus määrää yhteisjakauman muodon, voidaan suurimman uskottavuuden estimointi perustaa siitä johdettuihin todennäköisyyksiin. 
+  - Lopulta valitaan sellaiset parametriarvot, jotka ovat aineiston valossa kaikkein _uskottavimmat_ ja kutsutaan niitä __suurimman uskottavuuden estimaateiksi__.
+  - Suurimman uskottavuuden estimointiin ja siihen pohjaavaan päättelyyn syvennytään tarkemmin Tilastollisen päättelyn aineopintotasoisilla kursseilla ([TILM3561](https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069?period=2024-2027) ja [TILM3707](https://opas.peppi.utu.fi/fi/opintojakso/TILM3707/100872?period=2024-2027)).
+
+- Koska tunnusluku/estimaattori $T$ on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun $T$ __otosjakaumaksi__.  
   - Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun $T$ arvojen satunnaisvaihtelulle otoksesta toiseen.
   - Otosjakaumat riippuvat tuntemattomista __parametreista__, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
   - Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit __estimoidaan__, kuten yllä jo todettiin, havaintoaineistoa käyttäen.
+
+
+::: {.eblock .kimmo data-latex="{}"}
+Esimerkki: Normaalisti jakautuneen aineiston odotusarvo
+
+:::
 
 \
 
 __Estimaattorin ominaisuudet__
 
-- Merkitään seuraavassa parametrin $\theta$ estimaattoria $\widehat{\theta}$:lla ja siltä voidaan toivoa seuraavia ominaisuuksia:
+- Merkitään seuraavassa parametrin $\theta$ estimaattoria $\widehat{\theta}$:lla. Siltä voidaan toivoa seuraavia ominaisuuksia:
 
 ::: {.defblock .mikko data-latex="{}"}
 **Harhattomuus**  

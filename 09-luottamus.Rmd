@@ -1,9 +1,11 @@
-# Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä {luku9}
+# Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä {#luku9}
+
+Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusuluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa siis sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
 ## Luottamusvälit {#alaluku91}
 
 - Satunnaisesti saadusta aineistosta laskettujen tunnuslukujen luotettavuus on tilastollisen mallin parametrien estimoinnissa keskeinen tilastollinen kysymys. 
-  - Otoksen poimintaan liittyvän satunnaisvaihtelun vuoksi emme voi varmuudella tietää onko saatu otokseen perustuva parametriestimaatti "lähellä" vai "kaukana" sen todellisesta arvosta.
+  - Otoksen poimintaan liittyvän satunnaisvaihtelun vuoksi emme voi varmuudella tietää onko saatu otokseen perustuva parametriestimaatti "lähellä" vai "kaukana" sen todellista arvoa.
   - Täten tarvitaan jokin tapa, jolla saadun parametriestimaatin luotettavuutta voidaan arvioida.
 
 ::: {.defblock .mikko data-latex="{}"}

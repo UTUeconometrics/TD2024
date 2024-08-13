@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.2 Kahden muuttujan havaintoaineiston kuvaaminen | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.2 Kahden muuttujan havaintoaineiston kuvaaminen | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-07-18" />
+<meta name="date" content="2024-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -148,7 +148,7 @@
 <li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
 <li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Satunnaisotokset: tilastollisen päättelyn näkökulma</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
 <li class="chapter" data-level="8.2" data-path="luku82.html"><a href="luku82.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
@@ -161,7 +161,7 @@
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><a href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä {luku9}</a>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
 <li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
@@ -236,14 +236,14 @@
 <li><p>Havaintoarvojen jakaumaa voidaan kuvailla ja esitellä tiivistämällä havaintoarvoihin sisältyvä informaatio sopivaan muotoon:</p>
 <ul>
 <li>Havaintoarvojen jakaumaa kokonaisuutena voidaan kuvata sopivasti valituilla graafisilla esityksillä.</li>
-<li>Havaintoarvojen jakauman karakteristisia ominaisuuksia voidaan kuvata sopivasti valituilla otostunnusluvuilla (ks. otostunnusluvut ja otosjakaumat luvussa <a href="#luku9"><strong>??</strong></a>).</li>
+<li>Havaintoarvojen jakauman karakteristisia ominaisuuksia voidaan kuvata sopivasti valituilla otostunnusluvuilla (ks. otostunnusluvut ja otosjakaumat luvussa <a href="luku9.html#luku9">9</a>).</li>
 </ul></li>
 <li><p>Koska useampiulotteisten kuvioiden kuin kaksiulotteisten muodostaminen ei ole usein kovin mielekästä, kolmen tai useamman muuttujan havaintoaineistoja havainnollistetaan tavallisesti niin, että muuttujia tarkastellaan pareittain.</p></li>
 <li><p>Kahden järjestys-, välimatka- tai suhdeasteikoillisen muuttujan havaittujen arvojen pareja havainnollistetaan tavallisesti graafisella esityksellä, jota kutsutaan hajontakuvioksi tai pistediagrammiksi (“pistekaavio” engl. scatter plot). Ks. esimerkiksi kuva <a href="alaluku62.html#fig:isatjapojat1">6.1</a>.</p></li>
 <li><p>Usean muuttujan havaintoaineistojen karakteristisia ominaisuuksia voidaan kuvata muuttujakohtaisilla otostunnusluvuilla.</p>
 <ul>
 <li>Muuttujakohtaiset otostunnusluvut eivät kuitenkaan voi antaa informaatiota muuttujien välisistä riippuvuuksista.</li>
-<li>Muuttujien pareittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.</li>
+<li>Muuttujien parittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.</li>
 </ul></li>
 </ul>
 <p><br />

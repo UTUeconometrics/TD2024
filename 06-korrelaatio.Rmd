@@ -66,7 +66,7 @@ always_allow_html: true
 
 - Usean muuttujan havaintoaineistojen karakteristisia ominaisuuksia voidaan kuvata muuttujakohtaisilla otostunnusluvuilla.
   - Muuttujakohtaiset otostunnusluvut eivät kuitenkaan voi antaa informaatiota muuttujien välisistä riippuvuuksista.
-  - Muuttujien pareittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.
+  - Muuttujien parittaisia tilastollisia riippuvuuksia voidaan kuvata sopivasti valitulla korrelaation mitalla.
 
 \
 
@@ -163,7 +163,7 @@ satunnaismuuttujien $X$ ja $Y$ odotusarvot ja
 \sigma^2_Y &= \mathrm{Var}(Y) = \text{D}^2(Y) = \text{E}[(Y - \mu_Y)^2]
 \end{align*}
 
-satunnaismuuttujien $X$ ja $Y$ varianssit. 
+satunnaismuuttujien $X$ ja $Y$ varianssit. $D^2(\cdot)$ on satunnaismuuttujan (populaatiotason) keskihajonta. 
 
 \
 
@@ -215,7 +215,7 @@ jossa $s_{xy}$ on $x$- ja $y$-havaintoarvojen otoskovarianssi, $s_x$ on $x$-hava
 
 - Pearsonin otoskorrelaatiokertoimella $r_{xy}$ on seuraavat ominaisuudet:
   i) $-1 \le r_{xy} \le 1$
-  ii) $r_{xy} = \pm 1$, jos ja vain jos $y_i = \alpha \beta x_i$, jossa $\alpha$ ja $\beta$  ovat reaalisia vakiota ja $\alpha,\beta \neq 0$
+  ii) $r_{xy} = \pm 1$, jos ja vain jos $y_i = \alpha + \beta x_i$, jossa $\alpha$ ja $\beta$  ovat reaalisia vakiota ja $\alpha,\beta \neq 0$
   iii)	Korrelaatiokertoimella $r_{xy}$ ja kovarianssilla $s_{xy}$ on aina sama etumerkki
 
 - Pearsonin otoskorrelaatiokerroin $r_{xy}$: Tulkinta/tulkintoja:
@@ -312,12 +312,12 @@ Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkin
 Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.
 
 - __Moodi__: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
-- __Mediaani__: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
+- __Mediaani__: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista tai joskus niiden keskiarvo). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
   - Luokitteluasteikolla mitattaville muuttujille ei ole olemassa luontevia sijaintilukuja keskilukujen yhteydessä pl. moodi.
 
 - Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää __fraktiileja__: pp%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp%. 
   - Eniten käytettyjä fraktiileja ovat __kvartiilit__. __Alakvartiili__ $Q_1$ on 25 \%:n fraktiili, ja __yläkvartiili__ $Q_3$ on 75 \% fraktiili.
-  - Tietyistä fraktiileista käytetään nimitystä __desiili__. Ensimmäinen desiili $D_1$ on 10 \% fraktiili ja esim. yhdeksäs fraktiili $D_9$ on 90 \% fraktiili.
+  - Tietyistä fraktiileista käytetään nimitystä __desiili__. Ensimmäinen desiili $D_1$ on 10 \% fraktiili ja esim. yhdeksäs desiili $D_9$ on 90 \% fraktiili.
 
 - Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. __Vaihteluväli__ kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). __Kvartiiliväli__ = ($Q_1, Q_3$).
 

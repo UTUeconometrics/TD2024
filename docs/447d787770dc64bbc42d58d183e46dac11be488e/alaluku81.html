@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.1 Satunnaisotos, yhteisjakauma ja tilastollinen malli | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.1 Satunnaisotos, yhteisjakauma ja tilastollinen malli | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-07-18" />
+<meta name="date" content="2024-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -148,7 +148,7 @@
 <li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
 <li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Satunnaisotokset: tilastollisen päättelyn näkökulma</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
 <li class="chapter" data-level="8.2" data-path="luku82.html"><a href="luku82.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
@@ -161,7 +161,7 @@
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><a href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä {luku9}</a>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
 <li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
@@ -242,7 +242,7 @@
 <div class="defblock mikko">
 <p><strong>Satunnaisotos</strong></p>
 <p>Olkoot <span class="math inline">\(Y_1, \ldots, Y_n\)</span> riippumattomia ja samoinjakautuneita satunnaismuuttujia, joiden tiheysfunktiota (tf., tai pistetodennäköisyysfunktiota (ptnf)) merkitään <span class="math inline">\(f(y, \theta)\)</span>:llä, jossa <span class="math inline">\(y\)</span>:n on yksittäisen sm:jan <span class="math inline">\(Y\)</span> reaalisaatio ja <span class="math inline">\(\theta\)</span> on jokin jakauman muodon määräävä parametri (tai parametrit).</p>
-<p>Parametrin <span class="math inline">\(\theta\)</span> arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, <strong>estimoida</strong>, sen arvo lopulta käytettävissä olevasta aineistosta.</p>
+<p>Parametrin <span class="math inline">\(\theta\)</span> arvoa ei yleensä tunneta ja tavoitteena onkin päätellä, <strong>estimoida</strong>, sen arvo käytettävissä olevasta aineistosta.</p>
 </div>
 <p><br />
 </p>
@@ -251,10 +251,13 @@
 <li>Havaintoarvot <span class="math inline">\(y_1, \dots, y_n\)</span> ovat kiinteitä lukuja, mutta ne vaihtelevat satunnaisesti otoksesta toiseen. Satunnaisotannassa <strong>satunnaisuus liittyy siis havaintoarvojen vaihteluun satunnaisesti otoksesta toiseen</strong>.
 <ul>
 <li>Satunnaisuus ei siis liity otannan tuloksena saatuihin havaintoarvoihin, vaan otoksen poimintaan.</li>
+<li>Toisin sanoen, yksittäisen tilastoyksikön havaintoarvo (esim. pituus) on kiinteä luku. Satunnaisotannassa satunnaisuus kumpuaa siis siitä, että tilastoyksikkö tulee valituksi otokseen sattumanvaraisesti.</li>
 </ul></li>
 <li>Satunnaismuuttujien <span class="math inline">\(Y_1, \ldots, Y_n\)</span> <strong>yhteisjakauma</strong> muodostaa (tiettyjen lisäoletusten jälkeen) <strong>tilastollisen mallin</strong> havaintoarvojen satunnaiselle vaihtelulle eri otoksissa.
 <ul>
+<li>Yhteisjakaumaa merkitään <span class="math inline">\(f(y_1,\dots,y_n;\theta)\)</span>, jossa havaitut arvot <span class="math inline">\(y_i\)</span> ovat kiinteitä ja parametri <span class="math inline">\(\theta\)</span> on tuntematon.</li>
 <li>Koska tällä kurssilla satunnaismuuttujat <span class="math inline">\(Y_1, \ldots, Y_n\)</span> oletetaan <strong>riippumattomiksi toisiinsa nähden</strong>, niiden yhteisjakauma on tulomuotoa <span class="math inline">\(f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)\)</span>.</li>
+<li>Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston <span class="math inline">\(y_1\,dots,y_n\)</span> avulla estimoimaan parametrin <span class="math inline">\(\theta\)</span> arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.</li>
 </ul></li>
 <li>Tässä <span class="math inline">\(f(y_1, \ldots, y_n; \theta)\)</span> on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli.
 <ul>
@@ -272,15 +275,21 @@
 \mathrm{Var}(Y_i) = \sigma^2, \quad i=1,\ldots,n.
 \]</span></p>
 <ul>
-<li>Tässä tapauksessa mielenkiinnon kohteena olevat parametrit ovat siis <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> eli <span class="math inline">\(\theta = (\mu \quad \sigma^2)\)</span>.</li>
-<li>Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on että miten estimointi suoritetaan luotettavasti.</li>
+<li>Tässä tapauksessa mielenkiinnon kohteena olevat parametrit ovat siis <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> eli <span class="math inline">\(\theta = (\mu \quad \sigma^2)\)</span>.
+<ul>
+<li>Toisin sanoen, tutkimuskysymyksestä johdetut hypoteesit voisivat koskea esimerkiksi näitä parametreja, tai tarkemmin niiden oikeita arvoja, jotka ovat siis tuntemattomia.</li>
+</ul></li>
+<li>Tilastollisten mallien tehtävänä on siis estimoida nämä todennäköisyysjakaumien parametrit havaitun aineiston perusteella, joten keskeinen tilastollinen kysymys on, <strong>että miten estimointi suoritetaan luotettavasti</strong>.
+<ul>
+<li>Useimmiten tämä estimointi perustetaan nk. <strong>uskottavuusfunktion</strong> käyttöön, josta lisää alempana.</li>
+</ul></li>
 </ul>
 <div class="eblock kimmo">
 <p><strong>Esimerkki: satunnaisotos normaalijakaumasta</strong></p>
 <p>Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee <span class="math inline">\(Y_1, \ldots, Y_n \perp \!\!\! \perp, \,\, Y_i \thicksim \text{N}(\mu, \sigma^2),\,\, i=1,\ldots,n\)</span>.</p>
 <ul>
 <li>Merkintä <span class="math inline">\(\perp \!\!\! \perp\)</span> tarkoittaa, että sm:t <span class="math inline">\(Y_1,\ldots,Y_n\)</span> ovat riippumattomia ja samoin jakautuneita (toisinaan myös lyhyesti <em>iid</em> tai <em>i.i.d</em>, joka tulee englannin kielen ilmaisusta “independent and identically distributed”). Merkintä soveltuu käytettäväksi muidenkin jakaumien tapauksessa.</li>
-<li>Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon (<span class="math inline">\(n=10\)</span>) satunnaisotos standardoidusta normaalijakaumasta (ts. <span class="math inline">\(Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10\)</span>) komennolla rnorm(10).</li>
+<li>Esimerkiksi R-ohjelmassa voidaan generoida 10 havainnon (<span class="math inline">\(n=10\)</span>) satunnaisotos standardinormaalijakaumasta (ts. <span class="math inline">\(Y_i \thicksim \text{N}(0,1),\, i=1,\ldots,10\)</span>) komennolla rnorm(10).</li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>

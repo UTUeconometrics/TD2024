@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.3 Otosjakauma: Estimaattori ja estimaatti | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.3 Otosjakauma: Estimaattori ja estimaatti | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-07-18" />
+<meta name="date" content="2024-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -148,7 +148,7 @@
 <li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
 <li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Otokset ja otosjakaumat: tilastollisen päättelyn näkökulma</a>
+<li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Satunnaisotokset: tilastollisen päättelyn näkökulma</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="alaluku81.html"><a href="alaluku81.html"><i class="fa fa-check"></i><b>8.1</b> Satunnaisotos, yhteisjakauma ja tilastollinen malli</a></li>
 <li class="chapter" data-level="8.2" data-path="luku82.html"><a href="luku82.html"><i class="fa fa-check"></i><b>8.2</b> Tilastolliset mallit ja jakaumat</a>
@@ -161,7 +161,7 @@
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><a href="satunnaisuudesta-johtuvan-tulosten-epävarmuuden-arvioiminen-tilastotieteessä-luku9.html"><i class="fa fa-check"></i><b>9</b> Satunnaisuudesta johtuvan tulosten epävarmuuden arvioiminen tilastotieteessä {luku9}</a>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
 <li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
@@ -238,40 +238,60 @@
 <li>Toistetaan aineiston keruu samoissa olosuhteissa yhä uudelleen ja uudelleen.</li>
 <li>Saatava aineisto (numeeriset arvot) <span class="math inline">\(y_1, \ldots, y_n\)</span> vaihtelevat näin ollen valitun tilastollisen mallin jakauman kuvaamalla tavalla.</li>
 </ul></li>
-<li><p>Satunnaisotoksesta voidaan laskea erilaisia <strong>tunnuslukuja/otossuureita</strong>, joita merkitään <span class="math inline">\(T\)</span>:llä, ts. ne ovat aineiston funktioita
+<li><p>Satunnaisotoksesta voidaan laskea erilaisia <strong>tunnuslukuja/otossuureita</strong>, joita merkitään <span class="math inline">\(T(Y)\)</span>:llä, ts. ne ovat aineiston funktioita
 <span class="math display">\[
-T = g(Y_1, \ldots, Y_n).
+T(Y) = g(Y_1, \ldots, Y_n).
 \]</span></p></li>
 <li><p><strong>Tunnusluvut ovat satunnaismuuttujien funktioina myös satunnaismuuttujia.</strong></p>
 <ul>
-<li>Tunnusluvulla on nk. todellinen arvo, <span class="math inline">\(g(\theta)\)</span>, joka vastaa tunnusluvun arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.</li>
-<li>Esimerkkinä tunnusluvusta on keskiarvo <span class="math inline">\(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\)</span>.</li>
 <li><strong>Tunnusluvun havaittu arvo</strong> (realisaatio) pisteessä (<span class="math inline">\(y_1,\ldots, y_n\)</span>) eli havaitussa aineistossa on</li>
 </ul></li>
 </ul>
 <p><span class="math display">\[
 t = g(y_1, \ldots, y_n).
-\]</span></p>
+\]</span>
+- Esimerkkinä tunnusluvusta on keskiarvo <span class="math inline">\(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\)</span>.
+- Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia).
+- Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.</p>
 <ul>
-<li><p>Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia).</p></li>
-<li><p>Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.</p></li>
-<li><p>Jos tunnuslukua <span class="math inline">\(T\)</span> käytetään tilastollisen mallin parametrin (parametrien) <span class="math inline">\(\theta\)</span> estimointiin, niin tätä sanotaan tällöin parametrin <strong>estimaattoriksi</strong>.</p>
+<li>Jos tunnuslukua <span class="math inline">\(T(Y)\)</span> käytetään tilastollisen mallin parametrin (parametrien) <span class="math inline">\(\theta\)</span> estimointiin, niin tätä sanotaan tällöin parametrin <strong>estimaattoriksi</strong>, jota merkitään <span class="math inline">\(\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)\)</span>.
 <ul>
-<li>Estimaattorin otoskohtaisia arvoja, kuten yllä <span class="math inline">\(t\)</span>, kutsutaan <strong>estimaateiksi</strong>.</li>
-<li>Toivottavaa olisi, että estimaatit <span class="math inline">\(t = g(y_1, \ldots, y_n)\)</span> osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa <span class="math inline">\(g(\theta)\)</span>. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin <span class="math inline">\(T=g(Y_1, \ldots, Y_n)\)</span> jakauman tulisi keskittyä mahdollisimman tiiviisti <span class="math inline">\(g(\theta)\)</span>:n ympärille.</li>
+<li>Estimaattorin otoskohtaisia arvoja kutsutaan <strong>estimaateiksi</strong> ja merkitään <span class="math inline">\(\widehat{\theta}(y)\)</span>.</li>
+<li>Estimaattorilla on nk. todellinen arvo, <span class="math inline">\(g(\theta)\)</span>, joka vastaa parametrin arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.</li>
+<li>Toivottavaa olisi, että estimaatit <span class="math inline">\(\widehat{\theta}(y) = g(y_1, \ldots, y_n)\)</span> osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa <span class="math inline">\(g(\theta)\)</span>. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin <span class="math inline">\(\widehat{\theta}(Y)=g(Y_1, \ldots, Y_n)\)</span> jakauman tulisi keskittyä mahdollisimman tiiviisti <span class="math inline">\(g(\theta)\)</span>:n ympärille.</li>
 </ul></li>
-<li><p>Koska tunnusluku/estimaattori <span class="math inline">\(T\)</span> on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun <span class="math inline">\(T\)</span> <strong>otosjakaumaksi</strong>.</p>
+</ul>
+<p><strong>Uskottavuusfunktio</strong></p>
+<ul>
+<li>Erityisesti klassisessa tilastotieteessä tilastollisen mallin parametrien estimointi perustetaan usein nk. suurimman uskottavuuden menetelmälle.
+<ul>
+<li>Koska mielenkiinnon kohteena on tilastollisen mallin, eli tehdyn jakaumaoletuksen alaisen yhteisjakauman, parametrit, perustuu suurimman uskottavuuden estimointi näiden estimaattoreihin.<br />
+</li>
+<li>Tavoitteena on löytää sellaiset parametriarvot, jotka ovat havaitun aineiston kannalta uskottavimmat tilastollisen mallin parametrit.</li>
+</ul></li>
+<li>Käytännössä suurimman uskottavuuden estimointi perustuu juuri valitun tilastollisen mallin määrittelevälle tiheysfunktiolle tai pistetodennäköisyysfunktiolle kun aineisto on havaittu.
+<ul>
+<li>Tarkemmin, nk. <strong>uskottavuusfunktiota</strong> merkitään <span class="math inline">\(L(\theta) = L(\theta;y_1,\dots,y_n) = f(y_1,\dots,y_n;\theta)\)</span>, jossa kirjain L tulee englannin kielen sanasta <em>likelihood function</em>.</li>
+<li>Uskottavuusfunktiossa aineisto on havaittu eli se tulkitaan kiinteäksi ja parametri <span class="math inline">\(\theta\)</span> on tuntematon muuttuja, jonka arvoa pyritään estimoimaan.</li>
+<li>Koska tehty jakaumaoletus määrää yhteisjakauman muodon, voidaan suurimman uskottavuuden estimointi perustaa siitä johdettuihin todennäköisyyksiin.</li>
+<li>Lopulta valitaan sellaiset parametriarvot, jotka ovat aineiston valossa kaikkein <em>uskottavimmat</em> ja kutsutaan niitä <strong>suurimman uskottavuuden estimaateiksi</strong>.</li>
+<li>Suurimman uskottavuuden estimointiin ja siihen pohjaavaan päättelyyn syvennytään tarkemmin Tilastollisen päättelyn aineopintotasoisilla kursseilla (<a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069?period=2024-2027">TILM3561</a> ja <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3707/100872?period=2024-2027">TILM3707</a>).</li>
+</ul></li>
+<li>Koska tunnusluku/estimaattori <span class="math inline">\(T\)</span> on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun <span class="math inline">\(T\)</span> <strong>otosjakaumaksi</strong>.
 <ul>
 <li>Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun <span class="math inline">\(T\)</span> arvojen satunnaisvaihtelulle otoksesta toiseen.</li>
 <li>Otosjakaumat riippuvat tuntemattomista <strong>parametreista</strong>, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.</li>
 <li>Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit <strong>estimoidaan</strong>, kuten yllä jo todettiin, havaintoaineistoa käyttäen.</li>
 </ul></li>
 </ul>
+<div class="eblock kimmo">
+<p>Esimerkki: Normaalisti jakautuneen aineiston odotusarvo</p>
+</div>
 <p><br />
 </p>
 <p><strong>Estimaattorin ominaisuudet</strong></p>
 <ul>
-<li>Merkitään seuraavassa parametrin <span class="math inline">\(\theta\)</span> estimaattoria <span class="math inline">\(\widehat{\theta}\)</span>:lla ja siltä voidaan toivoa seuraavia ominaisuuksia:</li>
+<li>Merkitään seuraavassa parametrin <span class="math inline">\(\theta\)</span> estimaattoria <span class="math inline">\(\widehat{\theta}\)</span>:lla. Siltä voidaan toivoa seuraavia ominaisuuksia:</li>
 </ul>
 <div class="defblock mikko">
 <p><strong>Harhattomuus</strong></p>
