@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-09" />
+<meta name="date" content="2024-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,17 @@
 <li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
 <li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Tilastolliset tunnusluvut ja parametrien estimaattorit</a></li>
 <li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.3</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -234,28 +235,29 @@
 <p class="author"><em>Koonneet</em></p>
 <p class="author"><em>Henri Nyberg<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></em></p>
 <p class="author"><em>Roope Rihtamo<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></em></p>
-<p class="date"><em>2024-08-09</em></p>
+<p class="date"><em>2024-08-13</em></p>
 </div>
 <div id="kurssin-osat-i-ja-ii-rakenne" class="section level1 unnumbered hasAnchor">
 <h1>Kurssin (osat I ja II rakenne)<a href="index.html#kurssin-osat-i-ja-ii-rakenne" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
-<li>Tilastotiede ja data -kurssi koostuu kahdesta erillisestä osasta, jotka tarjoavat opiskelijalle työkaluja tieteen ja tutkimuksen ymmärtämiseen tilastotieteen näkökulmasta käsin.</li>
-<li><strong>Osa I</strong>: Ensimmäinen osa toimii johdantokurssina tieteen ja tutkimuksen tekoon esittelemällä keskeisiä käsitteitä, käytäntöjä ja termejä, joita kvantitatiivisessa/määrällisessä tutkimuksessa tilastotieteen ja sen menetelmien osalta tarvitaan (ks. osaamistavoitteet alla).
+<li>Tilastotiede ja data -kurssi koostuu kahdesta erillisestä osasta, jotka tarjoavat opiskelijalle työkaluja tieteen ja tutkimuksen ymmärtämiseen tilastotieteen näkökulmasta käsin.
+<ul>
+<li>Lisäksi kurssi pyrkii antamaan, varsinkin alkuosaltaan, melko ei-matemaattisen johdannon tilastotieteen keskeisiin ideoihin ja perusteisiin.</li>
+</ul></li>
+<li><strong>Osa I</strong> (2op): Ensimmäinen osa toimii johdantokurssina tieteen ja tutkimuksen tekoon esittelemällä keskeisiä käsitteitä, käytäntöjä ja termejä, joita kvantitatiivisessa/määrällisessä tutkimuksessa tilastotieteen ja sen menetelmien osalta tarvitaan (ks. osaamistavoitteet alla).
 <ul>
 <li>Tarkoituksena on yleisellä tasolla johdatella tilastotieteen ja aineistojen (datan) maailmaan sekä pohtia myös näiden laajempaa merkitystä tieteellisen tutkimuksen hyvin keskeisinä osina.</li>
-<li>Osa I koostuu X luennosta ja …</li>
 <li>Kurssin ensimmäisen osan lopuksi järjestetään tentti, joka arvioidaan hyväksytty/hylätty asteikolla.</li>
 </ul></li>
-<li><strong>Osa II</strong>: Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
+<li><strong>Osa II</strong>(4op): Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
 <ul>
 <li>Tarkoituksena on luoda pohja tosielämän satunnaisilmiöiden tutkimukselle tilastotieteen ja tilastollisten menetelmien keinoin.</li>
-<li>Osa II koostuu 7 luennosta, tutoriaalitilaisuuksista sekä harjoitustehtävistä.</li>
 <li>Harjoitustehtävien tavoite on totuttaa opiskelija erityisesti matematiikan ja tilastotieteen opinnoissa yleiseen viikottaisten harjoitustehtävien tekemisen käytäntöön.</li>
 <li>Kurssin toisen osan lopuksi järjestetään tentti, joka arvioidaan 0-5 arviointiasteikolla.</li>
 </ul></li>
 <li>Kurssilla vältetään kovin teknistä matemaattista esitystapaa, mutta erityisesti osassa II, tarvittavissa määrin, tullaan kuitenkin käyttämään tilastotieteen perusopinnoissa käytettäviä matemaattisia merkintöjä ja määritelmiä.
 <ul>
-<li>Esim. todennäköisyyslaskennan ja tilastollisen päättelyn perusteita ei käydä vielä riittävällä matemaattisella tarkkuudella lävitse, vaan nämä tarkastelut jäävät tätä kurssia seuraavien kurssien (<a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024">TILM3553 Todennäköisyyslaskennan peruskurssi</a> tai <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2%20022-2024">TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille</a> sekä <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2022-2024">TILM3555 Tilastollisen päättelyn peruskurssi</a>) asiaksi. Nämä kurssit, yhdessä alkuvaiheen pakollisten matematiikan kurssin lisäksi, muodostavat siis tämän kurssin kanssa lähtökohdan tilastotieteen opinnoille (Turun yliopistossa).</li>
+<li>Esim. todennäköisyyslaskennan ja tilastollisen päättelyn perusteita ei käydä vielä riittävällä matemaattisella tarkkuudella lävitse, vaan nämä tarkastelut jäävät tätä kurssia seuraavien kurssien (<a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024">TILM3553 Todennäköisyyslaskennan peruskurssi</a> tai <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2%20022-2024">TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille</a> sekä <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2022-2024">TILM3555 Tilastollisen päättelyn peruskurssi</a>) asiaksi. Nämä kurssit, yhdessä alkuvaiheen pakollisten matematiikan kurssien lisäksi, muodostavat siis tämän kurssin kanssa lähtökohdan tilastotieteen opinnoille (Turun yliopistossa).</li>
 </ul></li>
 </ul>
 </div>

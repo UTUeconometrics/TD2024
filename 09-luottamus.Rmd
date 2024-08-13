@@ -1,6 +1,133 @@
+\lefthyphenmin=62
+\righthyphenmin=62
 # Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä {#luku9}
 
 Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusuluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa siis sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
+
+## Otosjakauma: estimaattorit ja estimaatit
+
+- Koska tunnusluku/estimaattori $T$ on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun $T$ __otosjakaumaksi__.  
+  - Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun $T$ arvojen satunnaisvaihtelulle otoksesta toiseen.
+  - Otosjakaumat riippuvat tuntemattomista __parametreista__, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
+  - Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit __estimoidaan__, kuten yllä jo todettiin, havaintoaineistoa käyttäen.
+  
+  
+__Aritmeettisen keskiarvon ominaisuuksia__
+
+- Aiempien oletusten pätiessä aritmeettisella keskiarvolla $\bar{Y}$ on seuraava odotusarvo ja varianssi:
+$$
+\text{E}(\bar{Y}) = \mu,  \quad
+\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}.
+$$
+
+- Aritmeettisen keskiarvon $\bar{Y}$ __standardipoikkeama__
+
+$$
+\text{D}(\bar{Y}) = \sqrt{\mathrm{Var}(\bar{Y})} = \frac{\sigma}{\sqrt{n}}.
+$$
+
+- Standardipoikkeamaa kutsutaan myös __keskiarvon keskivirheeksi__ ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon $\mu$ ympärillä.
+
+- Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon $\mu$ ympärille, kun otoskoko $n$ kasvaa. 
+  - Ts. otoskoon $n$ kasvaessa $\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}$ pienenee.
+  
+__Normaalijakautunut otos__
+
+- Muodostakoot havainnot $Y_1, \ldots, Y_n$ satunnaisotoksen normaalijakaumasta $\text{N}(\mu, \sigma^2)$.
+- Tällöin voidaan osoittaa, että havaintojen $Y_1, \ldots, Y_n$ keskiarvo $\bar{Y}$ noudattaa normaalijakaumaa odotusarvolla $\mu$ ja varianssilla $\sigma^2/n$. Merkitään
+$$
+\bar{Y} \thicksim \text{N} \Big(\mu, \frac{\sigma^2}{n} \Big).
+$$
+
+- Itse asiassa ns. __asymptoottiseen teoriaan__ vedoten (suurten otosten tapauksessa) voidaan osoittaa, että edellämainittu tulos pätee myös ilman normaalisuusoletusta. 
+  - Nämä tarkastelut vaativat jälleen selvästi enemmän käytyjä tilastotieteen (ja matematiikan) opintoja.
+  
+  __Standardoidun aritmeettisen keskiarvon otosjakauma__
+
+- Tarkastellaan __standardoitua__ satunnaismuuttujaa
+$$
+Z = \frac{\bar{Y} - \text{E}(\bar{Y})}{\text{D}(\bar{Y})} = \frac{\bar{Y} - \mu}{\sigma / \sqrt{n}} = \sqrt{n} \Big(\frac{\bar{Y} - \mu}{\sigma}\Big).
+$$
+  - Tällöin $Z$:n odotusarvo $\text{E}(Z) = 0$ ja varianssi $\mathrm{Var}(Z) = 1$.
+
+- Jos $Y_i \thicksim \text{N}(\mu, \sigma^2), i=1,\ldots,n$, niin tällöin $Z$ noudattaa standardoitua normaalijakaumaa: 
+$$
+Z \thicksim \text{N}(0,1).
+$$
+  - Jälleen voidaan osoittaa, että tämä tulos pätee asymptoottisesti (suurissa otoksissa) myös ilman yllä tehtyä normaalisuusoletusta.
+  
+__Frekvenssin otosjakauma__
+
+- Frekvenssillä $f$ on odotusarvo
+$$
+\text{E}(f) = np,
+$$
+ja varianssi
+$$
+\mathrm{Var}(f) = npq = np(1-p).
+$$
+- Frekvenssi $f$ noudattaa binomijakaumaa parametrein $n$ ja $p$:
+$$
+f \thicksim \mathrm{Bin}(n,p).
+$$
+
+__Suhteellinen frekvenssi: Odotusarvo ja varianssi__
+
+- Suhteellisen frekvenssin $\widehat{p}$ odotusarvo
+$$
+\text{E}(\widehat{p}) = \text{E} \Big(\frac{f}{n} \Big) = p,
+$$
+ja varianssi
+$$
+\mathrm{Var}(\widehat{p}) = \frac{pq}{n} = \frac{p(1-p)}{n}.
+$$
+
+- Suhteellisen frekvenssin $\widehat{p}$ standardipoikkeamaa
+$$
+\text{D}(\widehat{p}) = \sqrt{\mathrm{Var} (\widehat{p})} =  \sqrt{\frac{pq}{n}}
+$$
+voidaan kutsua __suhteellisen frekvenssin keskivirheeksi__ ja se kuvaa suhteellisen frekvenssin otosvaihtelua odotusarvon $p$ ympärillä.
+
+__Suhteellisen frekvenssin otosjakauma__
+
+- Koska $\text{E}(\widehat{p}) = p$ ja $\mathrm{Var}(\widehat{p}) = \frac{pq}{n}$, 
+niin suhteellisen frekvenssin otosjakauma keskittyy yhä voimakkaammin tapahtuman A
+todennäköisyyden $\text{P}(A) = p$ ympärille, kun otoskoko $n$ kasvaa.
+
+- Jälleen suurten otosten tapauksessa voidaan osoittaa, että suhteellinen frekvenssi noudattaa em. oletusten pätiessä normaalijakaumaa:
+$$
+\widehat{p} \thicksim \text{N} \Big(p, \frac{pq}{n} \Big).
+$$
+
+- Aritmeettisen keskiarvon tapaan standardoitu sm. 
+$$
+Z = \frac{\widehat{p} - p}{\sqrt{\frac{pq}{n}}} \thicksim \text{N}(0,1)
+$$
+noudattaa suurissa otoksissa approksimatiivisesti standardoitua normaalijakaumaa.
+
+\newpage
+
+::: {.eblock .kimmo data-latex="{}"}
+**EU-kansanäänestys**  
+
+
+- Suomen EU-kansanäänestyksessä vuonna 1994 jäsenyyttä kannattaneiden suhteellinen osuus oli 0,54 (54 \%).
+
+- Mikä olisi ollut tällöin tn., että ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
+
+- Suhteellisen frekvenssin otosjakauman perusteella kyllä-kannatusosuuden jakauma olisi
+$$
+%\widehat{p} \stackrel{as}{\thicksim} \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
+\widehat{p} \thicksim \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
+$$
+jossa $\frac{0.54 \times (1-0.54)}{200} = 0.0352^2$.
+
+- Näin ollen haluttu todennäköisyys (ts. saada sellainen satunnaismuuttujan $Z \thicksim \text{N}(0,1)$ arvo että suhteellinen osuus on pienempi kuin 0.5)
+$$
+P \Big(Z < \frac{0.5-0.54}{0.0352} \Big) = P (Z < -1.14) \approx 0.127.
+$$
+:::
+
 
 ## Luottamusvälit {#alaluku91}
 
@@ -374,6 +501,10 @@ $$
 
 ## Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
+- Standardipoikkeama  
+- Standardoitu satunnaismuuttuja  
+- Standardoidun aritmeettisen keskiarvon otosjakauma  
+- Suhteellisen frekvenssin otosjakauma  
 - Luottamusväli
 - Virhemarginaali
 - Luottamustaso ja luottamuskertoimet

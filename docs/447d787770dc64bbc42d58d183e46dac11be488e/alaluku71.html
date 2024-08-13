@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7.1 Otantamenetelmät | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7.1 Otantamenetelmät | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-09" />
+<meta name="date" content="2024-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,17 @@
 <li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
 <li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Tilastolliset tunnusluvut ja parametrien estimaattorit</a></li>
 <li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.3</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -284,7 +285,7 @@ jossa siis <span class="math inline">\(N\)</span> on perusjoukon alkioiden lukum
 <li>Tämän jälkeen jokaiseen perusjoukon alkioon voidaan liittää numeeriset tunnukset.</li>
 <li>Sitten valitaan haluttu otoksen koko. Otoskoon määrittäminen on keskeinen osa koesuunnittelua, ks. luku <a href="#alaluku66"><strong>??</strong></a></li>
 <li>Otantakehikosta arvotaan perusjoukon alkiot otokseen yksi kerrallaan.</li>
-<li>Käytännössä arvonta voidaan toteuttaa satunnaislukuja generoimalla (tuottamalla) niin että jokaisen otantakehikon alkion sisältymistodennäköisyys on yhtä suuri.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></li>
+<li>Käytännössä arvonta voidaan toteuttaa satunnaislukuja generoimalla (tuottamalla) niin että jokaisen otantakehikon alkion sisältymistodennäköisyys on yhtä suuri.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a></li>
 </ul></li>
 </ul></li>
 <li>YSO:n <strong>poimintastrategiat</strong>: Käytännössä yksinkertainen satunnaisotanta voidaan suorittaa kahdella eri tavalla: <strong>palauttaen</strong> tai <strong>palauttamatta</strong>.
@@ -323,7 +324,7 @@ jossa siis <span class="math inline">\(N\)</span> on perusjoukon alkioiden lukum
 <ul>
 <li>Tässä <span class="math inline">\(A_i\)</span> on jo poimittujen alkioiden lukumäärä ennen kyseistä <strong>otositeraatiota</strong>: ensimmäisen poiminnan kohdalla <span class="math inline">\(A_i = 0\)</span>, toisen kohdalla <span class="math inline">\(A_i = 1\)</span> ja niin edespäin.
 <ul>
-<li>Ilman takaisinpanoa populaatiosta voidaan poimia <span class="math inline">\({N \choose n}\)</span> erilaista otosta.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a></li>
+<li>Ilman takaisinpanoa populaatiosta voidaan poimia <span class="math inline">\({N \choose n}\)</span> erilaista otosta.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></li>
 <li>Otantaan palauttamatta liittyviä todennäköisyyksiä hallitaan <strong>hypergeometrisen jakauman</strong> avulla, joka johtaa (melko) yksinkertaiseen <strong>tilastolliseen malliin</strong> YSO:a käytettäessä.</li>
 </ul></li>
 </ul>
@@ -442,9 +443,9 @@ jossa siis <span class="math inline">\(N\)</span> on perusjoukon alkioiden lukum
 </div>
 <div class="footnotes">
 <hr />
-<ol start="18">
-<li id="fn18"><p>Satunnaislukujen generointia käsitellään ja opetellaan mm. kursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3517/5068?period=2022-2024">TILM3517 R-kielen alkeet</a> ja <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3705/92210">TILM3705 Johdatus laskennalliseen tilastotieteeseen.</a><a href="alaluku71.html#fnref18" class="footnote-back">↩︎</a></p></li>
-<li id="fn19"><p>Kun otosyksiköiden järjestyksellä ei ole merkitystä. <span class="math inline">\({N \choose n}\)</span> on ns. binomikerroin, joka saadaan kaavasta <span class="math inline">\({N \choose n} = \frac{N!}{n!(N-n)!},\)</span> jossa <span class="math inline">\(N! = N \cdot (N-1) \cdot (N-2) \cdots 1\)</span> on <span class="math inline">\(N\)</span>:n kertoma.<a href="alaluku71.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<ol start="19">
+<li id="fn19"><p>Satunnaislukujen generointia käsitellään ja opetellaan mm. kursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3517/5068?period=2022-2024">TILM3517 R-kielen alkeet</a> ja <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3705/92210">TILM3705 Johdatus laskennalliseen tilastotieteeseen.</a><a href="alaluku71.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>Kun otosyksiköiden järjestyksellä ei ole merkitystä. <span class="math inline">\({N \choose n}\)</span> on ns. binomikerroin, joka saadaan kaavasta <span class="math inline">\({N \choose n} = \frac{N!}{n!(N-n)!},\)</span> jossa <span class="math inline">\(N! = N \cdot (N-1) \cdot (N-2) \cdots 1\)</span> on <span class="math inline">\(N\)</span>:n kertoma.<a href="alaluku71.html#fnref20" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

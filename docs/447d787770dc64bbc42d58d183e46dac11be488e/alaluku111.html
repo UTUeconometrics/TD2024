@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11.1 Tilastollisen tutkimuksen yhteisiä elementtejä | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11.1 Tilastollisen tutkimuksen yhteisiä elementtejä | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-09" />
+<meta name="date" content="2024-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,17 @@
 <li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
 <li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Tilastolliset tunnusluvut ja parametrien estimaattorit</a></li>
 <li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.3</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -253,7 +254,7 @@ jonkinlaisessa yhteydessä siten, että niiden voidaan ajatella muodostavan erit
 <li>Tilastolliset menetelmät auttavat tutkijaa vastaamaan kysymyksiin siitä, mitkä tilastolliset muuttujat ovat tutkimuskysymyksen kannalta oleellisia.
 <ul>
 <li>Varsinkin nykypäivänä kun datan määrä kasvaa alati kiihtyvällä tahdilla, olemme ihmiskuntana ahdistavan informaatiotulvan edessä paikoin aseettomia: mitkä ympäröivistä ilmiöistä liittyvät toisiinsa ja miten?</li>
-<li>Erityisesti teoreettisen tilastotieteen kentällä on viimeisten vuosikymmenien aikana kehitetty lukuisia edistyksellisiä menetelmiä nk. <strong>dimension pienennyksen</strong> alalla. Nämä menetelmät pyrkivät löytämään yhdenmukaisuuksia hyvin korkeaulotteisesta aineistosta, eli aineistosta jossa jokaiselta tutkimusyksiköltä mitataan jopa miljoonia eri muuttujia, kuten DNA-tutkimuksessa genomitietoa.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a></li>
+<li>Erityisesti teoreettisen tilastotieteen kentällä on viimeisten vuosikymmenien aikana kehitetty lukuisia edistyksellisiä menetelmiä nk. <strong>dimension pienennyksen</strong> alalla. Nämä menetelmät pyrkivät löytämään yhdenmukaisuuksia hyvin korkeaulotteisesta aineistosta, eli aineistosta jossa jokaiselta tutkimusyksiköltä mitataan jopa miljoonia eri muuttujia, kuten DNA-tutkimuksessa genomitietoa.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></li>
 </ul></li>
 <li><strong>Hahmottamisen vaiheet:</strong>
 <ul>
@@ -295,8 +296,8 @@ jonkinlaisessa yhteydessä siten, että niiden voidaan ajatella muodostavan erit
 </div>
 <div class="footnotes">
 <hr />
-<ol start="23">
-<li id="fn23"><p>Tilastotieteessä näitä menetelmiä kutsutaan monimuuttujamenetelmiksi ja niitä käsitellään tarkemmin erikoiskursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3704/90801">TILM3704 Monimuuttujamenetelmät</a> sekä <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3611/91182">TILM3611 Monimuuttujamenetelmien jatkokurssi</a><a href="alaluku111.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<ol start="24">
+<li id="fn24"><p>Tilastotieteessä näitä menetelmiä kutsutaan monimuuttujamenetelmiksi ja niitä käsitellään tarkemmin erikoiskursseilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3704/90801">TILM3704 Monimuuttujamenetelmät</a> sekä <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3611/91182">TILM3611 Monimuuttujamenetelmien jatkokurssi</a><a href="alaluku111.html#fnref24" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -4,6 +4,8 @@ output:
   html_document: default
 always_allow_html: true
 ---
+\lefthyphenmin=62
+\righthyphenmin=62
 # Sattuma ja satunnaisuus tilastotieteessä {#luku4}
 
 ```{r random, echo=FALSE, fig.cap="Hauska kuva satunnaisuudesta.", fig.align='center', out.width = "100%"}

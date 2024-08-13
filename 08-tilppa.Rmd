@@ -1,3 +1,5 @@
+\lefthyphenmin=62
+\righthyphenmin=62
 # Satunnaisotokset: tilastollisen päättelyn näkökulma {#luku8}
 
 Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin ([TILM3553](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027)) jälkeiselle tilastollisen päättelyn peruskurssille ([TILM3555](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027)).
@@ -142,8 +144,6 @@ Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 la
 Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys $\text{P}(\mathrm{mies}) = p$ on $p=0.5$.
 :::
 
-\FloatBarrier
-
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(ggplot2)
 theme_set(theme_bw())
@@ -235,12 +235,79 @@ Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) m
 On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
 :::
 
-## Otosjakauma: Estimaattori ja estimaatti {#alaluku83}
+## Tilastolliset tunnusluvut ja parametrien estimaattorit {#alaluku83}
 
 - Erityisesti klassisessa tilastotieteessä tilastollinen päättely pohjautuu aineiston tilastollisen mallin kuvaamalle tilastolliselle stabiliteetille, joka ilmenee ajatuksena aineiston keruun toistamisesta.
     - Oletetaan, että tarkasteltavan aineiston on tuottanut satunnaisotanta tai satunnaiskoe, joka noudattaa tilastollista mallia $f(y_1, \ldots, y_n; \theta)$ (aiemmin merkinnöin).
     - Toistetaan aineiston keruu samoissa olosuhteissa yhä uudelleen ja uudelleen.
     - Saatava aineisto (numeeriset arvot) $y_1, \ldots, y_n$ vaihtelevat näin ollen valitun tilastollisen mallin jakauman kuvaamalla tavalla.
+
+::: {.eblock .kimmo data-latex="{}"}
+__Esimerkki: Normaalisti jakautunut aineisto__
+
+- Tilastollisella stabiliteetillä tarkoitetaan sitä, että saman tilastollisen mallin /todennäköisyysjakauman generoimat aineistot ovat ominaisuuksiltaan samankaltaisia.  
+- Esimerkiksi normaalijakautuneen aineiston tapauksessa tämä tarkoittaa sitä että eri otosten havainnot vaihtelevat saman odotusarvon ympärillä ja keskimäärin samalla tavalla (varianssilla).  
+- Kuvassa \@ref(fig:normaaliaineisto) on esimerkkinä neljä satunnaisotosta samasta normaalijakaumasta, eli käyttäen samoja odotusarvo ja varianssiparametreja. Odotusarvona on $\mu = 180$ ja varianssina $\sigma^2 = 25$. 
+
+\
+
+- Satunnaisotoksen kuvaajat ovat nk. histogrammeja, joka on yleinen tapa esittää luokiteltua aineistoa.  
+  - Tässä tapauksessa havainnot on luokiteltu havaittujen arvojen perustella niin, että jokainen havainto kuuluu yhteen luokkaan ja yhtä luokkaa kuvaa yksi pylväs.   
+  - Pylvään korkeus määräytyy luokan sisältämien arvojen lukumäärän eli frekvenssin mukaan. 
+- Kuvaajista huomataan että valtaosa havainnoista on kaikissa tapauksissa keskittynyt odotusarvon ympärille ja arvojen vaihtelu on samankaltaista.
+:::
+
+```{r normaaliaineisto, echo=FALSE, fig.cap="Normaalisti jakautunut aineisto vaihtelee samalla tavalla.", fig.align='center', out.width="100%", warning=FALSE}
+library(ggplot2)
+library(ggpubr)
+set.seed(1)
+
+df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
+kuva1 = ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(170, 190) +
+stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+
+set.seed(2)
+df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
+kuva2 = ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(170, 190) +
+stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+
+set.seed(3)
+df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
+kuva3 = ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(170, 190) +
+stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+
+set.seed(4)
+df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
+kuva4 = ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(170, 190) +
+stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+
+ggpubr::ggarrange(kuva1, kuva2, kuva3, kuva4, ncol = 2, nrow = 2)
+```
+
 
 - Satunnaisotoksesta voidaan laskea erilaisia __tunnuslukuja/otossuureita__, joita merkitään $T(Y)$:llä, ts. ne ovat aineiston funktioita 
 $$
@@ -251,7 +318,7 @@ $$
   - **Tunnusluvun havaittu arvo** (realisaatio) pisteessä ($y_1,\ldots, y_n$) eli havaitussa aineistossa on  
 
 $$
-t = g(y_1, \ldots, y_n).
+t(y) = g(y_1, \ldots, y_n).
 $$
   - Esimerkkinä tunnusluvusta on keskiarvo $\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i$.
   - Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia). 
@@ -265,29 +332,55 @@ $$
 __Uskottavuusfunktio__
 
 - Erityisesti klassisessa tilastotieteessä tilastollisen mallin parametrien estimointi perustetaan usein nk. suurimman uskottavuuden menetelmälle.  
-  - Koska mielenkiinnon kohteena on tilastollisen mallin, eli tehdyn jakaumaoletuksen alaisen yhteisjakauman, parametrit, perustuu suurimman uskottavuuden estimointi näiden estimaattoreihin.  
-  - Tavoitteena on löytää sellaiset parametriarvot, jotka ovat havaitun aineiston kannalta uskottavimmat tilastollisen mallin parametrit.  
+  - Koska mielenkiinnon kohteena on tilastollisen mallin, eli tehdyn jakaumaoletuksen alaisen yhteisjakauman, parametrit, perustuu suurimman uskottavuuden estimointi näiden estimaattoreihin.
+  - Tavoitteena on löytää sellaiset parametriarvot, jotka ovat havaitun aineiston kannalta uskottavimmat tilastollisen mallin parametrit.    
 
-- Käytännössä suurimman uskottavuuden estimointi perustuu juuri valitun tilastollisen mallin määrittelevälle tiheysfunktiolle tai pistetodennäköisyysfunktiolle kun aineisto on havaittu.
+- Käytännössä suurimman uskottavuuden estimointi perustuu valitun tilastollisen mallin määrittelevälle tiheysfunktiolle tai pistetodennäköisyysfunktiolle, kun aineisto on havaittu.
   - Tarkemmin, nk. __uskottavuusfunktiota__ merkitään $L(\theta) = L(\theta;y_1,\dots,y_n) = f(y_1,\dots,y_n;\theta)$, jossa kirjain L tulee englannin kielen sanasta _likelihood function_. 
   - Uskottavuusfunktiossa aineisto on havaittu eli se tulkitaan kiinteäksi ja parametri $\theta$ on tuntematon muuttuja, jonka arvoa pyritään estimoimaan.
   - Koska tehty jakaumaoletus määrää yhteisjakauman muodon, voidaan suurimman uskottavuuden estimointi perustaa siitä johdettuihin todennäköisyyksiin. 
   - Lopulta valitaan sellaiset parametriarvot, jotka ovat aineiston valossa kaikkein _uskottavimmat_ ja kutsutaan niitä __suurimman uskottavuuden estimaateiksi__.
   - Suurimman uskottavuuden estimointiin ja siihen pohjaavaan päättelyyn syvennytään tarkemmin Tilastollisen päättelyn aineopintotasoisilla kursseilla ([TILM3561](https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069?period=2024-2027) ja [TILM3707](https://opas.peppi.utu.fi/fi/opintojakso/TILM3707/100872?period=2024-2027)).
 
-- Koska tunnusluku/estimaattori $T$ on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun $T$ __otosjakaumaksi__.  
-  - Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun $T$ arvojen satunnaisvaihtelulle otoksesta toiseen.
-  - Otosjakaumat riippuvat tuntemattomista __parametreista__, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
-  - Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit __estimoidaan__, kuten yllä jo todettiin, havaintoaineistoa käyttäen.
-
 
 ::: {.eblock .kimmo data-latex="{}"}
-Esimerkki: Normaalisti jakautuneen aineiston odotusarvo
+__Esimerkki: Normaalisti jakautuneen aineiston parametrien estimointi__
 
+- Normaalijakauma on odotusarvon suhteen symmetrinen jakauma, joten odotusarvon estimointi voidaan perustaa havaitun aineiston "sijaintiin".   
+  - Toisin sanoen, normaalisti jakautuneen aineiston odotusarvon estimaattorina toimii havaintoarvojen otoskeskiarvo, josta lisää alaluvussa \@ref(alaluku84).   
+- Vastaavasti normaalisti jakautuneen aineiston varianssi kuvaa havaintoarvojen keskittuneisyyttä/hajaantuneisuutta odotusarvon ympärillä.
+
+- Uskottavuuspohjaisen päättelyn toimintaperiaatetta voidaan kuvata jälleen käyttäen normaalijakautunutta aineistoa esimerkkinä. 
+  - Jatkaen edellistä esimerkkiä, kuvassa \@ref(fig:normaaliSUE) on kuvattuna $n=100$ satunnaisotos normaalijakaumasta histogrammina. 
+  - Aineiston generoineen tilastollisen mallin odotusarvo on jälleen $\mu = 180$ ja varianssi $\sigma^2 = 25$. 
+  - Kuvassa on myös piirrettynä normaalijakauman tiheysfunktion kuvaajia erilaisille parametriparin $(\mu, \,\, \sigma^2)$ arvoille. Mikä näistä olisi mielestäsi _uskottavin_ kandidaatti havaitulle aineistolle? Huomioi, että oikean aineiston tapauksessa parametrien arvoja ei tiedetä, vaan ne pitää päätellä eli estimoida aineistosta!
 :::
 
-\
+```{r normaaliSUE, echo=FALSE, fig.cap="Normaalisti jakautunut aineisto. Mikä ylläolevista jakaumista on todennäköisimmin generoinut aineiston?", fig.align='center', out.width="100%", warning=FALSE}
 
+set.seed(4)
+df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
+ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(165,200) +
+  stat_function(fun = dnorm, args = list(mean = 170, sd = 15), aes(colour = "line1")) +
+  stat_function(fun = dnorm, args = list(mean = 190, sd = 3),  aes(colour = "line2")) +
+  stat_function(fun = dnorm, args = list(mean = 180, sd = 5),  aes(colour = "line3")) +
+  stat_function(fun = dnorm, args = list(mean = 185, sd = 10), aes(colour = "line4")) + theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Tiheysfunktiot") + 
+  scale_colour_manual(values = c("line1" = "darkgreen", 
+                                 "line2" = "deepskyblue3", 
+                                 "line3" = "red", 
+                                 "line4" = "darkorange"),
+                      labels = c("N(170,15)", "N(190,3)", "N(180,5)", "N(185,10)"))
+  
+```
+
+
+\
+\FloatBarrier
 __Estimaattorin ominaisuudet__
 
 - Merkitään seuraavassa parametrin $\theta$ estimaattoria $\widehat{\theta}$:lla. Siltä voidaan toivoa seuraavia ominaisuuksia:
@@ -356,24 +449,6 @@ $$\text{E}(\bar{Y}) = \mu$$
 
   - Täten otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa.
 
-__Aritmeettisen keskiarvon ominaisuuksia__
-
-- Aiempien oletusten pätiessä aritmeettisella keskiarvolla $\bar{Y}$ on seuraava odotusarvo ja varianssi:
-$$
-\text{E}(\bar{Y}) = \mu,  \quad
-\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}.
-$$
-
-- Aritmeettisen keskiarvon $\bar{Y}$ __standardipoikkeama__
-
-$$
-\text{D}(\bar{Y}) = \sqrt{\mathrm{Var}(\bar{Y})} = \frac{\sigma}{\sqrt{n}}.
-$$
-
-- Standardipoikkeamaa kutsutaan myös __keskiarvon keskivirheeksi__ ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon $\mu$ ympärillä.
-
-- Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon $\mu$ ympärille, kun otoskoko $n$ kasvaa. 
-  - Ts. otoskoon $n$ kasvaessa $\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}$ pienenee.
 
 __Otosvarianssi__
 
@@ -393,32 +468,64 @@ jota otosvarianssi harhattomasti estimoi.
 
 - Otoskeskiarvo $\bar{Y}$ ja otosvarianssi $S^2$ ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
 
-__Normaalijakautunut otos__
+::: {.eblock .kimmo data-latex="{}"}
+__Esimerkki: Normaalisti jakautuneen aineiston parametrien estimointi__
 
-- Muodostakoot havainnot $Y_1, \ldots, Y_n$ satunnaisotoksen normaalijakaumasta $\text{N}(\mu, \sigma^2)$.
-- Tällöin voidaan osoittaa, että havaintojen $Y_1, \ldots, Y_n$ keskiarvo $\bar{Y}$ noudattaa normaalijakaumaa odotusarvolla $\mu$ ja varianssilla $\sigma^2/n$. Merkitään
-$$
-\bar{Y} \thicksim \text{N} \Big(\mu, \frac{\sigma^2}{n} \Big).
-$$
+- Edellisiä esimerkkejä jatkaen, tarkastellaan seuraavaksi normaalisti jakautuneen aineiston parametriestimaatteja. 
+- Kuvassa \@ref(fig:normaaliSUE2) on jälleen $n=100$ kokoinen otos normaalijakaumasta parametrein $\mu = 180$ ja $\sigma^2 = 25$.  
+- Generoidusta aineistosta lasketaan otoskeskiarvoksi $\bar{y} = 180.48$ ja otosvarianssiksi $S^2 = 20.88$.  
+  - Huomataan että otoskeskiarvo on todella lähellä oikeaa odotusarvoparametrin arvoa, mutta otosvarianssi on paljon pienempi. 
+:::
 
-- Itse asiassa ns. __asymptoottiseen teoriaan__ vedoten (suurten otosten tapauksessa) voidaan osoittaa, että edellämainittu tulos pätee myös ilman normaalisuusoletusta. 
-  - Nämä tarkastelut vaativat jälleen selvästi enemmän käytyjä tilastotieteen (ja matematiikan) opintoja.
+\FloatBarrier
+```{r normaaliSUE2, echo=FALSE, fig.cap="Normaalisti jakautuneen aineiston parametrien estimointi.", fig.align='center', out.width="100%", warning=FALSE}
+set.seed(4)
+df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
+#mean(df$PF);var(df$PF) #180.4826; 20.8791
+ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(165,200) +
+  stat_function(fun = dnorm, args = list(mean = 180, sd = 5), aes(colour = "line1")) +
+  stat_function(fun = dnorm, args = list(mean = mean(df$PF), sd = sd(df$PF)),  aes(colour = "line2")) +
+ theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Tiheysfunktiot") + 
+  scale_colour_manual(values = c("line1" = "red", 
+                                "line2" = "darkgreen"), 
+                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(180.48, 20.88)")) + theme(legend.position="bottom")
+  
+```
+\FloatBarrier
+::: {.eblock .kimmo data-latex="{}"}
+__Esimerkki: Normaalisti jakautuneen aineiston parametrien estimointi (jatkuu)__
+
+- Generoidaan seuraavaksi suurempi satunnaisotos samasta aineistosta valitsemalla $n=1000$. Tämä on kuvattu kuvaajassa \@ref(fig:normaaliSUE3).  
+- Nyt estimaateiksi saadaan $\bar{y} = 179.83$ ja $S^2 = 23.49$.  
+  - Otoskeskiarvo on taas varsin hyvä arvio oikeasta parametriarvosta ja otosvarianssikin on nyt lähempänä oikeaa. Otoskokoa kasvattamalla estimaatit lähestyisivät oikeita parametriarvoja. 
+:::
+
+```{r normaaliSUE3, echo=FALSE, fig.cap="Normaalisti jakautuneen aineiston parametrien estimointi, suurempi otoskoko.", fig.align='center', out.width="100%", warning=FALSE}
+set.seed(4)
+df <- data.frame(PF = rnorm(1000, 180, sqrt(25)))
+#mean(df$PF);var(df$PF) #179.8279; 23.48873
+ggplot(df, aes(x = PF)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(170, 190, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(165,200) +
+  stat_function(fun = dnorm, args = list(mean = 180, sd = 5), aes(colour = "line1")) +
+  stat_function(fun = dnorm, args = list(mean = mean(df$PF), sd = sd(df$PF)),  aes(colour = "line2")) +
+ theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Funktiot") + 
+  scale_colour_manual(values = c("line1" = "red", 
+                                "line2" = "darkgreen"), 
+                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(179.83, 23.49)")) + theme(legend.position="bottom")
+  
+```
 
 \
 
-__Standardoidun aritmeettisen keskiarvon otosjakauma__
-
-- Tarkastellaan __standardoitua__ satunnaismuuttujaa
-$$
-Z = \frac{\bar{Y} - \text{E}(\bar{Y})}{\text{D}(\bar{Y})} = \frac{\bar{Y} - \mu}{\sigma / \sqrt{n}} = \sqrt{n} \Big(\frac{\bar{Y} - \mu}{\sigma}\Big).
-$$
-  - Tällöin $Z$:n odotusarvo $\text{E}(Z) = 0$ ja varianssi $\mathrm{Var}(Z) = 1$.
-
-- Jos $Y_i \thicksim \text{N}(\mu, \sigma^2), i=1,\ldots,n$, niin tällöin $Z$ noudattaa standardoitua normaalijakaumaa: 
-$$
-Z \thicksim \text{N}(0,1).
-$$
-  - Jälleen voidaan osoittaa, että tämä tulos pätee asymptoottisesti (suurissa otoksissa) myös ilman yllä tehtyä normaalisuusoletusta.
 
 ## Suhteellisen frekvenssin otosjakauma {#alaluku85}
 
@@ -441,77 +548,6 @@ $$
 $$
 - Sekä frekvenssi (lukumäärä) $f$ ja (täten myös) suhteellinen frekvenssi $\widehat{p}$ ovat satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
 
-__Frekvenssin otosjakauma__
-
-- Frekvenssillä $f$ on odotusarvo
-$$
-\text{E}(f) = np,
-$$
-ja varianssi
-$$
-\mathrm{Var}(f) = npq = np(1-p).
-$$
-- Frekvenssi $f$ noudattaa binomijakaumaa parametrein $n$ ja $p$:
-$$
-f \thicksim \mathrm{Bin}(n,p).
-$$
-
-__Suhteellinen frekvenssi: Odotusarvo ja varianssi__
-
-- Suhteellisen frekvenssin $\widehat{p}$ odotusarvo
-$$
-\text{E}(\widehat{p}) = \text{E} \Big(\frac{f}{n} \Big) = p,
-$$
-ja varianssi
-$$
-\mathrm{Var}(\widehat{p}) = \frac{pq}{n} = \frac{p(1-p)}{n}.
-$$
-
-- Suhteellisen frekvenssin $\widehat{p}$ standardipoikkeamaa
-$$
-\text{D}(\widehat{p}) = \sqrt{\mathrm{Var} (\widehat{p})} =  \sqrt{\frac{pq}{n}}
-$$
-voidaan kutsua __suhteellisen frekvenssin keskivirheeksi__ ja se kuvaa suhteellisen frekvenssin otosvaihtelua odotusarvon $p$ ympärillä.
-
-__Suhteellisen frekvenssin otosjakauma__
-
-- Koska $\text{E}(\widehat{p}) = p$ ja $\mathrm{Var}(\widehat{p}) = \frac{pq}{n}$, 
-niin suhteellisen frekvenssin otosjakauma keskittyy yhä voimakkaammin tapahtuman A
-todennäköisyyden $\text{P}(A) = p$ ympärille, kun otoskoko $n$ kasvaa.
-
-- Jälleen suurten otosten tapauksessa voidaan osoittaa, että suhteellinen frekvenssi noudattaa em. oletusten pätiessä normaalijakaumaa:
-$$
-\widehat{p} \thicksim \text{N} \Big(p, \frac{pq}{n} \Big).
-$$
-
-- Aritmeettisen keskiarvon tapaan standardoitu sm. 
-$$
-Z = \frac{\widehat{p} - p}{\sqrt{\frac{pq}{n}}} \thicksim \text{N}(0,1)
-$$
-noudattaa suurissa otoksissa approksimatiivisesti standardoitua normaalijakaumaa.
-
-\newpage
-
-::: {.eblock .kimmo data-latex="{}"}
-**EU-kansanäänestys**  
-
-
-- Suomen EU-kansanäänestyksessä vuonna 1994 jäsenyyttä kannattaneiden suhteellinen osuus oli 0,54 (54 \%).
-
-- Mikä olisi ollut tällöin tn., että ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
-
-- Suhteellisen frekvenssin otosjakauman perusteella kyllä-kannatusosuuden jakauma olisi
-$$
-%\widehat{p} \stackrel{as}{\thicksim} \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
-\widehat{p} \thicksim \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
-$$
-jossa $\frac{0.54 \times (1-0.54)}{200} = 0.0352^2$.
-
-- Näin ollen haluttu todennäköisyys (ts. saada sellainen satunnaismuuttujan $Z \thicksim \text{N}(0,1)$ arvo että suhteellinen osuus on pienempi kuin 0.5)
-$$
-P \Big(Z < \frac{0.5-0.54}{0.0352} \Big) = P (Z < -1.14) \approx 0.127.
-$$
-:::
 
 ## Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
@@ -519,16 +555,9 @@ $$
 - Satunnaisotos
 - Yhteisjakauma
 - (Satunnaisotoksen) tilastollinen malli
-- Yhteisjakauma
 - Riippumattomat satunnaismuuttujat
-- Otosjakauma
 - Tunnusluku/otossuure
-- Otosjakauma
 - Estimaattori ja estimaatti
 - (Hyvän) estimaattorin ominaisuuksia: Harhattomuus, tyhjentävyys, tehokkuus ja tarkentuvuus
 - Otoskeskiarvo ja otosvarianssi estimaattoreina
-- Standardipoikkeama
 - Normaalistijakautunut satunnaisotos
-- Standardoitu satunnaismuuttuja
-- Standardoidun aritmeettisen keskiarvon otosjakauma
-- Suhteellisen frekvenssin otosjakauma

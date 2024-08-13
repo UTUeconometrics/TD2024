@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.2 Tilastolliset mallit ja jakaumat | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.2 Tilastolliset mallit ja jakaumat | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-09" />
+<meta name="date" content="2024-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,17 @@
 <li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
 <li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Tilastolliset tunnusluvut ja parametrien estimaattorit</a></li>
 <li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.3</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -304,7 +305,7 @@ jossa <span class="math inline">\(y\)</span> on sm:n <span class="math inline">\
 <li>Binomijakaumalla kyetään vastaamaan mm. kysymykseen millä todennäköisyydellä <span class="math inline">\(n\)</span>:n kokoisessa otoksessa tapahtuu <span class="math inline">\(k\)</span> onnistumista.</li>
 </ul>
 <div class="eblock kimmo">
-<p><strong>Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876–1885</strong><a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
+<p><strong>Esimerkki: Miesten lukumäärä Saksin osavaltion perheissä 1876–1885</strong><a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
 <p>Vuosien 1876–1885 aikana Saksin osavaltiossa rekisteröitiin yli neljä miljoonaa syntynyttä lasta. Tällöin vanhempien tuli ilmoittaa lapsen sukupuoli (mies tai nainen) heidän syntymätodistuksessaan. Myöhemmässä tutkimuksessa tutkittiin tarkemmin 6115 perhettä, joissa asui 12 lasta ja tarkemmin miesten (poikien) lukumäärää näissä perheissä.</p>
 <p>Oheisessa taulukossa taulukoidaan miesten (poikien) lukumäärät näissä 12 lapseen perheissä. Tarkasteltava jakauma esitetään vielä erikseen oheisessa kuviossa <a href="luku82.html#fig:miestenlkm">8.2</a>.</p>
 <p>Tässä tilantessa mielenkiinnon kohteena saattaisi olla hypoteesi, jonka mukaan pojan (miehen) syntymätodennäköisyys <span class="math inline">\(\text{P}(\mathrm{mies}) = p\)</span> on <span class="math inline">\(p=0.5\)</span>.</p>
@@ -471,7 +472,7 @@ Kuvio 8.3: Esimerkki: Poisson-jakauman sovelluskohteita ja sen pistetodennäköi
 <div class="eblock kimmo">
 <p><strong>Esimerkki: Poisson-jakauma</strong></p>
 <p>Tarkastellaan Englannin Valioliigakauden 1995–1996 otteluissa tehtyjä maalimääriä. Valioliiga (The F.A. Premier League) on korkein Englannin jalkapalloliigan sarjataso, jossa ensi kerran juuri kaudella 1995-1996 20 joukkuetta (aiemmin Valioliigan perustamisen kauden 1992–1993 alussa 22 joukkuetta) pelasivat keskenään kerran toisiaan vastaan koti- ja vieraskentällä. Otteluita oli siis yhteensä 380.</p>
-<p>Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>, jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme “keskimääräisen” kotijoukkueen ja vierasjoukkueen “edustavaa” ottelua.</p>
+<p>Tämä esimerkki perustuu edellä mainittuun Friendlyn ja Meyerin (2015) kirjan esimerkkiin 3.9 (s. 78-79), joka vastaavasti perustuu Alan J. Leen (1997) artikkeliin<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>, jonka esittämään kysymykseen (hypoteesiin) vastaus on tietenkin ilmeinen! Näin ollen seuraavassa tarkastellaankin kotijoukkueiden ja vierasjoukkueiden maalintekointensiteettiä Poisson-jakaumaan perustuen. Seuraavassa emme siis pyri mallintamaan tietyn spesifin ottelun lopputulosta vaan tarkastelemme “keskimääräisen” kotijoukkueen ja vierasjoukkueen “edustavaa” ottelua.</p>
 <p>Seuraava taulukko raportoi tehtyjen maalimäärien jakaumat pelatuissa 380 ottelussa. Neljän tai yli neljän maalin tapaukset kirjataan 4+:nä maalina. Ts. esim. kys. kauden lopputulokset <em>Blackburn Rovers</em> - <em>Nottingham Forest</em> 7-0 ja <em>Bolton Wanderers</em> - <em>Manchester United</em> 0-6 tulevat aineistoon tuloksina 4+ vs. 0 ja 0 vs. 4+.</p>
 </div>
 <table>
@@ -717,9 +718,9 @@ Varianssi
 </div>
 <div class="footnotes">
 <hr />
-<ol start="20">
-<li id="fn20"><p>Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). <em>Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data.</em> Chapman &amp; Hall/CRC.<a href="luku82.html#fnref20" class="footnote-back">↩︎</a></p></li>
-<li id="fn21"><p>Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? <em>Chance</em> 10(1), 15-19.<a href="luku82.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<ol start="21">
+<li id="fn21"><p>Ks. tarkemmin esimerkki 3.2 kirjassa (s. 67-68) Friendly, M., ja D. Meyer (2015). <em>Discrete Data Analysis with R. Visualization and Modeling Techniques for Categorical and Count Data.</em> Chapman &amp; Hall/CRC.<a href="luku82.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>Alan J. Lee (1997). Modeling Scores in the Premier League: Is Manchester United Really the Best? <em>Chance</em> 10(1), 15-19.<a href="luku82.html#fnref22" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

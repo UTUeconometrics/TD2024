@@ -4,7 +4,8 @@ output:
   html_document: default
 always_allow_html: true
 ---
-
+\lefthyphenmin=62
+\righthyphenmin=62
 # Tilastollinen riippuvuus ja korrelaatio {#luku6}
 
 - Tarkastelemme tässä luvussa tilastollisia tutkimusasetelmia, joissa on mukana kaksi tai useampia __muuttujia__. 

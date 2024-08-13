@@ -1,3 +1,5 @@
+\lefthyphenmin=62
+\righthyphenmin=62
 # (PART) Osa II {-}
 
 # Otantamenetelmät {#luku7}

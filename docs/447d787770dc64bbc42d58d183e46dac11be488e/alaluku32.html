@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3.2 Mitä tilastotiede on ja mitä se ei ole? | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3.2 Mitä tilastotiede on ja mitä se ei ole? | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-09" />
+<meta name="date" content="2024-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,17 @@
 <li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
 <li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Tilastolliset tunnusluvut ja parametrien estimaattorit</a></li>
 <li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.3</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -234,17 +235,17 @@
 <ul>
 <li>Aloitetaan tarkastelemalla erinäisiä <strong>tilastotieteen “karakterisointeja”</strong> eri tahojen ja tutkijoiden toimesta:
 <ul>
-<li><strong><em>Tilastotiede on tietotuotannon teknologiaa</em></strong>, <em>jonka avulla voidaan suorittaa kvantitatiivisten tietojen joukkotuotantoa ja havaintoihin perustuvia tieteellisiä ja käytännöllisiä päätöksiä. Tilastotiede on siis yksikköjen muodostamaan joukkoon liittyvän numeerisen tietoaineiston keräämistä, analysointia ja tulkintaa koskeva tiede</em> <a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.</li>
-<li><strong><em>Tilastotiede on yleinen menetelmätiede</em></strong>, <em>jota sovelletaan, jos reaalimaailman ilmiöstä halutaan tehdä johtopäätöksiä ilmiötä kuvaavien kvantitatiivisten tai numeeristen tietojen perusteella sellaisissa tilanteissa, joissa tietoihin liittyy epävarmuutta tai satunnaisuutta</em> <a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.</li>
-<li><em>Vale, emävale, tilasto</em> <a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>.</li>
-<li><em>Statistics concerns what can be learned from data</em> <a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</li>
-<li><em>“Maalaisjärjen tehostamista”</em> <a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>.</li>
+<li><strong><em>Tilastotiede on tietotuotannon teknologiaa</em></strong>, <em>jonka avulla voidaan suorittaa kvantitatiivisten tietojen joukkotuotantoa ja havaintoihin perustuvia tieteellisiä ja käytännöllisiä päätöksiä. Tilastotiede on siis yksikköjen muodostamaan joukkoon liittyvän numeerisen tietoaineiston keräämistä, analysointia ja tulkintaa koskeva tiede</em>.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></li>
+<li><strong><em>Tilastotiede on yleinen menetelmätiede</em></strong>, <em>jota sovelletaan, jos reaalimaailman ilmiöstä halutaan tehdä johtopäätöksiä ilmiötä kuvaavien kvantitatiivisten tai numeeristen tietojen perusteella sellaisissa tilanteissa, joissa tietoihin liittyy epävarmuutta tai satunnaisuutta</em>.<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></li>
+<li><em>Vale, emävale, tilasto</em>.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></li>
+<li><em>Statistics concerns what can be learned from data</em>.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></li>
+<li><em>“Maalaisjärjen tehostamista”</em>.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></li>
 </ul></li>
 <li>Tilastotiede siis <strong>kehittää</strong> ja <strong>soveltaa menetelmiä</strong> ja (tilastollisia) <strong>malleja</strong>, joiden avulla reaalimaailman ilmiöistä voidaan tehdä johtopäätöksiä ilmiöitä kuvaavien numeeristen tai kvantitatiivisten tietojen perusteella tilanteissa, joissa tietoihin liittyy <strong>epävarmuutta ja satunnaisuutta</strong>.
 <ul>
 <li>Tilastollisten menetelmien avulla pyritään löytämään reaalimaailman satunnaisia ilmiöitä kuvaavista numeerisista (eli kvantitatiivisista) tiedoista <strong>systemaattisia piirteitä</strong> joita jalostetaan sellaiseen muotoon, että ilmiöistä voidaan tehdä päätelmiä.
 <ul>
-<li>Vrt. signaalin ja kohinan erottaminen (ks. Silver, 2014)<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>.</li>
+<li>Vrt. signaalin ja kohinan erottaminen (ks. Silver, 2014)<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>.</li>
 </ul></li>
 <li>Tilastolliset mallit perustuvat todennäköisyyslaskentaan ja niillä mallinnetaan reaalielämän ilmiöiden alla piileviä prosesseja tai mekanismeja. Näiden prosessien tuottamia tietoja (aineistoja) tiivistetään usein graafisiksi esityksiksi ja tunnusluvuiksi sekä tilastollisten mallien parametreiksi, joiden pohjalta johtopäätöksiä tehdään.</li>
 <li>Tässä onnistuakseen tilastollisten menetelmien tuleekin pyrkiä erottelemaan <strong>sattuma</strong> ja <strong>systemaattisuus</strong> tarkasteltavissa ilmiöissä tai, tarkemmin, niitä kuvaavissa aineistoissa, jotta johtopäätökset olisivat luotettavia.</li>
@@ -349,13 +350,13 @@
 </div>
 <div class="footnotes">
 <hr />
-<ol start="6">
-<li id="fn6"><p><a href="https://fi.wikipedia.org/wiki/Leo_T%C3%B6rnqvist">Leo Törnqvistin</a>, Suomen ensimmäisen tilastotieteen professorin, esittämä luonnehdinta (Vartia, 1989).<a href="alaluku32.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>Mellin (2005).<a href="alaluku32.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p><a href="https://fi.wikipedia.org/wiki/Mark_Twain">Mark Twain</a> popularisoi tämän lausahduksen teoksessaan <em>Chapters from My Autobiography</em> jo vuonna 1907. Huomionarvoista toki on, että valtaosa “modernin” tilastotieteen, jolle nykytilastotiede pohjautuu, teoriakehityksestä on tapahtunut vasta Twainin teoksen julkaisun jälkeen. Esimerkiksi Ronald Fisher, jota pidetään modernin tilastotieteen isänä, julkaisi merkityksellisimmät työnsä vasta 1920- ja 30-lukujen aikana. Tällä lentävällä lausahduksella ei siis ole mitään tekemistä nykyisten tilastollisten menetelmien kanssa.<a href="alaluku32.html#fnref8" class="footnote-back">↩︎</a></p></li>
-<li id="fn9"><p>(A.C. Davison)<a href="alaluku32.html#fnref9" class="footnote-back">↩︎</a></p></li>
-<li id="fn10"><p>Sund, (2003)<a href="alaluku32.html#fnref10" class="footnote-back">↩︎</a></p></li>
-<li id="fn11"><p>Silver, N. (2014). Signaali ja kohina: Miksi monet ennusteet epäonnistuvat mutta jotkin eivät? Terra Cognita. (Suomentanut Kimmo Pietiläinen)<a href="alaluku32.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<ol start="7">
+<li id="fn7"><p><a href="https://fi.wikipedia.org/wiki/Leo_T%C3%B6rnqvist">Leo Törnqvistin</a>, Suomen ensimmäisen tilastotieteen professorin, esittämä luonnehdinta (Vartia, 1989).<a href="alaluku32.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Mellin (2005).<a href="alaluku32.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p><a href="https://fi.wikipedia.org/wiki/Mark_Twain">Mark Twain</a> popularisoi tämän lausahduksen teoksessaan <em>Chapters from My Autobiography</em> jo vuonna 1907. Huomionarvoista toki on, että valtaosa “modernin” tilastotieteen, jolle nykytilastotiede pohjautuu, teoriakehityksestä on tapahtunut vasta Twainin teoksen julkaisun jälkeen. Esimerkiksi Ronald Fisher, jota pidetään modernin tilastotieteen isänä, julkaisi merkityksellisimmät työnsä vasta 1920- ja 30-lukujen aikana. Tällä lentävällä lausahduksella ei siis ole mitään tekemistä nykyisten tilastollisten menetelmien kanssa.<a href="alaluku32.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>(A.C. Davison)<a href="alaluku32.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>Sund, (2003)<a href="alaluku32.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>Silver, N. (2014). Signaali ja kohina: Miksi monet ennusteet epäonnistuvat mutta jotkin eivät? Terra Cognita. (Suomentanut Kimmo Pietiläinen)<a href="alaluku32.html#fnref12" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

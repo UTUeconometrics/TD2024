@@ -1,3 +1,5 @@
+\lefthyphenmin=62
+\righthyphenmin=62
 # Tilastotieteen kehityksen nykytrendejä {#luku14}
 
 ## Modernin tilastotieteen suuntaviivoja

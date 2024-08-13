@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4.2 Satunnaisilmiöiden tilastollinen mallintaminen | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4.2 Satunnaisilmiöiden tilastollinen mallintaminen | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-09" />
+<meta name="date" content="2024-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,17 @@
 <li class="chapter" data-level="8.2.1" data-path="luku82.html"><a href="luku82.html#normaalijakauma"><i class="fa fa-check"></i><b>8.2.1</b> Normaalijakauma</a></li>
 <li class="chapter" data-level="8.2.2" data-path="luku82.html"><a href="luku82.html#bernoulli--binomi--ja-poisson-jakauma"><i class="fa fa-check"></i><b>8.2.2</b> Bernoulli-, binomi- ja Poisson-jakauma</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Otosjakauma: Estimaattori ja estimaatti</a></li>
+<li class="chapter" data-level="8.3" data-path="alaluku83.html"><a href="alaluku83.html"><i class="fa fa-check"></i><b>8.3</b> Tilastolliset tunnusluvut ja parametrien estimaattorit</a></li>
 <li class="chapter" data-level="8.4" data-path="alaluku84.html"><a href="alaluku84.html"><i class="fa fa-check"></i><b>8.4</b> Otoskeskiarvo ja otosvarianssi (estimaattoreina)</a></li>
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.1</b> Luottamusvälit</a></li>
-<li class="chapter" data-level="9.2" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.2</b> Otoskoko</a></li>
-<li class="chapter" data-level="9.3" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.3</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
+<li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
+<li class="chapter" data-level="9.3" data-path="alaluku92.html"><a href="alaluku92.html"><i class="fa fa-check"></i><b>9.3</b> Otoskoko</a></li>
+<li class="chapter" data-level="9.4" data-path="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-9-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>9.4</b> Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="luku10.html"><a href="luku10.html"><i class="fa fa-check"></i><b>10</b> Regressioanalyysi</a>
 <ul>
@@ -254,7 +255,7 @@
 <div class="eblock kimmo">
 <p><strong>Esimerkki: Tilastollisten aineistojen kerääminen arpomalla</strong></p>
 <ul>
-<li><strong>Satunnaisotanta</strong>: Otannalla<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla.
+<li><strong>Satunnaisotanta</strong>: Otannalla<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> tarkoitetaan laveasti tutkimusaineistojen keräämisen menetelmiä. Erilaisten virhelähteiden kontrolloimiseksi tutkimuksen kohteet on syytä valita arpomalla.
 <ul>
 <li>Esimerkiksi tutkittaessa peruskouluopetusta, kaikkien koulujen tutkiminen olisi liian työlästä ja kallista. Tällöin sovelletaan erilaisia otantamenetelmiä, jotka varmistavat että tutkimukseen valikoituu satunnaisesti edustava otos Suomen kouluista. Aineisto voitaisiin kerätä esimerkiksi kaksivaiheiselle ryväsotannalla kaikista Suomen peruskouluista (Ks. Osan II Luku <a href="luku7.html#luku7">7</a>).</li>
 </ul></li>
@@ -279,7 +280,7 @@
 </ul>
 <p><strong>Tilastollisen muuttujan todennäköisyysjakauma</strong></p>
 <ul>
-<li>Tilastolliset menetelmät perustuvat todennäköisyyslaskennan<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> tuloksiin ja tarjoavat keinon hallita satunnaisuuden aiheuttamaa epävarmuutta.</li>
+<li>Tilastolliset menetelmät perustuvat todennäköisyyslaskennan<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> tuloksiin ja tarjoavat keinon hallita satunnaisuuden aiheuttamaa epävarmuutta.</li>
 <li><strong>Tilastolliset mallit</strong> perustuvat satunnaismuuttujan mahdollisten tulosvaihtoehtojen todennäköisyyksiä kuvaavalle <strong>todennäköisyysjakaumalle</strong>, joka määrää millä todennäköisyydellä satunnaismuuttuja saa erilaisia arvoja.
 <ul>
 <li><strong>Diskreetin satunnaismuuttujan</strong> todennäköisyysjakauma voidaan usein esittää taulukkomuodossa. Eri arvojen todennäköisyydet muodostavat kyseisen satunnaismuuttujan todennäköisyysjakauman, <strong>pistetodennäköisyysfunktion</strong>, jota voidaan havainnollistaa esimerkiksi pylväsdiagrammilla (ks. alla oleva esimerkki ja kuvaaja <a href="alaluku42.html#fig:kannatusmittaus">4.2</a>).</li>
@@ -417,9 +418,9 @@ Kuvio 4.2: <a href="https://yle.fi/a/74-20096107">Taloustutkimuksen Ylelle</a> t
 </div>
 <div class="footnotes">
 <hr />
-<ol start="15">
-<li id="fn15"><p> Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa <a href="luku7.html#luku7">7</a>.<a href="alaluku42.html#fnref15" class="footnote-back">↩︎</a></p></li>
-<li id="fn16"><p>Todennäköisyyslaskentaa käsitellään lyhyesti tulevissa luvuissa mutta varsinaisesti tarkemmin 2. periodin kurssilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024">TILM3553 Todennäköisyyslaskennan peruskurssi</a> ja (erityisesti sivuaineopiskelijoille) <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024">TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille</a>.<a href="alaluku42.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<ol start="16">
+<li id="fn16"><p> Erityisesti erilaisten otantamenetelmien yhteydessä, joita tarkastellaan tarkemmin luvussa <a href="luku7.html#luku7">7</a>.<a href="alaluku42.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn17"><p>Todennäköisyyslaskentaa käsitellään lyhyesti tulevissa luvuissa mutta varsinaisesti tarkemmin 2. periodin kurssilla <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2022-2024">TILM3553 Todennäköisyyslaskennan peruskurssi</a> ja (erityisesti sivuaineopiskelijoille) <a href="https://opas.peppi.utu.fi/fi/opintojakso/TILM3568/3385?period=2022-2024">TILM3568 Todennäköisyyslaskenta sivuaineopiskelijoille</a>.<a href="alaluku42.html#fnref17" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
