@@ -154,10 +154,11 @@ __Tilastollisen muuttujan todennäköisyysjakauma__
 - Poliittisten puolueiden kannatustutkimuksia mittaavia galluppeja tehdään erityisesti vaalien alla usean tilastollisia kyselytutkimuksia tekevän tahon toimesta.   
 - Puoluevalintaa (tai valitsematta jättämistä) voidaan pitää äänestysikäisten keskuudessa satunnaismuuttujana, jolla on äärellinen määrä tulosvaihtoehtoja: puolueiden määrän lisäksi vastaaja voi ilmoittaa ettei tiedä ketä aikoo äänestää tai että ei aio äänestää ollenkaan.
 - Täten puolueiden kannatus on diskreetti muuttuja ja kannatustutkimuksessa kohdepopulaatio on äänestysikäiset (täysi-ikäiset) Suomen kansalaiset.
-- Tässä tapauksessa paras arvio (nk. suurimman uskottavuuden estimaatti, ks. luku \@ref(luku8)) todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista, kunhan otos on edustava (ks. \@ref(luku5)).
+- Tässä tapauksessa paras arvio (nk. suurimman uskottavuuden estimaatti, ks. luku \@ref(luku8)) todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista, kunhan otos on __edustava__ (ks. \@ref(luku5)).
 - Oheisessa taulukossa on esitelty tuloksia [Taloustutkimuksen Ylelle suorittamasta puolueiden eduskuntavaalikannatusta mittaavasta tutkimuksesta](https://yle.fi/a/74-20096107), jossa haastateltiin 2481 ihmistä puhelinhaastatteluina ja internetpaneelina aikavälillä 7.6.-2.7.2024.
   - Haastatelluista 1910 kertoi puoluekantansa ja tutkimuksen virhemarginaalin kerrottiin olevan suurimmillaan 1,9 prosenttiyksikköä suuntaansa (ks. Osan II luku \@ref(luku9)).
-  - Nämä todennäköisyydet on esitetty alla olevassa taulukossa sekä kuvaajassa \@ref(fig:kannatusmittaus).
+- Tässä tapauksessa mielenkiinnon kohteena olevat tilastollisen mallin parametrit ovat juurikin edellä mainitut äänestystodennäköisyydet!   
+  - Saadut todennäköisyydet (estimaatit) on esitetty alla olevassa taulukossa sekä kuvaajassa \@ref(fig:kannatusmittaus).
 
 | Puolue    | SDP | VAS | KOK | KESK | RKP | KD | VIHR | PS | LIIK | MUU |
 |:---------:|:---:|:---:|:---:|:----:|:---:|:--:|:----:|:--:|:----:|:---:|
@@ -267,7 +268,7 @@ __Normaalijakauman parametrit__
 
 - Käydään seuraavaksi läpi tilastollisen mallin parametrien merkitystä normaalijakauman tapauksessa. 
 - Normaalijakauma on yksi keskeisimpiä ja tärkeimpia todennäköisyysjakaumia tilastotieteessä ja sen avulla voidaan helposti kuvata jakauman parametrien vaikutusta sen muotoon.
-  - Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) $\mu$ ja $\sigma^2$ annetaan erilaisia arvoja. 
+  - Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) $\mu$ (odotusarvoparametri) ja $\sigma^2$ (varianssiparametri) annetaan erilaisia arvoja. 
   - Alla olevassa kuvassa \@ref(fig:normaalijakauma) on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoilla.
 
 ```{r normaalijakauma, warning = FALSE, message = FALSE, echo = FALSE, message = FALSE, fig.cap="Normaalijakaumien muotoja eri parametriarvoilla.", fig.align='center', out.width = "100%"}
@@ -287,7 +288,7 @@ ggplot(data.frame(x = c(-6, 8)), aes(x = x)) +
 - Tiheysfunktio kuvaa satunnaismuuttujan eri tulosvaihtoehtojen (vaaka-akselin numeeriset arvot) todennäköisyyksiä.
   - Täten esimerkiksi satunnaismuuttujan, joka on normaalisti jakautunut odotusarvonaan $\mu = 3$ ja varianssinaan $\sigma^2 = 2$, merkitään $Y \thicksim N(3,2)$, realisaatiot ovat keskittyneet odotusarvon ympärille niin, että suuret poikkeamat odotusarvosta kumpaankaan suuntaan ovat vähemmän todennäköisiä kuin pienemmät poikkeamat.
   - Toisin sanoen, kuten yllä, normaalijakauman parametreista odotusarvo kuvaa sitä mikä on satunnaisilmiön generoimien realisaatioiden odotettavissa oleva arvo. 
-    - Täten odotusarvo kuvaa normaalijakauman tapauksessa sen "sijaintia". Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö. 
+    - Täten odotusarvo $\mu$ kuvaa normaalijakauman tapauksessa sen "sijaintia". Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö. Tässä pisteessä normaalijakauman tiheysfunktion arvo maksimoituu, eli se kuvaa sitä realisaatiota, joka on kaikkein todennäköisin!
   - Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta. 
     - Kuvassa \@ref(fig:normaalijakauma) huomataan, että suuremmat varianssin arvot "leventävät" normaalijakauman tiheysfunktiota, jolloin suuremmat poikkeamat ovat suhteellisesti todennäköisempiä.
     - Varianssin yksikkö on satunnaismuuttujan yksikkö korotettuna toiseen potenssiin, joten sen tulkinta on hankalaa. Tällöin on usein helpompaa hahmottaa satunnaismuuttujan hajontaa varianssin neliöjuurella, eli keskihajonnalla, jonka yksikkö on sama kuin satunnaismuuttujan yksikkö.
@@ -322,12 +323,13 @@ $$
 \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i.
 $$
 
-  - Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+  - __Otoskeskiarvo on satunnaismuuttuja__, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
   - Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan $\mu$, on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts. 
 
 $$\text{E}(\bar{Y}) = \mu$$
 
 - __Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa__. Toisin sanoen, otoskeskiarvo on estimaattori, joka (harhattomasti, ks. Osan II Luku \@ref(luku8)) estimoi aineiston generoineen todennäköisyysjakauman odotusarvoa! 
+  - Huomioi, että satunnaisuudesta johtuen otoskeskiarvo voi poiketa paljonkin jakauman odotusarvosta. Tästä huolimatta otoskeskiarvo on kuitenkin tietyssä mielessä paras mahdollinen arvio todellisen jakauman odotusarvosta!  
   
 __Otosvarianssi__
 
