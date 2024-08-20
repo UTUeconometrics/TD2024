@@ -138,7 +138,17 @@ knitr::include_graphics("images/otanta.jpg")
 
 - Edustavan otoksen avulla on mahdollista tehdä perusjoukkoa koskevaa tilastollista päättelyä, sillä otos kuvaa perusjoukon ominaisuuksia riittävän hyvin. Tämä on yksi tilastotieteen keskeisimpiä oppeja mutta myös kriittisen tiedelukutaidon ja arkijärjen kannalta tärkeää.  
 
-__Näyte otantavirheenä__
+::: {.eblock .kimmo data-latex="{}"}
+**Esimerkki: Kotitalouksien tulot, tuloerot ja pienituloisuusrajan kehitys 1987-2005 (Tilastokeskus)**  
+
+- Tilastoyksikkö on kotitalous, joten kaikkien kotitalouksien tutkiminen (kokonaistutkimus, ks. alla) olisi vaikeaa, kallista ja aikaavievää. 
+- Tutkittavaksi valitaan vain muutama tuhat kotitaloutta (ts. otantatutkimus) ja selvitetään näiden tulot.
+  - Tuloja, pienituloisuusrajaa ja tuloeroja on havainnollistettu kuvassa \@ref(fig:tuloerot).
+- On mahdollista tehdä __kaikkia__ suomalaisia kotitalouksia koskevia johtopäätöksiä, jos tutkitut yksiköt ovat __edustava otos__ suomalaisista kotitalouksista. Ts. osajoukkoa koskevat päätelmät voidaan yleistää koskemaan perusjoukkoa, mikäli osajoukko on edustava otos perusjoukosta.
+:::
+
+
+__Otos vai näyte?__
 
 - Joskus kohdeperusjoukko on sellainen, ettei siitä voi kerätä edustavaa otosta.
   - Tämä voi johtua esimerkiksi siitä, että ei tiedetä keitä kohdeperusjoukkoon kuuluu eikä täten myöskään sen kokoa. Tällöin ei tietenkään voida myöskään suorittaa satunnaisotantaa.
@@ -159,15 +169,6 @@ __Näyte otantavirheenä__
 
 :::
 
-
-::: {.eblock .kimmo data-latex="{}"}
-**Esimerkki: Kotitalouksien tulot, tuloerot ja pienituloisuusrajan kehitys 1987-2005 (Tilastokeskus)**  
-
-- Tilastoyksikkö on kotitalous, joten kaikkien kotitalouksien tutkiminen (kokonaistutkimus, ks. alla) olisi vaikeaa, kallista ja aikaavievää. 
-- Tutkittavaksi valitaan vain muutama tuhat kotitaloutta (ts. otantatutkimus) ja selvitetään näiden tulot.
-  - Tuloja, pienituloisuusrajaa ja tuloeroja on havainnollistettu kuvassa \@ref(fig:tuloerot).
-- On mahdollista tehdä __kaikkia__ suomalaisia kotitalouksia koskevia johtopäätöksiä, jos tutkitut yksiköt ovat __edustava otos__ suomalaisista kotitalouksista. Ts. osajoukkoa koskevat päätelmät voidaan yleistää koskemaan perusjoukkoa, mikäli osajoukko on edustava otos perusjoukosta.
-:::
 
 \FloatBarrier
 

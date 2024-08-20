@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.2)  20 AUG 2024 17:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.2)  20 AUG 2024 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5137,52 +5137,34 @@ Underfull \hbox (badness 3646) in paragraph at lines 3658--3659
  []
 
 
-Overfull \hbox (21.1611pt too wide) in paragraph at lines 3671--3672
-[]\TU/lmr/m/n/10 Tämä voi johtua esimerkiksi siitä, että ei tiedetä keitä kohdeperusjoukkoon
+Underfull \hbox (badness 6859) in paragraph at lines 3668--3670
+[]\TU/lmr/m/n/10 Tilastoyksikkö on kotitalous, joten kaikkien kotitalouksien
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 3670--3671
+[]\TU/lmr/m/n/10 Tutkittavaksi valitaan vain muutama tuhat kotitaloutta (ts.
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 3678--3679
+\TU/lmr/m/n/10 johtopäätöksiä, jos tutkitut yksiköt ovat \TU/lmr/bx/n/10 edustava otos
  []
 
 [89]
-Underfull \hbox (badness 2653) in paragraph at lines 3681--3682
+Overfull \hbox (21.1611pt too wide) in paragraph at lines 3693--3694
+[]\TU/lmr/m/n/10 Tämä voi johtua esimerkiksi siitä, että ei tiedetä keitä kohdeperusjoukkoon
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 3703--3704
 []\TU/lmr/m/n/10 Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut,
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 3681--3682
+Underfull \hbox (badness 2351) in paragraph at lines 3703--3704
 \TU/lmr/m/n/10 kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3695--3696
-[]\TU/lmr/bx/n/10 Esimerkki: Rikollisuuden tutkiminen harkinnanvaraisen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3700--3702
-\TU/lmr/m/n/10 kesämökkimurtoja tehtailevien rikollisten motivaatiota
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3707--3709
-[]\TU/lmr/m/n/10 Täten tutkija ei voi muodostaa satunnaisotantaa
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3707--3709
-\TU/lmr/m/n/10 oikeuden pöytäkirjoista selviäviin kesämökkimurroista
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3707--3709
-\TU/lmr/m/n/10 kiinnijääneisiin tilastoyksiköihin, joista hän valikoi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3714--3715
-\TU/lmr/m/n/10 hyvin, mutta on kuitenkin alisteinen tutkijan
- []
-
-
-Underfull \vbox (badness 2409) has occurred while \output is active []
 
 
 Overfull \hbox (57.11224pt too wide) has occurred while \output is active
@@ -5190,18 +5172,33 @@ Overfull \hbox (57.11224pt too wide) has occurred while \output is active
  []
 
 [90]
-Underfull \hbox (badness 6859) in paragraph at lines 3728--3730
-[]\TU/lmr/m/n/10 Tilastoyksikkö on kotitalous, joten kaikkien kotitalouksien
+Underfull \hbox (badness 10000) in paragraph at lines 3717--3718
+[]\TU/lmr/bx/n/10 Esimerkki: Rikollisuuden tutkiminen harkinnanvaraisen
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 3730--3731
-[]\TU/lmr/m/n/10 Tutkittavaksi valitaan vain muutama tuhat kotitaloutta (ts.
+Underfull \hbox (badness 10000) in paragraph at lines 3722--3724
+\TU/lmr/m/n/10 kesämökkimurtoja tehtailevien rikollisten motivaatiota
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 3738--3739
-\TU/lmr/m/n/10 johtopäätöksiä, jos tutkitut yksiköt ovat \TU/lmr/bx/n/10 edustava otos
+Underfull \hbox (badness 10000) in paragraph at lines 3729--3731
+[]\TU/lmr/m/n/10 Täten tutkija ei voi muodostaa satunnaisotantaa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3729--3731
+\TU/lmr/m/n/10 oikeuden pöytäkirjoista selviäviin kesämökkimurroista
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3729--3731
+\TU/lmr/m/n/10 kiinnijääneisiin tilastoyksiköihin, joista hän valikoi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3736--3737
+\TU/lmr/m/n/10 hyvin, mutta on kuitenkin alisteinen tutkijan
  []
 
 File: images/tuloerot.jpg Graphic file (type bmp)
@@ -10138,7 +10135,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  42949 strings out of 477569
  871442 string characters out of 5816104
- 1935416 words of memory out of 5000000
+ 1936416 words of memory out of 5000000
  63362 multiletter control sequences out of 15000+600000
  590869 words of font info for 128 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
