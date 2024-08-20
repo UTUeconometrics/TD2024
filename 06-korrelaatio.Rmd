@@ -189,7 +189,7 @@ kutsutaan ajoittain siis __Pearsonin korrelaatiokertoimeksi__ (tulomomenttikorre
 
 - Pearsonin korrelaatiokerrointa voidaan estimoida Pearsonin __otoskorrelaatiokertoimella__.
 
-::: {.defblock .miko data-latex="{}"}
+::: {.defblock .mikko data-latex="{}"}
 **Pearsonin otoskorrelaatiokerroin**
 
 Havaintoarvojen $(x_i, y_i)$ pareista laskettu __otoskovarianssi__ on
@@ -216,7 +216,7 @@ jossa $s_{xy}$ on $x$- ja $y$-havaintoarvojen otoskovarianssi, $s_x$ on $x$-hava
 
 - Pearsonin otoskorrelaatiokertoimella $r_{xy}$ on seuraavat ominaisuudet:
   i) $-1 \le r_{xy} \le 1$
-  ii) $r_{xy} = \pm 1$, jos ja vain jos $y_i = \alpha + \beta x_i$, jossa $\alpha$ ja $\beta$  ovat reaalisia vakiota ja $\alpha,\beta \neq 0$
+  ii) $r_{xy} = \pm 1$, jos ja vain jos $y_i = \alpha + \beta x_i$, jossa $\alpha$ ja $\beta$  ovat reaalisia vakiota ja $\alpha,\beta \neq 0$. 
   iii)	Korrelaatiokertoimella $r_{xy}$ ja kovarianssilla $s_{xy}$ on aina sama etumerkki
 
 - Pearsonin otoskorrelaatiokerroin $r_{xy}$: Tulkinta/tulkintoja:
@@ -247,8 +247,16 @@ knitr::include_graphics("images/Pearson-korr-Mellin.jpg")
 - Kausaalisuhteita selvitettäessä on tunnettava etukäteen ilmiötä koskevat aiemmat teoriat ja tutkimukset tarkasti, jotta voidaan ottaa huomioon ilmiöön vaikuttavat tekijät
 
 - Todellisuus on usein monimutkaisempi, kuin mitä kausaalisuhde kuvaa: __kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä__
+  - Kuvassa \@ref(fig:spuriouskorrelation) on esimerkki todella vahvasta yhteisvaihtelusta jäädykejogurtin (eng. frozen yougurt) kulutuksen ja väkivaltarikosten välillä Yhdysvalloissa.
+  - Kyseisten havaintojen korrelaatioksi vuosien 1990-2021 välillä saadaan $r_{xy} = 0.947$, joka on erittäin suurta, kun huomioidaan että kyseiset muuttujat eivät tunnu liittyvän toisiinsa mitenkään.
+  - Kyseessä onkin nk. "näennäinen korrelaatio", eli tilanne, jossa kaksi muuttujaa korreloi vahvasti vailla mitään syytä. 
+  - Näin voi tapahtua täysin sattumalta! Voit etsiä lisää esimerkkejä Tyler Vigenin tarjoamalta [Spurious Correlations](https://tylervigen.com/spurious-correlations) -verkkosivulta!
 
-- Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia
+```{r spuriouskorrelation, echo=FALSE, fig.cap="Esimerkki nk. näennäisestä korrelaatiosta (eng. spurious correlation). Lähde: Tyler Vigen.", fig.align='center', out.width = "90%"}
+knitr::include_graphics("images/spuriouscorrelation.png")
+```
+
+- Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.
 
 \FloatBarrier
 
@@ -268,12 +276,14 @@ knitr::include_graphics("images/simpson.jpg")
 \FloatBarrier
 
 \newpage
-::: {.defblock .kimmo data-latex="{}"}
+::: {.defblock .mikko data-latex="{}"}
 **Esimerkki: Berkeleyn sukupuolisyrjintä**
 
-Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus. Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
+- Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus. 
+  - Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
 
-- Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista. Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.
+- Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista. 
+  - Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.
 :::
 
 \FloatBarrier
@@ -323,6 +333,11 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
 - Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. __Vaihteluväli__ kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). __Kvartiiliväli__ = ($Q_1, Q_3$).
 
 - Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat __vinous__ ja __huipukkuus__. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(ggplot2)
+
+```
 
 ## Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 

@@ -191,7 +191,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-08-13}
+\date{2024-08-20}
 
 \begin{document}
 \maketitle
@@ -226,7 +226,7 @@
     Kurssin ensimmäisen osan lopuksi järjestetään tentti, joka arvioidaan hyväksytty/hylätty asteikolla.
   \end{itemize}
 \item
-  \textbf{Osa II}(4op): Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
+  \textbf{Osa II} (4op): Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
 
   \begin{itemize}
   \tightlist
@@ -2746,7 +2746,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
 \item
   Täten puolueiden kannatus on diskreetti muuttuja ja kannatustutkimuksessa kohdepopulaatio on äänestysikäiset (täysi-ikäiset) Suomen kansalaiset.
 \item
-  Tässä tapauksessa paras arvio (nk. suurimman uskottavuuden estimaatti, ks. luku \ref{luku8}) todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista, kunhan otos on edustava (ks. \ref{luku5}).
+  Tässä tapauksessa paras arvio (nk. suurimman uskottavuuden estimaatti, ks. luku \ref{luku8}) todennäköisyydelle, että satunnaisesti valittu äänestysikäinen kansalainen äänestää tiettyä puoluetta on kyseisen puolueen saama osuus kaikista kyselyyn vastanneista, kunhan otos on \textbf{edustava} (ks. \ref{luku5}).
 \item
   Oheisessa taulukossa on esitelty tuloksia \href{https://yle.fi/a/74-20096107}{Taloustutkimuksen Ylelle suorittamasta puolueiden eduskuntavaalikannatusta mittaavasta tutkimuksesta}, jossa haastateltiin 2481 ihmistä puhelinhaastatteluina ja internetpaneelina aikavälillä 7.6.-2.7.2024.
 
@@ -2754,8 +2754,14 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   \tightlist
   \item
     Haastatelluista 1910 kertoi puoluekantansa ja tutkimuksen virhemarginaalin kerrottiin olevan suurimmillaan 1,9 prosenttiyksikköä suuntaansa (ks. Osan II luku \ref{luku9}).
+  \end{itemize}
+\item
+  Tässä tapauksessa mielenkiinnon kohteena olevat tilastollisen mallin parametrit ovat juurikin edellä mainitut äänestystodennäköisyydet!
+
+  \begin{itemize}
+  \tightlist
   \item
-    Nämä todennäköisyydet on esitetty alla olevassa taulukossa sekä kuvaajassa \ref{fig:kannatusmittaus}.
+    Saadut todennäköisyydet (estimaatit) on esitetty alla olevassa taulukossa sekä kuvaajassa \ref{fig:kannatusmittaus}.
   \end{itemize}
 \end{itemize}
 
@@ -3001,7 +3007,7 @@ tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
   \begin{itemize}
   \tightlist
   \item
-    Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) \(\mu\) ja \(\sigma^2\) annetaan erilaisia arvoja.
+    Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) \(\mu\) (odotusarvoparametri) ja \(\sigma^2\) (varianssiparametri) annetaan erilaisia arvoja.
   \item
     Alla olevassa kuvassa \ref{fig:normaalijakauma} on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoilla.
   \end{itemize}
@@ -3031,7 +3037,7 @@ tai sen neliöjuuren eli \textbf{keskihajonnan} avulla
     \begin{itemize}
     \tightlist
     \item
-      Täten odotusarvo kuvaa normaalijakauman tapauksessa sen ``sijaintia''. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö.
+      Täten odotusarvo \(\mu\) kuvaa normaalijakauman tapauksessa sen ``sijaintia''. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö. Tässä pisteessä normaalijakauman tiheysfunktion arvo maksimoituu, eli se kuvaa sitä realisaatiota, joka on kaikkein todennäköisin!
     \end{itemize}
   \item
     Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta.
@@ -3100,7 +3106,7 @@ Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin pää
 \begin{itemize}
 \tightlist
 \item
-  Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+  \textbf{Otoskeskiarvo on satunnaismuuttuja}, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
 \item
   Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan \(\mu\), on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts.
 \end{itemize}
@@ -3111,6 +3117,12 @@ Parametrien \(\mu\) ja \(\sigma^2\) arvoja ei tunneta ja tavoitteena onkin pää
 \tightlist
 \item
   \textbf{Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa}. Toisin sanoen, otoskeskiarvo on estimaattori, joka (harhattomasti, ks. Osan II Luku \ref{luku8}) estimoi aineiston generoineen todennäköisyysjakauman odotusarvoa!
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Huomioi, että satunnaisuudesta johtuen otoskeskiarvo voi poiketa paljonkin jakauman odotusarvosta. Tästä huolimatta otoskeskiarvo on kuitenkin tietyssä mielessä paras mahdollinen arvio todellisen jakauman odotusarvosta!
+  \end{itemize}
 \end{itemize}
 
 \textbf{Otosvarianssi}
@@ -3646,21 +3658,61 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
   Edustavan otoksen avulla on mahdollista tehdä perusjoukkoa koskevaa tilastollista päättelyä, sillä otos kuvaa perusjoukon ominaisuuksia riittävän hyvin. Tämä on yksi tilastotieteen keskeisimpiä oppeja mutta myös kriittisen tiedelukutaidon ja arkijärjen kannalta tärkeää.
 \end{itemize}
 
-\begin{eblock}{}
-
-\textbf{Esimerkki: Näyte otantavirheenä}
+\textbf{Näyte otantavirheenä}
 
 \begin{itemize}
 \tightlist
 \item
-  Jos poimitaan tutkimukseen ne perusjoukon alkiot, jotka ovat tutkimuksen tekemishetkellä `saatavilla', niin kyseessä on \textbf{näyte}. Näyte ei siis kata ilmiön koko vaihtelua edustavan satunnaisotoksen tapaan.
+  Joskus kohdeperusjoukko on sellainen, ettei siitä voi kerätä edustavaa otosta.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tämä voi johtua esimerkiksi siitä, että ei tiedetä keitä kohdeperusjoukkoon kuuluu eikä täten myöskään sen kokoa. Tällöin ei tietenkään voida myöskään suorittaa satunnaisotantaa.
+  \end{itemize}
+\item
+  Vastaavasti jos tutkimukseen poimitaan ne tiedettyyn perusjoukkoon kuuluvat tilastoyksiköt, jotka sattuvat olemaan ``saatavilla'' tutkimuksen tekemishetkellä, niin kyseessä on \textbf{näyte}. Tällöin näyte ei kata ilmiön koko vaihtelua edustavan satunnaisotoksen tapaan.
 
   \begin{itemize}
   \tightlist
   \item
     Esimerkiksi perinteiset katukyselyt eivät ole hyvä otantatapa, sillä kadulla liikkujat eivät välttämättä kovin hyvin edusta tutkittavaa perusjoukkoa, ellei perusjoukkona ole kyseisellä kadulla kyseiseen aikaan liikkuvat ihmiset.
   \item
-    Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyselytuloksia harvemmin tulkitaan.
+    Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyseisiä kyselytuloksia harvemmin tulkitaan.
+  \end{itemize}
+\item
+  \textbf{Koska näyte ei ole edustava otos, ei sen perusteella voida tehdä perusjoukkoa koskevia yleistyksiä luotettavasti.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tämä on yksi tilastollisen tutkimuksen tavoitteista, joten näytteiden käyttö ei ole suositeltavaa!
+  \end{itemize}
+\end{itemize}
+
+\begin{eblock}{}
+
+\textbf{Esimerkki: Rikollisuuden tutkiminen harkinnanvaraisen näytteen avulla}
+
+\begin{itemize}
+\tightlist
+\item
+  Kriminologian tutkija haluaa selvittää mitkä tekijät selittävät kesämökkimurtoja tehtailevien rikollisten motivaatiota rikoksilleen.
+\item
+  Mikään rekisteri Suomessa ei kata kaikkia kesämökkimurtoja tehneitä ihmisiä, sillä osa näistä rikollisista ei jää koskaan kiinni.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Täten tutkija ei voi muodostaa satunnaisotantaa kohdeperusjoukosta, vaan hän joutuu tyytymään esimerkiksi oikeuden pöytäkirjoista selviäviin kesämökkimurroista kiinnijääneisiin tilastoyksiköihin, joista hän valikoi tutkimukseensa sopivat yksilöt.
+  \item
+    Tällöin kyseessä on \textbf{harkinnanvarainen näyte}, sillä ei voida taata näytteeseen valikoitujen tilastoyksiköisen olevan edustava otos kohdeperusjoukosta!
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Harkinnanvarainen näyte voi kuvata kohdeperusjoukkoa hyvin, mutta on kuitenkin alisteinen tutkijan suorittamalle harkinnalle, joka voi olla tiedostamatta tai tiedostaen jollain tavalla vääristynyttä.
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 
@@ -4501,7 +4553,7 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
   \item
     \(-1 \le r_{xy} \le 1\)
   \item
-    \(r_{xy} = \pm 1\), jos ja vain jos \(y_i = \alpha + \beta x_i\), jossa \(\alpha\) ja \(\beta\) ovat reaalisia vakiota ja \(\alpha,\beta \neq 0\)
+    \(r_{xy} = \pm 1\), jos ja vain jos \(y_i = \alpha + \beta x_i\), jossa \(\alpha\) ja \(\beta\) ovat reaalisia vakiota ja \(\alpha,\beta \neq 0\).
   \item
     Korrelaatiokertoimella \(r_{xy}\) ja kovarianssilla \(s_{xy}\) on aina sama etumerkki
   \end{enumerate}
@@ -4571,8 +4623,33 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
   Kausaalisuhteita selvitettäessä on tunnettava etukäteen ilmiötä koskevat aiemmat teoriat ja tutkimukset tarkasti, jotta voidaan ottaa huomioon ilmiöön vaikuttavat tekijät
 \item
   Todellisuus on usein monimutkaisempi, kuin mitä kausaalisuhde kuvaa: \textbf{kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Kuvassa \ref{fig:spuriouskorrelation} on esimerkki todella vahvasta yhteisvaihtelusta jäädykejogurtin (eng. frozen yougurt) kulutuksen ja väkivaltarikosten välillä Yhdysvalloissa.
+  \item
+    Kyseisten havaintojen korrelaatioksi vuosien 1990-2021 välillä saadaan \(r_{xy} = 0.947\), joka on erittäin suurta, kun huomioidaan että kyseiset muuttujat eivät tunnu liittyvän toisiinsa mitenkään.
+  \item
+    Kyseessä onkin nk. ``näennäinen korrelaatio'', eli tilanne, jossa kaksi muuttujaa korreloi vahvasti vailla mitään syytä.
+  \item
+    Näin voi tapahtua täysin sattumalta! Voit etsiä lisää esimerkkejä Tyler Vigenin tarjoamalta \href{https://tylervigen.com/spurious-correlations}{Spurious Correlations} -verkkosivulta!
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{images/spuriouscorrelation} 
+
+}
+
+\caption{Esimerkki nk. näennäisestä korrelaatiosta (eng. spurious correlation). Lähde: Tyler Vigen.}\label{fig:spuriouskorrelation}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
-  Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia
+  Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.
 \end{itemize}
 
 \FloatBarrier
@@ -4617,12 +4694,24 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
 
 \textbf{Esimerkki: Berkeleyn sukupuolisyrjintä}
 
-Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus. Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 \% hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 \%. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
-
 \begin{itemize}
 \tightlist
 \item
-  Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista. Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.
+  Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 \% hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 \%. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
+  \end{itemize}
+\item
+  Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.
+  \end{itemize}
 \end{itemize}
 
 \end{defblock}
@@ -6475,7 +6564,7 @@ Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsema
 
 }
 
-\caption{t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita}\label{fig:unnamed-chunk-10}
+\caption{t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita}\label{fig:unnamed-chunk-11}
 \end{figure}
 
 \hfill\break

@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-13" />
+<meta name="date" content="2024-08-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ tai sen neliöjuuren eli <strong>keskihajonnan</strong> avulla
 <li>Käydään seuraavaksi läpi tilastollisen mallin parametrien merkitystä normaalijakauman tapauksessa.</li>
 <li>Normaalijakauma on yksi keskeisimpiä ja tärkeimpia todennäköisyysjakaumia tilastotieteessä ja sen avulla voidaan helposti kuvata jakauman parametrien vaikutusta sen muotoon.
 <ul>
-<li>Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) <span class="math inline">\(\mu\)</span> ja <span class="math inline">\(\sigma^2\)</span> annetaan erilaisia arvoja.</li>
+<li>Normaalijakauman tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) <span class="math inline">\(\mu\)</span> (odotusarvoparametri) ja <span class="math inline">\(\sigma^2\)</span> (varianssiparametri) annetaan erilaisia arvoja.</li>
 <li>Alla olevassa kuvassa <a href="alaluku43.html#fig:normaalijakauma">4.3</a> on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoilla.</li>
 </ul></li>
 </ul>
@@ -294,7 +294,7 @@ Kuvio 4.3: Normaalijakaumien muotoja eri parametriarvoilla.
 <li>Täten esimerkiksi satunnaismuuttujan, joka on normaalisti jakautunut odotusarvonaan <span class="math inline">\(\mu = 3\)</span> ja varianssinaan <span class="math inline">\(\sigma^2 = 2\)</span>, merkitään <span class="math inline">\(Y \thicksim N(3,2)\)</span>, realisaatiot ovat keskittyneet odotusarvon ympärille niin, että suuret poikkeamat odotusarvosta kumpaankaan suuntaan ovat vähemmän todennäköisiä kuin pienemmät poikkeamat.</li>
 <li>Toisin sanoen, kuten yllä, normaalijakauman parametreista odotusarvo kuvaa sitä mikä on satunnaisilmiön generoimien realisaatioiden odotettavissa oleva arvo.
 <ul>
-<li>Täten odotusarvo kuvaa normaalijakauman tapauksessa sen “sijaintia”. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö.</li>
+<li>Täten odotusarvo <span class="math inline">\(\mu\)</span> kuvaa normaalijakauman tapauksessa sen “sijaintia”. Huomioi, että tämä on erityisesti normaalijakauman ominaisuus eikä yleispätevä sääntö. Tässä pisteessä normaalijakauman tiheysfunktion arvo maksimoituu, eli se kuvaa sitä realisaatiota, joka on kaikkein todennäköisin!</li>
 </ul></li>
 <li>Vastaavasti varianssi kuvaa sitä, kuinka paljon realisaatiot keskimäärin poikkeavat odotusarvosta.
 <ul>
@@ -332,12 +332,15 @@ Kuvio 4.3: Normaalijakaumien muotoja eri parametriarvoilla.
 \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i.
 \]</span></p>
 <ul>
-<li>Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.</li>
+<li><strong>Otoskeskiarvo on satunnaismuuttuja</strong>, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.</li>
 <li>Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan <span class="math inline">\(\mu\)</span>, on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts.</li>
 </ul>
 <p><span class="math display">\[\text{E}(\bar{Y}) = \mu\]</span></p>
 <ul>
-<li><strong>Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa</strong>. Toisin sanoen, otoskeskiarvo on estimaattori, joka (harhattomasti, ks. Osan II Luku <a href="luku8.html#luku8">8</a>) estimoi aineiston generoineen todennäköisyysjakauman odotusarvoa!</li>
+<li><strong>Täten aineiston otoskeskiarvo kuvaa aineiston perusjoukon tilastollisen mallin odotusarvoa</strong>. Toisin sanoen, otoskeskiarvo on estimaattori, joka (harhattomasti, ks. Osan II Luku <a href="luku8.html#luku8">8</a>) estimoi aineiston generoineen todennäköisyysjakauman odotusarvoa!
+<ul>
+<li>Huomioi, että satunnaisuudesta johtuen otoskeskiarvo voi poiketa paljonkin jakauman odotusarvosta. Tästä huolimatta otoskeskiarvo on kuitenkin tietyssä mielessä paras mahdollinen arvio todellisen jakauman odotusarvosta!</li>
+</ul></li>
 </ul>
 <p><strong>Otosvarianssi</strong></p>
 <ul>

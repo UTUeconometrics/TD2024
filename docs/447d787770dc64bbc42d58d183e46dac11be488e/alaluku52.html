@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-13" />
+<meta name="date" content="2024-08-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -298,13 +298,33 @@ Kuvio 5.2: Otannan eri virhelajit.
 <ul>
 <li>Edustavan otoksen avulla on mahdollista tehdä perusjoukkoa koskevaa tilastollista päättelyä, sillä otos kuvaa perusjoukon ominaisuuksia riittävän hyvin. Tämä on yksi tilastotieteen keskeisimpiä oppeja mutta myös kriittisen tiedelukutaidon ja arkijärjen kannalta tärkeää.</li>
 </ul>
-<div class="eblock kimmo">
-<p><strong>Esimerkki: Näyte otantavirheenä</strong></p>
+<p><strong>Näyte otantavirheenä</strong></p>
 <ul>
-<li>Jos poimitaan tutkimukseen ne perusjoukon alkiot, jotka ovat tutkimuksen tekemishetkellä ‘saatavilla’, niin kyseessä on <strong>näyte</strong>. Näyte ei siis kata ilmiön koko vaihtelua edustavan satunnaisotoksen tapaan.
+<li>Joskus kohdeperusjoukko on sellainen, ettei siitä voi kerätä edustavaa otosta.
+<ul>
+<li>Tämä voi johtua esimerkiksi siitä, että ei tiedetä keitä kohdeperusjoukkoon kuuluu eikä täten myöskään sen kokoa. Tällöin ei tietenkään voida myöskään suorittaa satunnaisotantaa.</li>
+</ul></li>
+<li>Vastaavasti jos tutkimukseen poimitaan ne tiedettyyn perusjoukkoon kuuluvat tilastoyksiköt, jotka sattuvat olemaan “saatavilla” tutkimuksen tekemishetkellä, niin kyseessä on <strong>näyte</strong>. Tällöin näyte ei kata ilmiön koko vaihtelua edustavan satunnaisotoksen tapaan.
 <ul>
 <li>Esimerkiksi perinteiset katukyselyt eivät ole hyvä otantatapa, sillä kadulla liikkujat eivät välttämättä kovin hyvin edusta tutkittavaa perusjoukkoa, ellei perusjoukkona ole kyseisellä kadulla kyseiseen aikaan liikkuvat ihmiset.</li>
-<li>Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyselytuloksia harvemmin tulkitaan.</li>
+<li>Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyseisiä kyselytuloksia harvemmin tulkitaan.</li>
+</ul></li>
+<li><strong>Koska näyte ei ole edustava otos, ei sen perusteella voida tehdä perusjoukkoa koskevia yleistyksiä luotettavasti.</strong>
+<ul>
+<li>Tämä on yksi tilastollisen tutkimuksen tavoitteista, joten näytteiden käyttö ei ole suositeltavaa!</li>
+</ul></li>
+</ul>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: Rikollisuuden tutkiminen harkinnanvaraisen näytteen avulla</strong></p>
+<ul>
+<li>Kriminologian tutkija haluaa selvittää mitkä tekijät selittävät kesämökkimurtoja tehtailevien rikollisten motivaatiota rikoksilleen.</li>
+<li>Mikään rekisteri Suomessa ei kata kaikkia kesämökkimurtoja tehneitä ihmisiä, sillä osa näistä rikollisista ei jää koskaan kiinni.
+<ul>
+<li>Täten tutkija ei voi muodostaa satunnaisotantaa kohdeperusjoukosta, vaan hän joutuu tyytymään esimerkiksi oikeuden pöytäkirjoista selviäviin kesämökkimurroista kiinnijääneisiin tilastoyksiköihin, joista hän valikoi tutkimukseensa sopivat yksilöt.</li>
+<li>Tällöin kyseessä on <strong>harkinnanvarainen näyte</strong>, sillä ei voida taata näytteeseen valikoitujen tilastoyksiköisen olevan edustava otos kohdeperusjoukosta!
+<ul>
+<li>Harkinnanvarainen näyte voi kuvata kohdeperusjoukkoa hyvin, mutta on kuitenkin alisteinen tutkijan suorittamalle harkinnalle, joka voi olla tiedostamatta tai tiedostaen jollain tavalla vääristynyttä.</li>
+</ul></li>
 </ul></li>
 </ul>
 </div>

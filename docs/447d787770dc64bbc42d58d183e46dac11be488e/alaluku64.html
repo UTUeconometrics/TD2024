@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-13" />
+<meta name="date" content="2024-08-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -277,7 +277,7 @@ kutsutaan ajoittain siis <strong>Pearsonin korrelaatiokertoimeksi</strong> (tulo
 </ul></li>
 <li>Pearsonin korrelaatiokerrointa voidaan estimoida Pearsonin <strong>otoskorrelaatiokertoimella</strong>.</li>
 </ul>
-<div class="defblock miko">
+<div class="defblock mikko">
 <p><strong>Pearsonin otoskorrelaatiokerroin</strong></p>
 <p>Havaintoarvojen <span class="math inline">\((x_i, y_i)\)</span> pareista laskettu <strong>otoskovarianssi</strong> on
 <span class="math display">\[
@@ -302,7 +302,7 @@ jossa <span class="math inline">\(s_{xy}\)</span> on <span class="math inline">\
 <li><p>Pearsonin otoskorrelaatiokertoimella <span class="math inline">\(r_{xy}\)</span> on seuraavat ominaisuudet:</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(-1 \le r_{xy} \le 1\)</span></li>
-<li><span class="math inline">\(r_{xy} = \pm 1\)</span>, jos ja vain jos <span class="math inline">\(y_i = \alpha + \beta x_i\)</span>, jossa <span class="math inline">\(\alpha\)</span> ja <span class="math inline">\(\beta\)</span> ovat reaalisia vakiota ja <span class="math inline">\(\alpha,\beta \neq 0\)</span></li>
+<li><span class="math inline">\(r_{xy} = \pm 1\)</span>, jos ja vain jos <span class="math inline">\(y_i = \alpha + \beta x_i\)</span>, jossa <span class="math inline">\(\alpha\)</span> ja <span class="math inline">\(\beta\)</span> ovat reaalisia vakiota ja <span class="math inline">\(\alpha,\beta \neq 0\)</span>.</li>
 <li>Korrelaatiokertoimella <span class="math inline">\(r_{xy}\)</span> ja kovarianssilla <span class="math inline">\(s_{xy}\)</span> on aina sama etumerkki</li>
 </ol></li>
 <li><p>Pearsonin otoskorrelaatiokerroin <span class="math inline">\(r_{xy}\)</span>: Tulkinta/tulkintoja:</p>
@@ -337,13 +337,27 @@ Kuvio 6.2: Havainnollistuksia Pearsonin otoskorrelaatiokertoimen arvosta ja eril
 </ul></li>
 </ul></li>
 <li><p>Kausaalisuhteita selvitettäessä on tunnettava etukäteen ilmiötä koskevat aiemmat teoriat ja tutkimukset tarkasti, jotta voidaan ottaa huomioon ilmiöön vaikuttavat tekijät</p></li>
-<li><p>Todellisuus on usein monimutkaisempi, kuin mitä kausaalisuhde kuvaa: <strong>kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä</strong></p></li>
-<li><p>Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia</p></li>
+<li><p>Todellisuus on usein monimutkaisempi, kuin mitä kausaalisuhde kuvaa: <strong>kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä</strong></p>
+<ul>
+<li>Kuvassa <a href="alaluku64.html#fig:spuriouskorrelation">6.3</a> on esimerkki todella vahvasta yhteisvaihtelusta jäädykejogurtin (eng. frozen yougurt) kulutuksen ja väkivaltarikosten välillä Yhdysvalloissa.</li>
+<li>Kyseisten havaintojen korrelaatioksi vuosien 1990-2021 välillä saadaan <span class="math inline">\(r_{xy} = 0.947\)</span>, joka on erittäin suurta, kun huomioidaan että kyseiset muuttujat eivät tunnu liittyvän toisiinsa mitenkään.</li>
+<li>Kyseessä onkin nk. “näennäinen korrelaatio”, eli tilanne, jossa kaksi muuttujaa korreloi vahvasti vailla mitään syytä.</li>
+<li>Näin voi tapahtua täysin sattumalta! Voit etsiä lisää esimerkkejä Tyler Vigenin tarjoamalta <a href="https://tylervigen.com/spurious-correlations">Spurious Correlations</a> -verkkosivulta!</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:spuriouskorrelation"></span>
+<img src="images/spuriouscorrelation.png" alt="Esimerkki nk. näennäisestä korrelaatiosta (eng. spurious correlation). Lähde: Tyler Vigen." width="90%" />
+<p class="caption">
+Kuvio 6.3: Esimerkki nk. näennäisestä korrelaatiosta (eng. spurious correlation). Lähde: Tyler Vigen.
+</p>
+</div>
+<ul>
+<li>Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
 <img src="images/causality2.jpg" alt="Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?" width="75%" />
 <p class="caption">
-Kuvio 6.3: Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?
+Kuvio 6.4: Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?
 </p>
 </div>
 <ul>
@@ -355,15 +369,21 @@ Kuvio 6.3: Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:simpson"></span>
 <img src="images/simpson.jpg" alt="Simpsonin paradoksi" width="75%" />
 <p class="caption">
-Kuvio 6.4: Simpsonin paradoksi
+Kuvio 6.5: Simpsonin paradoksi
 </p>
 </div>
 <div style="page-break-after: always;"></div>
-<div class="defblock kimmo">
+<div class="defblock mikko">
 <p><strong>Esimerkki: Berkeleyn sukupuolisyrjintä</strong></p>
-<p>Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus. Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.</p>
 <ul>
-<li>Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista. Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.</li>
+<li>Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus.
+<ul>
+<li>Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.</li>
+</ul></li>
+<li>Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista.
+<ul>
+<li>Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.</li>
+</ul></li>
 </ul>
 </div>
 <table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;">

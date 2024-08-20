@@ -28,7 +28,7 @@ header-includes: |
   - Tarkoituksena on yleisellä tasolla johdatella tilastotieteen ja aineistojen (datan) maailmaan sekä pohtia myös näiden laajempaa merkitystä tieteellisen tutkimuksen hyvin keskeisinä osina.
   - Kurssin ensimmäisen osan lopuksi järjestetään tentti, joka arvioidaan hyväksytty/hylätty asteikolla.
   
-- __Osa II__(4op): Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
+- __Osa II__ (4op): Kurssin toisessa osassa syvennytään ensimmäisen osan teemoihin tarkastelemalla erityisesti tilastollisten menetelmien roolia tutkimuksessa.
   - Tarkoituksena on luoda pohja tosielämän satunnaisilmiöiden tutkimukselle tilastotieteen ja tilastollisten menetelmien keinoin.
   - Harjoitustehtävien tavoite on totuttaa opiskelija erityisesti matematiikan ja tilastotieteen opinnoissa yleiseen viikottaisten harjoitustehtävien tekemisen käytäntöön.
   - Kurssin toisen osan lopuksi järjestetään tentti, joka arvioidaan 0-5 arviointiasteikolla.
