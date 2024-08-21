@@ -191,7 +191,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-08-20}
+\date{2024-08-21}
 
 \begin{document}
 \maketitle
@@ -4650,28 +4650,13 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
 \tightlist
 \item
   Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.
-\end{itemize}
-
-\FloatBarrier
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.75\linewidth]{images/causality2} 
-
-}
-
-\caption{Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?}\label{fig:unnamed-chunk-4}
-\end{figure}
-
-\begin{itemize}
-\tightlist
-\item
-  Simpsonin paradoksi
 
   \begin{itemize}
   \tightlist
   \item
-    Simpsonin paradoksi syntyy, kun kahden muuttujan välinen korrelaatio muuttuu päinvastaiseksi, otettaessa huomioon jokin kolmas muuttuja, joka korreloi molempien muuttujien kanssa
+    Klassinen esimerkki tällaisesta ``puuttuvan muuttujan harhasta'' on hukkumiskuolemien ja jäätelön kulutuksen näennäinen yhteys, jos tarkastellaan vain niiden välistä korrelaatiota.
+  \item
+    Tosiasiassa molempia selittää lämpimät kelit, jolloin ihmiset uivat enemmän, mutta myös syövät enemmän jäätelöä!
   \end{itemize}
 \end{itemize}
 
@@ -4692,7 +4677,9 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
 
 \begin{defblock}{}
 
-\textbf{Esimerkki: Berkeleyn sukupuolisyrjintä}
+\textbf{Esimerkki: Simpsonin paradoksi - Berkeleyn sukupuolisyrjintä}
+
+\textbf{Simpsonin paradoksilla} tarkoitetaan tilannetta, jossa kahden muuttujan välinen korrelaatio muuttuu päinvastaiseksi otettaessa huomioon jokin kolmas muuttuja, joka korreloi molempien muuttujien kanssa.
 
 \begin{itemize}
 \tightlist
@@ -4702,13 +4689,19 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
   \begin{itemize}
   \tightlist
   \item
-    Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 \% hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 \%. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
+    Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä.
+  \item
+    Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 \% hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 \%.
+  \item
+    Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
   \end{itemize}
 \item
-  Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista.
+  Tarkasteltaessa erikseen eri tiedekuntia huomattiin, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista.
 
   \begin{itemize}
   \tightlist
+  \item
+    Tämä johtui siitä, että naiset hakivat opiskelemaan aloja, joille sisäänpääsystä käytiin kovempaa kilpailua. Toisin sanoen, naisten hakemukset keskittyivät aloille, joilla oli vähemmän aloituspaikkoja.
   \item
     Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.
   \end{itemize}
@@ -4723,8 +4716,8 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
 
 \begin{tabular}{lllll}
 \toprule
-\multicolumn{2}{c}{Miehet} & \multicolumn{3}{c}{Naiset} \\
-\cmidrule(l{3pt}r{3pt}){1-2} \cmidrule(l{3pt}r{3pt}){3-5}
+\multicolumn{3}{c}{Miehet} & \multicolumn{2}{c}{Naiset} \\
+\cmidrule(l{3pt}r{3pt}){1-3} \cmidrule(l{3pt}r{3pt}){4-5}
 Tiedekunta & Hakijat & Hyväksytyt \% & Hakijat & Hyväksytyt \%\\
 \midrule
 A & 825 & 62 & 108 & 82\\
@@ -4777,6 +4770,7 @@ Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkin
 Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.
 
 \begin{itemize}
+\tightlist
 \item
   \textbf{Moodi}: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.
 \item
@@ -4798,10 +4792,53 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
     Tietyistä fraktiileista käytetään nimitystä \textbf{desiili}. Ensimmäinen desiili \(D_1\) on 10 \% fraktiili ja esim. yhdeksäs desiili \(D_9\) on 90 \% fraktiili.
   \end{itemize}
 \item
-  Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
+  Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Vaihteluväli} kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto).
+  \item
+    \textbf{Kvartiiliväli} = (\(Q_1, Q_3\)).
+  \end{itemize}
 \item
-  Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat \textbf{vinous} ja \textbf{huipukkuus}. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
+  Satunnaisotoksille voidaan laskea myös niiden jakauman muotoa kuvaavat tunnusuluvut \textbf{vinous} ja \textbf{huipukkuus}. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Normaalijakauman vinous on 0 ja huipukkuus on 3.
+    \end{itemize}
+  \item
+    Kuvassa \ref{fig:vinotjakaumat} on kuvattuna satunnaisotos jakaumasta, joka on oikealle vino ja huipukas.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Vertailun vuoksi kuvaajassa on piirretty myös normaalijakauman tiheysfunktio käyttäen otoskeskiarvoa ja otosvarianssia odotusarvon ja varianssin parametreina (ks. Luku \ref{luku4}).\\
+    \item
+      Huomataan, että oikealle vinossa jakaumassa suuremmat realisaatiot ovat suhteellisesti todennäköisempiä kuin pienemmät. Kuvatu aineiston vinous on \(2.13\), joka tarkoittaa oikealle vinoa jakaumaa. Vastaavasti negatiiviset arvot vinoudelle kuvaavat vasemmalle vinoa jakaumaa.
+    \item
+      Vastaavasti huomataan että aineiston havainnot ovat verrattain keskittyneitä, eli että jakauma josta aineisto on peräisin on huipukas. Kuvatun aineiston huipukkuus saa arvon \(10.85\), eli se on selvästi huipukkaampi kuin normaalijakauma.
+    \item
+      Vinoa ja huipukasta jakaumaa ilmentävät havaintoaineistot ovat tyypillisiä tutkimusta tehdessä ja niiden käsittely, mallintaminen ja niihin sovellettavat tilastollisen päättelyn menetelmät vaativat jälleen pidemmälle meneviä tilastotieteen opintoja!
+    \end{itemize}
+  \end{itemize}
 \end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{TD2024_files/figure-latex/vinotjakaumat-1} 
+
+}
+
+\caption{Esimerkki vinosta jakaumasta.}\label{fig:vinotjakaumat}
+\end{figure}
 
 \hypertarget{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
 \section{Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
@@ -6564,7 +6601,7 @@ Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsema
 
 }
 
-\caption{t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita}\label{fig:unnamed-chunk-11}
+\caption{t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita}\label{fig:unnamed-chunk-9}
 \end{figure}
 
 \hfill\break

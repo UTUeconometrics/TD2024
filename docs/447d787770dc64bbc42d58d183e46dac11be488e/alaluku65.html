@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-20" />
+<meta name="date" content="2024-08-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -235,19 +235,43 @@
 <p>Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkintojen tueksi tarvitaan tunnuslukuja. Mm. otoskeskiarvoa tunnuslukuna tarkasteltiin jo edellä. Tunnuslukuja on paljon, ja jokainen niistä valottaa muuttujan jakaumaa eri näkökulmista.</p>
 <p>Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin tunnuslukuihin. Kahdesta ensimmäisestä esimerkkejä ovat keskiarvo ja varianssi tai keskihajonta (välimatka- ja suhdeasteikon havaintojen tapauksessa). Esitellään seuraavassa vielä lyhyesti muutamia muita tunnuslukuja.</p>
 <ul>
-<li><p><strong>Moodi</strong>: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.</p></li>
-<li><p><strong>Mediaani</strong>: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista tai joskus niiden keskiarvo). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.</p>
+<li><strong>Moodi</strong>: Moodi eli tyyppiarvo on havaintoaineiston yleisin muuttujan arvo tai se on luokka, jolla on suurin frekvenssi.</li>
+<li><strong>Mediaani</strong>: Mediaani on järjestetyn havaintoaineiston keskimmäinen arvo (jos havaintoarvoja on pariton määrä, parillisessa tapauksessa esitetään jompikumpi keskimmäisistä arvoista tai joskus niiden keskiarvo). Mediaani siis jakaa järjestetyn havaintoaineiston kahteen osaan siten, että puolet arvoista on mediaania pienempiä ja puolet arvoltaan mediaania suurempia.
 <ul>
 <li>Luokitteluasteikolla mitattaville muuttujille ei ole olemassa luontevia sijaintilukuja keskilukujen yhteydessä pl. moodi.</li>
 </ul></li>
-<li><p>Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää <strong>fraktiileja</strong>: pp%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp%.</p>
+<li>Järjestysasteikolla mitatuille muuttujille voidaan mediaanin lisäksi määrittää <strong>fraktiileja</strong>: pp%:n fraktiili jakaa tilastoaineiston kahteen osaan siten, että kyseistä fraktiilia pienempiä havaintoarvoja on pp%.
 <ul>
 <li>Eniten käytettyjä fraktiileja ovat <strong>kvartiilit</strong>. <strong>Alakvartiili</strong> <span class="math inline">\(Q_1\)</span> on 25 %:n fraktiili, ja <strong>yläkvartiili</strong> <span class="math inline">\(Q_3\)</span> on 75 % fraktiili.</li>
 <li>Tietyistä fraktiileista käytetään nimitystä <strong>desiili</strong>. Ensimmäinen desiili <span class="math inline">\(D_1\)</span> on 10 % fraktiili ja esim. yhdeksäs desiili <span class="math inline">\(D_9\)</span> on 90 % fraktiili.</li>
 </ul></li>
-<li><p>Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. <strong>Vaihteluväli</strong> kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). <strong>Kvartiiliväli</strong> = (<span class="math inline">\(Q_1, Q_3\)</span>).</p></li>
-<li><p>Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat <strong>vinous</strong> ja <strong>huipukkuus</strong>. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.</p></li>
+<li>Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli.
+<ul>
+<li><strong>Vaihteluväli</strong> kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto).</li>
+<li><strong>Kvartiiliväli</strong> = (<span class="math inline">\(Q_1, Q_3\)</span>).</li>
+</ul></li>
+<li>Satunnaisotoksille voidaan laskea myös niiden jakauman muotoa kuvaavat tunnusuluvut <strong>vinous</strong> ja <strong>huipukkuus</strong>. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille.
+<ul>
+<li>Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta.
+<ul>
+<li>Normaalijakauman vinous on 0 ja huipukkuus on 3.</li>
+</ul></li>
+<li>Kuvassa <a href="alaluku65.html#fig:vinotjakaumat">6.5</a> on kuvattuna satunnaisotos jakaumasta, joka on oikealle vino ja huipukas.
+<ul>
+<li>Vertailun vuoksi kuvaajassa on piirretty myös normaalijakauman tiheysfunktio käyttäen otoskeskiarvoa ja otosvarianssia odotusarvon ja varianssin parametreina (ks. Luku <a href="luku4.html#luku4">4</a>).<br />
+</li>
+<li>Huomataan, että oikealle vinossa jakaumassa suuremmat realisaatiot ovat suhteellisesti todennäköisempiä kuin pienemmät. Kuvatu aineiston vinous on <span class="math inline">\(2.13\)</span>, joka tarkoittaa oikealle vinoa jakaumaa. Vastaavasti negatiiviset arvot vinoudelle kuvaavat vasemmalle vinoa jakaumaa.</li>
+<li>Vastaavasti huomataan että aineiston havainnot ovat verrattain keskittyneitä, eli että jakauma josta aineisto on peräisin on huipukas. Kuvatun aineiston huipukkuus saa arvon <span class="math inline">\(10.85\)</span>, eli se on selvästi huipukkaampi kuin normaalijakauma.</li>
+<li>Vinoa ja huipukasta jakaumaa ilmentävät havaintoaineistot ovat tyypillisiä tutkimusta tehdessä ja niiden käsittely, mallintaminen ja niihin sovellettavat tilastollisen päättelyn menetelmät vaativat jälleen pidemmälle meneviä tilastotieteen opintoja!</li>
+</ul></li>
+</ul></li>
 </ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:vinotjakaumat"></span>
+<img src="TD2024_files/figure-html/vinotjakaumat-1.png" alt="Esimerkki vinosta jakaumasta." width="672" />
+<p class="caption">
+Kuvio 6.5: Esimerkki vinosta jakaumasta.
+</p>
+</div>
 </div>
             </section>
 

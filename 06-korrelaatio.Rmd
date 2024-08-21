@@ -257,16 +257,9 @@ knitr::include_graphics("images/spuriouscorrelation.png")
 ```
 
 - Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.
+  - Klassinen esimerkki tällaisesta "puuttuvan muuttujan harhasta" on hukkumiskuolemien ja jäätelön kulutuksen näennäinen yhteys, jos tarkastellaan vain niiden välistä korrelaatiota.
+  - Tosiasiassa molempia selittää lämpimät kelit, jolloin ihmiset uivat enemmän, mutta myös syövät enemmän jäätelöä!
 
-\FloatBarrier
-
-```{r, echo=FALSE, fig.cap="Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?", fig.align='center', out.width = "75%"}
-knitr::include_graphics("images/causality2.jpg")
-```
-
-- Simpsonin paradoksi
-  - Simpsonin paradoksi syntyy, kun kahden muuttujan välinen korrelaatio muuttuu päinvastaiseksi, otettaessa huomioon jokin kolmas muuttuja, joka korreloi molempien muuttujien kanssa
-  
 \FloatBarrier
 
 ```{r simpson, echo=FALSE, fig.cap="Simpsonin paradoksi", fig.align='center', out.width = "75%"}
@@ -277,12 +270,17 @@ knitr::include_graphics("images/simpson.jpg")
 
 \newpage
 ::: {.defblock .mikko data-latex="{}"}
-**Esimerkki: Berkeleyn sukupuolisyrjintä**
+**Esimerkki: Simpsonin paradoksi - Berkeleyn sukupuolisyrjintä**
+
+__Simpsonin paradoksilla__ tarkoitetaan tilannetta, jossa kahden muuttujan välinen korrelaatio muuttuu päinvastaiseksi otettaessa huomioon jokin kolmas muuttuja, joka korreloi molempien muuttujien kanssa.
 
 - Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus. 
-  - Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
+  - Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. 
+  - Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. 
+  - Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.
 
-- Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista. 
+- Tarkasteltaessa erikseen eri tiedekuntia huomattiin, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista. 
+  - Tämä johtui siitä, että naiset hakivat opiskelemaan aloja, joille sisäänpääsystä käytiin kovempaa kilpailua. Toisin sanoen, naisten hakemukset keskittyivät aloille, joilla oli vähemmän aloituspaikkoja.
   - Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.
 :::
 
@@ -302,7 +300,7 @@ taulukko = rbind.data.frame(A,B,C,D,E,Fe)
 colnames(taulukko) = c("Tiedekunta", "Hakijat", "Hyväksytyt %", "Hakijat", "Hyväksytyt %")
 kable(taulukko, booktabs = TRUE) %>% 
   kableExtra::kable_styling(font_size = 12) %>% 
-  kableExtra::add_header_above(c("Miehet" = 2, "Naiset" = 3))
+  kableExtra::add_header_above(c("Miehet" = 3, "Naiset" = 2))
 ```
 
 \FloatBarrier
@@ -330,14 +328,38 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
   - Eniten käytettyjä fraktiileja ovat __kvartiilit__. __Alakvartiili__ $Q_1$ on 25 \%:n fraktiili, ja __yläkvartiili__ $Q_3$ on 75 \% fraktiili.
   - Tietyistä fraktiileista käytetään nimitystä __desiili__. Ensimmäinen desiili $D_1$ on 10 \% fraktiili ja esim. yhdeksäs desiili $D_9$ on 90 \% fraktiili.
 
-- Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. __Vaihteluväli__ kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). __Kvartiiliväli__ = ($Q_1, Q_3$).
+- Hajontalukuja: Varianssin/keskihajonnan lisäksi, jos muuttuja on mitattu vähintään järjestysasteikolla, sille voidaan määrittää vaihteluväli ja kvartiiliväli. 
+  - __Vaihteluväli__ kuvaa aineiston kokonaispeittoa ja siinä ilmoitetaan aineiston pienin havainto ja suurin havainto. Ts. vaihteluväli=(pienin havainto, suurin havainto). 
+  - __Kvartiiliväli__ = ($Q_1, Q_3$).
 
-- Muita tunnuslukuja: Tilastollisen päätöksenteon yhteydessä käytettäviä tunnuslukuja ovat __vinous__ ja __huipukkuus__. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta. Normaalijakauman vinous on 0 ja huipukkuus on 3.
+- Satunnaisotoksille voidaan laskea myös niiden jakauman muotoa kuvaavat tunnusuluvut __vinous__ ja __huipukkuus__. Vinous ja huipukkuus voidaan määrittää välimatka- ja suhdeasteikon muuttujille. 
+  - Vinous ja huipukkuus mittaavat kumpikin omalla tavallaan jakauman poikkeamaa normaalijakaumasta.
+    - Normaalijakauman vinous on 0 ja huipukkuus on 3.
+  - Kuvassa \@ref(fig:vinotjakaumat) on kuvattuna satunnaisotos jakaumasta, joka on oikealle vino ja huipukas. 
+    - Vertailun vuoksi kuvaajassa on piirretty myös normaalijakauman tiheysfunktio käyttäen otoskeskiarvoa ja otosvarianssia odotusarvon ja varianssin parametreina (ks. Luku \@ref(luku4)).  
+    - Huomataan, että oikealle vinossa jakaumassa suuremmat realisaatiot ovat suhteellisesti todennäköisempiä kuin pienemmät. Kuvatu aineiston vinous on $2.13$, joka tarkoittaa oikealle vinoa jakaumaa. Vastaavasti negatiiviset arvot vinoudelle kuvaavat vasemmalle vinoa jakaumaa. 
+    - Vastaavasti huomataan että aineiston havainnot ovat verrattain keskittyneitä, eli että jakauma josta aineisto on peräisin on huipukas. Kuvatun aineiston huipukkuus saa arvon $10.85$, eli se on selvästi huipukkaampi kuin normaalijakauma.
+    - Vinoa ja huipukasta jakaumaa ilmentävät havaintoaineistot ovat tyypillisiä tutkimusta tehdessä ja niiden käsittely, mallintaminen ja niihin sovellettavat tilastollisen päättelyn menetelmät vaativat jälleen pidemmälle meneviä tilastotieteen opintoja!
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r vinotjakaumat, echo = FALSE, message = FALSE, warning = FALSE, fig.cap="Esimerkki vinosta jakaumasta.", fig.align='center'}
 library(ggplot2)
+set.seed(5)
+vinoaineisto = data.frame("vino" = rlnorm(5000, meanlog = 3, sdlog = 0.6))
 
+ggplot(vinoaineisto, aes(x = vino)) + 
+    geom_histogram(aes(y =..density..),
+                   breaks = seq(-20, 220, by = 2.5), 
+                   colour = "black", 
+                   fill = "grey") +
+  xlim(-20, 220) +
+  stat_function(fun = dlnorm, args = list(meanlog = 3, sdlog = 0.6), aes(colour = "Vinon jakauman tiheysfunktio"), size = 0.8) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(vinoaineisto$vino), sd = sd(vinoaineisto$vino)), 
+                aes(colour = "Normaalijakauman tiheysfunktio"), size = 0.8) + 
+  theme_bw() + ylab("") + xlab("") +
+  scale_colour_manual("", values = c("blue", "red")) + theme(legend.position="bottom")
 ```
+
 
 ## Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 

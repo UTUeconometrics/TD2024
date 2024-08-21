@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-20" />
+<meta name="date" content="2024-08-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -352,36 +352,32 @@ Kuvio 6.3: Esimerkki nk. näennäisestä korrelaatiosta (eng. spurious correlati
 </p>
 </div>
 <ul>
-<li>Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.</li>
-</ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="images/causality2.jpg" alt="Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?" width="75%" />
-<p class="caption">
-Kuvio 6.4: Esimerkkejä: luomuruoka syypää lisääntyneisiin autismitapauksiin?
-</p>
-</div>
+<li>Yhteisvaihtelu voi johtua myös kolmannen muuttujan vaikutuksesta molempiin muuttujiin tai virheellisestä otannasta, vaikka muuttujat olisivatkin perusjoukossa toisistaan riippumattomia.
 <ul>
-<li>Simpsonin paradoksi
-<ul>
-<li>Simpsonin paradoksi syntyy, kun kahden muuttujan välinen korrelaatio muuttuu päinvastaiseksi, otettaessa huomioon jokin kolmas muuttuja, joka korreloi molempien muuttujien kanssa</li>
+<li>Klassinen esimerkki tällaisesta “puuttuvan muuttujan harhasta” on hukkumiskuolemien ja jäätelön kulutuksen näennäinen yhteys, jos tarkastellaan vain niiden välistä korrelaatiota.</li>
+<li>Tosiasiassa molempia selittää lämpimät kelit, jolloin ihmiset uivat enemmän, mutta myös syövät enemmän jäätelöä!</li>
 </ul></li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:simpson"></span>
 <img src="images/simpson.jpg" alt="Simpsonin paradoksi" width="75%" />
 <p class="caption">
-Kuvio 6.5: Simpsonin paradoksi
+Kuvio 6.4: Simpsonin paradoksi
 </p>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="defblock mikko">
-<p><strong>Esimerkki: Berkeleyn sukupuolisyrjintä</strong></p>
+<p><strong>Esimerkki: Simpsonin paradoksi - Berkeleyn sukupuolisyrjintä</strong></p>
+<p><strong>Simpsonin paradoksilla</strong> tarkoitetaan tilannetta, jossa kahden muuttujan välinen korrelaatio muuttuu päinvastaiseksi otettaessa huomioon jokin kolmas muuttuja, joka korreloi molempien muuttujien kanssa.</p>
 <ul>
 <li>Yksi tunnetuimmista esimerkeistä Simpsonin paradoksista on Berkeleyn yliopiston sukupuolisyrjintätapaus.
 <ul>
-<li>Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä. Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %. Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.</li>
+<li>Yliopisto haastettiin oikeuteen vuonna 1973 sukupuolisyrjinnästä.</li>
+<li>Väitettiin, että yliopistoon olisi miesten helpompi päästä kuin naisten, sillä yhteensä 8442:sta mieshakijasta 44 % hyväksyttiin kun samat luvut olivat naisilla 4321 ja 35 %.</li>
+<li>Mieshakijoista pääsi siis 9 prosenttiyksikköä enemmän sisälle kuin naisista.</li>
 </ul></li>
-<li>Tarkasteltaessa erikseen eri tiedekuntia huomataan, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista.
+<li>Tarkasteltaessa erikseen eri tiedekuntia huomattiin, että itseasissa useammassa tiedekunnissa naisia on päässyt sisälle isompi osuus hakijoista.
 <ul>
+<li>Tämä johtui siitä, että naiset hakivat opiskelemaan aloja, joille sisäänpääsystä käytiin kovempaa kilpailua. Toisin sanoen, naisten hakemukset keskittyivät aloille, joilla oli vähemmän aloituspaikkoja.</li>
 <li>Aineisto kuudesta isoimmasta tiedekunnasta on listattu alla olevaan taulukkoon.</li>
 </ul></li>
 </ul>
@@ -389,12 +385,12 @@ Kuvio 6.5: Simpsonin paradoksi
 <table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Miehet
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Naiset
 </div>
