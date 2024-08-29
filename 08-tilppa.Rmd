@@ -270,7 +270,8 @@ kuva1 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
+  geom_rug(aes(x = PF, y = NULL))
 
 set.seed(2)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
@@ -281,7 +282,8 @@ kuva2 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
+  geom_rug(aes(x = PF, y = NULL))
 
 set.seed(3)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
@@ -292,7 +294,8 @@ kuva3 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
+  geom_rug(aes(x = PF, y = NULL))
 
 set.seed(4)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
@@ -303,7 +306,8 @@ kuva4 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
+  geom_rug(aes(x = PF, y = NULL))
 
 ggpubr::ggarrange(kuva1, kuva2, kuva3, kuva4, ncol = 2, nrow = 2)
 ```
@@ -374,7 +378,8 @@ ggplot(df, aes(x = PF)) +
                                  "line2" = "deepskyblue3", 
                                  "line3" = "red", 
                                  "line4" = "darkorange"),
-                      labels = c("N(170,15)", "N(190,3)", "N(180,5)", "N(185,10)"))
+                      labels = c("N(170,15)", "N(190,3)", "N(180,5)", "N(185,10)")) + 
+  geom_rug(aes(x = PF, y = NULL))
   
 ```
 
@@ -493,7 +498,8 @@ ggplot(df, aes(x = PF)) +
  theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Tiheysfunktiot") + 
   scale_colour_manual(values = c("line1" = "red", 
                                 "line2" = "darkgreen"), 
-                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(180.48, 20.88)")) + theme(legend.position="bottom")
+                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(180.48, 20.88)")) + theme(legend.position="bottom") + 
+  geom_rug(aes(x = PF, y = NULL))
   
 ```
 \FloatBarrier
@@ -520,7 +526,8 @@ ggplot(df, aes(x = PF)) +
  theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Funktiot") + 
   scale_colour_manual(values = c("line1" = "red", 
                                 "line2" = "darkgreen"), 
-                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(179.83, 23.49)")) + theme(legend.position="bottom")
+                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(179.83, 23.49)")) + theme(legend.position="bottom") + 
+  geom_rug(aes(x = PF, y = NULL))
   
 ```
 
@@ -560,4 +567,4 @@ $$
 - Estimaattori ja estimaatti
 - (Hyvän) estimaattorin ominaisuuksia: Harhattomuus, tyhjentävyys, tehokkuus ja tarkentuvuus
 - Otoskeskiarvo ja otosvarianssi estimaattoreina
-- Normaalistijakautunut satunnaisotos
+- Normaalisti jakautunut satunnaisotos

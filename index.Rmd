@@ -57,7 +57,7 @@ header-includes: |
     - [Tilastokeskuksen tilastokoulu (linkki)](https://tilastokoulu.stat.fi/verkkokoulu_v2.xql?course_id=tkoulu_tilaj&lesson_id=1&subject_id=0&page_type=sisalto)
     - Tilastotieteen sanasto suomi-englanti-suomi, ks.Juha Alho, Elja Arjas, Juha Karvanen, Lasse Leskelä, Esa Läärä ja Pekka Pere (2023). [Tilastotieteen sanasto. Verkkoversio 9.4.2023. Suomen Tilastoseura.](https://sanasto.tilastoseura.fi/.)
 
-- Suuret kiitokset VTM Visa Kuntzelle ja VTM Emil Lehdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
+- Suuret kiitokset VTM Visa Kuntzelle, VTM Emil Lehdelle ja filosofian ylioppilas Roni Karjanlahdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
 
 # Osaamistavoitteet {-}
 
