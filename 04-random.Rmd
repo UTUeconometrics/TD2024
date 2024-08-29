@@ -166,7 +166,7 @@ __Tilastollisen muuttujan todennäköisyysjakauma__
 
 :::
 
-```{r kannatusmittaus, warning = FALSE, message = FALSE, echo = FALSE, message = FALSE, fig.cap="[Taloustutkimuksen Ylelle](https://yle.fi/a/74-20096107) teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista (aakkosjärjestyksessä).", fig.align='center', out.width = "100%"}
+```{r kannatusmittaus, warning = FALSE, message = FALSE, echo = FALSE, message = FALSE, fig.cap="Taloustutkimuksen Ylelle (https://yle.fi/a/74-20096107) teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista (aakkosjärjestyksessä).", fig.align='center', out.width = "100%"}
 library(ggplot2)
 library(dplyr)
 theme_set(theme_bw())

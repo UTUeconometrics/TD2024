@@ -1,8 +1,8 @@
 \lefthyphenmin=62
 \righthyphenmin=62
-# Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä {#luku9}
+# Otosjakaumat ja epävarmuuden arvioiminen {#luku9}
 
-Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusuluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa siis sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
+Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
 ## Otosjakauma: estimaattorit ja estimaatit
 
@@ -27,6 +27,7 @@ $$
 $$
 
 - Standardipoikkeamaa kutsutaan myös __keskiarvon keskivirheeksi__ ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon $\mu$ ympärillä.
+  - Huomioi, että __otoskeskiarvon varianssi__ on eri asia kuin __otosvarianssi__.
 
 - Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon $\mu$ ympärille, kun otoskoko $n$ kasvaa. 
   - Ts. otoskoon $n$ kasvaessa $\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}$ pienenee.
@@ -113,7 +114,7 @@ noudattaa suurissa otoksissa approksimatiivisesti standardoitua normaalijakaumaa
 
 - Suomen EU-kansanäänestyksessä vuonna 1994 jäsenyyttä kannattaneiden suhteellinen osuus oli 0,54 (54 \%).
 
-- Mikä olisi ollut tällöin tn., että ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
+- Mikä olisi ollut tällöin tn., että juuri ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
 
 - Suhteellisen frekvenssin otosjakauman perusteella kyllä-kannatusosuuden jakauma olisi
 $$
@@ -128,6 +129,23 @@ P \Big(Z < \frac{0.5-0.54}{0.0352} \Big) = P (Z < -1.14) \approx 0.127.
 $$
 :::
 
+\FloatBarrier
+```{r normaalilv1, echo=FALSE, fig.cap="Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä", fig.align='center', out.width="100%", warning=FALSE}
+ggplot(NULL, aes(c(-4,4))) +
+  geom_area(stat = "function", fun = dnorm,
+            aes(color = "line1", 
+                fill  = "line1"), fill = NA) +
+  geom_area(stat = "function", fun = dnorm, xlim = c(-4, -1.14),
+            aes(color = "line2",
+                fill  = "Häntätodennäköisyys")) +
+  labs(x = "", y = "") +
+  scale_colour_manual(" ", values = c("line1" = "red", 
+                                      "line2" = "red"), labels = NULL, guide = "none") +
+  scale_fill_manual(" ", values   = c("line1" = "red", 
+                                      "Häntätodennäköisyys" = "skyblue")) +
+  theme(legend.position="bottom") 
+```
+\FloatBarrier
 
 ## Luottamusvälit {#alaluku91}
 
@@ -297,7 +315,7 @@ jossa tuntematon $p$ on korvattu sen estimaattorilla (otosvastineella) $\widehat
 
 - Luottamuskertoimet määrätään aiempaan tapaan:
 $$
-\text{P}(-z_{\alpha/2} \le Z \le z_{\alpha/2}) = 1-\alpha,
+\text{P}(-z_{\alpha/2} \le Z \le z_{\alpha/2}) = 1-\alpha.
 $$
 
 
@@ -350,7 +368,7 @@ __Tulosten vaaditun tarkkuuden vaikutus otoskokoon__
     - Esimerkiksi puoluekannatuksen arvioimiseen 2 \% virhemarginaalilla riittää huomattavasti pienempi otoskoko kuin 0.2 \% virhemarginaalilla. Politiikan tutkija voisikin kasvattaa otoskokoa vaalien lähestyessä, mikäli mielii saada tarkempia tuloksia.
   - Kuinka varma haluat olla, että otos edustaa joukkoa oikein? Tämä on luottamustaso. 
     - Luottamustaso on todennäköisyys sille, että valitsemasi otos on tulosten kannalta oleellinen.
-    - Jos joukosta poimitaan 30 otosta sattumanvaraisesti, kuinka usein yhdestä otoksesta saadut tulokset eroavat merkittävästi muista 30 otoksesta? Jos luotettavuustaso on 95 \%, samat johtopäätelmät saadaan 95 prosentissa tapauksista. 
+    - Jos joukosta poimitaan 30 otosta sattumanvaraisesti, kuinka usein yhdestä otoksesta saadut tulokset eroavat merkittävästi muista 30 otoksesta? Jos luottamustaso on 95 \%, samat johtopäätelmät saadaan 95 prosentissa tapauksista. 
 
 __Odotetun vastauskadon vaikutus otoskokoon__
 
@@ -501,10 +519,10 @@ $$
 
 ## Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
 
-- Standardipoikkeama  
-- Standardoitu satunnaismuuttuja  
-- Standardoidun aritmeettisen keskiarvon otosjakauma  
-- Suhteellisen frekvenssin otosjakauma  
+- Standardipoikkeama
+- Standardoitu satunnaismuuttuja
+- Standardoidun aritmeettisen keskiarvon otosjakauma
+- Suhteellisen frekvenssin otosjakauma
 - Luottamusväli
 - Virhemarginaali
 - Luottamustaso ja luottamuskertoimet

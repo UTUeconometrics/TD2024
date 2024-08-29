@@ -22,7 +22,7 @@ jonkinlaisessa yhteydessä siten, että niiden voidaan ajatella muodostavan erit
     - Lisäksi tutkimusongelman holistinen käsittely on tilastollisen tutkimuksen kannalta tärkeää: ilmiöön liittyvien tärkeiden ominaisuuksien unohtuminen tarkastelusta saattaa johtaa esimerkiksi puuttuvan muuttujan harhaan!
   - Tilastolliset menetelmät auttavat tutkijaa vastaamaan kysymyksiin siitä, mitkä tilastolliset muuttujat ovat tutkimuskysymyksen kannalta oleellisia.
     - Varsinkin nykypäivänä kun datan määrä kasvaa alati kiihtyvällä tahdilla, olemme ihmiskuntana ahdistavan informaatiotulvan edessä paikoin aseettomia: mitkä ympäröivistä ilmiöistä liittyvät toisiinsa ja miten?
-    - Erityisesti teoreettisen tilastotieteen kentällä on viimeisten vuosikymmenien aikana kehitetty lukuisia edistyksellisiä menetelmiä nk. **dimension pienennyksen** alalla. Nämä menetelmät pyrkivät löytämään yhdenmukaisuuksia hyvin korkeaulotteisesta aineistosta, eli aineistosta jossa jokaiselta tutkimusyksiköltä mitataan jopa miljoonia eri muuttujia, kuten DNA-tutkimuksessa genomitietoa.^[Tilastotieteessä näitä menetelmiä kutsutaan monimuuttujamenetelmiksi ja niitä käsitellään tarkemmin erikoiskursseilla [TILM3704 Monimuuttujamenetelmät](https://opas.peppi.utu.fi/fi/opintojakso/TILM3704/90801) sekä [TILM3611 Monimuuttujamenetelmien jatkokurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3611/91182)]
+    - Erityisesti teoreettisen tilastotieteen kentällä on viimeisten vuosikymmenien aikana kehitetty lukuisia edistyksellisiä menetelmiä nk. **dimension pienennyksen** alalla. Nämä menetelmät pyrkivät löytämään yhdenmukaisuuksia hyvin korkeaulotteisesta aineistosta, eli aineistosta jossa jokaiselta tutkimusyksiköltä mitataan jopa miljoonia eri muuttujia, kuten DNA-tutkimuksessa genomitietoa.^[Tilastotieteessä näitä menetelmiä kutsutaan monimuuttujamenetelmiksi ja niitä käsitellään tarkemmin erikoiskursseilla [TILM3704 Monimuuttujamenetelmät](https://opas.peppi.utu.fi/fi/opintojakso/TILM3704/90801?period=2024-2027) sekä [TILM3611 Monimuuttujamenetelmien jatkokurssi](https://opas.peppi.utu.fi/fi/opintojakso/TILM3611/91182?period=2024-2027)]
 
 - __Hahmottamisen vaiheet:__
   - "Todellisen" järjestelmän operationalisointi kvantitatiiviseksi kuvaukseksi järjestelmästä.
@@ -70,7 +70,7 @@ jonkinlaisessa yhteydessä siten, että niiden voidaan ajatella muodostavan erit
   - Havainnoiminen ja mittaaminen joudutaan suhteuttaamaan valittuun käsitejärjestelmään.
   - Joudutaan tekemään kompromisseja mittauksen eksaktisuus- ja systemaattisuusvaatimusten ja arkielen monimerkityksellisyyden välillä.
   - On operationalisoitava tutkimusasetelma sellaiseksi, että tutkittavasta ilmiöstä pystytään tuottamaan ongelmaratkaisun kannalta tarkoituksenmukaista tietoa.
-  - Aineiston käsittely on tavallaan operationalisoinnin II vaihe. Tiedon (aineiston) muuttaminen hyödylliseksi.
+  - Aineiston käsittely on tavallaan operationalisoinnin II vaihe (Sund, 2003). Tiedon (aineiston) muuttaminen hyödylliseksi.
   - Näkökulman kiinnittäminen:
     - Operationalisoinnin avulla siirrytään teorian tasolta empirian tasolle ja samalla tulee määritellyksi näkökulma, josta ongelmaa tarkastellaan.
     - Käsitteet ja niiden yhteyksistä esitettävät näkemykset voivat vaihtua tutkimuksen kuluessa, kunnes lopulta saavutetaan käsitteiden kyllääntymispiste
@@ -80,7 +80,7 @@ jonkinlaisessa yhteydessä siten, että niiden voidaan ajatella muodostavan erit
     - On esim. mahdollista, että esitetty kysymys ei välttämättä vastaa tutkimuskohteen ominaisuuksia.
 
 - Aineisto eli data
-  - Aineisto edustaa tutkimuksessa empiiristä maailmaa ja se valitaan ongelmanasettelun perusteella
+  - Aineisto edustaa tutkimuksessa empiiristä maailmaa ja se muodostetaan ongelmanasettelun perusteella.
   - Tarvitaan systemaattinen aineisto, jonka avulla on mahdollista vastata tutkimuskysymyksiin.
   - Aineiston tuottamiseen liittyy useita valintoja, jotka implisiittisesti määräävät myös mahdolliset analyysimenetelmät.
   - Aineiston esikäsittely: 

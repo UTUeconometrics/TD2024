@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9.1 Otosjakauma: estimaattorit ja estimaatit | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9.1 Otosjakauma: estimaattorit ja estimaatit | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -123,7 +123,8 @@
 <li class="chapter" data-level="5.2" data-path="alaluku52.html"><a href="alaluku52.html"><i class="fa fa-check"></i><b>5.2</b> Otannan idea</a></li>
 <li class="chapter" data-level="5.3" data-path="alaluku53.html"><a href="alaluku53.html"><i class="fa fa-check"></i><b>5.3</b> Mittaaminen ja mitta-asteikot</a></li>
 <li class="chapter" data-level="5.4" data-path="alaluku54.html"><a href="alaluku54.html"><i class="fa fa-check"></i><b>5.4</b> Kontrolloidut kokeet ja suorat havainnot</a></li>
-<li class="chapter" data-level="5.5" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.5</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="5.5" data-path="alaluku55.html"><a href="alaluku55.html"><i class="fa fa-check"></i><b>5.5</b> Otannan haasteita</a></li>
+<li class="chapter" data-level="5.6" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.6</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Tilastollinen riippuvuus ja korrelaatio</a>
 <ul>
@@ -145,8 +146,7 @@
 <li class="chapter" data-level="7.1.4" data-path="alaluku71.html"><a href="alaluku71.html#ryväsotanta"><i class="fa fa-check"></i><b>7.1.4</b> Ryväsotanta</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Otantaesimerkkejä</a></li>
-<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
-<li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="7.3" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.3</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Satunnaisotokset: tilastollisen päättelyn näkökulma</a>
 <ul>
@@ -161,7 +161,7 @@
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
 <li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
@@ -253,8 +253,11 @@
 \text{D}(\bar{Y}) = \sqrt{\mathrm{Var}(\bar{Y})} = \frac{\sigma}{\sqrt{n}}.
 \]</span></p>
 <ul>
-<li><p>Standardipoikkeamaa kutsutaan myös <strong>keskiarvon keskivirheeksi</strong> ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon <span class="math inline">\(\mu\)</span> ympärillä.</p></li>
-<li><p>Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon <span class="math inline">\(\mu\)</span> ympärille, kun otoskoko <span class="math inline">\(n\)</span> kasvaa.</p>
+<li>Standardipoikkeamaa kutsutaan myös <strong>keskiarvon keskivirheeksi</strong> ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon <span class="math inline">\(\mu\)</span> ympärillä.
+<ul>
+<li>Huomioi, että <strong>otoskeskiarvon varianssi</strong> on eri asia kuin <strong>otosvarianssi</strong>.</li>
+</ul></li>
+<li>Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon <span class="math inline">\(\mu\)</span> ympärille, kun otoskoko <span class="math inline">\(n\)</span> kasvaa.
 <ul>
 <li>Ts. otoskoon <span class="math inline">\(n\)</span> kasvaessa <span class="math inline">\(\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}\)</span> pienenee.</li>
 </ul></li>
@@ -337,7 +340,7 @@ noudattaa suurissa otoksissa approksimatiivisesti standardoitua normaalijakaumaa
 <p><strong>EU-kansanäänestys</strong></p>
 <ul>
 <li><p>Suomen EU-kansanäänestyksessä vuonna 1994 jäsenyyttä kannattaneiden suhteellinen osuus oli 0,54 (54 %).</p></li>
-<li><p>Mikä olisi ollut tällöin tn., että ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 %?</p></li>
+<li><p>Mikä olisi ollut tällöin tn., että juuri ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 %?</p></li>
 <li><p>Suhteellisen frekvenssin otosjakauman perusteella kyllä-kannatusosuuden jakauma olisi
 <span class="math display">\[
 %\widehat{p} \stackrel{as}{\thicksim} \text{N} \Big(0.54, \frac{0.54 \times (1-0.54)}{200} \Big),
@@ -349,6 +352,12 @@ jossa <span class="math inline">\(\frac{0.54 \times (1-0.54)}{200} = 0.0352^2\)<
 P \Big(Z &lt; \frac{0.5-0.54}{0.0352} \Big) = P (Z &lt; -1.14) \approx 0.127.
 \]</span></p></li>
 </ul>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:normaalilv1"></span>
+<img src="TD2024_files/figure-html/normaalilv1-1.png" alt="Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä" width="100%" />
+<p class="caption">
+Kuvio 9.1: Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä
+</p>
 </div>
 </div>
             </section>

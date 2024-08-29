@@ -2,11 +2,11 @@
 \righthyphenmin=62
 # Satunnaisotokset: tilastollisen päättelyn näkökulma {#luku8}
 
-Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin ([TILM3553](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027)) jälkeiselle tilastollisen päättelyn peruskurssille ([TILM3555](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027)).
+Tarkastellaan seuraavaksi otoksia ja otosjakaumia "tilastollisemmin" mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä ja seuraava luku toimivat esimerkkeinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka idea on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin ([TILM3553](https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027)) jälkeiselle tilastollisen päättelyn peruskurssille ([TILM3555](https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027)).
 
 ## Satunnaisotos, yhteisjakauma ja tilastollinen malli {#alaluku81}
 
-- Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on satunnaisilmiöt, joita kuvataan satunnaismuuttujia käyttäen. Satunnaismuuttujilla on todennäköisyysjakaumat, joita tilastotieteessä kuvataan todennäköisyys- eli tiheysfunktion (tai pistetodennäköisyysfunktion) avulla.  
+- Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on satunnaisilmiöt, joita kuvataan satunnaismuuttujia käyttäen. Satunnaismuuttujilla on todennäköisyysjakaumat, joita tilastotieteessä kuvataan todennäköisyys- eli tiheysfunktion (tai diskreettien sm:n tapauksessa pistetodennäköisyysfunktion) avulla.  
   - Merkitään satunnaismuuttujaa isolla kirjaimella, $Y$, ja satunnaismuuttujan realisaatiota pienellä kirjaimella $y$. Otoskokoa, eli otokseen osallistuvien tilastoyksiköiden määrää merkitään $n$:llä ja tilastoyksiköitä indeksöidään alaindeksillä $i=1,\ldots,n$. 
   - Otoksen poimimisen jälkeen satunnaismuuttujat $Y_1, \ldots, Y_n$ saavat havaituiksi arvoikseen havaintoarvot $y_1, \ldots, y_n$ (ts. $Y_1=y_1, \ldots, Y_n = y_n$).
   - Näin havaintoaineisto on siis __satunnaisotos__, joka voidaan määritellä tarkemmin seuraavasti.
@@ -30,9 +30,9 @@ __Satunnaisotoksen tilastollinen malli__
 - Satunnaismuuttujien $Y_1, \ldots, Y_n$ __yhteisjakauma__ muodostaa (tiettyjen lisäoletusten jälkeen) __tilastollisen mallin__ havaintoarvojen satunnaiselle vaihtelulle eri otoksissa.
   - Yhteisjakaumaa merkitään $f(y_1,\dots,y_n;\theta)$, jossa havaitut arvot $y_i$ ovat kiinteitä ja parametri $\theta$ on tuntematon.
   - Koska tällä kurssilla satunnaismuuttujat $Y_1, \ldots, Y_n$ oletetaan __riippumattomiksi toisiinsa nähden__, niiden yhteisjakauma on tulomuotoa $f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)$.
-  - Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston $y_1\,dots,y_n$ avulla estimoimaan parametrin $\theta$ arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.  
+  - Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston $y_1,\dots,y_n$ avulla estimoimaan parametrin $\theta$ arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.  
 
-- Tässä $f(y_1, \ldots, y_n; \theta)$ on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli. 
+- Tässä $f(y_1, \ldots, y_n; \theta)$ on siis (tilastomatemaattisessa mielessä) tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli. 
   - Useimmiten kuitenkin ajatellaan, että on käytettävä niin yksinkertaisia menetelmiä kuin mahdollista, mutta ei yhtään yksinkertaisempia. Tämä on ns. **parsimoonisuusperiaate** eli **vähäparametrisuus-** tai **säästeliäisyysperiaate**.
   - Vähäparametrisuusperiaatteen voidaan nähdä perustuvan ns. [Occamin partaveitsen -periaatteeseen](https://fi.wikipedia.org/wiki/Occamin_partaveitsi), jonka mukaan *"ilmiöitä selittävien tekijöiden määrän tulee olla mahdollisimman vähäinen"*, ts. tilastotieteessä menetelmien (mallien) tulee olla mahdollisimman yksinkertaisia, mutta silti riittäviä.
   - Tämä periaate ja sen suhde ns. **varianssin ja harhan väliseen kompromissiin** on erityisen tärkeä erityisesti tilastollisen ennustamisen ja viime vuosikymmeninä yleistyneen tilastollisen (kone)oppimisen sovellutuksissa (ks. tarkemmin alaluku \@ref(alaluku33)).
@@ -75,7 +75,7 @@ $$
 f(y; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{1}{2} \Big(\frac{y- \mu}{\sigma} \Big)^2}, 
 $$
 
-jossa $e$ viittaa Neperin lukuun $e \approx 2,71828$.
+jossa $e$ viittaa Neperin lukuun $e \approx 2.71828$.
 
 - Ylläoleva tiheysfunktio määrittelee parven normaalijakaumia kun parametreille (vakioille) $\mu$ ja $\sigma^2$ annetaan erilaisia arvoja. Nämä kaksi parametria määräävät normaalijakauman tarkemman muodon. 
   - Alla olevassa kuvassa \@ref(fig:normaalijakauma2) on kuvattu erilaisia normaalijakauman tiheysfunktion muotoja eri parametriarvoille.
@@ -232,7 +232,7 @@ kable(taulukko, booktabs = TRUE)
 ::: {.eblock .kimmo data-latex="{}"}
 Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
 
-On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
+On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisten menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
 :::
 
 ## Tilastolliset tunnusluvut ja parametrien estimaattorit {#alaluku83}
@@ -251,13 +251,13 @@ __Esimerkki: Normaalisti jakautunut aineisto__
 
 \
 
-- Satunnaisotoksen kuvaajat ovat nk. histogrammeja, joka on yleinen tapa esittää luokiteltua aineistoa.  
-  - Tässä tapauksessa havainnot on luokiteltu havaittujen arvojen perustella niin, että jokainen havainto kuuluu yhteen luokkaan ja yhtä luokkaa kuvaa yksi pylväs.   
+- Nämä satunnaisotoksen kuvaajat ovat nk. histogrammeja, joka on yleinen tapa esittää tämänkaltaista aineistoa (huom. luokittelut tehdään tässä siis graafisen esityksen aikaansaamiseksi).   
+  - Tässä tapauksessa jatkuvan muuttujan havaintoarvot on luokiteltu niin, että jokainen havainto kuuluu yhteen tasaväliseen luokkaan ja yhtä luokkaa kuvaa yksi pylväs.
   - Pylvään korkeus määräytyy luokan sisältämien arvojen lukumäärän eli frekvenssin mukaan. 
 - Kuvaajista huomataan että valtaosa havainnoista on kaikissa tapauksissa keskittynyt odotusarvon ympärille ja arvojen vaihtelu on samankaltaista.
 :::
 
-```{r normaaliaineisto, echo=FALSE, fig.cap="Normaalisti jakautunut aineisto vaihtelee samalla tavalla.", fig.align='center', out.width="100%", warning=FALSE}
+```{r normaaliaineisto, echo=FALSE, fig.cap="Normaalisti jakautunut aineisto vaihtelee samalla tavalla. Harmaat palkit kuvaavat kyseiseen havaintoarvojen väliin kuuluvien havaintojen osuutta ja punainen käyrä on tarkasteltavan normaalijakauman tiheysfunktio.", fig.align='center', out.width="100%", warning=FALSE}
 library(ggplot2)
 library(ggpubr)
 set.seed(1)
@@ -270,8 +270,7 @@ kuva1 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
-  geom_rug(aes(x = PF, y = NULL))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
 
 set.seed(2)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
@@ -282,8 +281,7 @@ kuva2 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
-  geom_rug(aes(x = PF, y = NULL))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
 
 set.seed(3)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
@@ -294,8 +292,7 @@ kuva3 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
-  geom_rug(aes(x = PF, y = NULL))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
 
 set.seed(4)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
@@ -306,8 +303,7 @@ kuva4 = ggplot(df, aes(x = PF)) +
                    fill = "grey") +
   xlim(170, 190) +
 stat_function(fun = dnorm, args = list(mean = 180, sd = 5), colour = "red") + theme_bw() + ylab("") + xlab("") + 
-  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01)) + 
-  geom_rug(aes(x = PF, y = NULL))
+  scale_y_continuous(name = "", breaks = seq(0, 0.08, by = 0.01))
 
 ggpubr::ggarrange(kuva1, kuva2, kuva3, kuva4, ncol = 2, nrow = 2)
 ```
@@ -319,16 +315,16 @@ T(Y) = g(Y_1, \ldots, Y_n).
 $$
 
 - __Tunnusluvut ovat satunnaismuuttujien funktioina myös satunnaismuuttujia.__
-  - **Tunnusluvun havaittu arvo** (realisaatio) pisteessä ($y_1,\ldots, y_n$) eli havaitussa aineistossa on  
+  - Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea __tunnuslukujen havaitut arvot__ (jolloin ne ovat siis ei-satunnaisia). (realisaatio) pisteessä ($y_1,\ldots, y_n$) eli havaitussa aineistossa on
 
 $$
 t(y) = g(y_1, \ldots, y_n).
 $$
-  - Esimerkkinä tunnusluvusta on keskiarvo $\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i$.
-  - Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia). 
-  - Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.
 
-- Jos tunnuslukua $T(Y)$ käytetään tilastollisen mallin parametrin (parametrien) $\theta$ estimointiin, niin tätä sanotaan tällöin parametrin __estimaattoriksi__, jota merkitään $\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)$.
+- Esimerkkinä tunnusluvusta on keskiarvo $\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i$. 
+  - Otoskeskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta, ts. $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$.
+
+- Jos tunnuslukua $T(Y)$ käytetään tilastollisen mallin parametrin (parametrien) $\theta$ estimointiin, niin tätä sanotaan tällöin parametrin __estimaattoriksi__, jota voidaan merkitä $\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)$.
   - Estimaattorin otoskohtaisia arvoja kutsutaan __estimaateiksi__ ja merkitään $\widehat{\theta}(y)$.
   - Estimaattorilla on nk. todellinen arvo, $g(\theta)$, joka vastaa parametrin arvoa perusjoukon tasolla ja jota pyritään aineistoa käyttäen estimoimaan.
   - Toivottavaa olisi, että estimaatit $\widehat{\theta}(y) = g(y_1, \ldots, y_n)$ osuisivat mahdollisimman lähelle tunnusluvun todellista arvoa $g(\theta)$. Ts. satunnaismuuttujan eli tässä tapauksessa estimaattorin $\widehat{\theta}(Y)=g(Y_1, \ldots, Y_n)$ jakauman tulisi keskittyä mahdollisimman tiiviisti $g(\theta)$:n ympärille.
@@ -351,8 +347,8 @@ __Uskottavuusfunktio__
 __Esimerkki: Normaalisti jakautuneen aineiston parametrien estimointi__
 
 - Normaalijakauma on odotusarvon suhteen symmetrinen jakauma, joten odotusarvon estimointi voidaan perustaa havaitun aineiston "sijaintiin".   
-  - Toisin sanoen, normaalisti jakautuneen aineiston odotusarvon estimaattorina toimii havaintoarvojen otoskeskiarvo, josta lisää alaluvussa \@ref(alaluku84).   
-- Vastaavasti normaalisti jakautuneen aineiston varianssi kuvaa havaintoarvojen keskittuneisyyttä/hajaantuneisuutta odotusarvon ympärillä.
+  - Toisin sanoen, normaalisti jakautuneen aineiston odotusarvon estimaattorina toimii havaintoarvojen otoskeskiarvo, josta lisää alaluvussa \@ref(alaluku84).
+- Vastaavasti normaalisti jakautuneen aineiston varianssi kuvaa havaintoarvojen keskittyneisyyttä/hajaantuneisuutta odotusarvon ympärillä.
 
 - Uskottavuuspohjaisen päättelyn toimintaperiaatetta voidaan kuvata jälleen käyttäen normaalijakautunutta aineistoa esimerkkinä. 
   - Jatkaen edellistä esimerkkiä, kuvassa \@ref(fig:normaaliSUE) on kuvattuna $n=100$ satunnaisotos normaalijakaumasta histogrammina. 
@@ -370,16 +366,15 @@ ggplot(df, aes(x = PF)) +
                    colour = "black", 
                    fill = "grey") +
   xlim(165,200) +
-  stat_function(fun = dnorm, args = list(mean = 170, sd = 15), aes(colour = "line1")) +
-  stat_function(fun = dnorm, args = list(mean = 190, sd = 3),  aes(colour = "line2")) +
+  stat_function(fun = dnorm, args = list(mean = 170, sd = 10), aes(colour = "line1")) +
+  stat_function(fun = dnorm, args = list(mean = 190, sd = 2),  aes(colour = "line2")) +
   stat_function(fun = dnorm, args = list(mean = 180, sd = 5),  aes(colour = "line3")) +
-  stat_function(fun = dnorm, args = list(mean = 185, sd = 10), aes(colour = "line4")) + theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Tiheysfunktiot") + 
+  stat_function(fun = dnorm, args = list(mean = 185, sd = 8), aes(colour = "line4")) + theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Tiheysfunktiot") + 
   scale_colour_manual(values = c("line1" = "darkgreen", 
                                  "line2" = "deepskyblue3", 
                                  "line3" = "red", 
                                  "line4" = "darkorange"),
-                      labels = c("N(170,15)", "N(190,3)", "N(180,5)", "N(185,10)")) + 
-  geom_rug(aes(x = PF, y = NULL))
+                      labels = c("N(170,100)", "N(190,4)", "N(180,25)", "N(185,64)"))
   
 ```
 
@@ -447,7 +442,7 @@ $$
 \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i.
 $$
 
-  - Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+  - Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen satunnaisotannasta johtuen.
   - Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan $\mu$, on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts. 
 
 $$\text{E}(\bar{Y}) = \mu$$
@@ -459,7 +454,7 @@ __Otosvarianssi__
 
 - Aineiston sisältämää vaihtelua kuvataan __otosvarianssilla__
 $$
-S^2= \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2.
+S^2= \frac{1}{n-1} \sum_{i=1}^{n} (Y_i - \bar{Y})^2.
 $$
 
   - Vastaavasti sm:jien vaihtelua perusjoukon tasolla kuvataan __populaatiovarianssilla__
@@ -469,21 +464,19 @@ $$
 $$
 jota otosvarianssi harhattomasti estimoi.
 
-- Huomioi, että __otosvarianssi__ on eri asia kuin __otoskeskiarvon varianssi__.
-
-- Otoskeskiarvo $\bar{Y}$ ja otosvarianssi $S^2$ ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
+- Otoskeskiarvo $\bar{Y}$ ja otosvarianssi $S^2$ ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat $\bar{y}$ ja $s^2$ satunnaisesti otoksesta toiseen.
 
 ::: {.eblock .kimmo data-latex="{}"}
 __Esimerkki: Normaalisti jakautuneen aineiston parametrien estimointi__
 
 - Edellisiä esimerkkejä jatkaen, tarkastellaan seuraavaksi normaalisti jakautuneen aineiston parametriestimaatteja. 
 - Kuvassa \@ref(fig:normaaliSUE2) on jälleen $n=100$ kokoinen otos normaalijakaumasta parametrein $\mu = 180$ ja $\sigma^2 = 25$.  
-- Generoidusta aineistosta lasketaan otoskeskiarvoksi $\bar{y} = 180.48$ ja otosvarianssiksi $S^2 = 20.88$.  
+- Generoidusta aineistosta lasketaan otoskeskiarvoksi $\bar{y} = 180.5$ ja otosvarianssiksi $s^2 = 20.9$.  
   - Huomataan että otoskeskiarvo on todella lähellä oikeaa odotusarvoparametrin arvoa, mutta otosvarianssi on paljon pienempi. 
 :::
 
 \FloatBarrier
-```{r normaaliSUE2, echo=FALSE, fig.cap="Normaalisti jakautuneen aineiston parametrien estimointi.", fig.align='center', out.width="100%", warning=FALSE}
+```{r normaaliSUE2, echo=FALSE, fig.cap="Normaalisti jakautuneen aineiston havainnollistus. 'Oikean jakauman' tiheysfunktion lisäksi (yhteen otokseen perustuvien) estimoitujen parametrien mukainen jakauma.", fig.align='center', out.width="100%", warning=FALSE}
 set.seed(4)
 df <- data.frame(PF = rnorm(100, 180, sqrt(25)))
 #mean(df$PF);var(df$PF) #180.4826; 20.8791
@@ -498,8 +491,7 @@ ggplot(df, aes(x = PF)) +
  theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Tiheysfunktiot") + 
   scale_colour_manual(values = c("line1" = "red", 
                                 "line2" = "darkgreen"), 
-                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(180.48, 20.88)")) + theme(legend.position="bottom") + 
-  geom_rug(aes(x = PF, y = NULL))
+                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(180.5, 20.9)")) + theme(legend.position="bottom")
   
 ```
 \FloatBarrier
@@ -507,11 +499,11 @@ ggplot(df, aes(x = PF)) +
 __Esimerkki: Normaalisti jakautuneen aineiston parametrien estimointi (jatkuu)__
 
 - Generoidaan seuraavaksi suurempi satunnaisotos samasta aineistosta valitsemalla $n=1000$. Tämä on kuvattu kuvaajassa \@ref(fig:normaaliSUE3).  
-- Nyt estimaateiksi saadaan $\bar{y} = 179.83$ ja $S^2 = 23.49$.  
-  - Otoskeskiarvo on taas varsin hyvä arvio oikeasta parametriarvosta ja otosvarianssikin on nyt lähempänä oikeaa. Otoskokoa kasvattamalla estimaatit lähestyisivät oikeita parametriarvoja. 
+- Nyt estimaateiksi saadaan $\bar{y} = 179.83$ ja $s^2 = 23.49$.  
+  - Otoskeskiarvo on taas varsin hyvä arvio oikeasta parametriarvosta ja otosvarianssikin on nyt lähempänä oikeaa. Otoskokoa kasvattamalla estimaatit lähestyisivät oikeita parametriarvoja, mikä (yleisellä tasolla tässä kohtaa) liittyy niiden estimaattorien tarkentuvuusominaisuuteen (ks. yläpuolella). 
 :::
 
-```{r normaaliSUE3, echo=FALSE, fig.cap="Normaalisti jakautuneen aineiston parametrien estimointi, suurempi otoskoko.", fig.align='center', out.width="100%", warning=FALSE}
+```{r normaaliSUE3, echo=FALSE, fig.cap="Normaalisti jakautuneen aineiston havainnollistus, suurempi otoskoko.", fig.align='center', out.width="100%", warning=FALSE}
 set.seed(4)
 df <- data.frame(PF = rnorm(1000, 180, sqrt(25)))
 #mean(df$PF);var(df$PF) #179.8279; 23.48873
@@ -526,8 +518,7 @@ ggplot(df, aes(x = PF)) +
  theme_bw() + labs(x = "Havaintoarvot", y = "", color = "Funktiot") + 
   scale_colour_manual(values = c("line1" = "red", 
                                 "line2" = "darkgreen"), 
-                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(179.83, 23.49)")) + theme(legend.position="bottom") + 
-  geom_rug(aes(x = PF, y = NULL))
+                      labels = c("Oikeat parametriarvot: N(180,25)", "Estimoidut parametriarvot: N(179.83, 23.49)")) + theme(legend.position="bottom")
   
 ```
 
@@ -567,4 +558,4 @@ $$
 - Estimaattori ja estimaatti
 - (Hyvän) estimaattorin ominaisuuksia: Harhattomuus, tyhjentävyys, tehokkuus ja tarkentuvuus
 - Otoskeskiarvo ja otosvarianssi estimaattoreina
-- Normaalisti jakautunut satunnaisotos
+- Normaalistijakautunut satunnaisotos

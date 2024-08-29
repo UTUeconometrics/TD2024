@@ -191,7 +191,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-08-21}
+\date{2024-08-29}
 
 \begin{document}
 \maketitle
@@ -297,7 +297,7 @@
     Tilastotieteen sanasto suomi-englanti-suomi, ks.Juha Alho, Elja Arjas, Juha Karvanen, Lasse Leskelä, Esa Läärä ja Pekka Pere (2023). \href{https://sanasto.tilastoseura.fi/.}{Tilastotieteen sanasto. Verkkoversio 9.4.2023. Suomen Tilastoseura.}
   \end{itemize}
 \item
-  Suuret kiitokset VTM Visa Kuntzelle ja VTM Emil Lehdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
+  Suuret kiitokset VTM Visa Kuntzelle, VTM Emil Lehdelle ja filosofian ylioppilas Roni Karjanlahdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
 \end{itemize}
 
 \hypertarget{osaamistavoitteet}{%
@@ -1433,7 +1433,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
   \item
     \emph{Vale, emävale, tilasto}.\footnote{\href{https://fi.wikipedia.org/wiki/Mark_Twain}{Mark Twain} popularisoi tämän lausahduksen teoksessaan \emph{Chapters from My Autobiography} jo vuonna 1907. Huomionarvoista toki on, että valtaosa ``modernin'' tilastotieteen, jolle nykytilastotiede pohjautuu, teoriakehityksestä on tapahtunut vasta Twainin teoksen julkaisun jälkeen. Esimerkiksi Ronald Fisher, jota pidetään modernin tilastotieteen isänä, julkaisi merkityksellisimmät työnsä vasta 1920- ja 30-lukujen aikana. Tällä lentävällä lausahduksella ei siis ole mitään tekemistä nykyisten tilastollisten menetelmien kanssa.}
   \item
-    \emph{Statistics concerns what can be learned from data}.\footnote{(A.C. Davison)}
+    \emph{Statistics concerns what can be learned from data}.\footnote{Davison, A.C. (2003) Statistical Models. Cambridge University Press.}
   \item
     \emph{``Maalaisjärjen tehostamista''}.\footnote{Sund, (2003)}
   \end{itemize}
@@ -1487,9 +1487,9 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
       \begin{itemize}
       \tightlist
       \item
-        Tilastoala = Tilastotiede + Tilastotoimi\\
+        Tilastoala = Tilastotiede + Tilastotoimi
       \item
-        Tilastotiede = Teoreettinen tilastotiede + Soveltava tilastotiede\\
+        Tilastotiede = Teoreettinen tilastotiede + Soveltava tilastotiede
       \item
         Tilastotoimi = Tilastojen tuotanto + Tilastojen hyödyntäminen
       \end{itemize}
@@ -1545,7 +1545,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
   \begin{itemize}
   \tightlist
   \item
-    Tilastotiede ei siis kuulu yksiselitteisesti sen lähitieteiden alle, vaan muodostaa oman tieteenalan omine teorioineen ja tieteellisine premisseineen. Käsittelemme myöhemmin tilastotieteen roolia matematiikan ja/tai datatieteiden (``data science'') kokonaisuudessa ja keskustelemme tarkemmin näiden erojen luonteesta.
+    Tilastotiede ei siis kuulu yksiselitteisesti sen lähitieteiden alle, vaan \textbf{muodostaa oman tieteenalan} omine teorioineen ja tieteellisine premisseineen. Käsittelemme myöhemmin tilastotieteen roolia matematiikan ja/tai datatieteiden (``data science'') kokonaisuudessa ja keskustelemme tarkemmin näiden erojen luonteesta.
   \end{itemize}
 \end{itemize}
 
@@ -1654,7 +1654,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
 \begin{itemize}
 \tightlist
 \item
-  Yritetään siis vielä hahmotella tilastotieteen suhdetta sitä lähimpänä olevaan (soveltavaan) matematiikkaan.
+  Yritetään siis vielä hahmotella tilastotieteen suhdetta sitä lähimpänä olevaan (soveltavaan/sovellettuun) matematiikkaan.
 
   \begin{itemize}
   \tightlist
@@ -1676,7 +1676,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
     \end{itemize}
   \end{itemize}
 \item
-  Ilmiöiden kuvaamiseen ja käyttäytymisen ennakoimiseen käytetään usein \textbf{mallia}. Mallit (matemaattiset/tilastolliset mallit) voidaan jakaa \textbf{deterministisiin} ja \textbf{stokastisiin} malleihin.
+  Matemaattiset/tilastolliset mallit voidaan jakaa \textbf{deterministisiin} ja \textbf{stokastisiin} malleihin.
 
   \begin{itemize}
   \tightlist
@@ -1779,6 +1779,12 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
     Ko. soveltaja ottaa mallin sekä sen antaman ennustetuloksen annettuna, eikä mieti \emph{mistä kyseinen ennustetulos johtuu}. Jotta tarkat ennustetulokset toteutuvat jatkossakin (kun uutta aineistoa, dataa, tulee saataville), on ennustajan oleellista huomioida mitkä tekijät johtivat tarkkaan ennustulokseen.
   \item
     Eri menetelmät sopivat eri sovelluskohteisiin. Tilastotieteilijä osaa useimmiten tunnistaa eri sovelluskohteisiin sopivat menetelmät paremmin kuin tietojenkäsittelijä. Vastaavasti tehokkaan/onnistuneen ohjelmointikoodin kirjoittamisessa tilanne on usein toisinpäin.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Ajoittain sovelluskohteet tai ennusteongelmat ovat riippuvuusrakenteiltaan niin monimutkaisia, että kovin vahvoja tulkintoja ei ole edes mahdollista muodostaa!
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 
@@ -2233,7 +2239,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
   \begin{itemize}
   \tightlist
   \item
-    \textbf{``Kolmannen tyypin virhe''}: kun tilastollisia menetelmiä käyttämällä saadaan oikeita vastauksia, mutta vääriin kysymyksiin! Esimerkiksi jos tutkija ei täysin ymmärrä minkälaisia vastauksia käytettävissä olevasta aineistosta ja valitulla menetelmällä voidaan saada, voi hän syyllistyä kolmannen tyypin virheeseen. Tällöin voi nimittäin käydä niin, että hän tulkitsee tilastolliset testit täysin oikein, mutta luulee väärin niiden vastaavaan eri kysymykseen kuin on esitetty.
+    \textbf{``Kolmannen tyypin virhe''}: kun tilastollisia menetelmiä käyttämällä saadaan oikeita vastauksia, mutta vääriin kysymyksiin! Esimerkiksi, jos tutkija ei täysin ymmärrä minkälaisia vastauksia käytettävissä olevasta aineistosta ja valitulla menetelmällä voidaan saada, voi hän syyllistyä kolmannen tyypin virheeseen. Tällöin voi nimittäin käydä niin, että hän tulkitsee tilastolliset testit täysin oikein, mutta luulee väärin niiden vastaavaan eri kysymykseen kuin on esitetty.
   \item
     Black-box ilmiö: saadaan \emph{ehkä} oikeita vastauksia, mutta ei tiedetä \emph{miksi} ja \emph{mihin} kysymyksiin.
 
@@ -2244,6 +2250,8 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
     \end{itemize}
   \end{itemize}
 \end{itemize}
+
+\newpage
 
 \begin{eblock}{}
 
@@ -2336,7 +2344,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
     \item
       \href{https://en.wikipedia.org/wiki/Mathematical_statistics}{Matemaattinen tilastotiede,}
     \item
-      \href{https://en.wikipedia.org/wiki/Probability}{Todennäkäsyyslaskenta,}
+      \href{https://en.wikipedia.org/wiki/Probability}{Todennäköisyyslaskenta,}
     \item
       \href{https://en.wikipedia.org/wiki/Operations_research}{Operaatioanalyysi}
     \end{itemize}
@@ -2815,7 +2823,7 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
 
 }
 
-\caption{[Taloustutkimuksen Ylelle](https://yle.fi/a/74-20096107) teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista (aakkosjärjestyksessä).}\label{fig:kannatusmittaus}
+\caption{Taloustutkimuksen Ylelle (https://yle.fi/a/74-20096107) teettämän eduskuntavaalien kannatustutkimukseen vastanneiden valitsemien puolueiden osuus vastanneista (aakkosjärjestyksessä).}\label{fig:kannatusmittaus}
 \end{figure}
 
 \textbf{Parametrien estimointi ja niiden testaus}
@@ -3700,7 +3708,7 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
   \item
     Esimerkiksi perinteiset katukyselyt eivät ole hyvä otantatapa, sillä kadulla liikkujat eivät välttämättä kovin hyvin edusta tutkittavaa perusjoukkoa, ellei perusjoukkona ole kyseisellä kadulla kyseiseen aikaan liikkuvat ihmiset.
   \item
-    Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyseisiä kyselytuloksia harvemmin tulkitaan.
+    Vastaavasti surullisenkuuluisat X:ssä (ent. Twitter) toteutetut, tietyn henkilön omalle seuraajakunnalleen osoittamat kyselyt eivät muodosta edustavaa otosta edes X:n käyttäjistä, saati sitten koko kohdeperusjoukosta! (Ellei sitten kohdeperusjoukko ole juurikin kyseisen käyttäjän seuraajat, joskin näin kyseisiä kyselytuloksia harvemmin tulkitaan.)
   \end{itemize}
 \item
   \textbf{Koska näyte ei ole edustava otos, ei sen perusteella voida tehdä perusjoukkoa koskevia yleistyksiä luotettavasti.}
@@ -4143,6 +4151,26 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   \end{itemize}
 \end{itemize}
 
+\hypertarget{alaluku55}{%
+\section{Otannan haasteita}\label{alaluku55}}
+
+\begin{itemize}
+\item
+  \textbf{Poimintaharha}: Otos ei edusta populaatiota. Vaarana varsinkin silloin, kun otokseen tulleet populaation alkiot ovat valikoituneet tai ovat itse valinneet itsensä otokseen. Vastaavasti toisinaan otoksen peitto ei ole hyvä eli tällöin otanta ei kata koko perusjoukkoa tai se kattaa perusjoukon ja vähän muutakin.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Jos television ajankohtaisohjelma pyytää katsojia twiittaamaan mielipiteensä ajankohtaisesta asiasta, kyseessä on itse valikoituva näyte (osallistujat valitsevat itse itsensä).
+  \end{itemize}
+\item
+  \textbf{Vajaapeittävyys}: Populaation alkioista ei ole välttämättä täydellistä luetteloa.
+\item
+  \textbf{Vastauskato}: Tutkimuksen kohteita ei tavoiteta tai he kieltäytyvät vastaamatta. Kadon vuoksi lopullinen otoskoko saattaa jopa karsiutua pois tai jokin osajoukko on aliedustettuna.
+\item
+  \textbf{Vastausharha}: Kysymykset voivat olla huonosti muotoiltuja tai vastaajat voivat antaa vääriä tietoja.
+\end{itemize}
+
 \hypertarget{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
 \section{Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
@@ -4515,7 +4543,7 @@ jossa siis \(\sigma_X = \sqrt{\mathrm{Var}(X)} = \sqrt{\text{D}^2(X)}\) ja \(\si
 \begin{defblock}{}
 \textbf{Pearsonin otoskorrelaatiokerroin}
 
-Havaintoarvojen \((x_i, y_i)\) pareista laskettu \textbf{otoskovarianssi} on
+Havaintoarvojen pareista \((x_i, y_i)\) laskettu \textbf{otoskovarianssi} on
 \[
 s_{xy} = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x}) (y_i - \bar{y}),
 \]
@@ -4622,7 +4650,7 @@ jossa \(s_{xy}\) on \(x\)- ja \(y\)-havaintoarvojen otoskovarianssi, \(s_x\) on 
 \item
   Kausaalisuhteita selvitettäessä on tunnettava etukäteen ilmiötä koskevat aiemmat teoriat ja tutkimukset tarkasti, jotta voidaan ottaa huomioon ilmiöön vaikuttavat tekijät
 \item
-  Todellisuus on usein monimutkaisempi, kuin mitä kausaalisuhde kuvaa: \textbf{kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä}
+  Todellisuus (ja mahdollinen kausaalisuussuhde) on usein monimutkaisempi, kuin mitä tällainen yksinkertainen (kahden muuttujan välinen) analyysi kykenee kuvaamaan: \textbf{kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä}
 
   \begin{itemize}
   \tightlist
@@ -4972,7 +5000,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
     \item
       Tämän jälkeen jokaiseen perusjoukon alkioon voidaan liittää numeeriset tunnukset.
     \item
-      Sitten valitaan haluttu otoksen koko. Otoskoon määrittäminen on keskeinen osa koesuunnittelua, ks. luku \ref{alaluku66}
+      Sitten valitaan haluttu otoksen koko. Otoskoon määrittäminen on keskeinen osa koesuunnittelua, ks. luku \ref{alaluku92}
     \item
       Otantakehikosta arvotaan perusjoukon alkiot otokseen yksi kerrallaan.
     \item
@@ -5337,34 +5365,6 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 
 \end{eblock}
 
-\hypertarget{alaluku73}{%
-\section{Otannan haasteita vielä kootusti}\label{alaluku73}}
-
-\begin{itemize}
-\item
-  \textbf{Poimintaharha}: Otos ei edusta populaatiota. Vaarana varsinkin silloin, kun otokseen tulleet populaation alkiot ovat valikoituneet tai ovat itse valinneet itsensä otokseen. Vastaavasti toisinaan otoksen peitto ei ole hyvä eli tällöin otanta ei kata koko perusjoukkoa tai se kattaa perusjoukon ja vähän muutakin.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Jos television ajankohtaisohjelma pyytää katsojia twiittaamaan mielipiteensä ajankohtaisesta asiasta, kyseessä on itse valikoituva näyte (osallistujat valitsevat itse itsensä).
-  \end{itemize}
-\item
-  Jos poimitaan tutkimukseen ne perusjoukon alkiot, jotka ovat tutkimuksen tekemishetkellä `saatavilla', niin kyseessä on \textbf{näyte}. Näyte ei siis kata ilmiön koko vaihtelua edustavan satunnaisotoksen tapaan.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Esimerkiksi perinteiset katukyselyt eivät ole hyvä otantatapa, sillä kadulla liikkujat eivät välttämättä kovin hyvin edusta tutkittavaa perusjoukkoa, ellei perusjoukkona ole kyseisellä kadulla kyseiseen aikaan liikkuvat ihmiset.
-  \end{itemize}
-\item
-  \textbf{Vajaapeittävyys}: Populaation alkioista ei ole välttämättä täydellistä luetteloa
-\item
-  \textbf{Vastauskato}: Tutkimuksen kohteita ei tavoiteta tai he kieltäytyvät vastaamatta. Kadon vuoksi lopullinen otoskoko saattaa jopa karsiutua pois tai jokin osajoukko on aliedustettuna.
-\item
-  \textbf{Vastausharha}: Kysymykset voivat olla huonosti muotoiltuja tai vastaajat voivat antaa vääriä tietoja.
-\end{itemize}
-
 \hypertarget{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
 \section{Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
 
@@ -5387,7 +5387,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 \hypertarget{luku8}{%
 \chapter{Satunnaisotokset: tilastollisen päättelyn näkökulma}\label{luku8}}
 
-Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä luku toimii esimerkkinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka ideana on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027}{TILM3553}) jälkeiselle tilastollisen päättelyn peruskurssille (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027}{TILM3555}).
+Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä ja seuraava luku toimivat esimerkkeinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka idea on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027}{TILM3553}) jälkeiselle tilastollisen päättelyn peruskurssille (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027}{TILM3555}).
 
 \hypertarget{alaluku81}{%
 \section{Satunnaisotos, yhteisjakauma ja tilastollinen malli}\label{alaluku81}}
@@ -5395,7 +5395,7 @@ Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä ede
 \begin{itemize}
 \tightlist
 \item
-  Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on satunnaisilmiöt, joita kuvataan satunnaismuuttujia käyttäen. Satunnaismuuttujilla on todennäköisyysjakaumat, joita tilastotieteessä kuvataan todennäköisyys- eli tiheysfunktion (tai pistetodennäköisyysfunktion) avulla.
+  Luvusta 4 muistamme, että tilastollisen tutkimuksen kohteena on satunnaisilmiöt, joita kuvataan satunnaismuuttujia käyttäen. Satunnaismuuttujilla on todennäköisyysjakaumat, joita tilastotieteessä kuvataan todennäköisyys- eli tiheysfunktion (tai diskreettien sm:n tapauksessa pistetodennäköisyysfunktion) avulla.
 
   \begin{itemize}
   \tightlist
@@ -5443,10 +5443,10 @@ Parametrin \(\theta\) arvoa ei yleensä tunneta ja tavoitteena onkin päätellä
   \item
     Koska tällä kurssilla satunnaismuuttujat \(Y_1, \ldots, Y_n\) oletetaan \textbf{riippumattomiksi toisiinsa nähden}, niiden yhteisjakauma on tulomuotoa \(f(y_1, \ldots, y_n; \theta) = f(y_1; \theta) \times \cdots \times f(y_n; \theta)\).
   \item
-    Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston \(y_1\,dots,y_n\) avulla estimoimaan parametrin \(\theta\) arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.
+    Tilastollisen päättelyn ensimmäinen tavoite ja tehtävä on pyrkiä havaitun aineiston \(y_1,\dots,y_n\) avulla estimoimaan parametrin \(\theta\) arvo niin, että havaintojen yhteisjakauma kuvaa aineistoa parhaalla mahdollisella tavalla.
   \end{itemize}
 \item
-  Tässä \(f(y_1, \ldots, y_n; \theta)\) on siis tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli.
+  Tässä \(f(y_1, \ldots, y_n; \theta)\) on siis (tilastomatemaattisessa mielessä) tilastollinen malli: sen muodon määrää tutkijan tekemä aineistoa koskeva jakaumaoletus, mikä voi paikoin olla hyvinkin monimutkainen. Tilastollisen mallin monimutkaisuus ilmenee sen parametrien määrästä: mitä useampi parametri (erit. suhteessa havaintojen määrään), sitä monimutkaisempi malli.
 
   \begin{itemize}
   \tightlist
@@ -5528,7 +5528,7 @@ Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemm
   \]
 \end{itemize}
 
-jossa \(e\) viittaa Neperin lukuun \(e \approx 2,71828\).
+jossa \(e\) viittaa Neperin lukuun \(e \approx 2.71828\).
 
 \begin{itemize}
 \tightlist
@@ -5752,7 +5752,7 @@ Varianssi & 1.316 & 1.172 & 2.618\\
 \begin{eblock}{}
 Tuloksista voidaan siis päätellä, että kotijoukkueen (odotettavissa oleva) maalimäärä on vierasjoukkuetta korkeampi (osoittaen kotiedun merkitystä jalkapallossa). Lisäksi edellä todetun Poisson-jakauman teoreettisten ominaisuuksien mukaisesti keskimääräiset maalimäärät ovat lähellä niiden variansseja, mikä osoittaa osaltaan (tässä yksinkertaistetussa tilanteessa), että Poisson-jakaumaan perustuva jakaumaoletus on kelvollinen.
 
-On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisen menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
+On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sijaan tilastotieteessä on laaja ja kasvava kirjallisuuden haara jalkapalloa ja muuta urheilua koskevien tilastollisten menetelmien saralla. Nämä vaativat kuitenkin syvällisemmän ymmärryksen saavuttamiseksi jälleen huomattavasti laajempia tilastotieteen (aine- ja syventäviä) opintoja.
 
 \end{eblock}
 
@@ -5794,12 +5794,12 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
 \begin{itemize}
 \tightlist
 \item
-  Satunnaisotoksen kuvaajat ovat nk. histogrammeja, joka on yleinen tapa esittää luokiteltua aineistoa.
+  Nämä satunnaisotoksen kuvaajat ovat nk. histogrammeja, joka on yleinen tapa esittää tämänkaltaista aineistoa (huom. luokittelut tehdään tässä siis graafisen esityksen aikaansaamiseksi).
 
   \begin{itemize}
   \tightlist
   \item
-    Tässä tapauksessa havainnot on luokiteltu havaittujen arvojen perustella niin, että jokainen havainto kuuluu yhteen luokkaan ja yhtä luokkaa kuvaa yksi pylväs.\\
+    Tässä tapauksessa jatkuvan muuttujan havaintoarvot on luokiteltu niin, että jokainen havainto kuuluu yhteen tasaväliseen luokkaan ja yhtä luokkaa kuvaa yksi pylväs.
   \item
     Pylvään korkeus määräytyy luokan sisältämien arvojen lukumäärän eli frekvenssin mukaan.
   \end{itemize}
@@ -5815,7 +5815,7 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
 
 }
 
-\caption{Normaalisti jakautunut aineisto vaihtelee samalla tavalla.}\label{fig:normaaliaineisto}
+\caption{Normaalisti jakautunut aineisto vaihtelee samalla tavalla. Harmaat palkit kuvaavat kyseiseen havaintoarvojen väliin kuuluvien havaintojen osuutta ja punainen käyrä on tarkasteltavan normaalijakauman tiheysfunktio.}\label{fig:normaaliaineisto}
 \end{figure}
 
 \begin{itemize}
@@ -5830,21 +5830,26 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Tunnusluvun havaittu arvo} (realisaatio) pisteessä (\(y_1,\ldots, y_n\)) eli havaitussa aineistossa on
+    Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea \textbf{tunnuslukujen havaitut arvot} (jolloin ne ovat siis ei-satunnaisia). (realisaatio) pisteessä (\(y_1,\ldots, y_n\)) eli havaitussa aineistossa on
   \end{itemize}
 \end{itemize}
 
 \[
 t(y) = g(y_1, \ldots, y_n).
 \]
-- Esimerkkinä tunnusluvusta on keskiarvo \(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\).
-- Otoksen poimimisen jälkeen, havaintoarvoja käyttäen, voidaan laskea tunnuslukujen havaitut arvot (jolloin ne ovat siis ei-satunnaisia).
-- Esimerkiksi keskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta.
 
 \begin{itemize}
 \tightlist
 \item
-  Jos tunnuslukua \(T(Y)\) käytetään tilastollisen mallin parametrin (parametrien) \(\theta\) estimointiin, niin tätä sanotaan tällöin parametrin \textbf{estimaattoriksi}, jota merkitään \(\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)\).
+  Esimerkkinä tunnusluvusta on keskiarvo \(\bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Otoskeskiarvo on havaittujen arvojen keskiarvo, kun se lasketaan kerätystä aineistosta, ts. \(\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i\).
+  \end{itemize}
+\item
+  Jos tunnuslukua \(T(Y)\) käytetään tilastollisen mallin parametrin (parametrien) \(\theta\) estimointiin, niin tätä sanotaan tällöin parametrin \textbf{estimaattoriksi}, jota voidaan merkitä \(\widehat{\theta}(Y) = g(Y_1,\dots,Y_n)\).
 
   \begin{itemize}
   \tightlist
@@ -5900,10 +5905,10 @@ t(y) = g(y_1, \ldots, y_n).
   \begin{itemize}
   \tightlist
   \item
-    Toisin sanoen, normaalisti jakautuneen aineiston odotusarvon estimaattorina toimii havaintoarvojen otoskeskiarvo, josta lisää alaluvussa \ref{alaluku84}.\\
+    Toisin sanoen, normaalisti jakautuneen aineiston odotusarvon estimaattorina toimii havaintoarvojen otoskeskiarvo, josta lisää alaluvussa \ref{alaluku84}.
   \end{itemize}
 \item
-  Vastaavasti normaalisti jakautuneen aineiston varianssi kuvaa havaintoarvojen keskittuneisyyttä/hajaantuneisuutta odotusarvon ympärillä.
+  Vastaavasti normaalisti jakautuneen aineiston varianssi kuvaa havaintoarvojen keskittyneisyyttä/hajaantuneisuutta odotusarvon ympärillä.
 \item
   Uskottavuuspohjaisen päättelyn toimintaperiaatetta voidaan kuvata jälleen käyttäen normaalijakautunutta aineistoa esimerkkinä.
 
@@ -6043,7 +6048,7 @@ Tarkentuvan estimaattorin \(\widehat{\theta}\) arvot lähestyvät parametrin \(\
 \begin{itemize}
 \tightlist
 \item
-  Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen johtuen satunnaisotannasta.
+  Otoskeskiarvo on satunnaismuuttuja, jonka saama arvo vaihtelee satunnaisesti otoksesta toiseen satunnaisotannasta johtuen.
 \item
   Kun satunnaismuuttujat ovat samoin jakautuneet odotusarvonaan \(\mu\), on otoskeskiarvo jakauman odotusarvon harhaton estimaattori, ts.
 \end{itemize}
@@ -6062,7 +6067,7 @@ Tarkentuvan estimaattorin \(\widehat{\theta}\) arvot lähestyvät parametrin \(\
 \item
   Aineiston sisältämää vaihtelua kuvataan \textbf{otosvarianssilla}
   \[
-  S^2= \frac{1}{n-1} \sum_{i=1}^{n} (y_i - \bar{y})^2.
+  S^2= \frac{1}{n-1} \sum_{i=1}^{n} (Y_i - \bar{Y})^2.
   \]
 
   \begin{itemize}
@@ -6078,10 +6083,9 @@ Tarkentuvan estimaattorin \(\widehat{\theta}\) arvot lähestyvät parametrin \(\
 jota otosvarianssi harhattomasti estimoi.
 
 \begin{itemize}
+\tightlist
 \item
-  Huomioi, että \textbf{otosvarianssi} on eri asia kuin \textbf{otoskeskiarvon varianssi}.
-\item
-  Otoskeskiarvo \(\bar{Y}\) ja otosvarianssi \(S^2\) ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
+  Otoskeskiarvo \(\bar{Y}\) ja otosvarianssi \(S^2\) ovat siis satunnaismuuttujia, joiden saamat arvot vaihtelevat \(\bar{y}\) ja \(s^2\) satunnaisesti otoksesta toiseen.
 \end{itemize}
 
 \begin{eblock}{}
@@ -6095,7 +6099,7 @@ jota otosvarianssi harhattomasti estimoi.
 \item
   Kuvassa \ref{fig:normaaliSUE2} on jälleen \(n=100\) kokoinen otos normaalijakaumasta parametrein \(\mu = 180\) ja \(\sigma^2 = 25\).\\
 \item
-  Generoidusta aineistosta lasketaan otoskeskiarvoksi \(\bar{y} = 180.48\) ja otosvarianssiksi \(S^2 = 20.88\).
+  Generoidusta aineistosta lasketaan otoskeskiarvoksi \(\bar{y} = 180.5\) ja otosvarianssiksi \(s^2 = 20.9\).
 
   \begin{itemize}
   \tightlist
@@ -6113,7 +6117,7 @@ jota otosvarianssi harhattomasti estimoi.
 
 }
 
-\caption{Normaalisti jakautuneen aineiston parametrien estimointi.}\label{fig:normaaliSUE2}
+\caption{Normaalisti jakautuneen aineiston havainnollistus. 'Oikean jakauman' tiheysfunktion lisäksi (yhteen otokseen perustuvien) estimoitujen parametrien mukainen jakauma.}\label{fig:normaaliSUE2}
 \end{figure}
 \FloatBarrier
 
@@ -6126,12 +6130,12 @@ jota otosvarianssi harhattomasti estimoi.
 \item
   Generoidaan seuraavaksi suurempi satunnaisotos samasta aineistosta valitsemalla \(n=1000\). Tämä on kuvattu kuvaajassa \ref{fig:normaaliSUE3}.\\
 \item
-  Nyt estimaateiksi saadaan \(\bar{y} = 179.83\) ja \(S^2 = 23.49\).
+  Nyt estimaateiksi saadaan \(\bar{y} = 179.83\) ja \(s^2 = 23.49\).
 
   \begin{itemize}
   \tightlist
   \item
-    Otoskeskiarvo on taas varsin hyvä arvio oikeasta parametriarvosta ja otosvarianssikin on nyt lähempänä oikeaa. Otoskokoa kasvattamalla estimaatit lähestyisivät oikeita parametriarvoja.
+    Otoskeskiarvo on taas varsin hyvä arvio oikeasta parametriarvosta ja otosvarianssikin on nyt lähempänä oikeaa. Otoskokoa kasvattamalla estimaatit lähestyisivät oikeita parametriarvoja, mikä (yleisellä tasolla tässä kohtaa) liittyy niiden estimaattorien tarkentuvuusominaisuuteen (ks. yläpuolella).
   \end{itemize}
 \end{itemize}
 
@@ -6143,7 +6147,7 @@ jota otosvarianssi harhattomasti estimoi.
 
 }
 
-\caption{Normaalisti jakautuneen aineiston parametrien estimointi, suurempi otoskoko.}\label{fig:normaaliSUE3}
+\caption{Normaalisti jakautuneen aineiston havainnollistus, suurempi otoskoko.}\label{fig:normaaliSUE3}
 \end{figure}
 
 \hfill\break
@@ -6205,9 +6209,9 @@ jota otosvarianssi harhattomasti estimoi.
 \righthyphenmin=62
 
 \hypertarget{luku9}{%
-\chapter{Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä}\label{luku9}}
+\chapter{Otosjakaumat ja epävarmuuden arvioiminen}\label{luku9}}
 
-Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusuluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa siis sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
+Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
 \hypertarget{otosjakauma-estimaattorit-ja-estimaatit}{%
 \section{Otosjakauma: estimaattorit ja estimaatit}\label{otosjakauma-estimaattorit-ja-estimaatit}}
@@ -6246,8 +6250,15 @@ Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa s
 \]
 
 \begin{itemize}
+\tightlist
 \item
   Standardipoikkeamaa kutsutaan myös \textbf{keskiarvon keskivirheeksi} ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon \(\mu\) ympärillä.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Huomioi, että \textbf{otoskeskiarvon varianssi} on eri asia kuin \textbf{otosvarianssi}.
+  \end{itemize}
 \item
   Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon \(\mu\) ympärille, kun otoskoko \(n\) kasvaa.
 
@@ -6372,7 +6383,7 @@ Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa s
 \item
   Suomen EU-kansanäänestyksessä vuonna 1994 jäsenyyttä kannattaneiden suhteellinen osuus oli 0,54 (54 \%).
 \item
-  Mikä olisi ollut tällöin tn., että ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
+  Mikä olisi ollut tällöin tn., että juuri ennen äänestystä 200 havainnon otoksessa kyllä-osuus olisi ollut alle 50 \%?
 \item
   Suhteellisen frekvenssin otosjakauman perusteella kyllä-kannatusosuuden jakauma olisi
   \[
@@ -6388,6 +6399,17 @@ Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa s
 \end{itemize}
 
 \end{eblock}
+
+\FloatBarrier
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/normaalilv1-1} 
+
+}
+
+\caption{Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä}\label{fig:normaalilv1}
+\end{figure}
+\FloatBarrier
 
 \hypertarget{alaluku91}{%
 \section{Luottamusvälit}\label{alaluku91}}
@@ -6641,7 +6663,7 @@ Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsema
 \item
   Luottamuskertoimet määrätään aiempaan tapaan:
   \[
-  \text{P}(-z_{\alpha/2} \le Z \le z_{\alpha/2}) = 1-\alpha,
+  \text{P}(-z_{\alpha/2} \le Z \le z_{\alpha/2}) = 1-\alpha.
   \]
 \item
   Näin ollen odotusarvoparametrin (suhteellisen osuuden) \(p\) \((1-\alpha)\)\% luottamusväliksi
@@ -6759,7 +6781,7 @@ Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsema
     \item
       Luottamustaso on todennäköisyys sille, että valitsemasi otos on tulosten kannalta oleellinen.
     \item
-      Jos joukosta poimitaan 30 otosta sattumanvaraisesti, kuinka usein yhdestä otoksesta saadut tulokset eroavat merkittävästi muista 30 otoksesta? Jos luotettavuustaso on 95 \%, samat johtopäätelmät saadaan 95 prosentissa tapauksista.
+      Jos joukosta poimitaan 30 otosta sattumanvaraisesti, kuinka usein yhdestä otoksesta saadut tulokset eroavat merkittävästi muista 30 otoksesta? Jos luottamustaso on 95 \%, samat johtopäätelmät saadaan 95 prosentissa tapauksista.
     \end{itemize}
   \end{itemize}
 \end{itemize}
@@ -6973,13 +6995,13 @@ n = \Big(\frac{z_{\alpha/2} \,\, \sqrt{p(1-p)}}{d} \Big)^2.
 \begin{itemize}
 \tightlist
 \item
-  Standardipoikkeama\\
+  Standardipoikkeama
 \item
-  Standardoitu satunnaismuuttuja\\
+  Standardoitu satunnaismuuttuja
 \item
-  Standardoidun aritmeettisen keskiarvon otosjakauma\\
+  Standardoidun aritmeettisen keskiarvon otosjakauma
 \item
-  Suhteellisen frekvenssin otosjakauma\\
+  Suhteellisen frekvenssin otosjakauma
 \item
   Luottamusväli
 \item
@@ -7000,7 +7022,7 @@ n = \Big(\frac{z_{\alpha/2} \,\, \sqrt{p(1-p)}}{d} \Big)^2.
 \hypertarget{luku10}{%
 \chapter{Regressioanalyysi}\label{luku10}}
 
-Tilastollinen riippuvuus ja korrelaatio -jakson laajennuksena pyrimme tässä luvussa vastaamaan seuraavaan kysymykseen: \emph{Miten jonkin selitettävän muuttujan tilastollista riippuvuutta joistakin toisista, selittäviksi muuttujiksi kutsutuista muuttujista voidaan mallintaa}? Muuttujien välisten riippuvuuksien, eli erilaisten tosielämän asioiden ja ilmiöiden välisten yhteyksien analysointi on tavallisesti keskeinen kysymys tieteellisessä tutkimuksessa. Regressioanalyysi on yksi tunnetuimpia ja eniten sovellettuja \textbf{tilastollisia menetelmiä} kuvaamaan kahden muuttujan \textbf{tilastollista riippuvuutta}.
+Tilastollinen riippuvuus ja korrelaatio -jakson (luku \ref{luku6}) laajennuksena pyrimme tässä luvussa vastaamaan seuraavaan kysymykseen: \emph{Miten jonkin selitettävän muuttujan tilastollista riippuvuutta joistakin toisista, selittäviksi muuttujiksi kutsutuista muuttujista voidaan mallintaa}? Muuttujien välisten riippuvuuksien, eli erilaisten tosielämän asioiden ja ilmiöiden välisten yhteyksien analysointi on tavallisesti keskeinen kysymys tieteellisessä tutkimuksessa. Regressioanalyysi on yksi tunnetuimpia ja eniten sovellettuja \textbf{tilastollisia menetelmiä} kuvaamaan kahden muuttujan \textbf{tilastollista riippuvuutta}.
 
 Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien välillä näyttäisi olevan järkevä (asialooginen) yhteys, niin päästään ``malliajatteluun''. Ts. pyritään rakentamaan tilastollista mallia kys. aineistolle. Pyritään siis muodostaa tilastollinen malli että se valitun kriteeristön perusteella parhaiten kuvaa analysoitavaa pistejoukkoa.
 
@@ -7045,14 +7067,14 @@ Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien väl
   \begin{itemize}
   \tightlist
   \item
-    Lineaarisella regressiomallilla voidaan usein vähintään kohtuullisella (riittävällä) tarkkuudella approksimoida epälineaarisiakin muuttujien välisiä riippuvuuksia!
+    Lineaarisella regressiomallilla voidaan usein vähintään kohtuullisella (riittävällä) tarkkuudella approksimoida (jossain määrin) epälineaarisiakin muuttujien välisiä riippuvuuksia!
   \item
     Muuttujien välinen epälineaarinen riippuvuus voidaan usein myös linearisoida käyttäen sopivia muunnoksia alkuperäisiin muuttujiin.
   \item
     Epälineaariset regressiomallit muodostavat oman tilastollisten (regressio)mallien luokkansa (joita ei käsitellä tällä kurssilla, mutta kylläkin myöhemmissä tilastotieteen opinnoissa).
   \end{itemize}
 \item
-  Regressiomalleja käytetään apuvälineinä monilla tilastotieteen osa-alueilla. Esimerkkejä regressiomallien käyttökohteista tilastotieteessä:
+  Regressiomalleja käytetään apuvälineinä monilla tilastotieteen osa-alueilla (ks. alaluku \ref{alaluku36}. Esimerkkejä regressiomallien käyttökohteista tilastotieteessä:
 
   \begin{itemize}
   \tightlist
@@ -7097,14 +7119,14 @@ Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien väl
   \end{itemize}
 \end{itemize}
 
-Tällä kurssilla käsitellään vain \textbf{lineaarisia yhden yhtälön regressiomalleja}. Kuitenkin luvussa \ref{alaluku103} esitellään lyhyesti minkälaisia laajennuksia tälle regressioanalyysin perustilanteelle tyypillisesti käsitellään.
+Tällä kurssilla käsitellään vain \textbf{lineaarisia yhden selittäjän (ja yhtälön) regressiomalleja}. Kuitenkin luvussa \ref{alaluku103} esitellään lyhyesti minkälaisia laajennuksia tälle regressioanalyysin perustilanteelle tyypillisesti käsitellään.
 
 \hypertarget{alaluku102}{%
 \section{Yhden selittäjän lineaarinen regressiomalli}\label{alaluku102}}
 
 \begin{itemize}
 \item
-  Yhden selittäjän lineaarinen regressiomalli pyrkii selittämään selitettävän muuttujan havaittujen arvojen vaihtelun yhden selittävän muuttujan havaittujen arvojen vaihtelun avulla. Se on siis yksinkertaisin esimerkki yhden yhtälön lineaarisista regressiomalleista, sillä se sisältää vain yhden selittävän muuttujan useamman sijaan.
+  Yhden selittäjän lineaarinen regressiomalli pyrkii selittämään selitettävän muuttujan havaittujen arvojen vaihtelun yhden selittävän muuttujan havaittujen arvojen vaihtelun avulla. Se on siis yksinkertaisin esimerkki yhden selittäjän lineaarisista regressiomalleista, sillä se sisältää vain yhden selittävän muuttujan useamman sijaan.
 
   \begin{itemize}
   \tightlist
@@ -7142,9 +7164,9 @@ Tällä kurssilla käsitellään vain \textbf{lineaarisia yhden yhtälön regres
   \def\labelenumi{\roman{enumi})}
   \tightlist
   \item
-    Selitettävä muuttuja Y on suhdeasteikollinen satunnaismuuttuja.
+    Selitettävä muuttuja \(Y\) on suhdeasteikollinen satunnaismuuttuja.
   \item
-    Selittävä muuttuja x on kiinteä eli ei-satunnainen muuttuja.
+    Selittävä muuttuja \(x\) on kiinteä eli ei-satunnainen muuttuja.
   \end{enumerate}
 \item
   Olkoot \(y_1, y_2,\ldots, y_n\) selitettävän muuttujan \(Y\) ja \(x_1, x_2, \ldots, x_n\) selittävän muuttujan \(x\) havaittuja arvoja. Oletetaan lisäksi, että havaintoarvot \(x_i\) ja \(y_i\) liittyvät
@@ -7443,7 +7465,7 @@ Suoran kulmakertoimen \(\widehat{\beta}_1\) = 0.4707 tulkinta on siis, että jos
 
 }
 
-\caption{Isien ja poikien pituudet: regressiosuoran sovite}\label{fig:isatjapojat2}
+\caption{Isien ja poikien pituudet: regressiosuoran sovite (Lähde: Mellin, 2006).}\label{fig:isatjapojat2}
 \end{figure}
 
 \hfill\break
@@ -7482,7 +7504,7 @@ Suoran kulmakertoimen \(\widehat{\beta}_1\) = 0.4707 tulkinta on siis, että jos
   \begin{itemize}
   \tightlist
   \item
-    Erityisesti aineopintojen kurssien \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069}{TILM3561 Tilastollinen päättely I} ja \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3562/5070}{TILM3562 Tilastollinen päättely II} jälkeisellä \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071}{TILM3588 Lineaariset ja yleistetyt lineaariset mallit -kurssilla}, jossa tarvitaan myös lineaarialgebran ja matriisilaskennan tietoja, joita tilastotieteen yhteydessä käydään läpi \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3574/5082}{TILM3574 Matriisilaskenta tilastotieteessä -kurssilla}.
+    Erityisesti aineopintojen kurssien \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069?period=2024-2027}{TILM3561 Tilastollinen päättely I} ja \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3707/100872?period=2024-2027}{TILM3707 Tilastollinen päättely II} jälkeisellä \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071?period=2024-2027}{TILM3588 Lineaariset ja yleistetyt lineaariset mallit -kurssilla}, jossa tarvitaan myös lineaarialgebran ja matriisilaskennan tietoja, joita tilastotieteen yhteydessä käydään läpi \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3574/5082?period=2024-2027}{TILM3574 Matriisilaskenta tilastotieteessä -kurssilla}.
   \item
     Tämän jälkeen regressiomallien käsittely jatkuu useilla eri aineopintojen ja syventävien opintojen erikoiskursseilla.
   \end{itemize}
@@ -7574,7 +7596,7 @@ Ensiksi tarkastelemme kaikista tilastollisia menetelmiä hyödyntävistä ongelm
   \item
     Varsinkin nykypäivänä kun datan määrä kasvaa alati kiihtyvällä tahdilla, olemme ihmiskuntana ahdistavan informaatiotulvan edessä paikoin aseettomia: mitkä ympäröivistä ilmiöistä liittyvät toisiinsa ja miten?
   \item
-    Erityisesti teoreettisen tilastotieteen kentällä on viimeisten vuosikymmenien aikana kehitetty lukuisia edistyksellisiä menetelmiä nk. \textbf{dimension pienennyksen} alalla. Nämä menetelmät pyrkivät löytämään yhdenmukaisuuksia hyvin korkeaulotteisesta aineistosta, eli aineistosta jossa jokaiselta tutkimusyksiköltä mitataan jopa miljoonia eri muuttujia, kuten DNA-tutkimuksessa genomitietoa.\footnote{Tilastotieteessä näitä menetelmiä kutsutaan monimuuttujamenetelmiksi ja niitä käsitellään tarkemmin erikoiskursseilla \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3704/90801}{TILM3704 Monimuuttujamenetelmät} sekä \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3611/91182}{TILM3611 Monimuuttujamenetelmien jatkokurssi}}
+    Erityisesti teoreettisen tilastotieteen kentällä on viimeisten vuosikymmenien aikana kehitetty lukuisia edistyksellisiä menetelmiä nk. \textbf{dimension pienennyksen} alalla. Nämä menetelmät pyrkivät löytämään yhdenmukaisuuksia hyvin korkeaulotteisesta aineistosta, eli aineistosta jossa jokaiselta tutkimusyksiköltä mitataan jopa miljoonia eri muuttujia, kuten DNA-tutkimuksessa genomitietoa.\footnote{Tilastotieteessä näitä menetelmiä kutsutaan monimuuttujamenetelmiksi ja niitä käsitellään tarkemmin erikoiskursseilla \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3704/90801?period=2024-2027}{TILM3704 Monimuuttujamenetelmät} sekä \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3611/91182?period=2024-2027}{TILM3611 Monimuuttujamenetelmien jatkokurssi}}
   \end{itemize}
 \item
   \textbf{Hahmottamisen vaiheet:}
@@ -7717,7 +7739,7 @@ Ensiksi tarkastelemme kaikista tilastollisia menetelmiä hyödyntävistä ongelm
   \item
     On operationalisoitava tutkimusasetelma sellaiseksi, että tutkittavasta ilmiöstä pystytään tuottamaan ongelmaratkaisun kannalta tarkoituksenmukaista tietoa.
   \item
-    Aineiston käsittely on tavallaan operationalisoinnin II vaihe. Tiedon (aineiston) muuttaminen hyödylliseksi.
+    Aineiston käsittely on tavallaan operationalisoinnin II vaihe (Sund, 2003). Tiedon (aineiston) muuttaminen hyödylliseksi.
   \item
     Näkökulman kiinnittäminen:
 
@@ -7747,7 +7769,7 @@ Ensiksi tarkastelemme kaikista tilastollisia menetelmiä hyödyntävistä ongelm
   \begin{itemize}
   \tightlist
   \item
-    Aineisto edustaa tutkimuksessa empiiristä maailmaa ja se valitaan ongelmanasettelun perusteella
+    Aineisto edustaa tutkimuksessa empiiristä maailmaa ja se muodostetaan ongelmanasettelun perusteella.
   \item
     Tarvitaan systemaattinen aineisto, jonka avulla on mahdollista vastata tutkimuskysymyksiin.
   \item
@@ -8007,7 +8029,7 @@ Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tu
     \begin{itemize}
     \tightlist
     \item
-      Yleisesti ottaen kuvaileva tilastollinen tutkimus perustuu aineistosta lasketuille tunnusluvuille, jotka kuvaavat aineiston ominaisuuksia. Esimerkkeinä toimivat keskiarvon lisäksi sen kaltaiset keskimääräistä havaintoa mittaavat suureet kuten mediaani ja moodi tai vaihtelua kuvaavat eri muuttujien vaihteluvälit ja keskihajonnat (ks. luku @ref\{luku9\}.
+      Yleisesti ottaen kuvaileva tilastollinen tutkimus perustuu aineistosta lasketuille tunnusluvuille, jotka kuvaavat aineiston ominaisuuksia. Esimerkkeinä toimivat keskiarvon lisäksi sen kaltaiset keskimääräistä havaintoa mittaavat suureet kuten mediaani ja moodi tai vaihtelua kuvaavat eri muuttujien vaihteluvälit ja keskihajonnat (ks. luku \ref{luku9}.
     \end{itemize}
   \item
     Saadakseen luotettavia tunnuslukuja, tulee otoksen olla edustava ja havaintojen luotettavia ja päteviä eli saatujen mittausten pitää kuvata kohteena olevaa ilmiötä ilman virheitä.
@@ -8317,9 +8339,9 @@ Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tu
   \item
     Poikkileikkausaineistot: havaintoaineisto kattaa yhden ajankohdan ja mahdollisesti useita tilastollisia muuttujia
   \item
-    Aikasarja-aineistot: havaintoaineisto kattaa vain yhden tilastollisen muuttujan mitattuna useana ajanhetkenä
+    Aikasarja-aineisto: havaintoaineisto kattaa vain yhden tilastollisen muuttujan mitattuna useana ajanhetkenä
   \item
-    Paneeliaineistot: havaintoaineisto kattaa mahdollisesti useita tilastollisia muuttujia mitattuna useana ajanhetkenä
+    Paneeli- ja pitkittäisaineistot: havaintoaineisto kattaa mahdollisesti useita tilastollisia muuttujia mitattuna useana ajanhetkenä
   \end{itemize}
 \item
   Eri tutkimusstrategiat hyödyntävät eri aineistotyyppejä sen mukaan, miten ne sopivat tutkimuskysymykseen ja valittuun menetelmään. Tarkastellaan seuraavaksi mitä em. kaksi tutkimustrategiaa tarkoittavat, miten ne eroavat ja minkälaisia tutkimustyyppejä-, asetelmia- ja aineistoja kumpaankin kuuluu.

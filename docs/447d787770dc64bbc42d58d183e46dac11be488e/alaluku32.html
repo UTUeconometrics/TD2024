@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3.2 Mitä tilastotiede on ja mitä se ei ole? | TILM3701 - Tilastotiede ja data 2024</title>
   <meta name="description" content="Tilastotieteen ensimmäinen kurssi." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3.2 Mitä tilastotiede on ja mitä se ei ole? | TILM3701 - Tilastotiede ja data 2024" />
   <meta property="og:type" content="book" />
@@ -123,7 +123,8 @@
 <li class="chapter" data-level="5.2" data-path="alaluku52.html"><a href="alaluku52.html"><i class="fa fa-check"></i><b>5.2</b> Otannan idea</a></li>
 <li class="chapter" data-level="5.3" data-path="alaluku53.html"><a href="alaluku53.html"><i class="fa fa-check"></i><b>5.3</b> Mittaaminen ja mitta-asteikot</a></li>
 <li class="chapter" data-level="5.4" data-path="alaluku54.html"><a href="alaluku54.html"><i class="fa fa-check"></i><b>5.4</b> Kontrolloidut kokeet ja suorat havainnot</a></li>
-<li class="chapter" data-level="5.5" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.5</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="5.5" data-path="alaluku55.html"><a href="alaluku55.html"><i class="fa fa-check"></i><b>5.5</b> Otannan haasteita</a></li>
+<li class="chapter" data-level="5.6" data-path="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-5-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>5.6</b> Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="luku6.html"><a href="luku6.html"><i class="fa fa-check"></i><b>6</b> Tilastollinen riippuvuus ja korrelaatio</a>
 <ul>
@@ -145,8 +146,7 @@
 <li class="chapter" data-level="7.1.4" data-path="alaluku71.html"><a href="alaluku71.html#ryväsotanta"><i class="fa fa-check"></i><b>7.1.4</b> Ryväsotanta</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="alaluku72.html"><a href="alaluku72.html"><i class="fa fa-check"></i><b>7.2</b> Otantaesimerkkejä</a></li>
-<li class="chapter" data-level="7.3" data-path="alaluku73.html"><a href="alaluku73.html"><i class="fa fa-check"></i><b>7.3</b> Otannan haasteita vielä kootusti</a></li>
-<li class="chapter" data-level="7.4" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.4</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
+<li class="chapter" data-level="7.3" data-path="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-7-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>7.3</b> Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="luku8.html"><a href="luku8.html"><i class="fa fa-check"></i><b>8</b> Satunnaisotokset: tilastollisen päättelyn näkökulma</a>
 <ul>
@@ -161,7 +161,7 @@
 <li class="chapter" data-level="8.5" data-path="alaluku85.html"><a href="alaluku85.html"><i class="fa fa-check"></i><b>8.5</b> Suhteellisen frekvenssin otosjakauma</a></li>
 <li class="chapter" data-level="8.6" data-path="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><a href="luvun-8-yhteenveto-keskeisiä-termejä-ja-kokonaisuuksia..html"><i class="fa fa-check"></i><b>8.6</b> Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen tilastotieteessä</a>
+<li class="chapter" data-level="9" data-path="luku9.html"><a href="luku9.html"><i class="fa fa-check"></i><b>9</b> Otosjakaumat ja epävarmuuden arvioiminen</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="otosjakauma-estimaattorit-ja-estimaatit.html"><a href="otosjakauma-estimaattorit-ja-estimaatit.html"><i class="fa fa-check"></i><b>9.1</b> Otosjakauma: estimaattorit ja estimaatit</a></li>
 <li class="chapter" data-level="9.2" data-path="alaluku91.html"><a href="alaluku91.html"><i class="fa fa-check"></i><b>9.2</b> Luottamusvälit</a></li>
@@ -251,9 +251,11 @@
 <li>Tässä onnistuakseen tilastollisten menetelmien tuleekin pyrkiä erottelemaan <strong>sattuma</strong> ja <strong>systemaattisuus</strong> tarkasteltavissa ilmiöissä tai, tarkemmin, niitä kuvaavissa aineistoissa, jotta johtopäätökset olisivat luotettavia.</li>
 </ul></li>
 </ul>
-<p><br />
-</p>
-<p><strong>Voidaan sanoa, että saadakseen tarkemmin selville mitä tilastotiede on, pitää opiskella tilastotiedettä ja sen käyttöä!</strong></p>
+<br />
+
+<center>
+<p><font size="5"> <strong>Voidaan sanoa, että saadakseen tarkemmin selville mitä tilastotiede on, pitää opiskella tilastotiedettä ja sen käyttöä!</strong></font></p>
+</center>
 <p><br />
 </p>
 <p><strong>Mitä tilastotiede ei ole</strong></p>
@@ -266,10 +268,8 @@
 <li>Suomessa <a href="https://www.stat.fi/">Tilastokeskus</a> toimii virallisena tilastoviranomaisena ja tilastotuottajana. Tätä <strong>tilastotuotannon</strong> kokonaisuutta nimitetään ajoittain <strong>tilastotoimeksi</strong>. <strong>Tilastotieteen käyttöalue on paljon tätä laajempi</strong>.</li>
 <li>Ajoittain käytettävää terminologiaa ja luokittelua:
 <ul>
-<li>Tilastoala = Tilastotiede + Tilastotoimi<br />
-</li>
-<li>Tilastotiede = Teoreettinen tilastotiede + Soveltava tilastotiede<br />
-</li>
+<li>Tilastoala = Tilastotiede + Tilastotoimi</li>
+<li>Tilastotiede = Teoreettinen tilastotiede + Soveltava tilastotiede</li>
 <li>Tilastotoimi = Tilastojen tuotanto + Tilastojen hyödyntäminen</li>
 </ul></li>
 </ul></li>
@@ -299,7 +299,7 @@
 </ul></li>
 <li>Vaikka nämä ja jotkin muut alat jakavat tilastotieteen kanssa useita piirteitä ja ominaisuuksia, on tilastotiede kuitenkin siis perustellusti oma tieteenalansa. Tämä erottelun vaikeus jo itsessään todistaa kuinka keskeinen rooli tilastotieteellä on eri aloilla!
 <ul>
-<li>Tilastotiede ei siis kuulu yksiselitteisesti sen lähitieteiden alle, vaan muodostaa oman tieteenalan omine teorioineen ja tieteellisine premisseineen. Käsittelemme myöhemmin tilastotieteen roolia matematiikan ja/tai datatieteiden (“data science”) kokonaisuudessa ja keskustelemme tarkemmin näiden erojen luonteesta.</li>
+<li>Tilastotiede ei siis kuulu yksiselitteisesti sen lähitieteiden alle, vaan <strong>muodostaa oman tieteenalan</strong> omine teorioineen ja tieteellisine premisseineen. Käsittelemme myöhemmin tilastotieteen roolia matematiikan ja/tai datatieteiden (“data science”) kokonaisuudessa ja keskustelemme tarkemmin näiden erojen luonteesta.</li>
 </ul></li>
 </ul>
 <p><br />
@@ -354,7 +354,7 @@
 <li id="fn7"><p><a href="https://fi.wikipedia.org/wiki/Leo_T%C3%B6rnqvist">Leo Törnqvistin</a>, Suomen ensimmäisen tilastotieteen professorin, esittämä luonnehdinta (Vartia, 1989).<a href="alaluku32.html#fnref7" class="footnote-back">↩︎</a></p></li>
 <li id="fn8"><p>Mellin (2005).<a href="alaluku32.html#fnref8" class="footnote-back">↩︎</a></p></li>
 <li id="fn9"><p><a href="https://fi.wikipedia.org/wiki/Mark_Twain">Mark Twain</a> popularisoi tämän lausahduksen teoksessaan <em>Chapters from My Autobiography</em> jo vuonna 1907. Huomionarvoista toki on, että valtaosa “modernin” tilastotieteen, jolle nykytilastotiede pohjautuu, teoriakehityksestä on tapahtunut vasta Twainin teoksen julkaisun jälkeen. Esimerkiksi Ronald Fisher, jota pidetään modernin tilastotieteen isänä, julkaisi merkityksellisimmät työnsä vasta 1920- ja 30-lukujen aikana. Tällä lentävällä lausahduksella ei siis ole mitään tekemistä nykyisten tilastollisten menetelmien kanssa.<a href="alaluku32.html#fnref9" class="footnote-back">↩︎</a></p></li>
-<li id="fn10"><p>(A.C. Davison)<a href="alaluku32.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>Davison, A.C. (2003) Statistical Models. Cambridge University Press.<a href="alaluku32.html#fnref10" class="footnote-back">↩︎</a></p></li>
 <li id="fn11"><p>Sund, (2003)<a href="alaluku32.html#fnref11" class="footnote-back">↩︎</a></p></li>
 <li id="fn12"><p>Silver, N. (2014). Signaali ja kohina: Miksi monet ennusteet epäonnistuvat mutta jotkin eivät? Terra Cognita. (Suomentanut Kimmo Pietiläinen)<a href="alaluku32.html#fnref12" class="footnote-back">↩︎</a></p></li>
 </ol>

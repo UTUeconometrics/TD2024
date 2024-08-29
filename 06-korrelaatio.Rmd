@@ -192,7 +192,7 @@ kutsutaan ajoittain siis __Pearsonin korrelaatiokertoimeksi__ (tulomomenttikorre
 ::: {.defblock .mikko data-latex="{}"}
 **Pearsonin otoskorrelaatiokerroin**
 
-Havaintoarvojen $(x_i, y_i)$ pareista laskettu __otoskovarianssi__ on
+Havaintoarvojen pareista $(x_i, y_i)$ laskettu __otoskovarianssi__ on
 $$
 s_{xy} = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x}) (y_i - \bar{y}),
 $$
@@ -246,7 +246,7 @@ knitr::include_graphics("images/Pearson-korr-Mellin.jpg")
 
 - Kausaalisuhteita selvitettäessä on tunnettava etukäteen ilmiötä koskevat aiemmat teoriat ja tutkimukset tarkasti, jotta voidaan ottaa huomioon ilmiöön vaikuttavat tekijät
 
-- Todellisuus on usein monimutkaisempi, kuin mitä kausaalisuhde kuvaa: __kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä__
+- Todellisuus (ja mahdollinen kausaalisuussuhde) on usein monimutkaisempi, kuin mitä tällainen yksinkertainen (kahden muuttujan välinen) analyysi kykenee kuvaamaan: __kahden muuttujan yhteisvaihtelu ei riitä todisteeksi siitä, että kyseessä olevien muuttujien välillä on kausaalista yhteyttä__
   - Kuvassa \@ref(fig:spuriouskorrelation) on esimerkki todella vahvasta yhteisvaihtelusta jäädykejogurtin (eng. frozen yougurt) kulutuksen ja väkivaltarikosten välillä Yhdysvalloissa.
   - Kyseisten havaintojen korrelaatioksi vuosien 1990-2021 välillä saadaan $r_{xy} = 0.947$, joka on erittäin suurta, kun huomioidaan että kyseiset muuttujat eivät tunnu liittyvän toisiinsa mitenkään.
   - Kyseessä onkin nk. "näennäinen korrelaatio", eli tilanne, jossa kaksi muuttujaa korreloi vahvasti vailla mitään syytä. 

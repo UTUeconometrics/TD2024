@@ -2,7 +2,7 @@
 \righthyphenmin=62
 # Regressioanalyysi {#luku10}
 
-Tilastollinen riippuvuus ja korrelaatio -jakson laajennuksena pyrimme tässä luvussa vastaamaan seuraavaan kysymykseen: _Miten jonkin selitettävän muuttujan tilastollista riippuvuutta joistakin toisista, selittäviksi muuttujiksi kutsutuista muuttujista voidaan mallintaa_? Muuttujien välisten riippuvuuksien, eli erilaisten tosielämän asioiden ja ilmiöiden välisten yhteyksien analysointi on tavallisesti keskeinen kysymys tieteellisessä tutkimuksessa. Regressioanalyysi on yksi tunnetuimpia ja eniten sovellettuja __tilastollisia menetelmiä__ kuvaamaan kahden muuttujan __tilastollista riippuvuutta__.
+Tilastollinen riippuvuus ja korrelaatio -jakson (luku \@ref(luku6)) laajennuksena pyrimme tässä luvussa vastaamaan seuraavaan kysymykseen: _Miten jonkin selitettävän muuttujan tilastollista riippuvuutta joistakin toisista, selittäviksi muuttujiksi kutsutuista muuttujista voidaan mallintaa_? Muuttujien välisten riippuvuuksien, eli erilaisten tosielämän asioiden ja ilmiöiden välisten yhteyksien analysointi on tavallisesti keskeinen kysymys tieteellisessä tutkimuksessa. Regressioanalyysi on yksi tunnetuimpia ja eniten sovellettuja __tilastollisia menetelmiä__ kuvaamaan kahden muuttujan __tilastollista riippuvuutta__.
 
 Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien välillä näyttäisi olevan järkevä (asialooginen) yhteys, niin päästään "malliajatteluun". Ts. pyritään rakentamaan tilastollista mallia kys. aineistolle. Pyritään siis muodostaa tilastollinen malli että se valitun kriteeristön perusteella parhaiten kuvaa analysoitavaa pistejoukkoa.
 
@@ -20,11 +20,11 @@ Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien väl
   - Selitettävän muuttujan käyttäytymisen __ennustaminen__.
 
 - __Lineaarinen regressioanalyysi__ siis (teknisesti) rajoittuu muuttujien _lineaaristen_ riippuvuuksien kuvaamiseen. Kuitenkin, laajemmin asiaa pohdittaessa, lineaaristen regressiomallien suuri käyttökelpoisuus muuttujien välisten riippuvuuksien tilastollisessa analyysissa perustuu (ainakin) seuraaviin seikkoihin:
-  - Lineaarisella regressiomallilla voidaan usein vähintään kohtuullisella (riittävällä) tarkkuudella approksimoida epälineaarisiakin muuttujien välisiä riippuvuuksia! 
+  - Lineaarisella regressiomallilla voidaan usein vähintään kohtuullisella (riittävällä) tarkkuudella approksimoida (jossain määrin) epälineaarisiakin muuttujien välisiä riippuvuuksia! 
   - Muuttujien välinen epälineaarinen riippuvuus voidaan usein myös linearisoida käyttäen sopivia muunnoksia alkuperäisiin muuttujiin.
   - Epälineaariset regressiomallit muodostavat oman tilastollisten (regressio)mallien luokkansa (joita ei käsitellä tällä kurssilla, mutta kylläkin myöhemmissä tilastotieteen opinnoissa).
 
-- Regressiomalleja käytetään apuvälineinä monilla tilastotieteen osa-alueilla. Esimerkkejä regressiomallien käyttökohteista tilastotieteessä:
+- Regressiomalleja käytetään apuvälineinä monilla tilastotieteen osa-alueilla (ks. alaluku \@ref(alaluku36). Esimerkkejä regressiomallien käyttökohteista tilastotieteessä:
   - Varianssianalyysi
   - Koesuunnittelu
   - Monimuuttujamenetelmät
@@ -40,11 +40,11 @@ Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien väl
     - Yhden yhtälön regressiomallit
     - Moniyhtälömallit
 
-Tällä kurssilla käsitellään vain __lineaarisia yhden yhtälön regressiomalleja__. Kuitenkin luvussa \@ref(alaluku103) esitellään lyhyesti minkälaisia laajennuksia tälle regressioanalyysin perustilanteelle tyypillisesti käsitellään. 
+Tällä kurssilla käsitellään vain __lineaarisia yhden selittäjän (ja yhtälön) regressiomalleja__. Kuitenkin luvussa \@ref(alaluku103) esitellään lyhyesti minkälaisia laajennuksia tälle regressioanalyysin perustilanteelle tyypillisesti käsitellään. 
 
 ## Yhden selittäjän lineaarinen regressiomalli {#alaluku102}
 
-- Yhden selittäjän lineaarinen regressiomalli pyrkii selittämään selitettävän muuttujan havaittujen arvojen vaihtelun yhden selittävän muuttujan havaittujen arvojen vaihtelun avulla. Se on siis yksinkertaisin esimerkki yhden yhtälön lineaarisista regressiomalleista, sillä se sisältää vain yhden selittävän muuttujan useamman sijaan. 
+- Yhden selittäjän lineaarinen regressiomalli pyrkii selittämään selitettävän muuttujan havaittujen arvojen vaihtelun yhden selittävän muuttujan havaittujen arvojen vaihtelun avulla. Se on siis yksinkertaisin esimerkki yhden selittäjän lineaarisista regressiomalleista, sillä se sisältää vain yhden selittävän muuttujan useamman sijaan. 
   - Selitettävää muuttujaa kutsutaan usein myös _vastemuuttujaksi, riippuvaksi muuttujaksi tai tulosmuuttujaksi_ 
   - Vastaavasti selittävää muuttujaa kutsutaan paikoin _selittäjäksi, riippumattomaksi muuttujaksi tai ennustavaksi muuttujaksi_. 
 
@@ -60,8 +60,8 @@ Tällä kurssilla käsitellään vain __lineaarisia yhden yhtälön regressiomal
 - Oletetaan, että selitettävän muuttujan $Y$ havaittujen arvojen vaihtelua halutaan selittää selittävän muuttujan eli selittäjän $x$ havaittujen arvojen vaihtelun avulla. Tulkitaan selittävä muuttuja tässä kohtaa kiinteäksi eli sen arvot oletetaan tunnetuksi.^[Kyseinen muuttuja voidaan myös tulkita satunnaismuuttujana eikä seuraavat tarkastelut muutu ratkaisevasti tämän seurauksena. Tätä pohditaan vielä tarkemmin alempana.]
 
 - Tehdään siis seuraavat oletukset:
-  i) Selitettävä muuttuja Y on suhdeasteikollinen satunnaismuuttuja.
-  ii) Selittävä muuttuja x on kiinteä eli ei-satunnainen muuttuja.
+  i) Selitettävä muuttuja $Y$ on suhdeasteikollinen satunnaismuuttuja.
+  ii) Selittävä muuttuja $x$ on kiinteä eli ei-satunnainen muuttuja.
 
 - Olkoot $y_1, y_2,\ldots, y_n$ selitettävän muuttujan $Y$ ja $x_1, x_2, \ldots, x_n$ selittävän muuttujan $x$ havaittuja arvoja. Oletetaan lisäksi, että havaintoarvot $x_i$ ja $y_i$ liittyvät
 samaan havaintoyksikköön kaikille $i=1, 2, \ldots, n$. 
@@ -188,7 +188,7 @@ $$
 Suoran kulmakertoimen $\widehat{\beta}_1$ = 0.4707 tulkinta on siis, että jos isä A on 1 cm pitempi kuin isä B, isä A:n poika on keskimäärin 0.4707 cm pitempi kuin isä B:n poika.
 :::
 
-```{r isatjapojat2, echo=FALSE, fig.cap="Isien ja poikien pituudet: regressiosuoran sovite", fig.align='center', out.width = "100%"}
+```{r isatjapojat2, echo=FALSE, fig.cap="Isien ja poikien pituudet: regressiosuoran sovite (Lähde: Mellin, 2006).", fig.align='center', out.width = "100%"}
 knitr::include_graphics("images/Sovite-isien-poikien-pituudet-Mellin.jpg")
 ```
 
@@ -207,7 +207,7 @@ knitr::include_graphics("images/Sovite-isien-poikien-pituudet-Mellin.jpg")
 - __Vastemuuttujan roolin/luonteen selvittäminen on hyvin keskeistä tilastollista mallia rakennettaessa__. Tässä pätee samat eroavaisuudet mitkä tulevat tutuiksi todennäköisyyslaskennan kursseilla kun käsitellään diskreettien ja jatkuva-arvoisten satunnaismuuttujien jakaumia ja näihin liittyviä yksityiskohtia.
 
 - Pitemmälle meneviä regressioanalyysin kysymyksiä käsitellään useilla myöhemmillä tilastotieteen kursseilla.
-  - Erityisesti aineopintojen kurssien [TILM3561 Tilastollinen päättely I](https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069) ja  [TILM3562 Tilastollinen päättely II](https://opas.peppi.utu.fi/fi/opintojakso/TILM3562/5070) jälkeisellä [TILM3588 Lineaariset ja yleistetyt lineaariset mallit -kurssilla](https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071), jossa tarvitaan myös lineaarialgebran ja matriisilaskennan tietoja, joita tilastotieteen yhteydessä käydään läpi [TILM3574 Matriisilaskenta tilastotieteessä -kurssilla](https://opas.peppi.utu.fi/fi/opintojakso/TILM3574/5082).
+  - Erityisesti aineopintojen kurssien [TILM3561 Tilastollinen päättely I](https://opas.peppi.utu.fi/fi/opintojakso/TILM3561/5069?period=2024-2027) ja  [TILM3707 Tilastollinen päättely II](https://opas.peppi.utu.fi/fi/opintojakso/TILM3707/100872?period=2024-2027) jälkeisellä [TILM3588 Lineaariset ja yleistetyt lineaariset mallit -kurssilla](https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071?period=2024-2027), jossa tarvitaan myös lineaarialgebran ja matriisilaskennan tietoja, joita tilastotieteen yhteydessä käydään läpi [TILM3574 Matriisilaskenta tilastotieteessä -kurssilla](https://opas.peppi.utu.fi/fi/opintojakso/TILM3574/5082?period=2024-2027).
   - Tämän jälkeen regressiomallien käsittely jatkuu useilla eri aineopintojen ja syventävien opintojen erikoiskursseilla.
 
 ## Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.
