@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -232,22 +232,38 @@
             <section class="normal" id="section-">
 <div id="otosjakauma-estimaattorit-ja-estimaatit" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Otosjakauma: estimaattorit ja estimaatit<a href="otosjakauma-estimaattorit-ja-estimaatit.html#otosjakauma-estimaattorit-ja-estimaatit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="defblock mikko">
+<p><strong>Tunnusluvun/estimaattorin otosjakauma</strong></p>
+<p>Tunnusluku <span class="math inline">\(T\)</span> on satunnaismuuttujien <span class="math inline">\(Y_1,\dots,Y_n\)</span> funktiona myös satunnaismuuttuja. Tämä tarkoittaa että tunnusluvun <span class="math inline">\(T\)</span> arvot vaihtelevat otoksesta toiseen jonkin todennäköisyysjakauman mukaisesti. Tätä kutsutaan <em>tunnusluvun</em> <span class="math inline">\(T\)</span> <strong>otosjakaumaksi</strong>, joka muodostaa <strong>tilastollisen mallin</strong> tunnusluvun <span class="math inline">\(T\)</span> arvojen satunnaiselle vaihtelulle otoksesta toiseen.</p>
+</div>
 <ul>
-<li>Koska tunnusluku/estimaattori <span class="math inline">\(T\)</span> on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun <span class="math inline">\(T\)</span> <strong>otosjakaumaksi</strong>.
+<li>Otosjakaumat riippuvat tuntemattomista <strong>parametreista</strong>, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
 <ul>
-<li>Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun <span class="math inline">\(T\)</span> arvojen satunnaisvaihtelulle otoksesta toiseen.</li>
-<li>Otosjakaumat riippuvat tuntemattomista <strong>parametreista</strong>, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.</li>
 <li>Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit <strong>estimoidaan</strong>, kuten yllä jo todettiin, havaintoaineistoa käyttäen.</li>
+<li>Otosjakaumien teoria muodostaa perustan parametrien estimoinnille sekä estimaattorien ominaisuuksille sekä parametreja koskevien hypoteesien testaamiselle.</li>
+</ul></li>
+<li>Tilastollinen päättely tähän asti opittuna:
+<ul>
+<li>Tilastollisessa tutkimuksessa pyritään tekemään päätelmiä aineiston generoineen satunnaisilmiön luonteesta, ts. tehdä yleistyksiä otoksesta perusjoukkoon.</li>
+<li>Satunnaisilmiötä ja sen generoinutta aineistoa kuvataan todennäköisyysjakaumalla, jonka muodon määrää kyseisen jakauman parametrit.</li>
+<li>Parametrit ovat tilastollisessa päättelyssä mielenkiinnon kohteena ja niitä pyritään estimoimaan havaintoaineistosta otostunnusluvuilla/estimaattoreilla.</li>
+<li>Satunnaismuuttujien funktioina myös otostunnusluvut/estimaattorit ovat satunnaismuuttujia, jolloin niilläkin on todennäköisyysjakaumat.</li>
+<li>Tunnuslukujen todennäköisyysjakaumaa kutsutaan otosjakaumaksi.</li>
+<li>Otosjakauman avulla saatujen tunnuslukujen/estimaattien luotettavuutta voidaan arvioida!</li>
 </ul></li>
 </ul>
 <p><strong>Aritmeettisen keskiarvon ominaisuuksia</strong></p>
 <ul>
-<li><p>Aiempien oletusten pätiessä aritmeettisella keskiarvolla <span class="math inline">\(\bar{Y}\)</span> on seuraava odotusarvo ja varianssi:
+<li>Edellisestä luvusta <a href="luku8.html#luku8">8</a> muistamme, että aritmeettinen keskiarvo on eräs aineistosta yleisesti laskettu tunnusluku.
+<ul>
+<li>Tarkastellaan seuraavaksi aritmeettisen keskiarvon otosjakauman ominaisuuksia.</li>
+<li>Aiempien oletusten pätiessä voidaan osoittaa että aritmeettisella keskiarvolla <span class="math inline">\(\bar{Y}\)</span> on seuraava odotusarvo ja varianssi:
 <span class="math display">\[
 \text{E}(\bar{Y}) = \mu,  \quad
 \mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}.
-\]</span></p></li>
-<li><p>Aritmeettisen keskiarvon <span class="math inline">\(\bar{Y}\)</span> <strong>standardipoikkeama</strong></p></li>
+\]</span></li>
+</ul></li>
+<li>Aritmeettisen keskiarvon <span class="math inline">\(\bar{Y}\)</span> <strong>standardipoikkeama</strong> on tällöin</li>
 </ul>
 <p><span class="math display">\[
 \text{D}(\bar{Y}) = \sqrt{\mathrm{Var}(\bar{Y})} = \frac{\sigma}{\sqrt{n}}.
@@ -256,10 +272,13 @@
 <li>Standardipoikkeamaa kutsutaan myös <strong>keskiarvon keskivirheeksi</strong> ja se kuvaa otoskeskiarvon otosvaihtelua odotusarvon <span class="math inline">\(\mu\)</span> ympärillä.
 <ul>
 <li>Huomioi, että <strong>otoskeskiarvon varianssi</strong> on eri asia kuin <strong>otosvarianssi</strong>.</li>
+<li>Otoskeskiarvon varianssi kuvaa sitä, miten otoskeskiarvon toteumat vaihtelevat otantaa toistettaessa, eli otoksesta toiseen.</li>
+<li>Näin ollen otoskeskiarvon varianssia voidaan käyttää saadun otoskeskiarvon toteuman luotettavuuden arviointiin!</li>
 </ul></li>
-<li>Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon <span class="math inline">\(\mu\)</span> ympärille, kun otoskoko <span class="math inline">\(n\)</span> kasvaa.
+<li>Huomataan, että aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon <span class="math inline">\(\mu\)</span> ympärille, kun otoskoko <span class="math inline">\(n\)</span> kasvaa.
 <ul>
 <li>Ts. otoskoon <span class="math inline">\(n\)</span> kasvaessa <span class="math inline">\(\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}\)</span> pienenee.</li>
+<li>Näin ollen aritmeettinen keskiarvo tuottaa tarkempia estimaatteja odotusarvosta silloin, kun otoskoko on suuri!</li>
 </ul></li>
 </ul>
 <p><strong>Normaalijakautunut otos</strong></p>
@@ -272,19 +291,44 @@
 <li><p>Itse asiassa ns. <strong>asymptoottiseen teoriaan</strong> vedoten (suurten otosten tapauksessa) voidaan osoittaa, että edellämainittu tulos pätee myös ilman normaalisuusoletusta.</p>
 <ul>
 <li>Nämä tarkastelut vaativat jälleen selvästi enemmän käytyjä tilastotieteen (ja matematiikan) opintoja.</li>
+</ul></li>
 </ul>
-<p><strong>Standardoidun aritmeettisen keskiarvon otosjakauma</strong></p></li>
-<li><p>Tarkastellaan <strong>standardoitua</strong> satunnaismuuttujaa
+<div class="eblock kimmo">
+<p><strong>Esimerkki: aritmeettisen keskiarvon otosjakauma normaalijakautuneen aineiston tapauksessa</strong></p>
+<p>Tarkastellaan seuraavaksi simuloidun esimerkin avulla aritmeettisen keskiarvon ominaisuuksia. Erityisesti klassisessa tilastotieteessä tilastollinen päättely, esimerkiksi luottamusvälien konstrulointi, perustuu ajatukselle toistetusta aineistonkeruusta. Tätä on helppoa havainnollistaa käyttäen moderneja tietoteknisiä ratkaisuja, joiden avulla voidaan generoida halutulla tavalla jakautuneiden satunnaismuuttujien realisaatioita. Aritmeettisen otoskeskiarvon tapauksessa tämä tarkoittaa sitä, miten realisoituneet otoskeskiarvot vaihtelevat satunnaisesti, kun otantaa samasta kohdepopulaatiosta toistetaan. Yllä esitetyn tuloksen nojalla otoskoko näyttelee keskeistä roolia otoskeskiarvojen vaihtelun suhteen.</p>
+<p>Olkoon <span class="math inline">\(Y_1^{(j)},\dots,Y_n^{(j)}\)</span> <span class="math inline">\(j\)</span>:s otos suuresta (äärettömästä) populaatiosta, jossa <span class="math inline">\(j=1,\dots,J\)</span> indeksoi eri otoksia. Oletetaan lisäksi, että <span class="math inline">\(Y_i^{(j)} \sim N(60,25)\)</span> kaikille <span class="math inline">\(j=1,\dots,J\)</span> ja <span class="math inline">\(i=1,\dots,n\)</span> ja että tilastoyksiköt ovat keskenään riippumattomia kaikissa otoksissa. Toisin sanoen, kerätään <span class="math inline">\(J\)</span> otosta kohdepopulaatiosta, joista jokaisessa tilastoyksiköt ovat samoin ja riippumattomasti jakautuneita.</p>
+<p>Tiedetään, että normaalisti jakautuneen populaation tapauksessa otoskeskiarvo on odotusarvon harhaton estimaattori, ts. että <span class="math inline">\(E(\bar{Y}) = \mu\)</span> ja että sen otosjakauma on muotoa <span class="math inline">\(\bar{Y} \sim \text{N}(\mu,\frac{\sigma^2}{n})\)</span>. Täten <strong>otoskoolla</strong> on suuri merkitys sille kuinka keskittynyt aritmeettisen keskiarvon otosjakauma on. Suurella otoskoolla tulisi teoriassa siis saada parempia arvioita aineiston generoineen jakauman odotusarvosta!</p>
+<p>Alla Kuviossa <a href="otosjakauma-estimaattorit-ja-estimaatit.html#fig:otosjakaumat1">9.1</a> havainnollistetaan yllä kuvatun <em>toistetun aineistonkeruun</em> ajatusta aritmeettisen keskiarvon otosjakauman taustalla. Jakaumasta <span class="math inline">\(N(60,25)\)</span> generoitiin <span class="math inline">\(J=50\)</span> otosta, joista jokaisen otoskoko on <span class="math inline">\(n=30\)</span>. Paneelissa A on havainnollistuksen vuoksi esitetty ensimmäisen kahdeksan otoksen histogrammit sekä näiden aritmeettiset keskiarvot (punaiset pisteet). Paneelissa B on kuvattu kaikkien <span class="math inline">\(J=50\)</span> otoksen keskiarvojen histogrammi. Lisäksi on laskettu <strong>otoskeskiarvojen otoskeskiarvo</strong>, jonka pitäisi harhattomuuden vuoksi olla lähellä populaatiotason odotusarvoa <span class="math inline">\(\mu = 60\)</span>. Lisäksi on laskettu <strong>otoskeskiarvojen varianssi</strong>, jonka pitäisi saada arvo <span class="math inline">\(\frac{\sigma^2}{n} = \frac{25}{30} \approx 0.83\)</span>. Estimaatteja ja teoreettisia normaalijakauman parametreja vastaavat tiheysfunktiot on piirretty kuvaan.</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:otosjakaumat1"></span>
+<img src="TD2024_files/figure-html/otosjakaumat1-1.png" alt="Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 30. Oikealla on yhteensä 50 otoksesta laskettujen otoskeskiarvojen jakauma." width="100%" />
+<p class="caption">
+Kuvio 9.1: Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 30. Oikealla on yhteensä 50 otoksesta laskettujen otoskeskiarvojen jakauma.
+</p>
+</div>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: aritmeettisen keskiarvon otosjakauma normaalijakautuneen aineiston tapauksessa (jatkuu)</strong></p>
+<p>Mitä tapahtuu kun yksittäisen otoksen otoskokoa <span class="math inline">\(n\)</span> kasvatetaan? Teorian perusteella otoskeskiarvojen otosjakauman varianssi pitäisi pienentyä! Kuviossa <a href="otosjakauma-estimaattorit-ja-estimaatit.html#fig:otosjakaumat2">9.2</a> havainnollistetaan tätä. Jälleen generoitiin <span class="math inline">\(J=50\)</span> otosta populaatiojakaumasta <span class="math inline">\(N(60,25)\)</span>, mutta tällä kertaa otoskokoa kasvatettiin tasolle <span class="math inline">\(n=100\)</span>. Paneelissa A on jälleen havainnollistuksen vuoksi esitetty ensimmäisen kahdeksan otoksen histogrammit sekä näiden aritmeettiset keskiarvot (punaiset pisteet). Paneelissa B on kuvattu kaikkien <span class="math inline">\(J=50\)</span> otoksen keskiarvojen histogrammi sekä otoskeskiarvojen teoreettista otosjakaumaa ja vastaavaa estimoitua otosjakaumaa vastaavat tiheysfunktiot. Edelleen otoskeskiarvojen pitäisi harhattomuuden vuoksi olla lähellä arvoa <span class="math inline">\(\mu = 60\)</span>, mutta tällä kertaa niiden varianssin pitäisi olla pienempi. Teoreettisesti otoskeskiarvojen varianssin pitäisi olla <span class="math inline">\(\frac{\sigma^2}{n} = \frac{25}{100} = 0.25\)</span>. Havaitaan, että myös estimoitu otoskeskiarvojen varianssi on pienempi kuin edellisessä <span class="math inline">\(n=30\)</span> esimerkissä!</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:otosjakaumat2"></span>
+<img src="TD2024_files/figure-html/otosjakaumat2-1.png" alt="Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 100. Oikealla on yhteensä 50 otoksesta laskettujen otoskeskiarvojen jakauma." width="100%" />
+<p class="caption">
+Kuvio 9.2: Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 100. Oikealla on yhteensä 50 otoksesta laskettujen otoskeskiarvojen jakauma.
+</p>
+</div>
+<p><strong>Standardoidun aritmeettisen keskiarvon otosjakauma</strong></p>
+<ul>
+<li>Tarkastellaan <strong>standardoitua</strong> satunnaismuuttujaa
 <span class="math display">\[
 Z = \frac{\bar{Y} - \text{E}(\bar{Y})}{\text{D}(\bar{Y})} = \frac{\bar{Y} - \mu}{\sigma / \sqrt{n}} = \sqrt{n} \Big(\frac{\bar{Y} - \mu}{\sigma}\Big).
-\]</span></p>
+\]</span>
 <ul>
 <li>Tällöin <span class="math inline">\(Z\)</span>:n odotusarvo <span class="math inline">\(\text{E}(Z) = 0\)</span> ja varianssi <span class="math inline">\(\mathrm{Var}(Z) = 1\)</span>.</li>
 </ul></li>
-<li><p>Jos <span class="math inline">\(Y_i \thicksim \text{N}(\mu, \sigma^2), i=1,\ldots,n\)</span>, niin tällöin <span class="math inline">\(Z\)</span> noudattaa standardoitua normaalijakaumaa:
+<li>Jos <span class="math inline">\(Y_i \thicksim \text{N}(\mu, \sigma^2), i=1,\ldots,n\)</span>, niin tällöin <span class="math inline">\(Z\)</span> noudattaa standardoitua normaalijakaumaa:
 <span class="math display">\[
 Z \thicksim \text{N}(0,1).
-\]</span></p>
+\]</span>
 <ul>
 <li>Jälleen voidaan osoittaa, että tämä tulos pätee asymptoottisesti (suurissa otoksissa) myös ilman yllä tehtyä normaalisuusoletusta.</li>
 </ul></li>
@@ -356,7 +400,7 @@ P \Big(Z &lt; \frac{0.5-0.54}{0.0352} \Big) = P (Z &lt; -1.14) \approx 0.127.
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:normaalilv1"></span>
 <img src="TD2024_files/figure-html/normaalilv1-1.png" alt="Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä" width="100%" />
 <p class="caption">
-Kuvio 9.1: Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä
+Kuvio 9.3: Standardinormaalijakauman tiheysfunktion alle jäävä siniseksi värjätty osuus kuvaa todennäköisyyttä, jolla saadaan sellainen realisaatio että suhteellinen osuus on pienempi kuin 0.5 yllä olevassa esimerkissä
 </p>
 </div>
 </div>

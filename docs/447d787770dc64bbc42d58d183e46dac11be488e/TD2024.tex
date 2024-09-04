@@ -191,7 +191,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-08-29}
+\date{2024-09-04}
 
 \begin{document}
 \maketitle
@@ -6211,38 +6211,70 @@ jota otosvarianssi harhattomasti estimoi.
 \hypertarget{luku9}{%
 \chapter{Otosjakaumat ja epävarmuuden arvioiminen}\label{luku9}}
 
-Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin saadun tunnusluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
+Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin tunnusluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
 \hypertarget{otosjakauma-estimaattorit-ja-estimaatit}{%
 \section{Otosjakauma: estimaattorit ja estimaatit}\label{otosjakauma-estimaattorit-ja-estimaatit}}
 
+\begin{defblock}{}
+\textbf{Tunnusluvun/estimaattorin otosjakauma}
+
+Tunnusluku \(T\) on satunnaismuuttujien \(Y_1,\dots,Y_n\) funktiona myös satunnaismuuttuja. Tämä tarkoittaa että tunnusluvun \(T\) arvot vaihtelevat otoksesta toiseen jonkin todennäköisyysjakauman mukaisesti. Tätä kutsutaan \emph{tunnusluvun} \(T\) \textbf{otosjakaumaksi}, joka muodostaa \textbf{tilastollisen mallin} tunnusluvun \(T\) arvojen satunnaiselle vaihtelulle otoksesta toiseen.
+
+\end{defblock}
+
 \begin{itemize}
 \tightlist
 \item
-  Koska tunnusluku/estimaattori \(T\) on satunnaismuuttuja, sillä on todennäköisyysjakauma, jota kutsutaan tunnusluvun \(T\) \textbf{otosjakaumaksi}.
+  Otosjakaumat riippuvat tuntemattomista \textbf{parametreista}, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
 
   \begin{itemize}
   \tightlist
   \item
-    Otosjakauma muodostaa (tilastollisen mallin) todennäköisyysmallin tunnusluvun \(T\) arvojen satunnaisvaihtelulle otoksesta toiseen.
-  \item
-    Otosjakaumat riippuvat tuntemattomista \textbf{parametreista}, joiden arvoja ei yleensä tunneta ja niitä pyritään estimoimaan kerättyä otosta ja sopivaa tunnuslukua käyttäen.
-  \item
     Parametri on (usein) perusjoukon tunnusluku, jota halutaan arvioida. Parametrit \textbf{estimoidaan}, kuten yllä jo todettiin, havaintoaineistoa käyttäen.
+  \item
+    Otosjakaumien teoria muodostaa perustan parametrien estimoinnille sekä estimaattorien ominaisuuksille sekä parametreja koskevien hypoteesien testaamiselle.
+  \end{itemize}
+\item
+  Tilastollinen päättely tähän asti opittuna:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tilastollisessa tutkimuksessa pyritään tekemään päätelmiä aineiston generoineen satunnaisilmiön luonteesta, ts. tehdä yleistyksiä otoksesta perusjoukkoon.
+  \item
+    Satunnaisilmiötä ja sen generoinutta aineistoa kuvataan todennäköisyysjakaumalla, jonka muodon määrää kyseisen jakauman parametrit.
+  \item
+    Parametrit ovat tilastollisessa päättelyssä mielenkiinnon kohteena ja niitä pyritään estimoimaan havaintoaineistosta otostunnusluvuilla/estimaattoreilla.
+  \item
+    Satunnaismuuttujien funktioina myös otostunnusluvut/estimaattorit ovat satunnaismuuttujia, jolloin niilläkin on todennäköisyysjakaumat.
+  \item
+    Tunnuslukujen todennäköisyysjakaumaa kutsutaan otosjakaumaksi.
+  \item
+    Otosjakauman avulla saatujen tunnuslukujen/estimaattien luotettavuutta voidaan arvioida!
   \end{itemize}
 \end{itemize}
 
 \textbf{Aritmeettisen keskiarvon ominaisuuksia}
 
 \begin{itemize}
+\tightlist
 \item
-  Aiempien oletusten pätiessä aritmeettisella keskiarvolla \(\bar{Y}\) on seuraava odotusarvo ja varianssi:
-  \[
-  \text{E}(\bar{Y}) = \mu,  \quad
-  \mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}.
-  \]
+  Edellisestä luvusta \ref{luku8} muistamme, että aritmeettinen keskiarvo on eräs aineistosta yleisesti laskettu tunnusluku.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tarkastellaan seuraavaksi aritmeettisen keskiarvon otosjakauman ominaisuuksia.
+  \item
+    Aiempien oletusten pätiessä voidaan osoittaa että aritmeettisella keskiarvolla \(\bar{Y}\) on seuraava odotusarvo ja varianssi:
+    \[
+    \text{E}(\bar{Y}) = \mu,  \quad
+    \mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}.
+    \]
+  \end{itemize}
 \item
-  Aritmeettisen keskiarvon \(\bar{Y}\) \textbf{standardipoikkeama}
+  Aritmeettisen keskiarvon \(\bar{Y}\) \textbf{standardipoikkeama} on tällöin
 \end{itemize}
 
 \[
@@ -6258,14 +6290,20 @@ Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa s
   \tightlist
   \item
     Huomioi, että \textbf{otoskeskiarvon varianssi} on eri asia kuin \textbf{otosvarianssi}.
+  \item
+    Otoskeskiarvon varianssi kuvaa sitä, miten otoskeskiarvon toteumat vaihtelevat otantaa toistettaessa, eli otoksesta toiseen.
+  \item
+    Näin ollen otoskeskiarvon varianssia voidaan käyttää saadun otoskeskiarvon toteuman luotettavuuden arviointiin!
   \end{itemize}
 \item
-  Aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon \(\mu\) ympärille, kun otoskoko \(n\) kasvaa.
+  Huomataan, että aritmeettisen keskiarvon otosjakauma keskittyy yhä voimakkaammin havaintojen yhteisen odotusarvon \(\mu\) ympärille, kun otoskoko \(n\) kasvaa.
 
   \begin{itemize}
   \tightlist
   \item
     Ts. otoskoon \(n\) kasvaessa \(\mathrm{Var}(\bar{Y}) = \frac{\sigma^2}{n}\) pienenee.
+  \item
+    Näin ollen aritmeettinen keskiarvo tuottaa tarkempia estimaatteja odotusarvosta silloin, kun otoskoko on suuri!
   \end{itemize}
 \end{itemize}
 
@@ -6287,8 +6325,51 @@ Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa s
   \item
     Nämä tarkastelut vaativat jälleen selvästi enemmän käytyjä tilastotieteen (ja matematiikan) opintoja.
   \end{itemize}
+\end{itemize}
 
-  \textbf{Standardoidun aritmeettisen keskiarvon otosjakauma}
+\begin{eblock}{}
+\textbf{Esimerkki: aritmeettisen keskiarvon otosjakauma normaalijakautuneen aineiston tapauksessa}
+
+Tarkastellaan seuraavaksi simuloidun esimerkin avulla aritmeettisen keskiarvon ominaisuuksia. Erityisesti klassisessa tilastotieteessä tilastollinen päättely, esimerkiksi luottamusvälien konstrulointi, perustuu ajatukselle toistetusta aineistonkeruusta. Tätä on helppoa havainnollistaa käyttäen moderneja tietoteknisiä ratkaisuja, joiden avulla voidaan generoida halutulla tavalla jakautuneiden satunnaismuuttujien realisaatioita. Aritmeettisen otoskeskiarvon tapauksessa tämä tarkoittaa sitä, miten realisoituneet otoskeskiarvot vaihtelevat satunnaisesti, kun otantaa samasta kohdepopulaatiosta toistetaan. Yllä esitetyn tuloksen nojalla otoskoko näyttelee keskeistä roolia otoskeskiarvojen vaihtelun suhteen.
+
+Olkoon \(Y_1^{(j)},\dots,Y_n^{(j)}\) \(j\):s otos suuresta (äärettömästä) populaatiosta, jossa \(j=1,\dots,J\) indeksoi eri otoksia. Oletetaan lisäksi, että \(Y_i^{(j)} \sim N(60,25)\) kaikille \(j=1,\dots,J\) ja \(i=1,\dots,n\) ja että tilastoyksiköt ovat keskenään riippumattomia kaikissa otoksissa. Toisin sanoen, kerätään \(J\) otosta kohdepopulaatiosta, joista jokaisessa tilastoyksiköt ovat samoin ja riippumattomasti jakautuneita.
+
+Tiedetään, että normaalisti jakautuneen populaation tapauksessa otoskeskiarvo on odotusarvon harhaton estimaattori, ts. että \(E(\bar{Y}) = \mu\) ja että sen otosjakauma on muotoa \(\bar{Y} \sim \text{N}(\mu,\frac{\sigma^2}{n})\). Täten \textbf{otoskoolla} on suuri merkitys sille kuinka keskittynyt aritmeettisen keskiarvon otosjakauma on. Suurella otoskoolla tulisi teoriassa siis saada parempia arvioita aineiston generoineen jakauman odotusarvosta!
+
+Alla Kuviossa \ref{fig:otosjakaumat1} havainnollistetaan yllä kuvatun \emph{toistetun aineistonkeruun} ajatusta aritmeettisen keskiarvon otosjakauman taustalla. Jakaumasta \(N(60,25)\) generoitiin \(J=50\) otosta, joista jokaisen otoskoko on \(n=30\). Paneelissa A on havainnollistuksen vuoksi esitetty ensimmäisen kahdeksan otoksen histogrammit sekä näiden aritmeettiset keskiarvot (punaiset pisteet). Paneelissa B on kuvattu kaikkien \(J=50\) otoksen keskiarvojen histogrammi. Lisäksi on laskettu \textbf{otoskeskiarvojen otoskeskiarvo}, jonka pitäisi harhattomuuden vuoksi olla lähellä populaatiotason odotusarvoa \(\mu = 60\). Lisäksi on laskettu \textbf{otoskeskiarvojen varianssi}, jonka pitäisi saada arvo \(\frac{\sigma^2}{n} = \frac{25}{30} \approx 0.83\). Estimaatteja ja teoreettisia normaalijakauman parametreja vastaavat tiheysfunktiot on piirretty kuvaan.
+
+\end{eblock}
+
+\FloatBarrier
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/otosjakaumat1-1} 
+
+}
+
+\caption{Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 30. Oikealla on yhteensä 50 otoksesta laskettujen otoskeskiarvojen jakauma.}\label{fig:otosjakaumat1}
+\end{figure}
+
+\begin{eblock}{}
+\textbf{Esimerkki: aritmeettisen keskiarvon otosjakauma normaalijakautuneen aineiston tapauksessa (jatkuu)}
+
+Mitä tapahtuu kun yksittäisen otoksen otoskokoa \(n\) kasvatetaan? Teorian perusteella otoskeskiarvojen otosjakauman varianssi pitäisi pienentyä! Kuviossa \ref{fig:otosjakaumat2} havainnollistetaan tätä. Jälleen generoitiin \(J=50\) otosta populaatiojakaumasta \(N(60,25)\), mutta tällä kertaa otoskokoa kasvatettiin tasolle \(n=100\). Paneelissa A on jälleen havainnollistuksen vuoksi esitetty ensimmäisen kahdeksan otoksen histogrammit sekä näiden aritmeettiset keskiarvot (punaiset pisteet). Paneelissa B on kuvattu kaikkien \(J=50\) otoksen keskiarvojen histogrammi sekä otoskeskiarvojen teoreettista otosjakaumaa ja vastaavaa estimoitua otosjakaumaa vastaavat tiheysfunktiot. Edelleen otoskeskiarvojen pitäisi harhattomuuden vuoksi olla lähellä arvoa \(\mu = 60\), mutta tällä kertaa niiden varianssin pitäisi olla pienempi. Teoreettisesti otoskeskiarvojen varianssin pitäisi olla \(\frac{\sigma^2}{n} = \frac{25}{100} = 0.25\). Havaitaan, että myös estimoitu otoskeskiarvojen varianssi on pienempi kuin edellisessä \(n=30\) esimerkissä!
+
+\end{eblock}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/otosjakaumat2-1} 
+
+}
+
+\caption{Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 100. Oikealla on yhteensä 50 otoksesta laskettujen otoskeskiarvojen jakauma.}\label{fig:otosjakaumat2}
+\end{figure}
+
+\textbf{Standardoidun aritmeettisen keskiarvon otosjakauma}
+
+\begin{itemize}
+\tightlist
 \item
   Tarkastellaan \textbf{standardoitua} satunnaismuuttujaa
   \[
@@ -6442,6 +6523,28 @@ Luottamusväli on otoksen perusteella määrätty väli, joka tutkijan valitsema
   Valittua luottamustasoa merkitään usein \(1-\alpha\):lla, jossa \textbf{merkitsevyystaso} (\textbf{riskitaso}) \(\alpha\) on esimerkiksi \(\alpha=0.05\).
 \item
   Tulkinta: Jos \textbf{otantaa} jakaumasta \(f(y;\theta)\) toistetaan, niin keskimäärin \(100 \times (1-\alpha)\%\) otoksista konstruloiduista luottamusväleistä peittää parametrin \(\theta\) todellisen arvon.
+\end{itemize}
+
+\begin{eblock}{}
+\textbf{Esimerkki: aritmeettisen keskiarvon otosjakauma normaalijakautuneen aineiston tapauksessa (jatkuu)}
+
+Mitä edellisen alaluvun esimerkissä tapahtuu kun otosten määrää \(J\) kasvatetaan? Teorian perusteella otoskeskiarvojen otosjakauman parametrien pitäisi lähestyä teoreettisia arvojaan. Kuviossa \ref{fig:otosjakaumat3} havainnollistetaan tätä. Nyt generoitiin \(J=1000\) otosta populaatiojakaumasta \(N(60,25)\), pitäen otoskokona \(n=100\). Paneelissa A on jälleen havainnollistuksen vuoksi esitetty ensimmäisen kahdeksan otoksen histogrammit sekä näiden aritmeettiset keskiarvot (punaiset pisteet). Paneelissa B on kuvattu kaikkien \(J=50\) otoksen keskiarvojen histogrammi sekä otoskeskiarvojen teoreettista otosjakaumaa ja vastaavaa estimoitua otosjakaumaa vastaavat tiheysfunktiot. Huomataan, että otosten määrää kasvattamalla otosjakauma lähestyy sen teoreettista jakaumaa!
+
+Huomioitavaa: useinkaan samasta kohdepopulaatiosta ei ole mahdollista saati järkevää poimia useaa otosta. Edellä havainnollistettu teoreettinen tulos kuitenkin mahdollistaa tilastollisen päättelyn ja parametriestimaattien luottamusvälien konstruloinnin yhteen otokseen perustuen!
+
+\end{eblock}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{TD2024_files/figure-latex/otosjakaumat3-1} 
+
+}
+
+\caption{Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 100. Oikealla on yhteensä 1000 otoksesta laskettujen otoskeskiarvojen jakauma.}\label{fig:otosjakaumat3}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   Oletetaan, että olemme tehneet johtopäätöksen, että konstruloitu luottamusväli peittää parametrin \(\theta\) tuntemattoman todellisen arvon.
 

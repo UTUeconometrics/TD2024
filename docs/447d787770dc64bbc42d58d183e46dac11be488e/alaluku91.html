@@ -25,7 +25,7 @@
 <meta name="author" content="Roope Rihtamo" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -247,17 +247,30 @@
 <li><p>Otoskoko on luottamusvälejä koskevissa tarkasteluissa keskeinen ja luottamusväleihin palataankin otoskoon käsittelyn yhteydessä.</p></li>
 <li><p>Valittua luottamustasoa merkitään usein <span class="math inline">\(1-\alpha\)</span>:lla, jossa <strong>merkitsevyystaso</strong> (<strong>riskitaso</strong>) <span class="math inline">\(\alpha\)</span> on esimerkiksi <span class="math inline">\(\alpha=0.05\)</span>.</p></li>
 <li><p>Tulkinta: Jos <strong>otantaa</strong> jakaumasta <span class="math inline">\(f(y;\theta)\)</span> toistetaan, niin keskimäärin <span class="math inline">\(100 \times (1-\alpha)\%\)</span> otoksista konstruloiduista luottamusväleistä peittää parametrin <span class="math inline">\(\theta\)</span> todellisen arvon.</p></li>
-<li><p>Oletetaan, että olemme tehneet johtopäätöksen, että konstruloitu luottamusväli peittää parametrin <span class="math inline">\(\theta\)</span> tuntemattoman todellisen arvon.</p>
+</ul>
+<div class="eblock kimmo">
+<p><strong>Esimerkki: aritmeettisen keskiarvon otosjakauma normaalijakautuneen aineiston tapauksessa (jatkuu)</strong></p>
+<p>Mitä edellisen alaluvun esimerkissä tapahtuu kun otosten määrää <span class="math inline">\(J\)</span> kasvatetaan? Teorian perusteella otoskeskiarvojen otosjakauman parametrien pitäisi lähestyä teoreettisia arvojaan. Kuviossa <a href="alaluku91.html#fig:otosjakaumat3">9.4</a> havainnollistetaan tätä. Nyt generoitiin <span class="math inline">\(J=1000\)</span> otosta populaatiojakaumasta <span class="math inline">\(N(60,25)\)</span>, pitäen otoskokona <span class="math inline">\(n=100\)</span>. Paneelissa A on jälleen havainnollistuksen vuoksi esitetty ensimmäisen kahdeksan otoksen histogrammit sekä näiden aritmeettiset keskiarvot (punaiset pisteet). Paneelissa B on kuvattu kaikkien <span class="math inline">\(J=50\)</span> otoksen keskiarvojen histogrammi sekä otoskeskiarvojen teoreettista otosjakaumaa ja vastaavaa estimoitua otosjakaumaa vastaavat tiheysfunktiot. Huomataan, että otosten määrää kasvattamalla otosjakauma lähestyy sen teoreettista jakaumaa!</p>
+<p>Huomioitavaa: useinkaan samasta kohdepopulaatiosta ei ole mahdollista saati järkevää poimia useaa otosta. Edellä havainnollistettu teoreettinen tulos kuitenkin mahdollistaa tilastollisen päättelyn ja parametriestimaattien luottamusvälien konstruloinnin yhteen otokseen perustuen!</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:otosjakaumat3"></span>
+<img src="TD2024_files/figure-html/otosjakaumat3-1.png" alt="Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 100. Oikealla on yhteensä 1000 otoksesta laskettujen otoskeskiarvojen jakauma." width="100%" />
+<p class="caption">
+Kuvio 9.4: Toistetun aineistonkeruun ajatus otosjakaumien taustalla. Vasemmalla on esitetty kahdeksan ensimmäisen otoksen histogrammit samasta jakaumasta, kun otoskoko on 100. Oikealla on yhteensä 1000 otoksesta laskettujen otoskeskiarvojen jakauma.
+</p>
+</div>
+<ul>
+<li>Oletetaan, että olemme tehneet johtopäätöksen, että konstruloitu luottamusväli peittää parametrin <span class="math inline">\(\theta\)</span> tuntemattoman todellisen arvon.
 <ul>
 <li>Tällöin otantaa toistettaessa luottamusvälin konstruktiosta seuraa, että tehty johtopäätös on oikea keskimäärin <span class="math inline">\(100 \times (1-\alpha)\%\)</span> tapauksista.</li>
 <li>Vastaavasti taas <span class="math inline">\(100 \times \alpha \%\)</span> ei peitä parametrin todellista arvoa.</li>
 </ul></li>
-<li><p>Luottamusväli on kenties tunnetumpi kansankieliseltä nimitykseltään <strong>virhemarginaali</strong>, joka on itse asiassa luottamusvälin puolikas: todellinen parametriarvo kuuluu saadun estimaatin ja virhemarginaalien sisään jäävälle osuudelle.</p>
+<li>Luottamusväli on kenties tunnetumpi kansankieliseltä nimitykseltään <strong>virhemarginaali</strong>, joka on itse asiassa luottamusvälin puolikas: todellinen parametriarvo kuuluu saadun estimaatin ja virhemarginaalien sisään jäävälle osuudelle.
 <ul>
 <li>Normaalisti mm. otoskoon kasvu pienentää virhemarginaalia.</li>
 <li>Kuten jatkossa tullaan havaitsemaan, virhemarginaalin suuruuteen vaikuttavat otosasetelma, otoskoko, luottamustaso ja tutkittavan tilastollisen tunnusluvun jakauma.</li>
 </ul></li>
-<li><p>Luottamusväleissä ei varsinaisesti ole kyse “virheestä” vaan saadun/muodostetun tiedon tarkkuudesta.</p>
+<li>Luottamusväleissä ei varsinaisesti ole kyse “virheestä” vaan saadun/muodostetun tiedon tarkkuudesta.
 <ul>
 <li>Luottamusvälit, eli virhemarginaalit, siis (yleisesti) riippuvat valittavasta luottamustasosta <span class="math inline">\(1-\alpha\)</span> ja näin ollen samasta aineistosta on saatavissa useita virhemarginaaleja.
 <ul>
@@ -337,7 +350,7 @@ z_{\alpha/2} \frac{\sigma}{\sqrt{n}}.
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:foo"></span>
 <img src="images/gaussian-distribution.jpg" alt="Standardoitu normaalijakauma: Virhemarginaaleja" width="150%" />
 <p class="caption">
-Kuvio 9.2: Standardoitu normaalijakauma: Virhemarginaaleja
+Kuvio 9.5: Standardoitu normaalijakauma: Virhemarginaaleja
 </p>
 </div>
 <p><br />
@@ -361,7 +374,7 @@ saadaan nyt <span class="math inline">\(t\)</span><strong>-jakaumasta</strong> <
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="images/NjaT-jakauma.jpg" alt="t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita" width="75%" />
 <p class="caption">
-Kuvio 9.3: t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita
+Kuvio 9.6: t-jakauman (ja standardoidun normaalijakauman) tiheysfunktioita
 </p>
 </div>
 <p><br />
