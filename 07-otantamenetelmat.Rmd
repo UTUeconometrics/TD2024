@@ -9,6 +9,7 @@ library(knitr)
 library(kableExtra)
 ```
 
+Tässä luvussa jatketaan Luvun \@ref(luku5) aiheita, eli otantaa, ja tarkastellaan miten satunnaisotos kohdepopulaatiosta voidaan käytännössä kerätä. __Otantamenetelmiksi__ kutsutaan niitä menetelmiä, joilla kohdepopulaatiosta kerätään __edustava otos__. Satunnaisuuden hyödyntäminen näyttelee keskeistä roolia otoksen edustavuuden varmentamisessa. Kohdepopulaation koko, maantieteellinen jakauma, ikärakenne ja muut yksityiskohdat vaikuttavat kuitenkin keskeisellä tavalla siihen, miten otanta tulee käytännössä suorittaa. 
 
 ## Otantamenetelmät {#alaluku71}
 
