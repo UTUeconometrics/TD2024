@@ -6,16 +6,19 @@
 \documentclass[
 ]{book}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -176,9 +179,9 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={TILM3701 - Tilastotiede ja data 2024},
   pdfauthor={Koonneet; Henri Nyberg; Roope Rihtamo},
@@ -191,7 +194,7 @@
 
 \title{TILM3701 - Tilastotiede ja data 2024}
 \author{Koonneet \and Henri Nyberg\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:henri.nyberg@utu.fi}{\nolinkurl{henri.nyberg@utu.fi}}} \and Roope Rihtamo\footnote{Turun yliopisto, matematiikan ja tilastotieteen laitos, \href{mailto:roope.rihtamo@utu.fi}{\nolinkurl{roope.rihtamo@utu.fi}}}}
-\date{2024-09-10}
+\date{2024-09-25}
 
 \begin{document}
 \maketitle
@@ -201,8 +204,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{kurssin-osat-i-ja-ii-rakenne}{%
-\chapter*{Kurssin (osat I ja II rakenne)}\label{kurssin-osat-i-ja-ii-rakenne}}
+\chapter*{Kurssin (osat I ja II rakenne)}\label{kurssin-osat-i-ja-ii-rakenne}
 \addcontentsline{toc}{chapter}{Kurssin (osat I ja II rakenne)}
 
 \begin{itemize}
@@ -247,8 +249,7 @@
   \end{itemize}
 \end{itemize}
 
-\hypertarget{kurssimateriaali}{%
-\chapter*{Kurssimateriaali}\label{kurssimateriaali}}
+\chapter*{Kurssimateriaali}\label{kurssimateriaali}
 \addcontentsline{toc}{chapter}{Kurssimateriaali}
 
 \begin{itemize}
@@ -292,7 +293,7 @@
   \begin{itemize}
   \tightlist
   \item
-    \href{https://tilastokoulu.stat.fi/verkkokoulu_v2.xql?course_id=tkoulu_tilaj\&lesson_id=1\&subject_id=0\&page_type=sisalto}{Tilastokeskuksen tilastokoulu (linkki)}
+    \href{https://tilastokoulu.stat.fi/verkkokoulu_v2.xql?course_id=tkoulu_tilaj&lesson_id=1&subject_id=0&page_type=sisalto}{Tilastokeskuksen tilastokoulu (linkki)}
   \item
     Tilastotieteen sanasto suomi-englanti-suomi, ks.Juha Alho, Elja Arjas, Juha Karvanen, Lasse Leskelä, Esa Läärä ja Pekka Pere (2023). \href{https://sanasto.tilastoseura.fi/.}{Tilastotieteen sanasto. Verkkoversio 9.4.2023. Suomen Tilastoseura.}
   \end{itemize}
@@ -300,8 +301,7 @@
   Suuret kiitokset VTM Visa Kuntzelle, VTM Emil Lehdelle ja filosofian ylioppilas Roni Karjanlahdelle kommenteista ja avusta materiaalin työstämisessä. Kaikki jäljelle jääneet painovirheet ovat materiaalin kokoajien.
 \end{itemize}
 
-\hypertarget{osaamistavoitteet}{%
-\chapter*{Osaamistavoitteet}\label{osaamistavoitteet}}
+\chapter*{Osaamistavoitteet}\label{osaamistavoitteet}
 \addcontentsline{toc}{chapter}{Osaamistavoitteet}
 
 \begin{itemize}
@@ -341,8 +341,7 @@
   \end{itemize}
 \end{itemize}
 
-\hypertarget{kurssin-sisuxe4ltuxf6}{%
-\chapter*{Kurssin sisältö}\label{kurssin-sisuxe4ltuxf6}}
+\chapter*{Kurssin sisältö}\label{kurssin-sisuxe4ltuxf6}
 \addcontentsline{toc}{chapter}{Kurssin sisältö}
 
 Kurssin osien I ja II sisältöjä on listattu opinto-oppaassa ja laajemmin alla. Tämä listaus toimii hyvänä luettelona kurssin keskeisistä teemoista.
@@ -406,18 +405,15 @@ Aihetta koskeva esimerkki.
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{part-osa-i}{%
-\part{Osa I}\label{part-osa-i}}
+\part{Osa I}\label{part-osa-i}
 
-\hypertarget{johdantoa-ja-johdattelua-tilastotieteeseen}{%
-\chapter{Johdantoa ja johdattelua tilastotieteeseen}\label{johdantoa-ja-johdattelua-tilastotieteeseen}}
+\chapter{Johdantoa ja johdattelua tilastotieteeseen}\label{johdantoa-ja-johdattelua-tilastotieteeseen}
 
 \emph{Ihmisellä on luontainen pyrkimys ymmärtää, mitä hänen ympärillään tapahtuu. Ymmärrys perustuu ihmisen tekemiin havaintoihin, joita luokittelemalla tai seuraamalla hän pyrkii löytämään säännönmukaisuuksia. Näiden säännönmukaisuuksien löytäminen vaatii loogisten johtopäätösten tekoa. Pelkän uteliaisuuden tyydyttämiseen ja älyllisen mielihyvän lisäksi ihminen pyrkii ennakoimaan tulevaa ja siten varautumaan tuleviin tapahtumiin\ldots{} Edellä kuvattuja taitoja voi oppia.}
 
 Holopainen ja Pulkkinen (2008)
 
-\hypertarget{tilastotiede-ja-kurssin-idea}{%
-\section{Tilastotiede ja kurssin idea}\label{tilastotiede-ja-kurssin-idea}}
+\section{Tilastotiede ja kurssin idea}\label{tilastotiede-ja-kurssin-idea}
 
 \begin{itemize}
 \tightlist
@@ -523,8 +519,7 @@ Holopainen ja Pulkkinen (2008)
   \textbf{Johtopäätelmien} tekeminen tilastollisen päättelyn pohjalta: saatiinko tutkimusongelmaan vastaus ja kuinka luotettava saatu vastaus on?
 \end{itemize}
 
-\hypertarget{tilastotieteen-asema-tutkimusyhteisuxf6n-ulkopuolella}{%
-\section{Tilastotieteen asema tutkimusyhteisön ulkopuolella}\label{tilastotieteen-asema-tutkimusyhteisuxf6n-ulkopuolella}}
+\section{Tilastotieteen asema tutkimusyhteisön ulkopuolella}\label{tilastotieteen-asema-tutkimusyhteisuxf6n-ulkopuolella}
 
 \begin{itemize}
 \tightlist
@@ -546,16 +541,14 @@ Holopainen ja Pulkkinen (2008)
   \end{itemize}
 \end{itemize}
 
-\hypertarget{kurssin-luonne-tilastotieteen-opintojen-esittelijuxe4nuxe4}{%
-\section{Kurssin luonne tilastotieteen opintojen esittelijänä}\label{kurssin-luonne-tilastotieteen-opintojen-esittelijuxe4nuxe4}}
+\section{Kurssin luonne tilastotieteen opintojen esittelijänä}\label{kurssin-luonne-tilastotieteen-opintojen-esittelijuxe4nuxe4}
 
 Kurssin mittaan esitellään tilastotieteen perusteiden lisäksi \textbf{miten Turun yliopistossa tilastotieteen opinnoissa syvennytään} tällä kurssilla esiteltäviin menetelmiin, aineistotyyppeihin ja mallinnuskokonaisuuksiin. Tilastotieteen opintotarjontaan voi perehtyä \href{https://opas.peppi.utu.fi/fi/ohjelma/89589}{TY:n opinto-oppaan avulla}!
 
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku2}{%
-\chapter{Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa}\label{luku2}}
+\chapter{Tieteellinen tieto, tilastot ja arkitieto yhteiskunnassa}\label{luku2}
 
 Tässä luvussa tarkastellaan tieteen ja tieteellisen tutkimusprosessin luonnetta erityisesti uuden \textbf{tutkitun} tiedon tuottamisen näkökulmasta. \textbf{Tiedelukutaidon} merkitys on kasvanut nyky-yhteiskunnassa, kun tiedejulkaisujen saavutettavuus ja tunnettuus on lisääntynyt mm. tieteen popularisoinnin ja median laajemman tiedeuutisoinnin vuoksi.
 
@@ -569,8 +562,7 @@ Tässä luvussa tarkastellaan tieteen ja tieteellisen tutkimusprosessin luonnett
 
 Voidakseen ymmärtää ja arvioida kriittisesti tiedeuutisia tulee lukijan olla tietoinen tieteellisen tutkimuksen luonteesta: miten tutkimusartikkeleja luetaan, mitä niiltä voidaan odottaa ja minkälaiset tulokset ovat uskottavia. \textbf{Tilastotiede näyttelee keskeistä roolia lähes kaikessa tutkimuksessa ja erityisesti erilaisten tutkimuskysymysten ja niitä vastaavien hypoteesien testauksessa}. Aloitetaan kurssin varsinainen oppimateriaali kunnianhimoisesti tarkastelemalla mitä tiede oikeastaan on.
 
-\hypertarget{alaluku21}{%
-\section{Mitä on tiede?}\label{alaluku21}}
+\section{Mitä on tiede?}\label{alaluku21}
 
 \begin{itemize}
 \tightlist
@@ -812,8 +804,7 @@ Tieteelliset teoriat ovat hyvin perusteltuja kuvauksia ja selityksiä siitä, mi
 \caption{Arkitieto ja tieteellinen tieto}\label{fig:arki}
 \end{figure}
 
-\hypertarget{alaluku22}{%
-\section{Tieteellinen menetelmä}\label{alaluku22}}
+\section{Tieteellinen menetelmä}\label{alaluku22}
 
 \begin{itemize}
 \tightlist
@@ -926,8 +917,7 @@ Tieteelliset teoriat ovat hyvin perusteltuja kuvauksia ja selityksiä siitä, mi
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku23}{%
-\section{Tilastojen yleisestä roolista yhteiskunnassa}\label{alaluku23}}
+\section{Tilastojen yleisestä roolista yhteiskunnassa}\label{alaluku23}
 
 \begin{itemize}
 \tightlist
@@ -1044,8 +1034,7 @@ Tieteelliset teoriat ovat hyvin perusteltuja kuvauksia ja selityksiä siitä, mi
 
 \FloatBarrier
 
-\hypertarget{alaluku24}{%
-\section{Mitä on tutkimus?}\label{alaluku24}}
+\section{Mitä on tutkimus?}\label{alaluku24}
 
 \begin{itemize}
 \tightlist
@@ -1212,8 +1201,7 @@ Tieteelliset teoriat ovat hyvin perusteltuja kuvauksia ja selityksiä siitä, mi
 
 \end{eblock}
 
-\hypertarget{alaluku25}{%
-\section{Tutkimuksen vaiheet ja tulosten julkaiseminen}\label{alaluku25}}
+\section{Tutkimuksen vaiheet ja tulosten julkaiseminen}\label{alaluku25}
 
 \begin{itemize}
 \item
@@ -1248,8 +1236,7 @@ Tieteelliset teoriat ovat hyvin perusteltuja kuvauksia ja selityksiä siitä, mi
   \end{itemize}
 \end{itemize}
 
-\hypertarget{luvun-2-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-2-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 2 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-2-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -1268,8 +1255,7 @@ Tieteelliset teoriat ovat hyvin perusteltuja kuvauksia ja selityksiä siitä, mi
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku3}{%
-\chapter{Tilastotiede tieteenalana}\label{luku3}}
+\chapter{Tilastotiede tieteenalana}\label{luku3}
 
 Tässä luvussa hahmottelemme tilastotieteen piirteitä tieteenalana. Käymme läpi tilastotieteelle ominaisia piirteitä, jotka erottavat sen niin lähitieteistä, kuten matematiikasta ja tietojenkäsittelytieteestä, kuin myös sovellusaloista. Usein näkee tilastotieteen typistettävän vain työkaluksi eri sovellusalojen empiiriseen tutkimukseen siitäkin huolimatta että tilastotieteellä on oma rikas teoriapohjansa sekä kiistaton asema omana tieteenalanaan.
 
@@ -1285,8 +1271,7 @@ Tieteenalan määritteleminen lyhyesti on aina hieman hankalaa. Tästä huolimat
   Minkälaista on tyypillinen tilastotiedettä kohtaan esitetty kritiikki?
 \end{itemize}
 
-\hypertarget{alaluku31}{%
-\section{Lisää tilastotieteen perustermejä}\label{alaluku31}}
+\section{Lisää tilastotieteen perustermejä}\label{alaluku31}
 
 Seuraavia tilastotieteen esittelyä ja karakterisointeja ajatellen määritellään seuraavassa lisää tilastotieteellisen tutkimuksen peruskäsitteitä. Näihin käsitteisiin paneudutaan osaltaan tarkemmin mm. luvussa \ref{luku5}.
 
@@ -1416,8 +1401,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
 
 \newpage
 
-\hypertarget{alaluku32}{%
-\section{Mitä tilastotiede on ja mitä se ei ole?}\label{alaluku32}}
+\section{Mitä tilastotiede on ja mitä se ei ole?}\label{alaluku32}
 
 \begin{itemize}
 \tightlist
@@ -1633,8 +1617,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku33}{%
-\section{Tilastotieteen suhde lähitieteisiin}\label{alaluku33}}
+\section{Tilastotieteen suhde lähitieteisiin}\label{alaluku33}
 
 \begin{itemize}
 \tightlist
@@ -1788,8 +1771,7 @@ Havaintoaineisto, data, on tilastoyksiköiden tilastollisista muuttujista kerät
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku34}{%
-\section{Tilastotieteen osa-alueet}\label{alaluku34}}
+\section{Tilastotieteen osa-alueet}\label{alaluku34}
 
 \begin{itemize}
 \tightlist
@@ -2015,8 +1997,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
 
 \newpage
 
-\hypertarget{alaluku35}{%
-\section{Tilastotieteeseen kohdistunutta kritiikkiä}\label{alaluku35}}
+\section{Tilastotieteeseen kohdistunutta kritiikkiä}\label{alaluku35}
 
 \begin{itemize}
 \tightlist
@@ -2275,8 +2256,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
 
 \end{eblock}
 
-\hypertarget{alaluku36}{%
-\section{Tilastotieteen sovellusaloja ja ``rajatieteitä''}\label{alaluku36}}
+\section{Tilastotieteen sovellusaloja ja ``rajatieteitä''}\label{alaluku36}
 
 \begin{itemize}
 \item
@@ -2371,8 +2351,7 @@ kehittää (tilasto)matemaattisia malleja kuvaamaan satunnaisilmiöitä- ja pros
   Ja paljon muita!
 \end{itemize}
 
-\hypertarget{luvun-3-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 3 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-3-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 3 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-3-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 Tilastotieteen perustermejä:\\
 - Populaatio\\
@@ -2394,8 +2373,7 @@ Tilastotieteen kritiikki
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku4}{%
-\chapter{Sattuma ja satunnaisuus tilastotieteessä}\label{luku4}}
+\chapter{Sattuma ja satunnaisuus tilastotieteessä}\label{luku4}
 
 \begin{figure}
 
@@ -2412,8 +2390,7 @@ Ihmisen oma kokemus on kuitenkin altis kaikenlaisille virhepäätelmille, joita 
 
 Tilastotiede perustuu satunnaisilmiöiden ja niiden generoimien aineistojen tutkimiseen, joten sen ymmärtäminen on keskeisessä roolissa niin tilastotieteen kuin muidenkin tieteiden ja lopulta maailman ymmärtämisessä.
 
-\hypertarget{alaluku41}{%
-\section{Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä}\label{alaluku41}}
+\section{Satunnaisilmiöt ja satunnaismuuttujat tilastotieteessä}\label{alaluku41}
 
 \textbf{Satunnaisilmiöt}
 
@@ -2606,8 +2583,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku42}{%
-\section{Satunnaisilmiöiden tilastollinen mallintaminen}\label{alaluku42}}
+\section{Satunnaisilmiöiden tilastollinen mallintaminen}\label{alaluku42}
 
 \begin{itemize}
 \tightlist
@@ -2785,7 +2761,7 @@ Satunnaismuuttuja (usein lyhyesti sm., englanniksi random variable, merkitään 
   >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0645}}
   >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0968}}
   >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0806}}@{}}
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Puolue
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2809,10 +2785,11 @@ LIIK
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 MUU
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
-\bottomrule()
 \end{longtable}
 
 \end{eblock}
@@ -2928,8 +2905,7 @@ Kannatus-\% & 20,1 & 11,6 & 21,2 & 12,2 & 3,9 & 3,7 & 8,3 & 15,3 & 1,9 & 1,8 \\
   Parametrien testaus on osa tilastollista päättelyä, johon palataan tarkemmin luvussa \ref{luku8}
 \end{itemize}
 
-\hypertarget{alaluku43}{%
-\section{Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma}\label{alaluku43}}
+\section{Tilastolliset tunnusluvut ja estimaattorit: esimerkkinä normaalijakauma}\label{alaluku43}
 
 \textbf{Tilastolliset tunnusluvut}
 
@@ -3166,8 +3142,7 @@ jota otosvarianssi (harhattomasti, ks. Osan II Luku \ref{luku8}) estimoi.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{tilastotieteen-koulukunnat}{%
-\section{Tilastotieteen koulukunnat}\label{tilastotieteen-koulukunnat}}
+\section{Tilastotieteen koulukunnat}\label{tilastotieteen-koulukunnat}
 
 \begin{itemize}
 \tightlist
@@ -3252,8 +3227,7 @@ jota otosvarianssi (harhattomasti, ks. Osan II Luku \ref{luku8}) estimoi.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku46}{%
-\section{Sattuman rooli tieteenteossa: Vale-emävale-tilasto?}\label{alaluku46}}
+\section{Sattuman rooli tieteenteossa: Vale-emävale-tilasto?}\label{alaluku46}
 
 Erityisesti nykypäivänä ei-tieteellinen tieto ja tarkoituksellinen disinformaatio, joita perustellaan heppoisin havainnoin, leviävät internetissä kulovalkean tavoin. On tiedeyhteisön ja tutkijoiden moraalinen vastuu taistella näitä uskomuksia vastaan \textbf{popularisoimalla tiedettä}. Tämä saattaa kuitenkin ajoittain jopa pahentaa ongelmaa, sillä popularisoinnissa päteviltäkin tutkijoilta voi unohtua \emph{satunnaisuuden voima}.\footnote{~Tämä jakso perustuu osin psykometriikan yliopisto-opettajan Jari Lipsasen \href{https://blogs.helsinki.fi/med-viikonjuttu/2021/02/22/vale-emavale-tilasto}{blogiin} vuodelta 2021.}
 
@@ -3293,8 +3267,7 @@ Erityisesti nykypäivänä ei-tieteellinen tieto ja tarkoituksellinen disinforma
   \end{itemize}
 \end{itemize}
 
-\hypertarget{luvun-4-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-4-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 4 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-4-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -3319,15 +3292,13 @@ Erityisesti nykypäivänä ei-tieteellinen tieto ja tarkoituksellinen disinforma
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku5}{%
-\chapter{Tilastolliset aineistot, niiden kerääminen ja mittaaminen}\label{luku5}}
+\chapter{Tilastolliset aineistot, niiden kerääminen ja mittaaminen}\label{luku5}
 
 Edellisessä luvussa käsiteltiin tilastotieteen suhtautumista satunnaisilmiöihin. Tässä luvussa tarkastelemme lähemmin miten reaalimaailman satunnaisilmiöistä kerätään tietoa ja miten niitä voidaan mitata. Tilastotieteen perusoppimäärä rakentuu ajatukselle ilmiöiden tutkimisesta rajallisen ja epävarman tiedon vallitessa. Käytännössä tämä tarkoittaa sitä, että tutkimuksen kohteena olevat rajalliset aineistot sisältävät niin systemaattista kuin satunnaisuudesta johtuvaa vaihtelua. Tilastollisten menetelmien avulla pyrimme erottamaan systemaattisen vaihtelun satunnaisesta sekä tekemään tilastollista päättelyä aineiston generoimasta mekanismista. Lyhyesti tämä tarkoittaa aineiston systemaattisen vaihtelun tilastollista mallintamista ja sen parametrien estimointia otoksesta, joka kattaa vain (pienen) osajoukon koko populaation (perusjoukon) tilastoyksiköistä.
 
 Voidaksemme tehdä uskottavaa päättelyä ``havainnoista parametreihin'', tulee otoksen olla riittävän \textbf{edustava}. Tämän luvun keskeisin oppi onkin, että miten \textbf{otanta} tulisi suorittaa, jotta havaintoaineisto olisi \textbf{edustava otos} populaatiosta, silloin kun aineisto kerätään otannalla. Vaikka aineiston hankinta vaatii yleensä runsaasti käytännön työtä, kannattaa se tehdä huolellisesti, sillä huonosti toteutetun otannan vuoksi tutkimusongelman kannalta keskeisiä johtopäätöksiä ei voida tehdä!
 
-\hypertarget{alaluku51}{%
-\section{Kertausta: Data eli aineisto}\label{alaluku51}}
+\section{Kertausta: Data eli aineisto}\label{alaluku51}
 
 \begin{itemize}
 \tightlist
@@ -3353,7 +3324,7 @@ Voidaksemme tehdä uskottavaa päättelyä ``havainnoista parametreihin'', tulee
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2326}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0698}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2326}}@{}}
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 tilastomuuttuja 1
@@ -3364,13 +3335,14 @@ tilastomuuttuja 2
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 tilastomuuttuja \(m\)
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 tilastoyksikkö 1 & \(x_{1,1}\) & \(x_{1,2}\) & \(\dots\) & \(x_{1,m}\) \\
 tilastoyksikkö 2 & \(x_{2,2}\) & \(x_{2,2}\) & \(\dots\) & \(x_{2,m}\) \\
 \(\vdots\) & \(\vdots\) & \(\vdots\) & & \(\vdots\) \\
 tilastoyksikkö \(n\) & \(x_{n,1}\) & \(x_{1,2}\) & \(\dots\) & \(x_{n,m}\) \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -3534,8 +3506,7 @@ Otantatutkimuksessa tutkimus kohdistetaan johonkin (populaation/perusjoukon) osa
   Otantateoria on yksi tilastotieteen keskeisimpiä oppeja ja tarjoaa teoreettisen kehikon empiiristen tutkimusten tulosten yleistämiseen. Tarkastellaan siis tarkemmin otannan ideaa seuraavassa alaluvussa. Otannan toteuttamista, otantamenetelmiä, tarkastellaan Osan II luvussa \ref{luku7}.
 \end{itemize}
 
-\hypertarget{alaluku52}{%
-\section{Otannan idea}\label{alaluku52}}
+\section{Otannan idea}\label{alaluku52}
 
 \begin{itemize}
 \tightlist
@@ -3759,8 +3730,7 @@ Tutkimukseen valitut yksiköt edustavat koko populaatiota, ts. tutkimukseen vali
 \caption{Tuloerot.}\label{fig:tuloerot}
 \end{figure}
 
-\hypertarget{alaluku53}{%
-\section{Mittaaminen ja mitta-asteikot}\label{alaluku53}}
+\section{Mittaaminen ja mitta-asteikot}\label{alaluku53}
 
 \textbf{Mittaaminen}
 
@@ -4032,8 +4002,7 @@ Mittari on toistettava, jos se tuottaa keskimäärin samanlaisia mittauksia sama
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku54}{%
-\section{Kontrolloidut kokeet ja suorat havainnot}\label{alaluku54}}
+\section{Kontrolloidut kokeet ja suorat havainnot}\label{alaluku54}
 
 \begin{itemize}
 \item
@@ -4151,8 +4120,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku55}{%
-\section{Otannan haasteita}\label{alaluku55}}
+\section{Otannan haasteita}\label{alaluku55}
 
 \begin{itemize}
 \item
@@ -4171,8 +4139,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   \textbf{Vastausharha}: Kysymykset voivat olla huonosti muotoiltuja tai vastaajat voivat antaa vääriä tietoja.
 \end{itemize}
 
-\hypertarget{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 5 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-5-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \textbf{Termejä}\\
 - Otanta\\
@@ -4205,8 +4172,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku6}{%
-\chapter{Tilastollinen riippuvuus ja korrelaatio}\label{luku6}}
+\chapter{Tilastollinen riippuvuus ja korrelaatio}\label{luku6}
 
 \begin{itemize}
 \item
@@ -4231,8 +4197,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   Käsittelemme myös Osan II luvussa \ref{luku10} regressioanalyysia yhden selittäjän lineaarisen regressiomallin tapauksessa. Pitemmälle meneviä regressioanalyysin kysymyksiä käsitellään koko tilastotieteen opinto-ohjelman lävitse, kuten perusteellisesti \href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3588/5071?period=2024-2027}{Lineaariset ja yleistetyt lineaariset mallit -kurssin} myötä.
 \end{itemize}
 
-\hypertarget{alaluku61}{%
-\section{Muuttujien väliset riippuvuudet}\label{alaluku61}}
+\section{Muuttujien väliset riippuvuudet}\label{alaluku61}
 
 \begin{itemize}
 \item
@@ -4278,6 +4243,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
     Tarkastelemme tässä esityksessä yksinkertaisuuden vuoksi pääasiassa kahden muuttujan välistä riippuvuutta:
 
     \begin{itemize}
+    \tightlist
     \item
       \begin{enumerate}
       \def\labelenumi{(\roman{enumi})}
@@ -4313,8 +4279,7 @@ Tilastoyksiköiden poimimista populaatiosta otokseen riippumatta muiden yksiköi
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku62}{%
-\section{Kahden muuttujan havaintoaineiston kuvaaminen}\label{alaluku62}}
+\section{Kahden muuttujan havaintoaineiston kuvaaminen}\label{alaluku62}
 
 \begin{itemize}
 \item
@@ -4396,8 +4361,7 @@ Olkoot \(X\) ja \(Y\) järjestys-, välimatka- tai suhdeasteikollisia muuttujia,
 \caption{Isien ja poikien pituudet. Lähde: Mellin (2006).}\label{fig:isatjapojat1}
 \end{figure}
 
-\hypertarget{alaluku63}{%
-\section{Tunnusluvut}\label{alaluku63}}
+\section{Tunnusluvut}\label{alaluku63}
 
 \begin{itemize}
 \item
@@ -4470,8 +4434,7 @@ Olkoot \(X\) ja \(Y\) järjestys-, välimatka- tai suhdeasteikollisia muuttujia,
 
 \hfill\break
 
-\hypertarget{alaluku64}{%
-\section{Satunnaismuuttujien kovarianssi ja korrelaatio}\label{alaluku64}}
+\section{Satunnaismuuttujien kovarianssi ja korrelaatio}\label{alaluku64}
 
 \begin{itemize}
 \item
@@ -4790,8 +4753,7 @@ F & 373 & 6 & 341 & 7\\
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku65}{%
-\section{Muita tunnuslukuja}\label{alaluku65}}
+\section{Muita tunnuslukuja}\label{alaluku65}
 
 Tilastollisia analyysejä tehtäessä johtopäätösten ja objektiivisten tulkintojen tueksi tarvitaan tunnuslukuja. Mm. otoskeskiarvoa tunnuslukuna tarkasteltiin jo edellä. Tunnuslukuja on paljon, ja jokainen niistä valottaa muuttujan jakaumaa eri näkökulmista.
 
@@ -4868,8 +4830,7 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
 \caption{Esimerkki vinosta jakaumasta.}\label{fig:vinotjakaumat}
 \end{figure}
 
-\hypertarget{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 6 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-6-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -4892,16 +4853,13 @@ Jakaumien tunnusluvut voidaan jakaa sijaintilukuihin, hajontalukuihin ja muihin 
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{part-osa-ii}{%
-\part{Osa II}\label{part-osa-ii}}
+\part{Osa II}\label{part-osa-ii}
 
-\hypertarget{luku7}{%
-\chapter{Otantamenetelmät}\label{luku7}}
+\chapter{Otantamenetelmät}\label{luku7}
 
 Tässä luvussa jatketaan Luvun \ref{luku5} aiheita, eli otantaa, ja tarkastellaan miten satunnaisotos kohdepopulaatiosta voidaan käytännössä kerätä. \textbf{Otantamenetelmiksi} kutsutaan niitä menetelmiä, joilla kohdepopulaatiosta kerätään \textbf{edustava otos}. Satunnaisuuden hyödyntäminen näyttelee keskeistä roolia otoksen edustavuuden varmentamisessa. Kohdepopulaation koko, maantieteellinen jakauma, ikärakenne ja muut yksityiskohdat vaikuttavat kuitenkin keskeisellä tavalla siihen, miten otanta tulee käytännössä suorittaa.
 
-\hypertarget{alaluku71}{%
-\section{Otantamenetelmät}\label{alaluku71}}
+\section{Otantamenetelmät}\label{alaluku71}
 
 \begin{itemize}
 \tightlist
@@ -4960,8 +4918,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
   \end{itemize}
 \end{itemize}
 
-\hypertarget{yksinkertainen-satunnaisotanta}{%
-\subsection{Yksinkertainen satunnaisotanta}\label{yksinkertainen-satunnaisotanta}}
+\subsection{Yksinkertainen satunnaisotanta}\label{yksinkertainen-satunnaisotanta}
 
 \begin{itemize}
 \tightlist
@@ -5136,8 +5093,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
   Tällaisissa tutkimustilanteissa käytetäänkin usein muunlaisia otantamenetelmiä.
 \end{itemize}
 
-\hypertarget{systemaattinen-otanta}{%
-\subsection{Systemaattinen otanta}\label{systemaattinen-otanta}}
+\subsection{Systemaattinen otanta}\label{systemaattinen-otanta}
 
 \begin{itemize}
 \tightlist
@@ -5179,8 +5135,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
   \end{itemize}
 \end{itemize}
 
-\hypertarget{ositettu-otanta}{%
-\subsection{Ositettu otanta}\label{ositettu-otanta}}
+\subsection{Ositettu otanta}\label{ositettu-otanta}
 
 \begin{itemize}
 \tightlist
@@ -5210,8 +5165,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
   \end{itemize}
 \end{itemize}
 
-\hypertarget{ryvuxe4sotanta}{%
-\subsection{Ryväsotanta}\label{ryvuxe4sotanta}}
+\subsection{Ryväsotanta}\label{ryvuxe4sotanta}
 
 \begin{itemize}
 \item
@@ -5294,8 +5248,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 
 \end{eblock}
 
-\hypertarget{alaluku72}{%
-\section{Otantaesimerkkejä}\label{alaluku72}}
+\section{Otantaesimerkkejä}\label{alaluku72}
 
 \begin{eblock}{}
 
@@ -5367,8 +5320,7 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 
 \end{eblock}
 
-\hypertarget{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 7 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-7-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \textbf{Otantamenetelmät}
 - Yksinkertainen satunnaisotanta (YSO)\\
@@ -5386,13 +5338,11 @@ Sisältymistodennäköisyys kuvaa sitä (tunnettua) todennäköisyyttä, jolla p
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku8}{%
-\chapter{Satunnaisotokset: tilastollisen päättelyn näkökulma}\label{luku8}}
+\chapter{Satunnaisotokset: tilastollisen päättelyn näkökulma}\label{luku8}
 
 Tarkastellaan seuraavaksi otoksia ja otosjakaumia ``tilastollisemmin'' mitä edellisten lukujen erityisesti otantaa koskevan johdannon yhteydessä. Tilastollinen päättely on keskeinen osa tilastotiedettä, sillä se mahdollistaa päätelmien yleistämisen otoksesta populaatioon/perusjoukkoon. Tämä ja seuraava luku toimivat esimerkkeinä formaaliin matemaattiseen esitykseen perustuvan tilastollisen päättelyn perusteista (otannan ja otantajakaumien näkökulmasta), jonka idea on yleisesti tehdä luotettavia johtopäätöksiä perusjoukosta otoksen perusteella. Tällä kurssilla käydään läpi (vain) tarvittavia yksityiskohtia sekä rakennetaan pohjia todennäköisyyslaskennan peruskurssin (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3553/1734?period=2024-2027}{TILM3553}) jälkeiselle tilastollisen päättelyn peruskurssille (\href{https://opas.peppi.utu.fi/fi/opintojakso/TILM3555/1731?period=2024-2027}{TILM3555}).
 
-\hypertarget{alaluku81}{%
-\section{Satunnaisotos, yhteisjakauma ja tilastollinen malli}\label{alaluku81}}
+\section{Satunnaisotos, yhteisjakauma ja tilastollinen malli}\label{alaluku81}
 
 \begin{itemize}
 \tightlist
@@ -5512,13 +5462,11 @@ Normaalijakautuneiden satunnaismuuttujien satunnaisotokselle pätee \(Y_1, \ldot
 
 \newpage
 
-\hypertarget{luku82}{%
-\section{Tilastolliset mallit ja jakaumat}\label{luku82}}
+\section{Tilastolliset mallit ja jakaumat}\label{luku82}
 
 Tarkastellaan seuraavassa muutamia keskeisiä tilastollisia jakaumia. Esittelemme ensin keskeisintä jatkuvien satunnaismuuttujien jakaumaa, normaalijakaumaa, ennen muutamien diskreettien satunnaismuuttujien jakaumia.
 
-\hypertarget{normaalijakauma}{%
-\subsection{Normaalijakauma}\label{normaalijakauma}}
+\subsection{Normaalijakauma}\label{normaalijakauma}
 
 \begin{itemize}
 \item
@@ -5583,8 +5531,7 @@ jossa \(e\) viittaa Neperin lukuun \(e \approx 2.71828\).
 
 \end{eblock}
 
-\hypertarget{bernoulli--binomi--ja-poisson-jakauma}{%
-\subsection{Bernoulli-, binomi- ja Poisson-jakauma}\label{bernoulli--binomi--ja-poisson-jakauma}}
+\subsection{Bernoulli-, binomi- ja Poisson-jakauma}\label{bernoulli--binomi--ja-poisson-jakauma}
 
 \begin{itemize}
 \tightlist
@@ -5758,8 +5705,7 @@ On syytä todeta lopuksi, että tämän vahvasti yksinkertaistetun tilanteen sij
 
 \end{eblock}
 
-\hypertarget{alaluku83}{%
-\section{Tilastolliset tunnusluvut ja parametrien estimaattorit}\label{alaluku83}}
+\section{Tilastolliset tunnusluvut ja parametrien estimaattorit}\label{alaluku83}
 
 \begin{itemize}
 \tightlist
@@ -6005,19 +5951,10 @@ Tarkentuvan estimaattorin \(\widehat{\theta}\) arvot lähestyvät parametrin \(\
     Estimaattoreiden kehittäminen erilaisten tilastollisten mallien tapauksessa kuuluu teoreettisen tilastotieteen alaan.
   \end{itemize}
 \item
-  Seuraavaksi perehdytään tarkemmin kahteen kenties useimmiten tarkasteltavaan tunnuslukuun ja niiden otosjakaumiin:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Aritmeettisen keskiarvon otosjakaumaan \ref{alaluku84}
-  \item
-    Suhteellisen osuuden (frekvenssin) otosjakaumaan \ref{alaluku85}
-  \end{itemize}
+  Seuraavaksi perehdytään tarkemmin kahteen kenties useimmiten tarkasteltavaan tunnuslukuun: otoskeskiarvoon ja otosvarianssiin.
 \end{itemize}
 
-\hypertarget{alaluku84}{%
-\section{Otoskeskiarvo ja otosvarianssi (estimaattoreina)}\label{alaluku84}}
+\section{Otoskeskiarvo ja otosvarianssi (estimaattoreina)}\label{alaluku84}
 
 \textbf{Otoskeskiarvo}
 
@@ -6152,36 +6089,7 @@ jota otosvarianssi harhattomasti estimoi.
 \caption{Normaalisti jakautuneen aineiston havainnollistus, suurempi otoskoko.}\label{fig:normaaliSUE3}
 \end{figure}
 
-\hfill\break
-
-\hypertarget{alaluku85}{%
-\section{Suhteellisen frekvenssin otosjakauma}\label{alaluku85}}
-
-\textbf{Frekvenssi ja suhteellinen frekvenssi}
-
-\begin{itemize}
-\item
-  Oletetaan, että tapahtuman \(A\) todennäköisyys on
-  \[
-  \text{P}(A) = p,
-  \]
-  jolloin tapahtuman \(A\) komplementtitapahtuman (vastatapahtuman) \(A^c\) todennäköisyys on
-  \[
-  \text{P}(A^c) = 1- p = q.
-  \]
-\item
-  Poimitaan satunnaisotos, jonka koko on \(n\). Tällöin \(A\)-tyyppisten alkioiden frekvenssi eli lukumäärä kyseisessä otoksessa on \(f\).
-\item
-  Suhteellinen frekvenssi eli osuus on tällöin
-  \[
-  \widehat{p} = \frac{f}{n}.
-  \]
-\item
-  Sekä frekvenssi (lukumäärä) \(f\) ja (täten myös) suhteellinen frekvenssi \(\widehat{p}\) ovat satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
-\end{itemize}
-
-\hypertarget{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-8-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -6210,13 +6118,11 @@ jota otosvarianssi harhattomasti estimoi.
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku9}{%
-\chapter{Otosjakaumat ja epävarmuuden arvioiminen}\label{luku9}}
+\chapter{Otosjakaumat ja epävarmuuden arvioiminen}\label{luku9}
 
 Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin tunnusluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
-\hypertarget{otosjakauma-estimaattorit-ja-estimaatit}{%
-\section{Otosjakauma: estimaattorit ja estimaatit}\label{otosjakauma-estimaattorit-ja-estimaatit}}
+\section{Otosjakauma: estimaattorit ja estimaatit}\label{alaluku91}
 
 \begin{defblock}{}
 \textbf{Tunnusluvun/estimaattorin otosjakauma}
@@ -6396,6 +6302,31 @@ Mitä tapahtuu kun yksittäisen otoksen otoskokoa \(n\) kasvatetaan? Teorian per
   \end{itemize}
 \end{itemize}
 
+\section{Suhteellisen frekvenssin otosjakauma}\label{alaluku92}
+
+\textbf{Frekvenssi ja suhteellinen frekvenssi}
+
+\begin{itemize}
+\item
+  Oletetaan, että tapahtuman \(A\) todennäköisyys on
+  \[
+  \text{P}(A) = p,
+  \]
+  jolloin tapahtuman \(A\) komplementtitapahtuman (vastatapahtuman) \(A^c\) todennäköisyys on
+  \[
+  \text{P}(A^c) = 1- p = q.
+  \]
+\item
+  Poimitaan satunnaisotos, jonka koko on \(n\). Tällöin \(A\)-tyyppisten alkioiden frekvenssi eli lukumäärä kyseisessä otoksessa on \(f\).
+\item
+  Suhteellinen frekvenssi eli osuus on tällöin
+  \[
+  \widehat{p} = \frac{f}{n}.
+  \]
+\item
+  Sekä frekvenssi (lukumäärä) \(f\) ja (täten myös) suhteellinen frekvenssi \(\widehat{p}\) ovat satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
+\end{itemize}
+
 \textbf{Frekvenssin otosjakauma}
 
 \begin{itemize}
@@ -6494,8 +6425,7 @@ Mitä tapahtuu kun yksittäisen otoksen otoskokoa \(n\) kasvatetaan? Teorian per
 \end{figure}
 \FloatBarrier
 
-\hypertarget{alaluku91}{%
-\section{Luottamusvälit}\label{alaluku91}}
+\section{Luottamusvälit}\label{alaluku93}
 
 \begin{itemize}
 \tightlist
@@ -6790,8 +6720,7 @@ Huomioitavaa: useinkaan samasta kohdepopulaatiosta ei ole mahdollista saati jär
   \]
 \end{itemize}
 
-\hypertarget{alaluku92}{%
-\section{Otoskoko}\label{alaluku92}}
+\section{Otoskoko}\label{alaluku94}
 
 \begin{itemize}
 \tightlist
@@ -7094,8 +7023,7 @@ n = \Big(\frac{z_{\alpha/2} \,\, \sqrt{p(1-p)}}{d} \Big)^2.
 
 \end{eblock}
 
-\hypertarget{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 9 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-9-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -7124,15 +7052,13 @@ n = \Big(\frac{z_{\alpha/2} \,\, \sqrt{p(1-p)}}{d} \Big)^2.
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku10}{%
-\chapter{Regressioanalyysi}\label{luku10}}
+\chapter{Regressioanalyysi}\label{luku10}
 
 Tilastollinen riippuvuus ja korrelaatio -jakson (luku \ref{luku6}) laajennuksena pyrimme tässä luvussa vastaamaan seuraavaan kysymykseen: \emph{Miten jonkin selitettävän muuttujan tilastollista riippuvuutta joistakin toisista, selittäviksi muuttujiksi kutsutuista muuttujista voidaan mallintaa}? Muuttujien välisten riippuvuuksien, eli erilaisten tosielämän asioiden ja ilmiöiden välisten yhteyksien analysointi on tavallisesti keskeinen kysymys tieteellisessä tutkimuksessa. Regressioanalyysi on yksi tunnetuimpia ja eniten sovellettuja \textbf{tilastollisia menetelmiä} kuvaamaan kahden muuttujan \textbf{tilastollista riippuvuutta}.
 
 Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien välillä näyttäisi olevan järkevä (asialooginen) yhteys, niin päästään ``malliajatteluun''. Ts. pyritään rakentamaan tilastollista mallia kys. aineistolle. Pyritään siis muodostaa tilastollinen malli että se valitun kriteeristön perusteella parhaiten kuvaa analysoitavaa pistejoukkoa.
 
-\hypertarget{alaluku10}{%
-\section{Johdatus regressioanalyysin ideaan}\label{alaluku10}}
+\section{Johdatus regressioanalyysin ideaan}\label{alaluku10}
 
 \begin{itemize}
 \tightlist
@@ -7226,8 +7152,7 @@ Jos tilastoaineistossa on havaittavissa säännönmukaisuutta ja muuttujien väl
 
 Tällä kurssilla käsitellään vain \textbf{lineaarisia yhden selittäjän (ja yhtälön) regressiomalleja}. Kuitenkin luvussa \ref{alaluku103} esitellään lyhyesti minkälaisia laajennuksia tälle regressioanalyysin perustilanteelle tyypillisesti käsitellään.
 
-\hypertarget{alaluku102}{%
-\section{Yhden selittäjän lineaarinen regressiomalli}\label{alaluku102}}
+\section{Yhden selittäjän lineaarinen regressiomalli}\label{alaluku102}
 
 \begin{itemize}
 \item
@@ -7575,8 +7500,7 @@ Suoran kulmakertoimen \(\widehat{\beta}_1\) = 0.4707 tulkinta on siis, että jos
 
 \hfill\break
 
-\hypertarget{alaluku103}{%
-\section{Muita regressiomalleja}\label{alaluku103}}
+\section{Muita regressiomalleja}\label{alaluku103}
 
 \begin{itemize}
 \item
@@ -7615,8 +7539,7 @@ Suoran kulmakertoimen \(\widehat{\beta}_1\) = 0.4707 tulkinta on siis, että jos
   \end{itemize}
 \end{itemize}
 
-\hypertarget{luvun-10-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-10-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 10 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-10-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -7643,15 +7566,13 @@ Suoran kulmakertoimen \(\widehat{\beta}_1\) = 0.4707 tulkinta on siis, että jos
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku11}{%
-\chapter{Tilastotieteen rooli uuden tiedon tuottamisessa}\label{luku11}}
+\chapter{Tilastotieteen rooli uuden tiedon tuottamisessa}\label{luku11}
 
 Tilastotieteen yhteiskunnallisesta roolista keskusteltiin luvuissa 2 ja 3. Tilastotieteen keskeinen yhteiskunnallinen rooli liittyy keskeisesti juuri uuden tieteellisen tiedon tuottamiseen: tilastotiede liittyy olennaisesti kaikkeen tieteeseen, joten ei liene yllätys että tilastotiede on jossain määrin tuttua kaikille tieteentekijöille. Tilastotiede tarjoaa pohjan uuden tiedon tuottamiselle, mutta toisaalta voitaisiin myös ajatella teoreettisen tilastotieteen ja siellä luotujen menetelmien ylipäätään mahdollistaneen uskottavan tieteenteon. Tässä luvussa emme kuitenkaan takerru tähän ``muna vai kana?''-ongelmaan, vaan tarkastelemme yleisemmällä tasolla tilastotieteen roolia tieteenteossa.
 
 Ensiksi tarkastelemme kaikista tilastollisia menetelmiä hyödyntävistä ongelmanasetteluista löydettäviä yhteisiä elementtejä. Nämä elementit ovat niin yleisiä että niitä voidaan tarkastella ja kuvata ilman yhteyttä mihinkään yksittäiseen ongelmaan. Tämän jälkeen tarkastelemme tilastollisia menetelmiä hyödyntävän tieteellisen tutkimusprosessin eri vaiheita yleisesti. On kuitenkin mahdotonta koostaa yleisiä ``tee se näin''-listoja tilastollisen tutkimuksen toteuttamiseksi, joten tarkastelemme tähän asti kurssilla käsiteltyjä asioita ja yleisiä elementtejä, jotka jokaisen tieteentekijän tulee hallita.
 
-\hypertarget{alaluku111}{%
-\section{Tilastollisen tutkimuksen yhteisiä elementtejä}\label{alaluku111}}
+\section{Tilastollisen tutkimuksen yhteisiä elementtejä}\label{alaluku111}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -7781,8 +7702,7 @@ Ensiksi tarkastelemme kaikista tilastollisia menetelmiä hyödyntävistä ongelm
   Kriittinen ajattelu: Miksi tämä olisi nyt se oikea vastaus?
 \end{itemize}
 
-\hypertarget{alaluku112}{%
-\section{Tutkimusprosessi}\label{alaluku112}}
+\section{Tutkimusprosessi}\label{alaluku112}
 
 \begin{itemize}
 \tightlist
@@ -8004,6 +7924,7 @@ Tehdas valmistaa korkealuokkaisia sulkimia kameroihin. Tehdas pyrkii siihen, ett
   Sulkimien laadunvalvonta on toteutettu seuraavalla tavalla:
 
   \begin{itemize}
+  \tightlist
   \item
     \begin{enumerate}
     \def\labelenumi{(\roman{enumi})}
@@ -8066,8 +7987,7 @@ Tehdas valmistaa korkealuokkaisia sulkimia kameroihin. Tehdas pyrkii siihen, ett
 
 \end{eblock}
 
-\hypertarget{luvun-11-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 11 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-11-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 11 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-11-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -8084,8 +8004,7 @@ Tehdas valmistaa korkealuokkaisia sulkimia kameroihin. Tehdas pyrkii siihen, ett
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku12}{%
-\chapter{Aineisto- ja tutkimustyypit ja koeasetelmat}\label{luku12}}
+\chapter{Aineisto- ja tutkimustyypit ja koeasetelmat}\label{luku12}
 
 Tässä luvussa käsitellään erilaisia tapoja toteuttaa tilastollista tutkimusta. Empiirisen tutkimuksen lähtökohtana on aina tutkimusongelma, joka sisältää kysymyksen tai kysymyksiä, joihin tutkimuksella haetaan vastauksia. Tilastotieteen näkökulmasta tutkimusongelman keskiössä on kuitenkin \textbf{aineisto}, \textbf{data}, ja se miten käytettävissä olevasta aineistosta saadaan vastauksia tutkimuskysymyksiin. Tarkastelemme tässä luvussa myös tutkimuksenteon käytäntöä käsittelemällä erilaisia aineistotyyppejä. Käymme läpi eri alojen ja tutkimusongelmien käytännön tutkimustyössä kohdattavia aineistoja ja erittelemme pidemmälle eri tutkimuskysymysten käytännön haasteita aineistojen osalta sekä sitä, minkälaisia ongelmia erilaisiin tutkimusykysymyksiin käytännössä liittyy ja miten eri tutkimusasetelmat pyrkivät niitä ratkomaan.
 
@@ -8114,8 +8033,7 @@ Aineistotarpeen ja sen analysoinnin lähtökohdat määrää tutkimusongelma. Tu
 
 Luvussa käsiteltävät asiat kuuluvat tilastotieteelle ominaisesti kvantitatiivisen tutkimussuuntauksen alaisuuteen (ks. luku \ref{luku3}). Luvussa esiteltävät karkeat tutkimustyyppien- strategioiden ja aineistojen jaot ovat vain yksi jaottelutapa ja todennäköisesti poikkeaa eri oppikirjoissa ja lähteissä esitetyistä.
 
-\hypertarget{alaluku121}{%
-\section{Tutkimustyypit}\label{alaluku121}}
+\section{Tutkimustyypit}\label{alaluku121}
 
 Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tutkimukset voidaan karkeasti jakaa neljään eri luokkaan: \textbf{kuvaileva}, \textbf{vertaileva}, \textbf{kokeellinen} ja \textbf{havainnoiva} tutkimus.
 
@@ -8431,8 +8349,7 @@ Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tu
 
 \end{eblock}
 
-\hypertarget{alaluku122}{%
-\section{Tutkimusstrategiat}\label{alaluku122}}
+\section{Tutkimusstrategiat}\label{alaluku122}
 
 \begin{itemize}
 \tightlist
@@ -8452,8 +8369,7 @@ Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tu
   Eri tutkimusstrategiat hyödyntävät eri aineistotyyppejä sen mukaan, miten ne sopivat tutkimuskysymykseen ja valittuun menetelmään. Tarkastellaan seuraavaksi mitä em. kaksi tutkimustrategiaa tarkoittavat, miten ne eroavat ja minkälaisia tutkimustyyppejä-, asetelmia- ja aineistoja kumpaankin kuuluu.
 \end{itemize}
 
-\hypertarget{poikittaistutkimus-eli-poikkileikkaustutkimus}{%
-\subsection{\texorpdfstring{\textbf{Poikittaistutkimus} eli \textbf{poikkileikkaustutkimus}}{Poikittaistutkimus eli poikkileikkaustutkimus}}\label{poikittaistutkimus-eli-poikkileikkaustutkimus}}
+\subsection{\texorpdfstring{\textbf{Poikittaistutkimus} eli \textbf{poikkileikkaustutkimus}}{Poikittaistutkimus eli poikkileikkaustutkimus}}\label{poikittaistutkimus-eli-poikkileikkaustutkimus}
 
 \begin{itemize}
 \tightlist
@@ -8504,8 +8420,7 @@ Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tu
 
 \hfill\break
 
-\hypertarget{pitkittuxe4istutkimus}{%
-\subsection{\texorpdfstring{\textbf{Pitkittäistutkimus}}{Pitkittäistutkimus}}\label{pitkittuxe4istutkimus}}
+\subsection{\texorpdfstring{\textbf{Pitkittäistutkimus}}{Pitkittäistutkimus}}\label{pitkittuxe4istutkimus}
 
 \begin{itemize}
 \tightlist
@@ -8584,8 +8499,7 @@ Tarkastellaan ensin erilaisia tutkimustyyppejä yleisellä tasolla. Erilaiset tu
 
 \hfill\break
 
-\hypertarget{kohorttitutkimus}{%
-\subsection{\texorpdfstring{\textbf{Kohorttitutkimus}}{Kohorttitutkimus}}\label{kohorttitutkimus}}
+\subsection{\texorpdfstring{\textbf{Kohorttitutkimus}}{Kohorttitutkimus}}\label{kohorttitutkimus}
 
 \begin{itemize}
 \tightlist
@@ -8643,8 +8557,7 @@ Toisen maailmansodan aikana räjäytettiin Japanissa kaksi atomipommia. Tämän 
 
 \hfill\break
 
-\hypertarget{tapaus-verrokkitutkimus}{%
-\subsection{\texorpdfstring{\textbf{Tapaus-verrokkitutkimus}}{Tapaus-verrokkitutkimus}}\label{tapaus-verrokkitutkimus}}
+\subsection{\texorpdfstring{\textbf{Tapaus-verrokkitutkimus}}{Tapaus-verrokkitutkimus}}\label{tapaus-verrokkitutkimus}
 
 \begin{itemize}
 \tightlist
@@ -8755,13 +8668,11 @@ Länsi-Saksassa tuotiin 50-luvun lopulla markkinoille talidomidi-niminen uni- ja
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku123}{%
-\section{Erilaisia aineistoja ja aineistolähteitä}\label{alaluku123}}
+\section{Erilaisia aineistoja ja aineistolähteitä}\label{alaluku123}
 
 Käydään seuraavaksi läpi erilaisia aineistotyyppejä, joita käytännön tutkimuksissa Suomessa (ja maailmalla) usein käytetään. Emme käsittele tässä erikseen itse otannalla koottavia aineistoja tai otannan järjestämistä, ks. luku \ref{luku5}.
 
-\hypertarget{rekisteriaineistot}{%
-\subsection{Rekisteriaineistot}\label{rekisteriaineistot}}
+\subsection{Rekisteriaineistot}\label{rekisteriaineistot}
 
 \begin{itemize}
 \item
@@ -9037,8 +8948,7 @@ Käydään seuraavaksi läpi erilaisia aineistotyyppejä, joita käytännön tut
 
 \FloatBarrier
 
-\hypertarget{aikasarjat-ja-paneeliaineistot}{%
-\subsection{Aikasarjat ja paneeliaineistot}\label{aikasarjat-ja-paneeliaineistot}}
+\subsection{Aikasarjat ja paneeliaineistot}\label{aikasarjat-ja-paneeliaineistot}
 
 \begin{itemize}
 \tightlist
@@ -9178,8 +9088,7 @@ Käydään seuraavaksi läpi erilaisia aineistotyyppejä, joita käytännön tut
   \end{itemize}
 \end{itemize}
 
-\hypertarget{survey--eli-haastattelu--tai-kyselytutkimus}{%
-\subsection{Survey- eli haastattelu- tai kyselytutkimus}\label{survey--eli-haastattelu--tai-kyselytutkimus}}
+\subsection{Survey- eli haastattelu- tai kyselytutkimus}\label{survey--eli-haastattelu--tai-kyselytutkimus}
 
 \begin{itemize}
 \tightlist
@@ -9237,8 +9146,7 @@ Käydään seuraavaksi läpi erilaisia aineistotyyppejä, joita käytännön tut
   \end{itemize}
 \end{itemize}
 
-\hypertarget{luvun-12-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-12-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 12 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-12-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -9269,15 +9177,13 @@ Käydään seuraavaksi läpi erilaisia aineistotyyppejä, joita käytännön tut
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku13}{%
-\chapter{Tilastollisesta ennustamisesta}\label{luku13}}
+\chapter{Tilastollisesta ennustamisesta}\label{luku13}
 
 Kuten olemme jo tähän menneessä nähneet, tilastollinen analyysi ja sen erottamattomana osana tilastollinen päättely on keskeinen vaihe tieteellistä tutkimusta. Vielä ennen tilastollisen selittämisen ja ennustamisen välisiä eroja koskevia pohdintoja muistutetaan jo aiemmin käsitellystä \textbf{kuvailevasta tilastotieteestä}. Tämä voidaan nähdä vielä (ainakin) kolmantena yleisenä tilastotieteen tavoitteena mallintamisen/selittämisen ja ennustamisen lisäksi. Yksinkertaisin tilastollisen päättelyn muoto on hyödyntää aineistoa kuvailevia tunnuslukuja, kuten keskiarvoja ja keskihajontalukuja. Niistä voidaan kuitenkin tehdä vain melko rajoittuneita päätelmiä. Varsinkin havainnoivassa tutkimuksessa sen selvittämiseksi, miten selittävät muuttujat ovat yhteydessä selitettävään vastemuuttujaan, käytetään esim. lineaarista tai logistista regressiota (ja niiden monenmonia laajennuksia) tai esim. aikasarja-analyysiä aikasarjoja analysoitaessa. Näiden pohjalta voidaan arvioida muuttujien yhteyksiä ja riippuvuussuhteita.
 
 Käytännössä tilastotieteen ja sen sovellusalueiden tutkimuksessa tulisi osata erottaa (tilastollinen) \textbf{selittäminen} ja \textbf{ennustaminen}. Tätä eroa koskevat tarkemmat yksityiskohdat ovat jälleen selvästi tämän kurssin ulkopuolella myöhemmissä tilastotieteen opinnoissa, mutta seuraavassa kuitenkin tähän liittyviä keskeisiä huomioita.
 
-\hypertarget{alaluku131}{%
-\section{Tilastollinen selittäminen vs.~ennustaminen}\label{alaluku131}}
+\section{Tilastollinen selittäminen vs.~ennustaminen}\label{alaluku131}
 
 \begin{itemize}
 \tightlist
@@ -9313,8 +9219,7 @@ Käytännössä tilastotieteen ja sen sovellusalueiden tutkimuksessa tulisi osat
   \end{itemize}
 \end{itemize}
 
-\hypertarget{alaluku132}{%
-\section{Tilastolliseen ennustamiseen liittyviä huomioita}\label{alaluku132}}
+\section{Tilastolliseen ennustamiseen liittyviä huomioita}\label{alaluku132}
 
 \begin{itemize}
 \item
@@ -9421,8 +9326,7 @@ Jokaista edellistä kohtaa yhdistää ennustamiseen hyvin keskeisesti liittyvä 
   Huolimatta edellä käydystä, kriittisestäkin, keskustelusta ennustamiseen liittyen, monet ennusteet ovat varsin tarkkoja ja samalla vapaita ylisovittamisen vaaroista!
 \end{itemize}
 
-\hypertarget{luvun-13-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 13 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-13-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 13 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-13-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist
@@ -9441,11 +9345,9 @@ Jokaista edellistä kohtaa yhdistää ennustamiseen hyvin keskeisesti liittyvä 
 \lefthyphenmin=62
 \righthyphenmin=62
 
-\hypertarget{luku14}{%
-\chapter{Tilastotieteen kehityksen nykytrendejä}\label{luku14}}
+\chapter{Tilastotieteen kehityksen nykytrendejä}\label{luku14}
 
-\hypertarget{modernin-tilastotieteen-suuntaviivoja}{%
-\section{Modernin tilastotieteen suuntaviivoja}\label{modernin-tilastotieteen-suuntaviivoja}}
+\section{Modernin tilastotieteen suuntaviivoja}\label{modernin-tilastotieteen-suuntaviivoja}
 
 Seuraavassa vielä joitain tilastotiedettä parhaillaan koskevia kehitystrendejä, joita olemme myös osaltaan sivunneet tämän kurssimateriaalin myötä:
 
@@ -9504,8 +9406,7 @@ Seuraavassa vielä joitain tilastotiedettä parhaillaan koskevia kehitystrendej�
   Oheisten huomioiden ohella lopuksi on syytä korostaa tilastotieteen opiskelun näkökulmasta, että oikotietä ei ole! \textbf{Oikaista siis ei voi}: Ensin on rakennettava vahva tilastollisen ajattelun ja menetelmien perusta (\textbf{alkaen todennäköisyyslaskennasta ja tilastollisesta päättelystä}), jotta myöhemmin voi kehittyä ja omata todellisia kykyjä ottaa vastaan monia jo varsin monimutkaisia tilastollisia menetelmiä!
 \end{itemize}
 
-\hypertarget{luvun-14-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}{%
-\section{Luvun 14 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-14-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}}
+\section{Luvun 14 yhteenveto, keskeisiä termejä ja kokonaisuuksia.}\label{luvun-14-yhteenveto-keskeisiuxe4-termejuxe4-ja-kokonaisuuksia.}
 
 \begin{itemize}
 \tightlist

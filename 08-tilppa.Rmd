@@ -420,9 +420,7 @@ Tarkentuvan estimaattorin $\widehat{\theta}$ arvot lähestyvät parametrin $\the
   - Näin ei ole yleisesti monimutkaisemmissa otantatilanteissa ja tilastollisisssa malleissa.
   - Estimaattoreiden kehittäminen erilaisten tilastollisten mallien tapauksessa kuuluu teoreettisen tilastotieteen alaan.
 
-- Seuraavaksi perehdytään tarkemmin kahteen kenties useimmiten tarkasteltavaan tunnuslukuun ja niiden otosjakaumiin: 
-  - Aritmeettisen keskiarvon otosjakaumaan \@ref(alaluku84)
-  - Suhteellisen osuuden (frekvenssin) otosjakaumaan \@ref(alaluku85)
+- Seuraavaksi perehdytään tarkemmin kahteen kenties useimmiten tarkasteltavaan tunnuslukuun: otoskeskiarvoon ja otosvarianssiin.
 
 
 ## Otoskeskiarvo ja otosvarianssi (estimaattoreina) {#alaluku84}
@@ -522,29 +520,6 @@ ggplot(df, aes(x = PF)) +
   
 ```
 
-\
-
-
-## Suhteellisen frekvenssin otosjakauma {#alaluku85}
-
-__Frekvenssi ja suhteellinen frekvenssi__
-
-- Oletetaan, että tapahtuman $A$ todennäköisyys on
-$$
-\text{P}(A) = p,
-$$
-jolloin tapahtuman $A$ komplementtitapahtuman (vastatapahtuman) $A^c$ todennäköisyys on
-$$
-\text{P}(A^c) = 1- p = q.
-$$
-
-- Poimitaan satunnaisotos, jonka koko on $n$. Tällöin $A$-tyyppisten alkioiden frekvenssi eli lukumäärä kyseisessä otoksessa on $f$. 
-
-- Suhteellinen frekvenssi eli osuus on tällöin
-$$
-\widehat{p} = \frac{f}{n}.
-$$
-- Sekä frekvenssi (lukumäärä) $f$ ja (täten myös) suhteellinen frekvenssi $\widehat{p}$ ovat satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
 
 
 ## Luvun 8 yhteenveto, keskeisiä termejä ja kokonaisuuksia.

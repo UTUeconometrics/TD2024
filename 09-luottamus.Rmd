@@ -4,7 +4,7 @@
 
 Tässä luvussa pohditaan tarkemmin sitä, miten tilastollisessa tutkimuksessa saatujen tulosten epävarmuutta voidaan arvioida. Erilaisten tutkimustulosten yhteydessä törmätään usein niin kutsutun virhemarginaalin käsitteeseen. Virhemarginaalilla tarkoitetaan kansankielessä jonkin tunnusluvun, kuten esimerkiksi keskiarvon, arvojen sellaista vaihteluväliä, joka johtuu satunnaisuudesta. Käytännössä se tarkoittaa sitä, että saatu tulos, estimaatti, on jollain tavalla epävarma. Mistä tämä epävarmuus tutkimustuloksissa kumpuaa ja miten siihen voidaan tutkimusta tai koetta suunnitellessa vaikuttaa? Tilastotieteen yksi keskeisiä tavoitteita on pyrkiä saamaan tarkkaa ja tutkittua tietoa. Kun tutkimuskohteena on epävarma ja satunnainen ympäröivä maailma, onkin tilastollisten menetelmien luotettavuuden kannalta keskeistä pyrkiä arvioimaan tätä epävarmuutta, jotta saatuihin tuloksiin voidaan luottaa.
 
-## Otosjakauma: estimaattorit ja estimaatit
+## Otosjakauma: estimaattorit ja estimaatit {#alaluku91}
 
 ::: {.defblock .mikko data-latex="{}"}
 **Tunnusluvun/estimaattorin otosjakauma**  
@@ -156,6 +156,27 @@ Z \thicksim \text{N}(0,1).
 $$
   - Jälleen voidaan osoittaa, että tämä tulos pätee asymptoottisesti (suurissa otoksissa) myös ilman yllä tehtyä normaalisuusoletusta.
   
+## Suhteellisen frekvenssin otosjakauma {#alaluku92}
+
+__Frekvenssi ja suhteellinen frekvenssi__
+
+- Oletetaan, että tapahtuman $A$ todennäköisyys on
+$$
+\text{P}(A) = p,
+$$
+jolloin tapahtuman $A$ komplementtitapahtuman (vastatapahtuman) $A^c$ todennäköisyys on
+$$
+\text{P}(A^c) = 1- p = q.
+$$
+
+- Poimitaan satunnaisotos, jonka koko on $n$. Tällöin $A$-tyyppisten alkioiden frekvenssi eli lukumäärä kyseisessä otoksessa on $f$. 
+
+- Suhteellinen frekvenssi eli osuus on tällöin
+$$
+\widehat{p} = \frac{f}{n}.
+$$
+- Sekä frekvenssi (lukumäärä) $f$ ja (täten myös) suhteellinen frekvenssi $\widehat{p}$ ovat satunnaismuuttujia, joiden saamat arvot vaihtelevat satunnaisesti otoksesta toiseen.
+  
 __Frekvenssin otosjakauma__
 
 - Frekvenssillä $f$ on odotusarvo
@@ -246,7 +267,7 @@ ggplot(NULL, aes(c(-4,4))) +
 ```
 \FloatBarrier
 
-## Luottamusvälit {#alaluku91}
+## Luottamusvälit {#alaluku93}
 
 - Satunnaisesti saadusta aineistosta laskettujen tunnuslukujen luotettavuus on tilastollisen mallin parametrien estimoinnissa keskeinen tilastollinen kysymys. 
   - Otoksen poimintaan liittyvän satunnaisvaihtelun vuoksi emme voi varmuudella tietää onko saatu otokseen perustuva parametriestimaatti "lähellä" vai "kaukana" sen todellista arvoa.
@@ -476,7 +497,7 @@ $$
 2 \times z_{\alpha/2} \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
 $$
 
-## Otoskoko {#alaluku92}
+## Otoskoko {#alaluku94}
 
 - Yksi tilastollisen päättelyn keskeisiä tavoitteita on yleistää otoksen pohjalta tehty päättely koskemaan koko perusjoukkoa. Seuraavaksi käymme läpi seikkoja, jotka tulee ottaa huomioon otoskokoa miettiessä.
 - Kun on päätetty, millainen tutkimusaineisto halutaan kerätä, on päätettävä, kuinka suuri otoksen on oltava, jotta se edustaa tutkittavaa joukkoa kattavasti.
