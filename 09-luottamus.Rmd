@@ -524,7 +524,7 @@ __Tulosten vaaditun tarkkuuden vaikutus otoskokoon__
 
 - Tarkastelemme pian esimerkin avulla, kuinka tarvittavaa otoskokoa voidaan approksimoida tulosten halutun tarkkuuden avulla. 
 - Tarkastellaan kuitenkin ensin minkälaiset kysymykset liittyvät otoskoon pohdintaan tulosten tarkkuuden osalta. 
-  - Kuinka varma sinun on oltava, että tulokset vastaavat joukon mielipiteitä? Tämä on virhemarginaalisi. 
+  - Kuinka varma sinun on oltava, että tulokset ovat luotettavia? Tämä on virhemarginaalisi. 
     - Esimerkiksi puoluekannatuksen arvioimiseen 2 \% virhemarginaalilla riittää huomattavasti pienempi otoskoko kuin 0.2 \% virhemarginaalilla. Politiikan tutkija voisikin kasvattaa otoskokoa vaalien lähestyessä, mikäli mielii saada tarkempia tuloksia.
   - Kuinka varma haluat olla, että otos edustaa joukkoa oikein? Tämä on luottamustaso. 
     - Luottamustaso on todennäköisyys sille, että valitsemasi otos on tulosten kannalta oleellinen.
